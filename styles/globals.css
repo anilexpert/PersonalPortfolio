@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-dark: var(--depth);
+  --color-bg-base: var(--bg-base);
+  --color-glass-bg: var(--glass-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Base */
+  --bg-base: #f7faff;
+  --bg-soft: #eef4ff;
+
+  /* Brand */
+  --primary: #0D63CC;
+  --accent: #00DA99;
+  --depth: #282360;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+
+  /* Glow */
+  --glow-blue: rgba(13, 99, 204, 0.18);
+  --glow-green: rgba(0, 218, 153, 0.15);
+
+  /* Elevation */
+  --shadow-soft: 0 8px 24px rgba(13, 99, 204, 0.08);
+  --shadow-medium: 0 12px 40px rgba(13, 99, 204, 0.15);
+  --shadow-strong: 0 20px 60px rgba(13, 99, 204, 0.25);
+}
+
+@layer base {
+  body {
+    color: var(--depth);
+    /* Soft gradient mesh + CSS inline SVG noise */
+    background: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
+      linear-gradient(135deg, #ffffff 0%, #f3f8ff 50%, #eaf2ff 100%);
+    min-height: 100vh;
+    font-feature-settings: "cv02", "cv05", "cv11";
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Updated ambient blobs */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(13, 99, 204, 0.08) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+    animation: float 20s infinite alternate;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 218, 153, 0.08) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+    animation: float 25s infinite alternate-reverse;
+  }
+
+  @keyframes float {
+    from { transform: translate(0, 0); }
+    to { transform: translate(50px, 50px); }
+  }
+}
+
+@layer utilities {
+  /* Premium Glassmorphism System */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 
+      0 10px 30px rgba(13, 99, 204, 0.12),
+      inset 0 1px 0 var(--glass-bg);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card.elevated {
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    box-shadow: 
+      var(--shadow-medium),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(13, 99, 204, 0.3);
+    box-shadow: 
+      0 20px 50px rgba(13, 99, 204, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(-6px);
+  }
+
+  /* Interaction buttons */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(13, 99, 204, 0.25);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(13, 99, 204, 0.35);
+  }
+
+  /* Lighting & Glow Utilities */
+  .glow-blue {
+    box-shadow: 0 0 40px var(--glow-blue);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 40px var(--glow-green);
+  }
+
+  .glow-blue-hover:hover {
+    box-shadow: 0 0 60px rgba(13, 99, 204, 0.25);
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .heading-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Icon Glass Containers */
+  .glass-icon-container {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .glass-icon-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(13, 99, 204, 0.2);
+  }
+
+  /* Animations from previous layout */
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  .animate-float {
+    animation: float-y 6s ease-in-out infinite;
+  }
+
+  @keyframes ringPulse {
+    0% { transform: scale(1); opacity: 0.5; border-width: 1px; }
+    50% { transform: scale(1.1); opacity: 0.8; border-width: 2px; }
+    100% { transform: scale(1); opacity: 0.5; border-width: 1px; }
+  }
+  .animate-ring-pulse {
+    animation: ringPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-slow-rotate {
+    animation: slowRotate 15s linear infinite;
+  }
+
+  /* Skill Stripe / Background utilities */
+  .skill-stripe-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .skill-stripe-item::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 218, 153, 0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .skill-stripe-item:hover::after {
+    opacity: 1;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}

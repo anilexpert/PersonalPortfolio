@@ -1,65 +1,108 @@
-import { motion } from 'framer-motion'
-import { Rocket, ShieldCheck, Cpu, Target } from 'lucide-react'
+import { motion } from 'framer-motion';
+import { Globe, Smartphone, LayoutGrid, RefreshCw } from 'lucide-react';
 
-const capabilities = [
+const services = [
   {
-    icon: <Rocket size={24} />,
-    title: "Product Strategy",
-    desc: "Aligning business vision with user needs through structured thinking, ensuring every product decision delivers measurable value.",
-    color: "#0D63CC"
+    icon: Globe,
+    title: "Web Design",
+    desc: "E-commerce, finance & banking, travel, healthcare portals, and creative agency websites.",
+    tags: ["E-Commerce", "Finance", "Healthcare"],
+    color: "#0D63CC" // Blue
   },
   {
-    icon: <ShieldCheck size={24} />,
-    title: "Systems Design",
-    desc: "Designing scalable architectures, design systems, and workflows that support long-term product evolution.",
-    color: "#00DA99"
+    icon: Smartphone,
+    title: "App Design",
+    desc: "Mobile apps for iOS & Android, tablet apps, cross-platform for seamless on-the-go experiences.",
+    tags: ["iOS", "Android", "Tablet"],
+    color: "#00DA99" // Mint
   },
   {
-    icon: <Cpu size={24} />,
-    title: "UX Engineering",
-    desc: "Bridging design and development with implementation-ready solutions that reduce friction and accelerate delivery.",
-    color: "#8B5CF6"
+    icon: LayoutGrid,
+    title: "Product Design",
+    desc: "Digital interfaces, dashboard & admin panels, and custom software UI for daily-use products.",
+    tags: ["Dashboards", "Admin", "Custom UI"],
+    color: "#8B5CF6" // Purple
   },
   {
-    icon: <Target size={24} />,
-    title: "Conversion Optimization",
-    desc: "Crafting experiences that guide users toward action, improving engagement, retention, and business outcomes.",
-    color: "#0D63CC"
+    icon: RefreshCw,
+    title: "SaaS Design",
+    desc: "SaaS platforms, healthcare EHR, subscription tools, and cloud software for retention & low friction.",
+    tags: ["SaaS", "EHR", "Cloud"],
+    color: "#F43F5E" // Rose
   }
-]
+];
 
 const CoreCapabilities = () => {
   return (
-    <section className="py-14 px-6 relative section-divide">
-      {/* Abstract Background Blobs */}
-      <div className="absolute top-0 left-[20%] w-[500px] h-[500px] bg-[#00DA99]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-[#0D63CC]/5 blur-[100px] rounded-full pointer-events-none -z-10" />
-
+    <section className="py-16 px-6 relative overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-[46px] font-black italic tracking-tighter heading-gradient leading-tight mb-12 text-center">Core Capabilities</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {capabilities.map((item, i) => (
+        {/* Centered Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+            <span className="text-[12px] font-bold text-secondary uppercase tracking-wider">Our Core Services</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
+            My Design <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Expertise.</span>
+          </h2>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card p-8 group hover:glow-blue"
+              className="glass-card rounded-[28px] p-8 flex flex-col group hover:-translate-y-2 hover:glow-border"
             >
-              <div
-                className="w-14 h-14 glass-icon-container mb-6 text-[#0D63CC] group-hover:text-[#00DA99] transition-colors"
-              >
-                {item.icon}
+              <div className="flex items-start justify-between mb-8">
+                <div 
+                  className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: `${service.color}15` }}
+                >
+                  <service.icon size={22} style={{ color: service.color }} />
+                </div>
+                <span className="text-sm font-bold text-text-secondary opacity-30">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-[#0D63CC] transition-colors text-[#282360]">{item.title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+
+              <h3 className="text-xl font-bold text-text-primary mb-3">
+                {service.title}
+              </h3>
+
+              <p className="text-sm leading-relaxed text-text-secondary mb-8 flex-grow">
+                {service.desc}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {service.tags.map((tag, j) => (
+                  <span
+                    key={j}
+                    className="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
+                    style={{ 
+                      backgroundColor: `${service.color}10`, 
+                      color: service.color,
+                      border: `1px solid ${service.color}20`
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CoreCapabilities
+export default CoreCapabilities;

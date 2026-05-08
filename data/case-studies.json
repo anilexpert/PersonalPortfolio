@@ -3,6 +3,7 @@
     "id": 1,
     "number": "01",
     "title": "ALCD System",
+    "slug": "alcd",
     "image": "/Thumnail.png",
     "tags": [
       "Enterprise SaaS",
@@ -20,22 +21,25 @@
     "id": 2,
     "number": "02",
     "title": "OasisNotes",
+    "slug": "oasisnotes",
     "image": "/Thumnail.png",
     "tags": [
-      "Healthcare",
-      "Mobile"
+      "Healthcare SaaS",
+      "EHR + Billing",
+      "Design System"
     ],
-    "description": "A clinical documentation tool built to simplify workflows, reduce cognitive load, and enhance efficiency for care teams.",
-    "accent": "from-emerald-400 to-teal-600",
-    "accentLight": "from-emerald-400/10 to-teal-600/10",
-    "accentBorder": "border-emerald-500/20",
-    "accentText": "text-emerald-600",
-    "accentDot": "bg-emerald-500"
+    "description": "A HIPAA-grade healthcare SaaS platform (EHR + Billing) designed to simplify clinical workflows and optimize financial operations for behavioral health facilities.",
+    "accent": "from-teal-400 to-[#0D9488]",
+    "accentLight": "from-teal-400/10 to-[#0D9488]/10",
+    "accentBorder": "border-teal-500/20",
+    "accentText": "text-[#0D9488]",
+    "accentDot": "bg-[#0D9488]"
   },
   {
     "id": 3,
     "number": "03",
     "title": "SPENDiD",
+    "slug": "spendid",
     "image": "/Thumnail.png",
     "tags": [
       "Fintech",

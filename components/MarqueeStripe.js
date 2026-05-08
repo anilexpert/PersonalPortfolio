@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import { Sparkles, Globe, Shield, Zap, Layers, Cpu } from 'lucide-react'
+import { motion } from 'framer-motion';
+import { Globe, Shield, Zap, Layers, Cpu, Sparkles } from 'lucide-react';
 
 const marqueeItems = [
   { text: "Seamless Integrations", icon: Globe },
@@ -10,10 +10,10 @@ const marqueeItems = [
   { text: "User-Centric Design", icon: Sparkles },
   { text: "99.9% Uptime", icon: Shield },
   { text: "Cloud Native", icon: Globe },
-]
+];
 
 const MarqueeStripe = () => {
-  // Duplicating items for seamless loop
+  // Multiply items for a truly infinite feel
   const duplicatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
 
   return (
@@ -47,7 +47,7 @@ const MarqueeStripe = () => {
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MarqueeStripe
+export default MarqueeStripe;

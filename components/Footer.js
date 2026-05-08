@@ -1,61 +1,92 @@
-import { Users, MessageSquare, Globe, Camera, ArrowUp } from 'lucide-react';
+import { Globe as MapPin, Globe } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="py-16 px-6 relative overflow-hidden bg-white/50 backdrop-blur-md">
-      {/* Top border with gradient glow */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+    <footer className="pt-0 pb-10 px-6 relative overflow-hidden border-t border-text-primary/5">
+      {/* Background Neon Effects */}
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full -ml-[250px] -mb-[250px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 blur-[150px] rounded-full -mr-[200px] -mt-[200px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="max-w-7xl mx-auto relative z-10">
 
-          {/* Left: Branding */}
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="relative group cursor-pointer">
-              <span className="font-bold text-2xl tracking-tighter text-text-primary">
-                Anil<span className="text-primary">.</span>
-              </span>
+        {/* Main Footer Content */}
+        <div className="flex flex-col md:flex-row items-center justify-between py-12 gap-8 border-b border-text-primary/5">
+
+          {/* Logo Section */}
+          <Link href="/" className="group flex items-center gap-2">
+            <div className="relative w-10 h-10 transition-transform duration-300 group-hover:rotate-[360deg]">
+              <Image
+                src="/MyLogo.png"
+                alt="Anil Kumar Logo"
+                fill
+                className="object-contain"
+              />
             </div>
-            <p className="text-[10px] font-black text-text-secondary uppercase tracking-[0.4em] opacity-40">
-              Senior Product Designer
-            </p>
-          </div>
+            <span className="font-bold text-xl tracking-tight text-text-primary">
+              Anil Kumar<span className="text-primary">.</span>
+            </span>
+          </Link>
 
-          {/* Center: Social Links */}
-          <div className="flex items-center gap-6">
+          {/* Quick Links */}
+          <nav className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+            {['HOME', 'SERVICES', 'CASE STUDIES', 'EXPERTISE', 'CONTACT US'].map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase().replace(' ', '-')}`}
+                className="text-[11px] font-bold text-text-secondary hover:text-primary tracking-[0.2em] transition-colors"
+              >
+                {link}
+              </a>
+            ))}
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
             {[
-              { icon: Users, href: "#" },
-              { icon: MessageSquare, href: "#" },
-              { icon: Globe, href: "#" },
-              { icon: Camera, href: "#" }
+              { icon: Globe, active: false },
+              { icon: Globe, active: true },
+              { icon: Globe, active: false },
+              { icon: Globe, active: false }
             ].map((social, i) => (
               <a
                 key={i}
-                href={social.href}
-                className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-text-secondary hover:text-primary hover:scale-110 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                href="#"
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${social.active
+                  ? 'bg-primary text-white scale-110 shadow-[0_0_20px_rgba(0,218,153,0.3)]'
+                  : 'glass-card text-text-secondary hover:bg-white hover:text-text-primary'
+                  }`}
               >
                 <social.icon size={18} />
               </a>
             ))}
           </div>
+        </div>
 
-          {/* Right: Copyright & Back to Top */}
-          <div className="flex flex-col items-center md:items-end gap-4">
-             <button 
-                onClick={() => { if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary hover:opacity-70 transition-all"
-             >
-                BACK TO TOP <ArrowUp size={14} />
-             </button>
-             <div className="text-[12px] font-medium text-text-secondary/50 text-center md:text-right">
-               © {new Date().getFullYear()} Anil Kumar. <br />
-               Built for <span className="text-primary font-bold">Excellence.</span>
-             </div>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 gap-4">
+          <div className="text-[12px] text-text-secondary font-medium">
+            Copyright©2025 All Rights Reserved <span className="text-primary font-bold">Anil Kumar</span>
+          </div>
+
+          <div className="flex items-center gap-6">
+            {['Terms & Conditions', 'Privacy Policy', 'Contact Us'].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-[12px] text-text-secondary hover:text-text-primary transition-colors"
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
+
       </div>
     </footer>
   );
 };
 
 export default Footer;
+

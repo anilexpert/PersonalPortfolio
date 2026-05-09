@@ -60,14 +60,14 @@ const CoreCapabilities = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-[28px] p-8 flex flex-col group hover:-translate-y-2 hover:glow-border"
+              className="glass-card rounded-[24px] p-6 flex flex-col group hover:-translate-y-2 hover:glow-border"
             >
-              <div className="flex items-start justify-between mb-8">
+              <div className="flex items-start justify-between mb-6">
                 <div 
                   className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
                   style={{ backgroundColor: `${service.color}15` }}
                 >
-                  <service.icon size={22} style={{ color: service.color }} />
+                  <service.icon size={24} style={{ color: service.color }} />
                 </div>
                 <span className="text-sm font-bold text-text-secondary opacity-30">
                   {String(i + 1).padStart(2, '0')}
@@ -86,7 +86,7 @@ const CoreCapabilities = () => {
                 {service.tags.map((tag, j) => (
                   <span
                     key={j}
-                    className="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
+                    className="text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full"
                     style={{ 
                       backgroundColor: `${service.color}10`, 
                       color: service.color,

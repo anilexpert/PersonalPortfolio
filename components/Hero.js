@@ -84,7 +84,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="px-6 py-4 rounded-[24px] w-full max-w-[560px] relative overflow-hidden group"
+              className="px-6 py-4 rounded-[24px] w-full max-w-[620px] relative overflow-hidden"
               style={{
                 background: 'rgba(255, 255, 255, 0.4)',
                 backdropFilter: 'blur(20px)',
@@ -103,22 +103,40 @@ const Hero = () => {
                     VIEW ALL <ArrowUpRight size={14} />
                   </a>
                 </div>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-4 gap-3">
                   {[
-                    "/images/carevanta.png",
-                    "/images/spendid.png",
-                    "/images/OasisNotes.png",
-                    "/images/numantra.png"
-                  ].map((img, i) => (
-                    <div key={i} className="aspect-[3/2] rounded-lg overflow-hidden relative group cursor-pointer bg-gray-100">
-                      <Image
-                        src={img}
-                        alt="Work"
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
+                    { img: "/images/carevanta.png", name: "ALCD Systems", href: "#work" },
+                    { img: "/images/spendid.png", name: "SPENDiD", href: "#work" },
+                    { img: "/images/OasisNotes.png", name: "OasisNotes", href: "#work" },
+                    { img: "/images/numantra.png", name: "Numantra", href: "#work" },
+                  ].map((project, i) => (
+                    <a
+                      key={i}
+                      href={project.href}
+                      className="group flex flex-col gap-1.5 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1"
+                    >
+                      {/* Thumbnail */}
+                      <div
+                        className="aspect-[3/2] rounded-xl overflow-hidden relative bg-gray-100 border border-white/50 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300"
+                      >
+                        <Image
+                          src={project.img}
+                          alt={project.name}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        {/* Hover overlay with arrow */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-1.5">
+                          <div className="w-5 h-5 rounded-full bg-white/90 flex items-center justify-center">
+                            <ArrowUpRight size={10} className="text-text-primary" />
+                          </div>
+                        </div>
+                      </div>
+                      {/* Project Name */}
+                      <span className="text-[10px] font-bold text-text-secondary group-hover:text-primary transition-colors duration-300 truncate px-0.5 tracking-wide uppercase">
+                        {project.name}
+                      </span>
+                    </a>
                   ))}
                 </div>
               </div>

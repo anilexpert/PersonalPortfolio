@@ -245,61 +245,82 @@ export default function HowIDesign() {
         </div>
 
         {/* Right Section: Content Card */}
-        <div className="w-full lg:w-1/2">
-          <div className="glass-card rounded-[40px] p-8 md:p-14 min-h-[480px] flex flex-col justify-between relative overflow-hidden glow-border">
+        <div className="w-full lg:w-1/2 relative group">
+          
+          {/* Card Outer Glow/Border effect */}
+          <div className="absolute -inset-[1px] rounded-[40px] bg-gradient-to-br from-primary/30 via-white/10 to-secondary/30 blur-[2px] opacity-50 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          
+          <div className="glass-card rounded-[40px] p-8 md:p-12 lg:p-16 min-h-[520px] flex flex-col justify-between relative overflow-hidden bg-white/40 backdrop-blur-2xl border border-white/60 shadow-sm">
             
-            {/* Animated Gradient Background for Card */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
+            {/* Animated Ambient Background for Card */}
+            <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] pointer-events-none" />
             
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex-1"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="flex-1 relative z-10"
               >
-                <div className="flex items-center gap-3 mb-8">
-                  <span className="w-8 h-[2px] bg-primary" />
-                  <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">
+                {/* Giant Watermark Number */}
+                <div className="absolute -top-12 -right-4 md:-right-8 text-[140px] md:text-[200px] font-black text-transparent pointer-events-none select-none opacity-20"
+                  style={{
+                    WebkitTextStroke: '2px var(--primary-mint)',
+                  }}
+                >
+                  {steps[activeIndex].num}
+                </div>
+
+                {/* Phase Tag */}
+                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-[#0D63CC]/10 to-[#00DA99]/10 border border-primary/30 backdrop-blur-md mb-10">
+                  <span className="text-[12px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99] uppercase tracking-[0.2em]">
                     PHASE {steps[activeIndex].num} • {steps[activeIndex].label}
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-6xl font-bold text-text-primary mb-8 leading-[1.1]">
+                {/* Title */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-text-primary mb-8 leading-[1.1] tracking-tight relative z-10 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
                   {steps[activeIndex].title}
                 </h2>
 
-                <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-12 max-w-xl">
+                {/* Description */}
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-12 max-w-xl font-medium relative z-10">
                   {steps[activeIndex].desc}
                 </p>
 
-                {/* Task Pills */}
-                <div className="flex flex-wrap gap-3">
+                {/* Trendy Task Pills */}
+                <div className="flex flex-wrap gap-4 relative z-10">
                   {steps[activeIndex].tasks.map((task, i) => (
-                    <span 
+                    <div 
                       key={i}
-                      className="px-5 py-2.5 rounded-full bg-white/40 border border-white/50 text-sm font-semibold text-text-primary shadow-sm backdrop-blur-sm"
+                      className={`relative px-3 py-1.5 rounded-full hover:-translate-y-1 transition-all duration-300 cursor-default border backdrop-blur-md ${task.color === 'green' ? 'bg-[#00DA99]/10 border-[#00DA99]/30' : 'bg-[#0D63CC]/10 border-[#0D63CC]/30'}`}
                     >
-                      {task.label}
-                    </span>
+                      <div className="relative flex items-center z-10">
+                        <span className={`text-[12px] md:text-sm font-semibold tracking-wide ${task.color === 'green' ? 'text-primary' : 'text-secondary'}`}>
+                          {task.label}
+                        </span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
             </AnimatePresence>
 
             {/* Pagination Controls */}
-            <div className="mt-16 flex items-center gap-3">
+            <div className="mt-16 flex items-end gap-3 relative z-10">
               {steps.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className="group py-2 px-1"
+                  className="group py-2 px-1 flex flex-col gap-2 items-center"
                 >
+                  <span className={`text-[10px] font-bold transition-all duration-300 -translate-y-2 group-hover:translate-y-0 ${activeIndex === idx ? 'text-primary opacity-100 translate-y-0' : 'text-text-secondary/40 opacity-0 group-hover:opacity-100'}`}>0{idx + 1}</span>
                   <div className={`h-[5px] rounded-full transition-all duration-500 ${activeIndex === idx
-                    ? 'w-12 bg-primary shadow-[0_0_10px_rgba(0,218,153,0.4)]'
-                    : 'w-4 bg-text-secondary/10 group-hover:bg-text-secondary/30'
+                    ? 'w-14 bg-primary shadow-[0_0_15px_rgba(0,218,153,0.5)]'
+                    : 'w-6 bg-text-secondary/10 group-hover:bg-text-secondary/30'
                     }`} />
                 </button>
               ))}

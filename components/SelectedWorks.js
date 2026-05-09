@@ -149,10 +149,15 @@ const SelectedWorks = () => {
               <motion.div
                 key={currentIndex}
                 custom={direction}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                variants={{
+                  enter: (dir) => ({ opacity: 0, x: dir > 0 ? 80 : -80, scale: 0.98 }),
+                  center: { opacity: 1, x: 0, scale: 1 },
+                  exit: (dir) => ({ opacity: 0, x: dir > 0 ? -80 : 80, scale: 0.98 })
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="w-full flex flex-col items-center"
               >
                 {/* Visual Area - Browser Frame */}

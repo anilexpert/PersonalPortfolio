@@ -1,6 +1,6 @@
-import { Globe as MapPin, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { DribbbleIcon, LinkedinIcon, InstagramIcon, BehanceIcon } from './SocialIcons';
 
 const Footer = () => {
   return (
@@ -45,17 +45,42 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             {[
-              { icon: Globe, active: false },
-              { icon: Globe, active: true },
-              { icon: Globe, active: false },
-              { icon: Globe, active: false }
+              { 
+                icon: DribbbleIcon, 
+                name: 'Dribbble',
+                activeClass: 'bg-[#ea4c89] text-white scale-110 shadow-[0_0_20px_rgba(234,76,137,0.3)] border-transparent',
+                hoverClass: 'hover:bg-[#ea4c89] hover:text-white hover:border-transparent hover:shadow-[0_0_15px_rgba(234,76,137,0.2)]',
+                active: false 
+              },
+              { 
+                icon: LinkedinIcon, 
+                name: 'LinkedIn',
+                activeClass: 'bg-[#0077b5] text-white scale-110 shadow-[0_0_20px_rgba(0,119,181,0.3)] border-transparent',
+                hoverClass: 'hover:bg-[#0077b5] hover:text-white hover:border-transparent hover:shadow-[0_0_15px_rgba(0,119,181,0.2)]',
+                active: true 
+              },
+              { 
+                icon: BehanceIcon, 
+                name: 'Behance',
+                activeClass: 'bg-[#1769ff] text-white scale-110 shadow-[0_0_20px_rgba(23,105,255,0.3)] border-transparent',
+                hoverClass: 'hover:bg-[#1769ff] hover:text-white hover:border-transparent hover:shadow-[0_0_15px_rgba(23,105,255,0.2)]',
+                active: false 
+              },
+              { 
+                icon: InstagramIcon, 
+                name: 'Instagram',
+                activeClass: 'bg-[#E1306C] text-white scale-110 shadow-[0_0_20px_rgba(225,48,108,0.3)] border-transparent',
+                hoverClass: 'hover:bg-[#E1306C] hover:text-white hover:border-transparent hover:shadow-[0_0_15px_rgba(225,48,108,0.2)]',
+                active: false 
+              }
             ].map((social, i) => (
               <a
                 key={i}
                 href="#"
-                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${social.active
-                  ? 'bg-primary text-white scale-110 shadow-[0_0_20px_rgba(0,218,153,0.3)]'
-                  : 'glass-card text-text-secondary hover:bg-white hover:text-text-primary'
+                aria-label={social.name}
+                className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 border border-transparent ${social.active
+                  ? social.activeClass
+                  : `glass-card text-text-secondary ${social.hoverClass}`
                   }`}
               >
                 <social.icon size={16} />

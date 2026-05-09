@@ -15,7 +15,7 @@ const CTA = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-[8vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase mb-4">
+          <h2 className="text-[8vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-4">
             LET'S DISCUSS YOUR
           </h2>
           

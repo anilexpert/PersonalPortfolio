@@ -76,7 +76,23 @@ export default function HowIDesign() {
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] -z-10" />
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        
+        {/* ── HEADER ROW ── */}
+        <div className="flex justify-between items-start mb-16 md:mb-24 px-4 lg:px-0">
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
+              <span className="text-secondary text-sm">✳</span>
+              <span className="text-secondary text-[12px] font-bold uppercase tracking-wider">Process</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
+              How I
+              <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
         {/* Left Section: Architectural Graphic */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-4 md:p-8">
@@ -292,6 +308,7 @@ export default function HowIDesign() {
           </div>
         </div>
 
+        </div>
       </div>
     </section>
   );

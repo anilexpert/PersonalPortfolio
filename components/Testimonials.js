@@ -109,23 +109,26 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Right: Stacked Cards Container */}
-          <div className="relative w-full lg:max-w-[50%] h-[420px] md:h-[400px] flex items-center justify-center">
+          <div className="relative w-full lg:max-w-[50%] h-[480px] md:h-[450px] flex items-center justify-center">
             <div className="relative w-full h-full">
               {testimonials.map((testimonial, i) => {
                 const position = getStackPosition(i);
                 const isVisible = position < 3;
+                // Precise transforms to match the mockup's fanned-out stack
+                const rotate = position === 0 ? 0 : position === 1 ? 5 : -5;
+                const scale = position === 0 ? 1 : position === 1 ? 0.98 : 0.95;
+                const yOffset = position === 0 ? 0 : position === 1 ? -12 : -20;
                 
                 return (
                   <motion.div
                     key={i}
                     initial={false}
                     animate={{
-                      scale: isVisible ? 1 - position * 0.06 : 0.8,
-                      y: isVisible ? position * 25 : 60,
-                      x: isVisible ? position * 10 : 0,
-                      opacity: isVisible ? 1 - position * 0.35 : 0,
+                      scale: isVisible ? scale : 0.8,
+                      y: isVisible ? yOffset : 60,
+                      opacity: isVisible ? 1 : 0,
                       zIndex: 10 - position,
-                      rotate: isVisible ? position * -1.5 : 0,
+                      rotate: isVisible ? rotate : 0,
                     }}
                     transition={{
                       type: "spring",
@@ -134,38 +137,64 @@ const Testimonials = () => {
                     }}
                     className="absolute inset-0 w-full"
                   >
-                    <div className={`glass-card rounded-[40px] p-10 md:p-12 relative glow-border h-full flex flex-col justify-between shadow-2xl shadow-secondary/5 ${position === 0 ? 'bg-white/70' : 'bg-white/40'}`}>
-                      <Quote size={60} className="text-primary opacity-5 absolute top-10 right-10" />
 
+                    <div className={`glass-card rounded-[32px] p-8 md:p-12 h-full flex flex-col justify-between shadow-2xl shadow-primary/5 transition-all duration-500 ${
+                      position === 0 ? 'bg-white/80 glow-border backdrop-blur-xl' : position === 1 ? 'bg-secondary/50 backdrop-blur-lg border border-secondary/40' : 'bg-secondary/30 backdrop-blur-md border border-secondary/20'
+                    }`}>
+                      
+                      {/* Top: Star Rating */}
+                      <div className="bg-text-primary w-fit px-5 py-2.5 rounded-full flex items-center gap-1.5 mb-8 shadow-[0_8px_20px_rgba(0,218,153,0.2)] border border-primary/20 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent pointer-events-none" />
+                        {[...Array(5)].map((_, starIdx) => (
+                          <svg key={starIdx} className="w-5 h-5 text-[#FFC107] relative z-10 drop-shadow-[0_0_8px_rgba(255,193,7,0.5)]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      {/* Middle: Quote */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-text-primary text-xl md:text-2xl leading-[1.4] mb-8 font-medium tracking-tight">
-                          <span className="text-primary text-4xl leading-none font-serif">“</span>
-                          {testimonial.quote}
-                          <span className="text-primary text-4xl leading-none font-serif">”</span>
+                        <p className="text-text-primary text-xl md:text-2xl leading-[1.6] mb-8 font-medium italic tracking-wide">
+                          "{testimonial.quote}"
                         </p>
                       </div>
 
-                      <div className="flex items-center gap-5 mt-auto">
-                        <div className="w-16 h-16 rounded-3xl overflow-hidden border-2 border-primary/20 p-1.5 bg-white shadow-xl shadow-primary/5 rotate-3">
-                          <Image
-                            src={testimonial.avatar}
-                            alt={testimonial.author}
-                            width={64}
-                            height={64}
-                            className="object-cover rounded-2xl -rotate-3"
-                          />
+                      {/* Separator Line (Highlighted Glow) */}
+                      <div className="w-full h-[2px] bg-gradient-to-r from-primary/40 via-secondary/20 to-transparent mb-8 shadow-[0_0_10px_rgba(0,218,153,0.3)] rounded-full" />
+
+                      {/* Bottom: Author & Quote Icon */}
+                      <div className="flex items-center justify-between mt-auto">
+                        <div className="flex items-center gap-4">
+                          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/30 p-0.5 bg-white shadow-lg shadow-primary/10">
+                            <Image
+                              src={testimonial.avatar}
+                              alt={testimonial.author}
+                              width={56}
+                              height={56}
+                              className="object-cover rounded-full"
+                            />
+                          </div>
+                          <div>
+                            <div className="font-bold text-text-primary text-lg tracking-tight mb-0.5">{testimonial.author}</div>
+                            <div className="text-text-secondary text-sm font-medium">{testimonial.role}</div>
+                          </div>
                         </div>
-                        <div>
-                          <div className="font-bold text-text-primary text-xl tracking-tight leading-none mb-1">{testimonial.author}</div>
-                          <div className="text-text-secondary text-[11px] font-black uppercase tracking-[0.2em] opacity-60">{testimonial.role}</div>
+                        
+                        {/* Neon Quote Icon Container */}
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_8px_20px_rgba(0,218,153,0.4)] hover:scale-110 transition-transform duration-300">
+                          <Quote size={24} className="text-white fill-white drop-shadow-md" />
                         </div>
                       </div>
+
+
                     </div>
                   </motion.div>
                 );
               })}
             </div>
           </div>
+
+
 
         </div>
       </div>

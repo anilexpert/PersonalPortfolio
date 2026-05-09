@@ -97,7 +97,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-20 flex justify-center"
+          className="mt-20 flex justify-center pb-24"
         >
           <button className="btn-premium px-10 py-4 text-lg">
             <span>Let's Build Something Great</span>
@@ -105,6 +105,49 @@ const About = () => {
           </button>
         </motion.div>
       </div>
+
+      {/* Marquee Stripe Bar */}
+      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-primary/10 via-[#0D63CC]/5 to-primary/10 backdrop-blur-xl py-4 border-t border-primary/20 overflow-hidden flex items-center z-20 shadow-sm">
+        <motion.div
+          animate={{ x: [0, "-50%"] }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 90000 }}
+          className="flex whitespace-nowrap w-max"
+        >
+          {/* Create enough duplicate items to ensure a seamless loop */}
+          {[...Array(8)].map((_, arrayIndex) => {
+            const contactItems = [
+              { label: "Email Me", value: "anilkumar.folio@gmail.com" },
+              { label: "WhatsApp", value: "+91 8437152327" },
+              { label: "Call Directly", value: "+91 8437152327" },
+            ];
+
+            return (
+              <div key={arrayIndex} className="flex items-center">
+                {contactItems.map((item, i) => (
+                  <div key={`${arrayIndex}-${i}`} className="flex items-center gap-8 px-4">
+                    <span
+                      className="text-4xl md:text-[38px] font-black tracking-tighter text-transparent whitespace-nowrap"
+                      style={{ WebkitTextStroke: '2px #0D63CC' }}
+                    >
+                      {item.label}
+                    </span>
+                    <span className="text-primary text-3xl opacity-60">
+                      ◆
+                    </span>
+                    <span className="text-3xl md:text-[38px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] via-[#00B8D4] to-[#00DA99] whitespace-nowrap">
+                      {item.value}
+                    </span>
+                    <span className="text-primary text-2xl opacity-60">
+                      ◆
+                    </span>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
+
     </section>
   );
 };

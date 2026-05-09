@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row items-center justify-between py-12 gap-8 border-b border-text-primary/5">
+        <div className="flex flex-col md:flex-row items-center justify-between py-12 gap-8">
 
           {/* Logo Section */}
           <Link href="/" className="group flex items-center gap-2">
@@ -89,10 +89,15 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Divider matching other sections */}
+        <div className="w-full py-0 flex items-center justify-center my-8">
+          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        </div>
+
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-[12px] text-text-secondary font-medium">
-            Copyright©2025 All Rights Reserved <span className="text-primary font-bold">Anil Kumar</span>
+            Copyright©{new Date().getFullYear()} All Rights Reserved <span className="text-primary font-bold">Anil Kumar</span>
           </div>
 
           <div className="flex items-center gap-6">

@@ -114,10 +114,12 @@ const Testimonials = () => {
               {testimonials.map((testimonial, i) => {
                 const position = getStackPosition(i);
                 const isVisible = position < 3;
-                // Precise transforms to match the mockup's fanned-out stack
-                const rotate = position === 0 ? 0 : position === 1 ? 5 : -5;
-                const scale = position === 0 ? 1 : position === 1 ? 0.98 : 0.95;
-                const yOffset = position === 0 ? 0 : position === 1 ? -12 : -20;
+                
+                // Both background cards use the SAME scale to cross perfectly in the center
+                // Opposite rotations create the symmetrical X-fanning effect seen in the mockup
+                const scale = position === 0 ? 1 : 1.06;
+                const rotate = position === 0 ? 0 : position === 1 ? 3 : -3;
+                const yOffset = 0;
                 
                 return (
                   <motion.div
@@ -138,15 +140,24 @@ const Testimonials = () => {
                     className="absolute inset-0 w-full"
                   >
 
-                    <div className={`glass-card rounded-[32px] p-8 md:p-12 h-full flex flex-col justify-between shadow-2xl shadow-primary/5 transition-all duration-500 ${
-                      position === 0 ? 'bg-white/80 glow-border backdrop-blur-xl' : position === 1 ? 'bg-secondary/50 backdrop-blur-lg border border-secondary/40' : 'bg-secondary/30 backdrop-blur-md border border-secondary/20'
+                    <div className={`glass-card rounded-[32px] p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${
+                      position === 0 
+                        ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10' 
+                        : 'bg-white/40 border-white/60 backdrop-blur-xl shadow-lg'
                     }`}>
                       
+                      {/* Ambient Inner Glow for Active Card */}
+                      {position === 0 && (
+                        <>
+                          <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/20 rounded-full blur-[80px] pointer-events-none" />
+                          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-secondary/15 rounded-full blur-[80px] pointer-events-none" />
+                        </>
+                      )}
+
                       {/* Top: Star Rating */}
-                      <div className="bg-text-primary w-fit px-5 py-2.5 rounded-full flex items-center gap-1.5 mb-8 shadow-[0_8px_20px_rgba(0,218,153,0.2)] border border-primary/20 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent pointer-events-none" />
+                      <div className="relative flex items-center gap-1.5 mb-8 z-10">
                         {[...Array(5)].map((_, starIdx) => (
-                          <svg key={starIdx} className="w-5 h-5 text-[#FFC107] relative z-10 drop-shadow-[0_0_8px_rgba(255,193,7,0.5)]" fill="currentColor" viewBox="0 0 20 20">
+                          <svg key={starIdx} className="w-6 h-6 text-[#FFC107] drop-shadow-[0_0_8px_rgba(255,193,7,0.4)]" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
                         ))}
@@ -154,24 +165,24 @@ const Testimonials = () => {
 
                       {/* Middle: Quote */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-text-primary text-xl md:text-2xl leading-[1.6] mb-8 font-medium italic tracking-wide">
+                        <p className="text-text-primary text-xl md:text-[26px] leading-[1.6] mb-8 font-bold italic tracking-wide">
                           "{testimonial.quote}"
                         </p>
                       </div>
 
-                      {/* Separator Line (Highlighted Glow) */}
-                      <div className="w-full h-[2px] bg-gradient-to-r from-primary/40 via-secondary/20 to-transparent mb-8 shadow-[0_0_10px_rgba(0,218,153,0.3)] rounded-full" />
+                      {/* Separator Line */}
+                      <div className="w-full h-[1px] bg-gradient-to-r from-primary/30 to-transparent mb-8" />
 
                       {/* Bottom: Author & Quote Icon */}
                       <div className="flex items-center justify-between mt-auto">
                         <div className="flex items-center gap-4">
-                          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/30 p-0.5 bg-white shadow-lg shadow-primary/10">
+                          <div className="w-12 h-12 rounded-full overflow-hidden border border-white/50 shadow-sm">
                             <Image
                               src={testimonial.avatar}
                               alt={testimonial.author}
-                              width={56}
-                              height={56}
-                              className="object-cover rounded-full"
+                              width={48}
+                              height={48}
+                              className="object-cover rounded-full w-full h-full"
                             />
                           </div>
                           <div>
@@ -181,12 +192,12 @@ const Testimonials = () => {
                         </div>
                         
                         {/* Neon Quote Icon Container */}
-                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_8px_20px_rgba(0,218,153,0.4)] hover:scale-110 transition-transform duration-300">
-                          <Quote size={24} className="text-white fill-white drop-shadow-md" />
+                        <div className="text-primary drop-shadow-[0_0_12px_rgba(0,218,153,0.4)]">
+                          <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 7H4C4 4.79086 5.79086 3 8 3C8.55228 3 9 2.55228 9 2C9 1.44772 8.55228 1 8 1C4.68629 1 2 3.68629 2 7V15C2 17.7614 4.23858 20 7 20C9.76142 20 12 17.7614 12 15V11C12 8.79086 11.1046 7 10 7ZM22 7H16C16 4.79086 17.7908 3 20 3C20.5523 3 21 2.55228 21 2C21 1.44772 20.5523 1 20 1C16.6863 1 14 3.68629 14 7V15C14 17.7614 16.2386 20 19 20C21.7614 20 24 17.7614 24 15V11C24 8.79086 23.1046 7 22 7Z"/>
+                          </svg>
                         </div>
                       </div>
-
-
                     </div>
                   </motion.div>
                 );

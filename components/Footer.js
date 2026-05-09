@@ -24,7 +24,7 @@ const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <span className="font-bold text-xl tracking-tight text-text-primary">
+            <span className="font-bold text-2xl tracking-tight text-text-primary">
               Anil Kumar<span className="text-primary">.</span>
             </span>
           </Link>
@@ -35,7 +35,7 @@ const Footer = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(' ', '-')}`}
-                className="text-[11px] font-bold text-text-secondary hover:text-primary tracking-[0.2em] transition-colors"
+                className="text-[12px] font-semibold text-text-secondary hover:text-primary transition-colors"
               >
                 {link}
               </a>
@@ -58,7 +58,7 @@ const Footer = () => {
                   : 'glass-card text-text-secondary hover:bg-white hover:text-text-primary'
                   }`}
               >
-                <social.icon size={18} />
+                <social.icon size={16} />
               </a>
             ))}
           </div>

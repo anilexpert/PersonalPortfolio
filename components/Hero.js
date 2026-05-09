@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Globe, Mail, MessageCircle, Download } from 'lucide-react';
+import { ArrowUpRight, Globe, Mail, MessageCircle, Download, Award, Layout, Layers } from 'lucide-react';
 import Image from 'next/image';
 
 const Hero = () => {
@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="text-[14px] md:text-[18px] font-medium text-secondary mb-4 flex items-center gap-2 opacity-80">
                 Hello, 👋 I'm Anil Kumar Product Designer
               </span>
-              <h1 className="text-[64px] md:text-[110px] font-black uppercase leading-[0.85] mb-8 tracking-tighter">
+              <h1 className="text-[64px] md:text-[90px] font-black uppercase leading-[0.85] mb-8 tracking-tighter">
                 <span
                   className="text-transparent"
                   style={{ WebkitTextStroke: '2px #282360' }}
@@ -53,9 +53,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[15px] md:text-[16px] text-text-secondary mb-10 max-w-[580px] leading-relaxed"
+              className="text-[14px] md:text-[16px] text-text-secondary mb-8 max-w-[580px] leading-relaxed"
             >
-              <span className="text-primary font-bold">That Users Truly Love.</span> I'm a product designer who solves problems through clean, functional design — turning ideas into intuitive digital experiences that users actually enjoy using.
+              <span className="text-primary font-semibold">That Users Truly Love.</span> I'm a product designer who solves problems through clean, functional design — turning ideas into intuitive digital experiences that users actually enjoy using.
             </motion.p>
 
             <motion.div
@@ -84,11 +84,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="p-6 rounded-[24px] w-full max-w-[560px] relative overflow-hidden group"
+              className="px-6 py-4 rounded-[24px] w-full max-w-[560px] relative overflow-hidden group"
               style={{
                 background: 'rgba(255, 255, 255, 0.4)',
                 backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255, 255, 255, 0.5)',
+                border: '2px solid rgba(255, 255, 255, 0.4)',
                 boxShadow: '0 20px 40px rgba(0, 0, 0, 0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.4)',
               }}
             >
@@ -143,9 +143,9 @@ const Hero = () => {
 
               {/* Overlay Text */}
               <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
-                <span className="text-[60px] md:text-[80px] font-black text-transparent uppercase tracking-tighter opacity-30"
+                <span className="text-[60px] md:text-[80px] font-black text-transparent uppercase tracking-tighter"
                   style={{
-                    WebkitTextStroke: '2px rgba(0, 190, 194, 0.6)',
+                    WebkitTextStroke: '2px rgb(2, 170, 173)',
                   }}
                 >
                   FREELANCER
@@ -153,26 +153,91 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Floating 3D Element */}
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 5, 0]
-              }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-12 -right-12 w-48 h-48 z-20 pointer-events-none bg-transparent select-none"
-            >
-              <Image
-                src="/3d_spiral.png"
-                alt="3D Element"
-                width={150}
-                height={150}
-                className="object-contain mix-blend-multiply"
-              />
-            </motion.div>
+            
 
             {/* Background Decorative Element (Circle) */}
             <div className="absolute -z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%]" />
+
+            {/* Circular Rotating Badge (Mockup Style) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -20 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ delay: 0.5, duration: 1, type: "spring" }}
+              className="absolute -top-6 right-0 z-30 hidden xl:block"
+            >
+              <div className="relative w-44 h-44 flex items-center justify-center">
+                {/* Background Glass Circle with Glow Border */}
+                <div className="absolute inset-4 rounded-full bg-white/20 backdrop-blur-2xl border border-white/40 shadow-2xl overflow-hidden">
+                  {/* Subtle Reflection Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none" />
+                  {/* Mask Glowing Border Style */}
+                  <div className="absolute inset-0 rounded-full border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.3)]" />
+                </div>
+
+                {/* Rotating Text */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0"
+                >
+                  <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
+                    <defs>
+                      <path
+                        id="circlePath"
+                        d="M 50, 50 m -28, 0 a 28,28 0 1,1 56,0 a 28,28 0 1,1 -56,0"
+                      />
+                    </defs>
+                    <text className="text-[7px] font-black uppercase tracking-[0.25em] fill-[#0D63CC]/80">
+                      <textPath xlinkHref="#circlePath" startOffset="0%">
+                        . SYSTEMS STRATEGY . PRODUCT DESIGN 
+                      </textPath>
+                    </text>
+                  </svg>
+                </motion.div>
+
+                {/* Center Content: Tilted Glass Diamond with Glow */}
+                <div className="relative w-18 h-18 flex items-center justify-center">
+                  <motion.div 
+                    initial={{ rotate: 45 }}
+                    whileHover={{ rotate: 60, scale: 1.05 }}
+                    className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-full shadow-sm shadow-black/5 flex items-center justify-center overflow-hidden"
+                    style={{ transform: 'rotate(45deg)' }}
+                  >
+                    {/* Glowing Border for Diamond */}
+                    <div className="absolute inset-0 border border-white/50 rounded-full" />
+                    <div className="absolute inset-[1px] border border-white/20 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
+                  </motion.div>
+                  
+                  {/* Icon with subtle pulse */}
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 text-[#00DA99] drop-shadow-lg"
+                  >
+                    <Award size={36} strokeWidth={2.5} />
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating Pill Badges (Left Side of Image) */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-[20%] -left-20 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
+            >
+              <Layout size={16} className="text-secondary"/>
+              <span className="text-[12px] font-bold text-secondary whitespace-nowrap">UI/UX Expert</span>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute bottom-[40%] left-0 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
+            >
+              <Layers size={16} className="text-secondary"/>
+              <span className="text-[12px] font-bold text-secondary whitespace-nowrap">SaaS Scalability</span>
+            </motion.div>
           </div>
 
         </div>

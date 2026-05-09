@@ -81,22 +81,24 @@ const SelectedWorks = () => {
 
         {/* ── HEADER ROW ── */}
         <div className="flex justify-between items-start mb-24">
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3">
-              <span className="text-primary text-xl">✳</span>
-              <span className="text-primary text-[12px] font-black uppercase tracking-[0.4em]">Featured Projects</span>
+          <div className="flex flex-col gap-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
+              <span className="text-secondary text-sm">✳</span>
+              <span className="text-secondary text-[12px] font-bold uppercase tracking-wider">Featured Projects</span>
             </div>
-            <h2 className="text-[56px] md:text-[74px] font-black uppercase tracking-tighter leading-none text-text-primary">
-              OUR CREATIVE <span className="text-transparent" style={{ WebkitTextStroke: '1.5px var(--primary-mint)' }}>SHOWCASE</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+              Our Creative
+              <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Showcase</span>
             </h2>
           </div>
 
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="px-10 py-4 bg-gradient-to-r from-primary to-secondary rounded-full text-[13px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-white shadow-xl shadow-primary/20"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-6 py-3 bg-gradient-to-r from-secondary to-primary rounded-full text-[16px] font-semibold flex items-center gap-3 text-white shadow-[0_8px_24px_rgba(13,99,204,0.15)] border border-white/20"
           >
             <span>View All Projects</span>
-            <ArrowUpRight size={18} />
+            <ArrowUpRight size={18} className="stroke-[2]" />
           </motion.button>
         </div>
 
@@ -104,33 +106,37 @@ const SelectedWorks = () => {
         <div className="relative flex items-center justify-center min-h-[550px] w-full">
 
           {/* Navigation Arrows (Floating) */}
-          <motion.button
-            onClick={() => paginate(-1)}
-            whileHover={{ scale: 1.1 }}
-            className="absolute left-0 top-1/2 -translate-y-[150%] z-50 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_0_30px_rgba(0,218,153,0.3)]"
-          >
-            <ArrowLeft size={24} strokeWidth={3} />
-          </motion.button>
+          <div className="absolute inset-x-0 top-1 -translate-y-1/2 flex justify-between items-center pointer-events-none z-50">
+            <motion.button
+              onClick={() => paginate(-1)}
+              whileHover={{ scale: 1.1, x: -3 }}
+              whileTap={{ scale: 0.9 }}
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white shadow-sm flex items-center justify-center text-secondary hover:text-primary transition-colors group ml-[-32px] md:ml-0"
+            >
+              <ArrowLeft size={24} strokeWidth={2} />
+            </motion.button>
 
-          <motion.button
-            onClick={() => paginate(1)}
-            whileHover={{ scale: 1.1 }}
-            className="absolute right-0 top-1/2 -translate-y-[150%] z-50 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_0_30px_rgba(0,218,153,0.3)]"
-          >
-            <ArrowRight size={24} strokeWidth={3} />
-          </motion.button>
+            <motion.button
+              onClick={() => paginate(1)}
+              whileHover={{ scale: 1.1, x: 3 }}
+              whileTap={{ scale: 0.9 }}
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white shadow-sm flex items-center justify-center text-secondary hover:text-primary transition-colors group mr-[-32px] md:mr-0"
+            >
+              <ArrowRight size={24} strokeWidth={2} />
+            </motion.button>
+          </div>
 
           {/* Left Vertical Labels */}
-          <div className="absolute left-10 flex gap-12 py-12">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
-              <span className="[writing-mode:vertical-rl] rotate-180 text-[12px] font-semibold text-text-secondary/30">{currentProject.leftSub}</span>
+          <div className="absolute left-0 flex gap-10 py-12 opacity-40 hover:opacity-100 transition-opacity duration-500 hidden xl:flex">
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-text-secondary/20 to-transparent" />
+              <span className="[writing-mode:vertical-rl] rotate-180 text-[16px] font-semibold text-text-secondary">{currentProject.leftSub}</span>
             </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: currentProject.color }} />
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
               <motion.span
                 key={currentIndex + 'l'}
-                className="[writing-mode:vertical-rl] rotate-180 text-[13px] font-semibold text-text-primary"
+                className="[writing-mode:vertical-rl] rotate-180 text-[16px] font-semibol text-text-primary"
               >
                 {currentProject.leftMain}
               </motion.span>
@@ -150,7 +156,7 @@ const SelectedWorks = () => {
                 className="w-full flex flex-col items-center"
               >
                 {/* Visual Area - Browser Frame */}
-                <div className="relative w-full aspect-video rounded-[32px] bg-white/40 backdrop-blur-[15px] border border-white/60 shadow-2xl shadow-primary/5 flex flex-col mb-16 overflow-hidden group">
+                <div className="relative w-full aspect-video rounded-[24px] bg-white/40 backdrop-blur-[12px] border border-white/60 shadow-sm shadow-primary/5 flex flex-col mb-10 overflow-hidden group">
                   {/* Browser Header */}
                   <div className="w-full h-10 bg-white/80 border-b border-white/40 flex items-center px-6 gap-2">
                     <div className="flex gap-1.5">
@@ -158,7 +164,7 @@ const SelectedWorks = () => {
                       <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                       <div className="w-3 h-3 rounded-full bg-[#28C840]" />
                     </div>
-                    <div className="mx-auto bg-gray-100/50 rounded-md px-12 py-1 text-[10px] text-text-secondary/60 font-medium">
+                    <div className="mx-auto bg-gray-100/50 rounded-md px-12 py-1 text-[12px] text-text-secondary/60 font-medium">
                       www.{currentProject.name.toLowerCase().replace(' ', '')}.io
                     </div>
                   </div>
@@ -179,40 +185,43 @@ const SelectedWorks = () => {
                 {/* Footer Content */}
                 <div className="flex items-end justify-between w-full px-6">
                   <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentProject.dotColor }} />
-                      <span className="text-[14px] font-black uppercase tracking-[0.4em]" style={{ color: currentProject.dotColor }}>{currentProject.name}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: currentProject.dotColor }} />
+                      <span className="text-[14px] font-semibold" style={{ color: currentProject.dotColor }}>{currentProject.name}</span>
                     </div>
-                    <h3 className="text-[32px] md:text-[42px] font-black text-text-primary uppercase tracking-tighter leading-none">
+                    <h3 className="text-[24px] md:text-[32px] font-semibold text-text-primary leading-none">
                       {currentProject.category}
                     </h3>
                   </div>
 
-                  <div className="flex items-center gap-10 group cursor-pointer mb-2">
-                    <span className="text-[14px] font-black text-text-secondary uppercase tracking-[0.2em] opacity-60 group-hover:opacity-100 transition-opacity">VIEW PROJECT</span>
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="flex items-center gap-4 group cursor-pointer mb-2"
+                  >
+                    <span className="text-[16px] font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">View Project</span>
                     <motion.div
-                      whileHover={{ scale: 1.1, backgroundColor: "var(--electric-blue)" }}
-                      className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center transition-all group-hover:shadow-[0_0_30px_var(--primary-mint)] group-hover:text-white"
+                      whileHover={{ backgroundColor: "var(--electric-blue)", color: "#fff" }}
+                      className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center transition-all group-hover:shadow-sm"
                     >
-                      <ArrowUpRight size={28} />
+                      <ArrowUpRight size={24} className="stroke-[2]" />
                     </motion.div>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Right Vertical Labels */}
-          <div className="absolute right-10 flex gap-12 py-12">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-              <span className="[writing-mode:vertical-rl] text-[11px] font-semibold tracking-[0.4em] uppercase text-text-secondary/30">{currentProject.rightSub}</span>
+          <div className="absolute right-0 flex gap-10 py-12 opacity-40 hover:opacity-100 transition-opacity duration-500 hidden xl:flex">
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-secondary/20 to-transparent" />
+              <span className="[writing-mode:vertical-rl] text-[16px] font-semibold text-text-secondary">{currentProject.rightSub}</span>
             </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: currentProject.color }} />
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-secondary/40 to-transparent" />
               <motion.span
                 key={currentIndex + 'r'}
-                className="[writing-mode:vertical-rl] text-[13px] font-black tracking-[0.3em] uppercase text-text-primary"
+                className="[writing-mode:vertical-rl] text-[16px] font-semibold text-text-primary"
               >
                 {currentProject.rightMain}
               </motion.span>
@@ -222,14 +231,20 @@ const SelectedWorks = () => {
         </div>
 
         {/* ── BOTTOM NAV ── */}
-        <div className="mt-24 flex items-center justify-center relative">
-          <div className="flex items-center gap-4">
+        <div className="mt-10 flex items-center justify-between relative px-6">
+          <div className="flex items-center gap-3">
             {projects.map((_, i) => (
-              <button key={i} onClick={() => setCurrentIndex(i)} className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-10 bg-primary shadow-[0_0_10px_var(--primary-mint)]' : 'w-2 bg-text-secondary/20 hover:bg-text-secondary/40'}`} />
+              <button 
+                key={i} 
+                onClick={() => setCurrentIndex(i)} 
+                className={`h-1.5 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-12 bg-secondary shadow-[0_0_15px_rgba(13,99,204,0.3)]' : 'w-1.5 bg-text-secondary/20 hover:bg-text-secondary/40'}`} 
+              />
             ))}
           </div>
-          <div className="absolute right-0 flex items-center gap-3 font-black text-[18px] tracking-widest text-text-secondary/20">
-            <span className="text-text-primary">0{currentIndex + 1}</span> / 0{projects.length}
+          <div className="flex items-center gap-4 font-semibold text-[16px] text-text-secondary/40">
+            <span className="text-text-primary text-[24px] font-black">0{currentIndex + 1}</span> 
+            <div className="w-8 h-[1px] bg-text-secondary/40" />
+            <span>0{projects.length}</span>
           </div>
         </div>
 

@@ -114,6 +114,8 @@ const DesignExpertise = () => {
                 <div className="w-2 h-2 rounded-full animate-pulse transition-colors duration-500" style={{ backgroundColor: activeItem.color }} />
                 <span className="text-[12px] font-bold uppercase tracking-wider transition-colors duration-500" style={{ color: activeItem.color }}>Multi-Domain Expertise</span>
               </motion.div>
+
+              
               <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
                 Strategic <br />
                 <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Product Systems.</span>
@@ -140,7 +142,7 @@ const DesignExpertise = () => {
                   } : {}}
                 >
                   <div className="flex items-center gap-3">
-                    <div 
+                    {/* <div 
                       className="text-sm font-bold w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-500 shrink-0"
                       style={{
                         backgroundColor: activeIndex === i ? item.color : `${item.color}15`,
@@ -148,7 +150,7 @@ const DesignExpertise = () => {
                       }}
                     >
                       {item.id}
-                    </div>
+                    </div> */}
                     <div 
                       className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-500 shrink-0 border"
                       style={{
@@ -224,7 +226,7 @@ const DesignExpertise = () => {
                     {activeItem.label}
                   </span>
 
-                  <h3 className="text-3xl font-bold mb-6 leading-tight">
+                  <h3 className="text-3xl text-white font-bold mb-6 leading-tight">
                     {activeItem.title}
                   </h3>
 
@@ -242,7 +244,7 @@ const DesignExpertise = () => {
                   </div>
 
                   <button 
-                    className="w-full py-4 mt-auto rounded-full font-bold flex items-center justify-center gap-2 text-white hover:scale-[1.02] transition-all duration-300"
+                    className="w-full py-4 mt-auto rounded-full font-semibold flex items-center justify-center gap-2 text-white hover:scale-[1.02] transition-all duration-300"
                     style={{ 
                       backgroundColor: activeItem.color,
                       boxShadow: `0 8px 24px ${activeItem.color}40`

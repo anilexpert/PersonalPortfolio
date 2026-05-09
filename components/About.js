@@ -67,7 +67,7 @@ const About = () => {
     <section className="py-24 px-6 relative overflow-hidden" id="about">
       {/* Background Large Text */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none opacity-[0.03]">
-        <h2 className="text-[100px] md:text-[200px] font-bold text-text-primary uppercase tracking-tighter leading-none">
+        <h2 className="text-[100px] md:text-[150px] font-bold text-text-primary uppercase tracking-tighter leading-none">
           Design Excellence
         </h2>
       </div>

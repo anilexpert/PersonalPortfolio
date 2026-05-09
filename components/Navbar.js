@@ -16,6 +16,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '#' },
     { name: 'Services', href: '#services' },
     { name: 'Case Studies', href: '#work' },
     { name: 'Expertise', href: '#expertise' },
@@ -56,7 +57,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-[14px] font-medium text-text-secondary hover:text-text-primary transition-all relative group"
+              className="text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative group"
             >
               {link.name}
               {/* Mint underline glow */}
@@ -67,9 +68,9 @@ export default function Navbar() {
 
         {/* Right: CTA */}
         <div className="flex items-center">
-          <button className="btn-premium py-2 px-6 text-[13px]">
-            <span>Let's Talk</span>
-            <MessageCircle size={14} />
+          <button className="btn-premium py-2 px-4 text-[14px] ">
+            <span className="uppercase">Let's Talk</span>
+            <MessageCircle size={18} />
           </button>
         </div>
       </div>

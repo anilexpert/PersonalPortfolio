@@ -15,7 +15,7 @@ const CTA = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-[10vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase mb-4">
+          <h2 className="text-[8vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase mb-4">
             LET'S DISCUSS YOUR
           </h2>
           
@@ -23,19 +23,19 @@ const CTA = () => {
             {/* Desktop View Work Button (Left) */}
             <motion.a
               href="#work"
-              whileHover={{ scale: 1.05, rotate: -15, y: -5 }}
-              className="hidden xl:flex absolute left-0 -rotate-12 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-bold transition-all shadow-xl shadow-primary/20 hover:shadow-primary/40 group z-20"
+              whileHover={{ scale: 1.05, rotate: -10, y: -5 }}
+              className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
             >
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
               <span className="tracking-[0.2em] text-[12px] uppercase">VIEW WORK</span>
             </motion.a>
 
             <h2 
-              className="text-[12vw] md:text-[8rem] lg:text-[9rem] font-black leading-none tracking-tighter uppercase text-center"
+              className="text-[8vw] md:text-[8rem] lg:text-[9rem] font-black leading-none tracking-tighter uppercase text-center"
               style={{ 
                 color: 'transparent',
-                WebkitTextStroke: '2px var(--primary-mint)',
-                textStroke: '2px var(--primary-mint)',
+                WebkitTextStroke: '4px var(--primary-mint)',
+                textStroke: '4px var(--primary-mint)',
               }}
             >
               NEXT PROJECT
@@ -45,7 +45,7 @@ const CTA = () => {
             <motion.a
               href="mailto:anilkumar.folio@gmail.com"
               whileHover={{ scale: 1.05, rotate: 15, y: -5 }}
-              className="hidden xl:flex absolute right-0 rotate-12 bg-gradient-to-br from-secondary to-primary px-8 py-4 rounded-full items-center gap-3 text-white font-bold transition-all shadow-xl shadow-secondary/20 hover:shadow-secondary/40 group z-20"
+              className="hidden xl:flex absolute right-0 rotate-40 bg-gradient-to-br from-secondary to-primary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-secondary/20 hover:shadow-secondary/40 group z-20"
             >
               <span className="tracking-[0.2em] text-[12px] uppercase">HIRE NOW</span>
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />

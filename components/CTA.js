@@ -3,7 +3,7 @@ import { ArrowRight as ArrowUpRight } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section className="py-32 px-6 relative overflow-hidden" id="contact">
+    <section className="py-16 px-6 relative overflow-hidden" id="contact">
       {/* Background Neon Effects - On top of light base */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/15 blur-[150px] rounded-full -ml-[250px] pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/15 blur-[150px] rounded-full -mr-[150px] pointer-events-none" />
@@ -18,7 +18,7 @@ const CTA = () => {
           <h2 className="text-[8vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-4">
             LET'S DISCUSS YOUR
           </h2>
-          
+
           <div className="relative flex items-center justify-center w-full px-4 lg:px-20">
             {/* Desktop View Work Button (Left) */}
             <motion.a
@@ -30,9 +30,9 @@ const CTA = () => {
               <span className="tracking-[0.2em] text-[12px] uppercase">VIEW WORK</span>
             </motion.a>
 
-            <h2 
+            <h2
               className="text-[8vw] md:text-[8rem] lg:text-[9rem] font-black leading-none tracking-tighter uppercase text-center"
-              style={{ 
+              style={{
                 color: 'transparent',
                 WebkitTextStroke: '4px var(--primary-mint)',
                 textStroke: '4px var(--primary-mint)',

@@ -93,11 +93,64 @@ const About = () => {
           ))}
         </div>
 
+        {/* Skills Cloud */}
+        <div className="mt-16 mb-8 w-full max-w-3xl mx-auto flex flex-col items-center gap-2">
+          {/* Top Row - scattered with rotations */}
+          <div className="flex flex-wrap justify-center items-center gap-2">
+            {[
+              { name: "Wordpress", icon: "🔵", rotate: 0, y: 0 },
+              { name: "vitejs", icon: "⚡", rotate: -12, y: -6 },
+              { name: "React.js", icon: "⚛️", rotate: 8, y: 4 },
+              { name: "Figma", icon: "🎨", rotate: -10, y: -8 },
+              { name: "nuxt.js", icon: "💚", rotate: 6, y: -10 },
+              { name: "nextjs", icon: "▲", rotate: -5, y: 8 },
+              { name: "WebFlow", icon: "🌐", rotate: 10, y: -6 },
+            ].map((skill, i) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04, duration: 0.4 }}
+                style={{ rotate: `${skill.rotate}deg`, translateY: `${skill.y}px` }}
+                className="flex items-center gap-1.5 whitespace-nowrap bg-white/60 backdrop-blur-sm border border-white/80 shadow-sm rounded-full px-3 py-1.5 hover:bg-white/90 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+              >
+                <span className="text-sm leading-none">{skill.icon}</span>
+                <span className="text-[12px] font-semibold text-text-primary tracking-tight">{skill.name}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom Row - flat, aligned */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            {[
+              { name: "Sketch", icon: "💎" },
+              { name: "JavaScript (ES6+)", icon: "🟨" },
+              { name: "tailwindcss & CSS3", icon: "🌀" },
+              { name: "ReactJS", icon: "⚛️" },
+              { name: "FIGMA", icon: "🎨" },
+              { name: "VueJS", icon: "⚡" }
+            ].map((skill, i) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 + i * 0.04, duration: 0.4 }}
+                className="flex items-center gap-1.5 whitespace-nowrap bg-white/60 backdrop-blur-sm border border-white/80 shadow-sm rounded-full px-3 py-1.5 hover:bg-white/90 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+              >
+                <span className="text-sm leading-none">{skill.icon}</span>
+                <span className="text-[12px] font-bold text-text-primary tracking-tight">{skill.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-20 flex justify-center pb-24"
+          className="mt-4 flex justify-center pb-24"
         >
           <button className="btn-premium px-10 py-4 text-lg">
             <span>Let's Build Something Great</span>

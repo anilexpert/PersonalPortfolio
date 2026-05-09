@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row items-center justify-between py-12 gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-10 gap-8">
 
           {/* Logo Section */}
           <Link href="/" className="group flex items-center gap-2">

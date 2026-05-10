@@ -66,7 +66,7 @@ const SelectedWorks = () => {
   const currentProject = projects[currentIndex];
 
   return (
-    <section className="min-h-screen bg-transparent relative overflow-hidden py-24 flex flex-col justify-center font-['Poppins'] text-text-primary" id="work">
+    <section className="min-h-screen bg-transparent relative overflow-hidden py-24 flex flex-col justify-center text-text-primary" id="work">
       {/* Background Decorative Grid */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(rgba(0,218,153,0.9) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

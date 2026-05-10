@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lightbulb, Pencil, Search, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ArrowRight, Lightbulb, Pencil, Search, ChevronLeft, ChevronRight, Star, Target, Box, FlaskConical, Flag } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -19,22 +19,39 @@ const stats = [
 
 const workflow = [
   {
+    icon: Target,
+    title: 'Research and Analysis',
+    color: '#FBBF24', // Yellow
+    labelPos: 'top',
+    desc: 'Deep dive into user needs, market trends, and business goals to build a solid foundation.'
+  },
+  {
     icon: Lightbulb,
-    title: 'Develop',
-    color: '#00DA99',
-    desc: 'We bring strategic clarity to a website, content, or campaign—through extensive research and ideation.',
+    title: 'Ideation',
+    color: '#818CF8', // Purple/Indigo
+    labelPos: 'bottom',
+    desc: 'Brainstorming creative solutions and exploring multiple design directions.'
   },
   {
-    icon: Pencil,
-    title: 'Design',
-    color: '#0D63CC',
-    desc: 'The team creates a cohesive visual language and design solutions that tell your brand\'s story.',
+    icon: Box,
+    title: 'Concept Development',
+    color: '#F472B6', // Pink
+    labelPos: 'top',
+    desc: 'Refining selected ideas into concrete design concepts and architectural structures.'
   },
   {
-    icon: Search,
-    title: 'Discover',
-    color: '#6B67CC',
-    desc: 'We begin by understanding your challenges, defining your goals, and your audience through research.',
+    icon: FlaskConical,
+    title: 'Prototyping and Testing',
+    color: '#2DD4BF', // Teal
+    labelPos: 'bottom',
+    desc: 'Creating interactive prototypes and validating designs with real users.'
+  },
+  {
+    icon: Flag,
+    title: 'Final Design and Production',
+    color: '#FB923C', // Orange
+    labelPos: 'top',
+    desc: 'Polishing every pixel and preparing assets for a seamless development handoff.'
   },
 ];
 
@@ -251,49 +268,184 @@ export default function AboutPage() {
           <div className="w-full max-w-7xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         </div>
 
-        {/* ── 3. CREATIVE WORKFLOW ───────────────────────────────────────── */}
-        <section className="relative py-20 px-6 overflow-hidden" id="workflow">
-          <div className="max-w-7xl mx-auto">
-            <motion.div {...fadeUp(0)} className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                <span className="text-secondary text-sm">✳</span>
-                <span className="text-secondary text-[12px] font-bold uppercase tracking-wider">Process</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
-                Our Creative{' '}
-                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                  Workflow
-                </span>
+        {/* ── 3. CREATIVE WORKFLOW (PROCESS) ────────────────────────────── */}
+        <section className="relative py-16 px-6 overflow-hidden" id="workflow">
+          {/* Intense Neon Background Glows */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+            <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-primary/20 blur-[140px] rounded-full animate-pulse-slow" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-secondary/20 blur-[140px] rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/40 blur-[100px] rounded-full" />
+          </div>
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-4"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+                Process of Product
+                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
               </h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            {/* Desktop Timeline Layout */}
+            <div className="hidden lg:block relative min-h-[350px]">
+              {/* SVG Wavy Flowing Dashed Line */}
+              <svg
+                viewBox="0 0 1200 300"
+                fill="none"
+                className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
+              >
+                <motion.path
+                  initial={{ pathLength: 0, strokeDashoffset: 100 }}
+                  whileInView={{
+                    pathLength: 1,
+                    strokeDashoffset: [100, 0],
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    pathLength: { duration: 2, ease: "easeInOut" },
+                    strokeDashoffset: { duration: 20, repeat: Infinity, ease: "linear" }
+                  }}
+                  d="M0 150 C 100 150, 100 230, 200 230 S 300 70, 400 70 S 500 230, 600 230 S 700 70, 800 70 S 900 230, 1000 230 S 1100 150, 1200 150"
+                  stroke="url(#lineGradient)"
+                  strokeWidth="2.5"
+                  strokeDasharray="12 12"
+                  strokeLinecap="round"
+                />
+                <defs>
+                  <linearGradient id="lineGradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#CBD5E1" />
+                    <stop offset="0.5" stopColor="#94A3B8" />
+                    <stop offset="1" stopColor="#CBD5E1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              {/* Stage Nodes */}
+              <div className="relative w-full h-[200px]">
+                {workflow.map((step, i) => {
+                  const xPerc = ((200 + i * 200) / 1200) * 100;
+                  const yPos = step.labelPos === 'top' ? 200 : 160;
+
+                  return (
+                    <div
+                      key={step.title}
+                      className="absolute"
+                      style={{ left: `${xPerc}%`, top: `${yPos}px` }}
+                    >
+                      {/* Label and Arrow Container */}
+                      <motion.div
+                        initial={{ opacity: 0, y: step.labelPos === 'top' ? -20 : 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.8 + i * 0.15, duration: 0.6 }}
+                        className="absolute left-0 w-64 -translate-x-1/2 flex flex-col items-center group/label"
+                        style={{
+                          top: step.labelPos === 'top' ? '-140px' : '60px'
+                        }}
+                      >
+                        {step.labelPos === 'top' ? (
+                          <>
+                            <p className="text-[14px] font-bold text-[#1A1A1A] mb-3 leading-tight group-hover/label:text-primary transition-colors">
+                              {step.title}
+                            </p>
+                            <motion.div
+                              animate={{ y: [0, 5, 0] }}
+                              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                              <svg width="24" height="40" viewBox="0 0 24 40" fill="none" className="opacity-40">
+                                <path d="M12 0 V30 M7 25 L12 30 L17 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </motion.div>
+                          </>
+                        ) : (
+                          <>
+                            <motion.div
+                              animate={{ y: [0, -5, 0] }}
+                              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                              <svg width="24" height="40" viewBox="0 0 24 40" fill="none" className="mb-3 opacity-40">
+                                <path d="M12 40 V10 M7 15 L12 10 L17 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </motion.div>
+                            <p className="text-[14px] font-bold text-[#1A1A1A] leading-tight group-hover/label:text-secondary transition-colors">
+                              {step.title}
+                            </p>
+                          </>
+                        )}
+                      </motion.div>
+
+                      {/* Circle Node */}
+                      <motion.div
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          delay: 0.4 + i * 0.15,
+                          type: "spring",
+                          stiffness: 120,
+                          damping: 12
+                        }}
+                        className="relative w-28 h-28 rounded-full flex items-center justify-center z-20 group -translate-x-1/2 -translate-y-1/2"
+                      >
+                        {/* Outer Pulse Ring */}
+                        <div
+                          className="absolute inset-[-10px] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"
+                          style={{ backgroundColor: step.color }}
+                        />
+
+                        {/* Circle Body */}
+                        <motion.div
+                          animate={{ y: [0, -8, 0] }}
+                          transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: i * 0.5
+                          }}
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          className="w-full h-full rounded-full border-[8px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-center relative z-10 overflow-hidden cursor-pointer"
+                          style={{
+                            backgroundColor: step.color,
+                            boxShadow: `0 20px 40px ${step.color}30, inset 0 0 20px rgba(0,0,0,0.1)`
+                          }}
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/30 pointer-events-none" />
+                          <step.icon size={42} className="text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)] relative z-10" strokeWidth={2.5} />
+
+                          {/* Inner Shine */}
+                          <div className="absolute top-2 left-2 w-1/3 h-1/3 bg-white/20 rounded-full blur-md" />
+                        </motion.div>
+                      </motion.div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Mobile Vertical Layout */}
+            <div className="lg:hidden flex flex-col gap-12 relative pt-10">
+              {/* Vertical Dashed Line */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-[2px] border-l-2 border-dashed border-slate-300 -translate-x-1/2 z-0" />
+
               {workflow.map((step, i) => (
                 <motion.div
                   key={step.title}
-                  {...fadeUp(i * 0.12)}
-                  className="glass-card rounded-[28px] p-8 flex flex-col gap-5 hover:-translate-y-2 transition-transform duration-500 group"
+                  {...fadeUp(i * 0.1)}
+                  className={`flex items-center gap-4 relative z-10 ${i % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
-                  {/* Icon circle */}
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
-                    style={{ backgroundColor: `${step.color}18`, border: `1px solid ${step.color}30` }}
-                  >
-                    <step.icon size={28} style={{ color: step.color }} />
+                  <div className={`flex-1 ${i % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                    <p className="text-[14px] font-bold text-[#333] leading-snug">{step.title}</p>
                   </div>
 
-                  {/* Step number */}
-                  <div className="text-[11px] font-black uppercase tracking-[0.2em]" style={{ color: step.color }}>
-                    0{i + 1} / {step.title}
+                  <div className="w-14 h-14 rounded-full border-4 border-white flex items-center justify-center shadow-lg relative shrink-0 z-10" style={{ backgroundColor: step.color }}>
+                    <step.icon size={22} className="text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-text-primary">{step.title}</h3>
-                  <p className="text-text-secondary leading-relaxed text-[15px]">{step.desc}</p>
-
-                  {/* Bottom glow line */}
-                  <div className="mt-auto h-[2px] w-0 group-hover:w-full rounded-full transition-all duration-500"
-                    style={{ background: `linear-gradient(to right, ${step.color}, transparent)` }}
-                  />
+                  <div className="flex-1" />
                 </motion.div>
               ))}
             </div>

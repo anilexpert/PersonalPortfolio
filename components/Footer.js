@@ -31,14 +31,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <nav className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-            {['HOME', 'SERVICES', 'CASE STUDIES', 'EXPERTISE', 'CONTACT US'].map((link) => (
-              <a
+            {['HOME', 'ABOUT', 'SERVICES', 'CASE STUDIES', 'EXPERTISE', 'CONTACT US'].map((link) => (
+              <Link
                 key={link}
-                href={`#${link.toLowerCase().replace(' ', '-')}`}
+                href={link === 'ABOUT' ? '/about' : `#${link.toLowerCase().replace(' ', '-')}`}
                 className="text-[12px] font-semibold text-text-secondary hover:text-primary transition-colors"
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </nav>
 

@@ -6,7 +6,7 @@ import MarqueeStripe from '../components/MarqueeStripe';
 import CoreCapabilities from '../components/CoreCapabilities';
 import DesignExpertise from '../components/DesignExpertise';
 import About from '../components/About';
-import SelectedWorks from '../components/SelectedWorks';
+import ProjectsSlider from '../components/ProjectsSlider';
 import HowIDesign from '../components/HowIDesign';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
@@ -35,7 +35,7 @@ export default function Home() {
         <GlowDivider />
         <About />
         <GlowDivider />
-        <SelectedWorks />
+        <ProjectsSlider />
         <GlowDivider />
         <HowIDesign />
         <GlowDivider />

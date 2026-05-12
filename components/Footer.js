@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <nav className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-            {['HOME', 'ABOUT', 'SERVICES', 'CASE STUDIES', 'EXPERTISE', 'CONTACT US'].map((link) => (
+            {['HOME', 'ABOUT', 'SERVICES', 'CASE STUDIES', 'CONTACT US'].map((link) => (
               <Link
                 key={link}
                 href={link === 'ABOUT' ? '/about' : `#${link.toLowerCase().replace(' ', '-')}`}

@@ -3,10 +3,10 @@ import { Award, Rocket, TrendingUp, Package, Sparkles, ArrowRight } from 'lucide
 import { useEffect, useState, useRef } from 'react';
 
 const metrics = [
-  { value: '10+', label: 'Years Experience', Icon: Award, color: '#0D63CC' },
-  { value: '250+', label: 'Projects Shipped', Icon: Rocket, color: '#00DA99' },
-  { value: '30%+', label: 'Conversion Lift', Icon: TrendingUp, color: '#0D63CC' },
-  { value: '77+', label: 'Products Launched', Icon: Package, color: '#00DA99' },
+  { value: '10+', label: 'Years Experience', Icon: Award, color: '#0D63CC' }, // Blue
+  { value: '250+', label: 'Projects Shipped', Icon: Rocket, color: '#00DA99' }, // Mint
+  { value: '30%+', label: 'Conversion Lift', Icon: TrendingUp, color: '#818CF8' }, // Purple
+  { value: '77+', label: 'Products Launched', Icon: Package, color: '#FB923C' }, // Orange
 ];
 
 const MetricCard = ({ value, label, Icon, color, delay }) => {
@@ -47,15 +47,31 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
       transition={{ delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="flex-1 min-w-[200px]"
     >
-      <div className="glass-card rounded-[24px] px-6 py-8 flex flex-col items-center gap-4 hover:-translate-y-2 group transition-all duration-500">
-        <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-          <Icon size={24} className="text-secondary" />
-        </div>
-        <div className="text-4xl md:text-5xl font-bold text-text-primary tracking-tight">
-          {count}{suffix}
-        </div>
-        <div className="text-[12px] font-bold uppercase tracking-widest text-text-secondary">
-          {label}
+      <div className="relative group p-[1px] rounded-[24px] overflow-hidden">
+        {/* Masking Border Effect */}
+        <div 
+          className="absolute inset-0 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
+          style={{ 
+            background: `linear-gradient(135deg, ${color} 0%, transparent 50%, ${color} 100%)` 
+          }}
+        />
+        
+        <div className="relative glass-card rounded-[23px] px-6 py-8 flex flex-col items-center gap-4 hover:-translate-y-1 transition-all duration-500 bg-white/60 backdrop-blur-md">
+          <div 
+            className="w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-sm"
+            style={{ 
+              backgroundColor: `${color}15`,
+              border: `1px solid ${color}30`
+            }}
+          >
+            <Icon size={28} style={{ color }} strokeWidth={1.5} />
+          </div>
+          <div className="text-4xl md:text-5xl font-bold text-text-primary tracking-tight">
+            {count}{suffix}
+          </div>
+          <div className="text-[11px] font-black uppercase tracking-[0.2em] text-text-secondary opacity-60">
+            {label}
+          </div>
         </div>
       </div>
     </motion.div>

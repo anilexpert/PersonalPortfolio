@@ -81,14 +81,14 @@ const testimonials = [
     quote: 'The team delivered beyond expectations. From branding to web design, every detail reflected creativity and strategy. They truly understood our vision and made it a reality. Highly recommended for any business looking to grow.',
     name: 'Leslie Alexander',
     role: 'Web Designer',
-    avatar: '/images/testimonial-1.jpg',
+    avatar: '/images/testimonial-1.png',
     rating: 5,
   },
   {
     quote: 'Working with Anil was a transformative experience. His attention to detail and deep understanding of user needs resulted in a product that exceeded all expectations.',
     name: 'Marcus Chen',
     role: 'Startup Founder',
-    avatar: '/images/testimonial-2.jpg',
+    avatar: '/images/testimonial-2.png',
     rating: 5,
   },
 ];
@@ -520,19 +520,15 @@ function TestimonialSlider({ testimonials }) {
           {/* Inner Mint Container (Mockup Style) */}
           <div className="absolute inset-5 rounded-[10px] bg-primary/10 backdrop-blur-lg flex items-center justify-center border border-white/30 overflow-hidden">
             {/* Character/Image */}
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full">
               <img
                 src={current.avatar}
                 alt={current.name}
-                className="w-[50%] h-[50%] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)] group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
+                  e.target.src = "https://ui-avatars.com/api/?name=" + current.name;
                 }}
               />
-              <div className="absolute inset-0 flex items-center justify-center text-4xl hidden">
-                🙋‍♂️
-              </div>
             </div>
           </div>
         </div>

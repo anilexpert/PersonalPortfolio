@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden" id="home">
+    <section className="relative min-h-screen flex items-center pt-25 md:pt-32 pb-10 md:pb-20 overflow-hidden" id="home">
       {/* Side Social Links (Vertical) - Left Side */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-12 z-20">
         <div className="flex flex-col items-center gap-6">
@@ -62,7 +62,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-6 md:mb-8"
+              className="flex flex-col w-full sm:auto sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-6 md:mb-8"
             >
               <button className="px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[12px] sm:text-[13px] md:text-base font-medium flex items-center justify-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
                 <ArrowUpRight size={18} className="stroke-[2]" /> View Selected Work
@@ -161,7 +161,7 @@ const Hero = () => {
 
               {/* Overlay Text */}
               <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
-                <span className="text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] font-black text-transparent uppercase tracking-tighter"
+                <span className="text-[60px] lg:text-[80px] font-black text-transparent uppercase tracking-tighter"
                   style={{
                     WebkitTextStroke: '2px rgb(2, 170, 173)',
                   }}

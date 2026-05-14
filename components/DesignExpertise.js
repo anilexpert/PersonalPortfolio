@@ -107,7 +107,7 @@ const DesignExpertise = () => {
           {/* Left: Menu Content */}
           <div className="lg:col-span-6">
             <div className="mb-12">
-              <motion.div 
+              <motion.div
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full border mb-4 sm:mb-6 transition-all duration-500"
                 style={{ backgroundColor: `${activeItem.color}15`, borderColor: `${activeItem.color}30` }}
               >
@@ -115,7 +115,7 @@ const DesignExpertise = () => {
                 <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-wider transition-colors duration-500" style={{ color: activeItem.color }}>Multi-Domain Expertise</span>
               </motion.div>
 
-              
+
               <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
                 Strategic <br />
                 <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Product Systems.</span>
@@ -131,12 +131,11 @@ const DesignExpertise = () => {
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(i)}
-                  className={`group cursor-pointer py-3 sm:py-5 px-4 sm:px-6 rounded-2xl transition-all duration-500 flex items-center gap-3 sm:gap-4 relative overflow-hidden ${
-                    activeIndex === i
-                      ? 'glass-card scale-[1.02]'
-                      : 'hover:bg-white/40 hover:translate-x-2'
-                  }`}
-                  style={activeIndex === i ? { 
+                  className={`group cursor-pointer py-3 sm:py-5 px-4 sm:px-6 lg:px-10 lg:py-10 rounded-xl lg:rounded-2xl transition-all duration-500 flex items-center gap-3 sm:gap-4 relative overflow-hidden ${activeIndex === i
+                    ? 'glass-card scale-[1.02]'
+                    : 'hover:bg-white/40 hover:translate-x-2'
+                    }`}
+                  style={activeIndex === i ? {
                     borderColor: `${item.color}40`,
                     boxShadow: `0 8px 32px ${item.color}15`
                   } : {}}
@@ -151,7 +150,7 @@ const DesignExpertise = () => {
                     >
                       {item.id}
                     </div> */}
-                    <div 
+                    <div
                       className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-500 shrink-0 border"
                       style={{
                         backgroundColor: `${item.color}05`,
@@ -164,12 +163,11 @@ const DesignExpertise = () => {
                   </div>
 
                   <div className="flex flex-col flex-1">
-                    <h3 className={`text-base sm:text-lg font-bold transition-all ${
-                      activeIndex === i ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'
-                    }`}>
+                    <h3 className={`text-base sm:text-lg font-bold transition-all ${activeIndex === i ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'
+                      }`}>
                       {item.title}
                     </h3>
-                    <motion.p 
+                    <motion.p
                       initial={false}
                       animate={{ height: activeIndex === i ? 'auto' : 0, opacity: activeIndex === i ? 1 : 0 }}
                       className="text-[13px] sm:text-sm text-text-secondary mt-1 sm:mt-2 overflow-hidden"
@@ -178,10 +176,9 @@ const DesignExpertise = () => {
                     </motion.p>
                   </div>
 
-                  <div 
-                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
-                      activeIndex === i ? 'opacity-100' : 'bg-white text-text-secondary opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 shadow-sm'
-                    }`}
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${activeIndex === i ? 'opacity-100' : 'bg-white text-text-secondary opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 shadow-sm'
+                      }`}
                     style={activeIndex === i ? { backgroundColor: item.color, color: '#ffffff' } : {}}
                   >
                     <ArrowRight size={16} />
@@ -200,22 +197,22 @@ const DesignExpertise = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full p-10 md:p-14 flex flex-col relative overflow-hidden rounded-[40px] text-white"
+                className="w-full h-full p-10 md:p-14 flex flex-col relative overflow-hidden rounded-xl lg:rounded-[40px] text-white"
                 style={{ background: 'var(--deep-indigo)' }}
               >
                 {/* Background Noise Layer for Detail Card */}
-                <div 
-                  className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+                <div
+                  className="absolute inset-0 opacity-[0.05] pointer-events-none"
                   style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
                 />
-                
+
                 {/* Subtle Gradient Overlay */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-20 pointer-events-none"
                   style={{ background: `radial-gradient(circle at 0% 0%, ${activeItem.color}, transparent)` }}
                 />
                 <div className="relative z-10 flex flex-col h-full">
-                  <div 
+                  <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border border-white/10 backdrop-blur-xl"
                     style={{ backgroundColor: `${activeItem.color}20` }}
                   >
@@ -226,11 +223,11 @@ const DesignExpertise = () => {
                     {activeItem.label}
                   </span>
 
-                  <h3 className="text-3xl text-white font-bold mb-6 leading-tight">
+                  <h3 className="lg:text-3xl text-2xl text-white font-bold mb-6 leading-tight">
                     {activeItem.title}
                   </h3>
 
-                  <p className="text-lg text-white/70 mb-8 leading-relaxed">
+                  <p className="text-base lg:text-lg text-white/70 mb-8 leading-relaxed">
                     {activeItem.desc}
                   </p>
 
@@ -243,9 +240,9 @@ const DesignExpertise = () => {
                     ))}
                   </div>
 
-                  <button 
+                  <button
                     className="w-full py-4 mt-auto rounded-full font-semibold flex items-center justify-center gap-2 text-white hover:scale-[1.02] transition-all duration-300"
-                    style={{ 
+                    style={{
                       backgroundColor: activeItem.color,
                       boxShadow: `0 8px 24px ${activeItem.color}40`
                     }}

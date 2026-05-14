@@ -105,19 +105,19 @@ const Hero = () => {
                 </div>
                 <div className="grid grid-cols-4 gap-3">
                   {[
-                    { img: "/images/carevanta.png", name: "ALCD Systems", href: "#work" },
+                    { img: "/images/carevanata.png", name: "Carevanta", href: "#work" },
                     { img: "/images/spendid.png", name: "SPENDiD", href: "#work" },
-                    { img: "/images/OasisNotes.png", name: "OasisNotes", href: "#work" },
-                    { img: "/images/numantra.png", name: "Numantra", href: "#work" },
+                    { img: "/images/oasisnotes.png", name: "OasisNotes", href: "#work" },
+                    { img: "/images/pulse-grid.png", name: "PulseGrid", href: "#work" },
                   ].map((project, i) => (
                     <a
                       key={i}
                       href={project.href}
-                      className="group flex flex-col gap-1.5 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1"
+                      className="group flex flex-col gap-1.5 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1"
                     >
                       {/* Thumbnail */}
                       <div
-                        className="aspect-[3/2] rounded-xl overflow-hidden relative bg-gray-100 border border-white/50 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300"
+                        className="aspect-[3/2] rounded-lg overflow-hidden relative bg-gray-100 border border-white/50 shadow-sm group-hover:shadow-md group-hover:border-primary/30 transition-all duration-300"
                       >
                         <Image
                           src={project.img}
@@ -133,7 +133,7 @@ const Hero = () => {
                         </div>
                       </div>
                       {/* Project Name */}
-                      <span className="text-[10px] font-bold text-text-secondary group-hover:text-primary transition-colors duration-300 truncate px-0.5 tracking-wide uppercase">
+                      <span className="text-[12px] w-full text-center font-medium text-text-secondary group-hover:text-primary transition-colors duration-300 truncate px-0.5 tracking-wide uppercase">
                         {project.name}
                       </span>
                     </a>
@@ -171,7 +171,7 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            
+
 
             {/* Background Decorative Element (Circle) */}
             <div className="absolute -z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%]" />
@@ -207,7 +207,7 @@ const Hero = () => {
                     </defs>
                     <text className="text-[7px] font-black uppercase tracking-[0.25em] fill-[#0D63CC]/80">
                       <textPath xlinkHref="#circlePath" startOffset="0%">
-                        . SYSTEMS STRATEGY . PRODUCT DESIGN 
+                        . SYSTEMS STRATEGY . PRODUCT DESIGN
                       </textPath>
                     </text>
                   </svg>
@@ -215,7 +215,7 @@ const Hero = () => {
 
                 {/* Center Content: Tilted Glass Diamond with Glow */}
                 <div className="relative w-18 h-18 flex items-center justify-center">
-                  <motion.div 
+                  <motion.div
                     initial={{ rotate: 45 }}
                     whileHover={{ rotate: 60, scale: 1.05 }}
                     className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-full shadow-sm shadow-black/5 flex items-center justify-center overflow-hidden"
@@ -225,7 +225,7 @@ const Hero = () => {
                     <div className="absolute inset-0 border border-white/50 rounded-full" />
                     <div className="absolute inset-[1px] border border-white/20 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
                   </motion.div>
-                  
+
                   {/* Icon with subtle pulse */}
                   <motion.div
                     animate={{ scale: [1, 1.1, 1] }}
@@ -244,7 +244,7 @@ const Hero = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-[20%] -left-20 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
             >
-              <Layout size={16} className="text-secondary"/>
+              <Layout size={16} className="text-secondary" />
               <span className="text-[12px] font-bold text-secondary whitespace-nowrap">UI/UX Expert</span>
             </motion.div>
 
@@ -253,7 +253,7 @@ const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute bottom-[40%] left-0 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
             >
-              <Layers size={16} className="text-secondary"/>
+              <Layers size={16} className="text-secondary" />
               <span className="text-[12px] font-bold text-secondary whitespace-nowrap">SaaS Scalability</span>
             </motion.div>
           </div>

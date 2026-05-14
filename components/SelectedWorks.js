@@ -6,51 +6,75 @@ import Image from 'next/image';
 const projects = [
   {
     id: "01",
-    name: "ALCD Systems",
-    category: "COMPLIANCE & WORKFLOW DASHBOARD",
+    name: "SPENDiD™",
+    category: "AI-POWERED SMART EXPENSE ECOSYSTEM",
     color: "#00DA99",
     dotColor: "#00DA99",
-    leftSub: "HEALTHCARE SYSTEMS",
-    leftMain: "ADMIN DASHBOARD",
-    rightSub: "UX OPTIMIZATION",
-    rightMain: "PRODUCT STRATEGY",
-    image: "/images/carevanta.png"
-  },
-  {
-    id: "02",
-    name: "SPENDiD",
-    category: "FINTECH FINANCIAL PLANNING",
-    color: "#0D63CC",
-    dotColor: "#0D63CC",
-    leftSub: "BUDGETING TOOLS",
-    leftMain: "USER EXPERIENCE",
-    rightSub: "DATA VISUALIZATION",
+    leftSub: "FINTECH SOLUTIONS",
+    leftMain: "SMART BUDGETING",
+    rightSub: "AI ANALYTICS",
     rightMain: "FINANCIAL SAAS",
     image: "/images/spendid.png"
   },
   {
+    id: "02",
+    name: "Carevanta Systems™",
+    category: "FACILITY & COMPLIANCE PLATFORM",
+    color: "#0D63CC",
+    dotColor: "#0D63CC",
+    leftSub: "ENTERPRISE SAAS",
+    leftMain: "COMPLIANCE TRACKING",
+    rightSub: "WORKFLOW AUTOMATION",
+    rightMain: "FACILITY OPS",
+    image: "/images/carevanata.png"
+  },
+  {
     id: "03",
-    name: "OasisNotes",
-    category: "PRACTICE MANAGEMENT SYSTEM",
+    name: "OasisNotes™",
+    category: "SMART KNOWLEDGE & PRODUCTIVITY",
     color: "#6B67CC",
     dotColor: "#6B67CC",
-    leftSub: "HEALTHCARE TECH",
-    leftMain: "SAAS PLATFORM",
-    rightSub: "SYSTEM ARCHITECTURE",
-    rightMain: "ENTERPRISE DESIGN",
-    image: "/images/OasisNotes.png"
+    leftSub: "KNOWLEDGE MGMT",
+    leftMain: "AI NOTE-TAKING",
+    rightSub: "PRODUCTIVITY",
+    rightMain: "COLLABORATION",
+    image: "/images/oasisnotes.png"
   },
   {
     id: "04",
-    name: "Numantra",
-    category: "AI-POWERED REGULATORY SUBMISSIONS",
+    name: "Ticket-IT™",
+    category: "RETAIL TICKETING REDESIGN",
     color: "#F43F5E",
     dotColor: "#F43F5E",
-    leftSub: "AI INTEGRATION",
-    leftMain: "SMART WORKFLOWS",
-    rightSub: "COMPLEX DATA",
-    rightMain: "PHARMA TECH",
-    image: "/images/numantra.png"
+    leftSub: "RETAIL ECOSYSTEM",
+    leftMain: "CLOUD TICKETING",
+    rightSub: "SCALABLE MGMT",
+    rightMain: "UX REDESIGN",
+    image: "/images/ticketit.png"
+  },
+  {
+    id: "05",
+    name: "Market Prophet™",
+    category: "AI-POWERED MARKET INTELLIGENCE",
+    color: "#F59E0B",
+    dotColor: "#F59E0B",
+    leftSub: "PREDICTIVE ANALYTICS",
+    leftMain: "MARKET INSIGHTS",
+    rightSub: "STRATEGIC TRENDS",
+    rightMain: "BUSINESS INTEL",
+    image: "/images/market-rophet.png"
+  },
+  {
+    id: "06",
+    name: "PulseGrid™",
+    category: "SAAS ANALYTICS & BI PLATFORM",
+    color: "#8B5CF6",
+    dotColor: "#8B5CF6",
+    leftSub: "REAL-TIME KPIs",
+    leftMain: "SAAS ANALYTICS",
+    rightSub: "CONVERSION TRACKING",
+    rightMain: "EXECUTIVE REPORTING",
+    image: "/images/pulse-grid.png"
   }
 ];
 

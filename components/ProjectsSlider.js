@@ -22,27 +22,39 @@ const GLASS_BORDER = 'rgba(0, 200, 150, 0.15)';
 const slides = [
   {
     year: '2025',
-    title: 'Data-driven dashboard',
-    tag: 'SaaS Dashboard',
-    img: '/images/spendid-dashboard.png',
+    title: 'SPENDiD™',
+    tag: 'AI-Powered Smart Expense Ecosystem',
+    img: '/images/spendid.png',
   },
   {
     year: '2025',
-    title: 'Compliance & Workflow',
-    tag: 'Healthcare Platform',
-    img: '/images/alcd-dashboard.png',
+    title: 'Carevanta Systems™',
+    tag: 'Facility & Compliance Management',
+    img: '/images/carevanata.png',
   },
   {
     year: '2024',
-    title: 'Practice Management System',
-    tag: 'Oasis Notes',
-    img: '/images/OasisNotes.png',
+    title: 'OasisNotes™',
+    tag: 'Smart Knowledge & Productivity Workspace',
+    img: '/images/oasisnotes.png',
   },
   {
     year: '2024',
-    title: 'AI Regulatory Submissions',
-    tag: 'Pharma Tech',
-    img: '/images/numantra.png',
+    title: 'Ticket-IT™',
+    tag: 'Retail Ticketing Experience Redesign',
+    img: '/images/ticketit.png',
+  },
+  {
+    year: '2024',
+    title: 'Market Prophet™',
+    tag: 'AI-Powered Market Intelligence Platform',
+    img: '/images/market-rophet.png',
+  },
+  {
+    year: '2024',
+    title: 'PulseGrid™',
+    tag: 'SaaS Analytics & Business Intelligence',
+    img: '/images/pulse-grid.png',
   },
 ];
 
@@ -75,11 +87,12 @@ export default function ProjectsSlider() {
   return (
     <section
       id="projects"
+      className="projects-section"
       style={{
         //background: 'radial-gradient(circle at 10% 20%, #e8fcf6 0%, #f7fffb 100%)',
         position: 'relative',
         overflow: 'hidden',
-        padding: '80px 0',
+        padding: '60px 0',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -88,7 +101,7 @@ export default function ProjectsSlider() {
     >
       {/* Background decorative glows (soft teal/green radial glow + 120px grid) */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(rgba(0,200,150,0.5) 1px, transparent 1px)', backgroundSize: '120px 120px' }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(rgba(0,200,150,0.5) 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(0,200,150,0.15)_0%,transparent_70%)] blur-[100px]" />
           <div className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(0,150,200,0.1)_0%,transparent_70%)] blur-[100px]" />
@@ -99,6 +112,7 @@ export default function ProjectsSlider() {
 
       {/* ── Main content wrapper ── */}
       <div
+        className="projects-wrapper"
         style={{
           position: 'relative',
           zIndex: 1,
@@ -137,6 +151,7 @@ export default function ProjectsSlider() {
                   fontWeight: 700,
                   letterSpacing: '0.05em',
                   textTransform: 'uppercase',
+
                 }}
               >
                 Selected Work
@@ -152,96 +167,30 @@ export default function ProjectsSlider() {
 
         </div>
 
-        {/* ── Body grid: pagination | slide card | year rail ── */}
+        {/* ── Body grid: slide card ── */}
         <div
           className="projects-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'auto 1fr', // pagination and card
+            gridTemplateColumns: '1fr', // card only
             gap: '48px', // slightly larger gap for better spacing
             alignItems: 'center',
-            minHeight: '640px',
+            maxWidth: '1020px',
+            margin: '0 auto',
           }}
         >
 
-          {/* ── Numbered pagination column ── */}
-          <div
-            className="project-pagination"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '14px',
-              alignItems: 'center',
-            }}
-          >
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => goTo(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '16px', // modern squircle look
-                  border: '1px solid',
-                  borderColor: i === active ? TEAL : GLASS_BORDER,
-                  background:
-                    i === active
-                      ? `linear-gradient(135deg, ${TEAL} 0%, ${BLUE} 100%)`
-                      : GLASS_BG,
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)',
-                  color: i === active ? '#fff' : 'rgba(0, 80, 70, 0.6)',
-                  fontSize: '14px',
-                  fontWeight: 800,
-                  letterSpacing: '0.02em',
-                  cursor: 'pointer',
-                  boxShadow:
-                    i === active
-                      ? `0 12px 24px rgba(0, 200, 150, 0.3), inset 0 1px 1px rgba(255,255,255,0.4)`
-                      : '0 4px 12px rgba(0,0,0,0.03)',
-                  transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                  flexShrink: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: "'Inter', monospace",
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
-                {/* Border masking glow effect for active state */}
-                {i === active && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      inset: '-1px',
-                      borderRadius: '16px',
-                      padding: '1px',
-                      background: `linear-gradient(135deg, rgba(255,255,255,0.6), transparent, rgba(255,255,255,0.3))`,
-                      WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                      WebkitMaskComposite: 'xor',
-                      maskComposite: 'exclude',
-                      pointerEvents: 'none',
-                    }}
-                  />
-                )}
-                <span style={{ position: 'relative', zIndex: 1 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-              </button>
-            ))}
-          </div>
 
           {/* ── Center slide card ── */}
           <div
+            className="slide-card"
             style={{
               position: 'relative',
               borderRadius: '32px',
               overflow: 'hidden',
-              minHeight: '520px',
-              maxHeight: '580px',
-              height: 'clamp(520px, 38vw, 580px)',
+              minHeight: '620px',
+              // maxHeight: '520px',
+              // height: 'clamp(520px, 38vw, 520px)',
               background: 'rgba(255, 255, 255, 0.4)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
@@ -254,7 +203,7 @@ export default function ProjectsSlider() {
               style={{
                 position: 'absolute',
                 inset: 0,
-                borderRadius: '32px',
+                borderRadius: '20px',
                 padding: '1.5px',
                 background: `linear-gradient(135deg, ${TEAL}, ${BLUE}, ${TEAL})`,
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -281,8 +230,9 @@ export default function ProjectsSlider() {
                   src={s.img}
                   alt={s.title}
                   fill
-                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
                   priority={i === 0}
+                  quality={100}
                 />
               </div>
             ))}
@@ -306,13 +256,14 @@ export default function ProjectsSlider() {
             {/* Bottom Caption Bar: Glassmorphism + L/R Alignment */}
             <div
               key={fadeKey}
+              className="caption-bar"
               style={{
                 position: 'absolute',
                 bottom: '24px',
                 left: '24px',
                 right: '24px',
                 zIndex: 12,
-                padding: '28px 32px',
+                padding: '30px 20px',
                 borderRadius: '24px',
                 background: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(20px)',
@@ -342,26 +293,26 @@ export default function ProjectsSlider() {
               {/* Left Side: Tag + Title */}
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                  <span style={{ width: '20px', height: '1px', background: TEAL }} />
-                  <span style={{ color: TEAL, fontSize: '11px', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                  {/* <span style={{ width: '20px', height: '1px', background: TEAL }} /> */}
+                  <span className="caption-tag" style={{ color: '#fff', fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                     {slide.tag}
                   </span>
-                  <span style={{ width: '20px', height: '1px', background: TEAL }} />
+                  {/* <span style={{ width: '20px', height: '1px', background: TEAL }} /> */}
                 </div>
-                <h3 style={{ color: '#fff', fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+                <h3 className="caption-title" style={{ color: '#fff', fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 500, margin: 0, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
                   {slide.title}
                 </h3>
               </div>
 
               {/* Right Side: Project Details Button */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <span style={{ color: '#fff', fontSize: '11px', fontWeight: 700, letterSpacing: '0.1em', opacity: 0.6, textTransform: 'uppercase' }}>
+              <div className="caption-right" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <span className="caption-details-text" style={{ color: '#fff', fontSize: '16px', fontWeight: 600, textTransform: 'uppercase' }}>
                   Project Details
                 </span>
                 <div
                   style={{
-                    width: '52px',
-                    height: '52px',
+                    width: '40px',
+                    height: '40px',
                     borderRadius: '50%',
                     background: `linear-gradient(135deg, ${TEAL} 0%, ${BLUE} 100%)`,
                     display: 'flex',
@@ -375,7 +326,7 @@ export default function ProjectsSlider() {
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1) rotate(45deg)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1) rotate(0deg)'}
                 >
-                  <ArrowUpRight size={22} color="#fff" strokeWidth={3} />
+                  <ArrowUpRight size={24} color="#fff" strokeWidth={2} />
                 </div>
               </div>
             </div>
@@ -397,6 +348,7 @@ export default function ProjectsSlider() {
         >
           {/* Prev button — dark circular */}
           <button
+            className="slider-btn"
             onClick={prev}
             aria-label="Previous project"
             style={{
@@ -453,6 +405,7 @@ export default function ProjectsSlider() {
 
           {/* Next button — lime circular */}
           <button
+            className="slider-btn"
             onClick={next}
             aria-label="Next project"
             style={{
@@ -495,13 +448,43 @@ export default function ProjectsSlider() {
         }
 
         .slider-footer-controls {
-          padding-left: 96px; /* Align with card: 48px pagination + 48px gap */
+          padding-left: 0;
         }
 
         @media (max-width: 768px) {
+          .projects-section {
+            padding: 40px 0 !important;
+            min-height: auto !important;
+          }
+          .projects-wrapper {
+            padding: 0 20px !important;
+          }
           .projects-grid {
             grid-template-columns: 1fr !important;
-            gap: 32px !important;
+            gap: 24px !important;
+          }
+          .slide-card {
+            min-height: 420px !important;
+            border-radius: 24px !important;
+          }
+          .caption-bar {
+            padding: 20px 16px !important;
+            bottom: 16px !important;
+            left: 16px !important;
+            right: 16px !important;
+            border-radius: 20px !important;
+          }
+          .caption-tag {
+            font-size: 10px !important;
+          }
+          .caption-title {
+            font-size: 20px !important;
+          }
+          .caption-details-text {
+            display: none !important;
+          }
+          .caption-right {
+            gap: 0 !important;
           }
           /* Hide decorative rails and pagination on mobile for cleaner look */
           .side-rail, .project-pagination {
@@ -509,6 +492,12 @@ export default function ProjectsSlider() {
           }
           .slider-footer-controls {
             padding-left: 0;
+            gap: 16px !important;
+            margin-top: 24px !important;
+          }
+          .slider-btn {
+            width: 44px !important;
+            height: 44px !important;
           }
         }
       `}</style>

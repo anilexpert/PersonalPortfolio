@@ -34,7 +34,7 @@ const services = [
 
 const CoreCapabilities = () => {
   return (
-    <section className="py-16 px-6 relative overflow-hidden" id="services">
+    <section className="py-10 md:py-24 px-6 relative overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Centered Heading */}
         <motion.div
@@ -43,10 +43,10 @@ const CoreCapabilities = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-            <span className="text-[12px] font-bold text-secondary uppercase tracking-wider">Our Core Services</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
+            <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Our Core Services</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
+          <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight">
             My Design <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Expertise.</span>
           </h2>
         </motion.div>

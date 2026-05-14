@@ -160,7 +160,7 @@ export default function ProjectsSlider() {
           </div>
 
           {/* Centered heading matching mockup style */}
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-2">
+          <h2 className="text-[28px] sm:text-3xl md:text-5xl font-bold text-text-primary mb-2 leading-[1.2]">
             Recent Marketing
             <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Projects</span>
           </h2>
@@ -453,32 +453,32 @@ export default function ProjectsSlider() {
 
         @media (max-width: 768px) {
           .projects-section {
-            padding: 40px 0 !important;
+            padding: 32px 0 !important;
             min-height: auto !important;
           }
           .projects-wrapper {
-            padding: 0 20px !important;
+            padding: 0 16px !important;
           }
           .projects-grid {
             grid-template-columns: 1fr !important;
-            gap: 24px !important;
+            gap: 16px !important;
           }
           .slide-card {
-            min-height: 420px !important;
-            border-radius: 24px !important;
+            min-height: 340px !important;
+            border-radius: 20px !important;
           }
           .caption-bar {
-            padding: 20px 16px !important;
-            bottom: 16px !important;
-            left: 16px !important;
-            right: 16px !important;
-            border-radius: 20px !important;
+            padding: 16px 12px !important;
+            bottom: 12px !important;
+            left: 12px !important;
+            right: 12px !important;
+            border-radius: 16px !important;
           }
           .caption-tag {
             font-size: 10px !important;
           }
           .caption-title {
-            font-size: 20px !important;
+            font-size: 18px !important;
           }
           .caption-details-text {
             display: none !important;

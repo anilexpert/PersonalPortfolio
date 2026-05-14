@@ -114,17 +114,17 @@ export default function AboutPage() {
 
       <Navbar />
 
-      <main className="min-h-screen pt-24">
+      <main className="min-h-screen pt-20 md:pt-24">
 
         {/* ── 1. PAGE HERO ───────────────────────────────────────────────── */}
-        <section className="relative py-20 px-6 overflow-hidden">
+        <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
           {/* bg glows */}
           <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
           <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             {/* Breadcrumb */}
-            <motion.div {...fadeUp(0)} className="flex items-center justify-center gap-2 text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-6">
+            <motion.div {...fadeUp(0)} className="flex items-center justify-center gap-2 text-[10px] md:text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-4 md:mb-6">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <span>/</span>
               <span className="text-primary">About Us</span>
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
             <motion.h1 
               {...fadeUp(0.1)} 
-              className="text-4xl md:text-5xl font-bold text-text-primary mb-6"
+              className="text-[36px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
             >
               About
               <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Us</span>
@@ -159,19 +159,19 @@ export default function AboutPage() {
         </section>
 
         {/* ── 2. INTRO / STATS ───────────────────────────────────────────── */}
-        <section className="relative py-16 px-6 overflow-hidden">
+        <section className="relative py-12 md:py-16 px-4 md:px-6 overflow-hidden">
           {/* subtle bg glow */}
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/8 blur-[120px] rounded-full pointer-events-none" />
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-secondary/8 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid lg:grid-cols-[1fr_1fr] gap-12 xl:gap-20 items-start">
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-8 md:gap-12 xl:gap-20 items-start">
 
               {/* ── LEFT COL ── */}
               <motion.div {...fadeUp(0)} className="relative">
 
                 {/* Headline */}
-                <h2 className="text-3xl md:text-4xl xl:text-[34px] font-black text-text-primary leading-[1.15] tracking-tight uppercase mb-10">
+                <h2 className="text-[28px] sm:text-3xl md:text-4xl xl:text-[34px] font-black text-text-primary leading-[1.15] tracking-tight uppercase mb-8 md:mb-10">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Driven by</span>{' '}
                   <span
                     className="relative inline-block"
@@ -198,9 +198,9 @@ export default function AboutPage() {
                 </h2>
 
                 {/* Giant 10+ display & Years of Experience */}
-                <div className="flex items-center gap-6 md:gap-8 select-none">
+                <div className="flex items-center gap-4 md:gap-6 lg:gap-8 select-none">
                   <span
-                    className="text-[130px] md:text-[180px] font-black leading-none tracking-tighter"
+                    className="text-[100px] sm:text-[130px] md:text-[180px] font-black leading-none tracking-tighter"
                     style={{
                       color: 'transparent',
                       WebkitTextStroke: '4px var(--primary-mint)',
@@ -210,7 +210,7 @@ export default function AboutPage() {
                     10+
                   </span>
 
-                  <div className="text-[14px] md:text-[16px] font-semibold uppercase text-text-secondary leading-[1.3]">
+                  <div className="text-[12px] md:text-[14px] lg:text-[16px] font-semibold uppercase text-text-secondary leading-[1.3]">
                     Years of<br />Experience
                   </div>
                 </div>
@@ -241,14 +241,14 @@ export default function AboutPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.15 + i * 0.08, duration: 0.5 }}
-                        className={`relative glass-card rounded-full px-6 py-4 flex items-center justify-between hover:-translate-y-1 transition-transform duration-300 group shadow-md ${widths[i]} ${zIndexes[i]} ${margins}`}
+                        className={`relative glass-card rounded-full px-4 md:px-6 py-3 md:py-4 flex items-center justify-between hover:-translate-y-1 transition-transform duration-300 group shadow-md ${widths[i]} ${zIndexes[i]} ${margins}`}
                       >
-                        <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-text-secondary group-hover:text-text-primary transition-colors">
+                        <span className="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.15em] text-text-secondary group-hover:text-text-primary transition-colors">
                           {s.label}
                         </span>
 
                         <span
-                          className="text-2xl font-bold tracking-tight"
+                          className="text-xl md:text-2xl font-bold tracking-tight"
                           style={{
                             color: s.accent === 'primary' ? 'var(--primary-mint)' : 'var(--electric-blue)',
                             textShadow: s.accent === 'primary'
@@ -273,7 +273,7 @@ export default function AboutPage() {
         </div>
 
         {/* ── 3. CREATIVE WORKFLOW (PROCESS) ────────────────────────────── */}
-        <section className="relative py-16 px-6 overflow-hidden" id="workflow">
+        <section className="relative py-12 md:py-16 px-4 md:px-6 overflow-hidden" id="workflow">
           {/* Intense Neon Background Glows */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
             <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-primary/20 blur-[140px] rounded-full animate-pulse-slow" />
@@ -288,7 +288,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-4"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+              <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6">
                 Process of Product
                 <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
               </h2>
@@ -431,7 +431,7 @@ export default function AboutPage() {
             </div>
 
             {/* Mobile Vertical Layout */}
-            <div className="lg:hidden flex flex-col gap-12 relative pt-10">
+            <div className="lg:hidden flex flex-col gap-8 relative pt-6">
               {/* Vertical Dashed Line */}
               <div className="absolute left-1/2 top-0 bottom-0 w-[2px] border-l-2 border-dashed border-slate-300 -translate-x-1/2 z-0" />
 
@@ -458,28 +458,28 @@ export default function AboutPage() {
 
 
         {/* ── 5. CLIENT FEEDBACK MARQUEE ─────────────────────────────────── */}
-        <div className="relative w-full bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 backdrop-blur-xl py-5 border-y border-primary/20 overflow-hidden flex items-center my-8">
+        <div className="relative w-full bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 backdrop-blur-xl py-3 md:py-5 border-y border-primary/20 overflow-hidden flex items-center my-6 md:my-8">
           <motion.div
             animate={{ x: [0, '-50%'] }}
             transition={{ repeat: Infinity, ease: 'linear', duration: 20 }}
             className="flex whitespace-nowrap w-max"
           >
             {[...Array(10)].map((_, i) => (
-              <div key={i} className="flex items-center gap-8 px-6">
+              <div key={i} className="flex items-center gap-4 md:gap-8 px-4 md:px-6">
                 <span
-                  className="text-4xl md:text-[48px] font-black tracking-tighter text-transparent whitespace-nowrap"
+                  className="text-3xl sm:text-4xl md:text-[48px] font-black tracking-tighter text-transparent whitespace-nowrap"
                   style={{ WebkitTextStroke: '2px #0D63CC' }}
                 >
                   CLIENT FEEDBACK
                 </span>
-                <span className="text-primary text-3xl opacity-60">✳</span>
+                <span className="text-primary text-xl md:text-3xl opacity-60">✳</span>
               </div>
             ))}
           </motion.div>
         </div>
 
         {/* ── 6. TESTIMONIAL SECTION ────────────────────────────────────── */}
-        <section className="relative py-10 px-4 overflow-hidden">
+        <section className="relative py-8 md:py-10 px-4 overflow-hidden">
           <div className="max-w-5xl mx-auto">
             <TestimonialSlider testimonials={testimonials} />
           </div>
@@ -509,16 +509,16 @@ function TestimonialSlider({ testimonials }) {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="relative flex-shrink-0 group"
+        className="relative flex-shrink-0 group mx-auto md:mx-0"
       >
         {/* Main Glass Surface */}
-        <div className="w-[320px] md:w-[440px] aspect-square md:aspect-[1/1.1] rounded-[20px] relative overflow-hidden glass-card flex items-center justify-center p-3 border-white/50 shadow-sm">
+        <div className="w-[260px] sm:w-[320px] md:w-[440px] aspect-square md:aspect-[1/1.1] rounded-[20px] relative overflow-hidden glass-card flex items-center justify-center p-2 md:p-3 border-white/50 shadow-sm">
 
           {/* Glossy Overlay Reflection */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent pointer-events-none z-10" />
 
           {/* Inner Mint Container (Mockup Style) */}
-          <div className="absolute inset-5 rounded-[10px] bg-primary/10 backdrop-blur-lg flex items-center justify-center border border-white/30 overflow-hidden">
+          <div className="absolute inset-3 md:inset-5 rounded-[10px] bg-primary/10 backdrop-blur-lg flex items-center justify-center border border-white/30 overflow-hidden">
             {/* Character/Image */}
             <div className="relative w-full h-full">
               <img
@@ -556,7 +556,7 @@ function TestimonialSlider({ testimonials }) {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex-1 flex flex-col pt-6"
         >
-          <blockquote className="text-[16px] md:text-[18px] font-medium text-text-primary leading-[1.7] italic mb-8 relative tracking-tight">
+          <blockquote className="text-[15px] md:text-[18px] font-medium text-text-primary leading-[1.6] md:leading-[1.7] italic mb-6 md:mb-8 relative tracking-tight">
             {/* Decorative scribble marker */}
             <div className="absolute top-[-35px] left-[30%] opacity-50 pointer-events-none hidden md:block">
               <svg width="80" height="40" viewBox="0 0 80 40" fill="none">

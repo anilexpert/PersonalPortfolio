@@ -71,7 +71,7 @@ export default function HowIDesign() {
   ];
 
   return (
-    <section className="py-24 px-6 relative w-full overflow-hidden" id="process">
+    <section className="pt-10 pb-16 md:py-24 px-6 relative w-full overflow-hidden" id="process">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] -z-10" />
@@ -85,7 +85,7 @@ export default function HowIDesign() {
               <span className="text-secondary text-sm">✳</span>
               <span className="text-secondary text-[12px] font-bold uppercase tracking-wider">Process</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-text-primary">
+            <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight">
               How I
               <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
             </h2>
@@ -95,8 +95,8 @@ export default function HowIDesign() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
         {/* Left Section: Architectural Graphic */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-4 md:p-8">
-          <div className="relative w-[320px] h-[320px] md:w-[500px] md:h-[500px]">
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-0 sm:p-4 md:p-8">
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[500px] md:h-[500px]">
             
             {/* 1. Outer Multi-color Glowing Circle Path */}
             <div className="absolute inset-0 rounded-full p-[1px] opacity-60">
@@ -138,17 +138,16 @@ export default function HowIDesign() {
             {/* 4. Moving Scout (Glowing Orbiting Dot) */}
             <div className="absolute inset-0 pointer-events-none z-20">
               <motion.div
-                className="absolute top-1/2 left-1/2"
+                className="absolute inset-0"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                style={{ width: 0, height: 0 }}
               >
                 <div 
-                  className="absolute w-5 h-5 rounded-full bg-primary shadow-[0_0_25px_var(--primary-mint),0_0_10px_#fff] border border-white/50"
+                  className="absolute w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-primary shadow-[0_0_25px_var(--primary-mint),0_0_10px_#fff] border border-white/50"
                   style={{
-                    left: 250, 
-                    top: 0,
-                    transform: 'translate(-50%, -50%)'
+                    right: 0, 
+                    top: '50%',
+                    transform: 'translate(50%, -50%)'
                   }}
                 />
               </motion.div>
@@ -196,12 +195,11 @@ export default function HowIDesign() {
                       </>
                     )}
 
-                    {/* Main Node Circle (High Glassmorphism) */}
                     <motion.div
                       animate={{
                         scale: isActive ? 1.2 : 1,
                       }}
-                      className={`w-20 h-20 md:w-28 md:h-28 rounded-full flex flex-col items-center justify-center border backdrop-blur-xl relative overflow-hidden transition-all duration-500 ${isActive ? 'shadow-md' : 'shadow-2xl'}`}
+                      className={`w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full flex flex-col items-center justify-center border backdrop-blur-xl relative overflow-hidden transition-all duration-500 ${isActive ? 'shadow-md' : 'shadow-2xl'}`}
                       style={{
                         background: isActive 
                           ? 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' // Premium Brand Gradient
@@ -212,10 +210,10 @@ export default function HowIDesign() {
                       {/* Inner Glass Shine */}
                       <div className={`absolute inset-0 bg-gradient-to-br from-white/30 to-transparent pointer-events-none ${isActive ? 'opacity-40' : 'opacity-10'}`} />
                       
-                      <span className={`text-[10px] md:text-xs font-bold transition-colors duration-300 ${isActive ? 'text-white/90' : 'text-text-secondary/60'}`}>
+                      <span className={`text-[8px] sm:text-[10px] md:text-xs font-bold transition-colors duration-300 ${isActive ? 'text-white/90' : 'text-text-secondary/60'}`}>
                         {step.num}
                       </span>
-                      <span className={`text-[10px] md:text-xs font-bold tracking-widest uppercase transition-colors duration-300 ${isActive ? 'text-white' : 'text-text-primary'}`}>
+                      <span className={`text-[8px] sm:text-[10px] md:text-xs font-bold tracking-widest uppercase transition-colors duration-300 ${isActive ? 'text-white' : 'text-text-primary'}`}>
                         {step.label}
                       </span>
                     </motion.div>
@@ -229,7 +227,7 @@ export default function HowIDesign() {
               {floatingLabels.map((label, idx) => (
                 <div 
                   key={idx} 
-                  className="absolute text-[12px] md:text-sm font-bold text-text-secondary uppercase"
+                  className="absolute text-[9px] sm:text-[12px] md:text-sm font-bold text-text-secondary uppercase"
                   style={{ 
                     top: label.top, 
                     left: label.left,
@@ -250,7 +248,7 @@ export default function HowIDesign() {
           {/* Card Outer Glow/Border effect */}
           <div className="absolute -inset-[1px] rounded-[40px] bg-gradient-to-br from-primary/30 via-white/10 to-secondary/30 blur-[2px] opacity-50 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           
-          <div className="glass-card rounded-[40px] p-8 md:p-12 lg:p-16 min-h-[520px] flex flex-col justify-between relative overflow-hidden bg-white/40 backdrop-blur-2xl border border-white/60 shadow-sm">
+          <div className="glass-card rounded-[40px] p-6 sm:p-8 md:p-12 lg:p-16 min-h-[460px] md:min-h-[520px] flex flex-col justify-between relative overflow-hidden bg-white/40 backdrop-blur-2xl border border-white/60 shadow-sm mt-8 lg:mt-0">
             
             {/* Animated Ambient Background for Card */}
             <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />

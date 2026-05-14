@@ -53,7 +53,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden" id="testimonials">
+    <section className="py-10 md:py-24 px-6 relative overflow-hidden" id="testimonials">
       {/* Decorative Background Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
@@ -70,12 +70,12 @@ const Testimonials = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
               <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">Social Proof</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight">
+            <h2 className="text-[36px] sm:text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight">
               Trusted by <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Industry Leaders</span> <br />
               Globally.
             </h2>
-            <p className="text-text-secondary text-lg md:text-xl leading-relaxed max-w-md opacity-80">
+            <p className="text-text-secondary text-base md:text-xl leading-relaxed max-w-md opacity-80">
               From high-growth startups to enterprise engineering teams — here's what partners say about the impact.
             </p>
 
@@ -140,7 +140,7 @@ const Testimonials = () => {
                     className="absolute inset-0 w-full"
                   >
 
-                    <div className={`glass-card rounded-[32px] p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${
+                    <div className={`glass-card rounded-[32px] p-6 sm:p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${
                       position === 0 
                         ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10' 
                         : 'bg-white/40 border-white/60 backdrop-blur-xl shadow-lg'
@@ -155,9 +155,9 @@ const Testimonials = () => {
                       )}
 
                       {/* Top: Star Rating */}
-                      <div className="relative flex items-center gap-1.5 mb-8 z-10">
+                      <div className="relative flex items-center gap-1.5 mb-4 sm:mb-8 z-10">
                         {[...Array(5)].map((_, starIdx) => (
-                          <svg key={starIdx} className="w-6 h-6 text-[#FFC107] drop-shadow-[0_0_8px_rgba(255,193,7,0.4)]" fill="currentColor" viewBox="0 0 20 20">
+                          <svg key={starIdx} className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFC107] drop-shadow-[0_0_8px_rgba(255,193,7,0.4)]" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
                         ))}
@@ -165,13 +165,13 @@ const Testimonials = () => {
 
                       {/* Middle: Quote */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-text-primary text-xl md:text-[26px] leading-[1.6] mb-8 font-bold italic tracking-wide">
+                        <p className="text-text-primary text-[17px] sm:text-xl md:text-[26px] leading-[1.6] mb-4 sm:mb-8 font-bold italic tracking-wide">
                           "{testimonial.quote}"
                         </p>
                       </div>
 
                       {/* Separator Line */}
-                      <div className="w-full h-[1px] bg-gradient-to-r from-primary/30 to-transparent mb-8" />
+                      <div className="w-full h-[1px] bg-gradient-to-r from-primary/30 to-transparent mb-4 sm:mb-8" />
 
                       {/* Bottom: Author & Quote Icon */}
                       <div className="flex items-center justify-between mt-auto">
@@ -186,8 +186,8 @@ const Testimonials = () => {
                             />
                           </div>
                           <div>
-                            <div className="font-bold text-text-primary text-lg tracking-tight mb-0.5">{testimonial.author}</div>
-                            <div className="text-text-secondary text-sm font-medium">{testimonial.role}</div>
+                            <div className="font-bold text-text-primary text-base sm:text-lg tracking-tight mb-0.5">{testimonial.author}</div>
+                            <div className="text-text-secondary text-[13px] sm:text-sm font-medium">{testimonial.role}</div>
                           </div>
                         </div>
                         

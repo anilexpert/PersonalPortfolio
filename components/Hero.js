@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden" id="home">
+    <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden" id="home">
       {/* Side Social Links (Vertical) - Left Side */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-12 z-20">
         <div className="flex flex-col items-center gap-6">
@@ -32,10 +32,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-[14px] md:text-[18px] font-medium text-secondary mb-4 flex items-center gap-2 opacity-80">
+              <span className="text-[12px] sm:text-[14px] md:text-[18px] font-medium text-secondary mb-3 md:mb-4 flex items-center gap-2 opacity-80">
                 Hello, 👋 I'm Anil Kumar Product Designer
               </span>
-              <h1 className="text-[64px] md:text-[90px] font-black uppercase leading-[0.85] mb-8 tracking-tighter">
+              <h1 className="text-[40px] sm:text-[48px] md:text-[90px] font-black uppercase leading-[1] md:leading-[0.85] mb-6 md:mb-8 tracking-tighter">
                 <span
                   className="text-transparent"
                   style={{ WebkitTextStroke: '2px #282360' }}
@@ -53,7 +53,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[14px] md:text-[16px] text-text-secondary mb-8 max-w-[580px] leading-relaxed"
+              className="text-[12px] sm:text-[14px] md:text-[16px] text-text-secondary mb-6 md:mb-8 max-w-[580px] leading-relaxed"
             >
               <span className="text-primary font-semibold">That Users Truly Love.</span> I'm a product designer who solves problems through clean, functional design — turning ideas into intuitive digital experiences that users actually enjoy using.
             </motion.p>
@@ -62,17 +62,17 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 mb-8"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-6 md:mb-8"
             >
-              <button className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white font-medium flex items-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300">
+              <button className="px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[12px] sm:text-[13px] md:text-base font-medium flex items-center justify-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
                 <ArrowUpRight size={18} className="stroke-[2]" /> View Selected Work
               </button>
 
-              <button className="relative p-[1.5px] rounded-full overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_24px_rgba(13,99,204,0.05)]">
+              <button className="relative p-[1.5px] rounded-full overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_24px_rgba(13,99,204,0.05)] w-full sm:w-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99]" />
-                <div className="relative px-8 py-3.5 bg-white rounded-full flex items-center gap-2 transition-all">
+                <div className="relative px-4 sm:px-6 md:px-8 py-3 md:py-3.5 bg-white rounded-full flex items-center justify-center gap-2 transition-all">
                   <Download size={18} className="text-[#0D63CC] stroke-[2]" />
-                  <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent font-medium">
+                  <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent text-[12px] sm:text-[13px] md:text-base font-medium">
                     Download Résumé
                   </span>
                 </div>
@@ -84,7 +84,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="px-6 py-4 rounded-[24px] w-full max-w-[620px] relative overflow-hidden"
+              className="px-4 md:px-6 py-3 md:py-4 rounded-[20px] md:rounded-[24px] w-full max-w-[620px] relative overflow-hidden"
               style={{
                 background: 'rgba(255, 255, 255, 0.4)',
                 backdropFilter: 'blur(20px)',
@@ -97,13 +97,13 @@ const Hero = () => {
               <div className="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 blur-[80px] rounded-full animate-pulse-slow" />
 
               <div className="relative z-10">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12px] font-bold text-text-primary uppercase tracking-[0.2em]">Latest Work</span>
-                  <a href="#work" className="text-[12px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                <div className="flex items-center justify-between mb-3 md:mb-4">
+                  <span className="text-[10px] md:text-[12px] font-bold text-text-primary uppercase tracking-[0.2em]">Latest Work</span>
+                  <a href="#work" className="text-[10px] md:text-[12px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
                     VIEW ALL <ArrowUpRight size={14} />
                   </a>
                 </div>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                   {[
                     { img: "/images/carevanata.png", name: "Carevanta", href: "#work" },
                     { img: "/images/spendid.png", name: "SPENDiD", href: "#work" },
@@ -160,8 +160,8 @@ const Hero = () => {
               />
 
               {/* Overlay Text */}
-              <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
-                <span className="text-[60px] md:text-[80px] font-black text-transparent uppercase tracking-tighter"
+              <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
+                <span className="text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] font-black text-transparent uppercase tracking-tighter"
                   style={{
                     WebkitTextStroke: '2px rgb(2, 170, 173)',
                   }}

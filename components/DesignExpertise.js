@@ -100,7 +100,7 @@ const DesignExpertise = () => {
   const activeItem = expertiseData[activeIndex];
 
   return (
-    <section className="relative overflow-hidden py-16" id="expertise">
+    <section className="py-10 md:py-24 relative overflow-hidden" id="expertise">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 items-stretch">
 
@@ -108,19 +108,19 @@ const DesignExpertise = () => {
           <div className="lg:col-span-6">
             <div className="mb-12">
               <motion.div 
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border mb-6 transition-all duration-500"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border mb-4 sm:mb-6 transition-all duration-500"
                 style={{ backgroundColor: `${activeItem.color}15`, borderColor: `${activeItem.color}30` }}
               >
                 <div className="w-2 h-2 rounded-full animate-pulse transition-colors duration-500" style={{ backgroundColor: activeItem.color }} />
-                <span className="text-[12px] font-bold uppercase tracking-wider transition-colors duration-500" style={{ color: activeItem.color }}>Multi-Domain Expertise</span>
+                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-wider transition-colors duration-500" style={{ color: activeItem.color }}>Multi-Domain Expertise</span>
               </motion.div>
 
               
-              <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+              <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
                 Strategic <br />
                 <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Product Systems.</span>
               </h2>
-              <p className="text-lg text-text-secondary leading-relaxed max-w-lg">
+              <p className="text-[15px] sm:text-base md:text-lg text-text-secondary leading-relaxed max-w-lg">
                 I translate complex business logic into intuitive digital experiences across enterprise, SaaS, and AI-driven platforms.
               </p>
             </div>
@@ -131,7 +131,7 @@ const DesignExpertise = () => {
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(i)}
-                  className={`group cursor-pointer py-5 px-6 rounded-2xl transition-all duration-500 flex items-center gap-4 relative overflow-hidden ${
+                  className={`group cursor-pointer py-3 sm:py-5 px-4 sm:px-6 rounded-2xl transition-all duration-500 flex items-center gap-3 sm:gap-4 relative overflow-hidden ${
                     activeIndex === i
                       ? 'glass-card scale-[1.02]'
                       : 'hover:bg-white/40 hover:translate-x-2'
@@ -152,19 +152,19 @@ const DesignExpertise = () => {
                       {item.id}
                     </div> */}
                     <div 
-                      className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-500 shrink-0 border"
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-500 shrink-0 border"
                       style={{
                         backgroundColor: `${item.color}05`,
                         borderColor: `${item.color}20`,
                         color: item.color
                       }}
                     >
-                      <item.icon size={20} />
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </div>
 
                   <div className="flex flex-col flex-1">
-                    <h3 className={`text-lg font-bold transition-all ${
+                    <h3 className={`text-base sm:text-lg font-bold transition-all ${
                       activeIndex === i ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'
                     }`}>
                       {item.title}
@@ -172,7 +172,7 @@ const DesignExpertise = () => {
                     <motion.p 
                       initial={false}
                       animate={{ height: activeIndex === i ? 'auto' : 0, opacity: activeIndex === i ? 1 : 0 }}
-                      className="text-sm text-text-secondary mt-2 overflow-hidden"
+                      className="text-[13px] sm:text-sm text-text-secondary mt-1 sm:mt-2 overflow-hidden"
                     >
                       {item.leftDesc}
                     </motion.p>

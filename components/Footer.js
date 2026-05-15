@@ -34,7 +34,11 @@ const Footer = () => {
             {['HOME', 'ABOUT', 'SERVICES', 'CASE STUDIES', 'CONTACT US'].map((link) => (
               <Link
                 key={link}
-                href={link === 'ABOUT' ? '/about' : `#${link.toLowerCase().replace(' ', '-')}`}
+                href={
+                  link === 'ABOUT' ? '/about' : 
+                  link === 'CASE STUDIES' ? '/case-studies' : 
+                  `#${link.toLowerCase().replace(' ', '-')}`
+                }
                 className="text-[12px] font-semibold text-text-secondary hover:text-primary transition-colors"
               >
                 {link}

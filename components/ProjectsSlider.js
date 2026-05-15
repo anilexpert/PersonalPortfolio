@@ -128,14 +128,11 @@ export default function ProjectsSlider() {
               <div
                 key={proj.title}
                 onClick={() => setActive(idx)}
-                className="relative overflow-hidden group cursor-pointer w-full"
+                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[28px] ${isActive ? 'h-[520px] md:h-[540px]' : 'h-[140px] md:h-[540px]'
+                  }`}
+
                 style={{
                   flex: isActive ? 4 : 1,
-                  height: isActive ? 400 : 80,
-                  minHeight: isActive ? 400 : 80,
-                  borderRadius: 20,
-                  transition: 'all 0.6s cubic-bezier(.77,0,.175,1)',
-                  minWidth: 0,
                 }}
               >
                 {/* ── Background image ── */}
@@ -144,77 +141,78 @@ export default function ProjectsSlider() {
                   alt={proj.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-[1.05]"
                   priority={idx === 0}
                 />
 
-                {/* ── Dark bottom vignette ── */}
+                {/* ── Bottom vignette / Overlay ── */}
                 <div
-                  className="absolute inset-0 pointer-events-none"
+                  className="absolute inset-0 pointer-events-none transition-all duration-700"
                   style={{
-                    borderRadius: 20,
                     background: isActive
-                      ? 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 45%, transparent 100%)'
-                      : 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.05) 60%, transparent 100%)',
+                      ? 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, transparent 100%)'
+                      : 'rgba(0,0,0,0.6)', // Full overlay for inactive cards for text legibility
                   }}
                 />
 
+
                 <AnimatePresence>
-                  {/* ── COLLAPSED STATE: title + subtitle at bottom center ── */}
+                  {/* ── COLLAPSED STATE: Compact title for inactive cards ── */}
                   {!isActive && (
                     <motion.div
                       key="collapsed"
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 15 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center justify-end text-center"
-                      style={{ padding: '0 12px 24px' }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-4"
                     >
                       <h3
-                        className="text-white font-bold leading-snug"
-                        style={{ fontSize: '1.05rem' }}
+                        className="text-white font-semibold leading-snug drop-shadow-lg text-lg md:text-xl"
                       >
                         {proj.title}
                       </h3>
-                      <p className="text-white/60 text-xs mt-1">{proj.subtitle}</p>
+                      <p className="text-white/70 text-[10px] md:text-[12px] mt-1 font-normal uppercase tracking-widest">{proj.subtitle}</p>
                     </motion.div>
                   )}
 
-                  {/* ── ACTIVE STATE: centered title + glass panel below ── */}
+                  {/* ── ACTIVE STATE: Glass panel containing all details ── */}
                   {isActive && (
-                      <motion.div
-                        key="active"
-                        initial={{ opacity: 0, y: 20, x: '-50%', scale: 0.98 }}
-                        animate={{ opacity: 1, y: 0, x: '-50%', scale: 1 }}
-                        exit={{ opacity: 0, y: 20, x: '-50%', scale: 0.98 }}
-                        transition={{ duration: 0.6, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
-                        className="absolute z-20 flex flex-col items-center justify-center w-[92%] sm:w-[88%]"
+                    <motion.div
+                      key="active"
+                      initial={{ opacity: 0, y: 20, x: '-50%' }}
+                      animate={{ opacity: 1, y: 0, x: '-50%' }}
+                      exit={{ opacity: 0, y: 20, x: '-50%' }}
+                      transition={{ duration: 0.6, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
+                      className="absolute z-20 flex flex-col items-center justify-center w-[92%] sm:w-[88%] left-1/2 bottom-6 md:bottom-10 max-w-[500px]"
+                    >
+                      {/* Blurry glass panel containing Title, Subtitle, and Description */}
+                      <div
+                        className="w-full flex flex-col items-center p-6 md:p-10"
                         style={{
-                          bottom: 24,
-                          left: '50%',
-                          maxWidth: 420,
-                          background: 'rgba(28, 32, 36, 0.7)',
-                          backdropFilter: 'blur(20px)',
-                          WebkitBackdropFilter: 'blur(20px)',
-                          border: '1px solid rgba(255,255,255,0.15)',
-                          borderRadius: 20,
-                          padding: '20px',
-                          boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+                          background: 'linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
+                          backdropFilter: 'blur(40px)',
+                          WebkitBackdropFilter: 'blur(40px)',
+                          border: '1px solid rgba(255, 255, 255, 0.25)',
+                          borderRadius: 32,
+                          boxShadow: '0 24px 60px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.1)'
                         }}
                       >
-                        <h3 className="text-white font-bold text-xl md:text-[1.7rem] leading-snug text-center mb-1">
+                        <h3 className="text-white font-bold text-[16px] md:text-[24px] leading-tight text-center drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
                           {proj.title}
                         </h3>
-                        <p className="text-white/80 text-[13px] md:text-sm text-center mb-3 font-medium">
+                        <p className="text-white/90 text-[12px] md:text-[14px] font-normal mt-2 mb-4 text-center">
                           {proj.subtitle}
                         </p>
-                        <p className="text-white/80 text-[13px] md:text-sm leading-relaxed text-center line-clamp-3 md:line-clamp-none">
+                        <div className="w-16 h-[1px] bg-white/30 mb-5 rounded-full" />
+                        <p className="text-white/95 text-[12px] md:text-[14px] leading-relaxed text-center font-normal max-w-[90%]">
                           {proj.description}
                         </p>
-                      </motion.div>
+                      </div>
+
+                    </motion.div>
                   )}
                 </AnimatePresence>
+
 
                 {/* ── Hover shimmer from top‑right ── */}
                 <div
@@ -222,13 +220,13 @@ export default function ProjectsSlider() {
                   style={{
                     background:
                       'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 40%, transparent 100%)',
-                    borderRadius: 20,
+                    borderRadius: 24,
                   }}
                 />
 
                 {/* ── Progress bar (active card only) ── */}
                 {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30" style={{ borderRadius: '0 0 20px 20px' }}>
+                  <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30" style={{ borderRadius: '0 0 24px 24px' }}>
                     <div className="h-full bg-white/15 w-full" />
                     <motion.div
                       className="absolute top-0 left-0 h-full"

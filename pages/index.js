@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import MarqueeStripe from '../components/MarqueeStripe';
 import CoreCapabilities from '../components/CoreCapabilities';
+import WhyHireMe from '../components/WhyHireMe';
 import DesignExpertise from '../components/DesignExpertise';
 import About from '../components/About';
 import ProjectsSlider from '../components/ProjectsSlider';
@@ -29,6 +30,8 @@ export default function Home() {
       <main>
         <Hero />
         <MarqueeStripe />
+        <WhyHireMe />
+        <GlowDivider />
         <CoreCapabilities />
         <GlowDivider />
         <DesignExpertise />

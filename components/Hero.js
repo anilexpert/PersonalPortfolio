@@ -33,19 +33,20 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="text-[12px] sm:text-[14px] md:text-[18px] font-medium text-secondary mb-3 md:mb-4 flex items-center gap-2 opacity-80">
-                Hello, 👋 I'm Anil Kumar Product Designer
+                Hello, 👋 I'm Anil Kumar
               </span>
-              <h1 className="text-[40px] sm:text-[48px] md:text-[90px] font-black uppercase leading-[1] md:leading-[0.85] mb-6 md:mb-8 tracking-tighter">
+              <h1 className="text-[40px] sm:text-[48px] md:text-[58px] font-bold text-slate-800 leading-[1] md:leading-[1.00] mb-6 md:mb-8 tracking-tighter">
+                I Design
                 <span
-                  className="text-transparent"
-                  style={{ WebkitTextStroke: '2px #282360' }}
+                  className="text-transparent mx-2"
+                  style={{ WebkitTextStroke: '2px #00DA99' }}
                 >
-                  CRAFTING
+                  Scalable Product
                 </span>
-                <br />
-                <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">
-                  PRODUCT
-                </span>
+                Experiences for
+                <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent mx-2">
+                  SaaS & AI
+                </span> Platforms
               </h1>
             </motion.div>
 
@@ -55,7 +56,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-[12px] sm:text-[14px] md:text-[16px] text-text-secondary mb-6 md:mb-8 max-w-[580px] leading-relaxed"
             >
-              <span className="text-primary font-semibold">That Users Truly Love.</span> I'm a product designer who solves problems through clean, functional design — turning ideas into intuitive digital experiences that users actually enjoy using.
+              <span className="text-primary font-semibold">Freelance Product Designer</span> helping startups and teams simplify complex workflows, improve usability, and build scalable digital products.
             </motion.p>
 
             <motion.div
@@ -65,15 +66,15 @@ const Hero = () => {
               className="flex flex-col w-full sm:auto sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-6 md:mb-8"
             >
               <button className="px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[12px] sm:text-[13px] md:text-base font-medium flex items-center justify-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
-                <ArrowUpRight size={18} className="stroke-[2]" /> View Selected Work
+                <ArrowUpRight size={18} className="stroke-[2]" /> View Case Studies
               </button>
 
               <button className="relative p-[1.5px] rounded-full overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_24px_rgba(13,99,204,0.05)] w-full sm:w-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99]" />
                 <div className="relative px-4 sm:px-6 md:px-8 py-3 md:py-3.5 bg-white rounded-full flex items-center justify-center gap-2 transition-all">
-                  <Download size={18} className="text-[#0D63CC] stroke-[2]" />
+                  <ArrowUpRight size={18} className="text-[#0D63CC] stroke-[2]" />
                   <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent text-[12px] sm:text-[13px] md:text-base font-medium">
-                    Download Résumé
+                    Hire Me
                   </span>
                 </div>
               </button>
@@ -98,7 +99,7 @@ const Hero = () => {
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-3 md:mb-4">
-                  <span className="text-[10px] md:text-[12px] font-bold text-text-primary uppercase tracking-[0.2em]">Latest Work</span>
+                  <span className="text-[10px] md:text-[12px] font-bold text-secondary uppercase">Selected Product Work</span>
                   <a href="#work" className="text-[10px] md:text-[12px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
                     VIEW ALL <ArrowUpRight size={14} />
                   </a>
@@ -183,11 +184,11 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 1, type: "spring" }}
               className="absolute -top-6 right-0 z-30 hidden xl:block"
             >
-              <div className="relative w-44 h-44 flex items-center justify-center">
+              <div className="relative w-48 h-48 flex items-center justify-center">
                 {/* Background Glass Circle with Glow Border */}
                 <div className="absolute inset-4 rounded-full bg-white/20 backdrop-blur-2xl border border-white/40 shadow-2xl overflow-hidden">
                   {/* Subtle Reflection Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/6 via-transparent to-white/5 pointer-events-none" />
                   {/* Mask Glowing Border Style */}
                   <div className="absolute inset-0 rounded-full border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.3)]" />
                 </div>
@@ -205,9 +206,9 @@ const Hero = () => {
                         d="M 50, 50 m -28, 0 a 28,28 0 1,1 56,0 a 28,28 0 1,1 -56,0"
                       />
                     </defs>
-                    <text className="text-[7px] font-black uppercase tracking-[0.25em] fill-[#0D63CC]/80">
+                    <text className="text-[7px] font-black uppercase tracking-[0.15em] fill-[#0D63CC]/80">
                       <textPath xlinkHref="#circlePath" startOffset="0%">
-                        . SYSTEMS STRATEGY . PRODUCT DESIGN
+                        SaaS . Healthcare . AI-Products . Systems-Strategy .
                       </textPath>
                     </text>
                   </svg>
@@ -242,10 +243,10 @@ const Hero = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[20%] -left-20 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
+              className="absolute top-[20%] -left-10 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
             >
               <Layout size={16} className="text-secondary" />
-              <span className="text-[12px] font-bold text-secondary whitespace-nowrap">UI/UX Expert</span>
+              <span className="text-[12px] font-bold text-secondary whitespace-nowrap">AI Workflows</span>
             </motion.div>
 
             <motion.div
@@ -255,6 +256,14 @@ const Hero = () => {
             >
               <Layers size={16} className="text-secondary" />
               <span className="text-[12px] font-bold text-secondary whitespace-nowrap">SaaS Scalability</span>
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute bottom-[60%] left-0 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
+            >
+              <Layers size={16} className="text-secondary" />
+              <span className="text-[12px] font-bold text-secondary whitespace-nowrap">UX-Strategy</span>
             </motion.div>
           </div>
 

@@ -47,13 +47,13 @@ const Testimonials = () => {
   const getStackPosition = (i) => {
     const total = testimonials.length;
     const diff = (i - index + total) % total;
-    
+
     // 0 is front, 1 is middle, 2 is back
     return diff;
   };
 
   return (
-    <section className="py-10 md:py-24 px-6 relative overflow-hidden" id="testimonials">
+    <section className="py-10 md:py-18 px-6 relative overflow-hidden" id="testimonials">
       {/* Decorative Background Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
@@ -114,13 +114,13 @@ const Testimonials = () => {
               {testimonials.map((testimonial, i) => {
                 const position = getStackPosition(i);
                 const isVisible = position < 3;
-                
+
                 // Both background cards use the SAME scale to cross perfectly in the center
                 // Opposite rotations create the symmetrical X-fanning effect seen in the mockup
                 const scale = position === 0 ? 1 : 1.06;
                 const rotate = position === 0 ? 0 : position === 1 ? 3 : -3;
                 const yOffset = 0;
-                
+
                 return (
                   <motion.div
                     key={i}
@@ -140,12 +140,11 @@ const Testimonials = () => {
                     className="absolute inset-0 w-full"
                   >
 
-                    <div className={`glass-card rounded-[32px] p-6 sm:p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${
-                      position === 0 
-                        ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10' 
+                    <div className={`glass-card rounded-[32px] p-6 sm:p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${position === 0
+                        ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10'
                         : 'bg-white/40 border-white/60 backdrop-blur-xl shadow-lg'
-                    }`}>
-                      
+                      }`}>
+
                       {/* Ambient Inner Glow for Active Card */}
                       {position === 0 && (
                         <>
@@ -190,11 +189,11 @@ const Testimonials = () => {
                             <div className="text-text-secondary text-[13px] sm:text-sm font-medium">{testimonial.role}</div>
                           </div>
                         </div>
-                        
+
                         {/* Neon Quote Icon Container */}
                         <div className="text-primary drop-shadow-[0_0_12px_rgba(0,218,153,0.4)]">
                           <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 7H4C4 4.79086 5.79086 3 8 3C8.55228 3 9 2.55228 9 2C9 1.44772 8.55228 1 8 1C4.68629 1 2 3.68629 2 7V15C2 17.7614 4.23858 20 7 20C9.76142 20 12 17.7614 12 15V11C12 8.79086 11.1046 7 10 7ZM22 7H16C16 4.79086 17.7908 3 20 3C20.5523 3 21 2.55228 21 2C21 1.44772 20.5523 1 20 1C16.6863 1 14 3.68629 14 7V15C14 17.7614 16.2386 20 19 20C21.7614 20 24 17.7614 24 15V11C24 8.79086 23.1046 7 22 7Z"/>
+                            <path d="M10 7H4C4 4.79086 5.79086 3 8 3C8.55228 3 9 2.55228 9 2C9 1.44772 8.55228 1 8 1C4.68629 1 2 3.68629 2 7V15C2 17.7614 4.23858 20 7 20C9.76142 20 12 17.7614 12 15V11C12 8.79086 11.1046 7 10 7ZM22 7H16C16 4.79086 17.7908 3 20 3C20.5523 3 21 2.55228 21 2C21 1.44772 20.5523 1 20 1C16.6863 1 14 3.68629 14 7V15C14 17.7614 16.2386 20 19 20C21.7614 20 24 17.7614 24 15V11C24 8.79086 23.1046 7 22 7Z" />
                           </svg>
                         </div>
                       </div>

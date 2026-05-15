@@ -71,7 +71,7 @@ export default function HowIDesign() {
   ];
 
   return (
-    <section className="pt-10 pb-16 md:py-24 px-6 relative w-full overflow-hidden" id="process">
+    <section className="pt-10 pb-16 md:py-18 px-6 relative w-full overflow-hidden" id="process">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] -z-10" />
@@ -87,8 +87,11 @@ export default function HowIDesign() {
             </div>
             <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight">
               How I
-              <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
+              <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Work</span>
             </h2>
+            <p className="text-[14px] sm:text-base md:text-lg text-text-secondary leading-relaxed max-w-lg">
+              A simple, transparent process built around outcomes.
+            </p>
           </div>
         </div>
 

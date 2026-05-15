@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
-import { Globe, Shield, Zap, Layers, Cpu, Sparkles } from 'lucide-react';
+import { Globe, Shield, Zap, Layers, Cpu, Sparkles, MessageCircle } from 'lucide-react';
 
 const marqueeItems = [
-  { text: "Seamless Integrations", icon: Globe },
-  { text: "Enterprise Security", icon: Shield },
-  { text: "High Performance", icon: Zap },
+  { text: "Fast turnaround", icon: Zap },
+  { text: "Available worldwide", icon: Globe },
+  { text: "Clear communication", icon: MessageCircle },
   { text: "Dynamic Scalability", icon: Layers },
   { text: "AI-Powered Insights", icon: Cpu },
   { text: "User-Centric Design", icon: Sparkles },
   { text: "99.9% Uptime", icon: Shield },
-  { text: "Cloud Native", icon: Globe },
+  { text: "Trusted by startups & product teams", icon: Globe },
 ];
 
 const MarqueeStripe = () => {
@@ -18,7 +18,7 @@ const MarqueeStripe = () => {
 
   return (
     <div className="w-full bg-gradient-to-r from-blue-600 via-indigo-500 to-teal-400 py-4 relative overflow-hidden shadow-md z-10 border-y border-white/20">
-      
+
       <div className="relative flex whitespace-nowrap overflow-hidden group">
         <motion.div
           className="flex gap-8 items-center"
@@ -39,7 +39,7 @@ const MarqueeStripe = () => {
                 <item.icon size={16} className="text-white/80 group-hover/item:text-white transition-colors" />
                 <span className="text-[12px] font-black tracking-widest text-white/90 group-hover/item:text-white uppercase drop-shadow-sm transition-colors">{item.text}</span>
               </div>
-              
+
               {/* Dot Separator */}
               <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
             </div>

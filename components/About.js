@@ -49,17 +49,17 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
     >
       <div className="relative group p-[1px] rounded-[24px] overflow-hidden">
         {/* Masking Border Effect */}
-        <div 
+        <div
           className="absolute inset-0 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
-          style={{ 
-            background: `linear-gradient(135deg, ${color} 0%, transparent 50%, ${color} 100%)` 
+          style={{
+            background: `linear-gradient(135deg, ${color} 0%, transparent 50%, ${color} 100%)`
           }}
         />
-        
+
         <div className="relative glass-card rounded-[23px] px-4 py-5 sm:px-6 sm:py-8 flex flex-col items-center gap-2 sm:gap-4 hover:-translate-y-1 transition-all duration-500 bg-white/60 backdrop-blur-md">
-          <div 
+          <div
             className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-sm"
-            style={{ 
+            style={{
               backgroundColor: `${color}15`,
               border: `1px solid ${color}30`
             }}
@@ -80,7 +80,7 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
 
 const About = () => {
   return (
-    <section className="py-10 md:py-24 px-4 md:px-6 relative overflow-hidden" id="about">
+    <section className="py-10 md:py-18 px-4 md:px-6 relative overflow-hidden" id="about">
       {/* Background Large Text */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none opacity-[0.03]">
         <h2 className="text-[60px] sm:text-[100px] md:text-[150px] font-bold text-text-primary uppercase tracking-tighter leading-none">

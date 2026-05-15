@@ -3,52 +3,51 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const steps = [
   {
-    id: 'discover',
+    id: 'understand',
     num: '01',
-    label: 'DISCOVER',
-    title: 'Uncover The Core',
-    desc: 'I begin by understanding the system behind the interface—users, business goals, and technical constraints before drawing a single line.',
+    label: 'UNDERSTAND',
+    title: 'Align on the Core',
+    desc: 'I start by understanding the problem space—users, business goals, and constraints. This phase ensures every decision is grounded in real needs, not assumptions.',
     tasks: [
-      { label: 'User interviews', color: 'green' },
-      { label: 'Stakeholder mapping', color: 'green' },
-      { label: 'Competitive analysis', color: 'blue' }
+      { label: 'User research', color: 'green' },
+      { label: 'Stakeholder alignment', color: 'green' },
+      { label: 'Problem framing', color: 'blue' }
     ]
   },
   {
-    id: 'define',
+    id: 'structure',
     num: '02',
-    label: 'DEFINE',
-    title: 'Clarity Before Momentum',
-    desc: 'Synthesize fragmented research into a precise problem definition. Establish clear trade-offs, align stakeholders early, and define measurable success criteria before execution begins.',
+    label: 'STRUCTURE',
+    title: 'Define the Product Direction',
+    desc: 'I translate insights into clear product flows, information architecture, and system logic—bringing structure to complexity before moving into design.',
     tasks: [
-      { label: 'Problem framing', color: 'green' },
-      { label: 'Success metrics', color: 'green' },
-      { label: 'Design principles', color: 'blue' },
-      { label: 'Opportunity sizing', color: 'blue' }
+      { label: 'User flows', color: 'green' },
+      { label: 'IA design', color: 'green' },
+      { label: 'System mapping', color: 'blue' }
     ]
   },
   {
     id: 'design',
     num: '03',
     label: 'DESIGN',
-    title: 'Systematic Execution',
-    desc: 'Design end-to-end flows, states, and edge cases—not just screens. I build scalable design systems that accelerate development and ensure consistency.',
+    title: 'Craft the Experience',
+    desc: 'I design intuitive, scalable interfaces that balance usability, clarity, and visual consistency—ensuring the product works seamlessly in real scenarios.',
     tasks: [
-      { label: 'Information architecture', color: 'green' },
+      { label: 'UI/UX design', color: 'green' },
       { label: 'Design systems', color: 'blue' },
       { label: 'Prototyping', color: 'blue' }
     ]
   },
   {
-    id: 'validate',
+    id: 'deliver',
     num: '04',
-    label: 'VALIDATE',
-    title: 'Evidence-Based Refinement',
-    desc: 'Validate the highest-risk assumptions first using a balance of qualitative and quantitative signals to ensure we built the right thing.',
+    label: 'DELIVER',
+    title: 'Build, Test & Improve',
+    desc: 'I collaborate closely with developers and stakeholders to refine, validate, and iterate—ensuring the final product delivers real impact.',
     tasks: [
-      { label: 'Usability testing', color: 'green' },
-      { label: 'A/B testing', color: 'green' },
-      { label: 'Analytics', color: 'blue' }
+      { label: 'Handoff', color: 'green' },
+      { label: 'Iteration', color: 'green' },
+      { label: 'Continuous improvement', color: 'blue' }
     ]
   }
 ];
@@ -64,10 +63,10 @@ export default function HowIDesign() {
   ];
 
   const floatingLabels = [
-    { top: '30%', left: '70%', text: 'Discover' }, // Top Right Quadrant
-    { top: '70%', left: '70%', text: 'Define' },   // Bottom Right Quadrant
+    { top: '30%', left: '70%', text: 'Understand' }, // Top Right Quadrant
+    { top: '70%', left: '70%', text: 'Structure' },   // Bottom Right Quadrant
     { top: '70%', left: '30%', text: 'Design' },   // Bottom Left Quadrant
-    { top: '30%', left: '30%', text: 'Validate' }, // Top Left Quadrant
+    { top: '30%', left: '30%', text: 'Deliver' }, // Top Left Quadrant
   ];
 
   return (

@@ -84,7 +84,7 @@ export default function HowIDesign() {
               <span className="text-secondary text-sm">✳</span>
               <span className="text-secondary text-[12px] font-bold uppercase tracking-wider">Process</span>
             </div>
-            <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight">
+            <h2 className="text-[24px] sm:text-3xl md:text-5xl font-bold text-text-primary leading-tight">
               How I
               <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Work</span>
             </h2>

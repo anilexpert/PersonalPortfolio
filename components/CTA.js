@@ -27,17 +27,17 @@ const CTA = () => {
               className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
             >
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
-              <span className="tracking-[0.2em] text-[12px] uppercase">VIEW WORK</span>
+              <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
             </motion.a>
 
             <h2
-              className="text-[36px] sm:text-[6vw] md:text-[8rem] lg:text-[9rem] font-black leading-none tracking-tighter uppercase text-center"
+              className="text-[34px] sm:text-[5vw] md:text-[6rem] lg:text-[7rem] font-black leading-none tracking-tighter uppercase text-center"
               style={{
                 color: 'transparent',
                 WebkitTextStroke: '3px var(--primary-mint)',
               }}
             >
-              NEXT PROJECT
+              Better Product
             </h2>
 
             {/* Desktop Hire Now Button (Right) */}
@@ -46,7 +46,7 @@ const CTA = () => {
               whileHover={{ scale: 1.05, rotate: 15, y: -5 }}
               className="hidden xl:flex absolute right-0 rotate-40 bg-gradient-to-br from-secondary to-primary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-secondary/20 hover:shadow-secondary/40 group z-20"
             >
-              <span className="tracking-[0.2em] text-[12px] uppercase">HIRE NOW</span>
+              <span className="tracking-[0.2em] text-[12px] uppercase">Schedule a Call</span>
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
             </motion.a>
           </div>
@@ -59,7 +59,7 @@ const CTA = () => {
               className="bg-gradient-to-br from-primary to-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-3 text-white font-bold shadow-xl shadow-primary/20 group"
             >
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
-              <span className="tracking-[0.2em] text-[12px] uppercase">VIEW WORK</span>
+              <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
             </motion.a>
 
             <motion.a
@@ -67,7 +67,7 @@ const CTA = () => {
               whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-secondary to-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-3 text-white font-bold shadow-xl shadow-secondary/20 group"
             >
-              <span className="tracking-[0.2em] text-[12px] uppercase">HIRE NOW</span>
+              <span className="tracking-[0.2em] text-[12px] uppercase">Schedule a Call</span>
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
             </motion.a>
           </div>

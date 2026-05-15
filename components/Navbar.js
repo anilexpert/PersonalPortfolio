@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 lg:top-6 left-0 right-0 z-50 px-0 lg:px-6 pointer-events-none">
       <div
-        className={`max-w-full lg:max-w-7xl mx-auto flex items-center justify-between pointer-events-auto transition-all duration-500 glass-card p-3 lg:px-8 lg:py-3 lg:rounded-[24px] rounded-lg ${scrolled ? 'scale-[0.98] border-opacity-60' : ''
+        className={`w-full lg:max-w-7xl mx-auto flex items-center justify-between pointer-events-auto transition-all duration-500 glass-card px-4 py-3 lg:px-8 lg:py-3 lg:rounded-[24px] rounded-xl ${scrolled ? 'scale-[0.98] border-opacity-60' : ''
           }`}
         style={{
           background: 'rgba(255, 255, 255, 0.6)',

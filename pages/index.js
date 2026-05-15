@@ -10,13 +10,14 @@ import About from '../components/About';
 import ProjectsSlider from '../components/ProjectsSlider';
 import HowIDesign from '../components/HowIDesign';
 import Testimonials from '../components/Testimonials';
+import FeaturedCaseStudy from '../components/FeaturedCaseStudy';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import GlowDivider from '../components/GlowDivider';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full max-w-[100vw]">
       <Head>
         <title>Anil Kumar | Senior Product Designer • AI-Driven UX • Enterprise SaaS</title>
         <meta name="description" content="Product designer specializing in scalable systems, AI-driven workflows, and conversion-focused digital products for SaaS and enterprise teams." />
@@ -41,6 +42,8 @@ export default function Home() {
         <ProjectsSlider />
         <GlowDivider />
         <HowIDesign />
+        <GlowDivider />
+        <FeaturedCaseStudy />
         <GlowDivider />
         <Testimonials />
         <GlowDivider />

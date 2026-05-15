@@ -120,7 +120,7 @@ const DesignExpertise = () => {
   return (
     <section className="py-10 md:py-18 relative overflow-hidden" id="expertise">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
 
           {/* Left: Menu Content */}
           <div className="lg:col-span-6">

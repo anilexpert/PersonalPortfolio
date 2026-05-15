@@ -35,11 +35,11 @@ const Hero = () => {
               <span className="text-[12px] sm:text-[14px] md:text-[18px] font-medium text-secondary mb-3 md:mb-4 flex items-center gap-2 opacity-80">
                 Hello, 👋 I'm Anil Kumar
               </span>
-              <h1 className="text-[40px] sm:text-[48px] md:text-[58px] font-bold text-slate-800 leading-[1] md:leading-[1.00] mb-6 md:mb-8 tracking-tighter">
+              <h1 className="text-[32px] sm:text-[48px] md:text-[58px] font-bold text-slate-800 leading-[1.1] md:leading-[1.00] mb-6 md:mb-8 tracking-tighter">
                 I Design
                 <span
                   className="text-transparent mx-2"
-                  style={{ WebkitTextStroke: '2px #00DA99' }}
+                  style={{ WebkitTextStroke: '1.5px #00DA99' }}
                 >
                   Scalable Product
                 </span>
@@ -104,7 +104,7 @@ const Hero = () => {
                     VIEW ALL <ArrowUpRight size={14} />
                   </a>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
                   {[
                     { img: "/images/carevanata.png", name: "Carevanta", href: "#work" },
                     { img: "/images/spendid.png", name: "SPENDiD", href: "#work" },

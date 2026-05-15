@@ -5,21 +5,21 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "Anil doesn't just design interfaces—he structures entire product thinking. His ability to align business goals with user needs is exceptional.",
-    author: "Sarah J.",
-    role: "Product Manager, TechCorp",
+    quote: "Anil helped us simplify a complex product and brought clarity to our workflows. Reliable and easy to work with.",
+    author: "Sarah Chen",
+    role: "Product Lead, HealthTech Startup",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120"
   },
   {
-    quote: "The system design approach Anil brought to our project reduced our development friction by 40%. A true strategic partner.",
-    author: "Michael R.",
-    role: "CTO, HealthScale",
+    quote: "Strategic thinker. Delivered a design system that our team still uses two years later. Highly recommended",
+    author: "Marcus Rivera",
+    role: "CTO, AI SaaS Platform",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120"
   },
   {
-    quote: "Working with Anil was a game-changer for our SaaS platform. The AI-driven workflows he designed are incredibly intuitive.",
-    author: "Elena M.",
-    role: "Founder, AI-Stream",
+    quote: "He understood our domain quickly and shipped beautiful, usable interfaces. A true product partner.",
+    author: "Priya Nair",
+    role: "Founder, Enterprise SaaS",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120&h=120"
   }
 ];
@@ -68,12 +68,12 @@ const Testimonials = () => {
             className="lg:max-w-[42%] flex flex-col gap-8"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
-              <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">Social Proof</span>
+              <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">Testimonials</span>
             </div>
-            <h2 className="text-[36px] sm:text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight">
-              Trusted by <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Industry Leaders</span> <br />
-              Globally.
+            <h2 className="text-[24px] sm:text-3xl md:text-5xl font-bold text-text-primary leading-[1.1] tracking-tight">
+              Trusted by
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary ml-2">Clients Say</span>
+
             </h2>
             <p className="text-text-secondary text-base md:text-xl leading-relaxed max-w-md opacity-80">
               From high-growth startups to enterprise engineering teams — here's what partners say about the impact.
@@ -141,8 +141,8 @@ const Testimonials = () => {
                   >
 
                     <div className={`glass-card rounded-[32px] p-6 sm:p-8 md:p-12 h-full flex flex-col justify-between transition-all duration-500 border relative overflow-hidden ${position === 0
-                        ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10'
-                        : 'bg-white/40 border-white/60 backdrop-blur-xl shadow-lg'
+                      ? 'bg-white/95 border-white backdrop-blur-3xl shadow-[0_24px_60px_rgba(0,218,153,0.3),inset_0_0_30px_rgba(255,255,255,0.8)] z-10'
+                      : 'bg-white/40 border-white/60 backdrop-blur-xl shadow-lg'
                       }`}>
 
                       {/* Ambient Inner Glow for Active Card */}

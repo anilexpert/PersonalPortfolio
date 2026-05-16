@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight as ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const CTA = () => {
   return (
@@ -21,14 +22,15 @@ const CTA = () => {
 
           <div className="relative flex items-center justify-center w-full px-4 lg:px-20">
             {/* Desktop View Work Button (Left) */}
-            <motion.a
-              href="#work"
-              whileHover={{ scale: 1.05, rotate: -10, y: -5 }}
-              className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
-            >
-              <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
-              <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
-            </motion.a>
+            <Link href="/about" passHref>
+              <motion.a
+                whileHover={{ scale: 1.05, rotate: -10, y: -5 }}
+                className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
+              >
+                <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
+                <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
+              </motion.a>
+            </Link>
 
             <h2
               className="text-[34px] sm:text-[5vw] md:text-[6rem] lg:text-[7rem] font-black leading-none tracking-tighter uppercase text-center"
@@ -51,16 +53,16 @@ const CTA = () => {
             </motion.a>
           </div>
 
-          {/* Mobile/Tablet Buttons Container */}
           <div className="flex xl:hidden flex-col sm:flex-row justify-center items-stretch sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-12 w-full max-w-sm sm:max-w-none mx-auto">
-            <motion.a
-              href="#work"
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-br from-primary to-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-3 text-white font-bold shadow-xl shadow-primary/20 group"
-            >
-              <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
-              <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
-            </motion.a>
+            <Link href="/about" passHref>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-br from-primary to-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-3 text-white font-bold shadow-xl shadow-primary/20 group"
+              >
+                <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
+                <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
+              </motion.a>
+            </Link>
 
             <motion.a
               href="mailto:anilkumar.folio@gmail.com"

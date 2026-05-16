@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Globe, Mail, MessageCircle, Download, Award, Layout, Layers } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -65,19 +66,23 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col w-full sm:auto sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-6 md:mb-8"
             >
-              <button className="px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[12px] sm:text-[13px] md:text-base font-medium flex items-center justify-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
-                <ArrowUpRight size={18} className="stroke-[2]" /> View Case Studies
-              </button>
+              <Link href="/case-studies" passHref>
+                <button className="px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[12px] sm:text-[13px] md:text-base font-medium flex items-center justify-center gap-2 border-0 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
+                  <ArrowUpRight size={18} className="stroke-[2]" /> View Case Studies
+                </button>
+              </Link>
 
-              <button className="relative p-[1.5px] rounded-full overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_24px_rgba(13,99,204,0.05)] w-full sm:w-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99]" />
-                <div className="relative px-4 sm:px-6 md:px-8 py-3 md:py-3.5 bg-white rounded-full flex items-center justify-center gap-2 transition-all">
-                  <ArrowUpRight size={18} className="text-[#0D63CC] stroke-[2]" />
-                  <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent text-[12px] sm:text-[13px] md:text-base font-medium">
-                    Hire Me
-                  </span>
-                </div>
-              </button>
+              <Link href="/about" passHref>
+                <button className="relative p-[1.5px] rounded-full overflow-hidden group hover:scale-[1.02] transition-all duration-300 shadow-[0_8px_24px_rgba(13,99,204,0.05)] w-full sm:w-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99]" />
+                  <div className="relative px-4 sm:px-6 md:px-8 py-3 md:py-3.5 bg-white rounded-full flex items-center justify-center gap-2 transition-all">
+                    <ArrowUpRight size={18} className="text-[#0D63CC] stroke-[2]" />
+                    <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent text-[12px] sm:text-[13px] md:text-base font-medium">
+                      Hire Me
+                    </span>
+                  </div>
+                </button>
+              </Link>
             </motion.div>
 
             {/* Latest Work Bar */}
@@ -100,18 +105,18 @@ const Hero = () => {
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-3 md:mb-4">
                   <span className="text-[10px] md:text-[12px] font-bold text-secondary uppercase">Selected Product Work</span>
-                  <a href="#work" className="text-[10px] md:text-[12px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                  <Link href="/case-studies" className="text-[10px] md:text-[12px] font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
                     VIEW ALL <ArrowUpRight size={14} />
-                  </a>
+                  </Link>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
                   {[
-                    { img: "/images/carevanata.png", name: "Carevanta", href: "#work" },
-                    { img: "/images/spendid.png", name: "SPENDiD", href: "#work" },
-                    { img: "/images/oasis-notes.png", name: "OasisNotes", href: "#work" },
-                    { img: "/images/pulse-grid.png", name: "PulseGrid", href: "#work" },
+                    { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/carevanta" },
+                    { img: "/images/spendid.png", name: "SPENDiD", href: "/case-studies/spendid" },
+                    { img: "/images/oasis-notes.png", name: "OasisNotes", href: "/case-studies/oasis-notes" },
+                    { img: "/images/pulse-grid.png", name: "PulseGrid", href: "/case-studies/pulse-grid" },
                   ].map((project, i) => (
-                    <a
+                    <Link
                       key={i}
                       href={project.href}
                       className="group flex flex-col gap-1.5 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1"
@@ -137,7 +142,7 @@ const Hero = () => {
                       <span className="text-[12px] w-full text-center font-medium text-text-secondary group-hover:text-primary transition-colors duration-300 truncate px-0.5 tracking-wide uppercase">
                         {project.name}
                       </span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

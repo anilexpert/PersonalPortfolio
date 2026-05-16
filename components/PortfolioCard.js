@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PortfolioCard = ({ project }) => {
   return (
@@ -53,34 +54,36 @@ const PortfolioCard = ({ project }) => {
             {project.title.toLowerCase()}
           </h3>
 
-          <motion.div
-            initial="initial"
-            whileHover="hover"
-            variants={{
-              initial: { backgroundColor: "transparent", borderColor: project.accentColor, scale: 1 },
-              hover: { backgroundColor: project.accentColor, borderColor: project.accentColor, scale: 1.05 }
-            }}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 cursor-pointer transition-all duration-300 group/btn"
-          >
-            <motion.span
-              variants={{
-                initial: { color: project.accentColor },
-                hover: { color: "#ffffff" }
-              }}
-              className="hidden sm:block text-[12px] font-bold uppercase tracking-wider transition-colors duration-300"
-            >
-              View Project
-            </motion.span>
+          <Link href={`/case-studies/${project.slug}`} passHref>
             <motion.div
+              initial="initial"
+              whileHover="hover"
               variants={{
-                initial: { color: project.accentColor },
-                hover: { color: "#ffffff" }
+                initial: { backgroundColor: "transparent", borderColor: project.accentColor, scale: 1 },
+                hover: { backgroundColor: project.accentColor, borderColor: project.accentColor, scale: 1.05 }
               }}
-              className="transition-colors duration-300"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full border-2 cursor-pointer transition-all duration-300 group/btn"
             >
-              <ArrowUpRight size={16} className="stroke-[2.5]" />
+              <motion.span
+                variants={{
+                  initial: { color: project.accentColor },
+                  hover: { color: "#ffffff" }
+                }}
+                className="hidden sm:block text-[12px] font-bold uppercase tracking-wider transition-colors duration-300"
+              >
+                View Project
+              </motion.span>
+              <motion.div
+                variants={{
+                  initial: { color: project.accentColor },
+                  hover: { color: "#ffffff" }
+                }}
+                className="transition-colors duration-300"
+              >
+                <ArrowUpRight size={16} className="stroke-[2.5]" />
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </Link>
         </div>
       </div>
 

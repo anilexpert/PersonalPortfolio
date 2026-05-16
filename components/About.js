@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Rocket, TrendingUp, Package, Sparkles, ArrowRight } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
 
 const metrics = [
   { value: '10+', label: 'Years Experience', Icon: Award, color: '#0D63CC' }, // Blue
@@ -168,10 +169,12 @@ const About = () => {
           transition={{ delay: 0.6 }}
           className="mt-4 flex justify-center pb-16 md:pb-24"
         >
-          <button className="btn-premium px-8 md:px-10 py-3 md:py-4 text-base md:text-lg whitespace-nowrap">
-            <span>Let's Build Something Great</span>
-            <ArrowRight size={20} />
-          </button>
+          <Link href="#contact" passHref>
+            <button className="btn-premium px-8 md:px-10 py-3 md:py-4 text-base md:text-lg whitespace-nowrap">
+              <span>Let's Build Something Great</span>
+              <ArrowRight size={20} />
+            </button>
+          </Link>
         </motion.div>
       </div>
 

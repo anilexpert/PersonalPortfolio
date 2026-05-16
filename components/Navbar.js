@@ -66,10 +66,12 @@ export default function Navbar() {
 
         {/* Right: CTA */}
         <div className="flex items-center">
-          <button className="btn-premium py-1 md:py-2 md:px-4 text-[12px] md:text-[14px] ">
-            <span className="uppercase">Let's Talk</span>
-            <MessageCircle size={18} />
-          </button>
+          <Link href="#contact" passHref>
+            <button className="btn-premium py-1 md:py-2 md:px-4 text-[12px] md:text-[14px] ">
+              <span className="uppercase">Let's Talk</span>
+              <MessageCircle size={18} />
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

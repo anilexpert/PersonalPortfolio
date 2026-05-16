@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const FeaturedCaseStudy = () => {
   return (
@@ -83,14 +84,16 @@ const FeaturedCaseStudy = () => {
                 </div>
 
                 <div className="pt-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="btn-premium w-full sm:w-auto"
-                  >
-                    <span>Read Full Case Study</span>
-                    <ArrowRight size={18} />
-                  </motion.button>
+                  <Link href="/case-studies/carevanta" passHref>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="btn-premium w-full sm:w-auto"
+                    >
+                      <span>Read Full Case Study</span>
+                      <ArrowRight size={18} />
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </div>

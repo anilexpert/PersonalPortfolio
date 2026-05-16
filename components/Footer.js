@@ -36,6 +36,7 @@ const Footer = () => {
                 key={link}
                 href={
                   link === 'ABOUT' ? '/about' : 
+                  link === 'SERVICES' ? '/services' : 
                   link === 'CASE STUDIES' ? '/case-studies' : 
                   `#${link.toLowerCase().replace(' ', '-')}`
                 }

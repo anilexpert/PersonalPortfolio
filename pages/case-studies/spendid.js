@@ -41,7 +41,7 @@ export default function SpendidCaseStudy() {
    );
 
    const SwotCard = ({ title, items, color, align = "text-left" }) => (
-      <div className={`p-8 glass-card rounded-[32px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-sm ${align} hover:shadow-xl transition-all duration-500`}>
+      <div className={`p-8 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 ${align} transition-all duration-500`}>
          <h4 className={`text-xl font-black uppercase tracking-widest mb-4 ${color}`}>{title}</h4>
          <ul className="space-y-2">
             {items.map((item, i) => (
@@ -56,7 +56,7 @@ export default function SpendidCaseStudy() {
       <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
          {/* Top Right Glow Effect */}
          <div
-            className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-40 opacity-10 pointer-events-none z-0"
+            className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
             style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
          />
 
@@ -69,25 +69,25 @@ export default function SpendidCaseStudy() {
    );
 
    return (
-      <div className="min-h-screen bg-[#fafcff] text-[#282360] font-sans relative overflow-x-hidden transition-colors duration-500">
+      <div className="min-h-screen text-[#282360] relative overflow-x-hidden transition-colors duration-500">
          <Head>
             <title>SPENDiD | Case Study - AI-Powered Smart Expense Ecosystem</title>
          </Head>
 
          <Navbar />
 
-         <main className="pt-32 pb-32 relative z-10 w-full max-w-7xl mx-auto px-6">
+         <main className="pt-24 pb-20 md:pt-32 md:pb-32 relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6">
 
             {/* Back Navigation */}
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-12 relative z-10">
-               <Link href="/#projects" className="relative group inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold tracking-wide transition-all duration-300 hover:scale-[1.04] bg-white/50 backdrop-blur-md border border-white/40 shadow-sm text-text-secondary hover:text-secondary">
-                  <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+               <Link href="/#projects" className="relative group inline-flex items-center gap-3 px-6 py-3 rounded-full font-semibold tracking-wide transition-all duration-300 hover:scale-[1.04] bg-white/50 backdrop-blur-md border-2 border-white/80 text-text-secondary hover:text-secondary hover:-translate-x-1">
+                  <ArrowLeft size={16} className="transition-transform" />
                   <span className="text-sm">Back to Works</span>
                </Link>
             </motion.div>
 
             {/* HERO SECTION */}
-            <section className="mb-16 grid lg:grid-cols-12 gap-12 items-start">
+            <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
                <div className="lg:col-span-8">
                   <motion.div
                      initial={{ opacity: 0, y: 10 }}
@@ -98,42 +98,42 @@ export default function SpendidCaseStudy() {
                         Case Study
                      </span>
                   </motion.div>
-                  <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-7xl font-black tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                  <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                      SPENDiD™
                   </motion.h1>
-                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-2xl md:text-3xl font-bold tracking-tight mb-6 max-w-3xl">
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-2xl md:text-3xl font-semibold tracking-tight mb-6 max-w-3xl">
                      AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Smart Expense Ecosystem</span>
                   </motion.h2>
-                  <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-2xl leading-relaxed font-medium">
+                  <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                      A modern fintech platform that helps individuals and businesses track, analyze, and optimize expenses using intelligent automation, real-time insights, and AI-driven recommendations.
                   </motion.p>
                </div>
                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
                   <div>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
+                     <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
                      <p className="font-bold text-sm text-text-primary">Fintech / SaaS</p>
                   </div>
                   <div>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
+                     <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
                      <p className="font-bold text-sm text-text-primary">Product Designer</p>
                   </div>
                   <div>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
+                     <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
                      <p className="font-bold text-sm text-text-primary">10 Weeks</p>
                   </div>
                   <div>
-                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
+                     <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
                      <p className="font-bold text-sm text-text-primary">2026</p>
                   </div>
                </motion.div>
             </section>
 
             {/* MAIN HERO IMAGE */}
-            <motion.section {...fadeIn} className="mb-32 relative group">
+            <motion.section {...fadeIn} className="mb-16 md:mb-24 lg:mb-32 relative group">
                <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                   {/* Top Right Glow Effect */}
                   <div
-                     className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-60 opacity-30 pointer-events-none z-0"
+                     className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                      style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                   />
                   <Image
@@ -146,7 +146,7 @@ export default function SpendidCaseStudy() {
             </motion.section>
 
             {/* OVERVIEW / CHALLENGES / SOLUTION */}
-            <section className="mb-32 space-y-16">
+            <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
                <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                   <div className="lg:col-span-3">
                      <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
@@ -199,7 +199,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* KEY FEATURES GRID */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="text-center mb-16">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                      <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
@@ -223,17 +223,17 @@ export default function SpendidCaseStudy() {
                         key={i}
                         {...fadeIn}
                         transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                        className="glass-card p-8 rounded-[32px] group hover:-translate-y-2 relative overflow-hidden"
+                        className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
                      >
                         {/* Top Right Glow */}
                         <div
-                           className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-50 opacity-10 pointer-events-none z-0"
+                           className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                            style={{ backgroundColor: feature.color }}
                         />
 
                         <div className="flex items-center justify-between mb-8 relative z-10">
                            <div
-                              className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-xs transition-all duration-300 group-hover:scale-110"
+                              className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs transition-all duration-300 group-hover:scale-110"
                               style={{ backgroundColor: `${feature.color}20`, color: feature.color, border: `1px solid ${feature.color}30` }}
                            >
                               {feature.num}
@@ -252,7 +252,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* USER PERSONAS */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-16 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                      <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
@@ -288,11 +288,11 @@ export default function SpendidCaseStudy() {
                      <motion.div
                         key={idx}
                         {...fadeIn}
-                        className="glass-card rounded-[20px] p-10 lg:p-14 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                        className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
                      >
                         {/* Dynamic Background Glow */}
                         <div
-                           className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-40 opacity-10 pointer-events-none z-0"
+                           className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                            style={{ backgroundColor: persona.color }}
                         />
 
@@ -343,7 +343,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* DESIGN APPROACH & PROCESS */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-20 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                      <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
@@ -454,7 +454,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* DESIGN SYSTEM & VISUALS */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-16 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                      <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
@@ -470,7 +470,7 @@ export default function SpendidCaseStudy() {
                <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
 
                   {/* Colors - Spans 4 cols */}
-                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                      <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                         <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Palette
@@ -496,7 +496,7 @@ export default function SpendidCaseStudy() {
                   </div>
 
                   {/* Typography - Spans 4 cols */}
-                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                      <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                      <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                         <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -522,7 +522,7 @@ export default function SpendidCaseStudy() {
                   </div>
 
                   {/* Iconography - Spans 4 cols */}
-                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                      <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                      <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                         <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
@@ -548,7 +548,7 @@ export default function SpendidCaseStudy() {
                   </div>
 
                   {/* UI Components Preview - Spans 12 cols */}
-                  <div className="lg:col-span-12 glass-card rounded-[40px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col lg:flex-row items-center justify-center gap-8 min-h-[300px]">
+                  <div className="lg:col-span-12 glass-card rounded-[40px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col lg:flex-row items-center justify-center gap-8 min-h-[300px]">
                      {/* Decorative background */}
                      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
 
@@ -597,7 +597,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* EMPATHY MAP */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-12 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                      <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
@@ -608,11 +608,11 @@ export default function SpendidCaseStudy() {
                   <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing user attitudes and behaviors to align our team on a deep understanding of end users.</p>
                </div>
 
-               <div className="max-w-6xl mx-auto relative glass-card rounded-[60px] p-8 md:p-16 lg:p-24 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
+               <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
 
                   {/* Ambient inner neon glows */}
-                  <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/25 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
-                  <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/25 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
+                  <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
+                  <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
 
                   {/* Decorative dashed X background (hidden on mobile) */}
                   <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
@@ -626,9 +626,9 @@ export default function SpendidCaseStudy() {
 
                      {/* Top Row: THINKS */}
                      <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                            <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                               className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15"
                            />
@@ -656,9 +656,9 @@ export default function SpendidCaseStudy() {
 
                      {/* Middle Row Left: SAYS */}
                      <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-6 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                            <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                               className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15"
                            />
@@ -696,9 +696,9 @@ export default function SpendidCaseStudy() {
 
                      {/* Middle Row Right: FEELS */}
                      <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-6 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                            <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                               className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15"
                            />
@@ -726,9 +726,9 @@ export default function SpendidCaseStudy() {
 
                      {/* Bottom Row: DOES */}
                      <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                            <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
                               className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15"
                            />
@@ -759,7 +759,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* SWOT ANALYSIS */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-12 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                      <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
@@ -816,11 +816,11 @@ export default function SpendidCaseStudy() {
                      <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
 
                         {/* Inner Container */}
-                        <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                        <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
 
                            {/* Soft Animated Neon Bloom */}
                            <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
                               className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
                            />
@@ -851,7 +851,7 @@ export default function SpendidCaseStudy() {
             </section>
 
             {/* VISUAL OVERVIEW */}
-            <section className="mb-32">
+            <section className="mb-16 md:mb-24 lg:mb-32">
                <div className="mb-16 text-center">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                      <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
@@ -883,7 +883,7 @@ export default function SpendidCaseStudy() {
             <section className="relative mb-20 overflow-hidden">
                <motion.div
                   {...fadeIn}
-                  className="glass-card rounded-[24px] p-6 lg:p-16 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
+                  className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
                >
                   {/* High-Fidelity Ambient Patterns */}
                   <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
@@ -931,17 +931,17 @@ export default function SpendidCaseStudy() {
                               innerGlow: "bg-rose-500/15",
                               borderColor: "border-rose-500/30 hover:border-rose-500",
                               gradientFill: "from-white/60 to-white/90",
-                              icon: <div className="w-5 h-5 bg-rose-500 rounded-20 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
+                              icon: <div className="w-5 h-5 bg-rose-500 rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
                            }
                         ].map((box, i) => (
                            <div key={i} className={`relative border-1 border-[#0D63CC]/20 hover:border-[#00DA99]/40 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
 
                               {/* Inner Container */}
-                              <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-3xl w-full h-full rounded-[18px] p-6 lg:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                              <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-3xl w-full h-full rounded-[18px] p-5 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
 
                                  {/* Soft Animated Neon Bloom */}
                                  <motion.div
-                                    animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                                    animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
                                     className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
                                  />
@@ -951,7 +951,7 @@ export default function SpendidCaseStudy() {
                                     <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500 flex-shrink-0`}>
                                        {box.icon}
                                     </div>
-                                    <h4 className="font-black text-xl text-text-primary leading-tight">
+                                    <h4 className="font-bold text-xl text-text-primary leading-tight">
                                        {box.title}
                                     </h4>
                                  </div>
@@ -973,7 +973,7 @@ export default function SpendidCaseStudy() {
 
                      {/* Final Conclusion */}
                      <div className="mb-6">
-                        <div className="p-6 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
+                        <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
                            {/* Decorative background glow */}
                            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
 

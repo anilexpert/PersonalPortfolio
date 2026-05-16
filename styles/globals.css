@@ -80,12 +80,23 @@
 @layer utilities {
   /* Premium Glass Card */
   .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    transition: var(--transition-premium);
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(13, 99, 204, 0.2); /* Soft Primary Blue */
+    box-shadow: 
+      0 20px 50px rgba(0, 0, 0, 0.04),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .glass-card:hover {
+    border: 1px solid rgba(0, 218, 153, 0.5); /* Mint/Teal Highlight */
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 
+      0 30px 70px rgba(13, 99, 204, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
   }
 
   /* Glow Edge Utility */

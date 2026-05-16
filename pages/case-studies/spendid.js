@@ -2,22 +2,22 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { 
-  ArrowLeft, Target, Users, Search, Activity, ShieldCheck, 
-  CheckCircle2, Lock, Eye, CheckSquare, FileText, Layout, 
-  Briefcase, Zap, ClipboardList, BarChart3, MessageSquare, 
-  Building2, Map, ArrowRight, Sparkles, Shield, Compass, Grid,
-  PieChart, LineChart, Flame, TrendingUp, HandCoins
+import {
+   ArrowLeft, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
+   Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
+   Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
+   PieChart, Handshake, MessageCircle, User
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import GlowDivider from '../../components/GlowDivider'
 
 export default function SpendidCaseStudy() {
    const fadeIn = {
       initial: { opacity: 0, y: 30 },
       whileInView: { opacity: 1, y: 0 },
       viewport: { once: true, margin: "-100px" },
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }
    }
 
    const staggerChildren = {
@@ -27,760 +27,980 @@ export default function SpendidCaseStudy() {
       transition: { staggerChildren: 0.15 }
    }
 
-   const childFade = {
-      initial: { opacity: 0, y: 20 },
-      whileInView: { opacity: 1, y: 0 },
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-   }
+   const StickyNote = ({ color, text, rotate = "0deg" }) => (
+      <motion.div
+         whileHover={{ scale: 1.05, rotate: "0deg", zIndex: 30 }}
+         style={{ rotate }}
+         className={`w-40 h-40 ${color} p-4 shadow-lg flex flex-col justify-between relative overflow-hidden group transition-all duration-300`}
+      >
+         <p className="text-[13px] font-bold text-slate-800 leading-tight">
+            {text}
+         </p>
+         <div className="absolute bottom-0 right-0 w-8 h-8 bg-black/5 rounded-tl-full" />
+      </motion.div>
+   );
 
-   // Premium Glass Placeholder Component for reuse (Home Page theme adapted)
-   const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "glow-blue", textCls = "text-[#0D63CC]" }) => (
-      <div className={`w-full aspect-[4/3] glass-card shadow-strong flex flex-col items-center justify-center overflow-hidden relative group hover:${glowCls} transition-all duration-500`}>
-         <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
-         <Icon className={`w-14 h-14 mb-6 flex-shrink-0 group-hover:scale-110 drop-shadow-sm transition-transform duration-500 relative z-10 ${textCls} opacity-60`} strokeWidth={1} />
-         <span className={`font-black tracking-tighter text-sm uppercase px-8 text-center text-slate-400 relative z-10 opacity-70 group-hover:opacity-100 transition-opacity`}>
-            [{label}]
+   const SwotCard = ({ title, items, color, align = "text-left" }) => (
+      <div className={`p-8 glass-card rounded-[32px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-sm ${align} hover:shadow-xl transition-all duration-500`}>
+         <h4 className={`text-xl font-black uppercase tracking-widest mb-4 ${color}`}>{title}</h4>
+         <ul className="space-y-2">
+            {items.map((item, i) => (
+               <li key={i} className="text-sm font-bold text-text-secondary opacity-70">{item}</li>
+            ))}
+         </ul>
+      </div>
+   );
+
+   // Premium Glass Placeholder Component
+   const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#0D63CC]", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
+      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
+         {/* Top Right Glow Effect */}
+         <div
+            className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-40 opacity-10 pointer-events-none z-0"
+            style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
+         />
+
+         <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
+         {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-30`} strokeWidth={1.2} />}
+         <span className={`font-bold tracking-[0.2em] text-[10px] uppercase px-8 text-center text-text-secondary relative z-10 opacity-50 group-hover:opacity-100 transition-opacity`}>
+            {label}
          </span>
       </div>
    );
 
    return (
-      <div className="min-h-screen bg-transparent text-[#282360] selection:bg-[#0D63CC]/20 selection:text-[#0D63CC] font-sans relative overflow-x-hidden transition-colors duration-500">
-         {/* Noise Texture Overlay */}
-         <div className="noise-overlay" />
-
-         {/* Hero Section Background system matches Home Ambient Orbs */}
-         <div className="fixed inset-0 pointer-events-none -z-10 bg-[#f7faff]">
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-[#00DA99]/5 blur-[120px] rounded-full pointer-events-none" />
-         </div>
-
+      <div className="min-h-screen bg-[#fafcff] text-[#282360] font-sans relative overflow-x-hidden transition-colors duration-500">
          <Head>
-            <title>SPENDiD | Case Study - Predictive Fintech Platform</title>
-            <meta name="description" content="SPENDiD - Turning complex financial data into simple, actionable insights." />
+            <title>SPENDiD | Case Study - AI-Powered Smart Expense Ecosystem</title>
          </Head>
 
          <Navbar />
 
-         <main className="pt-40 pb-32 relative z-10 w-full">
-            <div className="max-w-[80rem] mx-auto px-6">
-               
-               {/* Back Navigation */}
-               <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="mb-12 relative z-10"
-               >
-                  <Link 
-                     href="/#works" 
-                     className="relative group inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold tracking-wide transition-all duration-300 hover:scale-[1.04] active:scale-[0.98] overflow-hidden"
+         <main className="pt-32 pb-32 relative z-10 w-full max-w-7xl mx-auto px-6">
+
+            {/* Back Navigation */}
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-12 relative z-10">
+               <Link href="/#projects" className="relative group inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold tracking-wide transition-all duration-300 hover:scale-[1.04] bg-white/50 backdrop-blur-md border border-white/40 shadow-sm text-text-secondary hover:text-secondary">
+                  <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                  <span className="text-sm">Back to Works</span>
+               </Link>
+            </motion.div>
+
+            {/* HERO SECTION */}
+            <section className="mb-16 grid lg:grid-cols-12 gap-12 items-start">
+               <div className="lg:col-span-8">
+                  <motion.div
+                     initial={{ opacity: 0, y: 10 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6"
                   >
-                     <span className="absolute inset-0 rounded-full p-[1.5px] bg-gradient-to-r from-[#0D63CC] to-[#00DA99] opacity-70 group-hover:opacity-100 transition-opacity" style={{ WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }} />
-                     <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#0D63CC]/5 to-[#00DA99]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                     <ArrowLeft size={16} className="text-[#0D63CC] group-hover:-translate-x-1 transition-transform" />
-                     <span className="relative text-gradient text-sm">Back to Works</span>
-                  </Link>
+                     <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                        Case Study
+                     </span>
+                  </motion.div>
+                  <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-5xl md:text-7xl font-black tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     SPENDiD™
+                  </motion.h1>
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-2xl md:text-3xl font-bold tracking-tight mb-6 max-w-3xl">
+                     AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Smart Expense Ecosystem</span>
+                  </motion.h2>
+                  <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-2xl leading-relaxed font-medium">
+                     A modern fintech platform that helps individuals and businesses track, analyze, and optimize expenses using intelligent automation, real-time insights, and AI-driven recommendations.
+                  </motion.p>
+               </div>
+               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
+                  <div>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
+                     <p className="font-bold text-sm text-text-primary">Fintech / SaaS</p>
+                  </div>
+                  <div>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
+                     <p className="font-bold text-sm text-text-primary">Product Designer</p>
+                  </div>
+                  <div>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
+                     <p className="font-bold text-sm text-text-primary">10 Weeks</p>
+                  </div>
+                  <div>
+                     <p className="text-[10px] font-black uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
+                     <p className="font-bold text-sm text-text-primary">2026</p>
+                  </div>
                </motion.div>
+            </section>
 
-               {/* ----------------------------------------------------
-                   HERO SECTION
-                   ---------------------------------------------------- */}
-               <section className="mb-32">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-12 xl:col-span-7 relative z-10">
-                        <motion.div 
-                           initial={{ opacity: 0, y: 10 }}
-                           animate={{ opacity: 1, y: 0 }}
-                           className="inline-flex items-center gap-2 px-5 py-2.5 glass-card mb-8 hover:bg-white/60 transition-colors"
-                        >
-                           <div className="w-2.5 h-2.5 rounded-full bg-[#0D63CC] animate-pulse shadow-[0_0_8px_rgba(13,99,204,0.5)]" />
-                           <span className="text-[10px] font-black tracking-[4px] uppercase text-[#0D63CC]">UX Research Study</span>
-                        </motion.div>
-                        
-                        <motion.h1 
-                           initial={{ opacity: 0, y: 20 }}
-                           animate={{ opacity: 1, y: 0 }}
-                           transition={{ delay: 0.1 }}
-                           className="text-5xl md:text-[5rem] font-black italic tracking-tighter mb-8 leading-[0.9] text-[#282360]"
-                        >
-                           SPENDiD
-                        </motion.h1>
-                        
-                        <motion.p 
-                           initial={{ opacity: 0, y: 20 }}
-                           animate={{ opacity: 1, y: 0 }}
-                           transition={{ delay: 0.2 }}
-                           className="text-md md:text-lg text-slate-600 mb-12 max-w-xl leading-relaxed border-l-4 border-indigo-200 pl-6 font-medium italic"
-                        >
-                           Financial Empowerment Through Peer Intelligence. Turning complex financial data into simple, actionable insights.
-                        </motion.p>
+            {/* MAIN HERO IMAGE */}
+            <motion.section {...fadeIn} className="mb-32 relative group">
+               <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  {/* Top Right Glow Effect */}
+                  <div
+                     className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-60 opacity-30 pointer-events-none z-0"
+                     style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
+                  />
+                  <Image
+                     src="/images/spendid/dashboard.png"
+                     alt="SPENDiD Dashboard"
+                     fill
+                     className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                  />
+               </div>
+            </motion.section>
 
-                        <div className="flex flex-wrap gap-10">
-                           {['Predictive Budgeting', 'Peer Intelligence', 'Financial Health'].map((point, i) => (
-                              <div key={i} className="flex items-center gap-3">
-                                 <div className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-[#0D63CC]">
-                                    <TrendingUp size={16} strokeWidth={2.5} />
-                                 </div>
-                                 <span className="text-[11px] font-black tracking-widest uppercase text-slate-400">{point}</span>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <motion.div 
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-                        className="lg:col-span-12 xl:col-span-5 relative flex justify-center items-center"
-                     >
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0D63CC] to-[#00DA99] rounded-full blur-[80px] opacity-10 animate-pulse" />
-                        <div className="glass-card p-4 relative z-10 w-full aspect-[16/11] flex flex-col items-center justify-center border-white/60 shadow-strong hover:glow-blue transition-all duration-500 overflow-hidden">
-                           <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
-                           <BarChart3 size={60} className="text-slate-300 mb-6 drop-shadow-sm" strokeWidth={1} />
-                           <span className="font-black italic tracking-tighter text-xl text-center text-slate-400 uppercase leading-none px-12 opacity-50">
-                                [Financial Dashboard Showcase]
-                           </span>
-                        </div>
-                     </motion.div>
+            {/* OVERVIEW / CHALLENGES / SOLUTION */}
+            <section className="mb-32 space-y-16">
+               <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="lg:col-span-3">
+                     <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
                   </div>
-               </section>
-
-               {/* ----------------------------------------------------
-                   01. BACKGROUND & PROBLEM STATEMENT
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-5 relative z-10">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#0D63CC] mb-4">01 — Background</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Simplifying Awareness
-                        </h2>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-6">
-                           SPENDiD is a fintech platform that simplifies financial awareness by providing personalized budgeting and peer spending insights.
-                        </p>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-10">
-                           Unlike traditional budgeting tools that rely solely on user inputs, SPENDiD integrates proprietary crowd-sourced spending data and predictive intelligence to help users benchmark their financial behaviors.
-                        </p>
-
-                        <div className="glass-card p-6 border-l-4 border-[#0D63CC]">
-                           <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#0D63CC] mb-4">The Challenge</h4>
-                           <p className="font-bold italic text-[14px] text-[#282360]">
-                              How might we make financial planning intuitive, empowering, and data-driven for users who struggle with traditional budgeting tools?
-                           </p>
-                        </div>
-                     </div>
-                     <div className="lg:col-span-7 relative z-20 pt-10 lg:pt-0">
-                        <PremiumPlaceholder icon={PieChart} label="Data Complexity vs User Intent" glowCls="glow-blue" textCls="text-[#0D63CC]" />
-                     </div>
-                  </div>
-               </section>
-
-               {/* ----------------------------------------------------
-                   02. RESEARCH METHODOLOGIES
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="text-center mb-16">
-                     <div className="text-[14px] font-black italic tracking-widest text-[#00DA99] mb-4">02 — Methodologies</div>
-                     <h2 className="text-[46px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                        User-Centered Research
-                     </h2>
-                     <p className="text-[16px] text-slate-600 leading-relaxed font-medium mt-6 max-w-2xl mx-auto italic">
-                        To understand user needs, validate the concept, and create a seamless experience, we applied several core research methods.
+                  <div className="lg:col-span-9">
+                     <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                        SPENDiD™ is a modern fintech expense management platform designed to help users track, analyze, and optimize their spending through AI-powered insights, automation, and intuitive financial workflows. The goal was to move beyond traditional expense tracking and create a smart financial ecosystem that empowers users to make better financial decisions with minimal effort.
                      </p>
                   </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
-                     {[
-                        { title: "Competitive Analysis", desc: "Understanding current market standards and differentiation opportunities.", icon: Search, color: "text-[#00DA99]", bg: "bg-[#00DA99]/10" },
-                        { title: "User Interviews", desc: "Identifying pain points around budgeting and financial management.", icon: Users, color: "text-[#0D63CC]", bg: "bg-[#0D63CC]/10" },
-                        { title: "Affinity Mapping", desc: "Synthesizing insights into actionable design opportunities.", icon: Grid, color: "text-[#8B5CF6]", bg: "bg-[#8B5CF6]/10" },
-                        { title: "Personas", desc: "Representing user archetypes and guiding design decisions.", icon: Target, color: "text-rose-500", bg: "bg-rose-500/10" }
-                     ].map((method, i) => (
-                        <div key={i} className="glass-card p-8 group relative flex flex-col justify-between overflow-hidden hover:-translate-y-2 transition-transform duration-300 hover:shadow-strong">
-                           <div>
-                              <div className={`w-14 h-14 rounded-2xl ${method.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                                 <method.icon className={method.color} size={26} />
-                              </div>
-                              <h4 className="font-black italic uppercase text-[#282360] tracking-tighter mb-4 text-[18px] group-hover:text-[#0D63CC] transition-colors">{method.title}</h4>
+               </div>
+
+               <GlowDivider />
+
+               <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="lg:col-span-3">
+                     <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Challenges</h3>
+                  </div>
+                  <div className="lg:col-span-9">
+                     <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
+                        Most expense management tools are either too manual and time-consuming, too data-heavy and difficult to interpret, or lack actionable insights. Users struggle to understand where their money is going, maintain consistent budgeting habits, and make informed financial decisions.
+                     </p>
+                     <div className="grid sm:grid-cols-2 gap-4">
+                        {[
+                           "Overwhelmed by raw financial data",
+                           "Manual tracking leads to inconsistency",
+                           "Lack of predictive foresight",
+                           "Complex tax-friendly summaries"
+                        ].map((item, idx) => (
+                           <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
+                              <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(13,99,204,0.5)]" />
+                              <span className="text-sm font-bold text-text-primary">{item}</span>
                            </div>
-                           <p className="text-[13px] font-bold text-slate-500 italic leading-relaxed">
-                              {method.desc}
-                           </p>
+                        ))}
+                     </div>
+                  </div>
+               </div>
+
+               <GlowDivider />
+
+               <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="lg:col-span-3">
+                     <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Solution</h3>
+                  </div>
+                  <div className="lg:col-span-9">
+                     <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                        SPENDiD™ introduces an AI-powered expense ecosystem that automatically categorizes transactions, provides real-time spending insights, offers smart budgeting recommendations, and visualizes financial data in an intuitive way. The platform focuses on clarity, automation, and user control, ensuring users feel confident managing their finances.
+                     </p>
+                  </div>
+               </div>
+            </section>
+
+            {/* KEY FEATURES GRID */}
+            <section className="mb-32">
+               <div className="text-center mb-16">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                        Core Value
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">Key Features & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Smart Solutions</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">High-fidelity functionalities designed to empower users with intelligent automation.</p>
+               </div>
+
+               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  {[
+                     { num: "01", title: "Smart Expense Tracking", desc: "Automated categorization of transactions using proprietary AI models.", color: "#00DA99" },
+                     { num: "02", title: "AI Budget Recommendations", desc: "Personalized spending limits based on historical data and future goals.", color: "#0D63CC" },
+                     { num: "03", title: "Interactive Dashboards", desc: "Real-time financial health visualised with high-fidelity analytics.", color: "#8B5CF6" },
+                     { num: "04", title: "Goal-Based Planning", desc: "Dedicated spaces for multi-phase savings with progress forecasting.", color: "#F59E0B" },
+                     { num: "05", title: "Multi-Device Sync", desc: "Seamless experience across web, iOS, and Android ecosystems.", color: "#10B981" },
+                     { num: "06", title: "Predictive Intelligence", desc: "Anomaly detection and proactive financial advice powered by ML.", color: "#3B82F6" }
+                  ].map((feature, i) => (
+                     <motion.div
+                        key={i}
+                        {...fadeIn}
+                        transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
+                        className="glass-card p-8 rounded-[32px] group hover:-translate-y-2 relative overflow-hidden"
+                     >
+                        {/* Top Right Glow */}
+                        <div
+                           className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-50 opacity-10 pointer-events-none z-0"
+                           style={{ backgroundColor: feature.color }}
+                        />
+
+                        <div className="flex items-center justify-between mb-8 relative z-10">
+                           <div
+                              className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-xs transition-all duration-300 group-hover:scale-110"
+                              style={{ backgroundColor: `${feature.color}20`, color: feature.color, border: `1px solid ${feature.color}30` }}
+                           >
+                              {feature.num}
+                           </div>
+                           <Layout size={20} className="text-text-secondary opacity-20" />
+                        </div>
+                        <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
+                        <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
+
+                        <div className="relative z-10">
+                           <PremiumPlaceholder aspect="aspect-[16/10]" label={`${feature.title} UI Preview`} icon={Layout} glowCls={`bg-[${feature.color}]`} textCls="text-text-primary" />
+                        </div>
+                     </motion.div>
+                  ))}
+               </div>
+            </section>
+
+            {/* USER PERSONAS */}
+            <section className="mb-32">
+               <div className="mb-16 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                     <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                        User Research
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                     We identified key user groups to understand their goals, pain points, and motivations. These personas guided our design decisions and feature prioritization.
+                  </p>
+               </div>
+               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                  {[
+                     {
+                        name: "Arjun Mehta",
+                        role: "Young Professional (Primary User)",
+                        image: "/images/spendid/arjun.png",
+                        bio: "Needs better control over monthly spending. Wants automation instead of manual tracking. Seeks clear insights without complexity.",
+                        needs: ["Automated tracking", "Clear, quick insights", "Goal setting"],
+                        pains: ["Overspending without realizing", "Lack of financial discipline", "Manual input is tedious"],
+                        color: "#0D63CC"
+                     },
+                     {
+                        name: "Sneha Iyer",
+                        role: "Small Business Owner",
+                        image: "/images/spendid/sneha.png",
+                        bio: "Tracks multiple expenses and categories. Needs a quick overview of financial health to make rapid business decisions.",
+                        needs: ["Quick overview of health", "Categorized reports", "Tax-friendly summaries"],
+                        pains: ["Time-consuming tracking", "Difficulty analyzing data", "Mixing personal/business"],
+                        color: "#00DA99"
+                     }
+                  ].map((persona, idx) => (
+                     <motion.div
+                        key={idx}
+                        {...fadeIn}
+                        className="glass-card rounded-[20px] p-10 lg:p-14 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                     >
+                        {/* Dynamic Background Glow */}
+                        <div
+                           className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-40 opacity-10 pointer-events-none z-0"
+                           style={{ backgroundColor: persona.color }}
+                        />
+
+                        <div className="flex items-center gap-8 mb-12 relative z-10">
+                           <div className="w-24 h-24 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-white shadow-2xl">
+                              <Image src={persona.image} alt={persona.name} fill className="object-cover" />
+                           </div>
+                           <div>
+                              <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
+                              <p className="text-xs font-medium text-secondary  mt-2 opacity-80">{persona.role}</p>
+                           </div>
+                        </div>
+
+                        <p className="text-base text-gray-800 leading-relaxed mb-12 relative z-10 font-medium">
+                           "{persona.bio}"
+                        </p>
+
+                        <div className="space-y-6 relative z-10">
+                           <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20">
+                              <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
+                                 <CheckCircle2 size={14} strokeWidth={3} /> Core Needs
+                              </h5>
+                              <div className="flex flex-wrap gap-3">
+                                 {persona.needs.map((n, i) => (
+                                    <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">
+                                       {n}
+                                    </span>
+                                 ))}
+                              </div>
+                           </div>
+
+                           <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
+                              <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
+                                 <Activity size={14} strokeWidth={3} /> Critical Pain Points
+                              </h5>
+                              <div className="flex flex-wrap gap-3">
+                                 {persona.pains.map((p, i) => (
+                                    <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                       {p}
+                                    </span>
+                                 ))}
+                              </div>
+                           </div>
+                        </div>
+                     </motion.div>
+                  ))}
+               </div>
+            </section>
+
+            {/* DESIGN APPROACH & PROCESS */}
+            <section className="mb-32">
+               <div className="mb-20 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                        Process
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Process</span></h2>
+                  <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
+                     A systematic approach to solving complex financial challenges through user-centric design and iterative refinement.
+                  </p>
+               </div>
+
+               <div className="relative max-w-6xl mx-auto px-4">
+                  <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
+                     <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
+                        <path
+                           d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40"
+                           stroke="#0D63CC"
+                           strokeWidth="2"
+                           strokeDasharray="8 8"
+                           className="animate-dash"
+                        />
+                     </svg>
+                  </div>
+
+                  {/* DESKTOP VIEW (Horizontal) */}
+                  <div className="hidden lg:flex items-start justify-between relative z-10">
+                     {[
+                        { num: "01", title: "Empathize", desc: "User research, interviews, understanding pain points.", icon: Heart, type: "dashed" },
+                        { num: "02", title: "Define", desc: "User personas, problem definition & prioritization.", icon: Target, type: "dashed" },
+                        { num: "03", title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                        { num: "04", title: "Design", desc: "Wireframes, visual design, UI system.", icon: PenTool, type: "solid-light" },
+                        { num: "05", title: "Test", desc: "Usability testing, feedback, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                     ].map((step, i) => (
+                        <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
+                           {/* Circle Node */}
+                           <motion.div
+                              {...fadeIn}
+                              transition={{ delay: i * 0.1 }}
+                              className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
+                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                                 hover:scale-110 hover:shadow-2xl
+                              `}
+                           >
+                              <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                              <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                 {step.title}
+                              </span>
+                           </motion.div>
+
+                           {/* Description */}
+                           <motion.p
+                              {...fadeIn}
+                              transition={{ delay: i * 0.1 + 0.2 }}
+                              className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[140px]"
+                           >
+                              {step.desc}
+                           </motion.p>
+
+                           {/* Connector Arrows (Aligned to path) */}
+                           {i < 4 && (
+                              <div className={`absolute top-16 -right-12 translate-x-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center pointer-events-none opacity-40
+                                 ${i % 2 === 0 ? 'rotate-[15deg] translate-y-4' : '-rotate-[15deg] -translate-y-4'}
+                              `}>
+                                 {i === 1 ? (
+                                    <Activity size={20} className="text-secondary animate-pulse" />
+                                 ) : (
+                                    <ArrowLeft size={18} className="text-slate-400 rotate-180" />
+                                 )}
+                              </div>
+                           )}
                         </div>
                      ))}
                   </div>
-               </section>
 
-               {/* ----------------------------------------------------
-                   03. COMPETITIVE ANALYSIS
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-12 xl:col-span-5 relative z-10 pl-4 lg:pl-0">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#0D63CC] mb-4">03 — Competitive Analysis</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Market Context
-                        </h2>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-10 max-w-md">
-                           A deeper look into current market leaders revealed crucial feature gaps and clear differentiation opportunities for SPENDiD.
-                        </p>
-
-                        <div className="glass-card p-6 border-l-4 border-[#0D63CC]">
-                           <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#0D63CC] mb-4">Opportunity</h4>
-                           <p className="font-bold italic text-[14px] text-[#282360]">
-                              SPENDiD can differentiate itself by offering peer-based financial insights, predictive budgeting, and a personalized financial health score — all with minimal user input.
+                  {/* MOBILE VIEW (Vertical) */}
+                  <div className="lg:hidden space-y-16">
+                     {[
+                        { num: "01", title: "Empathize", desc: "User research, interviews, understanding pain points.", icon: Heart, type: "dashed" },
+                        { num: "02", title: "Define", desc: "User personas, problem definition & prioritization.", icon: Target, type: "dashed" },
+                        { num: "03", title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                        { num: "04", title: "Design", desc: "Wireframes, visual design, UI system.", icon: PenTool, type: "solid-light" },
+                        { num: "05", title: "Test", desc: "Usability testing, feedback, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                     ].map((step, i) => (
+                        <div key={i} className="flex flex-col items-center relative">
+                           <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center 
+                              ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                              ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                              ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                           `}>
+                              <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                              <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                 {step.title}
+                              </span>
+                           </div>
+                           <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">
+                              {step.desc}
                            </p>
+                           {i < 4 && (
+                              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />
+                           )}
                         </div>
-                     </div>
-                     <div className="lg:col-span-12 xl:col-span-7 relative z-20 pt-10 xl:pt-0 space-y-4">
+                     ))}
+                  </div>
+               </div>
+            </section>
+
+            {/* DESIGN SYSTEM & VISUALS */}
+            <section className="mb-32">
+               <div className="mb-16 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                     <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                        Visual Identity
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                     A clean, modern, and consistent design system was created to ensure accessibility, clarity, and a premium fintech user experience.
+                  </p>
+               </div>
+
+               <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+
+                  {/* Colors - Spans 4 cols */}
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                     <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Palette
+                     </h4>
+                     <div className="grid grid-cols-3 gap-4">
                         {[
-                           { brand: "Mint", str: "Automated expense tracking, easy categorization", weak: "Overwhelming UI, limited predictive insights", learn: "Simplicity and automation are key" },
-                           { brand: "YNAB", str: "Strong budgeting discipline, educational", weak: "Complex setup, not beginner-friendly", learn: "Users need immediate, actionable insights" },
-                           { brand: "PocketGuard", str: "Easy-to-use interface, focus on disposable income", weak: "Lack of deep analytics or peer benchmarking", learn: "Users appreciate simplicity with guidance" },
-                           { brand: "Truebill", str: "Bill tracking and cancellation", weak: "Focuses more on subscriptions than overall budgeting", learn: "Balance automation with personal context" }
-                        ].map((comp, idx) => (
-                           <div key={idx} className="glass-card p-6 hover:-translate-y-1 transition-transform group hover:shadow-strong">
-                              <h3 className="font-black italic text-[20px] text-[#282360] mb-4">{comp.brand}</h3>
-                              <div className="grid md:grid-cols-3 gap-6">
-                                 <div><span className="block text-[10px] font-black uppercase tracking-widest text-[#00DA99] mb-1">Strengths</span><p className="text-[12px] font-bold text-slate-500 italic leading-relaxed">{comp.str}</p></div>
-                                 <div><span className="block text-[10px] font-black uppercase tracking-widest text-rose-500 mb-1">Weaknesses</span><p className="text-[12px] font-bold text-slate-500 italic leading-relaxed">{comp.weak}</p></div>
-                                 <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100"><span className="block text-[10px] font-black uppercase tracking-widest text-[#0D63CC] mb-1">Learning</span><p className="text-[12px] font-black text-slate-700 leading-relaxed">{comp.learn}</p></div>
+                           { bg: 'bg-[#00DA99]', label: 'Mint', hex: '#00DA99' },
+                           { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                           { bg: 'bg-[#282360]', label: 'Depth', hex: '#282360' },
+                           { bg: 'bg-[#A5C9FF]', label: 'Light', hex: '#A5C9FF' },
+                           { bg: 'bg-rose-500', label: 'Accent', hex: '#F43F5E' },
+                           { bg: 'bg-slate-800', label: 'Dark', hex: '#1E293B' }
+                        ].map((color, i) => (
+                           <div key={i} className="flex flex-col gap-2 group/color">
+                              <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                              <div>
+                                 <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
+                                 <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
                               </div>
                            </div>
                         ))}
                      </div>
                   </div>
-               </section>
 
-               {/* ----------------------------------------------------
-                   04. USER INTERVIEWS & INSIGHTS
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-7 order-2 lg:order-1 relative z-20 pt-10 lg:pt-0">
-                        <div className="glass-card p-10 relative group">
-                           <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#282360] mb-8">Key Insights Synthesized</h4>
-                           <div className="space-y-4">
-                              {[
-                                 "Users want less manual input; automation is a must.",
-                                 "Budgeting tools feel too judgmental or “one-size-fits-all.”",
-                                 "People are curious about how their spending compares to others in similar situations.",
-                                 "Financial advisors want embedded tools to generate leads and offer quick financial overviews."
-                              ].map((item, i) => (
-                                 <div key={i} className="flex gap-4 items-center bg-white/40 p-4 rounded-2xl border border-white/50 hover:shadow-sm transition-shadow">
-                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00DA99]/10 flex items-center justify-center text-[#00DA99] font-black text-[14px]">
-                                       {i + 1}
-                                    </div>
-                                    <p className="text-[14px] font-bold text-slate-700 italic">{item}</p>
-                                 </div>
-                              ))}
-                           </div>
-                           <div className="mt-8 pt-8 border-t border-slate-200">
-                              <p className="text-[16px] font-black text-[#0D63CC] italic border-l-4 border-[#0D63CC] pl-5 leading-relaxed">
-                                 "Our research uncovered a clear need for a smart, empathetic budgeting assistant — one that understands users’ real-world context and guides them gently toward financial improvement."
-                              </p>
-                           </div>
+                  {/* Typography - Spans 4 cols */}
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
+                     <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
+                     </h4>
+
+                     <div className="flex-1 flex flex-col justify-center mb-8">
+                        <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
+                           Aa
                         </div>
                      </div>
-                     <div className="lg:col-span-5 order-1 lg:order-2 relative z-10 pl-4 lg:pl-0">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#00DA99] mb-4">04 — User Interviews</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Seeking Empathy
-                        </h2>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-10 italic">
-                           We sought to understand user challenges, motivations, and expectations around budgeting and financial awareness across diverse demographics.
-                        </p>
-                        
-                        <div className="glass-card p-6 border-l-4 border-[#00DA99]">
-                           <h4 className="text-[12px] font-black uppercase tracking-widest text-[#282360] mb-4">Participants (10 Total)</h4>
-                           <ul className="space-y-3 font-bold text-[14px] text-slate-600">
-                              <li className="flex items-center gap-3"><Users className="text-[#0D63CC] shrink-0" size={18} /> 5 Individual Users (Ages 25–45)</li>
-                              <li className="flex items-center gap-3"><Briefcase className="text-[#0D63CC] shrink-0" size={18} /> 3 Small Business Owners</li>
-                              <li className="flex items-center gap-3"><ShieldCheck className="text-[#0D63CC] shrink-0" size={18} /> 2 Mortgage Advisors (B2B use case)</li>
+
+                     <div className="space-y-4">
+                        <div className="flex justify-between items-end border-b border-slate-200 pb-2">
+                           <span className="text-3xl font-black text-text-primary tracking-tight">Poppins</span>
+                           <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
+                        </div>
+                        <div className="flex justify-between text-xs font-medium text-text-secondary">
+                           <span>Regular</span>
+                           <span className="font-bold">Bold</span>
+                           <span className="font-black">Black</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Iconography - Spans 4 cols */}
+                  <div className="lg:col-span-4 glass-card rounded-[32px] p-8 lg:p-10 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                     <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
+                     </h4>
+
+                     <div className="grid grid-cols-3 gap-4">
+                        {[
+                           { icon: Layout, color: "text-[#0D63CC]" },
+                           { icon: PieChart, color: "text-[#00DA99]" },
+                           { icon: CheckSquare, color: "text-rose-500" },
+                           { icon: Activity, color: "text-[#0D63CC]" },
+                           { icon: Settings, color: "text-[#282360]" },
+                           { icon: Zap, color: "text-amber-500" },
+                           { icon: Shield, color: "text-[#00DA99]" },
+                           { icon: Smartphone, color: "text-[#0D63CC]" },
+                           { icon: Target, color: "text-rose-500" }
+                        ].map((Item, i) => (
+                           <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                              <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
+                           </div>
+                        ))}
+                     </div>
+                  </div>
+
+                  {/* UI Components Preview - Spans 12 cols */}
+                  <div className="lg:col-span-12 glass-card rounded-[40px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col lg:flex-row items-center justify-center gap-8 min-h-[300px]">
+                     {/* Decorative background */}
+                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
+
+                     {/* Abstract Component 1: Metric Card */}
+                     <div className="w-full lg:w-1/3 bg-white rounded-2xl p-6 border border-slate-200 relative z-10 hover:-translate-y-2 transition-transform duration-500">
+                        <div className="flex justify-between items-center mb-6">
+                           <div className="w-10 h-10 rounded-full bg-[#0D63CC]/10 flex items-center justify-center">
+                              <Activity size={18} className="text-[#0D63CC]" />
+                           </div>
+                           <span className="text-xs font-bold text-[#00DA99] bg-[#00DA99]/10 px-2 py-1 rounded-full">+12.5%</span>
+                        </div>
+                        <div className="space-y-1">
+                           <span className="text-sm font-semibold text-text-secondary">Total Savings</span>
+                           <h3 className="text-3xl font-bold text-text-primary">$12,450.00</h3>
+                        </div>
+                     </div>
+
+                     {/* Abstract Component 2: Action List */}
+                     <div className="w-full lg:w-1/3 bg-white rounded-2xl p-6 border border-slate-200 relative z-10 hover:-translate-y-2 transition-transform duration-500 delay-100">
+                        <h4 className="text-sm font-bold text-text-primary mb-4">Recent Transactions</h4>
+                        <div className="space-y-4">
+                           {[1, 2].map((i) => (
+                              <div key={i} className="flex items-center gap-4">
+                                 <div className="w-10 h-10 rounded-xl bg-slate-100" />
+                                 <div className="flex-1 space-y-2">
+                                    <div className="h-2 bg-slate-200 rounded w-full" />
+                                    <div className="h-2 bg-slate-100 rounded w-2/3" />
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Abstract Component 3: Graph Mini */}
+                     <div className="w-full lg:w-1/3 bg-[#282360] rounded-3xl p-6 relative z-10 hover:-translate-y-2 transition-transform duration-500 delay-200 overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/20 blur-[30px] rounded-full pointer-events-none" />
+                        <h4 className="text-sm font-semibold text-white mb-6 relative z-10">Monthly Burn Rate</h4>
+                        <div className="flex items-end gap-2 h-24 relative z-10">
+                           {[40, 70, 45, 90, 65, 80, 100].map((h, i) => (
+                              <div key={i} className="flex-1 bg-white/20 rounded-t-sm hover:bg-[#00DA99] transition-colors" style={{ height: `${h}%` }} />
+                           ))}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            {/* EMPATHY MAP */}
+            <section className="mb-32">
+               <div className="mb-12 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                        Research Insight
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing user attitudes and behaviors to align our team on a deep understanding of end users.</p>
+               </div>
+
+               <div className="max-w-6xl mx-auto relative glass-card rounded-[60px] p-8 md:p-16 lg:p-24 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
+
+                  {/* Ambient inner neon glows */}
+                  <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/25 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
+                  <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/25 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
+
+                  {/* Decorative dashed X background (hidden on mobile) */}
+                  <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
+                     <svg width="100%" height="100%">
+                        <line x1="0" y1="0" x2="100%" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
+                        <line x1="100%" y1="0" x2="0" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
+                     </svg>
+                  </div>
+
+                  <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
+
+                     {/* Top Row: THINKS */}
+                     <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                           <motion.div
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                              className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15"
+                           />
+                           <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
+                              <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
+                                 <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
+                              </div>
+                              <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">think</span>?</h3>
+                           </div>
+                           <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                              {[
+                                 "“Am I spending more than I actually earn?”",
+                                 "“I wish I had a clearer picture of my monthly finances.”",
+                                 "“There must be a smarter way to manage this.”",
+                                 "“Are these expenses necessary or just habits?”"
+                              ].map((item, i) => (
+                                 <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                    <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
                            </ul>
                         </div>
                      </div>
-                  </div>
-               </section>
 
-               {/* ----------------------------------------------------
-                   05. AFFINITY MAPPING
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="text-center mb-16">
-                     <div className="text-[14px] font-black italic tracking-widest text-rose-500 mb-4">05 — Affinity Mapping</div>
-                     <h2 className="text-[46px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                        Thematic Synthesis
-                     </h2>
-                  </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-                     {[
-                        { title: "Simplicity", insight: "Tools should not feel overwhelming.", opp: "Progressive onboarding and minimal data entry.", icon: Sparkles, color: "text-[#0D63CC]" },
-                        { title: "Trust", insight: "Data privacy & transparency are crucial.", opp: "Clear data usage explanations, anonymized insights.", icon: Shield, color: "text-[#00DA99]" },
-                        { title: "Motivation", insight: "Users want small wins and visual feedback.", opp: "Introduce gamified progress and health scoring.", icon: Flame, color: "text-rose-500" },
-                        { title: "Comparison", insight: "Curiosity about peer spending.", opp: "Introduce anonymized peer comparison metrics.", icon: HandCoins, color: "text-indigo-500" }
-                     ].map((item, i) => (
-                        <div key={i} className="glass-card p-8 group relative overflow-hidden flex flex-col hover:-translate-y-2 transition-transform duration-300">
-                           <div className="flex items-center gap-3 mb-6">
-                              <item.icon className={item.color} size={24} />
-                              <h4 className="font-black italic uppercase text-[#282360] text-[18px]">{item.title}</h4>
+                     {/* Middle Row Left: SAYS */}
+                     <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-6 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                           <motion.div
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                              className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15"
+                           />
+                           <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
+                              <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
+                                 <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
+                              </div>
+                              <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
                            </div>
-                           <div className="mb-6">
-                              <span className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Key Insight</span>
-                              <p className="text-[13px] font-bold text-slate-600 leading-relaxed italic border-l-2 border-slate-200 pl-3">{item.insight}</p>
-                           </div>
-                           <div className="mt-auto pt-4 border-t border-slate-100">
-                              <span className={`block text-[10px] font-black uppercase tracking-widest ${item.color} mb-2`}>Opportunity</span>
-                              <p className="text-[13px] font-black text-slate-700 leading-relaxed">{item.opp}</p>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-
-                  <div className="mt-12 glass-card p-10 relative border-t-4 border-[#0D63CC]">
-                     <h4 className="text-[12px] font-black uppercase tracking-widest text-[#0D63CC] mb-8 text-center">Top 3 User Needs Discovered</h4>
-                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="text-center p-6 bg-white/40 rounded-3xl border border-white hover:bg-white/60 transition-colors">
-                           <div className="text-4xl mb-4 font-black italic text-[#0D63CC]/20">01</div>
-                           <p className="font-black uppercase text-[15px] mb-3 text-[#282360]">Effortless setup</p>
-                           <p className="font-bold italic text-[13px] text-slate-500">"Budgeting should just happen."</p>
-                        </div>
-                        <div className="text-center p-6 bg-white/40 rounded-3xl border border-white hover:bg-white/60 transition-colors">
-                           <div className="text-4xl mb-4 font-black italic text-[#0D63CC]/20">02</div>
-                           <p className="font-black uppercase text-[15px] mb-3 text-[#282360]">Relatable insights</p>
-                           <p className="font-bold italic text-[13px] text-slate-500">"Show me where I stand."</p>
-                        </div>
-                        <div className="text-center p-6 bg-white/40 rounded-3xl border border-white hover:bg-white/60 transition-colors">
-                           <div className="text-4xl mb-4 font-black italic text-[#0D63CC]/20">03</div>
-                           <p className="font-black uppercase text-[15px] mb-3 text-[#282360]">Motivation w/ wins</p>
-                           <p className="font-bold italic text-[13px] text-slate-500">"Help me stay consistent."</p>
+                           <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                              {[
+                                 "“I don’t know where my money goes every month.”",
+                                 "“Tracking expenses manually is too time-consuming.”",
+                                 "“I just need something simple that works.”",
+                                 "“Why are these apps so complicated?”"
+                              ].map((item, i) => (
+                                 <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                    <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
+                           </ul>
                         </div>
                      </div>
-                  </div>
-               </section>
 
-               {/* ----------------------------------------------------
-                   06. TARGET AUDIENCES (Personas - As requested)
-                   ---------------------------------------------------- */}
-               <section className="py-24 section-divide relative z-20">
-                  <div className="max-w-[72rem] mx-auto">
-                     <motion.div {...fadeIn} className="mb-20">
-                        <div className="text-[14px] font-black italic tracking-widest text-slate-400 mb-4 uppercase">
-                           06 / Target Audiences
+                     {/* Middle Row Center: PROFILE CIRCLE */}
+                     <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
+                        <div className="absolute inset-0 bg-[#00DA99]/20 blur-[60px] rounded-full animate-pulse z-0" />
+                        <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
+                           <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
+                              <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
+                           </div>
                         </div>
-                        <h2 className="text-[44px] md:text-[60px] font-black italic tracking-tighter text-[#282360] leading-none">
-                           We created personas to represent our <span className="heading-gradient pb-2 inline-block">SPENDiD users.</span>
-                        </h2>
-                     </motion.div>
+                     </div>
 
-                     <div className="space-y-16">
+                     {/* Middle Row Right: FEELS */}
+                     <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-6 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                           <motion.div
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                              className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15"
+                           />
+                           <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
+                              <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
+                                 <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
+                              </div>
+                              <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
+                           </div>
+                           <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                              {[
+                                 "Overwhelmed by scattered financial information",
+                                 "Anxious about overspending and lack of control",
+                                 "Frustrated with manual tracking and unclear insights",
+                                 "Motivated to improve financial discipline but unsure how"
+                              ].map((item, i) => (
+                                 <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                    <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </div>
+
+                     {/* Bottom Row: DOES */}
+                     <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
+                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                           <motion.div
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                              className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15"
+                           />
+                           <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
+                              <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
+                                 <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
+                              </div>
+                              <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
+                           </div>
+                           <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                              {[
+                                 "Checks bank balance frequently without deeper analysis",
+                                 "Uses multiple apps or notes inconsistently",
+                                 "Ignores budgeting tools after initial setup",
+                                 "Makes spending decisions without structured insights"
+                              ].map((item, i) => (
+                                 <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                    <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </section>
+
+            {/* SWOT ANALYSIS */}
+            <section className="mb-32">
+               <div className="mb-12 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                     <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                        Strategic Analysis
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating SPENDiD's competitive stance to ensure viability and identify risks.</p>
+               </div>
+
+               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                     {
+                        title: "Strengths",
+                        items: ["AI-driven automation", "Clean UX", "Scalable system"],
+                        color: "text-[#00DA99]",
+                        borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
+                        innerGlow: "bg-[#00DA99]/15",
+                        borderColor: "border-[#00DA99]/30",
+                        gradientFill: "from-white/60 to-white/90",
+                        icon: <Briefcase size={24} strokeWidth={2} className="text-[#00DA99] group-hover:scale-110 transition-transform duration-500" />
+                     },
+                     {
+                        title: "Weaknesses",
+                        items: ["Initial learning curve for new users"],
+                        color: "text-[#F59E0B]",
+                        borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent",
+                        innerGlow: "bg-[#F59E0B]/15",
+                        borderColor: "border-[#F59E0B]/30",
+                        gradientFill: "from-white/60 to-white/90",
+                        icon: <Activity size={24} strokeWidth={2} className="text-[#F59E0B] group-hover:scale-110 transition-transform duration-500" />
+                     },
+                     {
+                        title: "Opportunities",
+                        items: ["Integration with banking APIs", "Expansion into financial planning"],
+                        color: "text-[#0D63CC]",
+                        borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
+                        innerGlow: "bg-[#0D63CC]/15",
+                        borderColor: "border-[#0D63CC]/30",
+                        gradientFill: "from-white/60 to-white/90",
+                        icon: <Search size={24} strokeWidth={2} className="text-[#0D63CC] group-hover:scale-110 transition-transform duration-500" />
+                     },
+                     {
+                        title: "Threats",
+                        items: ["Existing fintech competitors", "User trust in AI decisions"],
+                        color: "text-rose-500",
+                        borderGlow: "from-rose-500/30 via-white/10 to-transparent",
+                        innerGlow: "bg-rose-500/15",
+                        borderColor: "border-rose-500/30",
+                        gradientFill: "from-white/60 to-white/90",
+                        icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" />
+                     }
+                  ].map((box, i) => (
+                     <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+
+                        {/* Inner Container */}
+                        <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+
+                           {/* Soft Animated Neon Bloom */}
+                           <motion.div
+                              animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
+                              className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
+                           />
+
+                           {/* Content */}
+                           <div className="flex flex-col gap-4 mb-6 relative z-20">
+                              <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>
+                                 {box.icon}
+                              </div>
+                              <h5 className={`font-semibold text-[20px] ${box.color}`}>
+                                 {box.title}
+                              </h5>
+
+                           </div>
+
+                           <ul className="space-y-2 flex-1 relative z-20">
+                              {box.items.map((item, j) => (
+                                 <li key={j} className="flex items-start gap-3 group/li">
+                                    <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
+                                    <span className="text-[13px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+            </section>
+
+            {/* VISUAL OVERVIEW */}
+            <section className="mb-32">
+               <div className="mb-16 text-center">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                        Interface
+                     </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Overview</span></h2>
+                  <p className="text-text-secondary font-medium max-w-2xl mx-auto">A seamless experience across all screens — from dashboard to specific tracking insights.</p>
+               </div>
+
+               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Top row */}
+                  <div className="lg:col-span-2">
+                     <PremiumPlaceholder aspect="aspect-[4/3]" label="Main Dashboard" glowCls="bg-secondary" />
+                  </div>
+                  <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile List" glowCls="bg-primary" />
+                  <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile Analytics" glowCls="bg-secondary" />
+
+                  {/* Bottom row */}
+                  <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Insights" glowCls="bg-primary" />
+                  <PremiumPlaceholder aspect="aspect-[3/4]" label="Budget Setup" glowCls="bg-secondary" />
+                  <div className="lg:col-span-2">
+                     <PremiumPlaceholder aspect="aspect-[4/3]" label="Goal Planning UI" glowCls="bg-primary" />
+                  </div>
+               </div>
+            </section>
+
+            {/* OUTCOMES & CONCLUSION */}
+            <section className="relative mb-20 overflow-hidden">
+               <motion.div
+                  {...fadeIn}
+                  className="glass-card rounded-[24px] p-6 lg:p-16 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
+               >
+                  {/* High-Fidelity Ambient Patterns */}
+                  <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+                  <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+
+                  <div className="relative z-10">
+                     <div className="mb-12 text-center max-w-4xl mx-auto">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                           <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                              Epilogue
+                           </span>
+                        </div>
+                        <h2 className="text-4xl font-bold text-text-primary mb-4">
+                           The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Future</span> of Personal Finance.
+                        </h2>
+                     </div>
+
+                     <div className="grid lg:grid-cols-3 gap-8 mb-20">
                         {[
                            {
-                              name: 'Emily Parker',
-                              age: '32 Years old',
-                              role: 'Marketing Executive',
-                              location: 'UK / Remote',
-                              bio: 'Marketing Executive at a digital agency in London, has 8 years of experience in brand strategy. She values efficiency and automation in her financial life.',
-                              goals: [
-                                 'Understand and control spending without strict manual rules.',
-                                 'Benchmark her lifestyle against similar professional cohorts.',
-                                 'Easy-to-use platform with minimal data entry requirements.'
-                              ],
-                              summary: 'A predictive budgeting system that offers real-time updates and progress tracking. Clear spending categories and future-focused insights.',
-                              image: 'C:\\Users\\DELL-566\\.gemini\\antigravity\\brain\\359f35e8-921f-4873-ba94-ad00e91f5de9\\persona_emily_parker_1775828841950.png',
-                              type: 'Individual User'
+                              title: "Design Decisions",
+                              items: ["Reduced visual clutter in dashboards", "Used progressive disclosure for advanced data", "Designed modular components for scalability", "Focused on mobile-first usability"],
+                              color: "text-[#0D63CC]",
+                              borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
+                              innerGlow: "bg-[#0D63CC]/15",
+                              borderColor: "border-[#0D63CC]/30 hover:border-[#0D63CC]",
+                              gradientFill: "from-white/60 to-white/90",
+                              icon: <div className="w-5 h-5 bg-[#0D63CC] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(13,99,204,0.3)]" />
                            },
                            {
-                              name: 'Ryan Adams',
-                              age: '41 Years old',
-                              role: 'Mortgage Advisor',
-                              location: 'Australia / B2B',
-                              bio: 'Mortgage Advisor with over 15 years in the financial sector. He helps clients assess affordability and manages a diverse portfolio of investors.',
-                              goals: [
-                                 'Quickly assess client affordability via embeddable tools.',
-                                 'Provide data-backed financial health scores as leading metrics.',
-                                 'Modular API access to integrate with existing CRM systems.'
-                              ],
-                              summary: 'A centralized assessment system that offers rapid insights. Modular components that can be customized for specific B2B partner needs.',
-                              image: 'C:\\Users\\DELL-566\\.gemini\\antigravity\\brain\\359f35e8-921f-4873-ba94-ad00e91f5de9\\persona_ryan_adams_1775828986547.png',
-                              type: 'B2B Partner'
+                              title: "Impact & Outcome",
+                              items: ["Improved clarity in financial tracking", "Reduced manual effort significantly", "Increased user confidence in managing expenses", "Created a scalable system for future features"],
+                              color: "text-[#00DA99]",
+                              borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
+                              innerGlow: "bg-[#00DA99]/15",
+                              borderColor: "border-[#00DA99]/30 hover:border-[#00DA99]",
+                              gradientFill: "from-white/60 to-white/90",
+                              icon: <div className="w-5 h-5 bg-[#00DA99] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(0,218,153,0.3)]" />
+                           },
+                           {
+                              title: "Key Learnings",
+                              items: ["Simplicity is critical in financial products", "AI must be transparent to build trust", "Data visualization directly impacts usability", <span key="highlight">Users value <strong className="text-text-primary font-bold">insights over raw data</strong></span>],
+                              color: "text-rose-500",
+                              borderGlow: "from-rose-500/30 via-white/10 to-transparent",
+                              innerGlow: "bg-rose-500/15",
+                              borderColor: "border-rose-500/30 hover:border-rose-500",
+                              gradientFill: "from-white/60 to-white/90",
+                              icon: <div className="w-5 h-5 bg-rose-500 rounded-20 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
                            }
-                        ].map((persona, idx) => (
-                           <motion.div 
-                              key={idx}
-                              {...fadeIn}
-                              transition={{ delay: idx * 0.2 }}
-                              className="glass-card p-4 md:p-8 relative group overflow-hidden border-2 border-white/60 hover:shadow-strong transition-all duration-500 rounded-[48px]"
-                           >
-                              <div className="grid lg:grid-cols-12 gap-10 items-start">
-                                 {/* Persona Image Wrapper */}
-                                 <div className="lg:col-span-4 xl:col-span-4">
-                                    <div className="relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/20 shadow-md">
-                                       <Image 
-                                          src={`file:///${persona.image.replace(/\\/g, '/')}`}
-                                          alt={persona.name}
-                                          fill
-                                          className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                       />
-                                       <div className="absolute top-6 left-6 px-4 py-2 bg-white/80 backdrop-blur-md rounded-2xl border border-white text-[10px] font-black uppercase tracking-widest text-[#282360]">
-                                          {persona.type}
-                                       </div>
+                        ].map((box, i) => (
+                           <div key={i} className={`relative border-1 border-[#0D63CC]/20 hover:border-[#00DA99]/40 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+
+                              {/* Inner Container */}
+                              <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-3xl w-full h-full rounded-[18px] p-6 lg:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+
+                                 {/* Soft Animated Neon Bloom */}
+                                 <motion.div
+                                    animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
+                                    className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
+                                 />
+
+                                 {/* Content */}
+                                 <div className="flex items-center gap-4 mb-6 relative z-20">
+                                    <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500 flex-shrink-0`}>
+                                       {box.icon}
                                     </div>
+                                    <h4 className="font-black text-xl text-text-primary leading-tight">
+                                       {box.title}
+                                    </h4>
                                  </div>
 
-                                 {/* Persona Content Wrapper */}
-                                 <div className="lg:col-span-8 xl:col-span-8 py-4 px-2">
-                                    <div className="mb-8">
-                                       <h3 className="text-4xl font-black italic text-[#282360] mb-3 group-hover:text-[#0D63CC] transition-colors">
-                                          {persona.name}
-                                       </h3>
-                                       <div className="flex flex-wrap items-center gap-4 text-slate-400 font-bold italic text-[14px]">
-                                          <span>{persona.age}</span>
-                                          <div className="w-[1.5px] h-4 bg-slate-200" />
-                                          <span>{persona.role}</span>
-                                          <div className="w-[1.5px] h-4 bg-slate-200" />
-                                          <span>{persona.location}</span>
-                                       </div>
-                                    </div>
-
-                                    <p className="text-[15px] text-slate-500 font-medium leading-relaxed mb-10 max-w-2xl border-l-4 border-slate-100 pl-6">
-                                       {persona.bio}
-                                    </p>
-
-                                    <div className="mb-10">
-                                       <h4 className="text-[20px] font-black italic text-[#282360] mb-6">User goals</h4>
-                                       <div className="space-y-4">
-                                          {persona.goals.map((goal, gidx) => (
-                                             <div key={gidx} className="flex items-center gap-4 group/goal">
-                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0D63CC] flex items-center justify-center text-white shadow-sm shadow-[#0D63CC]/40 group-hover/goal:scale-110 transition-transform">
-                                                   <CheckCircle2 size={16} strokeWidth={3} />
-                                                </div>
-                                                <p className="text-[14px] font-black text-slate-600 italic">{goal}</p>
-                                             </div>
-                                          ))}
-                                       </div>
-                                    </div>
-
-                                    <div className="pt-8 border-t border-slate-100">
-                                       <p className="text-[13px] font-bold text-slate-500 italic leading-relaxed max-w-2xl">
-                                          {persona.summary}
-                                       </p>
-                                    </div>
-                                 </div>
+                                 <ul className="space-y-3 flex-1 relative z-20">
+                                    {box.items.map((item, j) => (
+                                       <li key={j} className="flex items-start gap-3 group/li">
+                                          <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-50 transition-transform duration-300 group-hover/li:scale-[2] flex-shrink-0`} />
+                                          <span className="text-[13px] font-semibold text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">
+                                             {item}
+                                          </span>
+                                       </li>
+                                    ))}
+                                 </ul>
                               </div>
-                           </motion.div>
+                           </div>
                         ))}
                      </div>
-                  </div>
-               </section>
 
+                     {/* Final Conclusion */}
+                     <div className="mb-6">
+                        <div className="p-6 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
+                           {/* Decorative background glow */}
+                           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
 
-               {/* ----------------------------------------------------
-                   07. PROJECT GOALS & ROADMAP
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-5 relative z-10 pl-4 lg:pl-0">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#00DA99] mb-4">07 — UX Prioritization</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Strategic Rollout
-                        </h2>
-                        
-                        <div className="space-y-4 mb-10">
-                           <h4 className="text-[12px] font-black uppercase tracking-widest text-[#282360] mb-4">Project Goals</h4>
-                           {[
-                              "Simplify budgeting through automation and intelligence.",
-                              "Provide contextual insights via peer comparison.",
-                              "Empower both individuals and businesses through modular access."
-                           ].map((item, i) => (
-                              <div key={i} className="flex gap-4 items-center bg-white/50 p-4 rounded-2xl border border-white/50 hover:bg-white/80 transition-colors">
-                                 <CheckCircle2 className="text-[#00DA99] shrink-0" size={20} />
-                                 <p className="text-[14px] font-bold italic text-[#282360]">{item}</p>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-                     <div className="lg:col-span-7 relative z-20 pt-10 lg:pt-0">
-                        <div className="glass-card p-10 relative">
-                           <h4 className="text-[12px] font-black uppercase tracking-widest text-[#282360] mb-8">Features Roadmap</h4>
-                           <div className="space-y-8 relative before:absolute before:inset-y-0 before:left-[11px] before:w-[2px] before:bg-slate-200">
-                              <div className="relative pl-10">
-                                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-[#0D63CC] border-4 border-white shadow-sm" />
-                                 <h5 className="font-black italic uppercase text-[18px] text-[#282360] mb-2">MVP (Phase 1)</h5>
-                                 <p className="font-bold italic text-[14px] text-slate-500">Predictive budgeting, financial health score, and peer comparison dashboard.</p>
-                              </div>
-                              <div className="relative pl-10">
-                                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-[#00DA99] border-4 border-white shadow-sm" />
-                                 <h5 className="font-black italic uppercase text-[18px] text-[#282360] mb-2">Phase 2</h5>
-                                 <p className="font-bold italic text-[14px] text-slate-500">Embedded widget for advisors, gamified progress tracking.</p>
-                              </div>
-                              <div className="relative pl-10">
-                                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-slate-300 border-4 border-white shadow-sm" />
-                                 <h5 className="font-black italic uppercase text-[18px] text-slate-400 mb-2">Phase 3</h5>
-                                 <p className="font-bold italic text-[14px] text-slate-400">REST API integration, advanced analytics, B2B customization.</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ----------------------------------------------------
-                   08. INFORMATION ARCHITECTURE & FLOWS
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-12 xl:col-span-7 order-2 xl:order-1 relative z-20 pt-10 lg:pt-0">
-                        <PremiumPlaceholder icon={Layout} label="Architecture & Flow Diagram" glowCls="glow-blue" textCls="text-[#0D63CC]" />
-                     </div>
-                     <div className="lg:col-span-12 xl:col-span-5 order-1 xl:order-2 relative z-10 pl-4 lg:pl-0">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#0D63CC] mb-4">08 — Information Architecture</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Seamless Flows
-                        </h2>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-10 max-w-md italic">
-                           The architecture focuses on moving the user directly from minimal onboarding into actionable insights.
-                        </p>
-
-                        <div className="space-y-6">
-                           <div className="glass-card p-6 border-l-4 border-[#0D63CC]">
-                              <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#282360] mb-4">Core IA Structure</h4>
-                              <ul className="space-y-2 font-bold text-[13px] text-slate-600 font-mono">
-                                 <li>├── Onboarding</li>
-                                 <li>├── Dashboard (Summary, Peer Chart)</li>
-                                 <li>├── Insights (Forecasts)</li>
-                                 <li>└── Settings</li>
-                              </ul>
-                           </div>
-                           <div className="bg-[#00DA99]/5 backdrop-blur-md rounded-3xl p-6 border border-[#00DA99]/20 shadow-sm">
-                              <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#00DA99] mb-4">Example User Flow: Budget Creation</h4>
-                              <ol className="list-decimal ml-4 space-y-2 font-bold italic text-[13px] text-slate-600 marker:text-[#00DA99] marker:font-black">
-                                 <li>Sign up</li>
-                                 <li>Input income & fixed expenses</li>
-                                 <li>SPENDiD auto-generates baseline</li>
-                                 <li>Peer data adjusts suggestions</li>
-                                 <li>User views health score</li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ----------------------------------------------------
-                   09. VISUAL STYLE & AESTHETICS (As requested)
-                   ---------------------------------------------------- */}
-               <section className="py-24 section-divide relative z-20 overflow-hidden">
-                  <div className="max-w-[70rem] mx-auto">
-                     {/* Label & Heading */}
-                     <motion.div {...fadeIn} className="mb-16">
-                        <div className="flex items-center gap-2 mb-6">
-                           <div className="w-2 h-2 rounded-full bg-[#0D63CC]" />
-                           <span className="text-[11px] font-black tracking-[4px] uppercase text-[#0D63CC]">Visual Style</span>
-                        </div>
-                        <h2 className="text-[40px] md:text-[54px] font-black italic tracking-tighter leading-[1] text-[#282360] max-w-2xl">
-                           Typography and color systems designed for clarity
-                        </h2>
-                     </motion.div>
-
-                     {/* Typography Showcase */}
-                     <motion.div 
-                        variants={staggerChildren}
-                        initial="initial"
-                        whileInView="whileInView"
-                        viewport={{ once: true }}
-                        className="mb-24"
-                     >
-                        <div className="grid lg:grid-cols-12 gap-12 items-end mb-16">
-                           <div className="lg:col-span-8">
-                              <h1 className="text-[120px] md:text-[200px] font-black italic tracking-tighter text-[#282360] leading-none select-none opacity-[0.08] absolute -left-10 lg:static">
-                                 Inter
-                              </h1>
-                              <h1 className="text-[80px] md:text-[140px] font-black italic tracking-tighter text-[#282360] leading-none relative z-10">
-                                 Inter
-                              </h1>
-                           </div>
-                           <div className="lg:col-span-4 lg:text-right">
-                              <p className="text-[16px] font-mono text-slate-400 mb-2 uppercase tracking-widest">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-                              <p className="text-[16px] font-mono text-slate-400 mb-2 uppercase tracking-widest">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-                              <p className="text-[16px] font-mono text-slate-400 uppercase tracking-widest">0 1 2 3 4 5 6 7 8 9</p>
-                           </div>
-                        </div>
-
-                        {/* Font Scale Table */}
-                        <div className="space-y-0 border-t border-slate-200">
-                           {[
-                              { label: 'Grow Your Performance with Confidence', type: 'Heading 40px', weight: 'font-black italic' },
-                              { label: 'Global affiliate network. High-converting offers', type: 'Subheading 24px', weight: 'font-bold italic' },
-                              { label: 'Orbia helps advertisers and partners scale performance through reliable partnerships and data-driven marketing.', type: 'Body 16px', weight: 'font-medium' }
-                           ].map((font, i) => (
-                              <div key={i} className="group py-8 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white/40 transition-colors px-4 -mx-4 rounded-xl">
-                                 <span className={`text-[#282360] ${font.weight} ${i === 0 ? 'text-[32px] md:text-[40px]' : i === 1 ? 'text-[20px] md:text-[24px]' : 'text-[16px]'} leading-tight max-w-2xl`}>
-                                    {font.label}
-                                 </span>
-                                 <span className="text-[13px] font-black uppercase tracking-widest text-slate-400 whitespace-nowrap opacity-60 group-hover:opacity-100 transition-opacity">
-                                    {font.type}
-                                 </span>
-                              </div>
-                           ))}
-                        </div>
-                     </motion.div>
-
-                     {/* Color System */}
-                     <motion.div 
-                        variants={staggerChildren}
-                        initial="initial"
-                        whileInView="whileInView"
-                        viewport={{ once: true }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                     >
-                        {[
-                           { name: 'Deep Graphite', hex: '#282360', bg: 'bg-[#282360]', text: 'text-white' },
-                           { name: 'Emerald Growth', hex: '#00DA99', bg: 'bg-[#00DA99]', text: 'text-[#282360]' },
-                           { name: 'Electric Blue', hex: '#0D63CC', bg: 'bg-[#0D63CC]', text: 'text-white' },
-                           { name: 'Sky Clarity', hex: '#A5C9FF', bg: 'bg-[#A5C9FF]', text: 'text-[#282360]' }
-                        ].map((color, i) => (
-                           <motion.div 
-                              key={i}
-                              variants={childFade}
-                              className="group relative flex flex-col pt-32 pb-6 px-6 rounded-[32px] overflow-hidden shadow-strong hover:scale-[1.02] transition-all duration-500"
-                           >
-                              <div className={`absolute inset-0 ${color.bg}`} />
-                              <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                              
-                              <div className="relative z-10 mt-auto">
-                                 <p className={`text-[14px] font-black italic ${color.text} mb-1 opacity-80 group-hover:opacity-100 transition-opacity`}>
-                                    {color.name}
-                                 </p>
-                                 <p className={`text-[12px] font-mono font-bold ${color.text} opacity-50 group-hover:opacity-100 tracking-tighter transition-opacity uppercase`}>
-                                    {color.hex}
-                                 </p>
-                              </div>
-
-                              {/* Decorative white/black glass inner ring */}
-                              <div className={`absolute -top-16 -right-16 w-32 h-32 rounded-full border-[12px] ${color.text === 'text-white' ? 'border-white/10' : 'border-black/5'} group-hover:scale-150 transition-transform duration-1000`} />
-                           </motion.div>
-                        ))}
-                     </motion.div>
-
-                     {/* Additional UI Showcase Grid */}
-                     <div className="mt-32 grid md:grid-cols-3 gap-8">
-                        <PremiumPlaceholder icon={Layout} label="Onboarding Screen UI" glowCls="glow-blue" textCls="text-[#0D63CC]" />
-                        <PremiumPlaceholder icon={PieChart} label="Dashboard & Peer Graph UI" glowCls="glow-green" textCls="text-[#00DA99]" />
-                        <PremiumPlaceholder icon={LineChart} label="Insights UI" glowCls="glow-blue" textCls="text-blue-400" />
-                     </div>
-                  </div>
-               </section>
-
-
-               {/* ----------------------------------------------------
-                   10. USABILITY TESTING
-                   ---------------------------------------------------- */}
-               <section className="py-20 section-divide relative z-20 mb-20">
-                  <div className="grid lg:grid-cols-12 gap-16 items-center">
-                     <div className="lg:col-span-5 relative z-10 pl-4 lg:pl-0">
-                        <div className="text-[14px] font-black italic tracking-widest text-[#0D63CC] mb-4">10 — Usability Test</div>
-                        <h2 className="text-[40px] font-black italic tracking-tighter heading-gradient leading-[1.1] mb-6">
-                           Validating Assumptions
-                        </h2>
-                        <p className="text-[16px] text-slate-600 leading-relaxed font-medium mb-10 max-w-md italic">
-                           A clickable Figma prototype was tested with 6 users to evaluate the onboarding and dashboard experience. They completed tasks with a 90% success rate.
-                        </p>
-
-                        <div className="glass-card p-6 border-l-4 border-[#0D63CC]">
-                           <h4 className="text-[12px] font-black uppercase tracking-[2px] text-[#282360] mb-4">Post-Test Iterations</h4>
-                           <ul className="space-y-3 font-bold text-[14px] text-slate-600">
-                              <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC] mt-2 shrink-0" /> Added “Change Peer Group” dropdown on dashboard</li>
-                              <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC] mt-2 shrink-0" /> Simplified health score from 5 levels down to 3 (Good/Fair/Poor)</li>
-                              <li className="flex items-start gap-3"><div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC] mt-2 shrink-0" /> Improved data transparency copy</li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div className="lg:col-span-7 relative z-20 pt-10 xl:pt-0">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0D63CC] to-[#00DA99] rounded-full blur-[80px] opacity-10 animate-pulse pointer-events-none" />
-                        <div className="glass-card p-16 text-center relative group hover:glow-blue transition-all duration-500 hover:shadow-strong overflow-hidden border-2 border-white/60">
-                           <h3 className="text-3xl font-black italic uppercase text-[#282360] tracking-tighter mb-4">Interactive Prototype</h3>
-                           <p className="text-slate-600 font-bold italic mb-8">Test the high-fidelity SPENDiD flows in Figma.</p>
-                           <button className="btn-primary inline-flex items-center gap-3 px-8 py-4 relative overflow-hidden text-sm">
-                              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none" />
-                              <span className="font-black italic tracking-tighter uppercase relative z-10">View Figma Prototype</span>
-                              <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                           </button>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ----------------------------------------------------
-                   11. OUTCOMES (DARK PANELS ARE NOT IN HOME THEME, USING PREMIUM GLASS)
-                   ---------------------------------------------------- */}
-               <motion.section 
-                  {...fadeIn} 
-                  className="mb-10 relative z-50 rounded-[48px] glass-card p-1 lg:p-2 overflow-hidden shadow-strong border-2 border-white/60"
-               >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-[#0D63CC]/5" />
-                  <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#00DA99]/10 to-transparent blur-[120px] rounded-full pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#0D63CC]/20 to-transparent blur-[120px] rounded-full pointer-events-none" />
-
-                  <div className="relative z-10 px-8 py-16 md:p-20 lg:p-28">
-                     <div className="grid lg:grid-cols-12 gap-16 items-center">
-                        <div className="lg:col-span-6">
-                           <span className="inline-block px-5 py-2.5 rounded-full bg-white/60 text-[#282360] border border-white font-black uppercase tracking-[3px] text-[10px] backdrop-blur-md mb-8 shadow-sm">11 — Final Outcome</span>
-                           <h2 className="text-5xl md:text-6xl font-black italic text-[#282360] tracking-tighter mb-8 leading-[0.9]">
-                              Empowered <br/>
-                              <span className="heading-gradient pb-2 inline-block">Intelligence.</span>
-                           </h2>
-                           <p className="text-[16px] lg:text-[18px] text-slate-600 leading-relaxed font-bold italic mb-12 border-l-4 border-[#0D63CC] pl-6">
-                              SPENDiD successfully bridges financial intelligence with empathy. It transforms budgeting from a chore into an empowering, data-driven experience — helping users make smarter financial decisions with confidence.
+                           <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-4 relative z-10">
+                              <div className="w-8 h-8 bg-[#0D63CC] rounded flex-shrink-0" />
+                              Conclusion
+                           </h4>
+                           <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
+                              SPENDiD™ transforms expense tracking into a smart, user-friendly financial experience, combining AI, design clarity, and system thinking to help users take control of their financial lives.
                            </p>
-
-                           <div className="flex flex-wrap gap-3 mb-12">
-                              {['Simplicity builds trust', 'Relatable insights', 'Iterative clarity'].map((outcome, i) => (
-                                 <span key={i} className="px-5 py-2.5 bg-white/60 border border-white font-black text-[12px] text-slate-600 uppercase tracking-widest backdrop-blur-md shadow-sm rounded-xl">
-                                    {outcome}
-                                 </span>
-                              ))}
-                           </div>
-
-                           <Link href="/#works" className="btn-primary group inline-flex items-center gap-4 px-10 py-5 relative overflow-hidden text-md">
-                              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none" />
-                              <span className="font-black italic tracking-tighter uppercase relative z-10">Return to Portfolio</span>
-                              <ArrowLeft size={20} className="relative z-10 group-hover:-translate-x-2 transition-transform" />
-                           </Link>
-                        </div>
-
-                        <div className="lg:col-span-6 space-y-12 bg-white/40 backdrop-blur-md border border-white p-10 lg:p-14 rounded-[40px] shadow-sm">
-                           {[
-                              { label: "Data Interaction", val: "Simple", color: "from-[#00DA99] to-teal-400", glow: "group-hover:glow-green" },
-                              { label: "User Engagement", val: "Empowered", color: "from-[#0D63CC] to-blue-500", glow: "group-hover:glow-blue" },
-                              { label: "Budgeting Feel", val: "Guided", color: "from-[#282360] to-indigo-500", glow: "group-hover:glow-blue" }
-                           ].map((stat, i) => (
-                              <div key={i} className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-8 pb-8 border-b border-slate-200 last:border-0 last:pb-0 group bg-white/0 p-4 rounded-3xl ${stat.glow} transition-all duration-500`}>
-                                 <div className={`text-4xl lg:text-5xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-b ${stat.color} group-hover:scale-105 transition-transform duration-500 transform-origin-left drop-shadow-sm min-w-[180px]`}>
-                                    {stat.val}
-                                 </div>
-                                 <div className="w-[2px] h-8 bg-slate-200 hidden md:block" />
-                                 <h5 className="text-[16px] font-black uppercase tracking-widest text-[#282360]">{stat.label}</h5>
-                              </div>
-                           ))}
                         </div>
                      </div>
+
+                     <div className="flex flex-col sm:flex-row items-center gap-8 border-t border-slate-100 pt-10">
+                        <Link href="/#projects" className="btn-premium px-12 py-5 text-sm">
+                           <span>View Next Project</span>
+                           <ArrowLeft size={18} className="rotate-180" />
+                        </Link>
+                        <p className="text-xs font-bold text-text-secondary uppercase tracking-widest opacity-40">
+                           Thank you for reading the SPENDiD Case Study.
+                        </p>
+                     </div>
                   </div>
-               </motion.section>
+               </motion.div>
+            </section>
 
-            </div>
          </main>
-
-         <style jsx global>{`
-            ::-webkit-scrollbar { width: 10px; }
-            ::-webkit-scrollbar-track { background: #FAFCFF; }
-            ::-webkit-scrollbar-thumb {
-               background: #cbd5e1;
-               border-radius: 10px;
-               border: 2px solid #FAFCFF;
-            }
-            ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-         `}</style>
-         
          <Footer />
       </div>
    )

@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
 
       <Navbar />
 
-      <main>
+      <main className="min-h-screen pt-20 md:pt-24">
         <PortfolioGrid />
       </main>
 

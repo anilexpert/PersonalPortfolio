@@ -32,33 +32,14 @@ const FeaturedCaseStudy = () => {
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0">
             {/* Left: Graphic */}
-            <div className="p-6 md:p-8 lg:p-10">
-              <div className="w-full h-full min-h-[300px] md:min-h-[400px] rounded-2xl bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-4 sm:p-6 md:p-8 flex items-center justify-center relative overflow-hidden shadow-inner">
-                {/* Abstract Window UI */}
-                <div className="w-full max-w-md bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl overflow-hidden relative z-10">
-                  {/* Window Header */}
-                  <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-                    <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-                    <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
-                  </div>
-                  {/* Window Body */}
-                  <div className="p-5 sm:p-6 space-y-4 sm:space-y-6">
-                    <div className="w-1/3 h-4 bg-white/20 rounded-full" />
-                    
-                    <div className="grid grid-cols-3 gap-3 sm:gap-4">
-                      <div className="h-20 sm:h-24 bg-white/10 rounded-lg border border-white/5" />
-                      <div className="h-20 sm:h-24 bg-white/10 rounded-lg border border-white/5" />
-                      <div className="h-20 sm:h-24 bg-white/10 rounded-lg border border-white/5" />
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="w-full h-3 bg-white/10 rounded-full" />
-                      <div className="w-5/6 h-3 bg-white/10 rounded-full" />
-                      <div className="w-4/6 h-3 bg-white/10 rounded-full" />
-                    </div>
-                  </div>
-                </div>
+            <div className="p-6 md:p-8 lg:p-4">
+              <div className="w-full h-full min-h-[300px] md:min-h-[400px] rounded-2xl bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-2 flex items-center justify-center relative overflow-hidden shadow-inner">
+                {/* Project Image */}
+                <img
+                  src="/images/carevanta-health.png"
+                  alt="Carevanta Health Workflow System"
+                  className="w-full h-auto object-cover rounded-xl shadow-2xl relative z-10"
+                />
               </div>
             </div>
 

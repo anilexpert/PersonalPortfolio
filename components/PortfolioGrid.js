@@ -3,6 +3,7 @@ import { projects } from '../data/projects';
 import PortfolioCard from './PortfolioCard';
 import Image from 'next/image';
 import CTA from './CTA';
+import Link from 'next/link';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -13,7 +14,7 @@ const fadeUp = (delay = 0) => ({
 
 const PortfolioGrid = () => {
   return (
-    <div className="bg-transparent text-text-primary min-h-screen">
+    <div className="bg-transparent text-text-primary">
       {/* Header Section (Matching About Page Style) */}
       <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
         {/* bg glows */}
@@ -23,7 +24,7 @@ const PortfolioGrid = () => {
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           {/* Breadcrumb */}
           <motion.div {...fadeUp(0)} className="flex items-center justify-center gap-2 text-[10px] md:text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-4 md:mb-6">
-            <a href="/" className="hover:text-primary transition-colors">Home</a>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
             <span className="text-primary">Case Studies</span>
           </motion.div>

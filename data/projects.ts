@@ -11,7 +11,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "spendid-ai-expense",
+    slug: "spendid",
     title: "AI-POWERED SMART EXPENSE ECOSYSTEM",
     category: "SPENDiD™",
     image: "/images/spendid.png",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     accentColor: "#00DA99" // Mint
   },
   {
-    slug: "alcd-systems-compliance",
+    slug: "alcd",
     title: "FACILITY & COMPLIANCE MANAGEMENT PLATFORM",
     category: "ALCD Systems™",
     image: "/images/carevanata.png",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     accentColor: "#0D63CC" // Blue
   },
   {
-    slug: "oasisnotes-productivity",
+    slug: "oasisnotes",
     title: "SMART KNOWLEDGE & PRODUCTIVITY WORKSPACE",
     category: "OasisNotes™",
     image: "/images/oasis-notes.png",

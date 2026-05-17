@@ -120,7 +120,7 @@ export default function SpendidCaseStudy() {
                </div>
             </section>
 
-            <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
+            <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
                {/* HERO SECTION */}
                <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
@@ -165,7 +165,7 @@ export default function SpendidCaseStudy() {
                </section>
 
                {/* MAIN HERO IMAGE */}
-               <motion.section {...fadeIn} className="mb-16 md:mb-24 lg:mb-32 relative group">
+               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      {/* Top Right Glow Effect */}
                      <div

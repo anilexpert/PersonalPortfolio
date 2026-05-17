@@ -12,37 +12,43 @@ const services = [
     title: 'AI-Driven Product Experience Design',
     description: 'Designing intelligent, human-centered experiences that seamlessly integrate AI into real-world workflows.',
     icon: Sparkles,
-    color: '#00DA99'
+    color: '#00DA99',
+    slug: 'ai-experience-design'
   },
   {
     title: 'Scalable SaaS Platform Design',
     description: 'Crafting high-performance SaaS products with intuitive flows, modular systems, and growth-ready architecture.',
     icon: Cloud,
-    color: '#0D63CC'
+    color: '#0D63CC',
+    slug: 'saas-platform-design'
   },
   {
     title: 'Product Strategy & Experience Architecture',
     description: 'Turning complex product ideas into structured systems, clear journeys, and scalable user experiences.',
     icon: Lightbulb,
-    color: '#8B5CF6'
+    color: '#8B5CF6',
+    slug: 'product-strategy'
   },
   {
     title: 'Data Intelligence & Dashboard UX',
     description: 'Designing data-rich interfaces that transform complexity into actionable insights and faster decisions.',
     icon: LayoutDashboard,
-    color: '#F59E0B'
+    color: '#F59E0B',
+    slug: 'data-intelligence'
   },
   {
     title: 'Design Systems & UI Engineering',
     description: 'Building scalable design systems that ensure consistency, speed up development, and support product evolution.',
     icon: Layers,
-    color: '#F43F5E'
+    color: '#F43F5E',
+    slug: 'design-systems'
   },
   {
     title: 'Enterprise Workflow Optimization',
     description: 'Simplifying complex, multi-role enterprise systems into efficient, intuitive, and outcome-driven experiences.',
     icon: Building,
-    color: '#0EA5E9'
+    color: '#0EA5E9',
+    slug: 'enterprise-workflow'
   }
 ];
 
@@ -78,8 +84,8 @@ export default function ServicesPage() {
               <span className="text-primary">Services</span>
             </motion.div>
 
-            <motion.h1 
-              {...fadeUp(0.1)} 
+            <motion.h1
+              {...fadeUp(0.1)}
               className="text-[36px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
             >
               Our
@@ -122,20 +128,20 @@ export default function ServicesPage() {
                     animate: { opacity: 1, y: 0, borderColor: 'rgba(255, 255, 255, 0.5)', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)', transition: { duration: 0.6, delay: 0.1 + i * 0.1 } },
                     hover: { y: -8, borderColor: `${service.color}60`, boxShadow: `0 24px 48px ${service.color}15`, transition: { duration: 0.3 } }
                   }}
-                  className="glass-card bg-white/40 backdrop-blur-xl rounded-[24px] p-8 flex flex-col group relative overflow-hidden transition-all duration-300 border border-white/50"
+                  className="glass-card bg-white/40 backdrop-blur-xl rounded-[24px] p-6 lg:p-10 flex flex-col group relative overflow-hidden transition-all duration-300 border border-white/50"
                 >
                   {/* Multicolor Dynamic Glows - Glass Effects */}
-                  <div 
+                  <div
                     className="absolute -top-20 -right-20 w-56 h-56 rounded-full blur-[80px] opacity-0 group-hover:opacity-15 transition-all duration-700 pointer-events-none group-hover:scale-125 z-0"
                     style={{ backgroundColor: service.color }}
                   />
-                  <div 
+                  <div
                     className="absolute -bottom-20 -left-20 w-56 h-56 rounded-full blur-[80px] opacity-0 group-hover:opacity-10 transition-all duration-700 pointer-events-none group-hover:scale-125 z-0"
                     style={{ backgroundColor: service.color }}
                   />
 
                   {/* Icon Container with Border Masking & Glow */}
-                  <div 
+                  <div
                     className="w-14 h-14 rounded-[16px] flex items-center justify-center mb-6 relative z-10 transition-all duration-500 group-hover:scale-110 shadow-sm group-hover:shadow-md"
                     style={{
                       backgroundColor: `${service.color}10`,
@@ -148,9 +154,9 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-[18px] md:text-xl font-black text-text-primary mb-3 uppercase tracking-tight relative z-10 transition-colors duration-300">
+                  <h3 className="text-[16px] md:text-xl font-bold text-text-primary mb-3 capitalize tracking-tight relative z-10 transition-colors duration-300">
                     <span className="group-hover:opacity-0 transition-opacity duration-300 block">{service.title}</span>
-                    <span 
+                    <span
                       className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-transparent bg-clip-text"
                       style={{ backgroundImage: `linear-gradient(to right, #1A1A1A, ${service.color})` }}
                     >
@@ -164,19 +170,19 @@ export default function ServicesPage() {
                   </p>
 
                   {/* Action Link */}
-                  <Link href="#contact" className="flex items-center gap-3 mt-auto relative z-10 w-fit cursor-pointer">
+                  <Link href={`/services/${service.slug}`} className="flex items-center gap-3 mt-auto relative z-10 w-fit cursor-pointer">
                     <div className="relative">
-                      <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-text-primary transition-opacity duration-300 group-hover:opacity-0">
+                      <span className="text-[16px] font-medium text-text-primary transition-opacity duration-300 group-hover:opacity-0">
                         More Details
                       </span>
-                      <span 
-                        className="text-[13px] font-bold uppercase tracking-[0.1em] absolute left-0 top-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap"
+                      <span
+                        className="text-[16px] font-medium absolute left-0 top-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap"
                         style={{ color: service.color }}
                       >
                         More Details
                       </span>
                     </div>
-                    <div 
+                    <div
                       className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 shadow-sm group-hover:scale-110"
                       style={{
                         backgroundColor: `${service.color}15`,
@@ -190,7 +196,7 @@ export default function ServicesPage() {
                   </Link>
 
                   {/* Gradient Border Overlay (Border Masking effect) */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-[24px] pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100 z-20"
                     style={{
                       background: `linear-gradient(135deg, ${service.color}40, transparent, transparent)`,

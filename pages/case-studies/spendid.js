@@ -94,7 +94,7 @@ export default function SpendidCaseStudy() {
 
                   <motion.h1
                      initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                     className="text-[36px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
+                     className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
                      <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Studies</span>

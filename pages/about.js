@@ -130,9 +130,9 @@ export default function AboutPage() {
               <span className="text-primary">About Us</span>
             </motion.div>
 
-            <motion.h1 
-              {...fadeUp(0.1)} 
-              className="text-[36px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
+            <motion.h1
+              {...fadeUp(0.1)}
+              className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
             >
               About
               <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Us</span>

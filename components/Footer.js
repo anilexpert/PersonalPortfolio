@@ -109,13 +109,17 @@ const Footer = () => {
 
           <div className="flex items-center gap-6">
             {['Terms & Conditions', 'Privacy Policy', 'Contact Us'].map((item) => (
-              <a
+              <Link
                 key={item}
-                href="#"
+                href={
+                  item === 'Terms & Conditions' ? '/terms' :
+                  item === 'Privacy Policy' ? '/privacy' :
+                  item === 'Contact Us' ? '/contact' : '#'
+                }
                 className="text-[12px] text-text-secondary hover:text-text-primary transition-colors"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

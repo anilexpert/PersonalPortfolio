@@ -35,9 +35,11 @@ const Footer = () => {
               <Link
                 key={link}
                 href={
+                  link === 'HOME' ? '/' :
                   link === 'ABOUT' ? '/about' : 
                   link === 'SERVICES' ? '/services' : 
                   link === 'CASE STUDIES' ? '/case-studies' : 
+                  link === 'CONTACT US' ? '/contact' :
                   `#${link.toLowerCase().replace(' ', '-')}`
                 }
                 className="text-[12px] font-semibold text-text-secondary hover:text-primary transition-colors"

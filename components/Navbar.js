@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function Navbar() {
 
         {/* Right: CTA */}
         <div className="flex items-center">
-          <Link href="#contact" passHref>
+          <Link href="/contact" passHref>
             <button className="btn-premium py-1 md:py-2 md:px-4 text-[12px] md:text-[14px] ">
               <span className="uppercase">Let's Talk</span>
               <MessageCircle size={18} />

@@ -89,7 +89,7 @@ export default function PrivacyPage() {
   const currentDate = 'May 17, 2026';
 
   return (
-    <div className="min-h-screen bg-bg-base relative w-full max-w-[100vw] overflow-x-hidden">
+    <div className="min-h-screen bg-bg-base relative w-full max-w-[100vw] overflow-x-clip">
       <Head>
         <title>Privacy Policy | Anil Kumar – Senior Product Designer</title>
         <meta name="description" content="Welcome to the Privacy Policy page of Anil Kumar, AI-Driven Product Designer. Read about how your information is collected, used, and protected." />
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
               <div className="sticky top-32">
                 <motion.div
                   {...fadeUp(0.2)}
-                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)] max-h-[calc(100vh-8rem)] overflow-y-auto"
+                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)]"
                 >
                   <h3 className="text-base font-bold text-text-primary mb-4 border-b border-text-primary/5 pb-3 flex items-center gap-2">
                     <Shield size={24} className="text-primary" />

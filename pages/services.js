@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
 import GlowDivider from '../components/GlowDivider';
-
+import RotatingBadge from '../components/RotatingBadge';
 const services = [
   {
     title: 'AI-Driven Product Experience Design',
@@ -92,23 +92,15 @@ export default function ServicesPage() {
               <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Services</span>
             </motion.h1>
 
-            {/* Decorative scribble SVG */}
-            <motion.div {...fadeUp(0.3)} className="absolute top-8 right-[8%] opacity-30 pointer-events-none hidden lg:block">
-              <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                <path d="M100 10C100 10 60 50 60 60C60 70 100 110 100 110" stroke="url(#g1)" strokeWidth="2.5" strokeLinecap="round" />
-                <path d="M80 20C80 20 50 55 50 65C50 75 80 110 80 110" stroke="url(#g2)" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-                <defs>
-                  <linearGradient id="g1" x1="60" y1="10" x2="100" y2="110" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#00DA99" />
-                    <stop offset="1" stopColor="#0D63CC" />
-                  </linearGradient>
-                  <linearGradient id="g2" x1="50" y1="20" x2="80" y2="110" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#0D63CC" />
-                    <stop offset="1" stopColor="#00DA99" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </motion.div>
+            {/* Circular Rotating Badge */}
+            <div className="absolute top-2 right-[6%] hidden lg:block">
+              <RotatingBadge
+                icon={Sparkles}
+                labels={["SERVICES", "SOLUTIONS", "EXPERTISE"]}
+                iconColor="#00DA99"
+                size={150}
+              />
+            </div>
           </div>
         </section>
 

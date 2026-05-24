@@ -81,7 +81,7 @@ export const projects: Project[] = [
     accentColor: "#06B6D4" // Cyan
   },
   {
-    slug: "supercampus-education",
+    slug: "supercampus",
     title: "DIGITAL LEARNING & ADMINISTRATION ECOSYSTEM",
     category: "SuperCampus™",
     image: "/images/spendora.png",

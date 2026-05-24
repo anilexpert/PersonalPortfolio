@@ -51,5 +51,23 @@
     "accentBorder": "border-violet-500/20",
     "accentText": "text-violet-600",
     "accentDot": "bg-violet-500"
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "title": "SuperCampus",
+    "slug": "supercampus",
+    "image": "/Thumnail.png",
+    "tags": [
+      "EdTech",
+      "Dashboard",
+      "Design System"
+    ],
+    "description": "A unified platform for managing academic operations, communication, and student engagement across web and mobile interfaces.",
+    "accent": "from-[#00DA99] to-[#0D63CC]",
+    "accentLight": "from-[#00DA99]/10 to-[#0D63CC]/10",
+    "accentBorder": "border-[#0D63CC]/20",
+    "accentText": "text-[#0D63CC]",
+    "accentDot": "bg-[#00DA99]"
   }
 ]

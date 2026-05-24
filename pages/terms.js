@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import RotatingBadge from '../components/RotatingBadge';
 
 // Framer motion animation presets
 const fadeUp = (delay = 0) => ({
@@ -134,6 +135,16 @@ export default function TermsPage() {
                 Last Updated: <span className="text-text-primary">{currentDate}</span>
               </span>
             </motion.div>
+
+            {/* Circular Rotating Badge */}
+            <div className="absolute top-2 right-[6%] hidden lg:block">
+              <RotatingBadge
+                icon={Scale}
+                labels={["LEGAL", "TERMS", "CONDITIONS"]}
+                iconColor="#0D63CC"
+                size={150}
+              />
+            </div>
           </div>
         </section>
 

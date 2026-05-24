@@ -114,7 +114,7 @@ const Hero = () => {
                     { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/carenova" },
                     { img: "/images/spendora.png", name: "Spendora", href: "/case-studies/spendora" },
                     { img: "/images/oasispad.png", name: "OasisPad", href: "/case-studies/oasispad" },
-                    { img: "/images/pulse-grid.png", name: "PulseGrid", href: "/case-studies" },
+                    { img: "/images/ticketstack.png", name: "TicketStack", href: "/case-studies/ticketstack" },
                   ].map((project, i) => (
                     <Link
                       key={i}

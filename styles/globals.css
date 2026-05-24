@@ -178,3 +178,8 @@
 .animate-pulse-slow {
   animation: pulse-slow 8s infinite ease-in-out;
 }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

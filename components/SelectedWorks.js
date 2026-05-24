@@ -6,7 +6,7 @@ import Image from 'next/image';
 const projects = [
   {
     id: "01",
-    name: "SPENDiD™",
+    name: "Spendora™",
     category: "AI-POWERED SMART EXPENSE ECOSYSTEM",
     color: "#00DA99",
     dotColor: "#00DA99",
@@ -14,7 +14,7 @@ const projects = [
     leftMain: "SMART BUDGETING",
     rightSub: "AI ANALYTICS",
     rightMain: "FINANCIAL SAAS",
-    image: "/images/spendid.png"
+    image: "/images/spendora.png"
   },
   {
     id: "02",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: "03",
-    name: "OasisNotes™",
+    name: "OasisPad™",
     category: "SMART KNOWLEDGE & PRODUCTIVITY",
     color: "#6B67CC",
     dotColor: "#6B67CC",
@@ -38,11 +38,11 @@ const projects = [
     leftMain: "AI NOTE-TAKING",
     rightSub: "PRODUCTIVITY",
     rightMain: "COLLABORATION",
-    image: "/images/oasisnotes.png"
+    image: "/images/oasispad.png"
   },
   {
     id: "04",
-    name: "Ticket-IT™",
+    name: "TicketStack™",
     category: "RETAIL TICKETING REDESIGN",
     color: "#F43F5E",
     dotColor: "#F43F5E",
@@ -50,11 +50,11 @@ const projects = [
     leftMain: "CLOUD TICKETING",
     rightSub: "SCALABLE MGMT",
     rightMain: "UX REDESIGN",
-    image: "/images/ticketit.png"
+    image: "/images/ticketstack.png"
   },
   {
     id: "05",
-    name: "Market Prophet™",
+    name: "MarketVisionAI™",
     category: "AI-POWERED MARKET INTELLIGENCE",
     color: "#F59E0B",
     dotColor: "#F59E0B",
@@ -62,7 +62,7 @@ const projects = [
     leftMain: "MARKET INSIGHTS",
     rightSub: "STRATEGIC TRENDS",
     rightMain: "BUSINESS INTEL",
-    image: "/images/market-rophet.png"
+    image: "/images/marketvisionai.png"
   },
   {
     id: "06",

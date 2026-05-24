@@ -12,7 +12,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import GlowDivider from '../../components/GlowDivider'
 
-export default function SpendidCaseStudy() {
+export default function SpendoraCaseStudy() {
    const fadeIn = {
       initial: { opacity: 0, y: 30 },
       whileInView: { opacity: 1, y: 0 },
@@ -71,7 +71,7 @@ export default function SpendidCaseStudy() {
    return (
       <>
          <Head>
-            <title>SPENDiD | Case Study - AI-Powered Smart Expense Ecosystem</title>
+            <title>Spendora | Case Study - AI-Powered Smart Expense Ecosystem</title>
          </Head>
 
          <Navbar />
@@ -135,7 +135,7 @@ export default function SpendidCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        SPENDiD™
+                        Spendora™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Smart Expense Ecosystem</span>
@@ -173,8 +173,8 @@ export default function SpendidCaseStudy() {
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
                      <Image
-                        src="/images/spendid/dashboard.png"
-                        alt="SPENDiD Dashboard"
+                        src="/images/spendora/SpendoraBanner.png"
+                        alt="Spendora Dashboard"
                         fill
                         className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
                      />
@@ -189,7 +189,7 @@ export default function SpendidCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           SPENDiD™ is a modern fintech expense management platform designed to help users track, analyze, and optimize their spending through AI-powered insights, automation, and intuitive financial workflows. The goal was to move beyond traditional expense tracking and create a smart financial ecosystem that empowers users to make better financial decisions with minimal effort.
+                           Spendora™ is a modern fintech expense management platform designed to help users track, analyze, and optimize their spending through AI-powered insights, automation, and intuitive financial workflows. The goal was to move beyond traditional expense tracking and create a smart financial ecosystem that empowers users to make better financial decisions with minimal effort.
                         </p>
                      </div>
                   </div>
@@ -228,7 +228,7 @@ export default function SpendidCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           SPENDiD™ introduces an AI-powered expense ecosystem that automatically categorizes transactions, provides real-time spending insights, offers smart budgeting recommendations, and visualizes financial data in an intuitive way. The platform focuses on clarity, automation, and user control, ensuring users feel confident managing their finances.
+                           Spendora™ introduces an AI-powered expense ecosystem that automatically categorizes transactions, provides real-time spending insights, offers smart budgeting recommendations, and visualizes financial data in an intuitive way. The platform focuses on clarity, automation, and user control, ensuring users feel confident managing their finances.
                         </p>
                      </div>
                   </div>
@@ -248,12 +248,12 @@ export default function SpendidCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Smart Expense Tracking", desc: "Automated categorization of transactions using proprietary AI models.", color: "#00DA99" },
-                        { num: "02", title: "AI Budget Recommendations", desc: "Personalized spending limits based on historical data and future goals.", color: "#0D63CC" },
-                        { num: "03", title: "Interactive Dashboards", desc: "Real-time financial health visualised with high-fidelity analytics.", color: "#8B5CF6" },
-                        { num: "04", title: "Goal-Based Planning", desc: "Dedicated spaces for multi-phase savings with progress forecasting.", color: "#F59E0B" },
-                        { num: "05", title: "Multi-Device Sync", desc: "Seamless experience across web, iOS, and Android ecosystems.", color: "#10B981" },
-                        { num: "06", title: "Predictive Intelligence", desc: "Anomaly detection and proactive financial advice powered by ML.", color: "#3B82F6" }
+                        { num: "01", title: "Smart Expense Tracking", desc: "Automated categorization of transactions using proprietary AI models.", color: "#00DA99", image: "/images/spendora/SmartExpenseTracking.png" },
+                        { num: "02", title: "AI Budget Recommendations", desc: "Personalized spending limits based on historical data and future goals.", color: "#0D63CC", image: "/images/spendora/AIBudgetRecommendations.png" },
+                        { num: "03", title: "Interactive Dashboards", desc: "Real-time financial health visualised with high-fidelity analytics.", color: "#8B5CF6", image: "/images/spendora/InteractiveDashboards.png" },
+                        { num: "04", title: "Goal-Based Planning", desc: "Dedicated spaces for multi-phase savings with progress forecasting.", color: "#F59E0B", image: "/images/spendora/GoalBasedPlanning.png" },
+                        { num: "05", title: "Multi-Device Sync", desc: "Seamless experience across web, iOS, and Android ecosystems.", color: "#10B981", image: "/images/spendora/Multi-DeviceSync.png" },
+                        { num: "06", title: "Predictive Intelligence", desc: "Anomaly detection and proactive financial advice powered by ML.", color: "#3B82F6", image: "/images/spendora/PredictiveIntelligence.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -279,8 +279,13 @@ export default function SpendidCaseStudy() {
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
 
-                           <div className="relative z-10">
-                              <PremiumPlaceholder aspect="aspect-[16/10]" label={`${feature.title} UI Preview`} icon={Layout} glowCls={`bg-[${feature.color}]`} textCls="text-text-primary" />
+                           <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                              <Image 
+                                 src={feature.image} 
+                                 alt={feature.title} 
+                                 fill 
+                                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                              />
                            </div>
                         </motion.div>
                      ))}
@@ -305,7 +310,7 @@ export default function SpendidCaseStudy() {
                         {
                            name: "Arjun Mehta",
                            role: "Young Professional (Primary User)",
-                           image: "/images/spendid/arjun.png",
+                           image: "/images/spendora/arjun.png",
                            bio: "Needs better control over monthly spending. Wants automation instead of manual tracking. Seeks clear insights without complexity.",
                            needs: ["Automated tracking", "Clear, quick insights", "Goal setting"],
                            pains: ["Overspending without realizing", "Lack of financial discipline", "Manual input is tedious"],
@@ -314,7 +319,7 @@ export default function SpendidCaseStudy() {
                         {
                            name: "Sneha Iyer",
                            role: "Small Business Owner",
-                           image: "/images/spendid/sneha.png",
+                           image: "/images/spendora/sneha.png",
                            bio: "Tracks multiple expenses and categories. Needs a quick overview of financial health to make rapid business decisions.",
                            needs: ["Quick overview of health", "Categorized reports", "Tax-friendly summaries"],
                            pains: ["Time-consuming tracking", "Difficulty analyzing data", "Mixing personal/business"],
@@ -681,7 +686,7 @@ export default function SpendidCaseStudy() {
                                     "“There must be a smarter way to manage this.”",
                                     "“Are these expenses necessary or just habits?”"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -711,7 +716,7 @@ export default function SpendidCaseStudy() {
                                     "“I just need something simple that works.”",
                                     "“Why are these apps so complicated?”"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -751,7 +756,7 @@ export default function SpendidCaseStudy() {
                                     "Frustrated with manual tracking and unclear insights",
                                     "Motivated to improve financial discipline but unsure how"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -781,7 +786,7 @@ export default function SpendidCaseStudy() {
                                     "Ignores budgeting tools after initial setup",
                                     "Makes spending decisions without structured insights"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li p-2.5 rounded-2xl transition-colors hover:border-white/60">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -803,7 +808,7 @@ export default function SpendidCaseStudy() {
                         </span>
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating SPENDiD's competitive stance to ensure viability and identify risks.</p>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating Spendora's competitive stance to ensure viability and identify risks.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1018,7 +1023,7 @@ export default function SpendidCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 SPENDiD™ transforms expense tracking into a smart, user-friendly financial experience, combining AI, design clarity, and system thinking to help users take control of their financial lives.
+                                 Spendora™ transforms expense tracking into a smart, user-friendly financial experience, combining AI, design clarity, and system thinking to help users take control of their financial lives.
                               </p>
                            </div>
                         </div>
@@ -1029,7 +1034,7 @@ export default function SpendidCaseStudy() {
                               <ArrowLeft size={18} className="rotate-180" />
                            </Link>
                            <p className="text-xs font-bold text-text-secondary uppercase tracking-widest opacity-40">
-                              Thank you for reading the SPENDiD Case Study.
+                              Thank you for reading the Spendora Case Study.
                            </p>
                         </div>
                      </div>

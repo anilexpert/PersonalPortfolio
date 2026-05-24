@@ -14,7 +14,7 @@ import {
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
-export default function OasisNotesCaseStudy() {
+export default function OasisPadCaseStudy() {
    const fadeIn = {
       initial: { opacity: 0, y: 30 },
       whileInView: { opacity: 1, y: 0 },
@@ -34,8 +34,8 @@ export default function OasisNotesCaseStudy() {
          </div>
 
          <Head>
-            <title>OasisNotes | Case Study - Healthcare SaaS Platform</title>
-            <meta name="description" content="OasisNotes - Designing a scalable HIPAA-grade healthcare SaaS platform for behavioral health facilities." />
+            <title>OasisPad | Case Study - Healthcare SaaS Platform</title>
+            <meta name="description" content="OasisPad - Designing a scalable HIPAA-grade healthcare SaaS platform for behavioral health facilities." />
          </Head>
 
          <Navbar />
@@ -79,7 +79,7 @@ export default function OasisNotesCaseStudy() {
                            transition={{ delay: 0.1 }}
                            className="text-5xl md:text-[5rem] font-black italic tracking-tighter mb-8 leading-[0.9] text-[#282360]"
                         >
-                           OasisNotes
+                           OasisPad
                         </motion.h1>
 
                         <motion.p

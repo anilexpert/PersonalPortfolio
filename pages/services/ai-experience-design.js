@@ -132,17 +132,17 @@ export default function AIDesignService() {
                 className="relative aspect-square md:aspect-[4/3] lg:aspect-square group"
               >
                 <div className="relative w-full h-full">
-                  {/* Market Prophet (Back) */}
+                  {/* MarketVisionAI (Back) */}
                   <div className="absolute top-[5%] right-[5%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-0">
-                    <Image src="/images/market-rophet.png" alt="Market Prophet" fill className="object-cover" />
+                    <Image src="/images/marketvisionai.png" alt="MarketVisionAI" fill className="object-cover" />
                   </div>
                   {/* MRI Logic (Middle) */}
                   <div className="absolute top-[20%] left-[5%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-10">
                     <Image src="/images/pulse-grid.png" alt="MRI Logic" fill className="object-cover" />
                   </div>
-                  {/* SPENDiD (Front) */}
+                  {/* Spendora (Front) */}
                   <div className="absolute bottom-[5%] right-[10%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl rotate-1 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110 z-20">
-                    <Image src="/images/spendid.png" alt="SPENDiD" fill className="object-cover" />
+                    <Image src="/images/spendora.png" alt="Spendora" fill className="object-cover" />
                   </div>
 
                   {/* Floating Tags */}

@@ -2,8 +2,8 @@
   {
     "id": 1,
     "number": "01",
-    "title": "ALCD System",
-    "slug": "alcd",
+    "title": "Carenova System",
+    "slug": "carenova",
     "image": "/Thumnail.png",
     "tags": [
       "Enterprise SaaS",
@@ -20,8 +20,8 @@
   {
     "id": 2,
     "number": "02",
-    "title": "OasisNotes",
-    "slug": "oasisnotes",
+    "title": "OasisPad",
+    "slug": "oasispad",
     "image": "/Thumnail.png",
     "tags": [
       "Healthcare SaaS",
@@ -38,8 +38,8 @@
   {
     "id": 3,
     "number": "03",
-    "title": "SPENDiD",
-    "slug": "spendid",
+    "title": "Spendora",
+    "slug": "spendora",
     "image": "/Thumnail.png",
     "tags": [
       "Fintech",

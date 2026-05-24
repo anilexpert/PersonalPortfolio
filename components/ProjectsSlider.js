@@ -9,30 +9,30 @@ import { ArrowUpRight } from 'lucide-react';
 // Project data
 const projects = [
   {
-    title: 'SPENDiD™',
+    title: 'Spendora™',
     subtitle: 'AI‑Powered Smart Expense',
-    img: '/images/spendid.png',
+    img: '/images/spendora.png',
     description:
       'A full‑stack SaaS platform that streamlines expense reporting with AI‑driven categorisation and real‑time analytics.',
   },
   {
-    title: 'ALCD Systems™',
+    title: 'Carenova™',
     subtitle: 'Facility & Compliance',
     img: '/images/carevanata.png',
     description:
       'Enterprise‑grade solution for facility operations, allowing automated compliance checks and resource scheduling.',
   },
   {
-    title: 'OasisNotes™',
+    title: 'OasisPad™',
     subtitle: 'Smart Knowledge Workspace',
-    img: '/images/oasis-notes.png',
+    img: '/images/oasispad.png',
     description:
       'A collaborative note‑taking environment with AI‑suggested tagging and contextual linking.',
   },
   {
-    title: 'Ticket‑IT™',
+    title: 'TicketStack™',
     subtitle: 'Retail Ticketing Redesign',
-    img: '/images/ticketit.png',
+    img: '/images/ticketstack.png',
     description:
       'Revamped ticketing UI for retail stores, delivering frictionless checkout and analytics.',
   },

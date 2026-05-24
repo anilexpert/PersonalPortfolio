@@ -111,9 +111,9 @@ const Hero = () => {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
                   {[
-                    { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/alcd" },
-                    { img: "/images/spendid.png", name: "SPENDiD", href: "/case-studies/spendid" },
-                    { img: "/images/oasis-notes.png", name: "OasisNotes", href: "/case-studies/oasisnotes" },
+                    { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/carenova" },
+                    { img: "/images/spendora.png", name: "Spendora", href: "/case-studies/spendora" },
+                    { img: "/images/oasispad.png", name: "OasisPad", href: "/case-studies/oasispad" },
                     { img: "/images/pulse-grid.png", name: "PulseGrid", href: "/case-studies" },
                   ].map((project, i) => (
                     <Link

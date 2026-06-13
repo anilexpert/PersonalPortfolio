@@ -69,5 +69,41 @@
     "accentBorder": "border-[#0D63CC]/20",
     "accentText": "text-[#0D63CC]",
     "accentDot": "bg-[#00DA99]"
+  },
+  {
+    "id": 5,
+    "number": "05",
+    "title": "TicketStack",
+    "slug": "ticketstack",
+    "image": "/images/ticketstack.png",
+    "tags": [
+      "Retail Ticketing",
+      "B2B SaaS",
+      "Dashboard"
+    ],
+    "description": "A modern retail ticketing platform enabling businesses to create, distribute, manage, sell, and track tickets across multiple sales channels.",
+    "accent": "from-pink-500 to-indigo-600",
+    "accentLight": "from-pink-500/10 to-indigo-600/10",
+    "accentBorder": "border-indigo-500/20",
+    "accentText": "text-indigo-600",
+    "accentDot": "bg-pink-500"
+  },
+  {
+    "id": 6,
+    "number": "06",
+    "title": "MRI Logic",
+    "slug": "mri-logic",
+    "image": "/images/pulse-grid.png",
+    "tags": [
+      "Healthcare Technology",
+      "AI Platform",
+      "Medical Device"
+    ],
+    "description": "An AI-assisted medical device validation platform that streamlines regulatory compliance, clinical validation, risk assessment, and testing workflows for MRI-compatible devices.",
+    "accent": "from-[#06B6D4] to-[#0EA5E9]",
+    "accentLight": "from-[#06B6D4]/10 to-[#0EA5E9]/10",
+    "accentBorder": "border-[#06B6D4]/20",
+    "accentText": "text-[#06B6D4]",
+    "accentDot": "bg-[#06B6D4]"
   }
 ]

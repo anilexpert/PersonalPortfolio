@@ -5,11 +5,13 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 // Project data
 const projects = [
   {
     title: 'Spendora™',
+    slug: 'spendora',
     subtitle: 'AI‑Powered Smart Expense',
     img: '/images/spendora.png',
     description:
@@ -17,6 +19,7 @@ const projects = [
   },
   {
     title: 'Carenova™',
+    slug: 'carenova',
     subtitle: 'Facility & Compliance',
     img: '/images/carevanata.png',
     description:
@@ -24,6 +27,7 @@ const projects = [
   },
   {
     title: 'OasisPad™',
+    slug: 'oasispad',
     subtitle: 'Smart Knowledge Workspace',
     img: '/images/oasispad.png',
     description:
@@ -31,10 +35,27 @@ const projects = [
   },
   {
     title: 'TicketStack™',
+    slug: 'ticketstack',
     subtitle: 'Retail Ticketing Redesign',
     img: '/images/ticketstack.png',
     description:
       'Revamped ticketing UI for retail stores, delivering frictionless checkout and analytics.',
+  },
+  {
+    title: 'MarketVisionAI™',
+    slug: 'marketvisionai',
+    subtitle: 'AI Market Intelligence',
+    img: '/images/marketvisionai.png',
+    description:
+      'AI-powered market intelligence platform that continuously analyzes global market signals and proactively recommends strategic business opportunities.',
+  },
+  {
+    title: 'MRI Logic™',
+    slug: 'mri-logic',
+    subtitle: 'Medical Device Validation',
+    img: '/images/pulse-grid.png',
+    description:
+      'AI-assisted medical device validation platform accelerating MRI compliance, risk analysis, and clinical validation workflows.',
   },
 ];
 
@@ -207,6 +228,13 @@ export default function ProjectsSlider() {
                         <p className="text-white/95 text-[12px] md:text-[14px] leading-relaxed text-center font-normal max-w-[90%]">
                           {proj.description}
                         </p>
+                        <div className="mt-6">
+                          <Link href={`/case-studies/${proj.slug}`}>
+                            <button className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full text-[13px] font-medium transition-all backdrop-blur-md flex items-center gap-2">
+                              Read Case Study <ArrowUpRight size={16} />
+                            </button>
+                          </Link>
+                        </div>
                       </div>
 
                     </motion.div>

@@ -41,7 +41,7 @@ export const projects: Project[] = [
     accentColor: "#8B5CF6" // Purple
   },
   {
-    slug: "ticketstack-retail",
+    slug: "ticketstack",
     title: "RETAIL TICKETING EXPERIENCE REDESIGN",
     category: "TicketStack™",
     image: "/images/ticketstack.png",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     accentColor: "#F43F5E" // Rose/Pink
   },
   {
-    slug: "marketvisionai-intelligence",
+    slug: "marketvisionai",
     title: "AI-POWERED MARKET INTELLIGENCE PLATFORM",
     category: "MarketVisionAI™",
     image: "/images/marketvisionai.png",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     accentColor: "#10B981" // Emerald
   },
   {
-    slug: "mri-logic-validation",
+    slug: "mri-logic",
     title: "AI-ASSISTED MEDICAL DEVICE VALIDATION TOOL",
     category: "MRI Logic™",
     image: "/images/pulse-grid.png",

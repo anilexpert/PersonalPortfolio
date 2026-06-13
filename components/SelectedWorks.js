@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
   {
+    slug: "spendora",
     id: "01",
     name: "Spendora™",
     category: "AI-POWERED SMART EXPENSE ECOSYSTEM",
@@ -18,6 +20,7 @@ const projects = [
   },
   {
     id: "02",
+    slug: "carenova",
     name: "Carevanta Systems™",
     category: "FACILITY & COMPLIANCE PLATFORM",
     color: "#0D63CC",
@@ -30,6 +33,7 @@ const projects = [
   },
   {
     id: "03",
+    slug: "oasispad",
     name: "OasisPad™",
     category: "SMART KNOWLEDGE & PRODUCTIVITY",
     color: "#6B67CC",
@@ -42,6 +46,7 @@ const projects = [
   },
   {
     id: "04",
+    slug: "ticketstack",
     name: "TicketStack™",
     category: "RETAIL TICKETING REDESIGN",
     color: "#F43F5E",
@@ -54,6 +59,7 @@ const projects = [
   },
   {
     id: "05",
+    slug: "marketvisionai",
     name: "MarketVisionAI™",
     category: "AI-POWERED MARKET INTELLIGENCE",
     color: "#F59E0B",
@@ -66,6 +72,7 @@ const projects = [
   },
   {
     id: "06",
+    slug: "carenova",
     name: "PulseGrid™",
     category: "SAAS ANALYTICS & BI PLATFORM",
     color: "#8B5CF6",
@@ -74,6 +81,19 @@ const projects = [
     leftMain: "SAAS ANALYTICS",
     rightSub: "CONVERSION TRACKING",
     rightMain: "EXECUTIVE REPORTING",
+    image: "/images/pulse-grid.png"
+  },
+  {
+    id: "07",
+    slug: "mri-logic",
+    name: "MRI Logic™",
+    category: "AI-ASSISTED DEVICE VALIDATION",
+    color: "#06B6D4",
+    dotColor: "#06B6D4",
+    leftSub: "HEALTHCARE TECH",
+    leftMain: "MRI VALIDATION",
+    rightSub: "AI COMPLIANCE",
+    rightMain: "MEDTECH PLATFORM",
     image: "/images/pulse-grid.png"
   }
 ];
@@ -116,14 +136,16 @@ const SelectedWorks = () => {
             </h2>
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-6 py-3 bg-gradient-to-r from-secondary to-primary rounded-full text-[16px] font-semibold flex items-center gap-3 text-white shadow-[0_8px_24px_rgba(13,99,204,0.15)] border border-white/20"
-          >
-            <span>View All Projects</span>
-            <ArrowUpRight size={18} className="stroke-[2]" />
-          </motion.button>
+          <Link href="/case-studies" passHref legacyBehavior>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-6 py-3 bg-gradient-to-r from-secondary to-primary rounded-full text-[16px] font-semibold flex items-center gap-3 text-white shadow-[0_8px_24px_rgba(13,99,204,0.15)] border border-white/20 cursor-pointer"
+            >
+              <span>View All Projects</span>
+              <ArrowUpRight size={18} className="stroke-[2]" />
+            </motion.button>
+          </Link>
         </div>
 
         {/* ── MAIN CONTENT AREA ── */}
@@ -223,18 +245,20 @@ const SelectedWorks = () => {
                     </h3>
                   </div>
 
-                  <motion.div 
-                    whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-4 group cursor-pointer mb-2"
-                  >
-                    <span className="text-[16px] font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">View Project</span>
-                    <motion.div
-                      whileHover={{ backgroundColor: "var(--electric-blue)", color: "#fff" }}
-                      className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center transition-all group-hover:shadow-sm"
+                  <Link href={`/case-studies/${currentProject.slug}`} passHref>
+                    <motion.div 
+                      whileHover={{ scale: 1.02 }}
+                      className="flex items-center gap-4 group cursor-pointer mb-2"
                     >
-                      <ArrowUpRight size={24} className="stroke-[2]" />
+                      <span className="text-[16px] font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">View Project</span>
+                      <motion.div
+                        whileHover={{ backgroundColor: "var(--electric-blue)", color: "#fff" }}
+                        className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center transition-all group-hover:shadow-sm"
+                      >
+                        <ArrowUpRight size={24} className="stroke-[2]" />
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>

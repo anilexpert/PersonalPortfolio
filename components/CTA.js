@@ -22,7 +22,7 @@ const CTA = () => {
 
           <div className="relative flex items-center justify-center w-full px-4 lg:px-20">
             {/* Desktop View Work Button (Left) */}
-            <Link href="/about" passHref legacyBehavior>
+            <Link href="/contact" passHref legacyBehavior>
               <motion.a
                 whileHover={{ scale: 1.05, rotate: -10, y: -5 }}
                 className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
@@ -54,7 +54,7 @@ const CTA = () => {
           </div>
 
           <div className="flex xl:hidden flex-col sm:flex-row justify-center items-stretch sm:items-center gap-4 sm:gap-6 mt-8 sm:mt-12 w-full max-w-sm sm:max-w-none mx-auto">
-            <Link href="/about" passHref legacyBehavior>
+            <Link href="/contact" passHref legacyBehavior>
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 className="bg-gradient-to-br from-primary to-secondary px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-3 text-white font-bold shadow-xl shadow-primary/20 group"

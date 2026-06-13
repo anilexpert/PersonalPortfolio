@@ -109,12 +109,14 @@ const Hero = () => {
                     VIEW ALL <ArrowUpRight size={14} />
                   </Link>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 md:gap-4">
                   {[
                     { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/carenova" },
                     { img: "/images/spendora.png", name: "Spendora", href: "/case-studies/spendora" },
                     { img: "/images/oasispad.png", name: "OasisPad", href: "/case-studies/oasispad" },
                     { img: "/images/ticketstack.png", name: "TicketStack", href: "/case-studies/ticketstack" },
+                    { img: "/images/marketvisionai.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
+                    { img: "/images/pulse-grid.png", name: "MRI Logic", href: "/case-studies/mri-logic" },
                   ].map((project, i) => (
                     <Link
                       key={i}

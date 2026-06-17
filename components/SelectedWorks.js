@@ -95,6 +95,19 @@ const projects = [
     rightSub: "AI COMPLIANCE",
     rightMain: "MEDTECH PLATFORM",
     image: "/images/pulse-grid.png"
+  },
+  {
+    id: "08",
+    slug: "carevation",
+    name: "Carevation™",
+    category: "SMART CAREGIVING PLATFORM",
+    color: "#00DA99",
+    dotColor: "#00DA99",
+    leftSub: "HEALTHCARE TECH",
+    leftMain: "CARE COORDINATION",
+    rightSub: "FAMILY CARE",
+    rightMain: "MOBILE APP",
+    image: "/images/Carevation-Card-Folio.png"
   }
 ];
 
@@ -116,8 +129,8 @@ const SelectedWorks = () => {
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(rgba(0,218,153,0.9) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         {/* Ambient Glows for Light Mode */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(0,218,153,0.06)_0%,transparent_70%)] blur-[100px]" />
-          <div className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(13,99,204,0.06)_0%,transparent_70%)] blur-[100px]" />
+          <div className="absolute -top-[15%] -left-[15%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(0,218,153,0.06)_0%,transparent_70%)] blur-[100px]" />
+          <div className="absolute -bottom-[15%] -right-[15%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(13,99,204,0.06)_0%,transparent_70%)] blur-[100px]" />
         </div>
       </div>
 

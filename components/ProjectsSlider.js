@@ -57,6 +57,14 @@ const projects = [
     description:
       'AI-assisted medical device validation platform accelerating MRI compliance, risk analysis, and clinical validation workflows.',
   },
+  {
+    title: 'Carevation™',
+    slug: 'carevation',
+    subtitle: 'Smart Caregiving Platform',
+    img: '/images/Carevation-Card-Folio.png',
+    description:
+      'A mobile-first platform designed to help family caregivers organize responsibilities and coordinate care.',
+  },
 ];
 
 const AUTO_PLAY_MS = 5000;

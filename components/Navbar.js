@@ -1,7 +1,17 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, ChevronDown } from 'lucide-react';
+import { projects } from '@/data/projects';
+
+const servicesList = [
+  { name: 'AI-Driven Product Experience', href: '/services/ai-experience-design' },
+  { name: 'Scalable SaaS Platform', href: '/services/saas-platform-design' },
+  { name: 'Product Strategy & Architecture', href: '/services/product-strategy' },
+  { name: 'Data Intelligence & UX', href: '/services/data-intelligence' },
+  { name: 'Design Systems & UI Engineering', href: '/services/design-systems' },
+  { name: 'Enterprise Workflow Optimization', href: '/services/enterprise-workflow' }
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,17 +61,59 @@ export default function Navbar() {
 
         {/* Center: Links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative group"
-            >
-              {link.name}
-              {/* Mint underline glow */}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary shadow-[0_0_8px_var(--primary-mint)] transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.name === 'Services' || link.name === 'Case Studies') {
+              const isServices = link.name === 'Services';
+              const dropdownItems = isServices
+                ? servicesList
+                : projects.map((p) => ({
+                    name: p.category,
+                    href: `/case-studies/${p.slug}`,
+                  }));
+
+              return (
+                <div key={link.name} className="relative group h-full flex items-center">
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-1 text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative py-2"
+                  >
+                    {link.name}
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    {/* Mint underline glow */}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary shadow-[0_0_8px_var(--primary-mint)] transition-all duration-300 group-hover:w-full" />
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  <div className="absolute top-full left-0 pt-4 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                    <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-xl rounded-2xl overflow-hidden py-2 flex flex-col">
+                      {dropdownItems.map((item, idx) => (
+                        <Link
+                          key={idx}
+                          href={item.href}
+                          className="px-5 py-3 text-[14px] font-medium text-text-secondary hover:text-primary hover:bg-gray-50/80 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <div key={link.name} className="relative h-full flex items-center group">
+                <Link
+                  href={link.href}
+                  className="text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative py-2"
+                >
+                  {link.name}
+                  {/* Mint underline glow */}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary shadow-[0_0_8px_var(--primary-mint)] transition-all duration-300 group-hover:w-full" />
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         {/* Right: CTA */}

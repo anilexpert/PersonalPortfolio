@@ -61,14 +61,14 @@ export const projects: Project[] = [
     accentColor: "#F59E0B" // Amber
   },
   {
-    slug: "carevation-healthcare",
+    slug: "carevation",
     title: "SMART CAREGIVING & COORDINATION PLATFORM",
     category: "Carevation™",
     image: "/images/Carevation-Card-Folio.png",
     description: "Streamlining care coordination and patient monitoring for healthcare teams.",
     results: "+60% Care Efficiency",
     tags: ["Healthcare", "UX Strategy"],
-    accentColor: "#10B981" // Emerald
+    accentColor: "#00DA99" // Mint
   },
   {
     slug: "mri-logic",

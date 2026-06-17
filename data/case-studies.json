@@ -105,5 +105,23 @@
     "accentBorder": "border-[#06B6D4]/20",
     "accentText": "text-[#06B6D4]",
     "accentDot": "bg-[#06B6D4]"
+  },
+  {
+    "id": 7,
+    "number": "07",
+    "title": "Carevation",
+    "slug": "carevation",
+    "image": "/images/Carevation-Card-Folio.png",
+    "tags": [
+      "Healthcare",
+      "Mobile App",
+      "Caregiving"
+    ],
+    "description": "A mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, and manage health information.",
+    "accent": "from-[#00DA99] to-[#0D63CC]",
+    "accentLight": "from-[#00DA99]/10 to-[#0D63CC]/10",
+    "accentBorder": "border-[#00DA99]/20",
+    "accentText": "text-[#00DA99]",
+    "accentDot": "bg-[#00DA99]"
   }
 ]

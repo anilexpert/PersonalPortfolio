@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
    ArrowLeft, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
    Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
    Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
    PieChart, Handshake, MessageCircle, User, BookOpen, Calendar, BookOpenCheck,
-   GraduationCap, Bell, Server, Shuffle, Award
+   GraduationCap, Bell, Server, Shuffle, Award, BarChart2, ClipboardList,
+   GitBranch, Layers, Monitor, Tablet, UserCheck, Building2, Star
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -46,7 +46,8 @@ export default function SuperCampusCaseStudy() {
    return (
       <>
          <Head>
-            <title>SuperCampus™ | Case Study - School Management System</title>
+            <title>SuperSchool™ | Case Study — End-to-End School Management Ecosystem</title>
+            <meta name="description" content="SuperSchool™ is a comprehensive multi-role school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem." />
          </Head>
 
          <Navbar />
@@ -87,7 +88,7 @@ export default function SuperCampusCaseStudy() {
 
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
-               {/* HERO SECTION */}
+               {/* ── 2. HERO SECTION ───────────────────────────────────────────────────────── */}
                <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
@@ -100,14 +101,19 @@ export default function SuperCampusCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        SuperCampus™
+                        SuperSchool™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        School <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Management & Communication Platform</span>
+                        End-to-End <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Management Ecosystem</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        A centralized school management platform designed to streamline academic operations, improve communication, and enhance visibility across administrators, teachers, students, and parents.
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base text-text-secondary max-w-3xl leading-relaxed font-normal mb-4">
+                        A comprehensive school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem — digitizing academic operations, attendance, assessments, communication, and CRM workflows.
                      </motion.p>
+                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="flex flex-wrap gap-2">
+                        {["Product Strategy", "UX Research", "Information Architecture", "Multi-Role Design", "Mobile & Web"].map((tag, i) => (
+                           <span key={i} className="text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-[#0D63CC]/8 border border-[#0D63CC]/15 text-[#0D63CC]">{tag}</span>
+                        ))}
+                     </motion.div>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
                      <div>
@@ -123,24 +129,24 @@ export default function SuperCampusCaseStudy() {
                         <p className="font-bold text-sm text-text-primary">Web & Mobile App</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
-                        <p className="font-bold text-sm text-text-primary">2026</p>
+                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Industry</p>
+                        <p className="font-bold text-sm text-text-primary">Education Technology</p>
                      </div>
                   </motion.div>
                </section>
 
-               {/* MAIN HERO IMAGE */}
+               {/* ── 3. MAIN HERO IMAGE ────────────────────────────────────────────────────── */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
-                        style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
+                        style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
                      />
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="SuperCampus Platform Dashboard" glowCls="bg-[#00DA99]" textCls="text-white" icon={GraduationCap} />
+                     <PremiumPlaceholder aspect="aspect-[21/9]" label="SuperSchool Platform Dashboard" glowCls="bg-[#0D63CC]" textCls="text-white" icon={GraduationCap} />
                   </div>
                </motion.section>
 
-               {/* OVERVIEW / CHALLENGES / SOLUTION */}
+               {/* ── 4. OVERVIEW / PROBLEM / SOLUTION ─────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
@@ -148,34 +154,74 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           SuperCampus™ integrates multiple workflows such as attendance, assessments, communication, scheduling, and student tracking into a unified digital ecosystem.
+                           SuperSchool™ is a comprehensive school management platform designed to connect administrators, teachers, students, parents, and support staff within a unified digital ecosystem.
                         </p>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           The <span className="font-bold text-text-primary">Primary Goal</span> is to create a scalable, easy-to-use system that simplifies school operations while improving engagement between institutions and families.
+                           Unlike traditional school systems where information is fragmented across multiple tools, SuperSchool centralizes all workflows — attendance, assessments, communication, tasks, media, CRM operations, and reporting — into a single platform, enabling better visibility, operational efficiency, and stakeholder engagement.
                         </p>
                      </div>
                   </div>
 
                   <GlowDivider />
 
+                  {/* Platform Scope */}
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Problem Statement</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Platform Scope</h3>
+                     </div>
+                     <div className="lg:col-span-9">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                           {[
+                              { icon: Monitor, label: "Super Admin Portal", desc: "Full platform management & analytics", color: "#0D63CC" },
+                              { icon: Settings, label: "School Admin Portal", desc: "School operations & reporting", color: "#00DA99" },
+                              { icon: Smartphone, label: "Teacher Mobile App", desc: "Attendance, tasks & assessments", color: "#F59E0B" },
+                              { icon: Users, label: "Parent & Student App", desc: "Progress, communication & updates", color: "#8B5CF6" },
+                           ].map((item, i) => (
+                              <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-br overflow-hidden transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${item.color}25, transparent)` }}>
+                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 h-full flex flex-col gap-3 border border-slate-100 group-hover:bg-white/95 transition-all duration-500">
+                                    <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${item.color}15`, color: item.color }}>
+                                       <item.icon size={20} strokeWidth={1.8} />
+                                    </div>
+                                    <div>
+                                       <p className="font-bold text-[13px] text-text-primary">{item.label}</p>
+                                       <p className="text-xs text-text-secondary font-medium mt-0.5">{item.desc}</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                        <p className="mt-6 text-base text-text-secondary font-medium leading-relaxed">
+                           <span className="font-bold text-text-primary">Project Vision:</span> To create a connected educational ecosystem where every stakeholder can access the right information at the right time while reducing administrative burden and improving educational outcomes.
+                        </p>
+                     </div>
+                  </div>
+
+                  <GlowDivider />
+
+                  {/* The Problem */}
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-3">
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Problem</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Traditional school systems often suffer from fragmented tools, manual overhead, and low student engagement due to disconnected workflows. This leads to inefficiencies, delays, and poor user experiences across all roles.
+                           Educational institutions often struggle with fragmented tools, manual administrative overhead, and low stakeholder engagement — causing inefficiencies, delays, and poor experiences across all roles.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-4">
                            {[
-                              "Fragmented tools for attendance & exams",
-                              "Lack of real-time visibility for parents",
-                              "Manual administrative overhead",
-                              "Poor coordination with administration"
+                              { title: "Administrative Complexity", desc: "Records, attendance, assessments & reports managed across disconnected systems." },
+                              { title: "Lack of Parent Visibility", desc: "Parents receive limited updates on attendance, performance & school activities." },
+                              { title: "Teacher Workload", desc: "Teachers spend significant time on administrative tasks instead of education." },
+                              { title: "Student Engagement", desc: "Students lack a centralized place for assignments, notes & schedules." },
+                              { title: "Communication Gaps", desc: "Information exchange between school, teachers, students & parents is fragmented." },
+                              { title: "Manual Reporting", desc: "Reports are generated manually, causing delays and inaccuracies." },
                            ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
-                                 <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)]" />
-                                 <span className="text-sm font-bold text-text-primary">{item}</span>
+                              <div key={idx} className="flex items-start gap-3 p-4 glass-card rounded-2xl group hover:border-rose-200 transition-all duration-300 border border-transparent">
+                                 <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)] mt-2 flex-shrink-0" />
+                                 <div>
+                                    <p className="text-sm font-bold text-text-primary mb-0.5">{item.title}</p>
+                                    <p className="text-xs text-text-secondary font-medium">{item.desc}</p>
+                                 </div>
                               </div>
                            ))}
                         </div>
@@ -184,31 +230,45 @@ export default function SuperCampusCaseStudy() {
 
                   <GlowDivider />
 
+                  {/* Product Goals */}
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Objectives</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Product Goals</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
-                           {[
-                              "Centralize all operations into one system",
-                              "Improve communication with parents",
-                              "Real-time tracking of student performance",
-                              "Reduce manual workload for admins",
-                              "Provide role-based, intuitive experiences",
-                              "Ensure scalability across schools"
-                           ].map((item, idx) => (
-                              <li key={idx} className="flex items-start gap-3">
-                                 <CheckCircle2 className="w-6 h-6 text-[#00DA99] shrink-0" />
-                                 <span className="text-lg font-medium text-text-secondary">{item}</span>
-                              </li>
-                           ))}
-                        </ul>
+                        <div className="grid sm:grid-cols-2 gap-8">
+                           <div>
+                              <h4 className="font-bold text-base text-text-primary mb-4 flex items-center gap-2">
+                                 <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Business Goals
+                              </h4>
+                              <ul className="space-y-3">
+                                 {["Increase operational efficiency", "Improve stakeholder engagement", "Reduce administrative overhead", "Enable scalable school operations", "Improve retention and satisfaction"].map((g, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                       <CheckCircle2 className="w-5 h-5 text-[#0D63CC] shrink-0 mt-0.5" />
+                                       <span className="text-sm font-medium text-text-secondary">{g}</span>
+                                    </li>
+                                 ))}
+                              </ul>
+                           </div>
+                           <div>
+                              <h4 className="font-bold text-base text-text-primary mb-4 flex items-center gap-2">
+                                 <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> User Goals
+                              </h4>
+                              <ul className="space-y-3">
+                                 {["Easy access to information", "Real-time updates", "Faster communication", "Better performance tracking", "Simplified workflows"].map((g, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                       <CheckCircle2 className="w-5 h-5 text-[#00DA99] shrink-0 mt-0.5" />
+                                       <span className="text-sm font-medium text-text-secondary">{g}</span>
+                                    </li>
+                                 ))}
+                              </ul>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </section>
 
-               {/* ROLES & ACCESS */}
+               {/* ── 5. TARGET USERS / ROLES ───────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
@@ -216,121 +276,93 @@ export default function SuperCampusCaseStudy() {
                            Access
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User Roles & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Access</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The system is designed around four core user roles, each with tailored experiences.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Target Users & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Roles</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The system is designed around multi-role user groups, each with tailored experiences and access levels.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {[
-                        { title: "Super Admin", icon: Settings, desc: "Manages schools, users, permissions. Oversees analytics & data.", color: "#0D63CC" },
-                        { title: "Teacher", icon: BookOpenCheck, desc: "Marks attendance, assigns tasks, shares media, tracks progress.", color: "#8B5CF6" },
-                        { title: "Student", icon: GraduationCap, desc: "Views assignments, tracks performance, accesses learning materials.", color: "#F59E0B" },
-                        { title: "Parent", icon: Users, desc: "Monitors performance, receives updates, communicates with teachers.", color: "#10B981" }
-                     ].map((role, i) => (
-                        <div key={i} className="glass-card p-6 md:p-8 rounded-2xl border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all hover:-translate-y-2 group">
-                           <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style={{ backgroundColor: `${role.color}15`, color: role.color }}>
-                              <role.icon size={28} />
+                  <div className="grid md:grid-cols-2 gap-8 mb-12">
+                     {/* Primary Users */}
+                     <div className="glass-card rounded-[32px] p-8 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/30 transition-all duration-500 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/8 blur-[60px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
+                           <div className="w-8 h-8 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center">
+                              <Star size={16} className="text-[#0D63CC]" />
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3">{role.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium">{role.desc}</p>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* DESIGN ITERATIONS / PROCESS (Instead of UX Process) */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-20 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Process
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Iterations & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Improvements</span></h2>
-                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
-                        A systematic approach to solving complex educational administration challenges through iterative refinement.
-                     </p>
-                  </div>
-
-                  <div className="relative max-w-6xl mx-auto px-4">
-                     <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
-                        <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
-                           <path d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40" stroke="#0D63CC" strokeWidth="2" strokeDasharray="8 8" className="animate-dash" />
-                        </svg>
-                     </div>
-
-                     <div className="hidden lg:flex items-start justify-between relative z-10">
-                        {[
-                           { title: "Simplified Layouts", desc: "Refined dashboard layouts to focus on core metrics.", icon: Layout, type: "dashed" },
-                           { title: "Reduced Density", desc: "Managed information overload via progressive disclosure.", icon: Server, type: "solid-light" },
-                           { title: "Hierarchy", desc: "Improved navigation hierarchy for quick access.", icon: Shuffle, type: "solid-light" },
-                           { title: "Mobile UX", desc: "Enhanced mobile usability for Students and Parents.", icon: Smartphone, type: "solid-dark" }
-                        ].map((step, i) => (
-                           <div key={i} className={`flex flex-col items-center w-56 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
-                              <motion.div {...fadeIn} transition={{ delay: i * 0.1 }} className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
-                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
-                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                                 hover:scale-110 hover:shadow-2xl
-                              `}>
-                                 <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
-                              </motion.div>
-                              <h4 className="text-sm font-bold text-text-primary mb-2">{step.title}</h4>
-                              <p className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[180px]">{step.desc}</p>
-                           </div>
-                        ))}
-                     </div>
-                     
-                     <div className="lg:hidden space-y-16">
-                        {[
-                           { title: "Simplified Layouts", desc: "Refined dashboard layouts to focus on core metrics.", icon: Layout, type: "dashed" },
-                           { title: "Reduced Density", desc: "Managed information overload via progressive disclosure.", icon: Server, type: "solid-light" },
-                           { title: "Hierarchy", desc: "Improved navigation hierarchy for quick access.", icon: Shuffle, type: "solid-light" },
-                           { title: "Mobile UX", desc: "Enhanced mobile usability for Students and Parents.", icon: Smartphone, type: "solid-dark" }
-                        ].map((step, i) => (
-                           <div key={i} className="flex flex-col items-center relative">
-                              <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center 
-                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
-                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                              `}>
-                                 <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                           Primary Users
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
+                           {[
+                              { icon: Building2, label: "School Owners", color: "#0D63CC" },
+                              { icon: Settings, label: "Administrators", color: "#0D63CC" },
+                              { icon: UserCheck, label: "Principals", color: "#0D63CC" },
+                              { icon: BookOpenCheck, label: "Teachers", color: "#00DA99" },
+                              { icon: GraduationCap, label: "Students", color: "#F59E0B" },
+                              { icon: Users, label: "Parents", color: "#8B5CF6" },
+                           ].map((u, i) => (
+                              <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/60 border border-slate-100 group-hover:bg-white/80 transition-all duration-300">
+                                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${u.color}15`, color: u.color }}>
+                                    <u.icon size={16} strokeWidth={1.8} />
+                                 </div>
+                                 <span className="text-sm font-semibold text-text-primary">{u.label}</span>
                               </div>
-                              <h4 className="text-sm font-bold text-text-primary mb-2">{step.title}</h4>
-                              <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">{step.desc}</p>
-                              {i < 3 && <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />}
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Secondary Users */}
+                     <div className="glass-card rounded-[32px] p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/30 transition-all duration-500 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-[#00DA99]/8 blur-[60px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
+                           <div className="w-8 h-8 rounded-xl bg-[#00DA99]/10 flex items-center justify-center">
+                              <Users size={16} className="text-[#00DA99]" />
                            </div>
-                        ))}
+                           Secondary Users
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
+                           {[
+                              { icon: ClipboardList, label: "Academic Coordinators", color: "#00DA99" },
+                              { icon: Heart, label: "Counselors", color: "#00DA99" },
+                              { icon: Server, label: "Support Staff", color: "#00DA99" },
+                              { icon: BarChart2, label: "CRM Operators", color: "#00DA99" },
+                           ].map((u, i) => (
+                              <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/60 border border-slate-100 group-hover:bg-white/80 transition-all duration-300">
+                                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${u.color}15`, color: u.color }}>
+                                    <u.icon size={16} strokeWidth={1.8} />
+                                 </div>
+                                 <span className="text-sm font-semibold text-text-primary">{u.label}</span>
+                              </div>
+                           ))}
+                        </div>
                      </div>
                   </div>
                </section>
 
-               {/* KEY FEATURES GRID */}
+               {/* ── 6. KEY FEATURES / PLATFORM MODULES ───────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Capabilities
+                           Core Modules
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">High-fidelity modules creating a seamless operational experience.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Platform Features & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Modules</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">A comprehensive suite of tools designed to digitize every aspect of school operations across all stakeholder roles.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Dashboard System", desc: "Real-time overview, visual data summaries, and quick access.", color: "#00DA99" },
-                        { num: "02", title: "Attendance Mgmt", desc: "Daily tracking, historical records, and class-wise filters.", color: "#0D63CC" },
-                        { num: "03", title: "Tasks & Assignments", desc: "Task creation, submission tracking, and status indicators.", color: "#8B5CF6" },
-                        { num: "04", title: "Notes & Media", desc: "Upload materials, categorized content, and easy retrieval.", color: "#F59E0B" },
-                        { num: "05", title: "Calendar Sync", desc: "Academic schedules, events, deadlines, and reminders.", color: "#10B981" },
-                        { num: "06", title: "Assessments & Comm", desc: "Performance tracking and parent-teacher updates.", color: "#3B82F6" }
+                        { num: "01", title: "Attendance Management", desc: "Daily and monthly attendance tracking with analytics, reports, and automated notifications to parents.", color: "#0D63CC", icon: CheckSquare },
+                        { num: "02", title: "Assessment & Grading", desc: "Exams, assignments, grades, and performance reports — all in one structured assessment workflow.", color: "#00DA99", icon: ClipboardList },
+                        { num: "03", title: "Task & Assignment Hub", desc: "Create, submit, and review tasks with real-time progress tracking across classrooms.", color: "#8B5CF6", icon: BookOpen },
+                        { num: "04", title: "CRM & Admissions", desc: "Lead tracking, follow-up management, conversion analytics, and pipeline visibility for admissions.", color: "#F59E0B", icon: Handshake },
+                        { num: "05", title: "Communication Center", desc: "Announcements, notifications, and direct messaging between all platform stakeholders.", color: "#10B981", icon: MessageCircle },
+                        { num: "06", title: "Analytics & Reports", desc: "Student, teacher, and school-wide analytics with real-time insights and exportable reports.", color: "#0D63CC", icon: BarChart2 },
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-[#0D63CC]/10"
+                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden transition-all duration-500"
                         >
                            <div
                               className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -343,67 +375,90 @@ export default function SuperCampusCaseStudy() {
                               >
                                  {feature.num}
                               </div>
-                              <Layout size={20} className="text-text-secondary opacity-20" />
+                              <feature.icon size={20} className="text-text-secondary opacity-20" />
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
-
-                           <PremiumPlaceholder aspect="aspect-[4/3]" label={`${feature.title} UI`} glowCls={`bg-[${feature.color}]`} />
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{feature.desc}</p>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
-               {/* DESIGN SYSTEM & UX STRATEGY */}
+               {/* ── 7. UX RESEARCH ────────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
+                  <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Experience Strategy
+                           Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Design</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Research</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Conducted deep-dive research through stakeholder interviews, workflow analysis, and existing system audits.</p>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
-                     
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Design Principles
-                        </h4>
-                        <ul className="space-y-4">
-                           {["Clarity over complexity", "Consistency across roles", "Minimal cognitive load", "Action-first interfaces"].map((pt, i) => (
-                              <li key={i} className="flex items-center gap-3 text-sm font-medium text-text-secondary"><CheckCircle2 size={16} className="text-[#0D63CC]"/>{pt}</li>
-                           ))}
-                        </ul>
+                  {/* Research Methods */}
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
+                     <div className="lg:col-span-3">
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Research Methods</h3>
                      </div>
-
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Interaction Patterns
-                        </h4>
-                        <ul className="space-y-4">
-                           {["Card-based modular content", "Progressive disclosure", "Status indicators (pending, etc)", "Quick actions for tasks"].map((pt, i) => (
-                              <li key={i} className="flex items-center gap-3 text-sm font-medium text-text-secondary"><CheckCircle2 size={16} className="text-[#00DA99]"/>{pt}</li>
+                     <div className="lg:col-span-9">
+                        <div className="grid sm:grid-cols-3 gap-5">
+                           {[
+                              { icon: Users, title: "Stakeholder Interviews", desc: "Discussions with administrators, teachers, students & parents on pain points.", color: "#0D63CC" },
+                              { icon: Activity, title: "Workflow Analysis", desc: "Observed attendance, assessment, communication & activity tracking processes.", color: "#00DA99" },
+                              { icon: Search, title: "System Audit", desc: "Reviewed existing school management platforms to identify usability gaps.", color: "#F59E0B" },
+                           ].map((m, i) => (
+                              <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-br transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${m.color}20, transparent)` }}>
+                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 h-full border border-slate-100 group-hover:bg-white/95 transition-all">
+                                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${m.color}15`, color: m.color }}>
+                                       <m.icon size={20} strokeWidth={1.8} />
+                                    </div>
+                                    <h5 className="font-bold text-sm text-text-primary mb-2">{m.title}</h5>
+                                    <p className="text-xs text-text-secondary font-medium leading-relaxed">{m.desc}</p>
+                                 </div>
+                              </div>
                            ))}
-                        </ul>
+                        </div>
                      </div>
+                  </div>
 
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-rose-500 rounded-full" /> Visual System
-                        </h4>
-                        <ul className="space-y-4">
-                           {["Readable typography hierarchy", "Neutral base for dashboards", "Accent semantic colors", "Cards, Tables, Badges"].map((pt, i) => (
-                              <li key={i} className="flex items-center gap-3 text-sm font-medium text-text-secondary"><CheckCircle2 size={16} className="text-rose-500"/>{pt}</li>
+                  {/* Key Findings */}
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-3">
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Key Findings</h3>
+                     </div>
+                     <div className="lg:col-span-9">
+                        <div className="grid sm:grid-cols-2 gap-5">
+                           {[
+                              { role: "Administrators Need", items: ["Centralized visibility", "Operational reports", "School performance metrics", "User management controls"], color: "#0D63CC", icon: Settings },
+                              { role: "Teachers Need", items: ["Faster attendance marking", "Simplified task assignment", "Easy communication tools", "Assessment tracking"], color: "#00DA99", icon: BookOpenCheck },
+                              { role: "Parents Need", items: ["Child progress visibility", "Attendance monitoring", "Instant notifications", "Direct communication"], color: "#F59E0B", icon: Users },
+                              { role: "Students Need", items: ["Easy access to learning content", "Assignment management", "Assessment tracking", "School activity updates"], color: "#8B5CF6", icon: GraduationCap },
+                           ].map((f, i) => (
+                              <div key={i} className="glass-card p-6 rounded-2xl border-2 border-slate-100 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group">
+                                 <div className="absolute -top-10 -right-10 w-28 h-28 rounded-full blur-[40px] pointer-events-none opacity-15 transition-opacity duration-500 group-hover:opacity-30" style={{ backgroundColor: f.color }} />
+                                 <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${f.color}15`, color: f.color }}>
+                                       <f.icon size={18} strokeWidth={1.8} />
+                                    </div>
+                                    <h5 className="font-bold text-sm text-text-primary">{f.role}</h5>
+                                 </div>
+                                 <ul className="space-y-2">
+                                    {f.items.map((item, j) => (
+                                       <li key={j} className="flex items-center gap-2">
+                                          <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: f.color }} />
+                                          <span className="text-xs font-medium text-text-secondary">{item}</span>
+                                       </li>
+                                    ))}
+                                 </ul>
+                              </div>
                            ))}
-                        </ul>
+                        </div>
                      </div>
-
                   </div>
                </section>
 
-               {/* USER PERSONAS */}
+               {/* ── 8. USER PERSONAS ──────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
@@ -411,70 +466,92 @@ export default function SuperCampusCaseStudy() {
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        Four key personas were developed to guide design decisions and ensure each stakeholder's needs were addressed throughout the platform.
+                     </p>
                   </div>
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                      {[
                         {
-                           name: "Admin & Teacher",
-                           role: "School Operations",
-                           image: "/images/profile.png", // Generic placeholder
-                           bio: "Needs central control and quick input tools. Wants to manage school operations efficiently and track student progress without time-consuming reporting.",
-                           needs: ["Central control", "Analytics & Automation", "Quick input tools", "Clear insights"],
-                           pains: ["Manual processes", "Scattered tools", "Time-consuming reporting"],
+                           name: "School Administrator",
+                           role: "Persona 01 — Primary User",
+                           bio: "Manages daily school operations and needs centralized visibility across all departments. Frustrated by scattered systems and manual reporting that delay decision-making.",
+                           needs: ["Monitor operations", "Improve efficiency", "Track school performance"],
+                           pains: ["Manual reporting", "Scattered systems", "Delayed information"],
                            color: "#0D63CC"
                         },
                         {
-                           name: "Student & Parent",
-                           role: "Academic Consumers",
-                           image: "/images/profile.png", // Generic placeholder
-                           bio: "Needs real-time updates and a simple interface. Wants to stay organized, track learning, and monitor academic performance transparently.",
-                           needs: ["Simple, accessible UI", "Real-time updates", "Easy communication"],
-                           pains: ["Missed assignments", "Unclear schedules", "Lack of transparency"],
+                           name: "Classroom Teacher",
+                           role: "Persona 02 — Primary User",
+                           bio: "Manages multiple classrooms and spends too much time on administrative tasks. Needs faster tools for attendance, grading, and communication to focus on education.",
+                           needs: ["Manage classrooms efficiently", "Track student performance", "Reduce paperwork"],
+                           pains: ["Repetitive attendance work", "Multiple communication channels", "Manual grading"],
                            color: "#00DA99"
+                        },
+                        {
+                           name: "Parent",
+                           role: "Persona 03 — Primary User",
+                           bio: "Wants real-time visibility into their child's progress and activities. Currently receives fragmented updates and struggles to communicate effectively with teachers.",
+                           needs: ["Monitor child performance", "Stay informed", "Communicate easily"],
+                           pains: ["Lack of transparency", "Missed updates", "Delayed communication"],
+                           color: "#F59E0B"
+                        },
+                        {
+                           name: "Student",
+                           role: "Persona 04 — Primary User",
+                           bio: "Needs a single place to manage assignments, study materials, and schedules. Currently misses deadlines and struggles to stay organized across multiple tools.",
+                           needs: ["Stay organized", "Complete assignments", "Track progress"],
+                           pains: ["Missed deadlines", "Lost study materials", "Poor schedule visibility"],
+                           color: "#8B5CF6"
                         }
                      ].map((persona, idx) => (
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
                            <div
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                               style={{ backgroundColor: persona.color }}
                            />
-                           <div className="flex items-center gap-8 mb-12 relative z-10">
-                              <div className="w-20 h-20 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-white shadow-lg bg-slate-100 flex items-center justify-center">
-                                 <User size={40} className="text-slate-400" />
+                           <div className="flex items-center gap-6 mb-8 relative z-10">
+                              <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
+                                 <User size={28} style={{ color: persona.color }} strokeWidth={1.5} />
                               </div>
                               <div>
-                                 <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-medium text-secondary mt-2 opacity-80">{persona.role}</p>
+                                 <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                 <p className="text-xs font-medium text-secondary mt-1 opacity-80">{persona.role}</p>
                               </div>
                            </div>
 
-                           <p className="text-base text-gray-800 leading-relaxed mb-12 relative z-10 font-medium">
-                              "{persona.bio}"
+                           <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
+                              &ldquo;{persona.bio}&rdquo;
                            </p>
 
-                           <div className="space-y-6 relative z-10">
-                              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
-                                    <CheckCircle2 size={14} strokeWidth={3} /> Core Needs
+                           <div className="space-y-4 relative z-10">
+                              <div className="p-5 rounded-2xl bg-primary/5 border border-primary/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-3 flex items-center gap-2">
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
-                                 <div className="flex flex-wrap gap-3">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.needs.map((n, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">{n}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">
+                                          {n}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
-                              <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
-                                    <Activity size={14} strokeWidth={3} /> Critical Pain Points
+
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Pain Points
                                  </h5>
-                                 <div className="flex flex-wrap gap-3">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">{p}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                          {p}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
@@ -484,7 +561,333 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
-               {/* EMPATHY MAP */}
+               {/* ── 9. DESIGN APPROACH & PROCESS ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-20 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                           Process
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
+                        A systematic, user-centric approach to solving complex educational administration challenges through iterative refinement.
+                     </p>
+                  </div>
+
+                  <div className="relative max-w-6xl mx-auto px-4">
+                     <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
+                        <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
+                           <path d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40" stroke="#0D63CC" strokeWidth="2" strokeDasharray="8 8" className="animate-dash" />
+                        </svg>
+                     </div>
+
+                     {/* DESKTOP VIEW */}
+                     <div className="hidden lg:flex items-start justify-between relative z-10">
+                        {[
+                           { num: "01", title: "Empathize", desc: "Stakeholder interviews, workflow observation, system audits.", icon: Heart, type: "dashed" },
+                           { num: "02", title: "Define", desc: "User personas, problem definition & feature prioritization.", icon: Target, type: "dashed" },
+                           { num: "03", title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                           { num: "04", title: "Design", desc: "Wireframes, visual design system, multi-role UI.", icon: PenTool, type: "solid-light" },
+                           { num: "05", title: "Test", desc: "Usability testing, feedback loops, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                        ].map((step, i) => (
+                           <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
+                              <motion.div
+                                 {...fadeIn}
+                                 transition={{ delay: i * 0.1 }}
+                                 className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
+                                    ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                                    ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                                    ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                                    hover:scale-110 hover:shadow-2xl
+                                 `}
+                              >
+                                 <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                    {step.title}
+                                 </span>
+                              </motion.div>
+                              <motion.p {...fadeIn} transition={{ delay: i * 0.1 + 0.2 }} className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[140px]">
+                                 {step.desc}
+                              </motion.p>
+                              {i < 4 && (
+                                 <div className={`absolute top-16 -right-12 translate-x-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center pointer-events-none opacity-40
+                                    ${i % 2 === 0 ? 'rotate-[15deg] translate-y-4' : '-rotate-[15deg] -translate-y-4'}
+                                 `}>
+                                    <ArrowLeft size={18} className="text-slate-400 rotate-180" />
+                                 </div>
+                              )}
+                           </div>
+                        ))}
+                     </div>
+
+                     {/* MOBILE VIEW */}
+                     <div className="lg:hidden space-y-16">
+                        {[
+                           { title: "Empathize", desc: "Stakeholder interviews, workflow observation.", icon: Heart, type: "dashed" },
+                           { title: "Define", desc: "User personas, problem definition & prioritization.", icon: Target, type: "dashed" },
+                           { title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                           { title: "Design", desc: "Wireframes, visual design, multi-role UI.", icon: PenTool, type: "solid-light" },
+                           { title: "Test", desc: "Usability testing, feedback, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                        ].map((step, i) => (
+                           <div key={i} className="flex flex-col items-center relative">
+                              <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center
+                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                              `}>
+                                 <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                    {step.title}
+                                 </span>
+                              </div>
+                              <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">{step.desc}</p>
+                              {i < 4 && <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />}
+                           </div>
+                        ))}
+                     </div>
+                  </div>
+               </section>
+
+               {/* ── 10. INFORMATION ARCHITECTURE ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                           Architecture
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Architecture</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The SuperSchool ecosystem spans ten core modules, each serving distinct stakeholder workflows.</p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                     {[
+                        { title: "Dashboard", icon: BarChart2, items: ["Overview KPIs", "Quick Actions", "Notifications"], color: "#0D63CC" },
+                        { title: "Attendance", icon: CheckSquare, items: ["Daily Attendance", "Monthly Reports", "Analytics"], color: "#00DA99" },
+                        { title: "Assessment", icon: ClipboardList, items: ["Exams", "Assignments", "Grades & Reports"], color: "#8B5CF6" },
+                        { title: "Tasks", icon: CheckCircle2, items: ["Create", "Submit", "Review & Track"], color: "#F59E0B" },
+                        { title: "Notes & Media", icon: BookOpen, items: ["Subject Notes", "Photos & Videos", "Downloads"], color: "#10B981" },
+                        { title: "Calendar", icon: Calendar, items: ["Events", "Exams", "Holidays"], color: "#0D63CC" },
+                        { title: "CRM", icon: Handshake, items: ["Leads", "Admissions", "Conversions"], color: "#00DA99" },
+                        { title: "Communication", icon: MessageCircle, items: ["Announcements", "Notifications", "Messaging"], color: "#8B5CF6" },
+                        { title: "Reports", icon: FileText, items: ["Student Reports", "Teacher Reports", "Analytics"], color: "#F59E0B" },
+                        { title: "User Mgmt", icon: Users, items: ["Roles", "Permissions", "Access Control"], color: "#10B981" },
+                     ].map((mod, i) => (
+                        <motion.div
+                           key={i}
+                           {...fadeIn}
+                           transition={{ delay: i * 0.05 }}
+                           className="glass-card p-5 rounded-2xl border-2 border-slate-100 hover:-translate-y-1 transition-all duration-400 group relative overflow-hidden"
+                        >
+                           <div className="absolute -top-6 -right-6 w-16 h-16 rounded-full blur-[20px] opacity-20 pointer-events-none" style={{ backgroundColor: mod.color }} />
+                           <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ backgroundColor: `${mod.color}15`, color: mod.color }}>
+                              <mod.icon size={18} strokeWidth={1.8} />
+                           </div>
+                           <h5 className="font-bold text-sm text-text-primary mb-2">{mod.title}</h5>
+                           <ul className="space-y-1">
+                              {mod.items.map((item, j) => (
+                                 <li key={j} className="text-[11px] text-text-secondary font-medium flex items-center gap-1.5">
+                                    <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: mod.color }} />
+                                    {item}
+                                 </li>
+                              ))}
+                           </ul>
+                        </motion.div>
+                     ))}
+                  </div>
+               </section>
+
+               {/* ── 11. ROLE-BASED EXPERIENCE DESIGN ─────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                           Experience Design
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Role-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience Design</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Each role gets a tailored experience optimized for their specific workflow, context, and daily tasks.</p>
+                  </div>
+
+                  <div className="space-y-6">
+                     {[
+                        {
+                           role: "Super Admin Experience",
+                           platform: "Web Portal",
+                           focus: "Data-first dashboard design with KPI visualization, quick actions, role permissions & bulk operations.",
+                           modules: ["Dashboard Analytics", "User Management", "School Management", "Assessment Reports", "Attendance Analytics", "Communication Center", "CRM Operations", "Configuration Settings"],
+                           color: "#0D63CC",
+                           icon: Settings
+                        },
+                        {
+                           role: "Teacher Mobile Experience",
+                           platform: "Mobile App",
+                           focus: "Speed, reduced clicks, and classroom efficiency — designed for use in real-time classroom scenarios.",
+                           modules: ["Dashboard", "Attendance", "Assessments", "Tasks", "Notes", "Calendar", "Student Tracking"],
+                           color: "#00DA99",
+                           icon: BookOpenCheck
+                        },
+                        {
+                           role: "Parent Mobile Experience",
+                           platform: "Mobile App",
+                           focus: "Transparency, trust & real-time updates — parents stay informed without friction.",
+                           modules: ["Child Dashboard", "Attendance", "Assessments", "Tasks", "Notes", "Media", "Calendar"],
+                           color: "#F59E0B",
+                           icon: Users
+                        },
+                        {
+                           role: "Student Mobile Experience",
+                           platform: "Mobile App",
+                           focus: "Simplicity, motivation & engagement — students stay organized and on top of their academics.",
+                           modules: ["Dashboard", "Assessments", "Attendance", "Tasks", "Notes", "Media", "Calendar"],
+                           color: "#8B5CF6",
+                           icon: GraduationCap
+                        }
+                     ].map((exp, i) => (
+                        <motion.div key={i} {...fadeIn} className="glass-card rounded-[24px] p-6 md:p-8 border-2 border-slate-100 hover:border-[#0D63CC]/20 transition-all duration-500 group relative overflow-hidden">
+                           <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full blur-[60px] opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" style={{ backgroundColor: exp.color }} />
+                           <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
+                              <div className="flex items-center gap-4 flex-shrink-0">
+                                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${exp.color}15`, color: exp.color }}>
+                                    <exp.icon size={22} strokeWidth={1.8} />
+                                 </div>
+                                 <div>
+                                    <h4 className="font-bold text-lg text-text-primary">{exp.role}</h4>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full" style={{ backgroundColor: `${exp.color}15`, color: exp.color }}>{exp.platform}</span>
+                                 </div>
+                              </div>
+                              <p className="text-sm text-text-secondary font-medium leading-relaxed sm:ml-4 sm:border-l sm:border-slate-200 sm:pl-6">{exp.focus}</p>
+                           </div>
+                           <div className="flex flex-wrap gap-2">
+                              {exp.modules.map((mod, j) => (
+                                 <span key={j} className="text-[11px] font-semibold px-3 py-1.5 rounded-xl bg-white/60 border border-slate-200 text-text-secondary hover:border-slate-300 transition-colors">{mod}</span>
+                              ))}
+                           </div>
+                        </motion.div>
+                     ))}
+                  </div>
+               </section>
+
+               {/* ── 12. DESIGN SYSTEM ────────────────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                           Visual Identity
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Visuals</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
+                     </p>
+                  </div>
+
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+                     {/* Colors */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                              { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
+                              { bg: 'bg-[#282360]', label: 'Depth', hex: '#282360' },
+                              { bg: 'bg-[#10B981]', label: 'Success', hex: '#10B981' },
+                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: '#F59E0B' },
+                              { bg: 'bg-rose-500', label: 'Error', hex: '#F43F5E' }
+                           ].map((color, i) => (
+                              <div key={i} className="flex flex-col gap-2 group/color">
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Typography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
+                        </h4>
+                        <div className="flex-1 flex flex-col justify-center mb-8">
+                           <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
+                              Aa
+                           </div>
+                        </div>
+                        <div className="space-y-4">
+                           <div className="flex justify-between items-end border-b border-slate-200 pb-2">
+                              <span className="text-3xl font-black text-text-primary tracking-tight">Poppins</span>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
+                           </div>
+                           <div className="flex justify-between text-xs font-medium text-text-secondary">
+                              <span>Regular</span>
+                              <span className="font-bold">Bold</span>
+                              <span className="font-black">Black</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Iconography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { icon: Layout, color: "text-[#0D63CC]" },
+                              { icon: GraduationCap, color: "text-[#00DA99]" },
+                              { icon: CheckSquare, color: "text-rose-500" },
+                              { icon: Bell, color: "text-[#0D63CC]" },
+                              { icon: Calendar, color: "text-[#F59E0B]" },
+                              { icon: Smartphone, color: "text-[#00DA99]" },
+                              { icon: BarChart2, color: "text-[#282360]" },
+                              { icon: MessageCircle, color: "text-rose-500" },
+                              { icon: Shield, color: "text-[#0D63CC]" }
+                           ].map((Item, i) => (
+                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                                 <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Wireframing Strategy */}
+                     <div className="lg:col-span-12 glass-card rounded-[40px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 relative z-10">Wireframing Strategy</h4>
+                        <div className="grid sm:grid-cols-3 gap-6 relative z-10">
+                           {[
+                              { stage: "Low-Fidelity", desc: "Workflow validation and screen flow mapping", color: "#0D63CC", progress: 33 },
+                              { stage: "Mid-Fidelity", desc: "Information hierarchy and component placement", color: "#00DA99", progress: 66 },
+                              { stage: "High-Fidelity", desc: "Final UI with full visual design system", color: "#8B5CF6", progress: 100 },
+                           ].map((w, i) => (
+                              <div key={i} className="bg-white/70 rounded-2xl p-6 border border-slate-200 hover:-translate-y-1 transition-transform duration-500">
+                                 <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-8 h-8 rounded-xl flex items-center justify-center text-white text-xs font-black" style={{ backgroundColor: w.color }}>
+                                       {i + 1}
+                                    </div>
+                                    <h5 className="font-bold text-sm text-text-primary">{w.stage}</h5>
+                                 </div>
+                                 <p className="text-xs text-text-secondary font-medium mb-4">{w.desc}</p>
+                                 <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                    <div className="h-full rounded-full transition-all duration-1000" style={{ width: `${w.progress}%`, backgroundColor: w.color }} />
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               {/* ── 13. EMPATHY MAP ───────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
@@ -492,14 +895,13 @@ export default function SuperCampusCaseStudy() {
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing user attitudes and behaviors to align our team on a deep understanding of end users.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing school stakeholder attitudes and behaviors to align design decisions with real user experiences.</p>
                   </div>
 
                   <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
                      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
                      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
-
                      <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
                         <svg width="100%" height="100%">
                            <line x1="0" y1="0" x2="100%" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
@@ -509,83 +911,103 @@ export default function SuperCampusCaseStudy() {
 
                      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
                         {/* THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
                                     <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">think</span>?</h3>
                               </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"Am I missing something important?"</li>
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"Is my child improving?"</li>
+                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                                 {[`"Why do I need three apps to do one teacher's job?"`, `"I hope my child's attendance is being tracked properly."`, `"There must be a better way to manage all this paperwork."`, `"Are my students actually understanding the material?"`].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                    </li>
+                                 ))}
                               </ul>
                            </div>
                         </div>
 
                         {/* SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
+                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
                                     <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
                               </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"I need everything in one place"</li>
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"Tracking progress should be easy"</li>
+                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                                 {[`"Nobody tells me when my child misses class."`, `"Marking attendance on paper every day is exhausting."`, `"I don't know what assignments my child is missing."`, `"We need one system for everything."`].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                    </li>
+                                 ))}
                               </ul>
                            </div>
                         </div>
 
-                        {/* CENTER */}
+                        {/* CENTER CIRCLE */}
                         <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
+                           <div className="absolute inset-0 bg-[#00DA99]/20 blur-[60px] rounded-full animate-pulse z-0" />
                            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
                               <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
-                                 <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
+                                 <GraduationCap className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
                               </div>
                            </div>
                         </div>
 
                         {/* FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
+                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
                                     <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
                               </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">Frustrated with complexity</li>
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">Relieved when information is clear</li>
+                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                                 {["Overwhelmed by administrative tasks and manual processes", "Anxious about missing important updates and notifications", "Frustrated by disconnected tools and fragmented workflows", "Motivated to improve but unsure where to start"].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                    </li>
+                                 ))}
                               </ul>
                            </div>
                         </div>
 
                         {/* DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
                                     <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
                               </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">Check dashboards frequently</li>
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">Use mobile for quick updates</li>
+                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
+                                 {["Uses paper registers and spreadsheets for attendance", "Manually writes and distributes assignments to students", "Calls parents individually for updates and follow-ups", "Juggles multiple apps with no central source of truth"].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
+                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                    </li>
+                                 ))}
                               </ul>
                            </div>
                         </div>
-
                      </div>
                   </div>
                </section>
 
-               {/* SWOT ANALYSIS */}
+               {/* ── 14. SWOT ANALYSIS ────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
@@ -593,27 +1015,29 @@ export default function SuperCampusCaseStudy() {
                            Strategic Analysis
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating SuperSchool&apos;s competitive stance to ensure viability and identify growth opportunities.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                      {[
-                        { title: "Strengths", items: ["Comprehensive platform", "Role-based customization", "Scalable architecture"], color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent", borderColor: "border-[#00DA99]/30", icon: <Briefcase size={24} className="text-[#00DA99] group-hover:scale-110 transition-transform" /> },
-                        { title: "Weaknesses", items: ["Initial onboarding complexity", "Learning curve for new users"], color: "text-[#F59E0B]", borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent", borderColor: "border-[#F59E0B]/30", icon: <Activity size={24} className="text-[#F59E0B] group-hover:scale-110 transition-transform" /> },
-                        { title: "Opportunities", items: ["Integration with external tools", "Advanced analytics", "Automation features"], color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent", borderColor: "border-[#0D63CC]/30", icon: <Search size={24} className="text-[#0D63CC] group-hover:scale-110 transition-transform" /> },
-                        { title: "Threats", items: ["Competing systems", "Resistance to digital adoption"], color: "text-rose-500", borderGlow: "from-rose-500/30 via-white/10 to-transparent", borderColor: "border-rose-500/30", icon: <FileText size={24} className="text-rose-500 group-hover:scale-110 transition-transform" /> }
+                        { title: "Strengths", items: ["Complete multi-role ecosystem", "Mobile-first architecture", "CRM + academics in one", "Centralized operations", "Scalable platform"], color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent", innerGlow: "bg-[#00DA99]/15", borderColor: "border-[#00DA99]/30", gradientFill: "from-white/60 to-white/90", icon: <Briefcase size={24} strokeWidth={2} className="text-[#00DA99] group-hover:scale-110 transition-transform duration-500" /> },
+                        { title: "Weaknesses", items: ["Complex initial onboarding", "Large feature surface area", "Requires institutional buy-in"], color: "text-[#F59E0B]", borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent", innerGlow: "bg-[#F59E0B]/15", borderColor: "border-[#F59E0B]/30", gradientFill: "from-white/60 to-white/90", icon: <Activity size={24} strokeWidth={2} className="text-[#F59E0B] group-hover:scale-110 transition-transform duration-500" /> },
+                        { title: "Opportunities", items: ["Multi-school chain expansion", "Advanced analytics layer", "LMS integration potential", "Automated workflows"], color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent", innerGlow: "bg-[#0D63CC]/15", borderColor: "border-[#0D63CC]/30", gradientFill: "from-white/60 to-white/90", icon: <Search size={24} strokeWidth={2} className="text-[#0D63CC] group-hover:scale-110 transition-transform duration-500" /> },
+                        { title: "Threats", items: ["Competitive EdTech platforms", "Institutional resistance to change", "Data privacy regulations"], color: "text-rose-500", borderGlow: "from-rose-500/30 via-white/10 to-transparent", innerGlow: "bg-rose-500/15", borderColor: "border-rose-500/30", gradientFill: "from-white/60 to-white/90", icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" /> }
                      ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-                           <div className={`bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px]`}>
-                              <div className="flex flex-col gap-4 mb-6">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors`}>{box.icon}</div>
+                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+                           <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
+                              <div className="flex flex-col gap-4 mb-6 relative z-20">
+                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>{box.icon}</div>
                                  <h5 className={`font-semibold text-[20px] ${box.color}`}>{box.title}</h5>
                               </div>
-                              <ul className="space-y-3 flex-1">
+                              <ul className="space-y-2 flex-1 relative z-20">
                                  {box.items.map((item, j) => (
-                                    <li key={j} className="flex items-start gap-3">
-                                       <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60`} />
-                                       <span className="text-[13px] font-medium text-text-secondary">{item}</span>
+                                    <li key={j} className="flex items-start gap-3 group/li">
+                                       <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
+                                       <span className="text-[13px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
                               </ul>
@@ -623,14 +1047,40 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
-               {/* OUTCOMES & CONCLUSION */}
+               {/* ── 15. VISUAL OVERVIEW ───────────────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                           Interface
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Overview</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">A seamless experience across admin web portals and teacher, parent & student mobile apps.</p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                     <div className="lg:col-span-2">
+                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Super Admin Dashboard" glowCls="bg-[#0D63CC]" icon={Monitor} />
+                     </div>
+                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Teacher App" glowCls="bg-[#00DA99]" icon={BookOpenCheck} />
+                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} />
+                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} />
+                     <PremiumPlaceholder aspect="aspect-[3/4]" label="CRM Portal" glowCls="bg-[#0D63CC]" icon={Handshake} />
+                     <div className="lg:col-span-2">
+                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Analytics & Reports" glowCls="bg-[#00DA99]" icon={BarChart2} />
+                     </div>
+                  </div>
+               </section>
+
+               {/* ── 16. OUTCOMES & CONCLUSION ─────────────────────────────────────────────── */}
                <section className="relative mb-20 overflow-hidden">
                   <motion.div
                      {...fadeIn}
                      className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
                   >
-                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
-                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#0D63CC]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#00DA99]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
 
                      <div className="relative z-10">
                         <div className="mb-12 text-center max-w-4xl mx-auto">
@@ -640,37 +1090,56 @@ export default function SuperCampusCaseStudy() {
                               </span>
                            </div>
                            <h2 className="text-4xl font-bold text-text-primary mb-4">
-                              Outcomes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Future Scope</span>
+                              Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">School Operations</span> Digitally.
                            </h2>
                         </div>
 
                         <div className="grid lg:grid-cols-3 gap-8 mb-20">
                            {[
                               {
-                                 title: "Impact & Outcomes",
-                                 items: ["Operational Efficiency: Reduced manual processes", "User Engagement: Increased app usage by parents", "Data Visibility: Real-time insights across roles"],
-                                 color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30", borderColor: "border-[#00DA99]/30", icon: <TrendingUp size={20} className="text-white" />, bgIcon: "bg-[#00DA99]"
+                                 title: "Business Impact",
+                                 items: ["Reduced manual work across departments", "Higher parent engagement & visibility", "Centralized communication workflows", "Role-specific UX improved adoption"],
+                                 color: "text-[#0D63CC]",
+                                 borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#0D63CC]/15",
+                                 borderColor: "border-[#0D63CC]/30 hover:border-[#0D63CC]",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <div className="w-5 h-5 bg-[#0D63CC] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(13,99,204,0.3)]" />
+                              },
+                              {
+                                 title: "Key Metrics",
+                                 items: ["Attendance completion rate ↑", "Task & assessment participation ↑", "Daily active users across all roles", "Admission conversion rate improved"],
+                                 color: "text-[#00DA99]",
+                                 borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#00DA99]/15",
+                                 borderColor: "border-[#00DA99]/30 hover:border-[#00DA99]",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <div className="w-5 h-5 bg-[#00DA99] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(0,218,153,0.3)]" />
                               },
                               {
                                  title: "Key Learnings",
-                                 items: ["Role-based design is critical for complex systems", "Simplicity drives adoption in education", "Mobile-first thinking improves engagement"],
-                                 color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30", borderColor: "border-[#0D63CC]/30", icon: <Brain size={20} className="text-white" />, bgIcon: "bg-[#0D63CC]"
-                              },
-                              {
-                                 title: "Future Scope",
-                                 items: ["Advanced reporting & analytics", "Integration with third-party tools", "Automation of repetitive tasks"],
-                                 color: "text-rose-500", borderGlow: "from-rose-500/30", borderColor: "border-rose-500/30", icon: <Zap size={20} className="text-white" />, bgIcon: "bg-rose-500"
+                                 items: ["Multi-role systems need radical UX simplification", "Mobile-first design is non-negotiable for teachers", "Transparency drives parent trust and engagement", <span key="highlight">Real-time data <strong className="text-text-primary font-bold">transforms decision-making</strong></span>],
+                                 color: "text-rose-500",
+                                 borderGlow: "from-rose-500/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-rose-500/15",
+                                 borderColor: "border-rose-500/30 hover:border-rose-500",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <div className="w-5 h-5 bg-rose-500 rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
                               }
                            ].map((box, i) => (
-                              <div key={i} className={`relative border-1 border-slate-200 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} via-white/10 to-transparent shadow-md hover:-translate-y-2 transition-all group`}>
-                                 <div className={`bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[18px] p-6 md:p-8 flex flex-col`}>
-                                    <div className="flex items-center gap-4 mb-6">
-                                       <div className={`w-10 h-10 rounded-xl ${box.bgIcon} flex items-center justify-center shadow-lg`}>{box.icon}</div>
-                                       <h4 className="font-bold text-lg text-text-primary">{box.title}</h4>
+                              <div key={i} className={`relative border-1 border-[#0D63CC]/20 hover:border-[#00DA99]/40 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+                                 <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-3xl w-full h-full rounded-[18px] p-5 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                                    <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
+                                    <div className="flex items-center gap-4 mb-6 relative z-20">
+                                       <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500 flex-shrink-0`}>{box.icon}</div>
+                                       <h4 className="font-bold text-xl text-text-primary leading-tight">{box.title}</h4>
                                     </div>
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-3 flex-1 relative z-20">
                                        {box.items.map((item, j) => (
-                                          <li key={j} className="flex items-start gap-3"><span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} flex-shrink-0`} /> <span className="text-[13px] font-semibold text-text-secondary">{item}</span></li>
+                                          <li key={j} className="flex items-start gap-3 group/li">
+                                             <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-50 transition-transform duration-300 group-hover/li:scale-[2] flex-shrink-0`} />
+                                             <span className="text-[13px] font-semibold text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                          </li>
                                        ))}
                                     </ul>
                                  </div>
@@ -680,14 +1149,14 @@ export default function SuperCampusCaseStudy() {
 
                         {/* Final Conclusion */}
                         <div className="mb-6">
-                           <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
+                           <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
                               <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
                               <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-4 relative z-10">
-                                 <div className="w-8 h-8 bg-[#0D63CC] rounded flex-shrink-0" />
+                                 <div className="w-8 h-8 bg-gradient-to-br from-[#0D63CC] to-[#00DA99] rounded flex-shrink-0" />
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 SuperCampus successfully transforms traditional school operations into a unified digital experience. By focusing on clarity, usability, and structured workflows, the platform enables efficient management while improving engagement across all stakeholders.
+                                 SuperSchool™ successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
                               </p>
                            </div>
                         </div>
@@ -698,7 +1167,7 @@ export default function SuperCampusCaseStudy() {
                               <ArrowLeft size={18} className="rotate-180" />
                            </Link>
                            <p className="text-xs font-bold text-text-secondary uppercase tracking-widest opacity-40">
-                              Thank you for reading the SuperCampus Case Study.
+                              Thank you for reading the SuperSchool Case Study.
                            </p>
                         </div>
                      </div>

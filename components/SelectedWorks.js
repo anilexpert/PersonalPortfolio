@@ -21,7 +21,7 @@ const projects = [
   {
     id: "02",
     slug: "carenova",
-    name: "Carevanta Systems™",
+    name: "carenova Systems™",
     category: "FACILITY & COMPLIANCE PLATFORM",
     color: "#0D63CC",
     dotColor: "#0D63CC",

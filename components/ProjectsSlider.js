@@ -13,7 +13,7 @@ const projects = [
     title: 'Spendora™',
     slug: 'spendora',
     subtitle: 'AI‑Powered Smart Expense',
-    img: '/images/spendora.png',
+    img: '/images/Spendora-Card-Folio.png',
     description:
       'A full‑stack SaaS platform that streamlines expense reporting with AI‑driven categorisation and real‑time analytics.',
   },
@@ -21,7 +21,7 @@ const projects = [
     title: 'Carenova™',
     slug: 'carenova',
     subtitle: 'Facility & Compliance',
-    img: '/images/carevanata.png',
+    img: '/images/Carenova-Card-Folio.png',
     description:
       'Enterprise‑grade solution for facility operations, allowing automated compliance checks and resource scheduling.',
   },
@@ -29,7 +29,7 @@ const projects = [
     title: 'OasisPad™',
     slug: 'oasispad',
     subtitle: 'Smart Knowledge Workspace',
-    img: '/images/oasispad.png',
+    img: '/images/OasisPad-Card-Folio.png',
     description:
       'A collaborative note‑taking environment with AI‑suggested tagging and contextual linking.',
   },
@@ -37,7 +37,7 @@ const projects = [
     title: 'TicketStack™',
     slug: 'ticketstack',
     subtitle: 'Retail Ticketing Redesign',
-    img: '/images/ticketstack.png',
+    img: '/images/TicketStack-Card-Folio.png',
     description:
       'Revamped ticketing UI for retail stores, delivering frictionless checkout and analytics.',
   },
@@ -45,7 +45,7 @@ const projects = [
     title: 'MarketVisionAI™',
     slug: 'marketvisionai',
     subtitle: 'AI Market Intelligence',
-    img: '/images/marketvisionai.png',
+    img: '/images/MarketVision-Card-Folio.png',
     description:
       'AI-powered market intelligence platform that continuously analyzes global market signals and proactively recommends strategic business opportunities.',
   },
@@ -53,7 +53,7 @@ const projects = [
     title: 'MRI Logic™',
     slug: 'mri-logic',
     subtitle: 'Medical Device Validation',
-    img: '/images/pulse-grid.png',
+    img: '/images/MRILogic-Card-Folio.png',
     description:
       'AI-assisted medical device validation platform accelerating MRI compliance, risk analysis, and clinical validation workflows.',
   },

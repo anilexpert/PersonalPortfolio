@@ -43,7 +43,7 @@ export default function TicketStackCaseStudy() {
       <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#4F46E5]/10 hover:border-[#EC4899]/40 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-            style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
+           style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
          />
          <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
          {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-30`} strokeWidth={1.2} />}
@@ -145,7 +145,12 @@ export default function TicketStackCaseStudy() {
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #EC4899 0%, #4F46E5 100%)' }}
                      />
-                     {/* Dummy Placeholder */}
+                       <Image
+                           src="/images/ticketstack/HeroProduct-Dashboard.png"
+                           alt="TicketStack Dashboard"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                        />
                      <div className="text-center relative z-10 opacity-40">
                          <Layout size={64} className="mx-auto mb-4 text-[#4F46E5]" />
                          <p className="font-bold tracking-widest uppercase text-slate-800">Hero Product Dashboard Mockup</p>
@@ -486,7 +491,13 @@ export default function TicketStackCaseStudy() {
                             </div>
                        </div>
                        <div className="relative">
-                            <PremiumPlaceholder aspect="aspect-square" label="Information Architecture Sitemap" glowCls="bg-[#EC4899]" icon={Layers} />
+                             <PremiumPlaceholder aspect="aspect-square" label="Information Architecture Sitemap" glowCls="bg-[#EC4899]" icon={Layers} />
+                              <div className="w-full glass-card rounded-3xl overflow-hidden relative group transition-all duration-500 border-2 border-[#4F46E5]/10 hover:border-[#EC4899]/40 shadow-lg">
+                                 <img src="/images/ticketstack/InformationArchitecture.png" alt="Information Architecture Sitemap" className="w-full h-auto object-contain" />
+                                 <span className="absolute bottom-4 left-0 right-0 text-center font-bold tracking-[0.2em] text-[10px] uppercase text-text-secondary opacity-50 group-hover:opacity-100 transition-opacity z-10">
+                                    Information Architecture Sitemap
+                                 </span>
+                              </div>
                        </div>
                    </div>
                </section>

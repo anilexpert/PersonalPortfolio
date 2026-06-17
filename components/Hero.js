@@ -111,12 +111,12 @@ const Hero = () => {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 md:gap-4">
                   {[
-                    { img: "/images/carevanata.png", name: "Carevanta", href: "/case-studies/carenova" },
-                    { img: "/images/spendora.png", name: "Spendora", href: "/case-studies/spendora" },
-                    { img: "/images/oasispad.png", name: "OasisPad", href: "/case-studies/oasispad" },
-                    { img: "/images/ticketstack.png", name: "TicketStack", href: "/case-studies/ticketstack" },
-                    { img: "/images/marketvisionai.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
-                    { img: "/images/pulse-grid.png", name: "MRI Logic", href: "/case-studies/mri-logic" },
+                    { img: "/images/Carenova-Card-Folio.png", name: "carenova", href: "/case-studies/carenova" },
+                    { img: "/images/Spendora-Card-Folio.png", name: "Spendora", href: "/case-studies/spendora" },
+                    { img: "/images/OasisPad-Card-Folio.png", name: "OasisPad", href: "/case-studies/oasispad" },
+                    { img: "/images/TicketStack-Card-Folio.png", name: "TicketStack", href: "/case-studies/ticketstack" },
+                    { img: "/images/MarketVision-Card-Folio.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
+                    { img: "/images/MRILogic-Card-Folio.png", name: "MRI Logic", href: "/case-studies/mri-logic" },
                   ].map((project, i) => (
                     <Link
                       key={i}

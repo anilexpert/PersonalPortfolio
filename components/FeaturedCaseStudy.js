@@ -37,8 +37,8 @@ const FeaturedCaseStudy = () => {
               <div className="w-full h-full min-h-[300px] md:min-h-[400px] rounded-2xl bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-2 flex items-center justify-center relative overflow-hidden shadow-inner">
                 {/* Project Image */}
                 <img
-                  src="/images/carevanta-health.png"
-                  alt="Carevanta Health Workflow System"
+                  src="/images/Carenova-Case-Study.png"
+                  alt="carenova Health Workflow System"
                   className="w-full h-auto object-cover rounded-xl shadow-2xl relative z-10"
                 />
               </div>
@@ -84,7 +84,7 @@ const FeaturedCaseStudy = () => {
                 </div>
 
                 <div className="pt-4">
-                  <Link href="/case-studies/carevanta" passHref>
+                  <Link href="/case-studies/carenova" passHref>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

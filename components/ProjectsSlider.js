@@ -8,7 +8,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 // Project data
-const projects = [
+const allProjects = [
   {
     title: 'Spendora™',
     slug: 'spendora',
@@ -66,6 +66,8 @@ const projects = [
       'A mobile-first platform designed to help family caregivers organize responsibilities and coordinate care.',
   },
 ];
+
+const projects = allProjects.slice(0, 4);
 
 const AUTO_PLAY_MS = 5000;
 
@@ -304,6 +306,15 @@ export default function ProjectsSlider() {
               }}
             />
           ))}
+        </div>
+
+        {/* ── View All Works Button ── */}
+        <div className="flex justify-center mt-12">
+          <Link href="/case-studies" passHref>
+            <button className="px-6 md:px-8 py-3 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[13px] md:text-base font-medium flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300">
+              View All Works <ArrowUpRight size={18} className="stroke-[2]" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

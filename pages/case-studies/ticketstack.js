@@ -1321,6 +1321,19 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
+               {/* NEXT CASE STUDY NAVIGATION */}
+               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
+                  <Link href="/case-studies/spendora" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
+                        Spendora
+                     </h3>
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                        <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
+                     </div>
+                  </Link>
+               </section>
+
             </div>
          </main>
          <Footer />

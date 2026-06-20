@@ -163,6 +163,12 @@ export default function CarenovaSystemsCaseStudy() {
                {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
                   <PremiumPlaceholder aspect="aspect-[21/9]" label="Platform Dashboard Overview" icon={Layout} glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" />
+                  <Image
+                     src="/images/carenova/CaseStudy-Hero-Thumnail.png"
+                     alt="Carenova Dashboard"
+                     fill
+                     className="object-cover rounded-2xl overflow-hidden relative z-10"
+                  />
                </motion.section>
 
                {/* OVERVIEW / CHALLENGES / SOLUTION */}
@@ -246,6 +252,12 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                         <div className="mt-8 relative z-10">
                            <PremiumPlaceholder aspect="aspect-[16/10]" label="AI Recommendation Dashboard" icon={Brain} glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" />
+                           <Image
+                                 src="/images/carenova/AI-Recommendations-UI-Preview.png"
+                                 alt="AI-Recommendations-UI-Preview"
+                                 fill
+                                 className="object-cover rounded-2xl overflow-hidden relative z-10 transition-transform duration-1000"
+                              />
                         </div>
                      </div>
                   </div>
@@ -265,12 +277,12 @@ export default function CarenovaSystemsCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Smart Dashboard", desc: "Real-time facility overview, compliance score indicators, alerts & notifications.", color: "#00DA99", icon: Grid },
-                        { num: "02", title: "Audit Management", desc: "Structured audit workflows, checklist-based inspections, auto-generated reports.", color: "#0D63CC", icon: FileText },
-                        { num: "03", title: "Compliance Tracking", desc: "Regulation mapping, automated reminders, risk flagging.", color: "#8B5CF6", icon: Shield },
-                        { num: "04", title: "AI Recommendations", desc: "Predictive compliance risks, suggested corrective actions, trend-based insights.", color: "#F59E0B", icon: Brain },
-                        { num: "05", title: "Role-Based Access (RBAC)", desc: "Super Admin / Admin / User roles, permission-based views, secure access control.", color: "#10B981", icon: Users },
-                        { num: "06", title: "Asset & Facility Tracking", desc: "Monitor multi-location asset health and maintenance workflows.", color: "#3B82F6", icon: Search }
+                        { num: "01", title: "Smart Dashboard", desc: "Real-time facility overview, compliance score indicators, alerts & notifications.", color: "#00DA99", icon: Grid, image: "/images/carenova/Smart-healthcare dashboard-UI-Preview.png" },
+                        { num: "02", title: "Audit Management", desc: "Structured audit workflows, checklist-based inspections, auto-generated reports.", color: "#0D63CC", icon: FileText, image: "/images/carenova/AuditManagement-UI-Preview.png" },
+                        { num: "03", title: "Compliance Tracking", desc: "Regulation mapping, automated reminders, risk flagging.", color: "#8B5CF6", icon: Shield, image: "/images/carenova/Compliance-Tracking-UI-Preview.png" },
+                        { num: "04", title: "AI Recommendations", desc: "Predictive compliance risks, suggested corrective actions, trend-based insights.", color: "#F59E0B", icon: Brain, image: "/images/carenova/AI-Recommendations-UI-Preview.png" },
+                        { num: "05", title: "Role-Based Access (RBAC)", desc: "Super Admin / Admin / User roles, permission-based views, secure access control.", color: "#10B981", icon: Users, image: "/images/carenova/Role-Based-Access-UI-Preview.png" },
+                        { num: "06", title: "Asset & Facility Tracking", desc: "Monitor multi-location asset health and maintenance workflows.", color: "#3B82F6", icon: Search, image: "/images/carenova/Asset-&-FacilityTrackingUI-Preview.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -296,14 +308,26 @@ export default function CarenovaSystemsCaseStudy() {
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
 
-                           <div className="relative z-10">
-                              <PremiumPlaceholder aspect="aspect-[16/10]" label={`${feature.title} UI Preview`} icon={feature.icon} glowCls={`bg-[${feature.color}]`} textCls="text-text-primary" />
+                           <div className="relative z-10 aspect-[16/10] w-full">
+                              <Image
+                                 src={feature.image}
+                                 alt={`${feature.title} UI Preview`}
+                                 fill
+                                 className="object-cover rounded-2xl overflow-hidden relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                              />
                            </div>
                         </motion.div>
                      ))}
                   </div>
                   <div className="mt-12 text-center relative z-10">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="Feature Screens Grid" icon={Layout} glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" />
+                     <div className="relative z-10 aspect-[21/9] w-full">
+                        <Image
+                           src="/images/carenova/FeatureScreens-Grid.png"
+                           alt="Feature Screens Grid"
+                           fill
+                           className="object-cover rounded-3xl shadow-xl overflow-hidden"
+                        />
+                     </div>
                   </div>
                </section>
 
@@ -400,7 +424,14 @@ export default function CarenovaSystemsCaseStudy() {
                      ))}
                   </div>
                   <div className="mt-12 text-center relative z-10">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="User Persona Cards Preview" icon={User} glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" />
+                     <div className="relative z-10 aspect-[21/9] w-full">
+                        <Image
+                           src="/images/carenova/UserPersonaCards-Preview.png"
+                           alt="User Persona Cards Preview"
+                           fill
+                           className="object-cover rounded-3xl shadow-xl overflow-hidden"
+                        />
+                     </div>
                   </div>
                </section>
 
@@ -514,7 +545,14 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
 
                      <div className="mt-16 text-center relative z-10">
-                        <PremiumPlaceholder aspect="aspect-[21/9]" label="IA Diagram" icon={Grid} glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" />
+                        <div className="relative z-10 aspect-[21/9] w-full">
+                           <Image
+                              src="/images/carenova/IA-Diagram.png"
+                              alt="IA Diagram"
+                              fill
+                              className="object-contain rounded-3xl shadow-xl overflow-hidden"
+                           />
+                        </div>
                      </div>
                   </div>
                </section>
@@ -602,7 +640,14 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
                   </div>
                   <div className="mt-12 text-center relative z-10 max-w-7xl mx-auto px-4">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="Design System Components" icon={Layout} glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" />
+                     <div className="relative z-10 aspect-[21/9] w-full">
+                        <Image
+                           src="/images/carenova/Design-System-Components.png"
+                           alt="Design System Components"
+                           fill
+                           className="object-cover rounded-3xl shadow-xl overflow-hidden"
+                        />
+                     </div>
                   </div>
                </section>
 
@@ -763,7 +808,14 @@ export default function CarenovaSystemsCaseStudy() {
                   </div>
 
                   <div className="mt-12 text-center relative z-10 max-w-6xl mx-auto">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="Empathy Map Grid" icon={Heart} glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" />
+                     <div className="relative z-10 aspect-[21/9] w-full">
+                        <Image
+                           src="/images/carenova/Empathy-Map-Grid.png"
+                           alt="Empathy Map Grid"
+                           fill
+                           className="object-cover rounded-3xl shadow-xl overflow-hidden"
+                        />
+                     </div>
                   </div>
                </section>
 
@@ -850,7 +902,14 @@ export default function CarenovaSystemsCaseStudy() {
                      ))}
                   </div>
                   <div className="mt-12 text-center relative z-10">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="SWOT Table" icon={Grid} glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" />
+                     <div className="relative z-10 aspect-[21/9] w-full">
+                        <Image
+                           src="/images/carenova/SWOT-Table.png"
+                           alt="SWOT Table"
+                           fill
+                           className="object-contain rounded-3xl shadow-xl overflow-hidden"
+                        />
+                     </div>
                   </div>
                </section>
 
@@ -953,21 +1012,33 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
 
                         <div className="mt-12 mb-16 text-center relative z-10">
-                           <PremiumPlaceholder aspect="aspect-[21/9]" label="Final UI Showcase" icon={Layout} glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" />
+                           <div className="relative z-10 aspect-[21/9] w-full">
+                              <Image
+                                 src="/images/carenova/Final-UI-Showcase.png"
+                                 alt="Final UI Showcase"
+                                 fill
+                                 className="object-cover rounded-3xl shadow-2xl overflow-hidden"
+                              />
+                           </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-8 border-t border-slate-100 pt-10">
-                           <Link href="/#projects" className="btn-premium px-12 py-5 text-sm">
-                              <span>View Next Project</span>
-                              <ArrowLeft size={18} className="rotate-180" />
-                           </Link>
-                           <p className="text-xs font-bold text-text-secondary uppercase tracking-widest opacity-40">
-                              Thank you for reading the Carenova Case Study.
-                           </p>
-                        </div>
                      </div>
                   </motion.div>
                </section>
+
+               {/* NEXT CASE STUDY NAVIGATION */}
+               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
+                  <Link href="/case-studies/carevation" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
+                        Carevation
+                     </h3>
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                        <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
+                     </div>
+                  </Link>
+               </section>
+
             </div>
          </main>
          <Footer />

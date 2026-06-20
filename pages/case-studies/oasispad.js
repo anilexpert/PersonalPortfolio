@@ -6,9 +6,10 @@ import {
    ArrowLeft, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
    Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
    Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
-   PieChart, Handshake, MessageCircle, User, BookOpen, Calendar, BookOpenCheck,
+   PieChart, Handshake, MessageCircle, User, Award, BookOpen, Calendar, BookOpenCheck,
    GraduationCap, Bell, Server, Shuffle, Wind, Feather, ClipboardList,
-   Smile, History, Keyboard, Award
+   Smile, History, Keyboard, Stethoscope, FileSearch, Building2, Wallet, Lock, Layers,
+   Database, Clock, FileBadge, BarChart3, LineChart, Banknote, Receipt, Folder
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -30,11 +31,12 @@ export default function OasisPadCaseStudy() {
       transition: { staggerChildren: 0.15 }
    }
 
-   const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#0D63CC]", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
+   // Premium Glass Placeholder Component
+   const PremiumPlaceholder = ({ icon: Icon, label, glowColor = "#0D63CC", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
       <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-            style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
+            style={{ backgroundColor: glowColor }}
          />
          <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
          {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-30`} strokeWidth={1.2} />}
@@ -47,7 +49,7 @@ export default function OasisPadCaseStudy() {
    return (
       <>
          <Head>
-            <title>OasisPad™ | Case Study - Mental Health Documentation</title>
+            <title>OasisPad™ | Case Study - Behavioral Health Operations</title>
          </Head>
 
          <Navbar />
@@ -56,8 +58,9 @@ export default function OasisPadCaseStudy() {
 
             {/* ── 1. PAGE HERO (Inner Banner) ───────────────────────────────────────────────── */}
             <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
+               {/* bg glows */}
                <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#0D63CC]/10 blur-[150px] rounded-full pointer-events-none" />
-               <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-teal-500/10 blur-[150px] rounded-full pointer-events-none" />
+               <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#00DA99]/10 blur-[150px] rounded-full pointer-events-none" />
 
                <div className="max-w-7xl mx-auto relative z-10 text-center">
                   <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="flex items-center justify-center gap-2 text-[10px] md:text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-4 md:mb-6">
@@ -71,14 +74,14 @@ export default function OasisPadCaseStudy() {
                      className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
-                     <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent ml-2">Studies</span>
+                     <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent ml-2">Studies</span>
                   </motion.h1>
 
                   {/* Circular Rotating Badge */}
                   <div className="absolute top-2 right-[6%] hidden lg:block">
                      <RotatingBadge
                         icon={Award}
-                        labels={["HEALTHCARE", "MENTAL HEALTH", "SAAS"]}
+                        labels={["HEALTHCARE", "EHR SYSTEM", "SAAS PLATFORM"]}
                         iconColor="#0D63CC"
                         size={150}
                      />
@@ -104,24 +107,24 @@ export default function OasisPadCaseStudy() {
                         OasisPad™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        Seamless <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Mental Health Documentation</span>
+                        Transforming Behavioral Health Operations Through an <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Integrated EHR Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        OasisPad™ is a digital platform designed to simplify and streamline the process of creating, managing, and organizing therapy notes for mental health professionals.
+                        A comprehensive Behavioral Health Practice Management and EHR platform built to modernize how residential care facilities, mental health clinics, therapists, billing teams, and administrators manage patient care, documentation, compliance, insurance claims, and financial operations.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
-                        <p className="font-bold text-sm text-text-primary">Healthcare / SaaS</p>
+                        <p className="font-bold text-sm text-text-primary">Healthcare / B2B SaaS</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Product Designer</p>
+                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
-                        <p className="font-bold text-sm text-text-primary">8 Weeks</p>
+                        <p className="font-bold text-sm text-text-primary">12 Weeks</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
@@ -137,23 +140,34 @@ export default function OasisPadCaseStudy() {
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
                      />
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="OasisPad Dashboard" glowCls="bg-[#0D63CC]" textCls="text-white" icon={Feather} />
+                     <PremiumPlaceholder aspect="aspect-[21/9]" label="OasisPad Platform Interface" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Stethoscope} />
+                     <Image
+                        src="/images/oasispad/OasisPadDashboard-Thumnail.png"
+                        alt="OasisPad Platform Interface"
+                        fill
+                        className="object-cover rounded-2xl overflow-hidden relative z-10"
+                     />
                   </div>
                </motion.section>
 
-               {/* OVERVIEW / CHALLENGES / SOLUTION */}
+               {/* OVERVIEW & THE INDUSTRY PROBLEM */}
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Goal</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           OasisPad™ is a digital platform designed to simplify and streamline the process of creating, managing, and organizing therapy notes for mental health professionals. The goal was to eliminate friction in clinical documentation while maintaining compliance, clarity, and emotional sensitivity.
+                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                           The project originated from a critical challenge faced by behavioral health organizations: Clinical teams were spending more time managing paperwork, insurance claims, and compliance requirements than delivering care. The objective was not simply to digitize records.
                         </p>
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           <span className="font-bold text-text-primary">Product Vision:</span> To build a calm, intelligent, and efficient note-taking ecosystem that reduces therapist burnout, improves session-to-note transition time, ensures compliance, and enhances focus on patient care over administrative tasks.
-                        </p>
+                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-r-[24px]">
+                           <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+                              <Target className="text-[#0D63CC]" size={24} /> Unified Ecosystem
+                           </h4>
+                           <p className="text-text-secondary font-medium">
+                              The goal was to create a unified operational ecosystem connecting Clinical Documentation, Patient Records, Treatment Planning, Insurance Billing, Claims Processing, Revenue Tracking, Compliance Monitoring, and Reporting & Analytics inside a single HIPAA-compliant platform.
+                           </p>
+                        </div>
                      </div>
                   </div>
 
@@ -161,589 +175,533 @@ export default function OasisPadCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Problem</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Industry Problem</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Therapists spend 30–50% of their time on documentation. This leads to cognitive fatigue after sessions, inconsistent note structures, delayed documentation, compliance risks, and poor retrieval of past session data.
+                           Behavioral Health facilities operate differently from traditional healthcare organizations. Unlike standard clinics, they manage long-term patient treatment, multi-disciplinary care teams, therapy notes, treatment plans, medication records, residential care compliance, and complex insurance reimbursement workflows.
                         </p>
-                        <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                            {[
-                              "Manual & repetitive workflows",
-                              "Lack of structured templates",
-                              "Fragmented patient history tracking",
-                              "No intelligent assistance during creation",
-                              "Time gap between session & docs"
+                              { label: "Software A", desc: "Clinical System" },
+                              { label: "Software B", desc: "Billing System" },
+                              { label: "Software C", desc: "Reporting System" },
+                              { label: "Excel Sheets", desc: "Employee Tracking" },
+                              { label: "Paper Forms", desc: "Compliance Doc" }
                            ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
-                                 <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)]" />
-                                 <span className="text-sm font-bold text-text-primary">{item}</span>
+                              <div key={idx} className="p-6 glass-card rounded-2xl flex flex-col items-center justify-center text-center border border-rose-500/10">
+                                 <span className="text-xs font-bold uppercase tracking-widest text-rose-500 mb-2">{item.label}</span>
+                                 <span className="text-sm font-semibold text-text-primary">{item.desc}</span>
                               </div>
                            ))}
                         </div>
-                     </div>
-                  </div>
-
-                  <GlowDivider />
-
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Solution Strategy</h3>
-                     </div>
-                     <div className="lg:col-span-9">
-                        <div className="grid sm:grid-cols-2 gap-5">
-                           {[
-                              { icon: Brain, title: "Cognitive Ease First", desc: "Reduce thinking load during note entry", gradient: "from-[#0D63CC]/10 to-[#0D63CC]/5", border: "border-[#0D63CC]/20", hover: "hover:border-[#0D63CC]/50 hover:shadow-[0_8px_30px_-8px_rgba(13,99,204,0.25)]", iconBg: "bg-[#0D63CC]/10", iconColor: "text-[#0D63CC]", glow: "from-[#0D63CC]/20" },
-                              { icon: Layout, title: "Structured Flexibility", desc: "Templates without rigidity", gradient: "from-[#00DA99]/10 to-[#00DA99]/5", border: "border-[#00DA99]/20", hover: "hover:border-[#00DA99]/50 hover:shadow-[0_8px_30px_-8px_rgba(0,218,153,0.25)]", iconBg: "bg-[#00DA99]/10", iconColor: "text-[#00DA99]", glow: "from-[#00DA99]/20" },
-                              { icon: Wind, title: "Calm Interface", desc: "Reduce emotional & visual noise", gradient: "from-[#0D63CC]/10 to-[#00DA99]/5", border: "border-[#0D63CC]/15", hover: "hover:border-[#0D63CC]/40 hover:shadow-[0_8px_30px_-8px_rgba(13,99,204,0.2)]", iconBg: "bg-gradient-to-br from-[#0D63CC]/10 to-[#00DA99]/10", iconColor: "text-[#0D63CC]", glow: "from-[#00DA99]/20" },
-                              { icon: Zap, title: "Speed Over Complexity", desc: "Fewer clicks, faster actions", gradient: "from-[#00DA99]/10 to-[#0D63CC]/5", border: "border-[#00DA99]/15", hover: "hover:border-[#00DA99]/40 hover:shadow-[0_8px_30px_-8px_rgba(0,218,153,0.2)]", iconBg: "bg-gradient-to-br from-[#00DA99]/10 to-[#0D63CC]/10", iconColor: "text-[#00DA99]", glow: "from-[#0D63CC]/20" },
-                           ].map((item, i) => (
-                              <div key={i} className={`relative group rounded-2xl p-[1.5px] bg-gradient-to-br ${item.glow} via-transparent to-transparent overflow-hidden transition-all duration-500 ${item.hover}`}>
-                                 <div className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm w-full h-full rounded-2xl p-6 border ${item.border} flex items-start gap-4 transition-all duration-500`}>
-                                    <div className={`w-12 h-12 rounded-xl ${item.iconBg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500`}>
-                                       <item.icon className={`w-6 h-6 ${item.iconColor}`} strokeWidth={1.8} />
-                                    </div>
-                                    <div>
-                                       <h5 className="font-bold text-base text-text-primary mb-1">{item.title}</h5>
-                                       <p className="text-sm text-text-secondary font-medium leading-relaxed">{item.desc}</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           ))}
+                        <div className="mt-8 p-4 bg-rose-50 rounded-xl border border-rose-100 flex items-center gap-4">
+                           <Zap className="text-rose-500" size={24} />
+                           <p className="text-sm font-bold text-text-primary">This fragmentation created significant operational friction and revenue leakage.</p>
                         </div>
                      </div>
                   </div>
                </section>
 
-               {/* ROLES & ACCESS / TARGET USERS */}
+               {/* THE BUSINESS CHALLENGE (Symmetric Grid) */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
-                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
-                           Audience
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
+                        <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
+                           Core Issues
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Target <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Users</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported five recurring operational issues that severely impacted both care quality and financial sustainability.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { title: "Licensed Therapists", icon: Heart, color: "#0D63CC" },
-                        { title: "Psychologists", icon: Brain, color: "#00DA99" },
-                        { title: "Clinics & Orgs", icon: Server, color: "#F59E0B" },
-                        { title: "Psychiatry Assistants", icon: Users, color: "#0D63CC" }
-                     ].map((role, i) => (
-                        <div key={i} className="glass-card p-6 md:p-8 rounded-2xl border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all hover:-translate-y-2 flex flex-col items-center text-center group">
-                           <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ backgroundColor: `${role.color}15`, color: role.color }}>
-                              <role.icon size={28} />
-                           </div>
-                           <h4 className="font-bold text-lg text-text-primary">{role.title}</h4>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* CHALLENGES AND SOLUTIONS (Problem Solving) */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Problem Solving
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Challenges</span></h2>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {[
-                        {
-                           title: "Balancing Structure",
-                           items: ["Challenge: Therapists need structured notes, but rigid forms slow them down.", "Solution: Structured flexibility & progressive disclosure."],
-                           color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30", borderColor: "border-[#0D63CC]/30", icon: <ClipboardList size={24} />
-                        },
-                        {
-                           title: "Reducing Cognitive Load",
-                           items: ["Challenge: Users are mentally drained post-sessions.", "Solution: Effortless UI, smart suggestions, and minimal friction."],
-                           color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30", borderColor: "border-[#00DA99]/30", icon: <Brain size={24} />
-                        },
-                        {
-                           title: "Emotional Sensitivity",
-                           items: ["Challenge: System vibes shouldn't feel harsh or overly clinical.", "Solution: Calm, neutral UI avoiding harsh contrasts."],
-                           color: "text-rose-400", borderGlow: "from-rose-400/30", borderColor: "border-rose-400/30", icon: <Heart size={24} />
-                        },
-                        {
-                           title: "Data Density",
-                           items: ["Challenge: Large patient histories without overwhelming the UI.", "Solution: Timeline-based histories and visual grouping."],
-                           color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30", borderColor: "border-[#0D63CC]/30", icon: <History size={24} />
-                        }
-                     ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} via-white/10 to-transparent shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-                           <div className={`bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[250px]`}>
-                              <div className="flex flex-col gap-4 mb-6">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} ${box.color} transition-colors`}>
-                                    {box.icon}
-                                 </div>
-                                 <h5 className={`font-semibold text-[18px] ${box.color}`}>{box.title}</h5>
-                              </div>
-                              <ul className="space-y-4 flex-1">
-                                 {box.items.map((item, j) => (
-                                    <li key={j} className="flex items-start gap-2">
-                                       <span className="text-[13px] font-medium text-text-secondary leading-relaxed">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* KEY SCREENS & SOLUTION APPROACH */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Solution Approach
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key Screens & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flow</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Focused on speed, clarity, and cognitive support.</p>
-                  </div>
-
-                  <div className="space-y-16">
-                     {/* Smart Note Creation */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 lg:order-1">
-                           <h3 className="text-2xl font-bold mb-2 text-text-primary">1. Smart Note Creation System</h3>
-                           <p className="text-text-secondary font-medium mb-8">Designed for flow state writing with minimal interruptions.</p>
-                           <div className="space-y-4">
-                              {[
-                                 { icon: ClipboardList, text: "Pre-built structured templates (SOAP, DAP)", desc: "Standardized formats reduce decision fatigue" },
-                                 { icon: Activity, text: "Expandable sections (progressive disclosure)", desc: "Show only what's needed, when it's needed" },
-                                 { icon: Brain, text: "Smart suggestions & AI assistance", desc: "Context-aware prompts for faster documentation" }
-                              ].map((item, i) => (
-                                 <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-[#0D63CC]/20 via-transparent to-[#00DA99]/20 hover:from-[#0D63CC]/40 hover:to-[#00DA99]/40 transition-all duration-500">
-                                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 flex items-start gap-4 group-hover:bg-white/95 transition-all duration-500">
-                                       <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0D63CC]/10 to-[#00DA99]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:shadow-[0_4px_20px_-4px_rgba(13,99,204,0.3)] transition-all duration-500">
-                                          <item.icon size={20} className="text-[#0D63CC]" strokeWidth={1.8} />
-                                       </div>
-                                       <div>
-                                          <span className="font-bold text-[15px] text-text-primary block mb-0.5">{item.text}</span>
-                                          <span className="text-xs text-text-secondary font-medium">{item.desc}</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              ))}
-                           </div>
-                        </div>
-                        <div className="order-1 lg:order-2">
-                           <PremiumPlaceholder aspect="aspect-[4/3]" label="Note Editor UI" glowCls="bg-[#0D63CC]" />
-                        </div>
-                     </div>
-
-                     {/* Dashboard & Context */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                           <PremiumPlaceholder aspect="aspect-[4/3]" label="Therapist Dashboard" glowCls="bg-[#00DA99]" />
-                        </div>
-                        <div>
-                           <h3 className="text-2xl font-bold mb-2 text-text-primary">2. Dashboard & Minimal Friction</h3>
-                           <p className="text-text-secondary font-medium mb-8">Focus on actionability over analytics — therapists need speed, not data overload.</p>
-                           <div className="space-y-4">
-                              {[
-                                 { icon: Layout, text: "Quick add notes (inline editing)", desc: "Start documenting without navigating away" },
-                                 { icon: Keyboard, text: "Keyboard-first interactions", desc: "Power-user shortcuts for rapid workflows" },
-                                 { icon: History, text: "Upcoming sessions & recent notes", desc: "Contextual overview at a glance" }
-                              ].map((item, i) => (
-                                 <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-[#00DA99]/20 via-transparent to-[#0D63CC]/20 hover:from-[#00DA99]/40 hover:to-[#0D63CC]/40 transition-all duration-500">
-                                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 flex items-start gap-4 group-hover:bg-white/95 transition-all duration-500">
-                                       <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#00DA99]/10 to-[#0D63CC]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:shadow-[0_4px_20px_-4px_rgba(0,218,153,0.3)] transition-all duration-500">
-                                          <item.icon size={20} className="text-[#00DA99]" strokeWidth={1.8} />
-                                       </div>
-                                       <div>
-                                          <span className="font-bold text-[15px] text-text-primary block mb-0.5">{item.text}</span>
-                                          <span className="text-xs text-text-secondary font-medium">{item.desc}</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              ))}
-                           </div>
-                        </div>
-                     </div>
-
-                     {/* Patient Profile */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 lg:order-1">
-                           <h3 className="text-2xl font-bold mb-2 text-text-primary">3. Patient-Centric Profile</h3>
-                           <p className="text-text-secondary font-medium mb-8">Timeline view reduces mental effort in recalling past sessions.</p>
-                           <div className="space-y-4">
-                              {[
-                                 { icon: History, text: "Timeline-based records", desc: "Chronological session history for easy recall" },
-                                 { icon: Grid, text: "Visual grouping of sessions", desc: "Organized clusters reduce cognitive scanning" }
-                              ].map((item, i) => (
-                                 <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-[#0D63CC]/20 via-transparent to-[#00DA99]/20 hover:from-[#0D63CC]/40 hover:to-[#00DA99]/40 transition-all duration-500">
-                                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 flex items-start gap-4 group-hover:bg-white/95 transition-all duration-500">
-                                       <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0D63CC]/10 to-[#00DA99]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:shadow-[0_4px_20px_-4px_rgba(13,99,204,0.3)] transition-all duration-500">
-                                          <item.icon size={20} className="text-[#0D63CC]" strokeWidth={1.8} />
-                                       </div>
-                                       <div>
-                                          <span className="font-bold text-[15px] text-text-primary block mb-0.5">{item.text}</span>
-                                          <span className="text-xs text-text-secondary font-medium">{item.desc}</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              ))}
-                           </div>
-                        </div>
-                        <div className="order-1 lg:order-2">
-                           <PremiumPlaceholder aspect="aspect-[4/3]" label="Patient Profile & Timeline" glowCls="bg-[#0D63CC]" />
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* DESIGN SYSTEM & VISUALS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Visual Identity
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">UI Strategy</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        Designed for cognitive ease, minimal emotional noise, and high focus.
-                     </p>
-                  </div>
-
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
-                     {/* Principles Spans 12 cols */}
-                     <div className="lg:col-span-12 glass-card rounded-[40px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col lg:flex-row items-center justify-center gap-8 min-h-[300px]">
-                        <div className="w-full lg:w-1/3 bg-white rounded-3xl p-8 border border-[#0D63CC]/10 shadow-sm relative z-10 hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(13,99,204,0.2)] hover:border-[#0D63CC]/30 transition-all duration-500">
-                           <h4 className="font-bold text-xl mb-4 text-[#0D63CC]">Visual Direction</h4>
-                           <ul className="text-sm text-text-secondary space-y-3 font-medium">
-                              <li>• Soft neutral tones (calm psychology)</li>
-                              <li>• Subtle shadows & layering</li>
-                              <li>• Minimal borders → more whitespace</li>
-                           </ul>
-                        </div>
-                        <div className="w-full lg:w-1/3 bg-white rounded-3xl p-8 border border-[#00DA99]/10 shadow-sm relative z-10 hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(0,218,153,0.2)] hover:border-[#00DA99]/30 transition-all duration-500 delay-100">
-                           <h4 className="font-bold text-xl mb-4 text-[#00DA99]">Typography & Interaction</h4>
-                           <ul className="text-sm text-text-secondary space-y-3 font-medium">
-                              <li>• High legibility for long-form writing</li>
-                              <li>• Comfortable line spacing</li>
-                              <li>• Keyboard shortcuts & auto-focus</li>
-                           </ul>
-                        </div>
-                        <div className="w-full lg:w-1/3 bg-gradient-to-br from-[#0D63CC] to-[#00DA99] text-white rounded-3xl p-8 relative z-10 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(0,218,153,0.4)] transition-all duration-500 delay-200 overflow-hidden group">
-                           <div className="absolute top-0 right-0 w-48 h-48 bg-white/20 blur-[40px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-700" />
-                           <h4 className="font-bold text-xl mb-4 relative z-10">Why Minimal UI?</h4>
-                           <p className="text-sm text-white/90 leading-relaxed font-medium relative z-10">
-                              Therapists operate in high cognitive environments. The UI must support thinking, not compete with it.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* USER PERSONAS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           User Research
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
-                  </div>
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                     {[
-                        {
-                           name: "Clinical Therapist",
-                           role: "Primary User",
-                           image: "/images/profile.png", 
-                           bio: "Works with multiple patients daily. Struggles with post-session fatigue and needs a system that provides speed and structure without rigidity.",
-                           needs: ["Faster documentation", "Consistent notes", "Easy retrieval of past records"],
-                           pains: ["Documentation overload", "Memory loss gap", "Cognitive fatigue"],
-                           color: "#0D63CC"
-                        },
-                        {
-                           name: "Clinic Admin",
-                           role: "Secondary User",
-                           image: "/images/profile.png", 
-                           bio: "Manages multiple therapists across the clinic. Needs to ensure compliance, consistency, and have visibility into organizational records.",
-                           needs: ["Standardized documentation", "Compliance tracking", "Visibility into records"],
-                           pains: ["Inconsistent therapist notes", "Difficult auditing"],
-                           color: "#00DA99"
-                        }
-                     ].map((persona, idx) => (
+                        { num: "01", title: "Documentation Burden", desc: "Therapists spent excessive time creating Progress Notes, Treatment Plans, Objectives, Interventions, and Behavioral Assessments. Documentation often duplicated data already stored elsewhere.", icon: FileText, color: "#0D63CC" },
+                        { num: "02", title: "Insurance Claim Delays", desc: "Billing teams manually gathered information from multiple systems before submitting claims, resulting in delayed reimbursements, missing data, and high rejection rates.", icon: Clock, color: "#F59E0B" },
+                        { num: "03", title: "Revenue Visibility", desc: "Leadership lacked real-time visibility into submitted claims, pending claims, rejected claims, outstanding balances, and payer performance.", icon: LineChart, color: "#00DA99" },
+                        { num: "04", title: "Compliance Risks", desc: "HIPAA and payer audits required extensive manual record retrieval across disparate systems and physical cabinets.", icon: Shield, color: "#EF4444" },
+                        { num: "05", title: "Fragmented Experience", desc: "Users frequently switched between patient records, notes, claims, reports, and employee systems, causing severe workflow disruption.", icon: Shuffle, color: "#8B5CF6" }
+                     ].map((challenge, i) => (
                         <motion.div
-                           key={idx}
+                           key={i}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                           transition={{ delay: i * 0.1, duration: 0.8 }}
+                           className="glass-card p-6 md:p-8 rounded-[24px] group relative overflow-hidden"
                         >
                            <div
-                              className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-                              style={{ backgroundColor: persona.color }}
+                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: challenge.color }}
                            />
-                           <div className="flex items-center gap-8 mb-12 relative z-10">
-                              <div className="w-20 h-20 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-white shadow-lg bg-slate-100 flex items-center justify-center">
-                                 <User size={40} className="text-slate-400" />
+                           <div className="flex items-center justify-between mb-6 relative z-10">
+                              <div
+                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs"
+                                 style={{ backgroundColor: `${challenge.color}20`, color: challenge.color, border: `1px solid ${challenge.color}30` }}
+                              >
+                                 {challenge.num}
                               </div>
-                              <div>
-                                 <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-medium text-secondary mt-2 opacity-80">{persona.role}</p>
-                              </div>
+                              <challenge.icon size={24} className="opacity-30" style={{ color: challenge.color }} />
                            </div>
-
-                           <p className="text-base text-gray-800 leading-relaxed mb-12 relative z-10 font-medium">
-                              "{persona.bio}"
-                           </p>
-
-                           <div className="space-y-6 relative z-10">
-                              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
-                                    <CheckCircle2 size={14} strokeWidth={3} /> Goals & Needs
-                                 </h5>
-                                 <div className="flex flex-wrap gap-3">
-                                    {persona.needs.map((n, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">{n}</span>
-                                    ))}
-                                 </div>
-                              </div>
-                              <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
-                                    <Activity size={14} strokeWidth={3} /> Critical Pain Points
-                                 </h5>
-                                 <div className="flex flex-wrap gap-3">
-                                    {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">{p}</span>
-                                    ))}
-                                 </div>
-                              </div>
-                           </div>
+                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{challenge.title}</h4>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{challenge.desc}</p>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
-               {/* EMPATHY MAP */}
+               {/* DISCOVERY PHASE & KEY INSIGHTS */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Research Insight
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
-                  </div>
-
-                  <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
-                     <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
-                     <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
-
-                     <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
-                        <svg width="100%" height="100%">
-                           <line x1="0" y1="0" x2="100%" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
-                           <line x1="100%" y1="0" x2="0" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
-                        </svg>
-                     </div>
-
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
-                        {/* THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
-                                    <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">think</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"I might forget important details later."</li>
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
-                              <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
-                                    <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed">"I don’t want to spend hours writing notes after sessions."</li>
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* CENTER */}
-                        <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
-                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(139,92,246,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
-                              <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
-                                 <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
-                              </div>
-                           </div>
-                        </div>
-
-                        {/* FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
-                              <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
-                                    <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed text-right">Mentally exhausted after back-to-back sessions.</li>
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
-                                    <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-2 w-full max-w-sm relative z-20">
-                                 <li className="text-[12px] font-medium text-text-secondary leading-relaxed text-center">Writes notes late → inconsistent quality.</li>
-                              </ul>
-                           </div>
-                        </div>
-
-                     </div>
-                  </div>
-               </section>
-
-               {/* SWOT ANALYSIS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Strategic Analysis
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {[
-                        { title: "Strengths", items: ["Structured + flexible UX", "Calm interface design", "Therapist-first workflows"], color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent", borderColor: "border-[#00DA99]/30", icon: <Briefcase size={24} className="text-[#00DA99]" /> },
-                        { title: "Weaknesses", items: ["Learning curve for templates", "Requires habit change"], color: "text-[#F59E0B]", borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent", borderColor: "border-[#F59E0B]/30", icon: <Activity size={24} className="text-[#F59E0B]" /> },
-                        { title: "Opportunities", items: ["AI-assisted documentation", "Voice-to-text integration", "Predictive insights"], color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent", borderColor: "border-[#0D63CC]/30", icon: <Search size={24} className="text-[#0D63CC]" /> },
-                        { title: "Threats", items: ["Existing EHR systems", "Compliance regulations"], color: "text-rose-500", borderGlow: "from-rose-500/30 via-white/10 to-transparent", borderColor: "border-rose-500/30", icon: <FileText size={24} className="text-rose-500" /> }
-                     ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-                           <div className={`bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px]`}>
-                              <div className="flex flex-col gap-4 mb-6">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors`}>{box.icon}</div>
-                                 <h5 className={`font-semibold text-[20px] ${box.color}`}>{box.title}</h5>
-                              </div>
-                              <ul className="space-y-3 flex-1">
-                                 {box.items.map((item, j) => (
-                                    <li key={j} className="flex items-start gap-3">
-                                       <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60`} />
-                                       <span className="text-[13px] font-medium text-text-secondary">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* OUTCOMES & CONCLUSION */}
-               <section className="relative mb-20 overflow-hidden">
-                  <motion.div
-                     {...fadeIn}
-                     className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
-                  >
-                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#0D63CC]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
-                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#00DA99]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
-
-                     <div className="relative z-10">
-                        <div className="mb-12 text-center max-w-4xl mx-auto">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                              <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                                 Epilogue
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-4">
+                        <div className="sticky top-24">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                              <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                                 Discovery
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">
-                              Outcomes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Future Scope</span>
-                           </h2>
-                        </div>
+                           <h3 className="text-3xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h3>
+                           <p className="text-text-secondary leading-relaxed font-medium mb-8">
+                              To understand the ecosystem, research was conducted with multiple user groups across the organization, revealing several distinct patterns.
+                           </p>
 
-                        <div className="grid lg:grid-cols-3 gap-8 mb-20">
-                           {[
-                              {
-                                 title: "Expected Results",
-                                 items: ["40–60% faster note creation", "Reduced cognitive load", "Consistent clinical documentation", "Faster patient history retrieval"],
-                                 color: "text-[#00DA99]", borderGlow: "from-[#00DA99]/30", borderColor: "border-[#00DA99]/30", icon: <TrendingUp size={20} className="text-white" />, bgIcon: "bg-[#00DA99]"
-                              },
-                              {
-                                 title: "Business Impact",
-                                 items: ["Increased therapist productivity", "Better compliance readiness", "Scalable for clinics & enterprises"],
-                                 color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30", borderColor: "border-[#0D63CC]/30", icon: <Brain size={20} className="text-white" />, bgIcon: "bg-[#0D63CC]"
-                              },
-                              {
-                                 title: "Future Enhancements",
-                                 items: ["AI-powered note summarization", "Voice-to-text therapy notes", "Predictive patient insights", "Integration with EHR systems"],
-                                 color: "text-rose-500", borderGlow: "from-rose-500/30", borderColor: "border-rose-500/30", icon: <Zap size={20} className="text-white" />, bgIcon: "bg-rose-500"
-                              }
-                           ].map((box, i) => (
-                              <div key={i} className={`relative border-1 border-slate-200 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} via-white/10 to-transparent shadow-md hover:-translate-y-2 transition-all group`}>
-                                 <div className={`bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[18px] p-6 md:p-8 flex flex-col`}>
-                                    <div className="flex items-center gap-4 mb-6">
-                                       <div className={`w-10 h-10 rounded-xl ${box.bgIcon} flex items-center justify-center shadow-lg`}>{box.icon}</div>
-                                       <h4 className="font-bold text-lg text-text-primary">{box.title}</h4>
+                           <div className="space-y-4">
+                              <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">Stakeholders Interviewed</h4>
+                              {[
+                                 { group: "Clinical Team", roles: "Therapists, Behavioral Specialists, Nurses", icon: Heart },
+                                 { group: "Administrative Team", roles: "Facility Managers, Operations Directors", icon: Building2 },
+                                 { group: "Billing Team", roles: "Revenue Cycle Specialists, Insurance Coordinators", icon: Wallet },
+                                 { group: "Leadership", roles: "Executive Directors, Facility Owners", icon: Users }
+                              ].map((stakeholder, idx) => (
+                                 <div key={idx} className="flex items-center gap-4 p-4 glass-card rounded-2xl">
+                                    <div className="w-10 h-10 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC]">
+                                       <stakeholder.icon size={18} />
                                     </div>
-                                    <ul className="space-y-3">
-                                       {box.items.map((item, j) => (
-                                          <li key={j} className="flex items-start gap-3"><span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} flex-shrink-0`} /> <span className="text-[13px] font-semibold text-text-secondary">{item}</span></li>
-                                       ))}
-                                    </ul>
+                                    <div>
+                                       <p className="text-xs font-bold text-text-primary">{stakeholder.group}</p>
+                                       <p className="text-[10px] text-text-secondary font-medium">{stakeholder.roles}</p>
+                                    </div>
+                                 </div>
+                              ))}
+                           </div>
+                        </div>
+                     </div>
+                     <div className="lg:col-span-8 space-y-6">
+                        {[
+                           {
+                              id: "Insight #1",
+                              title: "Documentation Drives Everything",
+                              desc: "Every downstream process depends on clinical documentation. Poor documentation directly impacts reimbursement.",
+                              flow: ["Patient Visit", "Clinical Note", "Diagnosis", "Treatment Plan", "Insurance Claim", "Revenue"]
+                           },
+                           {
+                              id: "Insight #2",
+                              title: "Billing Teams Need Context",
+                              desc: "Most billing systems display claims. But billing specialists need visibility into patient information, clinical encounters, diagnoses, and procedures without leaving the workflow.",
+                              flow: []
+                           },
+                           {
+                              id: "Insight #3",
+                              title: "Administrators Think in Metrics",
+                              desc: "Facility leaders don't care about individual notes. They care about Revenue, Productivity, Denials, Aging Claims, and Compliance.",
+                              flow: []
+                           }
+                        ].map((insight, i) => (
+                           <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
+                              <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
+                              <h4 className="text-2xl font-bold text-text-primary mb-4">{insight.title}</h4>
+                              <p className="text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
+                              
+                              {insight.flow.length > 0 && (
+                                 <div className="flex flex-wrap items-center gap-2">
+                                    {insight.flow.map((step, stepIdx) => (
+                                       <div key={stepIdx} className="flex items-center gap-2">
+                                          <span className="px-3 py-1.5 bg-[#0D63CC]/5 border border-[#0D63CC]/20 rounded-lg text-xs font-bold text-[#0D63CC]">
+                                             {step}
+                                          </span>
+                                          {stepIdx < insight.flow.length - 1 && (
+                                             <ArrowLeft size={14} className="text-slate-300 rotate-180" />
+                                          )}
+                                       </div>
+                                    ))}
+                                 </div>
+                              )}
+                           </motion.div>
+                        ))}
+                     </div>
+                  </div>
+               </section>
+
+               {/* PRODUCT VISION & EXPERIENCE FRAMEWORK */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Architecture
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product Vision & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Dual-Layer Framework</span></h2>
+                     <p className="text-xl text-text-secondary font-medium max-w-3xl mx-auto italic mb-8">
+                        "Every action in the platform should contribute either to Patient Care or Revenue Recovery."
+                     </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                     <motion.div {...fadeIn} className="glass-card rounded-[32px] p-8 md:p-10 border-2 border-[#00DA99]/20 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[40px] rounded-full pointer-events-none" />
+                        <div className="w-16 h-16 rounded-2xl bg-[#00DA99]/10 flex items-center justify-center mb-8 relative z-10">
+                           <Stethoscope size={32} className="text-[#00DA99]" />
+                        </div>
+                        <h4 className="text-2xl font-bold text-text-primary mb-2 relative z-10">Clinical Operations Layer</h4>
+                        <p className="text-sm font-semibold text-[#00DA99] uppercase tracking-widest mb-8 relative z-10">Supports Care Delivery</p>
+                        
+                        <ul className="space-y-4 relative z-10">
+                           {["Notes Library", "Goals & Objectives", "Interventions", "Activity Scheduling", "Residents Management"].map((item, i) => (
+                              <li key={i} className="flex items-center gap-3">
+                                 <CheckCircle2 size={18} className="text-[#00DA99]" />
+                                 <span className="font-bold text-text-secondary">{item}</span>
+                              </li>
+                           ))}
+                        </ul>
+                     </motion.div>
+
+                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="glass-card rounded-[32px] p-8 md:p-10 border-2 border-[#0D63CC]/20 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
+                        <div className="w-16 h-16 rounded-2xl bg-[#0D63CC]/10 flex items-center justify-center mb-8 relative z-10">
+                           <Wallet size={32} className="text-[#0D63CC]" />
+                        </div>
+                        <h4 className="text-2xl font-bold text-text-primary mb-2 relative z-10">Revenue Operations Layer</h4>
+                        <p className="text-sm font-semibold text-[#0D63CC] uppercase tracking-widest mb-8 relative z-10">Supports Reimbursement</p>
+                        
+                        <ul className="space-y-4 relative z-10">
+                           {["Billing & Claims Generation", "ERA Processing", "Payments Management", "Financial Reporting", "Analytics & Dashboards"].map((item, i) => (
+                              <li key={i} className="flex items-center gap-3">
+                                 <CheckCircle2 size={18} className="text-[#0D63CC]" />
+                                 <span className="font-bold text-text-secondary">{item}</span>
+                              </li>
+                           ))}
+                        </ul>
+                     </motion.div>
+                  </div>
+               </section>
+
+               {/* INFORMATION ARCHITECTURE */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Structure
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Architecture</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        A structured hierarchy designed to connect clinical care with revenue operations seamlessly.
+                     </p>
+                  </div>
+
+                  <div className="max-w-8xl mx-auto">
+          <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                           <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layers} />
+                           <Image
+                                                src="/images/oasispad/IA-Thumnail.png"
+                                                alt="Information Architecture Overview"
+                                                fill
+                                                className="object-cover rounded-2xl overflow-hidden relative z-10"
+                                             />
+                        </div>
+                  </div>
+               </section>
+
+               {/* DESIGNING THE BILLING ECOSYSTEM */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           UX Transformation
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Billing Ecosystem</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        The Billing module became one of the most critical areas because revenue directly affects facility sustainability. The design goal was to transform claim creation into a guided experience.
+                     </p>
+                  </div>
+
+                  <div className="max-w-6xl mx-auto">
+                     <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                        <div className="order-2 lg:order-1 relative aspect-[4/3] w-full rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                           <PremiumPlaceholder aspect="aspect-[4/3]" label="Progressive Claim Creation UI" icon={Layers} />
+                           <Image
+                                 src="/images/oasispad/Progressive-Claim Creation-UI.png"
+                                 alt="Progressive Claim Creation UI"
+                                 fill
+                                 className="object-cover rounded-2xl overflow-hidden relative z-10"
+                              />
+                        </div>
+                        <div className="order-1 lg:order-2 space-y-6">
+                           <h3 className="text-2xl font-bold text-text-primary">Claim Creation Journey</h3>
+                           <p className="text-lg text-text-secondary font-medium leading-relaxed">
+                              Instead of displaying a massive, overwhelming insurance form, the process was redesigned into progressive steps. This dramatically reduces data omissions, billing errors, and claim rejections.
+                           </p>
+                        </div>
+                     </div>
+
+                     {/* 8-Step Timeline Grid */}
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {[
+                           { step: "01", title: "Patient Snapshot", desc: "Verify patient identity.", icon: User },
+                           { step: "02", title: "Insurance", desc: "Validate coverage.", icon: Shield },
+                           { step: "03", title: "Providers", desc: "Associate rendering provider.", icon: Stethoscope },
+                           { step: "04", title: "Encounter", desc: "Connect clinical data.", icon: ClipboardList },
+                           { step: "05", title: "Diagnosis", desc: "Map ICD-10 codes.", icon: FileSearch },
+                           { step: "06", title: "Procedures", desc: "Map CPT/HCPCS codes.", icon: Activity },
+                           { step: "07", title: "Claim Details", desc: "Finalize submission data.", icon: FileText },
+                           { step: "08", title: "Compliance", desc: "Validate HIPAA.", icon: CheckCircle2 }
+                        ].map((s, i) => (
+                           <div key={i} className="p-6 glass-card rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
+                              <div className="text-[#0D63CC]/10 font-black text-5xl absolute -top-2 -right-2 transition-transform group-hover:scale-110">{s.step}</div>
+                              <div className="w-10 h-10 rounded-xl bg-[#0D63CC]/5 flex items-center justify-center mb-4 relative z-10">
+                                 <s.icon size={20} className="text-[#0D63CC]" />
+                              </div>
+                              <h4 className="text-sm font-bold text-text-primary mb-2 relative z-10">{s.title}</h4>
+                              <p className="text-xs text-text-secondary font-medium relative z-10">{s.desc}</p>
+                           </div>
+                        ))}
+                     </div>
+                  </div>
+               </section>
+
+               {/* DASHBOARDS & REPORTING */}
+               <section className="mb-16 md:mb-24 lg:mb-32 space-y-24">
+                  
+                  {/* Billing Dashboard */}
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                     <div className="lg:col-span-5 space-y-8">
+                        <div>
+                           <h3 className="text-3xl font-bold text-text-primary mb-4">Billing <span className="text-[#0D63CC]">Dashboard Design</span></h3>
+                           <p className="text-lg text-text-secondary font-medium leading-relaxed">
+                              The dashboard was designed around three primary questions to give immediate operational clarity to billing teams and leadership.
+                           </p>
+                        </div>
+                        <div className="space-y-4">
+                           {[
+                              { q: "What is happening?", a: "Claims Overview (Total, Submitted, Pending, Rejected)" },
+                              { q: "What is the financial impact?", a: "Revenue Metrics (MTD, Outstanding Balance, Payment Velocity)" },
+                              { q: "What requires attention?", a: "Operational Alerts (Pending Claims, Rejections, Aging Accounts)" }
+                           ].map((item, i) => (
+                              <div key={i} className="p-5 glass-card rounded-xl border-l-4 border-[#00DA99]">
+                                 <p className="text-xs font-bold uppercase tracking-wider text-[#00DA99] mb-1">{item.q}</p>
+                                 <p className="text-sm font-bold text-text-primary">{item.a}</p>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                     <div className="lg:col-span-7">
+                        <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-2xl">
+                           {/* <PremiumPlaceholder aspect="aspect-[16/10]" label="Billing Dashboard Analytics" glowColor="#00DA99" icon={BarChart3} /> */}
+                           <Image
+                              src="/images/oasispad/Billing-Dashboard-Analytics.png"
+                              alt="Billing Dashboard Analytics"
+                              fill
+                              className="object-cover rounded-2xl overflow-hidden relative z-10"
+                           />
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Reporting & Analytics */}
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                     <div className="lg:col-span-7 order-2 lg:order-1">
+                        <div className="grid grid-cols-2 gap-4">
+                           {[
+                              { title: "Financial Insights", items: ["Billed vs Collected", "Revenue Trends", "Outstanding Claims"], color: "#0D63CC" },
+                              { title: "Payer Insights", items: ["Payer Mix", "Insurance Performance", "Reimbursement Rates"], color: "#00DA99" },
+                              { title: "Denial Insights", items: ["Top Denial Reasons", "Prior Auth Issues", "Coding Errors"], color: "#EF4444" },
+                              { title: "Productivity Insights", items: ["Provider Performance", "Claim Throughput", "Submission Trends"], color: "#F59E0B" }
+                           ].map((report, i) => (
+                              <div key={i} className="p-6 glass-card rounded-2xl border-t-4" style={{ borderColor: report.color }}>
+                                 <h4 className="font-bold text-sm text-text-primary mb-3">{report.title}</h4>
+                                 <ul className="space-y-2">
+                                    {report.items.map((item, idx) => (
+                                       <li key={idx} className="text-xs font-medium text-text-secondary flex items-center gap-2">
+                                          <div className="w-1 h-1 rounded-full" style={{ backgroundColor: report.color }} />
+                                          {item}
+                                       </li>
+                                    ))}
+                                 </ul>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                     <div className="lg:col-span-5 space-y-8 order-1 lg:order-2">
+                        <div>
+                           <h3 className="text-3xl font-bold text-text-primary mb-4">Reports & <span className="text-[#00DA99]">Analytics</span></h3>
+                           <p className="text-lg text-text-secondary font-medium leading-relaxed">
+                              Research showed leadership needed answers quickly, not more reports. The reporting experience was redesigned around actionable insights rather than data dumps.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               {/* DESIGN SYSTEM (Healthcare Adapted) */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-4">
+                        <span className="text-[10px] font-bold text-text-secondary uppercase tracking-widest">
+                           Visual Identity
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        A unified healthcare design system was created to ensure complex medical data feels approachable, trustworthy, and accessible.
+                     </p>
+                  </div>
+
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+                     {/* Principles - Spans 4 cols */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-slate-100 shadow-xl relative overflow-hidden">
+                        <h4 className="font-bold text-xl text-text-primary mb-8">Core Principles</h4>
+                        <div className="space-y-6">
+                           {[
+                              { t: "Trust", d: "Healthcare users must feel confident." },
+                              { t: "Clarity", d: "Complex data should feel approachable." },
+                              { t: "Consistency", d: "Every workflow follows predictable patterns." },
+                              { t: "Accessibility", d: "Data-heavy interfaces remain readable." }
+                           ].map((p, i) => (
+                              <div key={i}>
+                                 <h5 className="font-bold text-sm text-[#0D63CC] mb-1">{p.t}</h5>
+                                 <p className="text-xs font-medium text-text-secondary">{p.d}</p>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Colors - Spans 8 cols */}
+                     <div className="lg:col-span-8 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 shadow-xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
+                        </h4>
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                           {[
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: 'Healthcare Blue' },
+                              { bg: 'bg-[#00DA99]', label: 'Success', hex: 'Revenue Green' },
+                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: 'Review Orange' },
+                              { bg: 'bg-[#EF4444]', label: 'Error', hex: 'Denial Red' },
+                              { bg: 'bg-slate-50', label: 'Surface', hex: 'Neutral Scale', border: 'border border-slate-200' }
+                           ].map((color, i) => (
+                              <div key={i} className="flex flex-col gap-2 group/color">
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} ${color.border || ''} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider mt-2">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-60">{color.hex}</span>
                                  </div>
                               </div>
                            ))}
                         </div>
+                     </div>
+                  </div>
+               </section>
 
-                        {/* Final Conclusion */}
-                        <div className="mb-6">
-                           <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
-                              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
-                              <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-4 relative z-10">
-                                 <div className="w-8 h-8 bg-gradient-to-br from-[#0D63CC] to-[#00DA99] rounded flex-shrink-0" />
-                                 Final Reflection
-                              </h4>
-                              <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 OasisNotes is not just a note-taking tool — it’s a cognitive support system for therapists. The design focuses on reducing friction, supporting mental workflows, and creating calm digital environments.
-                              </p>
+               {/* OUTCOME & IMPACT */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="p-8 md:p-12 glass-card rounded-[40px] bg-gradient-to-br from-[#0D63CC]/5 to-[#00DA99]/5 border border-slate-200/50">
+                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <div className="space-y-8">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow-sm border border-slate-100 mb-2">
+                              <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                                 Results
+                              </span>
+                           </div>
+                           <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-text-primary leading-[1.1]">
+                              OasisPad <br/>
+                              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Successfully Unified</span>
+                           </h3>
+                           
+                           <div className="grid grid-cols-2 gap-4">
+                              <div className="space-y-2">
+                                 <h4 className="font-bold text-sm text-text-primary">Clinical & Records</h4>
+                                 <p className="text-xs font-medium text-text-secondary leading-relaxed">Therapy Notes, Treatment Plans, Patient Records.</p>
+                              </div>
+                              <div className="space-y-2">
+                                 <h4 className="font-bold text-sm text-text-primary">Revenue Cycle</h4>
+                                 <p className="text-xs font-medium text-text-secondary leading-relaxed">Claims, Billing, ERA, Payments.</p>
+                              </div>
+                              <div className="space-y-2">
+                                 <h4 className="font-bold text-sm text-text-primary">Administration</h4>
+                                 <p className="text-xs font-medium text-text-secondary leading-relaxed">Scheduling, Employee Tracking, Compliance.</p>
+                              </div>
+                              <div className="space-y-2">
+                                 <h4 className="font-bold text-sm text-text-primary">Reporting</h4>
+                                 <p className="text-xs font-medium text-text-secondary leading-relaxed">Financial, Operational, Executive Analytics.</p>
+                              </div>
                            </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-8 border-t border-slate-100 pt-10">
-                           <Link href="/#projects" className="btn-premium px-12 py-5 text-sm">
-                              <span>View Next Project</span>
-                              <ArrowLeft size={18} className="rotate-180" />
-                           </Link>
-                           <p className="text-xs font-bold text-text-secondary uppercase tracking-widest opacity-40">
-                              Thank you for reading the OasisPad Case Study.
-                           </p>
+                        <div className="space-y-6">
+                           <h4 className="text-xl font-bold text-text-primary mb-6">Product Impact</h4>
+                           
+                           <div className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between">
+                              <div>
+                                 <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
+                                    <Heart size={16} className="text-[#0D63CC]" /> Clinical Teams
+                                 </h5>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Reduced documentation effort, better record consistency.</p>
+                              </div>
+                              <TrendingUp className="text-[#00DA99]" size={24} />
+                           </div>
+
+                           <div className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between">
+                              <div>
+                                 <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
+                                    <Wallet size={16} className="text-[#0D63CC]" /> Billing Teams
+                                 </h5>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Decreased submission time & rejection rates, increased visibility.</p>
+                              </div>
+                              <TrendingUp className="text-[#00DA99]" size={24} />
+                           </div>
+
+                           <div className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between">
+                              <div>
+                                 <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
+                                    <Users size={16} className="text-[#0D63CC]" /> Administrators
+                                 </h5>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Improved operational visibility, compliance readiness & tracking.</p>
+                              </div>
+                              <TrendingUp className="text-[#00DA99]" size={24} />
+                           </div>
                         </div>
                      </div>
-                  </motion.div>
+                  </div>
                </section>
+
+               {/* KEY TAKEAWAY */}
+               <section className="mb-20 md:mb-32">
+                  <div className="max-w-4xl mx-auto text-center">
+                     <h3 className="text-2xl md:text-4xl font-bold text-text-primary mb-8 leading-tight">
+                        "OasisPad was not designed as an EHR. It was designed as a connected behavioral health <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">operating system.</span>"
+                     </h3>
+                     <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-3xl mx-auto">
+                        By linking clinical workflows, billing operations, compliance management, and reporting into a single ecosystem, the platform transformed fragmented healthcare processes into a streamlined experience that supports both patient care and organizational growth.
+                     </p>
+                  </div>
+               </section>
+
+               {/* NEXT CASE STUDY NAVIGATION */}
+               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
+                  <Link href="/case-studies/ticketstack" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
+                        TicketStack
+                     </h3>
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                        <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
+                     </div>
+                  </Link>
+               </section>
+
             </div>
          </main>
+
          <Footer />
       </>
    )

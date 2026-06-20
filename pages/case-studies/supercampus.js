@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
    ArrowLeft, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
@@ -46,8 +47,8 @@ export default function SuperCampusCaseStudy() {
    return (
       <>
          <Head>
-            <title>SuperSchool™ | Case Study — End-to-End School Management Ecosystem</title>
-            <meta name="description" content="SuperSchool™ is a comprehensive multi-role school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem." />
+            <title>SuperCampus™ | Case Study — End-to-End School Management Ecosystem</title>
+            <meta name="description" content="SuperCampus™ is a comprehensive multi-role school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem." />
          </Head>
 
          <Navbar />
@@ -101,7 +102,7 @@ export default function SuperCampusCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        SuperSchool™
+                        SuperCampus™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         End-to-End <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Management Ecosystem</span>
@@ -142,7 +143,13 @@ export default function SuperCampusCaseStudy() {
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
                      />
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="SuperSchool Platform Dashboard" glowCls="bg-[#0D63CC]" textCls="text-white" icon={GraduationCap} />
+                     {/* <PremiumPlaceholder aspect="aspect-[21/9]" label="SuperSchool Platform Dashboard" glowCls="bg-[#0D63CC]" textCls="text-white" icon={GraduationCap} /> */}
+                      <Image
+                        src="/images/supercampus/SuperSchool-Platform-Dashboard.png"
+                        alt="SuperSchool Platform Dashboard"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
+                     />
                   </div>
                </motion.section>
 
@@ -154,10 +161,10 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           SuperSchool™ is a comprehensive school management platform designed to connect administrators, teachers, students, parents, and support staff within a unified digital ecosystem.
+                           SuperCampus™ is a comprehensive school management platform designed to connect administrators, teachers, students, parents, and support staff within a unified digital ecosystem.
                         </p>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           Unlike traditional school systems where information is fragmented across multiple tools, SuperSchool centralizes all workflows — attendance, assessments, communication, tasks, media, CRM operations, and reporting — into a single platform, enabling better visibility, operational efficiency, and stakeholder engagement.
+                           Unlike traditional school systems where information is fragmented across multiple tools, SuperCampus centralizes all workflows — attendance, assessments, communication, tasks, media, CRM operations, and reporting — into a single platform, enabling better visibility, operational efficiency, and stakeholder engagement.
                         </p>
                      </div>
                   </div>
@@ -351,12 +358,12 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Attendance Management", desc: "Daily and monthly attendance tracking with analytics, reports, and automated notifications to parents.", color: "#0D63CC", icon: CheckSquare },
-                        { num: "02", title: "Assessment & Grading", desc: "Exams, assignments, grades, and performance reports — all in one structured assessment workflow.", color: "#00DA99", icon: ClipboardList },
-                        { num: "03", title: "Task & Assignment Hub", desc: "Create, submit, and review tasks with real-time progress tracking across classrooms.", color: "#8B5CF6", icon: BookOpen },
-                        { num: "04", title: "CRM & Admissions", desc: "Lead tracking, follow-up management, conversion analytics, and pipeline visibility for admissions.", color: "#F59E0B", icon: Handshake },
-                        { num: "05", title: "Communication Center", desc: "Announcements, notifications, and direct messaging between all platform stakeholders.", color: "#10B981", icon: MessageCircle },
-                        { num: "06", title: "Analytics & Reports", desc: "Student, teacher, and school-wide analytics with real-time insights and exportable reports.", color: "#0D63CC", icon: BarChart2 },
+                        { num: "01", title: "Attendance Management", desc: "Daily and monthly attendance tracking with analytics, reports, and automated notifications to parents.", color: "#0D63CC", icon: CheckSquare,  image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
+                        { num: "02", title: "Assessment & Grading", desc: "Exams, assignments, grades, and performance reports — all in one structured assessment workflow.", color: "#00DA99", icon: ClipboardList, image: "/images/supercampus/02-Assessment-&-Grading-Feature-Thumnail.png" },
+                        { num: "03", title: "Task & Assignment Hub", desc: "Create, submit, and review tasks with real-time progress tracking across classrooms.", color: "#8B5CF6", icon: BookOpen, image: "/images/supercampus/03-Task-&-Assignment Hub-Feature-Thumnail.png" },
+                        { num: "04", title: "CRM & Admissions", desc: "Lead tracking, follow-up management, conversion analytics, and pipeline visibility for admissions.", color: "#F59E0B", icon: Handshake, image: "/images/supercampus/04-CRM-&-Admissions-Feature.png" },
+                        { num: "05", title: "Communication Center", desc: "Announcements, notifications, and direct messaging between all platform stakeholders.", color: "#10B981", icon: MessageCircle, image: "/images/supercampus/05-Communication-Center-Feature-Thumnail.png" },
+                        { num: "06", title: "Analytics & Reports", desc: "Student, teacher, and school-wide analytics with real-time insights and exportable reports.", color: "#0D63CC", icon: BarChart2, image: "/images/supercampus/06-Analytics-&-ReportsThumnail.png" },
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -378,7 +385,15 @@ export default function SuperCampusCaseStudy() {
                               <feature.icon size={20} className="text-text-secondary opacity-20" />
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{feature.desc}</p>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10 mb-8">{feature.desc}</p>
+                              <div className="relative z-10 w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                                 <Image 
+                                    src={feature.image} 
+                                    alt={feature.title} 
+                                    fill 
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                                 />
+                              </div>
                         </motion.div>
                      ))}
                   </div>
@@ -1061,14 +1076,64 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                      <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Super Admin Dashboard" glowCls="bg-[#0D63CC]" icon={Monitor} />
+                        {/* <PremiumPlaceholder aspect="aspect-[4/3]" label="Super Admin Dashboard" glowCls="bg-[#0D63CC]" icon={Monitor} /> */}
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                           <Image
+                              src="/images/supercampus/SuperAdminDashboard-Thumnail.png"
+                              alt="Super Admin Dashboard"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                        </div>
                      </div>
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Teacher App" glowCls="bg-[#00DA99]" icon={BookOpenCheck} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="CRM Portal" glowCls="bg-[#0D63CC]" icon={Handshake} />
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                           src="/images/supercampus/TeacherApp-Thumnail.png"
+                           alt="Teacher App"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Teacher App" glowCls="bg-[#00DA99]" icon={BookOpenCheck} /> */}
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} /> */}
+                     <Image
+                           src="/images/supercampus/ParentApp-Thumnail.png"
+                           alt="Parent App"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                    
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                    {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
+                     <Image
+                           src="/images/supercampus/StudentApp-Thumnail.png"
+                           alt="Student App"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="CRM Portal" glowCls="bg-[#0D63CC]" icon={Handshake} /> */}
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                    {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
+                     <Image
+                           src="/images/supercampus/CRMPortalApp-Thumnail.png"
+                           alt="CRM Portal"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
                      <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Analytics & Reports" glowCls="bg-[#00DA99]" icon={BarChart2} />
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                           <Image
+                              src="/images/supercampus/Analytics-&-Reports-Thumnail.png"
+                              alt="Analytics & Reports"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                        </div>
+                        {/* <PremiumPlaceholder aspect="aspect-[4/3]" label="Analytics & Reports" glowCls="bg-[#00DA99]" icon={BarChart2} /> */}
                      </div>
                   </div>
                </section>
@@ -1156,7 +1221,7 @@ export default function SuperCampusCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 SuperSchool™ successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
+                                 SuperCampus™ successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
                               </p>
                            </div>
                         </div>

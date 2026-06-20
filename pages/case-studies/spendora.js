@@ -899,16 +899,65 @@ export default function SpendoraCaseStudy() {
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                      {/* Top row */}
                      <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Main Dashboard" glowCls="bg-secondary" />
+                        {/* <PremiumPlaceholder aspect="aspect-[4/3]" label="Main Dashboard" glowCls="bg-secondary" /> */}
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/MainDashboard.png"
+                              alt="Main Dashboard"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                        </div>
                      </div>
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile List" glowCls="bg-primary" />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile Analytics" glowCls="bg-secondary" />
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/MobileList.png"
+                              alt="Mobile List"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                           {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile List" glowCls="bg-primary" /> */}
+                        </div>
+                       <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/MobileAnalytics.png"
+                              alt="Mobile Analytics"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                          {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile Analytics" glowCls="bg-secondary" /> */}
+                        </div>
 
                      {/* Bottom row */}
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Insights" glowCls="bg-primary" />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Budget Setup" glowCls="bg-secondary" />
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/AI-Insights.png"
+                              alt="AI Insights"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                         {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Insights" glowCls="bg-primary" /> */}
+                        </div>
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/BudgetSetup.png"
+                              alt="Budget Setup"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                          {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Budget Setup" glowCls="bg-secondary" /> */}
+                        </div>
+                    
                      <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Goal Planning UI" glowCls="bg-primary" />
+                        {/* <PremiumPlaceholder aspect="aspect-[4/3]" label="Goal Planning UI" glowCls="bg-primary" /> */}
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                              src="/images/spendora/Goal-Planning-UI.png"
+                              alt="Goal Planning UI"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                        </div>
                      </div>
                   </div>
                </section>

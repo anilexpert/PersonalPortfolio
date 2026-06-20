@@ -6,8 +6,9 @@ import {
    ArrowLeft, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
    Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
    Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
-   PieChart, Handshake, MessageCircle, MessageSquare, User, Award, Database, BrainCircuit,
-   Network, Crosshair, Compass, Server, Globe
+   PieChart, Handshake, MessageCircle, User, Award, BrainCircuit, BarChart3,
+   Workflow, Layers, MessageSquare, Database, LineChart, Cpu, Fingerprint,
+   Share2, Lock, Shuffle
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -29,16 +30,14 @@ export default function MarketVisionAICaseStudy() {
       transition: { staggerChildren: 0.15 }
    }
 
+   // Premium Glass Placeholder Component
    const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#0D63CC]", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
-      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#6366F1]/40 shadow-lg`}>
-         {/* Top Right Glow Effect */}
+      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
          <div
-            className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-            style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
+            className={`absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0 ${glowCls}`}
          />
-
          <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
-         {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-35`} strokeWidth={1.2} />}
+         {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-30`} strokeWidth={1.2} />}
          <span className={`font-bold tracking-[0.2em] text-[10px] uppercase px-8 text-center text-text-secondary relative z-10 opacity-50 group-hover:opacity-100 transition-opacity`}>
             {label}
          </span>
@@ -48,7 +47,7 @@ export default function MarketVisionAICaseStudy() {
    return (
       <>
          <Head>
-            <title>MarketVisionAI™ | Case Study - AI-Powered Market Intelligence</title>
+            <title>MarketVisionAI™ | Case Study - AI-Powered Marketing Intelligence</title>
          </Head>
 
          <Navbar />
@@ -57,12 +56,10 @@ export default function MarketVisionAICaseStudy() {
 
             {/* ── 1. PAGE HERO (Inner Banner) ───────────────────────────────────────────────── */}
             <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
-               {/* Background Glows */}
-               <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
-               <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#6366F1]/10 blur-[150px] rounded-full pointer-events-none" />
+               <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
+               <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
 
                <div className="max-w-7xl mx-auto relative z-10 text-center">
-                  {/* Breadcrumb */}
                   <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="flex items-center justify-center gap-2 text-[10px] md:text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-4 md:mb-6">
                      <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                      <span>/</span>
@@ -74,15 +71,14 @@ export default function MarketVisionAICaseStudy() {
                      className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
-                     <span className="bg-gradient-to-r from-secondary to-[#6366F1] bg-clip-text text-transparent ml-2">Studies</span>
+                     <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Studies</span>
                   </motion.h1>
 
-                  {/* Circular Rotating Badge */}
                   <div className="absolute top-2 right-[6%] hidden lg:block">
                      <RotatingBadge
                         icon={BrainCircuit}
-                        labels={["AI PLATFORM", "BI ECOSYSTEM", "SAAS"]}
-                        iconColor="#0D63CC"
+                        labels={["MARTECH", "AI-POWERED", "SAAS"]}
+                        iconColor="#00DA99"
                         size={150}
                      />
                   </div>
@@ -91,7 +87,7 @@ export default function MarketVisionAICaseStudy() {
 
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
-               {/* ── 2. HERO SECTION ────────────────────────────────────────────────────────── */}
+               {/* HERO SECTION */}
                <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
@@ -107,55 +103,61 @@ export default function MarketVisionAICaseStudy() {
                         MarketVisionAI™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#6366F1] bg-clip-text text-transparent">Market Intelligence & Analytics</span>
+                        Designing an AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Marketing Intelligence Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        Through deep research, strategic UX thinking, streamlined workflows, and a scalable design system, the platform evolved from a transactional tool into a business intelligence and operational management ecosystem that empowers ticketing organizations to operate faster, smarter, and more profitably.
+                        An AI-powered marketing intelligence and automated reporting platform designed to help agencies, marketers, and business teams centralize marketing data, uncover actionable insights, and optimize campaign performance through artificial intelligence.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Industry</p>
-                        <p className="font-bold text-sm text-text-primary">Enterprise SaaS / AI Analytics</p>
+                        <p className="font-bold text-sm text-text-primary">MarTech / AI / SaaS / BI</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Lead Product Designer & UX Strategist</p>
+                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
                         <p className="font-bold text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Web App (Desktop + Tablet Responsive)</p>
+                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Team Focus</p>
+                        <p className="font-bold text-sm text-text-primary">Product Strategy, UX, High-Fidelity UI</p>
                      </div>
                   </motion.div>
                </section>
 
-               {/* ── 3. MAIN HERO IMAGE ─────────────────────────────────────────────────────── */}
+               {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700 bg-slate-900 border-2 border-slate-800 flex items-center justify-center">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
-                        style={{ background: 'linear-gradient(135deg, #6366F1 0%, #0D63CC 100%)' }}
+                        style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
-                     <div className="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center p-8 text-center text-white relative z-10">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-indigo-900/20 mix-blend-overlay" />
-                        <BrainCircuit className="w-16 h-16 text-blue-400 mb-4 animate-pulse-slow" strokeWidth={1} />
-                        <h3 className="text-xl md:text-3xl font-black uppercase tracking-[0.15em] mb-2">MARKET PROPHET™ DASHBOARD</h3>
-                        <p className="text-xs md:text-sm text-slate-400 uppercase tracking-widest max-w-lg mb-4">[ AI Market Intelligence Visualization ]</p>
-                        <div className="flex flex-wrap justify-center gap-4 text-[10px] md:text-xs font-semibold uppercase tracking-wider text-slate-300">
-                           <span className="px-3 py-1 bg-white/10 rounded-full">Competitive Analysis</span>
-                           <span className="px-3 py-1 bg-white/10 rounded-full">Trends & Forecasting</span>
-                           <span className="px-3 py-1 bg-white/10 rounded-full">Customer Intelligence</span>
-                           <span className="px-3 py-1 bg-white/10 rounded-full">Revenue Forecasts</span>
-                        </div>
+                     <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <Image
+                           src="/images/marketvisionai/MARKETVISION-DASHBOARD.png"
+                           alt="MARKETVISION Dashboard"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
                      </div>
+                     {/* <div className="text-center relative z-10 text-white p-8">
+                        <BrainCircuit className="w-16 h-16 mx-auto mb-6 text-[#00DA99] opacity-80" strokeWidth={1} />
+                        <h2 className="text-3xl md:text-5xl font-black tracking-widest uppercase mb-4 opacity-90">MARKETVISION DASHBOARD</h2>
+                        <p className="text-slate-400 font-medium tracking-[0.2em] uppercase text-sm mb-8">AI Marketing Intelligence Hub</p>
+                        <div className="flex gap-4 justify-center">
+                           <span className="px-4 py-2 border border-white/10 rounded-full text-xs font-bold bg-white/5 backdrop-blur-sm">Multi-Channel Analytics</span>
+                           <span className="px-4 py-2 border border-[#00DA99]/20 rounded-full text-xs font-bold bg-[#00DA99]/10 text-[#00DA99] backdrop-blur-sm">AI Recommendations</span>
+                           <span className="px-4 py-2 border border-white/10 rounded-full text-xs font-bold bg-white/5 backdrop-blur-sm">Automated Reporting</span>
+                        </div>
+                     </div> */}
                   </div>
                </motion.section>
 
-               {/* ── 4. OVERVIEW / CHALLENGES / SOLUTION ─────────────────────────────────────── */}
+               {/* OVERVIEW / PROBLEM */}
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
@@ -163,10 +165,10 @@ export default function MarketVisionAICaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           Market Prophet (MarketVisionAI™) is an AI-powered market intelligence platform designed to help organizations predict market shifts, identify emerging opportunities, monitor competitors, and make data-driven strategic decisions.
+                           Modern marketing teams operate across dozens of disconnected platforms such as Google Analytics, Google Ads, Facebook, LinkedIn, email marketing tools, CRMs, and SEO platforms. Although organizations collect enormous amounts of data, transforming that information into actionable business intelligence remains a major challenge. 
                         </p>
-                        <p className="text-base text-text-secondary leading-relaxed font-normal mt-4">
-                           The platform aggregates data from multiple sources including market reports, social channels, news publications, industry databases, customer feedback, competitor websites, and financial indicators. Advanced AI models transform fragmented information into actionable business intelligence, eliminating manual research processes and enabling strategic teams to access real-time insights through a centralized intelligence ecosystem.
+                        <p className="text-lg text-text-secondary leading-relaxed font-medium mt-4">
+                           MarketVision was created to eliminate fragmented workflows and enable organizations to make faster, AI-driven marketing decisions. The platform combines multi-channel analytics, AI-generated recommendations, automated reporting, and customizable dashboards into a single intelligent ecosystem.
                         </p>
                      </div>
                   </div>
@@ -175,26 +177,23 @@ export default function MarketVisionAICaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Business Problem</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Problem</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Organizations face several critical operational and data challenges when mapping their market strategies:
-                        </p>
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-4">
                            {[
-                              { title: "Information Overload", desc: "Thousands of market signals are generated daily across industries, making manual monitoring impossible." },
-                              { title: "Delayed Decision-Making", desc: "Strategic teams spend weeks gathering and validating data before making critical decisions." },
-                              { title: "Competitive Blind Spots", desc: "Businesses struggle to continuously monitor competitor activities, launches, pricing changes, and positioning shifts." },
-                              { title: "Fragmented Data Sources", desc: "Information exists across disconnected platforms resulting in incomplete insights." },
-                              { title: "Reactive Strategy", desc: "Most organizations react to market changes rather than proactively anticipating them." }
+                              { title: "Fragmented Data Sources", desc: "Marketing data existed across multiple disconnected systems." },
+                              { title: "Manual Reporting", desc: "Agencies spent 10–20 hours every week building client reports manually." },
+                              { title: "Lack of Actionable Insights", desc: "Users could see data but struggled to understand what actions should be taken." },
+                              { title: "Reactive Decision-Making", desc: "Organizations responded to issues after performance had already declined." },
+                              { title: "Poor Scalability", desc: "Managing reports across dozens of clients became operationally expensive." }
                            ].map((item, idx) => (
-                              <div key={idx} className="flex flex-col gap-2 p-6 glass-card rounded-2xl hover:border-secondary/40">
+                              <div key={idx} className="flex flex-col gap-2 p-6 glass-card rounded-2xl">
                                  <div className="flex items-center gap-3">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_10px_rgba(13,99,204,0.5)]" />
+                                    <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)]" />
                                     <h4 className="font-bold text-sm text-text-primary">{item.title}</h4>
                                  </div>
-                                 <p className="text-xs text-text-secondary leading-relaxed pl-5">{item.desc}</p>
+                                 <p className="text-xs text-text-secondary pl-5 leading-relaxed">{item.desc}</p>
                               </div>
                            ))}
                         </div>
@@ -203,335 +202,248 @@ export default function MarketVisionAICaseStudy() {
 
                   <GlowDivider />
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Project Goals</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Challenge Statement</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <div className="grid sm:grid-cols-2 gap-6">
-                           <div className="p-6 rounded-3xl bg-blue-50/50 border border-blue-200">
-                              <h4 className="font-bold text-[#0D63CC] mb-4 flex items-center gap-2">
-                                 <Target size={18} strokeWidth={2.5} /> Business Goals
-                              </h4>
-                              <ul className="space-y-3">
-                                 {[
-                                    "Reduce market research time by 70%",
-                                    "Increase decision-making speed by 50%",
-                                    "Improve opportunity identification accuracy",
-                                    "Create recurring SaaS revenue model",
-                                    "Increase customer retention through AI-driven value"
-                                 ].map((goal, i) => (
-                                    <li key={i} className="text-xs font-semibold text-text-secondary flex items-start gap-2">
-                                       <span className="text-[#0D63CC] font-bold">•</span> {goal}
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                           <div className="p-6 rounded-3xl bg-indigo-50/50 border border-indigo-200">
-                              <h4 className="font-bold text-[#6366F1] mb-4 flex items-center gap-2">
-                                 <TrendingUp size={18} strokeWidth={2.5} /> User Goals
-                              </h4>
-                              <ul className="space-y-3">
-                                 {[
-                                    "Access market insights instantly",
-                                    "Monitor competitors in real time",
-                                    "Discover emerging opportunities",
-                                    "Receive predictive trend forecasts",
-                                    "Generate executive-ready reports"
-                                 ].map((goal, i) => (
-                                    <li key={i} className="text-xs font-semibold text-text-secondary flex items-start gap-2">
-                                       <span className="text-[#6366F1] font-bold">•</span> {goal}
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
+                        <div className="p-8 md:p-10 glass-card rounded-[24px] border-l-4 border-[#0D63CC] bg-blue-50/30">
+                           <h2 className="text-xl md:text-2xl font-black text-text-primary leading-relaxed">
+                              "How might we help digital agencies centralize marketing intelligence, automate reporting workflows, and provide AI-powered optimization recommendations that improve campaign performance at scale?"
+                           </h2>
                         </div>
                      </div>
                   </div>
                </section>
 
-               {/* ── 5. USER RESEARCH & KEY FINDINGS ────────────────────────────────────────── */}
+               {/* GOALS */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Discovery Phase
-                        </span>
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Target Outcomes</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Discovery</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        To align on user needs and workflows, we conducted qualitative and quantitative research across multiple stakeholder groups and enterprise industries.
-                     </p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Goals</span></h2>
                   </div>
 
-                  {/* Sample Size and Activities */}
-                  <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
-                     <div className="p-8 glass-card rounded-3xl">
-                        <h4 className="font-bold text-sm uppercase tracking-wider text-text-primary mb-4">Research Sample Size</h4>
-                        <div className="grid grid-cols-2 gap-4">
+                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                     <motion.div {...fadeIn} className="p-8 glass-card rounded-[24px] border-t-4 border-[#0D63CC]">
+                        <div className="w-12 h-12 bg-[#0D63CC]/10 rounded-2xl flex items-center justify-center mb-6">
+                           <Target className="text-[#0D63CC]" size={24} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-text-primary mb-6">Business Goals</h3>
+                        <ul className="space-y-4">
                            {[
-                              { label: "Stakeholders", val: "28", desc: "CEOs & Strategy Consultants" },
-                              { label: "End Users", val: "42", desc: "Analysts & Product Leads" },
-                              { label: "Enterprise Orgs", val: "15", desc: "B2B SaaS & Tech Companies" },
-                              { label: "Industry Domains", val: "8", desc: "BI, Fintech, Healthcare, etc." }
-                           ].map((item, i) => (
-                              <div key={i} className="p-4 bg-white/50 border border-slate-100 rounded-2xl">
-                                 <span className="block text-2xl font-black text-secondary">{item.val}</span>
-                                 <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wide mt-1">{item.label}</span>
-                                 <span className="block text-[9px] text-text-secondary mt-0.5">{item.desc}</span>
-                              </div>
+                              "Reduce reporting effort by 80%",
+                              "Increase customer retention",
+                              "Create a scalable agency reporting platform",
+                              "Improve campaign performance through AI",
+                              "Increase monthly recurring revenue"
+                           ].map((g, i) => (
+                              <li key={i} className="flex items-center gap-3 text-sm font-medium text-text-secondary">
+                                 <CheckCircle2 size={16} className="text-[#0D63CC]" /> {g}
+                              </li>
                            ))}
+                        </ul>
+                     </motion.div>
+
+                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="p-8 glass-card rounded-[24px] border-t-4 border-[#00DA99]">
+                        <div className="w-12 h-12 bg-[#00DA99]/10 rounded-2xl flex items-center justify-center mb-6">
+                           <User className="text-[#00DA99]" size={24} />
                         </div>
+                        <h3 className="text-2xl font-bold text-text-primary mb-6">User Goals</h3>
+                        <ul className="space-y-4">
+                           {[
+                              "View all marketing channels in one place",
+                              "Automate client reporting",
+                              "Receive optimization recommendations",
+                              "Build customized dashboards",
+                              "Identify opportunities faster"
+                           ].map((g, i) => (
+                              <li key={i} className="flex items-center gap-3 text-sm font-medium text-text-secondary">
+                                 <CheckCircle2 size={16} className="text-[#00DA99]" /> {g}
+                              </li>
+                           ))}
+                        </ul>
+                     </motion.div>
+                  </div>
+               </section>
+
+               {/* RESEARCH FINDINGS */}
+               <section className="mb-16 md:mb-24 lg:mb-32 bg-slate-50 rounded-[40px] p-8 md:p-12 lg:p-16 border border-slate-200">
+                  <div className="mb-12">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Discovery</span>
                      </div>
-                     <div className="p-8 glass-card rounded-3xl flex flex-col justify-between">
-                        <div>
-                           <h4 className="font-bold text-sm uppercase tracking-wider text-text-primary mb-4">Research Activities</h4>
-                           <div className="flex flex-wrap gap-2">
-                              {["Stakeholder Interviews", "User Interviews", "Market Analysis", "Competitive Benchmarking", "Workflow Observation", "Analytics Review"].map((act, i) => (
-                                 <span key={i} className="px-3 py-1.5 bg-slate-100 text-text-primary border border-slate-200 text-xs font-semibold rounded-lg">
-                                    {act}
-                                 </span>
-                              ))}
-                           </div>
-                        </div>
-                        <div className="mt-6 p-4 bg-blue-50 border border-blue-100 rounded-2xl text-[11px] font-bold text-text-secondary leading-relaxed">
-                           <strong className="text-secondary">Note:</strong> Conducted interviews with CEOs, Product Managers, Marketing Directors, Business Analysts, Strategy Consultants, and Investment Researchers to trace the core friction in strategic decision-making.
-                        </div>
-                     </div>
+                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Key Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Findings</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl">We conducted extensive discovery activities with over 50 participants across agency owners, marketing managers, specialists, and clients.</p>
                   </div>
 
-                  {/* Findings Grid */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Research Consumes Significant Time", desc: "Teams spend 15–25 hours weekly gathering information from multiple sources.", color: "#0D63CC" },
-                        { num: "02", title: "Reports Become Outdated Quickly", desc: "Traditional static reports often become irrelevant within days as market shifts happen rapidly.", color: "#6366F1" },
-                        { num: "03", title: "Data Lacks Business Context", desc: "Users receive lots of data but struggle to understand the strategic implications and what actions to take next.", color: "#06B6D4" },
-                        { num: "04", title: "Competitive Monitoring is Manual", desc: "Most organizations rely on tedious spreadsheets and manual website checks to track competitor changes.", color: "#EC4899" },
-                        { num: "05", title: "Opportunity Signals are Missed", desc: "Critical market opportunities often go unnoticed due to information overload and fragmentation.", color: "#10B981" }
+                        { num: "01", title: "Reporting takes significant time", stat: "12-15 hours", desc: "Average reporting time spent per week compiling manual reports." },
+                        { num: "02", title: "Data is scattered", stat: "Multiple Tools", desc: "Users switch between Google Analytics, Ads, Facebook, CRM, and SEO tools constantly." },
+                        { num: "03", title: "Need recommendations, not just data", stat: "\"What next?\"", desc: "Most participants said: 'We know what happened, but we don't know what to do next.'" },
+                        { num: "04", title: "Dashboard flexibility is required", stat: "Custom Needs", desc: "Every client required different reporting structures and metrics." }
                      ].map((insight, i) => (
-                        <motion.div
-                           key={i}
-                           {...fadeIn}
-                           transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
-                        >
-                           <div
-                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-                              style={{ backgroundColor: insight.color }}
-                           />
-                           <div className="flex items-center justify-between mb-8 relative z-10">
-                              <div
-                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs transition-all duration-300 group-hover:scale-110"
-                                 style={{ backgroundColor: `${insight.color}20`, color: insight.color, border: `1px solid ${insight.color}30` }}
-                              >
-                                 {insight.num}
-                              </div>
-                              <Search size={20} className="text-text-secondary opacity-30" />
+                        <div key={i} className="p-8 bg-white rounded-[24px] border border-slate-200 hover:shadow-xl transition-all group">
+                           <span className="text-[48px] font-black text-slate-100 block mb-2 leading-none group-hover:text-primary/10 transition-colors">{insight.num}</span>
+                           <h4 className="font-bold text-xl text-text-primary mb-4">{insight.title}</h4>
+                           <div className="flex flex-col mb-4">
+                              <span className="text-2xl font-black text-[#0D63CC]">{insight.stat}</span>
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{insight.title}</h4>
-                           <p className="text-xs text-text-secondary font-medium leading-relaxed relative z-10">{insight.desc}</p>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed">{insight.desc}</p>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               {/* PRODUCT VISION & STRATEGY */}
+               <section className="mb-16 md:mb-24 lg:mb-32 text-center max-w-5xl mx-auto px-4">
+                  <div className="mb-12">
+                     <h2 className="text-3xl md:text-5xl font-black text-text-primary leading-tight tracking-tight mb-4">
+                        Empower every agency with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] via-[#0D63CC] to-[#8B5CF6]">enterprise-grade</span> AI marketing intelligence.
+                     </h2>
+                  </div>
+                  
+                  <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+                     {[
+                        { title: "Unified Dashboard", desc: "Single Source of Truth", icon: Layout, color: "#0D63CC", glow: "from-[#0D63CC]/10 to-transparent" },
+                        { title: "AI Intelligence", desc: "Conversational Analytics", icon: BrainCircuit, color: "#8B5CF6", glow: "from-[#8B5CF6]/10 to-transparent" },
+                        { title: "Real-Time", desc: "Continuous Monitoring", icon: Activity, color: "#00DA99", glow: "from-[#00DA99]/10 to-transparent" },
+                        { title: "Automation", desc: "Reduce Manual Effort", icon: Zap, color: "#F59E0B", glow: "from-[#F59E0B]/10 to-transparent" },
+                        { title: "Ecosystem", desc: "Connect All Platforms", icon: Layers, color: "#EC4899", glow: "from-[#EC4899]/10 to-transparent" }
+                     ].map((pillar, idx) => (
+                        <motion.div 
+                           key={idx}
+                           whileHover={{ y: -8 }}
+                           className="relative group h-full"
+                        >
+                           {/* Card Glow */}
+                           <div className={`absolute inset-0 bg-gradient-to-br ${pillar.glow} opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl rounded-[24px]`} />
+                           
+                           <div className="h-full flex flex-col items-center justify-center text-center p-6 bg-white rounded-[24px] border border-slate-100 group-hover:border-slate-200 shadow-sm group-hover:shadow-xl transition-all duration-500 relative z-10 overflow-hidden">
+                              <div 
+                                 className="w-14 h-14 rounded-[16px] flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 border border-slate-50 relative overflow-hidden shadow-sm"
+                                 style={{ backgroundColor: `${pillar.color}10` }}
+                              >
+                                 <pillar.icon size={26} strokeWidth={1.5} style={{ color: pillar.color }} className="relative z-10" />
+                              </div>
+                              <h5 className="font-bold text-[13px] text-text-primary mb-2 tracking-tight">{pillar.title}</h5>
+                              <p className="text-[9px] text-text-secondary uppercase tracking-[0.15em] font-bold leading-relaxed opacity-70">{pillar.desc}</p>
+                           </div>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
-               {/* ── 6. CHALLENGE STATEMENT ─────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32 text-center max-w-4xl mx-auto px-4">
-                  <div className="p-8 md:p-12 glass-card rounded-[32px] border-2 border-[#0D63CC]/20 hover:border-[#6366F1]/40 relative overflow-hidden group shadow-xl">
-                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
-                     <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-[0.2em] mb-4 block">Challenge Statement</span>
-                     <h2 className="text-xl md:text-3xl font-black text-text-primary leading-relaxed relative z-10">
-                        “How might we create an AI-powered platform that continuously monitors markets, predicts future trends, identifies opportunities, and transforms complex data into actionable strategic intelligence?”
-                     </h2>
-                  </div>
-               </section>
-
-               {/* ── 7. PRODUCT STRATEGY & PILLARS ───────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                           <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                              Strategy
-                           </span>
-                        </div>
-                        <h2 className="text-4xl font-bold text-text-primary mb-6">Core Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Pillars</span></h2>
-                        <p className="text-text-secondary font-medium mb-8 leading-relaxed">
-                           Our product strategy centers on five core pillars, transitioning the platform from a transactional data aggregator into a proactive business intelligence and operational management ecosystem.
-                        </p>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                           {[
-                              { title: "Predictive Intelligence", desc: "Forecast future market movements using AI models.", icon: Compass },
-                              { title: "Competitive Intelligence", desc: "Monitor competitors automatically and track strategic movements.", icon: Crosshair },
-                              { title: "Opportunity Detection", desc: "Identify emerging trends and opportunities before competitors.", icon: Target },
-                              { title: "Strategic Recommendations", desc: "Provide actionable next-step guidance and AI actions.", icon: Brain },
-                              { title: "Executive Reporting", desc: "Generate stakeholder-ready insights and executive reports instantly.", icon: FileText }
-                           ].map((item, idx) => (
-                              <div key={idx} className="p-4 rounded-2xl bg-white/50 border border-slate-200/60 shadow-sm hover:border-[#0D63CC]/40 transition-colors">
-                                 <item.icon size={20} className="text-[#0D63CC] mb-3" />
-                                 <h5 className="font-bold text-text-primary text-sm mb-1">{item.title}</h5>
-                                 <p className="text-xs text-text-secondary">{item.desc}</p>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-                     <div className="relative">
-                        <PremiumPlaceholder aspect="aspect-square" label="Intelligence Pillars UI Visualization" glowCls="bg-[#0D63CC]" icon={Brain} />
-                     </div>
-                  </div>
-               </section>
-
-               {/* ── 8. INFORMATION ARCHITECTURE & FEATURE PRIORITIZATION ────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
-                           <span className="text-[10px] font-bold text-[#6366F1] uppercase tracking-widest">
-                              Architecture
-                           </span>
-                        </div>
-                        <h2 className="text-3xl font-bold text-text-primary mb-4">Information Architecture</h2>
-                        <p className="text-xs text-text-secondary font-medium leading-relaxed">
-                           A streamlined navigation structure optimized for fast access to high-impact intelligence modules, enabling executives and strategy leads to traverse sections smoothly.
-                        </p>
-                     </div>
-                     <div className="lg:col-span-8">
-                        <div className="p-8 glass-card rounded-[32px] overflow-hidden relative border border-slate-200">
-                           <div className="absolute top-0 right-0 w-32 h-32 bg-[#6366F1]/10 blur-[50px] rounded-full pointer-events-none" />
-                           <div className="flex flex-col items-center">
-                              {/* Root */}
-                              <div className="px-6 py-2.5 bg-[#0D63CC] text-white font-bold rounded-xl shadow-lg text-xs z-10 flex items-center gap-2">
-                                 <Layout size={14} /> Dashboard (Main Hub)
-                              </div>
-                              <div className="h-6 w-0.5 bg-slate-300" />
-                              
-                              {/* Level 1 Grid */}
-                              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-                                 {[
-                                    { label: "Executive Overview", sub: ["AI Recommendations", "Reports"] },
-                                    { label: "Market Intelligence", sub: ["Market Trends", "Industry Signals"] },
-                                    { label: "Competitive Hub", sub: ["Competitor Intel", "Alerts Center"] },
-                                    { label: "Opportunity Radar", sub: ["Integrations", "Settings"] }
-                                 ].map((node, i) => (
-                                    <div key={i} className="flex flex-col items-center">
-                                       <div className="w-full text-center px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-xs font-bold text-text-primary">
-                                          {node.label}
-                                       </div>
-                                       <div className="h-4 w-0.5 bg-slate-300" />
-                                       <div className="space-y-2 w-full">
-                                          {node.sub.map((subNode, j) => (
-                                             <div key={j} className="text-center px-3 py-1 bg-white border border-slate-100 rounded shadow-sm text-[10px] font-semibold text-text-secondary">
-                                                {subNode}
-                                             </div>
-                                          ))}
-                                       </div>
-                                    </div>
-                                 ))}
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <GlowDivider />
-
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                           <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                              Prioritization
-                           </span>
-                        </div>
-                        <h2 className="text-3xl font-bold text-text-primary mb-4">Feature Prioritization</h2>
-                        <p className="text-xs text-text-secondary font-medium leading-relaxed">
-                           Using a value-vs-effort framework, we prioritized high-impact, high-value modules for the initial product launch to maximize business and user values.
-                        </p>
-                     </div>
-                     <div className="lg:col-span-8">
-                        <div className="grid sm:grid-cols-2 gap-4">
-                           <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200">
-                              <h4 className="font-bold text-emerald-700 text-sm mb-3 uppercase tracking-wider flex items-center gap-2">
-                                 <CheckCircle2 size={16} className="text-emerald-500" /> High Impact & High Priority
-                              </h4>
-                              <ul className="space-y-3">
-                                 {[
-                                    { name: "Executive Dashboard", desc: "Centralized overview of market health, opportunity, and risk metrics." },
-                                    { name: "Competitor Monitoring", desc: "Automated tracking of competitor pricing, positioning, and launches." },
-                                    { name: "Trend Forecast Engine", desc: "Machine learning predictions of future market demand and direction." },
-                                    { name: "Opportunity Discovery", desc: "Radar system to uncover high-potential growth opportunities early." },
-                                    { name: "AI Insight Generation", desc: "Proactive recommendations backed by explanation reasoning." }
-                                 ].map((feat, i) => (
-                                    <li key={i} className="text-xs">
-                                       <span className="font-bold text-text-primary block">{feat.name}</span>
-                                       <span className="text-text-secondary leading-relaxed mt-0.5 block">{feat.desc}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                           <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                              <div className="space-y-4">
-                                 <h4 className="font-bold text-text-secondary text-sm uppercase tracking-wider">Other Prioritization Tiers</h4>
-                                 <div className="space-y-3">
-                                    <div>
-                                       <span className="font-bold text-xs text-text-primary">Medium Priority / High Value</span>
-                                       <span className="text-[11px] text-text-secondary block mt-0.5">Automated Executive Briefings, Conversational Copilot, scenario simulation.</span>
-                                    </div>
-                                    <div>
-                                       <span className="font-bold text-xs text-text-primary">Low Priority / Strategic Roadmap</span>
-                                       <span className="text-[11px] text-text-secondary block mt-0.5">Market Scenario Planning, Multi-Agent strategy simulation.</span>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div className="p-3 bg-white border border-slate-100 rounded-xl text-[10px] text-text-secondary leading-relaxed font-bold mt-4">
-                                 * Tiering is validated through 42 customer user testing runs and SaaS commercial value mapping.
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ── 9. USER PERSONAS ────────────────────────────────────────────────────────── */}
+               {/* SOLUTION & IA */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
-                        <span className="text-[10px] font-bold text-[#6366F1] uppercase tracking-widest">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">The Solution</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">A Centralized AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        MarketVision combines multiple data sources into a single, intelligent platform, streamlining the entire marketing workflow.
+                     </p>
+                  </div>
+                  
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+                     {/* Feature List */}
+                     <div className="lg:col-span-5 glass-card rounded-[32px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group flex flex-col">
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+                        <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
+                           <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center border border-[#0D63CC]/20 shadow-sm">
+                              <CheckCircle2 size={24} className="text-[#0D63CC]" /> 
+                           </div>
+                           <div>
+                              <span className="block text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest mb-1">Features</span>
+                              <span className="block font-bold text-text-primary tracking-tight text-xl">Core Capabilities</span>
+                           </div>
+                        </div>
+                        <ul className="space-y-4 relative z-10 flex-1">
+                           {[
+                              "Connect multiple data sources",
+                              "Analyze performance across channels",
+                              "Receive AI-generated optimization suggestions",
+                              "Create custom dashboards",
+                              "Automate reporting",
+                              "Export and share insights"
+                           ].map((item, i) => (
+                              <li key={i} className="flex items-start gap-4 group/li bg-white/50 p-4 rounded-2xl border border-slate-100 hover:bg-white hover:border-[#00DA99]/30 transition-all shadow-sm hover:shadow-md cursor-default">
+                                 <div className="mt-0.5 w-6 h-6 rounded-full bg-[#00DA99]/10 flex items-center justify-center flex-shrink-0 group-hover/li:scale-110 transition-transform">
+                                    <CheckCircle2 size={12} className="text-[#00DA99]" />
+                                 </div>
+                                 <span className="text-[13px] font-bold text-text-secondary group-hover/li:text-text-primary transition-colors leading-snug">{item}</span>
+                              </li>
+                           ))}
+                        </ul>
+                     </div>
+
+                     {/* IA Tree */}
+                     <div className="lg:col-span-7 glass-card rounded-[32px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group">
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+                        <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
+                           <div className="w-12 h-12 rounded-xl bg-[#00DA99]/10 flex items-center justify-center border border-[#00DA99]/20 shadow-sm">
+                              <Database size={24} className="text-[#00DA99]" /> 
+                           </div>
+                           <div>
+                              <span className="block text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-1">Architecture</span>
+                              <span className="block font-bold text-text-primary tracking-tight text-xl">MarketVision IA Tree</span>
+                           </div>
+                        </div>
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                              <Image
+                                 src="/images/marketvisionai/Information-Architecture.png"
+                                 alt="Information Architecture"
+                                 fill
+                                 className="object-cover relative z-10 duration-1000"
+                              />
+                           </div>
+                     </div>
+                  </div>
+               </section>
+
+               {/* USER PERSONAS */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Personas</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        We mapped two primary personas representing our strategic stakeholders and primary analytical users.
+                        We identified key user groups to understand their goals, pain points, and motivations. These personas guided our design decisions and feature prioritization.
                      </p>
                   </div>
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                      {[
                         {
-                           name: "Sarah Thompson",
-                           role: "VP Product Strategy",
-                           age: "39",
-                           bio: "Needs to understand the overall market direction, identify new growth avenues, and validate major roadmap decisions without spending hours on manual reports.",
-                           needs: ["Understand market direction", "Identify growth opportunities", "Validate roadmap decisions"],
-                           pains: ["Too many fragmented information sources", "Delayed reporting cycles", "Unclear, noisy market signals"],
-                           metrics: ["Faster roadmap decisions", "Better market positioning", "Increased product adoption"],
-                           color: "#0D63CC"
+                           name: "Sarah Wilson",
+                           role: "Agency Owner (Primary User)",
+                           age: "42",
+                           bio: "Needs to manage multiple clients and increase agency profitability. Wants to reduce reporting effort and scale operations efficiently.",
+                           goals: ["Manage multiple clients", "Reduce reporting effort", "Increase agency profitability"],
+                           pains: ["Manual reporting consumes time", "Hard to monitor all clients", "Limited scalability"],
+                           color: "#0D63CC",
+                           icon: Briefcase
                         },
                         {
-                           name: "David Miller",
-                           role: "Market Intelligence Analyst",
-                           age: "31",
-                           bio: "Responsible for gathering competitive intelligence, monitoring pricing models, and preparing executive briefings. Needs automated extraction tools.",
-                           needs: ["Automate daily research", "Generate insights quickly", "Deliver executive-ready reports"],
-                           pains: ["Manual data collection & tracking", "Repetitive slide deck reporting", "Limited predictive forecasting capabilities"],
-                           metrics: ["Research efficiency & speed", "Report generation speed", "Insight forecasting accuracy"],
-                           color: "#6366F1"
+                           name: "Michael Chen",
+                           role: "Digital Marketing Manager",
+                           age: "35",
+                           bio: "Tracks multiple campaigns across disconnected platforms. Needs to quickly identify opportunities and generate actionable client reports.",
+                           goals: ["Improve campaign performance", "Identify opportunities quickly", "Generate client reports"],
+                           pains: ["Too many disconnected platforms", "Hard to prioritize tasks", "Lack of actionable advice"],
+                           color: "#00DA99",
+                           icon: LineChart
                         }
                      ].map((persona, idx) => (
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#6366F1]/40 shadow-md"
+                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
                         >
                            {/* Dynamic Background Glow */}
                            <div
@@ -540,12 +452,12 @@ export default function MarketVisionAICaseStudy() {
                            />
 
                            <div className="flex items-center gap-8 mb-12 relative z-10">
-                              <div className="w-24 h-24 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center bg-slate-100">
-                                 <Users size={32} className="text-[#0D63CC]" />
+                              <div className="w-24 h-24 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-[#0D63CC]/20 shadow-xl flex items-center justify-center bg-white/50 backdrop-blur-xl">
+                                 <persona.icon size={40} className="text-slate-800" />
                               </div>
                               <div>
                                  <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-semibold text-text-secondary mt-2 opacity-80">{persona.role} • Age {persona.age}</p>
+                                 <p className="text-xs font-medium text-secondary mt-2 opacity-80 uppercase tracking-wider">{persona.role} • Age {persona.age}</p>
                               </div>
                            </div>
 
@@ -554,40 +466,27 @@ export default function MarketVisionAICaseStudy() {
                            </p>
 
                            <div className="space-y-6 relative z-10">
-                              <div className="p-6 rounded-3xl bg-blue-50/50 border border-blue-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-4 flex items-center gap-2">
-                                    <CheckCircle2 size={14} strokeWidth={3} /> Core Needs & Goals
+                              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
+                                    <CheckCircle2 size={14} strokeWidth={3} /> Core Goals
                                  </h5>
                                  <div className="flex flex-wrap gap-3">
-                                    {persona.needs.map((n, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-blue-100 text-xs font-medium text-text-primary">
+                                    {persona.goals.map((n, i) => (
+                                       <span key={i} className="px-4 py-2 bg-white/80 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">
                                           {n}
                                        </span>
                                     ))}
                                  </div>
                               </div>
 
-                              <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
+                              <div className="p-6 rounded-3xl bg-rose-50/50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
                                     <Activity size={14} strokeWidth={3} /> Critical Pain Points
                                  </h5>
                                  <div className="flex flex-wrap gap-3">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                       <span key={i} className="px-4 py-2 bg-white/80 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
                                           {p}
-                                       </span>
-                                    ))}
-                                 </div>
-                              </div>
-
-                              <div className="p-6 rounded-3xl bg-emerald-50 border border-emerald-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-emerald-600 mb-4 flex items-center gap-2">
-                                    <TrendingUp size={14} strokeWidth={3} /> Success Metrics
-                                 </h5>
-                                 <div className="flex flex-wrap gap-3">
-                                    {persona.metrics.map((m, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/60 rounded-lg border border-emerald-100 text-xs font-medium text-text-primary">
-                                          {m}
                                        </span>
                                     ))}
                                  </div>
@@ -598,55 +497,23 @@ export default function MarketVisionAICaseStudy() {
                   </div>
                </section>
 
-               {/* ── 10. USER JOURNEY MAPPING ───────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           User Flow
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User Journey <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Mapping</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Trace of the user interaction steps through the MarketVisionAI intelligence loop.</p>
-                  </div>
-
-                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                     {[
-                        { num: "01", phase: "Awareness", desc: "Discovers need for centralized market intelligence." },
-                        { num: "02", phase: "Exploration", desc: "Evaluates available strategic intelligence tools." },
-                        { num: "03", phase: "Onboarding", desc: "Connects data sources and configures custom alerts." },
-                        { num: "04", phase: "Monitoring", desc: "Tracks global market developments and signals daily." },
-                        { num: "05", phase: "Analysis", desc: "Investigates detailed AI-generated opportunities." },
-                        { num: "06", phase: "Decision", desc: "Applies recommendations to active business strategy." },
-                        { num: "07", phase: "Reporting", desc: "Generates and shares executive-ready summaries." }
-                     ].map((step, i) => (
-                        <div key={i} className="p-5 glass-card rounded-2xl hover:border-[#0D63CC]/40 transition-all flex flex-col justify-between min-h-[180px]">
-                           <div>
-                              <span className="block text-[10px] font-bold text-text-secondary opacity-50">{step.num}</span>
-                              <h5 className="font-bold text-sm text-text-primary mt-2">{step.phase}</h5>
-                           </div>
-                           <p className="text-[11px] text-text-secondary leading-relaxed mt-4">{step.desc}</p>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* ── 11. EMPATHY MAP ────────────────────────────────────────────────────────── */}
+               {/* EMPATHY MAP */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Psychology
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                           Research Insight
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Mapping</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating user statements, thoughts, emotions, and behaviors to validate strategy.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Understanding our users' mental models to align on strategic intelligence needs.</p>
                   </div>
 
-                  <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-2xl border border-slate-200 bg-white/30 backdrop-blur-3xl group">
+                  <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
+
                      {/* Ambient inner neon glows */}
                      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
-                     <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#6366F1]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#6366F1]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
+                     <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
 
                      {/* Decorative dashed X background (hidden on mobile) */}
                      <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
@@ -659,9 +526,13 @@ export default function MarketVisionAICaseStudy() {
                      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
 
                         {/* Top Row: THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <div className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
+                              <motion.div
+                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                 className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15"
+                              />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
                                     <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
@@ -670,13 +541,13 @@ export default function MarketVisionAICaseStudy() {
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[
-                                    "“Are we missing major market opportunities?”",
-                                    "“What are our competitors planning next?”",
-                                    "“Is this prediction reliable enough to back up our roadmap?”",
-                                    "“I wish I could filter out the noise and see real trends.”"
+                                    "“Which campaigns need attention?”",
+                                    "“What should I optimize first?”",
+                                    "“Am I missing key competitor moves?”",
+                                    "“Is this data actually accurate?”"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 flex-shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
@@ -685,24 +556,28 @@ export default function MarketVisionAICaseStudy() {
                         </div>
 
                         {/* Middle Row Left: SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#6366F1]/30 via-white/10 to-transparent shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
+                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
-                              <div className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#6366F1]/15" />
+                              <motion.div
+                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                                 className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15"
+                              />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#6366F1]/30 group-hover/card:border-[#6366F1] transition-colors duration-500">
-                                    <MessageSquare className="w-6 h-6 text-[#6366F1]" strokeWidth={2} />
+                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
+                                    <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
                                  </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#6366F1]">say</span>?</h3>
+                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[
-                                    "“I need reliable, real-time market insights.”",
-                                    "“We can't track competitor pricing and messaging manually.”",
-                                    "“Strategy reports take too long to write up.”",
-                                    "“I need context, not just raw figures.”"
+                                    "“Reporting takes too much time.”",
+                                    "“I need faster insights.”",
+                                    "“The clients want to see ROI clearly.”",
+                                    "“I don't trust these automated charts.”"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#6366F1] opacity-50 flex-shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
@@ -712,18 +587,22 @@ export default function MarketVisionAICaseStudy() {
 
                         {/* Middle Row Center: PROFILE CIRCLE */}
                         <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
-                           <div className="absolute inset-0 bg-[#0D63CC]/20 blur-[60px] rounded-full animate-pulse z-0" />
-                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#6366F1] p-2 shadow-2xl relative z-10 hover:scale-105 transition-transform duration-700">
+                           <div className="absolute inset-0 bg-[#00DA99]/20 blur-[60px] rounded-full animate-pulse z-0" />
+                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
                               <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
-                                 <BrainCircuit className="w-16 h-16 text-[#0D63CC] opacity-90 animate-pulse-slow" strokeWidth={1.5} />
+                                 <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
                               </div>
                            </div>
                         </div>
 
                         {/* Middle Row Right: FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-lg hover:shadow-xl transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
+                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
-                              <div className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
+                              <motion.div
+                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                 className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15"
+                              />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
                                     <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
@@ -732,13 +611,13 @@ export default function MarketVisionAICaseStudy() {
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[
-                                    "Overwhelmed by scattered, noisy daily notifications.",
-                                    "Pressured to deliver fast, accurate strategic reports.",
-                                    "Responsible for high-stakes roadmap failures.",
-                                    "Anxious about competitor sneak releases and pricing shifts."
+                                    "Overwhelmed by scattered marketing data",
+                                    "Frustrated by repetitive manual tasks",
+                                    "Pressured by clients for quick results",
+                                    "Anxious about missing opportunities"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 flex-shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
@@ -747,24 +626,28 @@ export default function MarketVisionAICaseStudy() {
                         </div>
 
                         {/* Bottom Row: DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-emerald-500/30 via-white/10 to-transparent shadow-lg hover:shadow-xl transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <div className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-emerald-500/15" />
+                              <motion.div
+                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                                 className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15"
+                              />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-emerald-500/30 group-hover/card:border-emerald-500 transition-colors duration-500">
-                                    <Activity className="w-6 h-6 text-emerald-500" strokeWidth={2} />
+                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
+                                    <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
                                  </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-emerald-500">do</span>?</h3>
+                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[
-                                    "Reviews static, outdated market spreadsheets weekly.",
-                                    "Tracks competitor websites manually inside tabs.",
-                                    "Creates manual presentation decks for leadership.",
-                                    "Attempts to run custom keyword scrapes to catch trends."
+                                    "Monitors campaigns manually every day",
+                                    "Exports metrics into messy spreadsheets",
+                                    "Presents performance decks to clients",
+                                    "Switches between 5+ dashboard tools daily"
                                  ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-50 flex-shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
+                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
@@ -776,83 +659,55 @@ export default function MarketVisionAICaseStudy() {
                   </div>
                </section>
 
-               {/* ── 12. AI ARCHITECTURE & FLOW DIAGRAM ─────────────────────────────────────── */}
+               {/* CORE FEATURES GRID */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           AI Engine
+                  <div className="text-center mb-16">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
+                           Capabilities
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">AI Processing <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Architecture</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto font-sans">Our multi-layered AI pipeline handles data collection, extraction, modeling, and strategic recommendations.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">High-fidelity functionalities designed to empower users with intelligent automation.</p>
                   </div>
 
-                  <div className="max-w-4xl mx-auto bg-white/50 border border-slate-200 rounded-3xl p-8 lg:p-12 relative overflow-hidden shadow-lg">
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#0D63CC]/5 blur-[100px] pointer-events-none" />
-                     
-                     <div className="flex flex-col items-center gap-6 relative z-10">
-                        {/* Data Collection Layer */}
-                        <div className="w-full bg-[#282360] rounded-2xl p-6 text-center text-white">
-                           <h4 className="font-bold mb-4 flex items-center justify-center gap-2 text-white">
-                              <Database size={18} className="text-[#00DA99]" /> Data Collection Layer
-                           </h4>
-                           <div className="flex flex-wrap justify-center gap-3">
-                              {["News APIs", "Industry Reports", "Social Listening", "Financial Databases", "Customer Feedback", "Competitor Websites"].map((src, i) => (
-                                 <span key={i} className="px-3 py-1 bg-white/10 rounded text-xs font-semibold">{src}</span>
-                              ))}
-                           </div>
-                        </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                     {[
+                        { num: "01", title: "Multi-Channel Integrations", desc: "Connects GA, Google Ads, FB, LinkedIn, YouTube, CRM, etc., eliminating fragmented workflows.", color: "#0D63CC", icon: Layers },
+                        { num: "02", title: "Custom Dashboard Builder", desc: "Modular architecture with drag-and-drop widget library and templates for flexible reporting.", color: "#8B5CF6", icon: Layout },
+                        { num: "03", title: "AI Recommendation Engine", desc: "Analyzes SEO, Social, and Ads data to automatically generate strategic optimization actions.", color: "#00DA99", icon: BrainCircuit },
+                        { num: "04", title: "Automated Reporting", desc: "Scheduled, white-label PDF exports and client sharing with historical comparisons.", color: "#F59E0B", icon: FileText },
+                        { num: "05", title: "Dynamic Budget Optimization", desc: "Identifies inefficient spending and recommends intelligent budget redistribution.", color: "#10B981", icon: PieChart },
+                        { num: "06", title: "Real-Time Tracking", desc: "Monitor marketing performance continuously without manual data pulls.", color: "#3B82F6", icon: Activity }
+                     ].map((feature, i) => (
+                        <motion.div
+                           key={i}
+                           {...fadeIn}
+                           transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
+                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border-2 border-transparent hover:border-slate-200"
+                        >
+                           <div
+                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: feature.color }}
+                           />
 
-                        <div className="h-6 w-0.5 bg-slate-300" />
-                        
-                        {/* Processing Layer */}
-                        <div className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
-                           <h4 className="font-bold text-text-primary mb-4 flex items-center justify-center gap-2">
-                              <BrainCircuit size={18} className="text-[#0D63CC]" /> Processing Layer
-                           </h4>
-                           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                              {[
-                                 { name: "NLP Engine", desc: "Extracts market signals" },
-                                 { name: "Sentiment Analysis", desc: "Measures industry sentiment" },
-                                 { name: "Trend Detection", desc: "Identifies emerging patterns" },
-                                 { name: "Forecast Models", desc: "Predicts future market conditions" }
-                              ].map((proc, i) => (
-                                 <div key={i} className="p-3 bg-white border border-slate-100 rounded-lg shadow-sm">
-                                    <span className="block text-xs font-bold text-text-primary">{proc.name}</span>
-                                    <span className="block text-[9px] text-text-secondary mt-0.5">{proc.desc}</span>
-                                 </div>
-                              ))}
+                           <div className="flex items-center justify-between mb-8 relative z-10">
+                              <div
+                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs transition-all duration-300 group-hover:scale-110"
+                                 style={{ backgroundColor: `${feature.color}20`, color: feature.color, border: `1px solid ${feature.color}30` }}
+                              >
+                                 {feature.num}
+                              </div>
+                              <feature.icon size={24} className="text-text-secondary opacity-20 group-hover:opacity-100 transition-opacity" style={{ color: feature.color }} />
                            </div>
-                        </div>
-
-                        <div className="h-6 w-0.5 bg-slate-300" />
-                        
-                        {/* Intelligence Layer */}
-                        <div className="w-full bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
-                           <h4 className="font-bold text-[#0D63CC] mb-4 flex items-center justify-center gap-2">
-                              <Brain size={18} className="text-[#0D63CC]" /> Intelligence Layer
-                           </h4>
-                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                              {[
-                                 { name: "Opportunity Scoring", desc: "Ranks opportunities based on impact." },
-                                 { name: "Risk Assessment", desc: "Detects potential threats." },
-                                 { name: "Strategic Recommendations", desc: "Provides AI-generated actions." }
-                              ].map((intel, i) => (
-                                 <div key={i} className="p-3 bg-white border border-blue-200 rounded-xl shadow-sm text-left">
-                                    <span className="block text-xs font-bold text-text-primary flex items-center gap-1.5">
-                                       <span className="w-1.5 h-1.5 rounded-full bg-[#0D63CC]" /> {intel.name}
-                                    </span>
-                                    <span className="block text-[10px] text-text-secondary mt-1">{intel.desc}</span>
-                                 </div>
-                              ))}
-                           </div>
-                        </div>
-                     </div>
+                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{feature.desc}</p>
+                        </motion.div>
+                     ))}
                   </div>
                </section>
 
-               {/* ── 13. DESIGN SYSTEM & VISUAL IDENTITY ─────────────────────────────────────── */}
+               {/* DESIGN SYSTEM & VISUALS */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
@@ -860,49 +715,50 @@ export default function MarketVisionAICaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Visuals</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        To match the heavy intelligence requirements, we built a premium dark-infused visual strategy emphasizing information hierarchy, storytelling, and clarity.
+                        A clean, modern, and consistent design system created to ensure accessibility, clarity, and a premium enterprise user experience.
                      </p>
                   </div>
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
-                     {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#6366F1]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+
+                     {/* Colors - Spans 4 cols */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Palette
                         </h4>
                         <div className="grid grid-cols-3 gap-4">
                            {[
-                              { bg: 'bg-[#3B82F6]', label: 'Electric Blue', hex: '#3B82F6' },
-                              { bg: 'bg-[#6366F1]', label: 'Indigo', hex: '#6366F1' },
-                              { bg: 'bg-[#10B981]', label: 'Emerald', hex: '#10B981' },
-                              { bg: 'bg-[#F59E0B]', label: 'Amber', hex: '#F59E0B' },
-                              { bg: 'bg-[#EF4444]', label: 'Red', hex: '#EF4444' },
-                              { bg: 'bg-[#0F172A]', label: 'Slate Dark', hex: '#0F172A' }
+                              { bg: 'bg-[#00DA99]', label: 'Mint', hex: '#00DA99' },
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                              { bg: 'bg-[#1E293B]', label: 'Dark', hex: '#1E293B' },
+                              { bg: 'bg-[#F8FAFC]', label: 'Light', hex: '#F8FAFC', border: true },
+                              { bg: 'bg-rose-500', label: 'Accent', hex: '#F43F5E' },
+                              { bg: 'bg-amber-500', label: 'Warning', hex: '#F59E0B' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg ${color.border ? 'border border-slate-200' : 'border border-white/20'} group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
                                  <div>
-                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider leading-tight">{color.label}</span>
-                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50 mt-0.5">{color.hex}</span>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
                                  </div>
                               </div>
                            ))}
                         </div>
                      </div>
 
-                     {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#6366F1]/10 hover:border-[#6366F1]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#6366F1]/10 blur-[50px] rounded-full pointer-events-none" />
+                     {/* Typography - Spans 4 cols */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#6366F1] rounded-full" /> Typography
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
                         </h4>
 
                         <div className="flex-1 flex flex-col justify-center mb-8">
                            <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
-                              Ii
+                              Aa
                            </div>
                         </div>
 
@@ -913,416 +769,210 @@ export default function MarketVisionAICaseStudy() {
                            </div>
                            <div className="flex justify-between text-xs font-medium text-text-secondary">
                               <span>Regular</span>
-                              <span>SemiBold</span>
                               <span className="font-bold">Bold</span>
+                              <span className="font-black">Black</span>
                            </div>
                         </div>
                      </div>
 
-                     {/* Design Strategy Principles */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-emerald-500/10 hover:border-[#6366F1]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
-                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-emerald-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
-                        <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-emerald-500 rounded-full" /> Design Strategy
+                     {/* Iconography - Spans 4 cols */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
                         </h4>
-                        
-                        <div className="mb-4">
-                           <span className="block text-xs font-bold text-text-primary uppercase tracking-wide">Executive First Approach</span>
-                           <p className="text-[11px] text-text-secondary leading-relaxed mt-1">
-                              Designed for decision-makers rather than analysts, presenting actionable recommendations and high-level scoring indices first.
-                           </p>
-                        </div>
 
-                        <div className="space-y-2">
-                           <span className="block text-[10px] font-bold uppercase tracking-wider text-text-secondary">Design Principles</span>
-                           <div className="flex flex-wrap gap-1.5">
-                              {["Information hierarchy", "Visual clarity", "Progressive disclosure", "Actionable insights", "Data storytelling"].map((princ, i) => (
-                                 <span key={i} className="text-[10px] font-semibold text-text-primary px-2.5 py-1 bg-slate-100 rounded-lg">
-                                    {princ}
-                                 </span>
-                              ))}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ── 14. KEY SCREENS DETAILS ────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Key Modules
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Screens & Details</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Explore the five core functional modules of the MarketVisionAI strategic ecosystem.</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                     {[
-                        {
-                           num: "01",
-                           title: "Executive Intelligence Dashboard",
-                           desc: "Displays the centralized strategic summary.",
-                           items: ["Market Health Score", "Opportunity Index", "Risk Indicators", "Trend Forecasts", "Competitor Activity Summaries"]
-                        },
-                        {
-                           num: "02",
-                           title: "Opportunity Radar",
-                           desc: "Detects and tracks emerging industry opportunities.",
-                           items: ["Emerging opportunity mapping", "Growth potential scoring", "Industry relevance metric", "AI strategy recommendations"]
-                        },
-                        {
-                           num: "03",
-                           title: "Competitive Intelligence Hub",
-                           desc: "Keeps continuous tabs on other market players.",
-                           items: ["Competitor launch tracking", "Competitor pricing changes", "Product update extraction", "Market positioning mapping"]
-                        },
-                        {
-                           num: "04",
-                           title: "Trend Forecast Center",
-                           desc: "Predicts direction of demand changes.",
-                           items: ["Future market directions", "Demand and supply forecasts", "Growth velocity predictions", "Industry shift triggers"]
-                        },
-                        {
-                           num: "05",
-                           title: "AI Recommendation Engine",
-                           desc: "Proactively maps concrete business actions.",
-                           items: ["Strategic business actions", "Market entry suggestions", "Product feature opportunities", "Revenue generation initiatives"]
-                        }
-                     ].map((screen, i) => (
-                        <div key={i} className="glass-card rounded-3xl p-6 lg:p-8 hover:border-secondary/40 transition-all flex flex-col justify-between">
-                           <div>
-                              <div className="flex justify-between items-center mb-6">
-                                 <span className="text-[10px] font-bold text-text-secondary opacity-50">SCREEN {screen.num}</span>
-                                 <Layout size={18} className="text-text-secondary opacity-30" />
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { icon: Layout, color: "text-[#0D63CC]" },
+                              { icon: LineChart, color: "text-[#00DA99]" },
+                              { icon: Database, color: "text-rose-500" },
+                              { icon: Activity, color: "text-[#0D63CC]" },
+                              { icon: Search, color: "text-[#1E293B]" },
+                              { icon: Zap, color: "text-amber-500" },
+                              { icon: Target, color: "text-[#00DA99]" },
+                              { icon: Briefcase, color: "text-[#0D63CC]" },
+                              { icon: FileText, color: "text-rose-500" }
+                           ].map((Item, i) => (
+                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                                 <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
                               </div>
-                              <h4 className="font-bold text-lg text-text-primary mb-2">{screen.title}</h4>
-                              <p className="text-xs text-text-secondary mb-4 leading-relaxed">{screen.desc}</p>
-                           </div>
-                           <ul className="space-y-2 mt-4 pt-4 border-t border-slate-100">
-                              {screen.items.map((item, j) => (
-                                 <li key={j} className="text-[11px] font-semibold text-text-secondary flex items-start gap-2">
-                                    <CheckCircle2 size={12} className="text-secondary mt-0.5 flex-shrink-0" />
-                                    {item}
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* ── 15. DESIGN METHODOLOGY PROCESS PATH ──────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-20 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Methodology
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Process</span></h2>
-                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
-                        Solving complex intelligence aggregation through systematic user-centric design loops.
-                     </p>
-                  </div>
-
-                  <div className="relative max-w-6xl mx-auto px-4">
-                     <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
-                        <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
-                           <path
-                              d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40"
-                              stroke="#0D63CC"
-                              strokeWidth="2"
-                              strokeDasharray="8 8"
-                              className="animate-dash"
-                           />
-                        </svg>
-                     </div>
-
-                     {/* DESKTOP VIEW (Horizontal) */}
-                     <div className="hidden lg:flex items-start justify-between relative z-10">
-                        {[
-                           { num: "01", title: "Empathize", desc: "Interviews with executives, strategists, and analysts.", icon: Heart, type: "dashed" },
-                           { num: "02", title: "Define", desc: "Constructing user personas, scoping data source parameters.", icon: Target, type: "dashed" },
-                           { num: "03", title: "Ideate", desc: "Information hierarchy mapping, dashboard sketching.", icon: Lightbulb, type: "solid-light" },
-                           { num: "04", title: "Design", desc: "High-fidelity visualization widgets, glassmorphism UI.", icon: PenTool, type: "solid-light" },
-                           { num: "05", title: "Test", desc: "Usability runs with 42 strategy users, AA verification.", icon: CheckCircle2, type: "solid-dark" }
-                        ].map((step, i) => (
-                           <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
-                              {/* Circle Node */}
-                              <motion.div
-                                 {...fadeIn}
-                                 transition={{ delay: i * 0.1 }}
-                                 className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
-                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-blue-50 shadow-md' : ''}
-                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                                 hover:scale-110 hover:shadow-2xl
-                              `}
-                              >
-                                 <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
-                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
-                                    {step.title}
-                                 </span>
-                              </motion.div>
-
-                              {/* Description */}
-                              <motion.p
-                                 {...fadeIn}
-                                 transition={{ delay: i * 0.1 + 0.2 }}
-                                 className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[140px]"
-                              >
-                                 {step.desc}
-                              </motion.p>
-
-                              {/* Connector Arrows (Aligned to path) */}
-                              {i < 4 && (
-                                 <div className={`absolute top-16 -right-12 translate-x-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center pointer-events-none opacity-40
-                                 ${i % 2 === 0 ? 'rotate-[15deg] translate-y-4' : '-rotate-[15deg] -translate-y-4'}
-                              `}>
-                                    {i === 1 ? (
-                                       <Activity size={20} className="text-secondary animate-pulse" />
-                                    ) : (
-                                       <ArrowLeft size={18} className="text-slate-400 rotate-180" />
-                                    )}
-                                 </div>
-                              )}
-                           </div>
-                        ))}
-                     </div>
-
-                     {/* MOBILE VIEW (Vertical) */}
-                     <div className="lg:hidden space-y-16">
-                        {[
-                           { num: "01", title: "Empathize", desc: "Interviews with executives, strategists, and analysts.", icon: Heart, type: "dashed" },
-                           { num: "02", title: "Define", desc: "Constructing user personas, scoping data source parameters.", icon: Target, type: "dashed" },
-                           { num: "03", title: "Ideate", desc: "Information hierarchy mapping, dashboard sketching.", icon: Lightbulb, type: "solid-light" },
-                           { num: "04", title: "Design", desc: "High-fidelity visualization widgets, glassmorphism UI.", icon: PenTool, type: "solid-light" },
-                           { num: "05", title: "Test", desc: "Usability runs with 42 strategy users, AA verification.", icon: CheckCircle2, type: "solid-dark" }
-                        ].map((step, i) => (
-                           <div key={i} className="flex flex-col items-center relative">
-                              <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center 
-                              ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                              ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-blue-50 shadow-md' : ''}
-                              ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                           `}>
-                                 <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
-                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
-                                    {step.title}
-                                 </span>
-                              </div>
-                              <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">
-                                 {step.desc}
-                              </p>
-                              {i < 4 && (
-                                 <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />
-                              )}
-                           </div>
-                        ))}
-                     </div>
-                  </div>
-               </section>
-
-               {/* ── 16. ACCESSIBILITY CONSIDERATIONS ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Inclusivity
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Accessibility & <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">WCAG</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Ensuring strategic dashboards are readable, structured, and operable for all enterprise leaders.</p>
-                  </div>
-
-                  <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-                     <div className="p-6 glass-card rounded-2xl flex flex-col justify-between">
-                        <div>
-                           <h4 className="font-bold text-base text-text-primary mb-3 flex items-center gap-2">
-                              <CheckCircle2 size={18} className="text-secondary" /> AA Compliance Standard
-                           </h4>
-                           <p className="text-xs text-text-secondary leading-relaxed">
-                              We designed all typography contrast ratios, interactive buttons, alerts, and visual analytics charts to comfortably exceed WCAG 2.1 AA parameters.
-                           </p>
-                        </div>
-                        <div className="mt-4 text-[10px] font-bold text-text-secondary bg-slate-100 p-2.5 rounded-lg border border-slate-200">
-                           Standard: WCAG 2.1 AA Standards Checked via axe-core.
-                        </div>
-                     </div>
-                     <div className="p-6 glass-card rounded-2xl">
-                        <h4 className="font-bold text-base text-text-primary mb-3">Key Accessibility Features</h4>
-                        <ul className="space-y-2">
-                           {["Keyboard Navigation for all dashboards", "Full Screen Reader support with descriptive labels", "High contrast visual display modes", "Color-blind friendly data visualizations", "Responsive reflow down to mobile views"].map((feat, i) => (
-                              <li key={i} className="text-xs text-text-secondary flex items-start gap-2">
-                                 <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1] mt-1.5 flex-shrink-0" />
-                                 {feat}
-                              </li>
                            ))}
-                        </ul>
+                        </div>
                      </div>
-                  </div>
-               </section>
 
-               {/* ── 17. SWOT ANALYSIS ──────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
-                        <span className="text-[10px] font-bold text-[#6366F1] uppercase tracking-widest">
-                           Strategic Analysis
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Analysis</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating MarketVisionAI's structural position to ensure long-term SaaS viability.</p>
-                  </div>
+                     {/* Guiding Principles - Spans 12 cols */}
+                     <div className="lg:col-span-12 glass-card rounded-[40px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden mt-8">
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
+                        
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3 relative z-10 justify-center">
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Guiding Principles
+                        </h4>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {[
-                        {
-                           title: "Strengths",
-                           items: ["AI-powered forecasts", "Real-time monitoring", "Automated insights", "Multi-source tracking"],
-                           color: "text-emerald-600",
-                           borderGlow: "from-emerald-500/30 via-white/10 to-transparent",
-                           innerGlow: "bg-emerald-500/15",
-                           borderColor: "border-emerald-500/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Briefcase size={24} strokeWidth={2} className="text-emerald-500 group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Weaknesses",
-                           items: ["High data dependency", "Initial learning curve", "Enterprise setup complexity", "Large data processing costs"],
-                           color: "text-amber-500",
-                           borderGlow: "from-amber-500/30 via-white/10 to-transparent",
-                           innerGlow: "bg-amber-500/15",
-                           borderColor: "border-amber-500/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Activity size={24} strokeWidth={2} className="text-amber-500 group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Opportunities",
-                           items: ["AI adoption growth", "Enterprise transformation", "Predictive analytics demand", "Strategic intelligence expansion"],
-                           color: "text-secondary",
-                           borderGlow: "from-secondary/30 via-white/10 to-transparent",
-                           innerGlow: "bg-secondary/15",
-                           borderColor: "border-secondary/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Search size={24} strokeWidth={2} className="text-secondary group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Threats",
-                           items: ["New AI competitors", "Data privacy laws", "AI model commoditization", "Economic uncertainty"],
-                           color: "text-rose-500",
-                           borderGlow: "from-rose-500/30 via-white/10 to-transparent",
-                           innerGlow: "bg-rose-500/15",
-                           borderColor: "border-rose-500/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" />
-                        }
-                     ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-
-                           {/* Inner Container */}
-                           <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
-
-                              {/* Soft Animated Neon Bloom */}
-                              <motion.div
-                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
-                                 className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
-                              />
-
-                              {/* Content */}
-                              <div className="flex flex-col gap-4 mb-6 relative z-20">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500`}>
-                                    {box.icon}
+                        <div className="grid md:grid-cols-5 gap-6 relative z-10">
+                           {[
+                              { name: "Simplicity", desc: "Complex data must feel simple and digestible.", icon: Zap },
+                              { name: "Scalability", desc: "Support agencies managing dozens of clients.", icon: Layers },
+                              { name: "Actionability", desc: "Always provide actionable next steps.", icon: Target },
+                              { name: "Flexibility", desc: "Allow complete dashboard customization.", icon: Layout },
+                              { name: "Trust", desc: "Ensure users understand AI recommendations.", icon: Shield }
+                           ].map((principle, i) => (
+                              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-200 hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl group/principle text-center flex flex-col items-center">
+                                 <div className="w-12 h-12 rounded-full bg-[#0D63CC]/10 flex items-center justify-center mb-4 group-hover/principle:scale-110 transition-transform">
+                                    <principle.icon size={20} className="text-[#0D63CC]" />
                                  </div>
-                                 <h5 className={`font-semibold text-[20px] ${box.color}`}>
-                                    {box.title}
-                                 </h5>
-
+                                 <h5 className="font-bold text-sm text-text-primary mb-2">{principle.name}</h5>
+                                 <p className="text-xs text-text-secondary leading-relaxed font-medium">{principle.desc}</p>
                               </div>
-
-                              <ul className="space-y-2 flex-1 relative z-20">
-                                 {box.items.map((item, j) => (
-                                    <li key={j} className="flex items-start gap-3 group/li">
-                                       <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
-                                       <span className="text-[13px] font-semibold text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
+                           ))}
                         </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* ── 18. VISUAL OVERVIEW ─────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Interface
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Overview</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">A responsive B2B layout engineered to look and perform perfectly across screens.</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {/* Top row */}
-                     <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Main Executive Dashboard" glowCls="bg-secondary" icon={Layout} />
-                     </div>
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Mobile Intelligence Feed" glowCls="bg-[#6366F1]" icon={Smartphone} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Competitor Tracking Detail" glowCls="bg-secondary" icon={Crosshair} />
-
-                     {/* Bottom row */}
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Recommendation Actions" glowCls="bg-[#6366F1]" icon={Brain} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Trend Forecast Engine Charts" glowCls="bg-secondary" icon={Compass} />
-                     <div className="lg:col-span-2">
-                        <PremiumPlaceholder aspect="aspect-[4/3]" label="Opportunity Radar Grid View" glowCls="bg-[#6366F1]" icon={Target} />
                      </div>
                   </div>
                </section>
 
-               {/* ── 19. SUCCESS METRICS & IMPACT ───────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Results
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Success Metrics & <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Impact</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating the concrete commercial and user metrics achieved within launch.</p>
+               {/* CHALLENGES */}
+               <section className="mb-16 md:mb-24 lg:mb-32 max-w-5xl mx-auto">
+                  <div className="text-center mb-12">
+                     <h2 className="text-3xl font-bold text-text-primary mb-4">Design Challenges</h2>
                   </div>
-
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  <div className="space-y-6">
                      {[
-                        { val: "75%", label: "Research Time Reduction", color: "text-[#0D63CC]" },
-                        { val: "5x", label: "Faster Strategic Decisions", color: "text-[#6366F1]" },
-                        { val: "84%", label: "Opportunity Forecast Accuracy", color: "text-emerald-500" },
-                        { val: "42%", label: "Enterprise Conversion Rate", color: "text-[#0D63CC]" },
-                        { val: "89%", label: "Platform User Retention", color: "text-[#6366F1]" }
-                     ].map((stat, i) => (
-                        <div key={i} className="glass-card rounded-3xl p-6 text-center shadow-sm hover:-translate-y-1 transition-all">
-                           <h3 className={`text-3xl font-black mb-2 ${stat.color}`}>{stat.val}</h3>
-                           <p className="text-[10px] font-bold text-text-secondary uppercase tracking-wider">{stat.label}</p>
+                        { num: "01", chal: "Making complex marketing data easy to understand.", sol: "Implemented progressive disclosure and modular cards." },
+                        { num: "02", chal: "Building trust in AI-generated insights.", sol: "Provided transparent recommendations with supporting metrics." },
+                        { num: "03", chal: "Supporting multiple client workflows.", sol: "Designed a flexible dashboard builder with robust widget library." }
+                     ].map((item, i) => (
+                        <div key={i} className="flex flex-col md:flex-row gap-4 p-6 glass-card rounded-2xl items-center text-center md:text-left">
+                                 <div className="w-12 h-12 flex-shrink-0 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 font-black text-lg border border-rose-100">
+                                    {item.num}
+                                 </div>
+                                 <div className="flex-1">
+                                    <h5 className="font-bold text-text-primary text-sm mb-1">Challenge: {item.chal}</h5>
+                                    <p className="text-sm text-text-secondary font-medium">Solution: {item.sol}</p>
+                                 </div>
+                              </div>
+                           ))}
                         </div>
-                     ))}
-                  </div>
+                     </section>
+
+                     {/* SUCCESS METRICS */}
+                     <section className="mb-16 md:mb-24 lg:mb-32">
+                        <div className="mb-12 text-center">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                              <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                                 Performance
+                              </span>
+                           </div>
+                           <h2 className="text-4xl font-bold text-text-primary mb-4">Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Metrics</span></h2>
+                           <p className="text-text-secondary font-medium max-w-2xl mx-auto">Measuring the impact and efficiency improvements after deploying MarketVisionAI.</p>
+                        </div>
+                        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+                           {[
+                              { val: "-80%", label: "Reporting Time", color: "text-[#00DA99]" },
+                              { val: "70%", label: "Faster Setup", color: "text-[#0D63CC]" },
+                              { val: "+65%", label: "Productivity", color: "text-[#00DA99]" },
+                              { val: "+35%", label: "Client Retention", color: "text-[#0D63CC]" }
+                           ].map((kpi, i) => (
+                              <div key={i} className="text-center p-6 rounded-[24px] glass-card border border-slate-200 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all duration-300">
+                                 <span className={`block text-3xl md:text-4xl font-black ${kpi.color} mb-2`}>{kpi.val}</span>
+                                 <span className="block text-xs font-bold text-text-secondary uppercase tracking-wider">{kpi.label}</span>
+                              </div>
+                           ))}
+                        </div>
+                     </section>
+
+                     {/* SWOT ANALYSIS */}
+                     <section className="mb-16 md:mb-24 lg:mb-32">
+                        <div className="mb-12 text-center">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                              <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                                 Strategic Analysis
+                              </span>
+                           </div>
+                           <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
+                           <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating MarketVisionAI's competitive stance to ensure viability and identify risks.</p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                           {[
+                              {
+                                 title: "Strengths",
+                                 items: ["AI Recommendations", "Multi-Channel Support", "Automated Reporting", "Custom Dashboards"],
+                                 color: "text-[#00DA99]",
+                                 borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#00DA99]/15",
+                                 borderColor: "border-[#00DA99]/30",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <Briefcase size={24} strokeWidth={2} className="text-[#00DA99] group-hover:scale-110 transition-transform duration-500" />
+                              },
+                              {
+                                 title: "Weaknesses",
+                                 items: ["Initial Learning Curve", "Heavy Data Dependencies", "Complex Integrations", "Enterprise Setup"],
+                                 color: "text-[#F59E0B]",
+                                 borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#F59E0B]/15",
+                                 borderColor: "border-[#F59E0B]/30",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <Activity size={24} strokeWidth={2} className="text-[#F59E0B] group-hover:scale-110 transition-transform duration-500" />
+                              },
+                              {
+                                 title: "Opportunities",
+                                 items: ["AI Adoption Growth", "MarTech Expansion", "Agency Automation", "Predictive Analytics"],
+                                 color: "text-[#0D63CC]",
+                                 borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#0D63CC]/15",
+                                 borderColor: "border-[#0D63CC]/30",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <Search size={24} strokeWidth={2} className="text-[#0D63CC] group-hover:scale-110 transition-transform duration-500" />
+                              },
+                              {
+                                 title: "Threats",
+                                 items: ["Competitive Market", "Rapid API Changes", "Privacy Regulations", "Technology Evolution"],
+                                 color: "text-rose-500",
+                                 borderGlow: "from-rose-500/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-rose-500/15",
+                                 borderColor: "border-rose-500/30",
+                                 gradientFill: "from-white/60 to-white/90",
+                                 icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" />
+                              }
+                           ].map((box, i) => (
+                              <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+                                 <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                                    <motion.div
+                                       animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
+                                       className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
+                                    />
+                                    <div className="flex flex-col gap-4 mb-6 relative z-20">
+                                       <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>
+                                          {box.icon}
+                                       </div>
+                                       <h5 className={`font-semibold text-[20px] ${box.color}`}>
+                                          {box.title}
+                                       </h5>
+                                    </div>
+                                    <ul className="space-y-2 flex-1 relative z-20">
+                                       {box.items.map((item, j) => (
+                                          <li key={j} className="flex items-start gap-3 group/li">
+                                             <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
+                                             <span className="text-[13px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                          </li>
+                                       ))}
+                                    </ul>
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
                </section>
 
-               {/* ── 20. OUTCOMES & CONCLUSION ──────────────────────────────────────────────── */}
+               {/* OUTCOMES & CONCLUSION */}
                <section className="relative mb-20 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-2xl border-2 border-[#0D63CC]/20 hover:border-[#6366F1]/40"
+                     className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
                   >
-                     {/* Ambient inner neon glows */}
-                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#6366F1]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
-                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+                     {/* High-Fidelity Ambient Patterns */}
+                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
+                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
 
                      <div className="relative z-10">
                         <div className="mb-12 text-center max-w-4xl mx-auto">
@@ -1332,67 +982,50 @@ export default function MarketVisionAICaseStudy() {
                               </span>
                            </div>
                            <h2 className="text-4xl font-bold text-text-primary mb-4">
-                              From Reactive Decision-Making to <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-[#6366F1]">Predictive Leadership</span>.
+                              Results & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Impact</span>
                            </h2>
                         </div>
 
                         <div className="grid lg:grid-cols-3 gap-8 mb-20">
                            {[
                               {
-                                 title: "Design Decisions",
-                                 items: [
-                                    "Executive First layout highlighting recommendations first",
-                                    "Progressive disclosure for competitor pricing detail views",
-                                    "High-contrast charts for color-blind accessibility",
-                                    "Clean, responsive layouts optimizing desktop & mobile reflow"
-                                 ],
+                                 title: "Strategic Execution",
+                                 items: ["Connected all fragmented marketing channels", "Automated tedious client reporting", "Integrated AI-driven recommendations", "Built customized executive dashboards"],
                                  color: "text-[#0D63CC]",
                                  borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
                                  innerGlow: "bg-[#0D63CC]/15",
                                  borderColor: "border-[#0D63CC]/30 hover:border-[#0D63CC]",
                                  gradientFill: "from-white/60 to-white/90",
-                                 icon: <div className="w-5 h-5 bg-[#0D63CC] rounded flex-shrink-0 shadow-[0_0_12px_rgba(13,99,204,0.3)]" />
+                                 icon: <div className="w-5 h-5 bg-[#0D63CC] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(13,99,204,0.3)]" />
                               },
                               {
-                                 title: "Lessons Learned",
-                                 items: [
-                                    "AI Must Explain Its Reasoning to gain customer trust",
-                                    "Simplicity Wins - executives prefer context over raw data tables",
-                                    "Real-Time Signals Matter - fast feedback feeds competitiveness",
-                                    "Context is Critical - isolated data without context causes confusion"
-                                 ],
-                                 color: "text-emerald-500",
-                                 borderGlow: "from-emerald-500/30 via-white/10 to-transparent",
-                                 innerGlow: "bg-emerald-500/15",
-                                 borderColor: "border-emerald-500/30 hover:border-emerald-500",
+                                 title: "Impact & Outcome",
+                                 items: ["Decreased reporting time by 80%", "Increased user productivity by 65%", "Improved client retention by 35%", "Enabled 5x faster insight generation"],
+                                 color: "text-[#00DA99]",
+                                 borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-[#00DA99]/15",
+                                 borderColor: "border-[#00DA99]/30 hover:border-[#00DA99]",
                                  gradientFill: "from-white/60 to-white/90",
-                                 icon: <div className="w-5 h-5 bg-emerald-500 rounded flex-shrink-0 shadow-[0_0_12px_rgba(16,185,129,0.3)]" />
+                                 icon: <div className="w-5 h-5 bg-[#00DA99] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(0,218,153,0.3)]" />
                               },
                               {
-                                 title: "Future Roadmap",
-                                 items: [
-                                    "Phase 2: AI Copilot Assistant & Conversational briefings",
-                                    "Phase 3: Autonomous Competitive Monitoring & Scenario simulation",
-                                    "Phase 4: Scenario Planning & Enterprise Knowledge Graph",
-                                    "Phase 5: Multi-Agent Intelligence Strategy Framework"
-                                 ],
-                                 color: "text-[#6366F1]",
-                                 borderGlow: "from-[#6366F1]/30 via-white/10 to-transparent",
-                                 innerGlow: "bg-[#6366F1]/15",
-                                 borderColor: "border-[#6366F1]/30 hover:border-[#6366F1]",
+                                 title: "Key Learnings",
+                                 items: ["Agencies require modular scalability", "Automation drives true profitability", "AI recommendations build client trust", <span key="highlight">Users need <strong className="text-text-primary font-bold">actionable insights, not just data</strong></span>],
+                                 color: "text-rose-500",
+                                 borderGlow: "from-rose-500/30 via-white/10 to-transparent",
+                                 innerGlow: "bg-rose-500/15",
+                                 borderColor: "border-rose-500/30 hover:border-rose-500",
                                  gradientFill: "from-white/60 to-white/90",
-                                 icon: <div className="w-5 h-5 bg-[#6366F1] rounded flex-shrink-0 shadow-[0_0_12px_rgba(99,102,241,0.3)]" />
+                                 icon: <div className="w-5 h-5 bg-rose-500 rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
                               }
                            ].map((box, i) => (
-                              <div key={i} className={`relative border-1 border-[#0D63CC]/20 hover:border-slate-200 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-
-                                 {/* Inner Container */}
+                              <div key={i} className={`relative border border-[#0D63CC]/20 hover:border-[#00DA99]/40 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
                                  <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-3xl w-full h-full rounded-[18px] p-5 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
-
-                                    {/* Soft Animated Neon Bloom */}
-                                    <div className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
-
-                                    {/* Content */}
+                                    <motion.div
+                                       animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
+                                       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
+                                       className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
+                                    />
                                     <div className="flex items-center gap-4 mb-6 relative z-20">
                                        <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500 flex-shrink-0`}>
                                           {box.icon}
@@ -1401,11 +1034,10 @@ export default function MarketVisionAICaseStudy() {
                                           {box.title}
                                        </h4>
                                     </div>
-
                                     <ul className="space-y-3 flex-1 relative z-20">
                                        {box.items.map((item, j) => (
                                           <li key={j} className="flex items-start gap-3 group/li">
-                                             <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-50 flex-shrink-0`} />
+                                             <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-50 transition-transform duration-300 group-hover/li:scale-[2] flex-shrink-0`} />
                                              <span className="text-[13px] font-semibold text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">
                                                 {item}
                                              </span>
@@ -1421,29 +1053,27 @@ export default function MarketVisionAICaseStudy() {
                         <div className="mb-6">
                            <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
                               <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
-
                               <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-4 relative z-10">
-                                 <div className="w-8 h-8 bg-[#0D63CC] rounded flex-shrink-0 animate-pulse-slow" />
-                                 Final Outcome
+                                 <div className="w-8 h-8 bg-[#0D63CC] rounded flex-shrink-0" />
+                                 Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 Market Prophet / MarketVisionAI™ successfully transformed fragmented market research workflows into a centralized AI-powered intelligence ecosystem. The platform enables organizations to anticipate market changes, uncover hidden opportunities, monitor competitors continuously, and make faster strategic decisions backed by real-time predictive insights.
+                                 MarketVision successfully evolved from a fragmented reporting tool into a comprehensive AI-powered marketing intelligence ecosystem, enabling agencies and businesses to transform raw data into actionable growth strategies.
                               </p>
                            </div>
                         </div>
-
                      </div>
                   </motion.div>
                </section>
 
                {/* NEXT CASE STUDY NAVIGATION */}
-               <section className="border-t border-slate-200/50 flex-col items-center justify-center text-center">
+               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
-                  <Link href="/case-studies/mri-logic" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
-                        MRI Logic
+                  <Link href="/case-studies/spendora" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#0D63CC] transition-colors duration-300 mb-6">
+                        Spendora
                      </h3>
-                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#0D63CC] group-hover:border-[#0D63CC] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:-translate-y-1">
                         <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
                      </div>
                   </Link>

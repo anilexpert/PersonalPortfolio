@@ -30,6 +30,16 @@ export const projects: Project[] = [
     tags: ["Enterprise SaaS", "Workflow", "Dashboard"],
     accentColor: "#0D63CC" // Blue
   },
+   {
+    slug: "supercampus",
+    title: "DIGITAL LEARNING & ADMINISTRATION ECOSYSTEM",
+    category: "SuperCampus™",
+    image: "/images/SuperCampus-Card-Folio.png",
+    description: "All-in-one platform for educational administration and digital learning workflows.",
+    results: "Empowering 10k+ Students",
+    tags: ["EdTech", "SaaS", "Admin UX"],
+    accentColor: "#6366F1" // Indigo
+  },
   {
     slug: "oasispad",
     title: "SMART KNOWLEDGE & PRODUCTIVITY WORKSPACE",
@@ -40,6 +50,7 @@ export const projects: Project[] = [
     tags: ["Productivity", "SaaS", "UX Design"],
     accentColor: "#8B5CF6" // Purple
   },
+  
   {
     slug: "ticketstack",
     title: "RETAIL TICKETING EXPERIENCE REDESIGN",
@@ -79,15 +90,6 @@ export const projects: Project[] = [
     results: "99.9% Accuracy",
     tags: ["Healthcare", "AI", "Medical Tech"],
     accentColor: "#06B6D4" // Cyan
-  },
-  {
-    slug: "supercampus",
-    title: "DIGITAL LEARNING & ADMINISTRATION ECOSYSTEM",
-    category: "SuperCampus™",
-    image: "/images/SuperCampus-Card-Folio.png",
-    description: "All-in-one platform for educational administration and digital learning workflows.",
-    results: "Empowering 10k+ Students",
-    tags: ["EdTech", "SaaS", "Admin UX"],
-    accentColor: "#6366F1" // Indigo
   }
+ 
 ];

@@ -89,7 +89,5 @@ export const projects: Project[] = [
     description: "Cutting-edge AI tool for validating complex medical device data and compliance.",
     results: "99.9% Accuracy",
     tags: ["Healthcare", "AI", "Medical Tech"],
-    accentColor: "#06B6D4" // Cyan
   }
- 
 ];

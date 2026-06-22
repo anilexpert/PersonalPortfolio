@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
    ArrowLeft, Brain, TrendingUp, Target, Shield, Zap,
@@ -141,6 +142,7 @@ export default function CarevationCaseStudy() {
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
+                     
                      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                         <HeartPulse className="w-16 h-16 text-[#00DA99] opacity-20" strokeWidth={1} />
                         <span className="font-bold tracking-[0.25em] text-[11px] uppercase text-text-secondary opacity-40 text-center px-8">
@@ -148,7 +150,13 @@ export default function CarevationCaseStudy() {
                         </span>
                      </div>
                      <div className="absolute inset-0 bg-gradient-to-br from-[#00DA99]/5 via-transparent to-[#0D63CC]/5 pointer-events-none" />
-                  </div>
+                        <Image
+                           src="/images/carevation/Family-Coordination-Hero.png"
+                           alt="Task Tracking · Med Reminders · Family Coordination · Vault · Timeline"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
                </motion.section>
 
                {/* ── OVERVIEW / PROBLEM / SOLUTION ───────────────────── */}
@@ -221,41 +229,6 @@ export default function CarevationCaseStudy() {
                   </div>
                </section>
 
-               {/* ── PROJECT SUMMARY TABLE ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
-                        <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Project At a Glance</span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Summary</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key metadata powering the Carevation™ mobile platform.</p>
-                  </div>
-
-                  <div className="glass-card rounded-[32px] overflow-hidden border-2 border-black/5 hover:border-[#00DA99]/30 transition-all duration-500 shadow-lg">
-                     <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200/60">
-                        {[
-                           { label: "Product Name", value: "Carevation" },
-                           { label: "Industry", value: "Healthcare / Caregiving" },
-                           { label: "Product Type", value: "Mobile Application" },
-                           { label: "Platform", value: "iOS & Android" },
-                           { label: "Duration", value: "5 Months" },
-                           { label: "Role", value: "Lead Product Designer" },
-                           { label: "Methodology", value: "Human-Centered Design" },
-                           { label: "Primary Users", value: "Family Caregivers" },
-                           { label: "Secondary Users", value: "Remote Family Members" },
-                           { label: "Business Model", value: "Freemium + Subscriptions" },
-                        ].map((row, i) => (
-                           <div key={i} className="flex items-start gap-4 p-6 md:p-8 group hover:bg-[#00DA99]/5 transition-colors duration-300">
-                              <div className="w-2 h-2 rounded-full bg-[#00DA99] mt-2 flex-shrink-0" />
-                              <div>
-                                 <p className="text-[11px] font-bold uppercase tracking-widest text-[#0D63CC] opacity-60 mb-1">{row.label}</p>
-                                 <p className="font-semibold text-sm text-text-primary leading-relaxed">{row.value}</p>
-                              </div>
-                           </div>
-                        ))}
-                     </div>
-                  </div>
-               </section>
 
                {/* ── BUSINESS OPPORTUNITY ───────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
@@ -583,12 +556,12 @@ export default function CarevationCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users },
-                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare },
-                        { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity },
-                        { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar },
-                        { num: "05", title: "Care Timeline", desc: "Visibility with historical records.", color: "#10B981", icon: Zap },
-                        { num: "06", title: "Health Record Vault", desc: "Secure document storage.", color: "#3B82F6", icon: Database }
+                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users,  image: "/images/carevation/Care-Circle-Thumbnail.png"},
+                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare,  image: "/images/carevation/Smart-Task-Management-Thumbnail.png" },
+                        { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity, image: "/images/carevation/Medication-Reminders-Thumbnail.png" },
+                        { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar, image: "/images/carevation/Appointment-Management-Thumbnail.png" },
+                        { num: "05", title: "Care Timeline", desc: "Visibility with historical records.", color: "#10B981", icon: Zap, image: "/images/carevation/Care-Timeline-Thumbnail.png" },
+                        { num: "06", title: "Health Record Vault", desc: "Secure document storage.", color: "#3B82F6", icon: Database, image: "/images/carevation/Health-Record-Vault-Thumbnail.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -612,8 +585,14 @@ export default function CarevationCaseStudy() {
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
                            <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
-                              <feature.icon size={48} strokeWidth={0.8} style={{ color: `${feature.color}30` }} />
-                              <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
+                              {/* <feature.icon size={48} strokeWidth={0.8} style={{ color: `${feature.color}30` }} />
+                              <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" /> */}
+                             <Image 
+                                 src={feature.image} 
+                                 alt={feature.title} 
+                                 fill 
+                                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                              />
                            </div>
                         </motion.div>
                      ))}
@@ -724,12 +703,60 @@ export default function CarevationCaseStudy() {
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Timeline" glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" icon={Layout} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Care Circle View" glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" icon={Users} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Medication Tracker" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Activity} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Appointment Scheduler" glowCls="bg-rose-500" textCls="text-rose-500" icon={Calendar} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Health Vault" glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" icon={FileHeart} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Task Assignments" glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" icon={CheckSquare} />
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Dashboard-Timeline-Thumbnail.png"
+                           alt="Dashboard Timeline"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Care-Circle-View-Thumbnail.png"
+                           alt="Care Circle View"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                      <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Medication-Tracker-Thumbnail.png"
+                           alt="Medication Tracker"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Appointment-Management-Thumbnail.png"
+                           alt="Appointment Management"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Health-Vault-Thumbnail.png"
+                           alt="Health Vault"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/carevation/Task-Assignments-Thumbnail.png"
+                           alt="Task Assignments"
+                           fill
+                           className="object-cover relative z-10 duration-1000"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Timeline" glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" icon={Layout} /> */}
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Care Circle View" glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" icon={Users} /> */}
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Medication Tracker" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Activity} /> */}
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Appointment Scheduler" glowCls="bg-rose-500" textCls="text-rose-500" icon={Calendar} /> */}
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Health Vault" glowCls="bg-[#0D63CC]" textCls="text-[#0D63CC]" icon={FileHeart} /> */}
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Task Assignments" glowCls="bg-[#00DA99]" textCls="text-[#00DA99]" icon={CheckSquare} /> */}
                   </div>
                </section>
 

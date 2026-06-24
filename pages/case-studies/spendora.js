@@ -496,51 +496,55 @@ export default function SpendoraCaseStudy() {
                            key={idx}
                            {...fadeIn}
                            transition={{ delay: idx * 0.1 }}
-                           className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.07)] hover:border-white transition-all duration-300 p-5 md:p-6 group relative overflow-hidden flex flex-col"
+                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
-                           <div className="absolute -top-20 -right-20 w-60 h-60 blur-[80px] rounded-full opacity-10 group-hover:opacity-20 transition-all duration-700 pointer-events-none" style={{ backgroundColor: persona.color }} />
-
-                           <div className="flex items-center gap-4 mb-5 relative z-10">
+                           <div
+                              className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: persona.color }}
+                           />
+                           <div className="flex items-center gap-6 mb-8 relative z-10">
                               {persona.image ? (
-                                 <div className="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 relative border border-slate-100 shadow-sm">
+                                 <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
                                     <Image src={persona.image} alt={persona.name} fill className="object-cover" />
                                  </div>
                               ) : (
-                                 <div className="w-16 h-16 rounded-2xl flex-shrink-0 relative border border-slate-100 shadow-sm flex items-center justify-center bg-slate-50">
-                                    <User size={28} className="text-slate-400" />
+                                 <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
+                                    <User size={28} style={{ color: persona.color }} strokeWidth={1.5} />
                                  </div>
                               )}
                               <div>
-                                 <h4 className="font-bold text-xl text-text-primary tracking-tight">{persona.name}</h4>
-                                 <p className="text-[12px] font-medium text-text-secondary mt-0.5 opacity-80">{persona.role}</p>
-                                 <p className="text-[11px] text-text-secondary mt-0.5 font-medium">Age {persona.age}</p>
+                                 <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                 <p className="text-xs font-medium text-text-secondary mt-1 opacity-80">{persona.role} • Age {persona.age}</p>
                               </div>
                            </div>
 
-                           <div className="mb-5 relative z-10 px-3 py-2 rounded-xl" style={{ backgroundColor: `${persona.color}10` }}>
-                              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: persona.color }}>Motivation</span>
-                              <p className="text-[13px] font-semibold mt-1 text-text-primary">{persona.motivation}</p>
-                           </div>
+                           <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
+                              &ldquo;{persona.motivation}&rdquo;
+                           </p>
 
-                           <div className="space-y-3 relative z-10 mt-auto">
-                              <div className="p-3.5 rounded-xl bg-slate-50/60 border border-slate-100">
-                                 <h5 className="font-bold text-[10px] uppercase tracking-widest text-slate-500 mb-2.5 flex items-center gap-2">
-                                    <CheckCircle2 size={12} strokeWidth={3} /> Goals
+                           <div className="space-y-4 relative z-10">
+                              <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
-                                 <div className="flex flex-wrap gap-1.5">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.goals.map((n, i) => (
-                                       <span key={i} className="px-2.5 py-1 bg-white rounded-lg border border-slate-100 text-[11px] font-medium text-slate-600 shadow-sm">{n}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-[#0D63CC]/20 text-xs font-medium text-text-primary">
+                                          {n}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
 
-                              <div className="p-3.5 rounded-xl bg-slate-50/60 border border-slate-100">
-                                 <h5 className="font-bold text-[10px] uppercase tracking-widest text-slate-500 mb-2.5 flex items-center gap-2">
-                                    <Activity size={12} strokeWidth={3} /> Pain Points
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Pain Points
                                  </h5>
-                                 <div className="flex flex-wrap gap-1.5">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-2.5 py-1 bg-white rounded-lg border border-slate-100 text-[11px] font-medium text-slate-600 shadow-sm">{p}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                          {p}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
@@ -690,7 +694,7 @@ export default function SpendoraCaseStudy() {
                            <Workflow size={14} className="text-slate-500" />
                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Workflow</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-text-primary">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#8B5CF6]">Process</span></h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-text-primary">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Process</span></h2>
                      </div>
 
                      <div className="relative max-w-6xl mx-auto z-10">
@@ -793,7 +797,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 14. DESIGN SYSTEM ───────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-20">
                   <div className="mb-10 text-center">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">System</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design System<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
                         A scalable design system was created to support multiple audiences and maintain consistency across the platform.
                      </p>
@@ -914,7 +918,7 @@ export default function SpendoraCaseStudy() {
                            <Settings size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Validation</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Testing</span></h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Testing</span></h2>
                      </div>
 
                      <div className="grid md:grid-cols-2 gap-5 relative z-10 max-w-6xl mx-auto">
@@ -1113,7 +1117,7 @@ export default function SpendoraCaseStudy() {
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
                   </div>
 
                   <div className="grid gap-6">
@@ -1127,7 +1131,7 @@ export default function SpendoraCaseStudy() {
                            />
                            
                            {/* Overlay with Glassy Effect */}
-                           <div className="absolute inset-x-0 bottom-0 pt-32 pb-8 md:pb-12 bg-gradient-to-t from-white/90 via-white/40 to-transparent backdrop-blur-sm z-20 flex flex-col items-center justify-end border-t border-white/20">
+                           {/* <div className="absolute inset-x-0 bottom-0 pt-32 pb-8 md:pb-12 bg-gradient-to-t from-white/90 via-white/40 to-transparent backdrop-blur-sm z-20 flex flex-col items-center justify-end border-t border-white/20">
                               <h3 className="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6 drop-shadow-sm">36 Visual Screens UI</h3>
                               <a href="#" className="inline-flex items-center gap-3 bg-slate-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-slate-900/20">
                                  <svg width="18" height="18" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
@@ -1137,9 +1141,9 @@ export default function SpendoraCaseStudy() {
                                     <path d="M19 19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19V19Z" fill="#FF7262"/>
                                     <path d="M38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5Z" fill="#A259FF"/>
                                  </svg>
-                                 View All Screens
+                                 View All High-Fidelity Screens
                               </a>
-                           </div>
+                           </div> */}
                         </div>
                      </div>
                   </div>

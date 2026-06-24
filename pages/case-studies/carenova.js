@@ -159,7 +159,7 @@ export default function CarenovaSystemsCaseStudy() {
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            Healthcare organizations operating multiple facilities often rely on disconnected systems, spreadsheets, emails, and manual processes to manage critical compliance and operational activities. The objective was to transform this burden into a strategic advantage.
                         </p>
-                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-r-[24px]">
+                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[24px]">
                            <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
                               <Target className="text-[#0D63CC]" size={24} /> Unified Ecosystem
                            </h4>
@@ -381,45 +381,49 @@ export default function CarenovaSystemsCaseStudy() {
                            key={idx}
                            {...fadeIn}
                            transition={{ delay: idx * 0.1 }}
-                           className="glass-card rounded-[24px] p-6 md:p-8 group relative overflow-hidden flex flex-col"
+                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
-                           <div className="absolute -top-20 -right-20 w-60 h-60 blur-[80px] rounded-full opacity-10 group-hover:opacity-20 transition-all duration-700 pointer-events-none" style={{ backgroundColor: persona.color }} />
-
-                           <div className="flex items-center gap-4 mb-6 relative z-10">
-                              <div className="w-16 h-16 rounded-2xl flex-shrink-0 relative border border-slate-100 shadow-sm flex items-center justify-center bg-slate-50">
-                                 <User size={28} className="text-slate-400" />
+                           <div
+                              className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: persona.color }}
+                           />
+                           <div className="flex items-center gap-6 mb-8 relative z-10">
+                              <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
+                                 <User size={28} style={{ color: persona.color }} strokeWidth={1.5} />
                               </div>
                               <div>
-                                 <h4 className="font-bold text-xl text-text-primary tracking-tight">{persona.name}</h4>
-                                 <p className="text-[12px] font-medium text-text-secondary mt-0.5 opacity-80">{persona.role}</p>
+                                 <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                 <p className="text-xs font-medium text-text-secondary mt-1 opacity-80">{persona.role}</p>
                               </div>
                            </div>
-                           <p className="text-sm text-text-secondary font-medium mb-6 leading-relaxed">{persona.desc}</p>
 
-                           <div className="mb-6 relative z-10 px-4 py-3 rounded-xl border" style={{ backgroundColor: `${persona.color}05`, borderColor: `${persona.color}20` }}>
-                              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: persona.color }}>Motivations</span>
-                              <p className="text-[13px] font-semibold mt-1 text-text-primary">{persona.motivation}</p>
-                           </div>
+                           <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
+                              &ldquo;{persona.desc}&rdquo;
+                           </p>
 
-                           <div className="grid grid-cols-2 gap-4 relative z-10 mt-auto">
-                              <div className="p-4 rounded-xl bg-slate-50/60 border border-slate-100">
-                                 <h5 className="font-bold text-[10px] uppercase tracking-widest text-slate-500 mb-2.5 flex items-center gap-2">
-                                    <Target size={12} strokeWidth={3} /> Goals
+                           <div className="space-y-4 relative z-10">
+                              <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
-                                 <div className="flex flex-col gap-1.5">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.goals.map((n, i) => (
-                                       <span key={i} className="text-[12px] font-medium text-slate-600">- {n}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-[#0D63CC]/20 text-xs font-medium text-text-primary">
+                                          {n}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
 
-                              <div className="p-4 rounded-xl bg-slate-50/60 border border-slate-100">
-                                 <h5 className="font-bold text-[10px] uppercase tracking-widest text-slate-500 mb-2.5 flex items-center gap-2">
-                                    <Activity size={12} strokeWidth={3} /> Pain Points
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Pain Points
                                  </h5>
-                                 <div className="flex flex-col gap-1.5">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="text-[12px] font-medium text-slate-600">- {p}</span>
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                          {p}
+                                       </span>
                                     ))}
                                  </div>
                               </div>
@@ -568,7 +572,7 @@ export default function CarenovaSystemsCaseStudy() {
                   </div>
 
                   <div className="max-w-8xl mx-auto">
-                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
                         <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#00DA99" textCls="text-[#00DA99]" icon={Layers} />
                      </div>
                   </div>
@@ -865,12 +869,12 @@ export default function CarenovaSystemsCaseStudy() {
                   <div className="relative max-w-4xl mx-auto px-4">
                      <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" />
                      
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-2xl overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
                         
                         <div className="relative z-10">
-                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-xl text-white mb-6 group-hover:scale-110 transition-transform duration-500">
+                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
                            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-text-primary mb-4 drop-shadow-sm">
@@ -888,7 +892,7 @@ export default function CarenovaSystemsCaseStudy() {
                               ))}
                            </div>
 
-                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 bg-[#0D63CC] text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.5)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.6)] group text-base overflow-hidden relative">
+                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 bg-[#0D63CC] text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                               <span className="relative z-10">Open in Figma</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />

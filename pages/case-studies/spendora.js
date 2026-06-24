@@ -376,7 +376,7 @@ export default function SpendoraCaseStudy() {
                         </div>
                         <div className="lg:col-span-8">
                            <div className="p-6 md:p-8 bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] relative">
-                              <div className="absolute -top-4 -left-4 text-5xl text-[#0D63CC]/15 font-serif leading-none">"</div>
+                              <div className="absolute -top-4 -left-4 text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99] font-serif leading-none">"</div>
                               <h3 className="text-xl md:text-2xl font-bold text-text-primary leading-relaxed relative z-10">
                                  How might we help students visualize the financial consequences of future life decisions before they graduate?
                               </h3>
@@ -750,12 +750,12 @@ export default function SpendoraCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                      {[
-                        { num: "01", title: "Career Cluster Explorer", desc: "Students explore broad career categories aligned with their interests to encourage future-oriented thinking.", outcome: "Students understand career possibilities and earning potential.", color: "#00DA99", image: "/images/spendora/SmartExpenseTracking.png" },
-                        { num: "02", title: "Occupation & Salary Explorer", desc: "Students search occupations and explore starting/median salary, education requirements, and benchmarks.", outcome: "Improves awareness of career affordability.", color: "#0D63CC", image: "/images/spendora/AIBudgetRecommendations.png" },
-                        { num: "03", title: "Expense Simulator", desc: "Estimate expenses across housing, transportation, insurance, utilities, and debt with market benchmarks.", outcome: "Improves understanding of real-world living costs.", color: "#8B5CF6", image: "/images/spendora/InteractiveDashboards.png" },
-                        { num: "04", title: "Student Loan Payment Estimator", desc: "Users estimate monthly student loan obligations based on educational choices and status.", outcome: "Students better understand long-term debt implications.", color: "#F59E0B", image: "/images/spendora/GoalBasedPlanning.png" },
-                        { num: "05", title: "Peer Benchmark Engine", desc: "Compare projected expenses against peers in similar demographic and geographic groups.", outcome: "Builds confidence and encourages reflection.", color: "#10B981", image: "/images/spendora/Multi-DeviceSync.png" },
-                        { num: "06", title: "Predictive Savings Projection", desc: "Students visualize long-term savings growth over time, transforming outcomes into tangible goals.", outcome: "Transforms future financial outcomes into tangible goals.", color: "#3B82F6", image: "/images/spendora/PredictiveIntelligence.png" }
+                        { num: "01", title: "Career Cluster Explorer", desc: "Students explore broad career categories aligned with their interests to encourage future-oriented thinking.", outcome: "Students understand career possibilities and earning potential.", color: "#00DA99", image: "/images/spendora/CareerClusterExplorerThumnail.png" },
+                        { num: "02", title: "Occupation & Salary Explorer", desc: "Students search occupations and explore starting/median salary, education requirements, and benchmarks.", outcome: "Improves awareness of career affordability.", color: "#0D63CC", image: "/images/spendora/OccupationSalaryExplorerThumnail.png" },
+                        { num: "03", title: "Expense Simulator", desc: "Estimate expenses across housing, transportation, insurance, utilities, and debt with market benchmarks.", outcome: "Improves understanding of real-world living costs.", color: "#8B5CF6", image: "/images/spendora/ExpenseSimulatorThumbnail.png" },
+                        { num: "04", title: "Student Loan Payment Estimator", desc: "Users estimate monthly student loan obligations based on educational choices and status.", outcome: "Students better understand long-term debt implications.", color: "#F59E0B", image: "/images/spendora/StudentLoanPaymentEstimatorThumnail.png" },
+                        { num: "05", title: "Peer Benchmark Engine", desc: "Compare projected expenses against peers in similar demographic and geographic groups.", outcome: "Builds confidence and encourages reflection.", color: "#10B981", image: "/images/spendora/PeerBenchmarkEngineThumbnail.png" },
+                        { num: "06", title: "Predictive Savings Projection", desc: "Students visualize long-term savings growth over time, transforming outcomes into tangible goals.", outcome: "Transforms future financial outcomes into tangible goals.", color: "#3B82F6", image: "/images/spendora/PredictiveSavingsProjectionThumbnail.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -782,9 +782,9 @@ export default function SpendoraCaseStudy() {
                               <p className="text-[12px] font-medium text-text-primary mt-1">{feature.outcome}</p>
                            </div>
 
-                           {/* <div className="relative z-10 w-full aspect-[4/3] rounded-xl overflow-hidden border border-slate-100 shadow-sm group-hover:shadow-md transition-all duration-500">
+                           <div className="relative z-10 w-full aspect-[4/3] rounded-xl overflow-hidden border border-slate-100 shadow-sm group-hover:shadow-md transition-all duration-500">
                               <Image src={feature.image} alt={feature.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                           </div> */}
+                           </div>
                         </motion.div>
                      ))}
                   </div>
@@ -793,7 +793,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 14. DESIGN SYSTEM ───────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-20">
                   <div className="mb-10 text-center">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
                         A scalable design system was created to support multiple audiences and maintain consistency across the platform.
                      </p>
@@ -942,76 +942,9 @@ export default function SpendoraCaseStudy() {
                      </div>
                   </motion.div>
                </section>
-                 {/* ── 17. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Interface
-                        </span>
-                     </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
-                  </div>
+              
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     <div className="lg:col-span-2">
-                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                           <Image
-                              src="/images/spendora/MainDashboard.png"
-                              alt="Main Dashboard"
-                              fill
-                              className="object-cover relative z-10 duration-1000"
-                           />
-                        </div>
-                     </div>
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                        <Image
-                           src="/images/spendora/MobileList.png"
-                           alt="Mobile List"
-                           fill
-                           className="object-cover relative z-10 duration-1000"
-                        />
-                     </div>
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                        <Image
-                           src="/images/spendora/MobileAnalytics.png"
-                           alt="Mobile Analytics"
-                           fill
-                           className="object-cover relative z-10 duration-1000"
-                        />
-                     </div>
-
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                        <Image
-                           src="/images/spendora/AI-Insights.png"
-                           alt="AI Insights"
-                           fill
-                           className="object-cover relative z-10 duration-1000"
-                        />
-                     </div>
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                        <Image
-                           src="/images/spendora/BudgetSetup.png"
-                           alt="Budget Setup"
-                           fill
-                           className="object-cover relative z-10 duration-1000"
-                        />
-                     </div>
-
-                     <div className="lg:col-span-2">
-                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                           <Image
-                              src="/images/spendora/Goal-Planning-UI.png"
-                              alt="Goal Planning UI"
-                              fill
-                              className="object-cover relative z-10 duration-1000"
-                           />
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* ── 18. IMPACT & RESULTS ───────────────────────────────────────────────── */}
+               {/* ── 17. IMPACT & RESULTS ───────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-20">
                   <div className="mb-10 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
@@ -1070,7 +1003,7 @@ export default function SpendoraCaseStudy() {
                   </div>
                </section>
 
-               {/* ── 19. KEY LEARNINGS ───────────────────────────────────────────────────────── */}
+               {/* ── 18. KEY LEARNINGS ───────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-20">
                   <div className="mb-10 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
@@ -1108,7 +1041,7 @@ export default function SpendoraCaseStudy() {
                   </div>
                </section>
 
-               {/* ── 20. FUTURE ROADMAP ─────────────────────────────────────────────────────── */}
+               {/* ── 19. FUTURE ROADMAP ─────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-20">
                   <div className="mb-10 text-center">
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Future <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Roadmap</span></h2>
@@ -1144,7 +1077,7 @@ export default function SpendoraCaseStudy() {
                   </div>
                </section>
 
-               {/* ── 21. FINAL REFLECTION ───────────────────────────────────────────────────── */}
+               {/* ── 20. FINAL REFLECTION ───────────────────────────────────────────────────── */}
                <section className="relative mb-16 md:mb-20 overflow-hidden">
                   <motion.div
                      {...fadeIn}
@@ -1172,8 +1105,47 @@ export default function SpendoraCaseStudy() {
                      </div>
                   </motion.div>
                </section>
+                  {/* ── 21. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                           Interface
+                        </span>
+                     </div>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                  </div>
 
-               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+                  <div className="grid gap-6">
+                     <div className="lg:col-span-12">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                           <Image
+                              src="/images/spendora/Visual-UI.png"
+                              alt="Visual UI"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                           
+                           {/* Overlay with Glassy Effect */}
+                           <div className="absolute inset-x-0 bottom-0 pt-32 pb-8 md:pb-12 bg-gradient-to-t from-white/90 via-white/40 to-transparent backdrop-blur-sm z-20 flex flex-col items-center justify-end border-t border-white/20">
+                              <h3 className="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6 drop-shadow-sm">36 Visual Screens UI</h3>
+                              <a href="#" className="inline-flex items-center gap-3 bg-slate-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-slate-900/20">
+                                 <svg width="18" height="18" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                                    <path d="M19 28.5C19 33.7467 14.7467 38 9.5 38C4.25329 38 0 33.7467 0 28.5C0 23.2533 4.25329 19 9.5 19C14.7467 19 19 23.2533 19 28.5Z" fill="#1ABCFE"/>
+                                    <path d="M0 47.5C0 52.7467 4.25329 57 9.5 57C14.7467 57 19 52.7467 19 47.5V38H9.5C4.25329 38 0 42.2533 0 47.5Z" fill="#0ACF83"/>
+                                    <path d="M19 9.5C19 14.7467 14.7467 19 9.5 19H0V9.5C0 4.25329 4.25329 0 9.5 0C14.7467 0 19 4.25329 19 9.5Z" fill="#F24E1E"/>
+                                    <path d="M19 19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19V19Z" fill="#FF7262"/>
+                                    <path d="M38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5Z" fill="#A259FF"/>
+                                 </svg>
+                                 View All Screens
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <section className="flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/supercampus" className="group flex flex-col items-center">
                      <h3 className="text-4xl md:text-5xl font-bold text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">

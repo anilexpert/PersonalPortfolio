@@ -50,18 +50,18 @@ const allProjects = [
       'AI-powered market intelligence platform that continuously analyzes global market signals and proactively recommends strategic business opportunities.',
   },
   {
-    title: 'MRI Logic™',
-    slug: 'mri-logic',
+    title: 'ScanovaHealth™',
+    slug: 'scanovahealth',
     subtitle: 'Medical Device Validation',
-    img: '/images/MRILogic-Card-Folio.png',
+    img: '/images/ScanovaHealth-Card-Folio.png',
     description:
       'AI-assisted medical device validation platform accelerating MRI compliance, risk analysis, and clinical validation workflows.',
   },
   {
-    title: 'Carevation™',
-    slug: 'carevation',
+    title: 'Kinora™',
+    slug: 'kinora',
     subtitle: 'Smart Caregiving Platform',
-    img: '/images/Carevation-Card-Folio.png',
+    img: '/images/Kinora-Card-Folio.png',
     description:
       'A mobile-first platform designed to help family caregivers organize responsibilities and coordinate care.',
   },

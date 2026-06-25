@@ -91,8 +91,8 @@
   {
     "id": 6,
     "number": "06",
-    "title": "MRI Logic",
-    "slug": "mri-logic",
+    "title": "ScanovaHealth",
+    "slug": "scanovahealth",
     "image": "/images/pulse-grid.png",
     "tags": [
       "Healthcare Technology",
@@ -109,9 +109,9 @@
   {
     "id": 7,
     "number": "07",
-    "title": "Carevation",
-    "slug": "carevation",
-    "image": "/images/Carevation-Card-Folio.png",
+    "title": "Kinora",
+    "slug": "kinora",
+    "image": "/images/Kinora-Card-Folio.png",
     "tags": [
       "Healthcare",
       "Mobile App",

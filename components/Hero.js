@@ -116,8 +116,8 @@ const Hero = () => {
                     { img: "/images/OasisPad-Card-Folio.png", name: "OasisPad", href: "/case-studies/oasispad" },
                     // { img: "/images/TicketStack-Card-Folio.png", name: "TicketStack", href: "/case-studies/ticketstack" },
                     // { img: "/images/MarketVision-Card-Folio.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
-                    // { img: "/images/MRILogic-Card-Folio.png", name: "MRI Logic", href: "/case-studies/mri-logic" },
-                    { img: "/images/Carevation-Card-Folio.png", name: "Carevation", href: "/case-studies/carevation" },
+                    // { img: "/images/ScanovaHealth-Card-Folio.png", name: "ScanovaHealth", href: "/case-studies/scanovahealth" },
+                    { img: "/images/Kinora-Card-Folio.png", name: "Kinora", href: "/case-studies/kinora" },
                   ].map((project, i) => (
                     <Link
                       key={i}

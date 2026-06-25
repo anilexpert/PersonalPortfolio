@@ -85,8 +85,8 @@ const projects = [
   },
   {
     id: "07",
-    slug: "mri-logic",
-    name: "MRI Logic™",
+    slug: "scanovahealth",
+    name: "ScanovaHealth™",
     category: "AI-ASSISTED DEVICE VALIDATION",
     color: "#06B6D4",
     dotColor: "#06B6D4",
@@ -98,8 +98,8 @@ const projects = [
   },
   {
     id: "08",
-    slug: "carevation",
-    name: "Carevation™",
+    slug: "kinora",
+    name: "Kinora™",
     category: "SMART CAREGIVING PLATFORM",
     color: "#00DA99",
     dotColor: "#00DA99",
@@ -107,7 +107,7 @@ const projects = [
     leftMain: "CARE COORDINATION",
     rightSub: "FAMILY CARE",
     rightMain: "MOBILE APP",
-    image: "/images/Carevation-Card-Folio.png"
+    image: "/images/Kinora-Card-Folio.png"
   }
 ];
 

@@ -7,7 +7,8 @@ import {
    MessageCircle, Zap, TrendingUp, AlertTriangle, Lightbulb, Clock, Shield,
    Globe, Layers, Cpu, Compass, Settings, PieChart, PenTool, BarChart3,
    Rocket, Star, ArrowRight, User, Grid, Building2, ShieldCheck, Heart,
-   MapPin, Wallet, GraduationCap, Award, Sparkles, ArrowLeft
+   MapPin, Wallet, GraduationCap, Award, Sparkles, ArrowLeft,
+   CheckSquare, Bell, Calendar, BarChart2
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -570,6 +571,100 @@ export default function TicketStackCaseStudy() {
                            <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Introduced real-time visibility, bulk updates, smart alerts, and capacity controls. Drastically reduced inventory discrepancies.</p>
                            <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" />
                         </motion.div>
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── DESIGN SYSTEM & VISUALS ───────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                           Visual Identity
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Visuals</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
+                     </p>
+                  </div>
+
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+                     {/* Colors */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
+                           {[
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                              { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
+                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: '#F59E0B' },
+                              { bg: 'bg-rose-500', label: 'Error', hex: '#F43F5E' }
+                           ].map((color, i) => (
+                              <div key={i} className="flex flex-col gap-2 group/color">
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider mt-2">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Typography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
+                        </h4>
+                        <div className="flex-1 flex flex-col justify-center mb-8">
+                           <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
+                              Aa
+                           </div>
+                        </div>
+                        <div className="space-y-4">
+                           <div className="flex justify-between items-end border-b border-slate-200 pb-2">
+                              <span className="text-3xl font-black text-text-primary tracking-tight">Poppins</span>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
+                           </div>
+                           <div className="flex justify-between text-xs font-medium text-text-secondary">
+                              <span>Regular</span>
+                              <span className="font-bold">Bold</span>
+                              <span className="font-black">Black</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Iconography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { icon: Layout, color: "text-[#0D63CC]" },
+                              { icon: Ticket, color: "text-[#00DA99]" },
+                              { icon: CheckSquare, color: "text-rose-500" },
+                              { icon: Bell, color: "text-[#0D63CC]" },
+                              { icon: Calendar, color: "text-[#F59E0B]" },
+                              { icon: Target, color: "text-[#00DA99]" },
+                              { icon: BarChart2, color: "text-[#282360]" },
+                              { icon: MessageCircle, color: "text-rose-500" },
+                              { icon: Shield, color: "text-[#0D63CC]" }
+                           ].map((Item, i) => (
+                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                                 <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
+                              </div>
+                           ))}
+                        </div>
                      </div>
                   </div>
                </section>

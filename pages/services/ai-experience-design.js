@@ -136,9 +136,9 @@ export default function AIDesignService() {
                   <div className="absolute top-[5%] right-[5%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-0">
                     <Image src="/images/marketvisionai.png" alt="MarketVisionAI" fill className="object-cover" />
                   </div>
-                  {/* MRI Logic (Middle) */}
+                  {/* ScanovaHealth (Middle) */}
                   <div className="absolute top-[20%] left-[5%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-10">
-                    <Image src="/images/pulse-grid.png" alt="MRI Logic" fill className="object-cover" />
+                    <Image src="/images/pulse-grid.png" alt="ScanovaHealth" fill className="object-cover" />
                   </div>
                   {/* Spendora (Front) */}
                   <div className="absolute bottom-[5%] right-[10%] w-[75%] aspect-[16/10] rounded-[24px] overflow-hidden border border-white/60 shadow-2xl rotate-1 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110 z-20">

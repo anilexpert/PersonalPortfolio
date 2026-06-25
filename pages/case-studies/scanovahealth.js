@@ -16,7 +16,7 @@ import Footer from '../../components/Footer'
 import GlowDivider from '../../components/GlowDivider'
 import RotatingBadge from '../../components/RotatingBadge'
 
-export default function MRILogicCaseStudy() {
+export default function ScanovaHealthCaseStudy() {
    const fadeIn = {
       initial: { opacity: 0, y: 30 },
       whileInView: { opacity: 1, y: 0 },
@@ -49,8 +49,8 @@ export default function MRILogicCaseStudy() {
    return (
       <>
          <Head>
-            <title>MRI Logic™ | Case Study — AI-Assisted Medical Device Validation &amp; MRI Readiness Platform</title>
-            <meta name="description" content="MRI Logic™ is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices for MRI preparation." />
+            <title>ScanovaHealth™ | Case Study — AI-Assisted Medical Device Validation &amp; MRI Readiness Platform</title>
+            <meta name="description" content="ScanovaHealth™ is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices for MRI preparation." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
          </Head>
 
@@ -69,7 +69,7 @@ export default function MRILogicCaseStudy() {
                      <span>/</span>
                      <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
                      <span>/</span>
-                     <span className="text-[#06B6D4]">MRI Logic™</span>
+                     <span className="text-[#06B6D4]">ScanovaHealth™</span>
                   </motion.div>
 
                   <motion.h1
@@ -106,7 +106,7 @@ export default function MRILogicCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        MRI Logic™
+                        ScanovaHealth™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         AI-Assisted <span className="bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9] bg-clip-text text-transparent">Medical Device Validation &amp; MRI Readiness Platform</span>
@@ -145,7 +145,7 @@ export default function MRILogicCaseStudy() {
                      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                         <Smartphone className="w-16 h-16 text-[#06B6D4] opacity-20" strokeWidth={1} />
                         <span className="font-bold tracking-[0.25em] text-[11px] uppercase text-text-secondary opacity-40 text-center px-8">
-                           MRI Logic Mobile App — Device Scan · Device Library · MRI Compatibility · AI Validation · PDF Reports · MRI Center Discovery
+                           ScanovaHealth Mobile App — Device Scan · Device Library · MRI Compatibility · AI Validation · PDF Reports · MRI Center Discovery
                         </span>
                      </div>
                      <div className="absolute inset-0 bg-gradient-to-br from-[#06B6D4]/5 via-transparent to-[#0EA5E9]/5 pointer-events-none" />
@@ -160,7 +160,7 @@ export default function MRILogicCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
-                           MRI Logic is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices — including pacemakers, ICDs, neurostimulators, implantable cardiac monitors, and other MRI-relevant devices.
+                           ScanovaHealth is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices — including pacemakers, ICDs, neurostimulators, implantable cardiac monitors, and other MRI-relevant devices.
                         </p>
                         <p className="text-base text-text-secondary leading-relaxed font-medium mb-6">
                            Traditionally, patients depend on physical implant cards, paperwork, hospital records, and manufacturer documentation when preparing for MRI procedures. Missing or outdated information can create uncertainty, administrative delays, and unnecessary stress.
@@ -223,7 +223,7 @@ export default function MRILogicCaseStudy() {
                            Empower every patient with instant access to organized implant device information, helping them prepare confidently for MRI-related healthcare journeys.
                         </p>
                         <p className="text-base text-text-secondary leading-relaxed font-medium">
-                           MRI Logic positions itself as a bridge between patients, device information, and MRI preparedness — acting as a trusted personal medical-device companion while clearly communicating that final MRI eligibility decisions remain with healthcare providers and device manufacturers.
+                           ScanovaHealth positions itself as a bridge between patients, device information, and MRI preparedness — acting as a trusted personal medical-device companion while clearly communicating that final MRI eligibility decisions remain with healthcare providers and device manufacturers.
                         </p>
                      </div>
                   </div>
@@ -236,13 +236,13 @@ export default function MRILogicCaseStudy() {
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Project At a Glance</span>
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Summary</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key metadata and team structure powering the MRI Logic™ mobile platform.</p>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key metadata and team structure powering the ScanovaHealth™ mobile platform.</p>
                   </div>
 
                   <div className="glass-card rounded-[32px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg">
                      <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200/60">
                         {[
-                           { label: "Product Name", value: "MRI Logic" },
+                           { label: "Product Name", value: "ScanovaHealth" },
                            { label: "Industry", value: "Healthcare Technology" },
                            { label: "Product Type", value: "Mobile Application" },
                            { label: "Platform", value: "iOS & Android" },
@@ -989,7 +989,7 @@ export default function MRILogicCaseStudy() {
                            <h4 className="font-bold text-xl text-amber-900">Compliance & Safety Disclaimer</h4>
                         </div>
                         <p className="text-sm text-amber-800 font-medium leading-relaxed">
-                           MRI Logic is intended for informational and record-keeping purposes only. Information displayed within the platform is derived from available datasets and references. MRI Logic does not provide medical advice, diagnosis, treatment recommendations, or determine MRI safety or compatibility. Users should always consult healthcare professionals, imaging facilities, and device manufacturers before making healthcare decisions or undergoing MRI procedures.
+                           ScanovaHealth is intended for informational and record-keeping purposes only. Information displayed within the platform is derived from available datasets and references. ScanovaHealth does not provide medical advice, diagnosis, treatment recommendations, or determine MRI safety or compatibility. Users should always consult healthcare professionals, imaging facilities, and device manufacturers before making healthcare decisions or undergoing MRI procedures.
                         </p>
                      </div>
                   </div>
@@ -1066,7 +1066,7 @@ export default function MRILogicCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 MRI Logic™ transforms how patients manage implant device information — replacing fragmented paper-based workflows with a unified, AI-assisted mobile platform. By combining device scanning, intelligent validation, and MRI center discovery, the platform empowers patients and caregivers to prepare confidently for MRI-related healthcare journeys while maintaining complete transparency about the boundaries of informational support.
+                                 ScanovaHealth™ transforms how patients manage implant device information — replacing fragmented paper-based workflows with a unified, AI-assisted mobile platform. By combining device scanning, intelligent validation, and MRI center discovery, the platform empowers patients and caregivers to prepare confidently for MRI-related healthcare journeys while maintaining complete transparency about the boundaries of informational support.
                               </p>
                            </div>
                         </div>

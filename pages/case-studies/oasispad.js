@@ -160,7 +160,7 @@ export default function OasisPadCaseStudy() {
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            The project originated from a critical challenge faced by behavioral health organizations: Clinical teams were spending more time managing paperwork, insurance claims, and compliance requirements than delivering care. The objective was not simply to digitize records.
                         </p>
-                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-r-[24px]">
+                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[24px]">
                            <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
                               <Target className="text-[#0D63CC]" size={24} /> Unified Ecosystem
                            </h4>
@@ -212,7 +212,7 @@ export default function OasisPadCaseStudy() {
                         </span>
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported five recurring operational issues that severely impacted both care quality and financial sustainability.</p>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported six recurring operational issues that severely impacted both care quality and financial sustainability.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -221,7 +221,8 @@ export default function OasisPadCaseStudy() {
                         { num: "02", title: "Insurance Claim Delays", desc: "Billing teams manually gathered information from multiple systems before submitting claims, resulting in delayed reimbursements, missing data, and high rejection rates.", icon: Clock, color: "#F59E0B" },
                         { num: "03", title: "Revenue Visibility", desc: "Leadership lacked real-time visibility into submitted claims, pending claims, rejected claims, outstanding balances, and payer performance.", icon: LineChart, color: "#00DA99" },
                         { num: "04", title: "Compliance Risks", desc: "HIPAA and payer audits required extensive manual record retrieval across disparate systems and physical cabinets.", icon: Shield, color: "#EF4444" },
-                        { num: "05", title: "Fragmented Experience", desc: "Users frequently switched between patient records, notes, claims, reports, and employee systems, causing severe workflow disruption.", icon: Shuffle, color: "#8B5CF6" }
+                        { num: "05", title: "Fragmented Experience", desc: "Users frequently switched between patient records, notes, claims, reports, and employee systems, causing severe workflow disruption.", icon: Shuffle, color: "#8B5CF6" },
+                        { num: "06", title: "Data Silos", desc: "Critical patient and facility data resided in disconnected systems, requiring redundant manual entry and leading to costly administrative bottlenecks.", icon: Database, color: "#10B981" }
                      ].map((challenge, i) => (
                         <motion.div
                            key={i}
@@ -252,7 +253,7 @@ export default function OasisPadCaseStudy() {
                {/* DISCOVERY PHASE & KEY INSIGHTS */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-4">
+                     <div className="lg:col-span-5">
                         <div className="sticky top-24">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                               <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
@@ -277,15 +278,15 @@ export default function OasisPadCaseStudy() {
                                        <stakeholder.icon size={18} />
                                     </div>
                                     <div>
-                                       <p className="text-xs font-bold text-text-primary">{stakeholder.group}</p>
-                                       <p className="text-[10px] text-text-secondary font-medium">{stakeholder.roles}</p>
+                                       <p className="text-sm font-bold text-text-primary">{stakeholder.group}</p>
+                                       <p className="text-xs text-text-secondary font-medium">{stakeholder.roles}</p>
                                     </div>
                                  </div>
                               ))}
                            </div>
                         </div>
                      </div>
-                     <div className="lg:col-span-8 space-y-6">
+                     <div className="lg:col-span-7 space-y-6">
                         {[
                            {
                               id: "Insight #1",
@@ -308,8 +309,8 @@ export default function OasisPadCaseStudy() {
                         ].map((insight, i) => (
                            <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
-                              <h4 className="text-2xl font-bold text-text-primary mb-4">{insight.title}</h4>
-                              <p className="text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
+                              <h4 className="text-xl font-bold text-text-primary mb-4">{insight.title}</h4>
+                              <p className="text-sm text-text-secondary font-medium leading-relaxed mb-6 text-justify">{insight.desc}</p>
                               
                               {insight.flow.length > 0 && (
                                  <div className="flex flex-wrap items-center gap-2">
@@ -456,10 +457,11 @@ export default function OasisPadCaseStudy() {
                            { step: "07", title: "Claim Details", desc: "Finalize submission data.", icon: FileText },
                            { step: "08", title: "Compliance", desc: "Validate HIPAA.", icon: CheckCircle2 }
                         ].map((s, i) => (
-                           <div key={i} className="p-6 glass-card rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-transform flex flex-col">
-                              <div className="text-[#0D63CC]/10 font-black text-5xl absolute -top-2 -right-2 transition-transform group-hover:scale-110">{s.step}</div>
-                              <div className="w-10 h-10 rounded-xl bg-[#0D63CC]/5 flex items-center justify-center mb-4 relative z-10">
-                                 <s.icon size={20} className="text-[#0D63CC]" />
+                           <div key={i} className="p-6 glass-card rounded-2xl relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl border border-[#0D63CC]/10 hover:border-[#0D63CC]/30 transition-all duration-500 flex flex-col bg-white/30 backdrop-blur-md">
+                              <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/5 blur-[40px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/15 group-hover:scale-150 transition-all duration-700" />
+                              <div className="text-[#0D63CC]/10 font-black text-6xl absolute -top-4 -right-2 transition-all duration-500 group-hover:text-[#0D63CC]/20 group-hover:scale-110">{s.step}</div>
+                              <div className="w-12 h-12 rounded-2xl bg-white/60 border border-white backdrop-blur-sm shadow-sm flex items-center justify-center mb-5 relative z-10 group-hover:bg-white transition-colors duration-300">
+                                 <s.icon size={22} className="text-[#0D63CC]" />
                               </div>
                               <h4 className="text-sm font-bold text-text-primary mb-2 relative z-10">{s.title}</h4>
                               <p className="text-xs text-text-secondary font-medium relative z-10">{s.desc}</p>
@@ -508,36 +510,36 @@ export default function OasisPadCaseStudy() {
                   </div>
 
                   {/* Reporting & Analytics */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                     <div className="lg:col-span-7 order-2 lg:order-1">
-                        <div className="grid grid-cols-2 gap-4">
-                           {[
-                              { title: "Financial Insights", items: ["Billed vs Collected", "Revenue Trends", "Outstanding Claims"], color: "#0D63CC" },
-                              { title: "Payer Insights", items: ["Payer Mix", "Insurance Performance", "Reimbursement Rates"], color: "#00DA99" },
-                              { title: "Denial Insights", items: ["Top Denial Reasons", "Prior Auth Issues", "Coding Errors"], color: "#EF4444" },
-                              { title: "Productivity Insights", items: ["Provider Performance", "Claim Throughput", "Submission Trends"], color: "#F59E0B" }
-                           ].map((report, i) => (
-                              <div key={i} className="p-6 glass-card rounded-2xl border-t-4" style={{ borderColor: report.color }}>
-                                 <h4 className="font-bold text-sm text-text-primary mb-3">{report.title}</h4>
-                                 <ul className="space-y-2">
-                                    {report.items.map((item, idx) => (
-                                       <li key={idx} className="text-xs font-medium text-text-secondary flex items-center gap-2">
-                                          <div className="w-1 h-1 rounded-full" style={{ backgroundColor: report.color }} />
-                                          {item}
-                                       </li>
-                                    ))}
-                                 </ul>
-                              </div>
-                           ))}
-                        </div>
+                  <div className="flex flex-col gap-12">
+                     <div className="text-center max-w-3xl mx-auto">
+                        <h3 className="text-3xl font-bold text-text-primary mb-4">Reports & <span className="text-[#00DA99]">Analytics</span></h3>
+                        <p className="text-lg text-text-secondary font-medium leading-relaxed">
+                           Research showed leadership needed answers quickly, not more reports. The reporting experience was redesigned around actionable insights rather than data dumps.
+                        </p>
                      </div>
-                     <div className="lg:col-span-5 space-y-8 order-1 lg:order-2">
-                        <div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-4">Reports & <span className="text-[#00DA99]">Analytics</span></h3>
-                           <p className="text-lg text-text-secondary font-medium leading-relaxed">
-                              Research showed leadership needed answers quickly, not more reports. The reporting experience was redesigned around actionable insights rather than data dumps.
-                           </p>
-                        </div>
+                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                           { title: "Financial Insights", icon: Wallet, items: ["Billed vs Collected", "Revenue Trends", "Outstanding Claims"], color: "#0D63CC", bg: "bg-[#0D63CC]/5", border: "border-[#0D63CC]/20" },
+                           { title: "Payer Insights", icon: Building2, items: ["Payer Mix", "Insurance Performance", "Reimbursement Rates"], color: "#00DA99", bg: "bg-[#00DA99]/5", border: "border-[#00DA99]/20" },
+                           { title: "Denial Insights", icon: FileSearch, items: ["Top Denial Reasons", "Prior Auth Issues", "Coding Errors"], color: "#EF4444", bg: "bg-rose-500/5", border: "border-rose-500/20" },
+                           { title: "Productivity Insights", icon: TrendingUp, items: ["Provider Performance", "Claim Throughput", "Submission Trends"], color: "#F59E0B", bg: "bg-[#F59E0B]/5", border: "border-[#F59E0B]/20" }
+                        ].map((report, i) => (
+                           <div key={i} className={`p-6 glass-card rounded-3xl border shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group ${report.bg} ${report.border}`}>
+                              <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[40px] opacity-20 pointer-events-none group-hover:scale-150 transition-transform duration-700" style={{ backgroundColor: report.color }} />
+                              <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 relative z-10 bg-white/50 border border-white backdrop-blur-sm group-hover:bg-white transition-colors duration-300 shadow-sm">
+                                 <report.icon size={24} style={{ color: report.color }} />
+                              </div>
+                              <h4 className="font-bold text-lg text-text-primary mb-4 relative z-10">{report.title}</h4>
+                              <ul className="space-y-3 relative z-10">
+                                 {report.items.map((item, idx) => (
+                                    <li key={idx} className="text-sm font-medium text-text-secondary flex items-start gap-3">
+                                       <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: report.color }} />
+                                       <span className="leading-tight">{item}</span>
+                                    </li>
+                                 ))}
+                              </ul>
+                           </div>
+                        ))}
                      </div>
                   </div>
                </section>
@@ -545,8 +547,8 @@ export default function OasisPadCaseStudy() {
                {/* DESIGN SYSTEM (Healthcare Adapted) */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-4">
-                        <span className="text-[10px] font-bold text-text-secondary uppercase tracking-widest">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
                            Visual Identity
                         </span>
                      </div>
@@ -556,45 +558,75 @@ export default function OasisPadCaseStudy() {
                      </p>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
-                     {/* Principles - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-slate-100 shadow-xl relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8">Core Principles</h4>
-                        <div className="space-y-6">
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+                     {/* Colors */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
                            {[
-                              { t: "Trust", d: "Healthcare users must feel confident." },
-                              { t: "Clarity", d: "Complex data should feel approachable." },
-                              { t: "Consistency", d: "Every workflow follows predictable patterns." },
-                              { t: "Accessibility", d: "Data-heavy interfaces remain readable." }
-                           ].map((p, i) => (
-                              <div key={i}>
-                                 <h5 className="font-bold text-sm text-[#0D63CC] mb-1">{p.t}</h5>
-                                 <p className="text-xs font-medium text-text-secondary">{p.d}</p>
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: 'Healthcare Blue' },
+                              { bg: 'bg-[#00DA99]', label: 'Success', hex: 'Revenue Green' },
+                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: 'Review Orange' },
+                              { bg: 'bg-[#EF4444]', label: 'Error', hex: 'Denial Red' }
+                           ].map((color, i) => (
+                              <div key={i} className="flex flex-col gap-2 group/color">
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider mt-2">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-60">{color.hex}</span>
+                                 </div>
                               </div>
                            ))}
                         </div>
                      </div>
 
-                     {/* Colors - Spans 8 cols */}
-                     <div className="lg:col-span-8 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 shadow-xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                     {/* Typography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
                         </h4>
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div className="flex-1 flex flex-col justify-center mb-8">
+                           <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
+                              Aa
+                           </div>
+                        </div>
+                        <div className="space-y-4">
+                           <div className="flex justify-between items-end border-b border-slate-200 pb-2">
+                              <span className="text-3xl font-black text-text-primary tracking-tight">Inter</span>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
+                           </div>
+                           <div className="flex justify-between text-xs font-medium text-text-secondary">
+                              <span>Regular</span>
+                              <span className="font-bold">Bold</span>
+                              <span className="font-black">Black</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Iconography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
                            {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: 'Healthcare Blue' },
-                              { bg: 'bg-[#00DA99]', label: 'Success', hex: 'Revenue Green' },
-                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: 'Review Orange' },
-                              { bg: 'bg-[#EF4444]', label: 'Error', hex: 'Denial Red' },
-                              { bg: 'bg-slate-50', label: 'Surface', hex: 'Neutral Scale', border: 'border border-slate-200' }
-                           ].map((color, i) => (
-                              <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} ${color.border || ''} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
-                                 <div>
-                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider mt-2">{color.label}</span>
-                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-60">{color.hex}</span>
-                                 </div>
+                              { icon: Layout, color: "text-[#0D63CC]" },
+                              { icon: Heart, color: "text-rose-500" },
+                              { icon: Stethoscope, color: "text-[#00DA99]" },
+                              { icon: Clock, color: "text-[#F59E0B]" },
+                              { icon: Wallet, color: "text-[#0D63CC]" },
+                              { icon: Users, color: "text-[#00DA99]" },
+                              { icon: Activity, color: "text-rose-500" },
+                              { icon: CheckCircle2, color: "text-[#00DA99]" },
+                              { icon: Shield, color: "text-[#0D63CC]" }
+                           ].map((Item, i) => (
+                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                                 <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
                               </div>
                            ))}
                         </div>

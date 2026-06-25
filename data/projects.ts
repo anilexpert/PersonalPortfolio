@@ -72,20 +72,20 @@ export const projects: Project[] = [
     accentColor: "#F59E0B" // Amber
   },
   {
-    slug: "carevation",
+    slug: "kinora",
     title: "SMART CAREGIVING & COORDINATION PLATFORM",
-    category: "Carevation™",
-    image: "/images/Carevation-Card-Folio.png",
+    category: "Kinora™",
+    image: "/images/Kinora-Card-Folio.png",
     description: "Streamlining care coordination and patient monitoring for healthcare teams.",
     results: "+60% Care Efficiency",
     tags: ["Healthcare", "UX Strategy"],
     accentColor: "#00DA99" // Mint
   },
   {
-    slug: "mri-logic",
+    slug: "scanovahealth",
     title: "AI-ASSISTED MEDICAL DEVICE VALIDATION TOOL",
-    category: "MRI Logic™",
-    image: "/images/MRILogic-Card-Folio.png",
+    category: "ScanovaHealth™",
+    image: "/images/ScanovaHealth-Card-Folio.png",
     description: "Cutting-edge AI tool for validating complex medical device data and compliance.",
     results: "99.9% Accuracy",
     tags: ["Healthcare", "AI", "Medical Tech"],

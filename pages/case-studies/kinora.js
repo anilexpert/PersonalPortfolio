@@ -16,7 +16,7 @@ import Footer from '../../components/Footer'
 import GlowDivider from '../../components/GlowDivider'
 import RotatingBadge from '../../components/RotatingBadge'
 
-export default function CarevationCaseStudy() {
+export default function KinoraCaseStudy() {
    const fadeIn = {
       initial: { opacity: 0, y: 30 },
       whileInView: { opacity: 1, y: 0 },
@@ -31,7 +31,7 @@ export default function CarevationCaseStudy() {
       transition: { staggerChildren: 0.15 }
    }
 
-   // Premium Glass Placeholder Component adapted for Carevation colors
+   // Premium Glass Placeholder Component adapted for Kinora colors
    const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#00DA99]", textCls = "text-[#00DA99]", aspect = "aspect-[16/9]" }) => (
       <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-black/5 hover:border-black/10 shadow-lg`}>
          <div
@@ -49,8 +49,8 @@ export default function CarevationCaseStudy() {
    return (
       <>
          <Head>
-            <title>Carevation™ | Case Study — Smart Caregiving & Coordination Platform</title>
-            <meta name="description" content="Carevation is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, and manage health information." />
+            <title>Kinora™ | Case Study — Smart Caregiving & Coordination Platform</title>
+            <meta name="description" content="Kinora is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, and manage health information." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
          </Head>
 
@@ -69,7 +69,7 @@ export default function CarevationCaseStudy() {
                      <span>/</span>
                      <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
                      <span>/</span>
-                     <span className="text-[#00DA99]">Carevation™</span>
+                     <span className="text-[#00DA99]">Kinora™</span>
                   </motion.div>
 
                   <motion.h1
@@ -106,13 +106,13 @@ export default function CarevationCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        Carevation™
+                        Kinora™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Caregiving Simplified — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">The Smarter Way to Manage the Weight of Care</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        Carevation is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, manage health information, and stay connected with loved ones.
+                        Kinora is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, manage health information, and stay connected with loved ones.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
@@ -146,12 +146,12 @@ export default function CarevationCaseStudy() {
                      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                         <HeartPulse className="w-16 h-16 text-[#00DA99] opacity-20" strokeWidth={1} />
                         <span className="font-bold tracking-[0.25em] text-[11px] uppercase text-text-secondary opacity-40 text-center px-8">
-                           Carevation App — Task Tracking · Med Reminders · Family Coordination · Vault · Timeline
+                           Kinora App — Task Tracking · Med Reminders · Family Coordination · Vault · Timeline
                         </span>
                      </div>
                      <div className="absolute inset-0 bg-gradient-to-br from-[#00DA99]/5 via-transparent to-[#0D63CC]/5 pointer-events-none" />
                         <Image
-                           src="/images/carevation/Family-Coordination-Hero.png"
+                           src="/images/kinora/Family-Coordination-Hero.png"
                            alt="Task Tracking · Med Reminders · Family Coordination · Vault · Timeline"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -556,12 +556,12 @@ export default function CarevationCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users,  image: "/images/carevation/Care-Circle-Thumbnail.png"},
-                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare,  image: "/images/carevation/Smart-Task-Management-Thumbnail.png" },
-                        { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity, image: "/images/carevation/Medication-Reminders-Thumbnail.png" },
-                        { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar, image: "/images/carevation/Appointment-Management-Thumbnail.png" },
-                        { num: "05", title: "Care Timeline", desc: "Visibility with historical records.", color: "#10B981", icon: Zap, image: "/images/carevation/Care-Timeline-Thumbnail.png" },
-                        { num: "06", title: "Health Record Vault", desc: "Secure document storage.", color: "#3B82F6", icon: Database, image: "/images/carevation/Health-Record-Vault-Thumbnail.png" }
+                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users,  image: "/images/kinora/Care-Circle-Thumbnail.png"},
+                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare,  image: "/images/kinora/Smart-Task-Management-Thumbnail.png" },
+                        { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity, image: "/images/kinora/Medication-Reminders-Thumbnail.png" },
+                        { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar, image: "/images/kinora/Appointment-Management-Thumbnail.png" },
+                        { num: "05", title: "Care Timeline", desc: "Visibility with historical records.", color: "#10B981", icon: Zap, image: "/images/kinora/Care-Timeline-Thumbnail.png" },
+                        { num: "06", title: "Health Record Vault", desc: "Secure document storage.", color: "#3B82F6", icon: Database, image: "/images/kinora/Health-Record-Vault-Thumbnail.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -692,7 +692,7 @@ export default function CarevationCaseStudy() {
                   </div>
                </section>
 
-               {/* ── VISUAL OVERVIEW (Grid format like mri-logic) ───────────────────── */}
+               {/* ── VISUAL OVERVIEW (Grid format like scanovahealth) ───────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
@@ -705,7 +705,7 @@ export default function CarevationCaseStudy() {
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                      <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Dashboard-Timeline-Thumbnail.png"
+                           src="/images/kinora/Dashboard-Timeline-Thumbnail.png"
                            alt="Dashboard Timeline"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -713,7 +713,7 @@ export default function CarevationCaseStudy() {
                      </div>
                      <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Care-Circle-View-Thumbnail.png"
+                           src="/images/kinora/Care-Circle-View-Thumbnail.png"
                            alt="Care Circle View"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -721,7 +721,7 @@ export default function CarevationCaseStudy() {
                      </div>
                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Medication-Tracker-Thumbnail.png"
+                           src="/images/kinora/Medication-Tracker-Thumbnail.png"
                            alt="Medication Tracker"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -729,7 +729,7 @@ export default function CarevationCaseStudy() {
                      </div>
                        <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Appointment-Management-Thumbnail.png"
+                           src="/images/kinora/Appointment-Management-Thumbnail.png"
                            alt="Appointment Management"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -737,7 +737,7 @@ export default function CarevationCaseStudy() {
                      </div>
                        <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Health-Vault-Thumbnail.png"
+                           src="/images/kinora/Health-Vault-Thumbnail.png"
                            alt="Health Vault"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -745,7 +745,7 @@ export default function CarevationCaseStudy() {
                      </div>
                        <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
-                           src="/images/carevation/Task-Assignments-Thumbnail.png"
+                           src="/images/kinora/Task-Assignments-Thumbnail.png"
                            alt="Task Assignments"
                            fill
                            className="object-cover relative z-10 duration-1000"
@@ -789,7 +789,7 @@ export default function CarevationCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 Carevation is a mobile-first caregiving ecosystem that empowers families to coordinate care, manage health information, collaborate effectively, and reduce caregiver stress through an intuitive and human-centered digital experience.
+                                 Kinora is a mobile-first caregiving ecosystem that empowers families to coordinate care, manage health information, collaborate effectively, and reduce caregiver stress through an intuitive and human-centered digital experience.
                               </p>
                            </div>
                         </div>

@@ -107,7 +107,13 @@ export default function TicketStackCaseStudy() {
                         Enterprise Retail <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        An enterprise-grade healthcare operations platform designed to centralize facility management, compliance workflows, audits, workforce coordination, communication, and reporting across multi-facility healthcare organizations.
+                        TicketStack™ is a modern retail ticketing platform that enables businesses to create, distribute, manage, sell, and track tickets across multiple sales channels.
+                     </motion.p>
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                        The legacy platform had strong operational capabilities but suffered from usability issues, fragmented workflows, outdated interfaces, and poor visibility into ticket performance.
+                     </motion.p>
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                        The redesign initiative focused on transforming TicketStack™ into a scalable SaaS product capable of supporting enterprise-level ticketing operations while improving efficiency, adoption, and revenue generation.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">

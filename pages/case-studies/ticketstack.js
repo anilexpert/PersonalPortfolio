@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
-   ArrowLeft, Ticket, TrendingUp, Target, Smartphone, Shield, Zap,
-   Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
-   Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
-   PieChart, Handshake, MessageCircle, User, Award, Layers, ShoppingCart, Globe, Server,
-   Star, Brain
+   Ticket, Users, Layout, Search, Target, Briefcase, Activity, CheckCircle2,
+   MessageCircle, Zap, TrendingUp, AlertTriangle, Lightbulb, Clock, Shield,
+   Globe, Layers, Cpu, Compass, Settings, PieChart, PenTool, BarChart3,
+   Rocket, Star, ArrowRight, User, Grid, Building2, ShieldCheck, Heart,
+   MapPin, Wallet, GraduationCap, Award, Sparkles, ArrowLeft
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -29,22 +29,11 @@ export default function TicketStackCaseStudy() {
       transition: { staggerChildren: 0.15 }
    }
 
-   const SwotCard = ({ title, items, color, align = "text-left" }) => (
-      <div className={`p-8 glass-card rounded-[24px] border-2 border-[#4F46E5]/10 hover:border-[#EC4899]/40 ${align} transition-all duration-500`}>
-         <h4 className={`text-xl font-black uppercase tracking-widest mb-4 ${color}`}>{title}</h4>
-         <ul className="space-y-2">
-            {items.map((item, i) => (
-               <li key={i} className="text-sm font-bold text-text-secondary opacity-70">{item}</li>
-            ))}
-         </ul>
-      </div>
-   );
-
-   const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#4F46E5]", textCls = "text-[#4F46E5]", aspect = "aspect-[16/9]" }) => (
-      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#4F46E5]/10 hover:border-[#EC4899]/40 shadow-lg`}>
+   const PremiumPlaceholder = ({ icon: Icon, label, glowColor = "#0D63CC", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
+      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[${glowColor}]/10 hover:border-[#00DA99]/40 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-           style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
+            style={{ backgroundColor: glowColor }}
          />
          <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
          {Icon && <Icon className={`w-14 h-14 mb-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10 ${textCls} opacity-30`} strokeWidth={1.2} />}
@@ -57,14 +46,15 @@ export default function TicketStackCaseStudy() {
    return (
       <>
          <Head>
-            <title>TicketStack | Case Study - Retail Ticketing Experience Redesign</title>
+            <title>TicketStack™ | Enterprise Retail Ticketing Platform</title>
+            <meta name="description" content="End-to-End Product Case Study: How we transformed a fragmented retail ticketing ecosystem into a centralized operational command center." />
          </Head>
 
          <Navbar />
 
          <main className="min-h-screen pt-20 md:pt-24 pb-20 md:pb-32 relative z-10">
 
-            {/* 1. PAGE HERO (Inner Banner) */}
+            {/* ── 1. PAGE HERO (Inner Banner) ───────────────────────────────────────────────── */}
             <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
                <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
                <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
@@ -88,7 +78,7 @@ export default function TicketStackCaseStudy() {
                      <RotatingBadge
                         icon={Ticket}
                         labels={["B2B SAAS", "TICKETING", "RETAIL"]}
-                        iconColor="#EC4899"
+                        iconColor="#0D63CC"
                         size={150}
                      />
                   </div>
@@ -97,15 +87,15 @@ export default function TicketStackCaseStudy() {
 
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
-               {/* HERO SECTION */}
+               {/* ── SECTION 01: HERO / ABOVE THE FOLD ────────────────────────────────────────── */}
                <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-6"
                      >
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
                            Case Study
                         </span>
                      </motion.div>
@@ -113,402 +103,319 @@ export default function TicketStackCaseStudy() {
                         TicketStack™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        Enterprise Retail <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
+                        Enterprise Retail <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        End-to-End Product Strategy, UX Transformation & Operational Excellence Case Study.
+                        An enterprise-grade healthcare operations platform designed to centralize facility management, compliance workflows, audits, workforce coordination, communication, and reporting across multi-facility healthcare organizations.
                      </motion.p>
                   </div>
-                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Category</p>
                         <p className="font-bold text-sm text-text-primary">Enterprise B2B SaaS</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">My Role</p>
                         <p className="font-bold text-sm text-text-primary">Product Strategy, UX Research, IA, UX/UI Design</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
-                        <p className="font-bold text-sm text-text-primary">6 Months</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
+                        <p className="font-bold text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Web Application</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Responsive Web SaaS Platform</p>
                      </div>
                   </motion.div>
                </section>
 
-               {/* MAIN HERO IMAGE */}
-               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700 bg-slate-100 flex items-center justify-center">
+               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
-                       <Image
-                           src="/images/ticketstack/HeroProduct-Dashboard.png"
-                           alt="TicketStack Dashboard"
-                           fill
-                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.02]"
-                        />
-                     {/* <div className="text-center relative z-10 opacity-40">
-                         <Layout size={64} className="mx-auto mb-4 text-[#0D63CC]" />
-                         <p className="font-bold tracking-widest uppercase text-slate-800">Hero Product Dashboard Mockup</p>
-                     </div> */}
+                     <PremiumPlaceholder aspect="aspect-[21/9]" label="TicketStack Command Center Interface" glowColor="#00DA99" textCls="text-[#0D63CC]" icon={Layout} />
                   </div>
                </motion.section>
 
-               {/* OVERVIEW / CHALLENGES / SOLUTION */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Executive Summary</h3>
-                     </div>
-                     <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           TicketStack™ is a cloud-based enterprise retail ticketing platform designed to streamline the creation, management, distribution, and performance tracking of physical and digital tickets across multiple retail channels.
-                        </p>
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           The platform enables businesses to manage ticket inventory, promotional campaigns, pricing strategies, distribution networks, and reporting from a centralized operational hub serving Retail Chains, Franchises, Tourism Operators, Attractions & Theme Parks, Entertainment Venues, Event Organizers, and Distribution Partners.
-                        </p>
-                     </div>
-                  </div>
-
-                  <GlowDivider />
-
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Existing Challenges</h3>
-                     </div>
-                     <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           TicketStack's legacy platform was functionally powerful but operationally inefficient. Users struggled with complex ticket setup workflows, poor inventory visibility, disconnected reporting, inconsistent navigation, outdated user experience, and long onboarding periods.
-                        </p>
-                        <div className="grid sm:grid-cols-2 gap-4">
-                           {[
-                              "Fragmented Workflows",
-                              "Difficult Ticket Creation",
-                              "Poor Reporting Experience",
-                              "Inventory Management Complexity",
-                              "Inconsistent Navigation",
-                              "High Training Costs"
-                           ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
-                                 <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,218,153,0.5)]" />
-                                 <span className="text-sm font-bold text-text-primary">{item}</span>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-                  </div>
-
-                  <GlowDivider />
-
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-                     <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Business Goals</h3>
-                     </div>
-                     <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Transform a complex, fragmented ticket management system into a modern enterprise SaaS platform that empowers retail organizations to create, distribute, monitor, and optimize ticketing operations with speed, accuracy, and confidence.
-                        </p>
-                        <div className="grid sm:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-2xl bg-[#00DA99]/5 border border-[#00DA99]/10">
-                                <h4 className="font-bold text-[#00DA99] mb-2 flex items-center gap-2"><TrendingUp size={18}/> Operational Excellence</h4>
-                                <ul className="text-sm text-text-secondary space-y-2 font-medium">
-                                    <li>• Increase Operational Efficiency</li>
-                                    <li>• Improve Product Adoption</li>
-                                </ul>
-                            </div>
-                            <div className="p-6 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/10">
-                                <h4 className="font-bold text-[#0D63CC] mb-2 flex items-center gap-2"><Activity size={18}/> Growth & Visibility</h4>
-                                <ul className="text-sm text-text-secondary space-y-2 font-medium">
-                                    <li>• Improve Revenue Visibility</li>
-                                    <li>• Reduce Support Requests</li>
-                                    <li>• Future-Proof Platform</li>
-                                </ul>
-                            </div>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-
-               {/* DISCOVERY & RESEARCH */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Discovery
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Discovery & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Research</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Extensive research via stakeholder interviews, user audits, and competitive benchmarking.</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-                     <motion.div {...fadeIn} className="relative rounded-[32px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[30px] p-8 md:p-10 relative z-10 flex flex-col border border-white/50">
-                           <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                              className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/20"
-                           />
-                           <div className="flex items-center gap-4 mb-8 relative z-20">
-                              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover:border-[#0D63CC] transition-colors duration-500">
-                                 <Briefcase size={24} className="text-[#0D63CC]" strokeWidth={2} />
-                              </div>
-                              <h4 className="font-bold text-2xl text-text-primary">
-                                 Stakeholder <span className="text-[#0D63CC]">Research</span>
-                              </h4>
-                           </div>
-                           <div className="space-y-6 relative z-20">
-                              {[
-                                 { role: "Executive Leadership", obj: "Revenue growth, Operational scalability, Partner management" },
-                                 { role: "Operations Teams", obj: "Faster workflows, Better inventory management, Reduced manual effort" },
-                                 { role: "Customer Support Teams", obj: "Reduce ticket volumes, Improve self-service capability" },
-                                 { role: "Sales & Distribution Managers", obj: "Better channel visibility, Performance reporting, Faster decision-making" }
-                              ].map((item, idx) => (
-                                 <div key={idx} className="flex flex-col gap-1.5 group/item">
-                                    <span className="font-bold text-[#0D63CC] text-[13px] uppercase tracking-wider flex items-center gap-2">
-                                       <div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                       {item.role}
-                                    </span>
-                                    <span className="text-sm text-slate-600 font-medium pl-3.5 leading-relaxed">Objectives: {item.obj}</span>
-                                 </div>
-                              ))}
-                           </div>
-                        </div>
-                     </motion.div>
-                     
-                     <motion.div {...fadeIn} transition={{delay: 0.1}} className="relative rounded-[32px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[30px] p-8 md:p-10 relative z-10 flex flex-col border border-white/50">
-                           <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                              className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/20"
-                           />
-                           <div className="flex items-center gap-4 mb-8 relative z-20">
-                              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover:border-[#00DA99] transition-colors duration-500">
-                                 <Users size={24} className="text-[#00DA99]" strokeWidth={2} />
-                              </div>
-                              <h4 className="font-bold text-2xl text-text-primary">
-                                 User <span className="text-[#00DA99]">Research</span>
-                              </h4>
-                           </div>
-                           <div className="space-y-6 relative z-20">
-                              <div className="flex flex-col gap-1.5 group/item">
-                                 <span className="font-bold text-[#00DA99] text-[13px] uppercase tracking-wider flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                    Participants
-                                 </span>
-                                 <span className="text-sm text-slate-600 font-medium pl-3.5 leading-relaxed">Operations Managers, Ticket Administrators, Retail Managers, Distribution Coordinators, Marketing Teams, Customer Support Representatives.</span>
-                              </div>
-                              <div className="flex flex-col gap-1.5 group/item">
-                                 <span className="font-bold text-[#00DA99] text-[13px] uppercase tracking-wider flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                    Research Methods
-                                 </span>
-                                 <ul className="space-y-2 pl-3.5 mt-2">
-                                    {[
-                                       "User Interviews: Understanding workflow frustrations.",
-                                       "Contextual Inquiry: Observing users performing daily tasks.",
-                                       "Product Audit: Reviewing existing system architecture.",
-                                       "Analytics Review: Understanding behavioral patterns.",
-                                       "Competitive Benchmarking: Evaluating industry standards."
-                                    ].map((method, idx) => (
-                                       <li key={idx} className="flex items-start gap-2 text-sm text-slate-600 font-medium group/li">
-                                          <CheckCircle2 size={16} className="text-[#00DA99] mt-0.5 flex-shrink-0 opacity-60 group-hover/li:opacity-100 transition-opacity" />
-                                          {method}
-                                       </li>
-                                    ))}
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </motion.div>
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-center mb-8">Key Insights</h3>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+               {/* ── KEY OUTCOMES ─────────────────────────────────────────────────────────── */}
+               <section className="mb-10 md:mb-16">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                      {[
-                        { num: "01", title: "Time Constraints", desc: "Users spend most of their time managing products and inventory.", color: "#00DA99" },
-                        { num: "02", title: "Unfocused Metrics", desc: "Dashboard information lacked prioritization.", color: "#0D63CC" },
-                        { num: "03", title: "Export Dependency", desc: "Revenue reporting required exporting data into spreadsheets.", color: "#8B5CF6" },
-                        { num: "04", title: "Friction", desc: "Ticket creation involved excessive validation screens.", color: "#F59E0B" },
-                        { num: "05", title: "Workflow Preference", desc: "Users preferred workflow-driven navigation rather than module-driven navigation.", color: "#10B981" }
-                     ].map((insight, i) => (
-                        <motion.div
-                           key={i}
-                           {...fadeIn}
-                           transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
-                        >
-                           <div
-                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-                              style={{ backgroundColor: insight.color }}
-                           />
-                           <div className="flex items-center justify-between mb-8 relative z-10">
-                              <div
-                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs transition-all duration-300 group-hover:scale-110"
-                                 style={{ backgroundColor: `${insight.color}20`, color: insight.color, border: `1px solid ${insight.color}30` }}
-                              >
-                                 {insight.num}
-                              </div>
-                              <Search size={20} className="text-text-secondary opacity-20" />
+                        { val: "42%", label: "Faster Ticket Deployment", color: "text-[#00DA99]", bg: "bg-[#00DA99]/10" },
+                        { val: "31%", label: "Reduction in Support Requests", color: "text-[#0D63CC]", bg: "bg-[#0D63CC]/10" },
+                        { val: "29%", label: "Increase in User Adoption", color: "text-[#8B5CF6]", bg: "bg-[#8B5CF6]/10" },
+                        { val: "46%", label: "Improvement in Task Completion", color: "text-[#F59E0B]", bg: "bg-[#F59E0B]/10" },
+                     ].map((stat, i) => (
+                        <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="glass-card rounded-[24px] p-6 md:p-8 text-center flex flex-col items-center justify-center border border-white/60 bg-white/40 shadow-sm hover:-translate-y-1 transition-transform">
+                           <div className={`w-16 h-16 rounded-full ${stat.bg} ${stat.color} flex items-center justify-center mb-4`}>
+                              <TrendingUp size={24} />
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{insight.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed mb-4 relative z-10">{insight.desc}</p>
+                           <h3 className={`text-4xl md:text-5xl font-black mb-2 ${stat.color}`}>{stat.val}</h3>
+                           <p className="text-sm font-bold text-text-secondary">{stat.label}</p>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
-               {/* COMPETITIVE ANALYSIS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Market Standing
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION 03: THE BUSINESS PROBLEM (CARENOVA STYLE) ───────────────────── */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="text-center mb-16">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
+                        <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
+                           Core Issues
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Competitive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        Evaluating industry standards to find strategic opportunities for differentiation.
-                     </p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Problem</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">As TicketStack evolved, the platform became increasingly fragmented, making it difficult for operational teams to execute mission-critical tasks quickly and confidently.</p>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                     <div>
-                        <div className="space-y-4">
-                           <div className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                              <div className="w-8 h-8 rounded-full bg-[#0D63CC]/10 flex items-center justify-center flex-shrink-0 text-[#0D63CC]">
-                                 <Search size={16} />
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                     {[
+                        { num: "01", title: "Fragmented Workflows", desc: "Users navigated multiple disconnected modules to complete a single task.", icon: Layers, color: "#0D63CC" },
+                        { num: "02", title: "Complex Creation", desc: "Launching campaigns required navigating 12+ screens and manual validation.", icon: Layout, color: "#00DA99" },
+                        { num: "03", title: "Poor Visibility", desc: "Critical revenue and inventory information remained buried within reports.", icon: Search, color: "#8B5CF6" },
+                        { num: "04", title: "High Support Dependency", desc: "Users regularly contacted support for routine operational activities.", icon: Users, color: "#EC4899" },
+                        { num: "05", title: "Inconsistent Experience", desc: "Different modules followed different interaction patterns and terminology.", icon: Grid, color: "#F59E0B" }
+                     ].map((challenge, i) => (
+                        <motion.div
+                           key={i}
+                           {...fadeIn}
+                           transition={{ delay: i * 0.1, duration: 0.8 }}
+                           className="glass-card p-6 md:p-8 rounded-[24px] group relative overflow-hidden"
+                        >
+                           <div
+                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: challenge.color }}
+                           />
+                           <div className="flex items-center justify-between mb-6 relative z-10">
+                              <div
+                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs"
+                                 style={{ backgroundColor: `${challenge.color}20`, color: challenge.color, border: `1px solid ${challenge.color}30` }}
+                              >
+                                 {challenge.num}
                               </div>
-                              <div>
-                                 <h5 className="font-bold text-slate-800 text-sm">Products Reviewed</h5>
-                                 <p className="text-xs text-slate-500 mt-1">Ticketmaster Enterprise, Eventbrite Business, Universe, FareHarbor, Rezdy, Eventix.</p>
-                              </div>
+                              <challenge.icon size={24} className="opacity-30" style={{ color: challenge.color }} />
                            </div>
-                           <div className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                              <div className="w-8 h-8 rounded-full bg-[#00DA99]/10 flex items-center justify-center flex-shrink-0 text-[#00DA99]">
-                                 <Target size={16} />
-                              </div>
-                              <div>
-                                 <h5 className="font-bold text-slate-800 text-sm">Evaluation Criteria</h5>
-                                 <p className="text-xs text-slate-500 mt-1">Ticket Management, Inventory Management, Reporting, Distribution, User Experience, Scalability, Enterprise Readiness.</p>
-                              </div>
+                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{challenge.title}</h4>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{challenge.desc}</p>
+                        </motion.div>
+                     ))}
+                  </div>
+
+                  <motion.div
+                     {...fadeIn}
+                     className="mt-16 p-10 md:p-14 glass-card bg-white/80 border border-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden text-center group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1"
+                  >
+                     <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0D63CC]/10 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/20 transition-all duration-700 pointer-events-none" />
+                     <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#00DA99]/10 blur-[80px] rounded-full group-hover:bg-[#00DA99]/20 transition-all duration-700 pointer-events-none" />
+
+                     <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6 relative z-10 flex items-center justify-center gap-3">
+                        <span className="w-8 h-[2px] bg-slate-200" />
+                        Mission Statement
+                        <span className="w-8 h-[2px] bg-slate-200" />
+                     </h3>
+
+                     <p className="text-2xl md:text-3xl lg:text-4xl font-black leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
+                        Transform TicketStack from a transactional utility into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">strategic retail operations platform.</span>
+                     </p>
+                  </motion.div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION 04 & 05: DISCOVERY & RESEARCH (CARENOVA STYLE) ─────────────── */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-4">
+                        <div className="sticky top-24">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                              <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                                 Discovery
+                              </span>
                            </div>
-                           <div className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                              <div className="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 text-[#4F46E5]">
-                                 <Lightbulb size={16} />
-                              </div>
-                              <div>
-                                 <h5 className="font-bold text-slate-800 text-sm">Key Findings</h5>
-                                 <p className="text-xs text-slate-500 mt-1">Most competitors focused heavily on ticket sales but lacked operational management capabilities. This created an opportunity for TicketStack to differentiate through operational excellence.</p>
+                           <h3 className="text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
+                           <p className="text-text-secondary leading-relaxed font-medium mb-8">
+                              To understand why operational teams struggled, we conducted extensive research across the retail network to identify friction points and revenue opportunities.
+                           </p>
+
+                           <div>
+                              <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">Research Activities</h4>
+                              <div className="bg-white/60 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] overflow-hidden">
+                                 {[
+                                    { group: "Stakeholder Interviews", roles: "Executive Leadership, Operations Managers", icon: Building2 },
+                                    { group: "User Interviews", roles: "Ticket Administrators, Store Managers", icon: Users },
+                                    { group: "Product Audit", roles: "Reviewing navigation & ticket workflows", icon: ShieldCheck },
+                                    { group: "Competitive Benchmark", roles: "Ticketmaster, Eventbrite, FareHarbor", icon: Target }
+                                 ].map((stakeholder, idx) => (
+                                    <div key={idx} className={`flex items-center gap-4 p-5 ${idx !== 3 ? 'border-b border-slate-100' : ''} hover:bg-white/40 transition-colors`}>
+                                       <div className="w-10 h-10 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] flex-shrink-0 shadow-sm border border-white">
+                                          <stakeholder.icon size={18} />
+                                       </div>
+                                       <div>
+                                          <p className="text-sm font-bold text-text-primary mb-0.5">{stakeholder.group}</p>
+                                          <p className="text-[11px] text-text-secondary font-medium leading-snug">{stakeholder.roles}</p>
+                                       </div>
+                                    </div>
+                                 ))}
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div className="relative">
-                        <PremiumPlaceholder aspect="aspect-square" label="Competitive Matrix" glowCls="bg-[#00DA99]" icon={Grid} />
+
+                     <div className="lg:col-span-8">
+                        <div className="grid sm:grid-cols-2 gap-5 mb-10">
+                           <motion.div {...fadeIn} className="bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-1">
+                              <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-[#0D63CC] blur-[60px] rounded-full opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                              <h3 className="text-5xl lg:text-6xl font-black text-[#0D63CC] mb-4">48%</h3>
+                              <p className="text-[13px] font-bold text-text-primary relative z-10 leading-relaxed max-w-[220px]">Experienced inventory confusion and allocation inconsistencies.</p>
+                           </motion.div>
+                           <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-1">
+                              <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-[#00DA99] blur-[60px] rounded-full opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                              <h3 className="text-5xl lg:text-6xl font-black text-[#00DA99] mb-4">32%</h3>
+                              <p className="text-[13px] font-bold text-text-primary relative z-10 leading-relaxed max-w-[220px]">Reported slow reporting and lack of real-time insights.</p>
+                           </motion.div>
+                        </div>
+
+                        <h3 className="text-xl font-bold text-text-primary mb-6">Key Research Findings</h3>
+                        <div className="grid md:grid-cols-2 gap-5">
+                           {[
+                              { num: "01", title: "Managing complexity", desc: "Users spend most of their time managing products, promotions, and inventory rather than analyzing results.", quote: "I have to open three different tabs just to set up a weekend discount.", color: "#0D63CC" },
+                              { num: "02", title: "Insights over reports", desc: "Users don't need more complex reports. They require immediate, actionable insights to adjust strategies.", quote: "Give me the answer, not the data to find the answer.", color: "#00DA99" },
+                              { num: "03", title: "Workflow-driven mental model", desc: "Users think in end-to-end workflows—not isolated modules or database structures.", quote: "I just want to launch a campaign, I shouldn't have to know how the system connects it all.", color: "#8B5CF6" },
+                              { num: "04", title: "Revenue visibility is paramount", desc: "Real-time revenue visibility directly influences rapid, high-stakes business decisions.", quote: "If I can't see the immediate revenue impact, I can't make the call.", color: "#F59E0B" }
+                           ].map((insight, i) => (
+                              <motion.div
+                                 key={i}
+                                 {...fadeIn}
+                                 transition={{ delay: i * 0.1 }}
+                                 className="bg-white/80 rounded-[24px] border border-white shadow-sm hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden group"
+                              >
+                                 <div className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-30 group-hover:scale-150 transition-all duration-700 pointer-events-none" style={{ backgroundColor: insight.color }} />
+                                 <div className="relative z-10">
+                                    <span className="text-[48px] font-black block mb-2 leading-none opacity-20" style={{ color: insight.color }}>{insight.num}</span>
+                                    <h4 className="font-bold text-lg text-text-primary mb-3 leading-snug">{insight.title}</h4>
+                                    <p className="text-[13px] text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
+                                 </div>
+                                 {insight.quote && (
+                                    <div className="p-4 rounded-xl border relative z-10 mt-auto bg-white/60 backdrop-blur-md" style={{ borderColor: `${insight.color}30` }}>
+                                       <MessageCircle size={16} className="mb-2 opacity-60" style={{ color: insight.color }} />
+                                       <span className="text-[13px] font-semibold leading-relaxed block italic" style={{ color: insight.color }}>"{insight.quote}"</span>
+                                    </div>
+                                 )}
+                              </motion.div>
+                           ))}
+                        </div>
+
+                        <motion.div {...fadeIn} className="mt-8 p-6 bg-[#00DA99]/10 rounded-[24px] border border-[#00DA99]/20 flex items-start gap-4">
+                           <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                              <Lightbulb size={24} className="text-[#00DA99]" />
+                           </div>
+                           <div>
+                              <h4 className="font-bold text-lg text-[#00DA99] mb-1">Critical Insight</h4>
+                              <p className="text-sm text-text-secondary font-medium leading-relaxed">Users didn't need another ticket management tool. They needed a platform that protected revenue, reduced operational risk, and accelerated decision-making.</p>
+                           </div>
+                        </motion.div>
                      </div>
                   </div>
                </section>
 
-               {/* USER PERSONAS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               {/* ── SECTION 07 & 08: USER PERSONAS (SPENDORA STYLE) ────────────────────── */}
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Target Audience
+                           User Persona
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        Understanding the operational managers driving ticket sales.
-                     </p>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Protagonist</span></h2>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+                  <div className="grid lg:grid-cols-3 gap-5">
                      {[
                         {
                            name: "Sarah Thompson",
-                           role: "Operations Manager",
-                           image: "/images/ticketstack/olivia.png",
-                           bio: "Sarah manages ticket inventory across multiple retail locations and oversees operational performance.",
-                           needs: ["Faster ticket setup", "Reduced support dependency", "Improved productivity"],
-                           goals: ["Manage inventory efficiently", "Launch promotions quickly", "Track ticket performance"],
-                           pains: ["Manual processes", "Complex workflows", "Limited visibility"],
+                           role: "Senior Operations Director",
+                           age: "38",
+                           image: null,
+                           goals: ["Launch campaigns faster", "Optimize daily revenue", "Reduce error rates"],
+                           pains: ["Fragmented systems", "High support dependency", "Poor reporting"],
+                           motivation: "I need a faster way to launch promotions without relying on support.",
                            color: "#0D63CC"
                         },
                         {
-                           name: "Michael Carter",
-                           role: "Distribution Manager",
-                           image: "/images/ticketstack/james.png",
-                           bio: "Michael oversees external retail partners and distribution channels.",
-                           needs: ["Faster reporting", "Better channel insights", "Increased revenue"],
-                           goals: ["Monitor channel performance", "Improve partner efficiency", "Track commission revenue"],
-                           pains: ["Disconnected reporting", "Lack of visibility", "Time-consuming reconciliation"],
+                           name: "David Chen",
+                           role: "Regional Store Manager",
+                           age: "42",
+                           image: null,
+                           goals: ["View real-time inventory", "Reduce staff confusion", "Increase local sales"],
+                           pains: ["Allocation inconsistencies", "Slow reporting syncs", "Complex UI"],
+                           motivation: "My team needs clear inventory numbers to avoid overselling.",
                            color: "#00DA99"
+                        },
+                        {
+                           name: "Elena Rodriguez",
+                           role: "Campaign Lead",
+                           age: "31",
+                           image: null,
+                           goals: ["Seamless promotion setup", "Target specific channels", "Track performance"],
+                           pains: ["Complex manual validation", "Routine support delays"],
+                           motivation: "Setting up a weekend discount shouldn't require opening three tabs.",
+                           color: "#8B5CF6"
                         }
                      ].map((persona, idx) => (
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md bg-white/50"
+                           transition={{ delay: idx * 0.1 }}
+                           className="glass-card rounded-[20px] p-6 md:p-8 lg:p-10 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
                            <div
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                               style={{ backgroundColor: persona.color }}
                            />
-                           
-                           <div className="flex items-center gap-8 mb-12 relative z-10">
-                              <div className="w-24 h-24 rounded-[16px] overflow-hidden bg-slate-200 flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center">
-                                 <User size={40} className="text-slate-400" />
+                           <div className="flex items-center gap-5 mb-8 relative z-10">
+                              <div className="w-14 h-14 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center bg-white" style={{ backgroundColor: `${persona.color}15` }}>
+                                 <User size={24} style={{ color: persona.color }} strokeWidth={1.5} />
                               </div>
                               <div>
-                                 <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-medium text-secondary mt-2 opacity-80">{persona.role}</p>
+                                 <h4 className="font-bold text-xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                 <p className="text-[10px] font-bold text-text-secondary mt-1 opacity-80 uppercase tracking-widest">{persona.role}</p>
                               </div>
                            </div>
 
-                           <p className="text-base text-gray-800 leading-relaxed mb-12 relative z-10 font-medium">
-                              "{persona.bio}"
+                           <p className="text-sm text-gray-800 leading-relaxed mb-8 relative z-10 font-medium italic">
+                              &ldquo;{persona.motivation}&rdquo;
                            </p>
 
-                           <div className="space-y-6 relative z-10 flex-grow">
-                              <div className="p-6 rounded-3xl bg-indigo-50 border border-indigo-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-4 flex items-center gap-2">
-                                    <Target size={14} strokeWidth={3} /> Goals
+                           <div className="space-y-4 relative z-10 mt-auto">
+                              <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
                                     {persona.goals.map((n, i) => (
-                                       <span key={i} className="px-3 py-1 bg-white/80 rounded-md border border-indigo-100 text-xs font-medium text-slate-700">
+                                       <span key={i} className="px-2.5 py-1 bg-white/60 rounded-md border border-[#0D63CC]/20 text-[11px] font-semibold text-text-primary shadow-sm">
                                           {n}
                                        </span>
                                     ))}
                                  </div>
                               </div>
 
-                              <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
-                                    <Activity size={14} strokeWidth={3} /> Success Metrics
-                                 </h5>
-                                 <div className="flex flex-wrap gap-2">
-                                    {persona.needs.map((p, i) => (
-                                       <span key={i} className="px-3 py-1 bg-white/80 rounded-md border border-rose-100 text-xs font-medium text-slate-700">
-                                          {p}
-                                       </span>
-                                    ))}
-                                 </div>
-                              </div>
-
-                              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-slate-600 mb-4 flex items-center gap-2">
-                                    <Shield size={14} strokeWidth={3} /> Frustrations
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Pain Points
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-3 py-1 bg-white/80 rounded-md border border-slate-200 text-xs font-medium text-slate-700">
+                                       <span key={i} className="px-2.5 py-1 bg-white/60 rounded-md border border-rose-100 text-[11px] font-semibold text-text-primary shadow-sm">
                                           {p}
                                        </span>
                                     ))}
@@ -520,820 +427,321 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               {/* EMPATHY MAP */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               {/* ── SECTION 11 & 12: USER JOURNEY / FLOW (SPENDORA STYLE) ──────────────── */}
+               <section className="mb-16 md:mb-24">
                   <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Deep Dive
-                        </span>
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow Architecture</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing user attitudes and behaviors to align our team on a deep understanding of end users.</p>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Campaign <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Deployment</span> Flow</h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Streamlined architecture reducing cognitive load from 12+ screens to a linear guided flow.</p>
                   </div>
 
-                  <div className="max-w-6xl mx-auto mb-16 relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
-                     {/* Ambient inner neon glows */}
-                     <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
-                     <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#00DA99]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
-
-                     {/* Decorative dashed X background (hidden on mobile) */}
-                     <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
-                        <svg width="100%" height="100%">
-                           <line x1="0" y1="0" x2="100%" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
-                           <line x1="100%" y1="0" x2="0" y2="100%" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="12 12" className="opacity-50" />
-                        </svg>
-                     </div>
-
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
-                        {/* Top Row: THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
-                              <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
-                                    <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">think</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
-                                 {[
-                                    "Is inventory accurate?",
-                                    "Are tickets selling well?",
-                                    "Which channels perform best?"
-                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
-                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">“{item}”</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* Middle Row Left: SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
-                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
-                              <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
-                                    <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
-                                 {[
-                                    "I need information faster.",
-                                    "There are too many steps to get this done.",
-                                    "Why is this report so hard to generate?"
-                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
-                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">“{item}”</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* Middle Row Center: PROFILE CIRCLE */}
-                        <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
-                           <div className="absolute inset-0 bg-[#00DA99]/20 blur-[60px] rounded-full animate-pulse z-0" />
-                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
-                              <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
-                                 <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
-                              </div>
-                           </div>
-                        </div>
-
-                        {/* Middle Row Right: FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
-                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
-                              <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
-                                    <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
-                                 {[
-                                    "Overwhelmed by system complexity",
-                                    "Concerned about making operational mistakes",
-                                    "Pressured by tight launch deadlines"
-                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
-                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-
-                        {/* Bottom Row: DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
-                              <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15" />
-                              <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
-                                    <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
-                                 </div>
-                                 <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
-                              </div>
-                              <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
-                                 {[
-                                    "Exports multiple reports to verify data",
-                                    "Creates manual spreadsheets to track sales",
-                                    "Contacts support frequently for help"
-                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors hover:border-white/60">
-                                       <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
-                                       <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                     <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
-                        <h5 className="font-black text-xs uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
-                           <Shield size={16} strokeWidth={3} /> Pain Points
-                        </h5>
-                        <ul className="space-y-2 text-sm font-medium text-slate-700">
-                           <li>• Slow workflows</li>
-                           <li>• Poor reporting</li>
-                           <li>• Inventory confusion</li>
-                        </ul>
-                     </div>
-                     <div className="p-6 rounded-3xl bg-indigo-50 border border-indigo-100">
-                        <h5 className="font-black text-xs uppercase tracking-[0.2em] text-[#0D63CC] mb-4 flex items-center gap-2">
-                           <Target size={16} strokeWidth={3} /> Opportunities
-                        </h5>
-                        <ul className="space-y-2 text-sm font-medium text-slate-700">
-                           <li>• Automation</li>
-                           <li>• Better reporting</li>
-                           <li>• Simplified workflows</li>
-                        </ul>
-                     </div>
-                  </div>
-               </section>
-
-               {/* DESIGN APPROACH & PROCESS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-20 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Lifecycle
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Customer <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Mapping</span></h2>
-                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
-                        Redefining the ticket lifecycle journey from creation to reporting.
-                     </p>
-                  </div>
-
-                  <div className="relative max-w-6xl mx-auto px-4">
-                     <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
-                        <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
-                           <path
-                              d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40"
-                              stroke="#0D63CC"
-                              strokeWidth="2"
-                              strokeDasharray="8 8"
-                              className="animate-dash"
-                           />
-                        </svg>
-                     </div>
-
-                     <div className="hidden lg:flex items-start justify-between relative z-10">
+                  <div className="hidden lg:block relative max-w-[1400px] mx-auto py-10">
+                     <div className="absolute top-[4.5rem] left-12 right-12 h-[2px] bg-gradient-to-r from-[#0D63CC] via-[#00DA99] to-[#8B5CF6] opacity-30 z-0" />
+                     <div className="grid grid-cols-7 gap-2">
                         {[
-                           { title: "Product Setup", desc: "Create Ticket Product.", icon: PenTool, type: "dashed" },
-                           { title: "Configure", desc: "Configure Pricing & Assign Inventory.", icon: Settings, type: "dashed" },
-                           { title: "Connect", desc: "Connect Sales Channels & Publish.", icon: Globe, type: "solid-light" },
-                           { title: "Monitor", desc: "Monitor Performance.", icon: Activity, type: "solid-light" },
-                           { title: "Optimize", desc: "Optimize Revenue.", icon: TrendingUp, type: "solid-dark" }
+                           { num: "01", title: "Create Ticket", desc: "Basic Info", icon: Ticket, color: "#0D63CC" },
+                           { num: "02", title: "Configure Pricing", desc: "Rules & Tiers", icon: Wallet, color: "#0D63CC" },
+                           { num: "03", title: "Assign Inventory", desc: "Capacity Limits", icon: Layers, color: "#00DA99" },
+                           { num: "04", title: "Attach Campaign", desc: "Promotions", icon: Target, color: "#00DA99" },
+                           { num: "05", title: "Select Channels", desc: "Distribution", icon: Globe, color: "#8B5CF6" },
+                           { num: "06", title: "Review & Validate", desc: "Pre-flight checks", icon: ShieldCheck, color: "#8B5CF6" },
+                           { num: "07", title: "Publish", desc: "Live Deployment", icon: Rocket, color: "#EC4899" }
                         ].map((step, i) => (
-                           <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
-                              <motion.div
-                                 {...fadeIn}
-                                 transition={{ delay: i * 0.1 }}
-                                 className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
-                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-indigo-50 shadow-md' : ''}
-                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                                 hover:scale-110 hover:shadow-2xl
-                              `}
-                              >
-                                 <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#1E1B4B]'} />
-                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#1E1B4B]'}`}>
-                                    {step.title}
-                                 </span>
-                              </motion.div>
-                              <motion.p
-                                 {...fadeIn}
-                                 transition={{ delay: i * 0.1 + 0.2 }}
-                                 className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[140px]"
-                              >
-                                 {step.desc}
-                              </motion.p>
-                           </div>
-                        ))}
-                     </div>
-
-                     <div className="lg:hidden space-y-16">
-                        {[
-                           { title: "Product Setup", desc: "Create Ticket Product.", icon: PenTool, type: "dashed" },
-                           { title: "Configure", desc: "Configure Pricing & Assign Inventory.", icon: Settings, type: "dashed" },
-                           { title: "Connect", desc: "Connect Sales Channels & Publish.", icon: Globe, type: "solid-light" },
-                           { title: "Monitor", desc: "Monitor Performance.", icon: Activity, type: "solid-light" },
-                           { title: "Optimize", desc: "Optimize Revenue.", icon: TrendingUp, type: "solid-dark" }
-                        ].map((step, i) => (
-                           <div key={i} className="flex flex-col items-center relative">
-                              <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center 
-                              ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
-                              ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-indigo-50 shadow-md' : ''}
-                              ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
-                           `}>
-                                 <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#1E1B4B]'} />
-                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#1E1B4B]'}`}>
-                                    {step.title}
-                                 </span>
+                           <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.08 }} className="flex flex-col items-center text-center relative z-10 group">
+                              <div className="w-20 h-20 rounded-2xl bg-white/90 border-2 shadow-sm flex items-center justify-center mb-6 z-10 relative group-hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm" style={{ borderColor: `${step.color}30` }}>
+                                 <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-transparent rounded-2xl pointer-events-none" />
+                                 <step.icon size={28} style={{ color: step.color }} className="relative z-10" />
+                                 <div className="absolute -bottom-3 -right-3 w-8 h-8 rounded-full bg-white border shadow-sm flex items-center justify-center text-[10px] font-extrabold" style={{ color: step.color, borderColor: `${step.color}20` }}>
+                                    {step.num}
+                                 </div>
                               </div>
-                              <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">
-                                 {step.desc}
-                              </p>
-                              {i < 4 && (
-                                 <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />
-                              )}
-                           </div>
+                              <h4 className="font-bold text-xs text-text-primary mb-1 px-2">{step.title}</h4>
+                              <p className="text-[10px] text-text-secondary font-medium">{step.desc}</p>
+                           </motion.div>
                         ))}
                      </div>
                   </div>
-               </section>
 
-               {/* INFORMATION ARCHITECTURE */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                   <div className="grid lg:grid-cols-2 gap-12 items-center">
-                       <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                                <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                                Structure
-                                </span>
-                            </div>
-                            <h2 className="text-4xl font-bold text-text-primary mb-6">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Architecture</span></h2>
-                            <p className="text-text-secondary font-medium mb-8 leading-relaxed">
-                                The legacy architecture suffered from deep navigation, duplicate features, and poor discoverability. The new structure flattens the hierarchy into an operational overview instantly.
-                            </p>
-                            
-                            <div className="space-y-4">
-                                {[
-                                    { title: "Dashboard", desc: "Operational overview." },
-                                    { title: "Products", desc: "Ticket creation and management." },
-                                    { title: "Inventory", desc: "Capacity and stock management." },
-                                    { title: "Sales Channels", desc: "Distribution partner management." },
-                                    { title: "Reporting & Customers", desc: "Business performance and customer management." },
-                                    { title: "Settings", desc: "Administration and permissions." }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                                        <div className="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 text-[#0D63CC]">
-                                            <Layers size={16} />
-                                        </div>
-                                        <div>
-                                            <h5 className="font-bold text-slate-800 text-sm">{item.title}</h5>
-                                            <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                       </div>
-                       <div className="relative">
-                             <PremiumPlaceholder aspect="aspect-square" label="Information Architecture Sitemap" glowCls="bg-[#00DA99]" icon={Layers} />
-                       </div>
-                   </div>
-               </section>
-
-               {/* UX STRATEGY & WIREFRAMING */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Strategy
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Strategy</span></h2>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-                     <div className="relative rounded-[32px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[30px] p-8 md:p-10 relative z-10 flex flex-col border border-white/50">
-                           <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                              className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/20"
-                           />
-                           <div className="flex items-center gap-4 mb-8 relative z-20">
-                              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover:border-[#0D63CC] transition-colors duration-500">
-                                 <Target size={24} className="text-[#0D63CC]" strokeWidth={2} />
+                  <div className="lg:hidden space-y-8 max-w-sm mx-auto pt-6">
+                     {[
+                        { num: "01", title: "Create Ticket", desc: "Basic Info", icon: Ticket, color: "#0D63CC" },
+                        { num: "02", title: "Configure Pricing", desc: "Rules & Tiers", icon: Wallet, color: "#0D63CC" },
+                        { num: "03", title: "Assign Inventory", desc: "Capacity Limits", icon: Layers, color: "#00DA99" },
+                        { num: "04", title: "Attach Campaign", desc: "Promotions", icon: Target, color: "#00DA99" },
+                        { num: "05", title: "Select Channels", desc: "Distribution", icon: Globe, color: "#8B5CF6" },
+                        { num: "06", title: "Review & Validate", desc: "Pre-flight checks", icon: ShieldCheck, color: "#8B5CF6" },
+                        { num: "07", title: "Publish", desc: "Live Deployment", icon: Rocket, color: "#EC4899" }
+                     ].map((step, i) => (
+                        <div key={i} className="flex items-start gap-5 relative">
+                           {i < 6 && <div className="absolute top-16 left-8 w-[2px] h-10 bg-gradient-to-b from-slate-200 to-slate-200" />}
+                           <div className="w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm bg-white/90 border-2 relative z-10 backdrop-blur-sm" style={{ borderColor: `${step.color}30` }}>
+                              <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-transparent rounded-2xl pointer-events-none" />
+                              <step.icon size={24} style={{ color: step.color }} className="relative z-10" />
+                              <div className="absolute -bottom-2 -right-2 w-6 h-6 rounded-full bg-white border shadow-sm flex items-center justify-center text-[9px] font-extrabold" style={{ color: step.color, borderColor: `${step.color}20` }}>
+                                 {step.num}
                               </div>
-                              <h4 className="font-bold text-2xl text-text-primary">
-                                 Design <span className="text-[#0D63CC]">Principles</span>
-                              </h4>
                            </div>
-                           <ul className="space-y-5 text-sm text-slate-700 relative z-20">
-                              {[
-                                 { title: "Clarity Over Complexity", desc: "Reduce cognitive load." },
-                                 { title: "Action-Oriented Interfaces", desc: "Prioritize actions over information." },
-                                 { title: "Data-Driven Decisions", desc: "Expose meaningful metrics." },
-                                 { title: "Progressive Disclosure", desc: "Reveal complexity gradually." },
-                                 { title: "Consistency First", desc: "Standardize interactions." }
-                              ].map((item, idx) => (
-                                 <li key={idx} className="flex flex-col gap-1 group/item">
-                                    <span className="font-bold text-text-primary text-[14px] flex items-center gap-2">
-                                       <div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                       {item.title}
-                                    </span>
-                                    <span className="text-slate-500 font-medium pl-3.5">{item.desc}</span>
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                     </div>
-                     
-                     <div className="relative rounded-[32px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                        <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl w-full h-full rounded-[30px] p-8 md:p-10 relative z-10 flex flex-col border border-white/50">
-                           <motion.div
-                              animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                              className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/20"
-                           />
-                           <div className="flex items-center gap-4 mb-8 relative z-20">
-                              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover:border-[#00DA99] transition-colors duration-500">
-                                 <PenTool size={24} className="text-[#00DA99]" strokeWidth={2} />
-                              </div>
-                              <h4 className="font-bold text-2xl text-text-primary">
-                                 Wireframing & <span className="text-[#00DA99]">Concepts</span>
-                              </h4>
-                           </div>
-                           <div className="space-y-8 text-sm text-slate-700 relative z-20">
-                              <div className="group/item">
-                                 <h5 className="font-bold text-text-primary mb-2 text-[15px] flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                    Dashboard Concepts
-                                 </h5>
-                                 <p className="text-slate-500 font-medium pl-3.5 leading-relaxed">Explored multiple layouts focused on KPI visibility, Revenue tracking, Inventory monitoring, and Performance reporting.</p>
-                              </div>
-                              <div className="group/item">
-                                 <h5 className="font-bold text-text-primary mb-2 text-[15px] flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/item:scale-150 transition-transform" />
-                                    Ticket Creation Flow
-                                 </h5>
-                                 <p className="text-slate-500 font-medium pl-3.5 leading-relaxed">Redesigned from 12+ screens down to a 4-step guided workflow.</p>
-                              </div>
+                           <div className="pt-2">
+                              <h4 className="font-bold text-sm text-text-primary mb-1">{step.title}</h4>
+                              <p className="text-xs text-text-secondary font-medium">{step.desc}</p>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  
-                  <div className="w-full">
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="Low-Fi Wireframes" glowCls="bg-[#0D63CC]" icon={Grid} />
+                     ))}
                   </div>
                </section>
 
-               {/* MODULE DEEP DIVES */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION 14: SOLUTION WALKTHROUGH (CARENOVA STYLE UI SHOWCASE) ──────── */}
+               <section className="mb-16 md:mb-24">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Core Features
-                        </span>
+                        <Layout size={14} className="text-primary" />
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Walkthrough</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Feature <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Deep Dives</span></h2>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Solution <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
                   </div>
 
-                  <div className="space-y-24">
-
-                     {/* 1 — Dashboard Experience */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 lg:order-1 relative">
-                           <PremiumPlaceholder aspect="aspect-square" label="Dashboard Experience" glowCls="bg-[#00DA99]" icon={Layout} />
-                        </div>
-                        <div className="order-1 lg:order-2">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-5">
-                              <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Module 01</span>
+                  <div className="space-y-20 md:space-y-32">
+                     {/* Scene 01 */}
+                     <div className="grid lg:grid-cols-12 gap-12 items-center">
+                        <motion.div {...fadeIn} className="lg:col-span-5">
+                           <div className="w-12 h-12 rounded-2xl bg-[#0D63CC]/10 text-[#0D63CC] flex items-center justify-center mb-6">
+                              <Layout size={24} />
                            </div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-3">Dashboard <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h3>
-                           <p className="text-text-secondary font-medium mb-8 leading-relaxed">Users struggled to identify important metrics at a glance. We created a centralized command center that surfaces the most critical data instantly, reducing time-to-decision dramatically.</p>
-                           <ul className="space-y-4">
-                              {[
-                                 { label: "Revenue Monitoring", desc: "Real-time sales figures, trends & comparisons at a glance", icon: TrendingUp },
-                                 { label: "Inventory Tracking", desc: "Live stock levels with threshold alerts across all products", icon: Layers },
-                                 { label: "Channel Performance", desc: "Side-by-side comparison of all distribution channel metrics", icon: Globe },
-                                 { label: "Operational Alerts", desc: "Smart notifications for low stock, anomalies & deadlines", icon: Activity },
-                                 { label: "Product Performance", desc: "Top-selling products ranked by revenue and velocity", icon: Star }
-                              ].map((item, i) => (
-                                 <li key={i} className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#00DA99]/5 border border-transparent hover:border-[#00DA99]/20 transition-all duration-300 cursor-default">
-                                    <div className="w-10 h-10 rounded-xl bg-[#00DA99]/10 border border-[#00DA99]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#00DA99]/20 group-hover:border-[#00DA99]/40 group-hover:scale-110 transition-all duration-300">
-                                       <item.icon size={18} className="text-[#00DA99]" strokeWidth={2} />
-                                    </div>
-                                    <div>
-                                       <span className="font-bold text-text-primary text-[14px] block">{item.label}</span>
-                                       <span className="text-[12px] text-slate-500 font-medium mt-0.5 block leading-relaxed">{item.desc}</span>
-                                    </div>
-                                 </li>
-                              ))}
+                           <h3 className="text-3xl font-black text-text-primary mb-4">Executive Dashboard</h3>
+                           <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
+                              Designed a centralized command center featuring Revenue Overview, Inventory Alerts, Campaign Performance, Channel Insights, and a Revenue-at-Risk Widget.
+                           </p>
+                           <ul className="space-y-3 mb-6">
+                              <li className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                                 <div className="w-6 h-6 rounded-full bg-[#00DA99]/20 flex items-center justify-center text-[#00DA99]"><CheckCircle2 size={14} /></div> Faster decision-making.
+                              </li>
+                              <li className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                                 <div className="w-6 h-6 rounded-full bg-[#00DA99]/20 flex items-center justify-center text-[#00DA99]"><CheckCircle2 size={14} /></div> Improved revenue visibility.
+                              </li>
                            </ul>
-                        </div>
+                        </motion.div>
+                        <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="lg:col-span-7">
+                           <PremiumPlaceholder icon={Layout} label="Dashboard Interface Mockup" glowColor="#0D63CC" textCls="text-[#0D63CC]" aspect="aspect-video" />
+                        </motion.div>
                      </div>
 
-                     {/* 2 — Product & Inventory */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-1">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-5">
-                              <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Module 02</span>
+                     {/* Scene 02 */}
+                     <div className="grid lg:grid-cols-12 gap-12 items-center">
+                        <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="order-2 lg:order-1 lg:col-span-7">
+                           <PremiumPlaceholder icon={Layers} label="Ticket Creation Wizard Mockup" glowColor="#8B5CF6" textCls="text-[#8B5CF6]" aspect="aspect-[16/10]" />
+                        </motion.div>
+                        <motion.div {...fadeIn} className="order-1 lg:order-2 lg:col-span-5">
+                           <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center mb-6">
+                              <PenTool size={24} />
                            </div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-3">Product & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Inventory</span></h3>
-                           <p className="text-text-secondary font-medium mb-8 leading-relaxed">Manage thousands of tickets quickly with real-time capacity monitoring and intelligent alerts that keep operations running smoothly across all retail channels.</p>
-                           <ul className="space-y-4">
-                              {[
-                                 { label: "Unified Product Management", desc: "Create, edit & manage all ticket products in one centralized hub", icon: Layout },
-                                 { label: "Inventory Monitoring", desc: "Real-time capacity alerts, thresholds & availability windows", icon: Layers },
-                                 { label: "Bulk Actions", desc: "Multi-select editing, bulk pricing updates & mass publishing", icon: Settings },
-                                 { label: "Smart Alerts", desc: "Automated notifications when stock drops below defined levels", icon: Activity }
-                              ].map((item, i) => (
-                                 <li key={i} className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#0D63CC]/5 border border-transparent hover:border-[#0D63CC]/20 transition-all duration-300 cursor-default">
-                                    <div className="w-10 h-10 rounded-xl bg-[#0D63CC]/10 border border-[#0D63CC]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0D63CC]/20 group-hover:border-[#0D63CC]/40 group-hover:scale-110 transition-all duration-300">
-                                       <item.icon size={18} className="text-[#0D63CC]" strokeWidth={2} />
-                                    </div>
-                                    <div>
-                                       <span className="font-bold text-text-primary text-[14px] block">{item.label}</span>
-                                       <span className="text-[12px] text-slate-500 font-medium mt-0.5 block leading-relaxed">{item.desc}</span>
-                                    </div>
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                        <div className="order-2 relative">
-                           <PremiumPlaceholder aspect="aspect-square" label="Product Management" glowCls="bg-[#0D63CC]" icon={Layers} />
-                        </div>
+                           <h3 className="text-3xl font-black text-text-primary mb-4">Ticket Creation Wizard</h3>
+                           <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
+                              Redesigned 12 disconnected screens into a guided 4-step experience. Introduced inline validation, draft autosave, smart defaults, and a real-time revenue preview.
+                           </p>
+                           <div className="p-5 bg-purple-50 border border-purple-100 rounded-2xl flex items-center gap-4">
+                              <Zap size={28} className="text-[#8B5CF6] flex-shrink-0" />
+                              <p className="font-bold text-slate-800 text-sm">Resulted in <span className="text-[#8B5CF6] font-black">42% faster</span> ticket deployment across the network.</p>
+                           </div>
+                        </motion.div>
                      </div>
 
-                     {/* 3 — Sales Channel Management */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 lg:order-1 relative">
-                           <PremiumPlaceholder aspect="aspect-square" label="Sales Channels" glowCls="bg-[#8B5CF6]" icon={Handshake} />
-                        </div>
-                        <div className="order-1 lg:order-2">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-5">
-                              <span className="text-[10px] font-bold text-[#8B5CF6] uppercase tracking-widest">Module 03</span>
+                     {/* Split Scenes */}
+                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+                        <motion.div {...fadeIn} className="glass-card p-10 rounded-[32px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                           <div className="w-12 h-12 rounded-2xl bg-[#00DA99]/10 text-[#00DA99] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                              <Target size={24} />
                            </div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-3">Sales Channel <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Management</span></h3>
-                           <p className="text-text-secondary font-medium mb-8 leading-relaxed">Centralized distribution control with automated commission tracking, enabling businesses to manage all reseller and retail channels from a single, powerful interface.</p>
-                           <ul className="space-y-4">
-                              {[
-                                 { label: "Partner Management", desc: "Onboard, configure & manage all distribution partners centrally", icon: Users },
-                                 { label: "Channel Performance", desc: "Compare revenue, volume & conversion rates across channels", icon: TrendingUp },
-                                 { label: "Commission Tracking", desc: "Automated commission calculations, statements & payout tracking", icon: Award },
-                                 { label: "Distribution Analytics", desc: "Identify best-performing channels and optimize allocation", icon: PieChart }
-                              ].map((item, i) => (
-                                 <li key={i} className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#8B5CF6]/5 border border-transparent hover:border-[#8B5CF6]/20 transition-all duration-300 cursor-default">
-                                    <div className="w-10 h-10 rounded-xl bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#8B5CF6]/20 group-hover:border-[#8B5CF6]/40 group-hover:scale-110 transition-all duration-300">
-                                       <item.icon size={18} className="text-[#8B5CF6]" strokeWidth={2} />
-                                    </div>
-                                    <div>
-                                       <span className="font-bold text-text-primary text-[14px] block">{item.label}</span>
-                                       <span className="text-[12px] text-slate-500 font-medium mt-0.5 block leading-relaxed">{item.desc}</span>
-                                    </div>
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                     </div>
+                           <h3 className="text-2xl font-black text-text-primary mb-3">Campaign Management</h3>
+                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Centralized promotions, discount rules, seasonal campaigns, and scheduling. Reduced setup effort significantly.</p>
+                           <PremiumPlaceholder icon={Target} label="Campaigns UI" aspect="aspect-[4/3]" glowColor="#00DA99" textCls="text-[#00DA99]" />
+                        </motion.div>
 
-                     {/* 4 — Reporting & Analytics */}
-                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="order-1">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 mb-5">
-                              <span className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-widest">Module 04</span>
+                        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-10 rounded-[32px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                           <div className="w-12 h-12 rounded-2xl bg-[#F59E0B]/10 text-[#F59E0B] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                              <Grid size={24} />
                            </div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-3">Reporting & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#10B981]">Analytics</span></h3>
-                           <p className="text-text-secondary font-medium mb-8 leading-relaxed">Sales trends, forecasting, top-performing products, partner effectiveness, and purchase behavior analysis — all from a single unified reporting engine.</p>
-                           <ul className="space-y-4">
-                              {[
-                                 { label: "Revenue Analytics", desc: "Track total, per-product & per-channel revenue with trend lines", icon: TrendingUp },
-                                 { label: "Product Analytics", desc: "Identify your top sellers, slow movers & seasonal performers", icon: Star },
-                                 { label: "Channel Analytics", desc: "Benchmark partner effectiveness and distribution efficiency", icon: Globe },
-                                 { label: "Customer Analytics", desc: "Understand purchase behavior, segments & repeat buyers", icon: Users },
-                                 { label: "Operational Analytics", desc: "Monitor system health, SLAs, error rates & process performance", icon: Activity }
-                              ].map((item, i) => (
-                                 <li key={i} className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F59E0B]/5 border border-transparent hover:border-[#F59E0B]/20 transition-all duration-300 cursor-default">
-                                    <div className="w-10 h-10 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F59E0B]/20 group-hover:border-[#F59E0B]/40 group-hover:scale-110 transition-all duration-300">
-                                       <item.icon size={18} className="text-[#F59E0B]" strokeWidth={2} />
-                                    </div>
-                                    <div>
-                                       <span className="font-bold text-text-primary text-[14px] block">{item.label}</span>
-                                       <span className="text-[12px] text-slate-500 font-medium mt-0.5 block leading-relaxed">{item.desc}</span>
-                                    </div>
-                                 </li>
-                              ))}
-                           </ul>
-                        </div>
-                        <div className="order-2 relative">
-                           <PremiumPlaceholder aspect="aspect-square" label="Reporting Dashboard" glowCls="bg-[#F59E0B]" icon={PieChart} />
-                        </div>
+                           <h3 className="text-2xl font-black text-text-primary mb-3">Inventory Management</h3>
+                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Introduced real-time visibility, bulk updates, smart alerts, and capacity controls. Drastically reduced inventory discrepancies.</p>
+                           <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" />
+                        </motion.div>
                      </div>
                   </div>
                </section>
 
-               {/* DESIGN SYSTEM & VISUALS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Visual Identity
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Foundations</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A robust component library supporting 50+ reusable components, WCAG-compliant color system, and modern typography hierarchy.
-                     </p>
-                  </div>
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
 
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Colors
-                        </h4>
-                        <div className="grid grid-cols-3 gap-4">
-                           {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
-                              { bg: 'bg-[#00DA99]', label: 'Mint', hex: '#00DA99' },
-                              { bg: 'bg-[#1E1B4B]', label: 'Navy', hex: '#1E1B4B' },
-                              { bg: 'bg-[#F3F4F6]', label: 'Light', hex: '#F3F4F6' },
-                              { bg: 'bg-[#10B981]', label: 'Success', hex: '#10B981' },
-                              { bg: 'bg-[#0F172A]', label: 'Dark', hex: '#0F172A' }
-                           ].map((color, i) => (
-                              <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-slate-200 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
-                                 <div>
-                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
-                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
-                                 </div>
+               {/* ── SECTION 17: VALIDATION & RESULTS (PREMIUM METRICS BOARD) ───────────── */}
+               <section className="mb-16 md:mb-24">
+                  <div className="p-8 md:p-16 rounded-[40px] glass-card border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white/60 relative overflow-hidden">
+                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00DA99]/10 blur-[100px] rounded-full pointer-events-none" />
+                     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0D63CC]/10 blur-[100px] rounded-full pointer-events-none" />
+
+                     <div className="text-center mb-12 relative z-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-md">
+                           <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Results</span>
+                        </div>
+                        <h2 className="text-4xl font-bold mb-4 text-text-primary">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
+                        <p className="text-text-secondary font-medium max-w-2xl mx-auto text-lg">Meaningful business transformation through design.</p>
+                     </div>
+
+                     <div className="grid md:grid-cols-3 gap-6 relative z-10 mb-16">
+                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
+                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#00DA99] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                           <h3 className="text-5xl md:text-6xl font-black text-[#00DA99] mb-4 tracking-tight">↓ 42%</h3>
+                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Faster Deployment</p>
+                        </div>
+                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
+                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#0D63CC] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                           <h3 className="text-5xl md:text-6xl font-black text-[#0D63CC] mb-4 tracking-tight">↓ 31%</h3>
+                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Reduced Support</p>
+                        </div>
+                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
+                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#8B5CF6] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                           <h3 className="text-5xl md:text-6xl font-black text-[#8B5CF6] mb-4 tracking-tight">↑ 46%</h3>
+                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Task Completion</p>
+                        </div>
+                     </div>
+
+                     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12 relative z-10">
+                        {[
+                           { metric: "Ticket Setup", before: "45 min", after: "6 min", color: "#0D63CC" },
+                           { metric: "Reporting", before: "30 min", after: "5 min", color: "#00DA99" },
+                           { metric: "Support", before: "150/mo", after: "45/mo", color: "#8B5CF6" },
+                           { metric: "Training", before: "3 Days", after: "1 Day", color: "#F59E0B" },
+                           { metric: "Adoption", before: "54%", after: "83%", color: "#EC4899" },
+                        ].map((stat, i) => (
+                           <div key={i} className="p-6 bg-white/90 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden group">
+                              <div className="absolute top-0 left-0 w-full h-1 opacity-50 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: stat.color }} />
+                              <p className="text-[10px] font-black uppercase tracking-[0.2em] mb-5" style={{ color: stat.color }}>{stat.metric}</p>
+                              <div className="flex flex-col items-center justify-center gap-1.5">
+                                 <span className="text-[11px] font-bold text-slate-400 line-through">{stat.before}</span>
+                                 <ArrowRight size={14} className="my-1 opacity-40" style={{ color: stat.color }} />
+                                 <span className="text-2xl font-black text-text-primary">{stat.after}</span>
                               </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
-                        </h4>
-                        <div className="flex-1 flex flex-col justify-center mb-8">
-                           <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
-                              Aa
                            </div>
-                        </div>
-                        <div className="space-y-4">
-                           <div className="flex justify-between items-end border-b border-slate-200 pb-2">
-                              <span className="text-3xl font-black text-text-primary tracking-tight">Inter</span>
-                              <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Accessibility
-                        </h4>
-                        <ul className="space-y-4 text-sm font-medium text-slate-700">
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> WCAG Compliance</li>
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> Keyboard Navigation</li>
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> Screen Reader Support</li>
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> Accessible Forms</li>
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> Error Prevention</li>
-                            <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#10B981]"/> Focus Management</li>
-                        </ul>
+                        ))}
                      </div>
                   </div>
                </section>
 
-               {/* HIGH FIDELITY VISUAL DESIGN */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                   <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
-                           Visual Overview
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Visual Design</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        Design Direction: Modern SaaS, Enterprise-grade visual language, Data-Centric Interfaces, Minimal Cognitive Load, and Scalable Component Architecture.
-                     </p>
-                  </div>
+               {/* ── SECTION 20: FINAL TAKEAWAY ─────────────────────────────────────────── */}
+               <section className="relative mb-10 md:mb-16 overflow-hidden">
+                  <motion.div
+                     {...fadeIn}
+                     className="glass-card rounded-[24px] md:rounded-[32px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
+                  >
+                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0D63CC]/8 blur-[120px] rounded-full pointer-events-none" />
+                     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
 
-                  <PremiumPlaceholder aspect="aspect-[21/9]" label="Final Product Experience Mockup" glowCls="bg-[#00DA99]" icon={Grid} />
+                     <div className="relative z-10 text-center max-w-4xl mx-auto">
+                        <div className="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-md border border-slate-100">
+                           <Award size={28} className="text-[#0D63CC]" />
+                        </div>
+
+                        <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-8">
+                           Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Takeaway</span>
+                        </h2>
+
+                        <div className="relative">
+                           <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
+                           <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 font-serif leading-none select-none rotate-180 z-0">"</div>
+                           <div className="relative z-10 px-6 py-4">
+                              <p className="text-xl md:text-2xl font-bold text-text-primary leading-[1.4] mb-6">
+                                 TicketStack evolved from a fragmented operational utility into a strategic retail intelligence platform because <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">we stopped designing for features and started designing for decisions.</span>
+                              </p>
+                              <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                                 When retail managers can launch campaigns in under five minutes without consulting documentation, the interface becomes invisible—and that's where meaningful business transformation happens.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </motion.div>
                </section>
 
-               {/* SUCCESS METRICS & IMPACT */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+                   {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Results
+                           Interface
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-                     {[
-                        { val: "42%", label: "Faster Workflows", color: "text-[#0D63CC]" },
-                        { val: "37%", label: "Less Effort", color: "text-[#00DA99]" },
-                        { val: "31%", label: "Fewer Support Req", color: "text-[#10B981]" },
-                        { val: "46%", label: "Task Completion", color: "text-[#F59E0B]" },
-                        { val: "29%", label: "Platform Adoption", color: "text-[#8B5CF6]" },
-                        { val: "24%", label: "Reporting Engage", color: "text-[#EC4899]" }
-                     ].map((stat, i) => (
-                        <div key={i} className="glass-card rounded-3xl p-6 text-center border border-slate-200 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 flex flex-col justify-center">
-                           <h3 className={`text-3xl font-black mb-2 ${stat.color}`}>{stat.val}</h3>
-                           <p className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">{stat.label}</p>
-                        </div>
-                     ))}
-                  </div>
-
-                  <div className="glass-card p-8 rounded-3xl text-center max-w-4xl mx-auto border border-[#0D63CC]/10">
-                     <p className="text-lg font-medium text-slate-700">
-                        The redesign transformed TicketStack from a transactional ticket management tool into a strategic operational platform. Organizations gained faster workflows, better visibility, improved decision-making, reduced operational costs, increased scalability, and better user satisfaction.
-                     </p>
-                  </div>
-               </section>
-
-               {/* SWOT ANALYSIS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                           Strategic Analysis
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating TicketStack's competitive stance to ensure viability and identify risks.</p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                     {[
-                        {
-                           title: "Strengths",
-                           items: ["Enterprise scalability", "Multi-channel support", "Operational visibility"],
-                           color: "text-[#00DA99]",
-                           borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
-                           innerGlow: "bg-[#00DA99]/15",
-                           borderColor: "border-[#00DA99]/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Briefcase size={24} strokeWidth={2} className="text-[#00DA99] group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Weaknesses",
-                           items: ["Legacy technical debt", "Existing user habits", "Complex business rules"],
-                           color: "text-[#F59E0B]",
-                           borderGlow: "from-[#F59E0B]/30 via-white/10 to-transparent",
-                           innerGlow: "bg-[#F59E0B]/15",
-                           borderColor: "border-[#F59E0B]/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Activity size={24} strokeWidth={2} className="text-[#F59E0B] group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Opportunities",
-                           items: ["AI forecasting", "Dynamic pricing", "Global expansion"],
-                           color: "text-[#0D63CC]",
-                           borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
-                           innerGlow: "bg-[#0D63CC]/15",
-                           borderColor: "border-[#0D63CC]/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <Search size={24} strokeWidth={2} className="text-[#0D63CC] group-hover:scale-110 transition-transform duration-500" />
-                        },
-                        {
-                           title: "Threats",
-                           items: ["New competitors", "Market shifts", "Technology disruption"],
-                           color: "text-rose-500",
-                           borderGlow: "from-rose-500/30 via-white/10 to-transparent",
-                           innerGlow: "bg-rose-500/15",
-                           borderColor: "border-rose-500/30",
-                           gradientFill: "from-white/60 to-white/90",
-                           icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" />
-                        }
-                     ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-                           <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
-                              <motion.div
-                                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
-                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
-                                 className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
-                              />
-                              <div className="flex flex-col gap-4 mb-6 relative z-20">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>
-                                    {box.icon}
-                                 </div>
-                                 <h5 className={`font-semibold text-[20px] ${box.color}`}>
-                                    {box.title}
-                                 </h5>
-                              </div>
-                              <ul className="space-y-2 flex-1 relative z-20">
-                                 {box.items.map((item, j) => (
-                                    <li key={j} className="flex items-start gap-3 group/li">
-                                       <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
-                                       <span className="text-[13px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* FUTURE ROADMAP */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-12 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Phase 2</span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Future <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Roadmap</span></h2>
-                  </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                     {[
-                        { title: "AI Demand Forecasting", desc: "Predict future ticket sales." },
-                        { title: "Dynamic Pricing", desc: "Optimize revenue automatically." },
-                        { title: "Smart Inventory Allocation", desc: "Automated capacity planning." },
-                        { title: "Mobile Operations App", desc: "On-the-go management." },
-                        { title: "Advanced Partner Portal", desc: "Improved reseller experience." },
-                        { title: "Predictive Analytics", desc: "Business intelligence recommendations." }
-                     ].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                           <div className="w-10 h-10 rounded-full bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] flex-shrink-0">
-                              <Server size={18} />
-                           </div>
-                           <div>
-                              <h5 className="font-bold text-sm text-slate-800">{item.title}</h5>
-                              <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
-                           </div>
-                        </div>
-                     ))}
-                  </div>
-               </section>
-
-               {/* KEY LEARNINGS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="glass-card rounded-[32px] p-8 md:p-12 border-2 border-[#0D63CC]/10 relative overflow-hidden text-center max-w-9xl mx-auto">
-                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none" />
-                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0D63CC]/10 blur-[60px] rounded-full pointer-events-none" />
-                     
-                     <Award size={48} className="mx-auto text-[#0D63CC] mb-6 relative z-10" />
-                     <h2 className="text-3xl font-bold text-text-primary mb-8 relative z-10">Key Learnings & Final Outcome</h2>
-                     
-                     <div className="grid sm:grid-cols-2 gap-6 text-left relative z-10 mb-8">
-                        <div className="bg-white/50 p-6 rounded-2xl">
-                           <h4 className="font-bold text-[#0D63CC] mb-2">Enterprise UX Is Operational UX</h4>
-                           <p className="text-sm font-medium text-slate-700">Efficiency creates measurable business value.</p>
-                        </div>
-                        <div className="bg-white/50 p-6 rounded-2xl">
-                           <h4 className="font-bold text-[#0D63CC] mb-2">Simplicity Scales</h4>
-                           <p className="text-sm font-medium text-slate-700">Reducing complexity increases adoption.</p>
-                        </div>
-                        <div className="bg-white/50 p-6 rounded-2xl">
-                           <h4 className="font-bold text-[#0D63CC] mb-2">Data Must Drive Action</h4>
-                           <p className="text-sm font-medium text-slate-700">Insights should lead to decisions.</p>
-                        </div>
-                        <div className="bg-white/50 p-6 rounded-2xl">
-                           <h4 className="font-bold text-[#0D63CC] mb-2">Design Systems Enable Growth</h4>
-                           <p className="text-sm font-medium text-slate-700">Consistency accelerates product evolution.</p>
+                  <div className="grid gap-6">
+                     <div className="lg:col-span-12">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                           <Image
+                              src="/images/spendora/Visual-UI.png"
+                              alt="Visual UI"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
                         </div>
                      </div>
-
-                     <p className="text-lg font-medium text-slate-700 relative z-10 bg-white/80 p-6 rounded-2xl border border-[#0D63CC]/10">
-                        TicketStack™ successfully evolved into a modern enterprise ticketing ecosystem that empowers retailers, attractions, and distribution networks to manage ticket operations efficiently while unlocking growth opportunities through data-driven decision-making and scalable product architecture.
-                     </p>
                   </div>
                </section>
 
+               {/* 21. FINAL CTA */}
+               <section className="py-8 md:py-8 text-center relative">
+                  {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
+
+                  <div className="relative max-w-9xl mx-auto">
+                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
+
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                        <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
+
+                        <div className="relative z-10">
+                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
+                              <Sparkles size={28} className="animate-pulse" />
+                           </div>
+                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                           </h2>
+                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                           </p>
+
+                           <div className="flex flex-wrap justify-center gap-2 mb-10">
+                              {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
+                                 <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
+                                    <span className="text-[#0D63CC] mr-1">✓</span> {tag}
+                                 </span>
+                              ))}
+                           </div>
+
+                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                              <span className="relative z-10 text-white">Open in Figma</span>
+                              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                           </Link>
+                        </div>
+                     </motion.div>
+                  </div>
+               </section>
                {/* NEXT CASE STUDY NAVIGATION */}
-               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+               <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
-                  <Link href="/case-studies/spendora" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
-                        Spendora
+                  <Link href="/case-studies/supercampus" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                        SuperCampus
                      </h3>
-                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">
                         <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
                      </div>
                   </Link>
                </section>
-
             </div>
          </main>
          <Footer />

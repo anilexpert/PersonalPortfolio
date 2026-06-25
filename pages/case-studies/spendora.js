@@ -202,7 +202,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 3. THE PROBLEM ───────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -239,7 +239,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 4. BUSINESS CHALLENGE ─────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -293,7 +293,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 5. RESEARCH & DISCOVERY ─────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0D63CC]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
@@ -359,7 +359,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 6. OPPORTUNITY & VISION ───────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
@@ -396,7 +396,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 7. SOLUTION OVERVIEW ──────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12">
                      <div className="lg:col-span-4">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
@@ -450,7 +450,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 8. USER PERSONAS ─────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
@@ -555,7 +555,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 9. USER JOURNEY ──────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow</span>
@@ -609,7 +609,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 10. INFORMATION ARCHITECTURE ─────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-96 h-96 bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -641,7 +641,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 11. DESIGN STRATEGY ─────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
@@ -684,7 +684,7 @@ export default function SpendoraCaseStudy() {
                      </div>
                   </motion.div>
                </section>               {/* ── 12. DESIGN PROCESS ────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
@@ -744,7 +744,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 13. KEY PRODUCT FEATURES ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-10">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Core Value</span>
@@ -795,7 +795,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 14. DESIGN SYSTEM ───────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design System<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
@@ -852,7 +852,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 15. LANDING EXPERIENCE ──────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                            <Layout size={14} className="text-secondary" />
@@ -908,7 +908,7 @@ export default function SpendoraCaseStudy() {
              
 
                {/* ── 16. USABILITY TESTING ─────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#8B5CF6]/6 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00DA99]/6 blur-[100px] rounded-full pointer-events-none" />
@@ -949,7 +949,7 @@ export default function SpendoraCaseStudy() {
               
 
                {/* ── 17. IMPACT & RESULTS ───────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <TrendingUp size={14} className="text-primary" />
@@ -1008,7 +1008,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 18. KEY LEARNINGS ───────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <Lightbulb size={14} className="text-secondary" />
@@ -1046,7 +1046,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 19. FUTURE ROADMAP ─────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Future <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Roadmap</span></h2>
                   </div>
@@ -1082,7 +1082,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 20. FINAL REFLECTION ───────────────────────────────────────────────────── */}
-               <section className="relative mb-16 md:mb-20 overflow-hidden">
+               <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
                      className="glass-card rounded-[24px] md:rounded-[32px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
@@ -1110,14 +1110,14 @@ export default function SpendoraCaseStudy() {
                   </motion.div>
                </section>
                   {/* ── 21. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-20">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
                   </div>
 
                   <div className="grid gap-6">

@@ -9,7 +9,8 @@ import {
    PieChart, Handshake, MessageCircle, User, Award, BookOpen, Calendar, BookOpenCheck,
    GraduationCap, Bell, Server, Shuffle, Wind, Feather, ClipboardList,
    Smile, History, Keyboard, Stethoscope, FileSearch, Building2, Wallet, Lock, Layers,
-   Database, Clock, FileBadge, BarChart3, LineChart, Banknote, Receipt, Folder, MapPin, Sparkles, Rocket, Compass, ShieldCheck, Eye, AlertTriangle, UserCheck, ArrowRight
+   Database, Clock, FileBadge, BarChart3, LineChart, Banknote, Receipt, Folder, MapPin, Sparkles, Rocket, Compass, ShieldCheck, Eye, AlertTriangle, UserCheck, ArrowRight,
+   MonitorPlay, Info, Command, LayoutDashboard, Monitor
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -114,7 +115,7 @@ export default function CarenovaSystemsCaseStudy() {
                         An enterprise-grade healthcare operations platform designed to centralize facility management, compliance workflows, audits, workforce coordination, communication, and reporting across multi-facility healthcare organizations.
                      </motion.p>
                   </div>
-                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Industry</p>
                         <p className="font-bold text-sm text-text-primary">Healthcare SaaS</p>
@@ -151,11 +152,12 @@ export default function CarenovaSystemsCaseStudy() {
                      <div className="lg:col-span-3">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                            <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
-                              The Goal
+                              02. Overview
                            </span>
                         </div>
                      </div>
                      <div className="lg:col-span-9">
+                        <h2 className="text-4xl font-bold text-text-primary mb-4">Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Summary</span></h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            Healthcare organizations operating multiple facilities often rely on disconnected systems, spreadsheets, emails, and manual processes to manage critical compliance and operational activities. The objective was to transform this burden into a strategic advantage.
                         </p>
@@ -183,6 +185,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
+                        <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Problem</span></h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
                            Teams struggled to maintain compliance standards while simultaneously managing staff, incidents, documentation, and regulatory audits across various geographically dispersed locations.
                         </p>
@@ -216,7 +219,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Core Issues
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Goals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported several recurring operational issues that impacted both care quality and facility sustainability.</p>
                   </div>
 
@@ -269,7 +272,7 @@ export default function CarenovaSystemsCaseStudy() {
                                  Discovery
                               </span>
                            </div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h3>
+                           <h3 className="text-3xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
                            <p className="text-text-secondary leading-relaxed font-medium mb-8">
                               To understand operational challenges and user expectations, research was conducted with multiple user groups across the organization.
                            </p>
@@ -445,7 +448,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Map</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing stakeholder attitudes and behaviors to align design decisions with real user experiences.</p>
                   </div>
 
@@ -586,7 +589,7 @@ export default function CarenovaSystemsCaseStudy() {
                            UX Transformation
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Compliance Ecosystem</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         The design goal was to transform compliance resolution into a guided, step-by-step experience, significantly reducing cognitive load.
                      </p>
@@ -654,20 +657,324 @@ export default function CarenovaSystemsCaseStudy() {
                   <GlowDivider />
                </div>
 
+               {/* 10. DESIGN PROCESS */}
                <section className="mb-12 md:mb-16 lg:mb-20">
-                  {/* Reporting & Analytics */}
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Methodology
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
+                        A systematic, user-centric approach to solving complex enterprise challenges through iterative refinement.
+                     </p>
+                  </div>
+
+                  <div className="relative max-w-6xl mx-auto px-4">
+                     <div className="hidden lg:block absolute top-16 left-24 right-24 h-1 z-0 pointer-events-none">
+                        <svg width="100%" height="80" viewBox="0 0 1000 80" fill="none" preserveAspectRatio="none" className="opacity-30">
+                           <path d="M0,40 Q125,0 250,40 T500,40 T750,40 T1000,40" stroke="#0D63CC" strokeWidth="2" strokeDasharray="8 8" className="animate-dash" />
+                        </svg>
+                     </div>
+
+                     {/* DESKTOP VIEW */}
+                     <div className="hidden lg:flex items-start justify-between relative z-10">
+                        {[
+                           { num: "01", title: "Empathize", desc: "Stakeholder interviews, workflow observation, system audits.", icon: Heart, type: "dashed" },
+                           { num: "02", title: "Define", desc: "User personas, problem definition & feature prioritization.", icon: Target, type: "dashed" },
+                           { num: "03", title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                           { num: "04", title: "Design", desc: "Wireframes, visual design system, multi-role UI.", icon: PenTool, type: "solid-light" },
+                           { num: "05", title: "Test", desc: "Usability testing, feedback loops, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                        ].map((step, i) => (
+                           <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
+                              <motion.div
+                                 {...fadeIn}
+                                 transition={{ delay: i * 0.1 }}
+                                 className={`w-32 h-32 rounded-full mb-8 flex flex-col items-center justify-center transition-all duration-500 group relative
+                                    ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                                    ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                                    ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                                    hover:scale-110 hover:shadow-2xl
+                                 `}
+                              >
+                                 <step.icon size={28} strokeWidth={step.type === 'solid-dark' ? 2 : 1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                    {step.title}
+                                 </span>
+                              </motion.div>
+                              <motion.p {...fadeIn} transition={{ delay: i * 0.1 + 0.2 }} className="text-[11px] text-text-secondary font-bold text-center leading-relaxed max-w-[140px]">
+                                 {step.desc}
+                              </motion.p>
+                              {i < 4 && (
+                                 <div className={`absolute top-16 -right-12 translate-x-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center pointer-events-none opacity-40
+                                    ${i % 2 === 0 ? 'rotate-[15deg] translate-y-4' : '-rotate-[15deg] -translate-y-4'}
+                                 `}>
+                                    <ArrowLeft size={18} className="text-slate-400 rotate-180" />
+                                 </div>
+                              )}
+                           </div>
+                        ))}
+                     </div>
+
+                     {/* MOBILE VIEW */}
+                     <div className="lg:hidden space-y-16">
+                        {[
+                           { title: "Empathize", desc: "Stakeholder interviews, workflow observation.", icon: Heart, type: "dashed" },
+                           { title: "Define", desc: "User personas, problem definition & prioritization.", icon: Target, type: "dashed" },
+                           { title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
+                           { title: "Design", desc: "Wireframes, visual design, multi-role UI.", icon: PenTool, type: "solid-light" },
+                           { title: "Test", desc: "Usability testing, feedback, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                        ].map((step, i) => (
+                           <div key={i} className="flex flex-col items-center relative">
+                              <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center
+                                 ${step.type === 'dashed' ? 'border-2 border-dashed border-slate-300 bg-white shadow-sm' : ''}
+                                 ${step.type === 'solid-light' ? 'border-2 border-[#0D63CC] bg-[#E8F1FF] shadow-md' : ''}
+                                 ${step.type === 'solid-dark' ? 'bg-[#282360] text-white shadow-xl' : ''}
+                              `}>
+                                 <step.icon size={28} strokeWidth={1.5} className={step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'} />
+                                 <span className={`text-[11px] font-black uppercase tracking-widest mt-2 ${step.type === 'solid-dark' ? 'text-white' : 'text-[#282360]'}`}>
+                                    {step.title}
+                                 </span>
+                              </div>
+                              <p className="text-[11px] text-text-secondary font-bold text-center max-w-[200px]">{step.desc}</p>
+                              {i < 4 && <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[2px] h-8 bg-slate-200" />}
+                           </div>
+                        ))}
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* DESIGN SYSTEM */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-4">
+                        <span className="text-[10px] font-bold text-text-secondary uppercase tracking-widest">
+                           Visual Identity
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">System</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        A unified design system was created to ensure complex operational data feels approachable, trustworthy, and extremely accessible.
+                     </p>
+                  </div>
+
+                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+                     {/* Colors */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                              { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
+                              { bg: 'bg-[#282360]', label: 'Depth', hex: '#282360' },
+                              { bg: 'bg-[#10B981]', label: 'Success', hex: '#10B981' },
+                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: '#F59E0B' },
+                              { bg: 'bg-rose-500', label: 'Error', hex: '#F43F5E' }
+                           ].map((color, i) => (
+                              <div key={i} className="flex flex-col gap-2 group/color">
+                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div>
+                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
+                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
+                                 </div>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Typography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
+                        </h4>
+                        <div className="flex-1 flex flex-col justify-center mb-8">
+                           <div className="text-[100px] leading-none font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-800 to-slate-400 tracking-tighter group-hover:scale-105 transition-transform duration-500 origin-left">
+                              Aa
+                           </div>
+                        </div>
+                        <div className="space-y-4">
+                           <div className="flex justify-between items-end border-b border-slate-200 pb-2">
+                              <span className="text-3xl font-black text-text-primary tracking-tight">Poppins</span>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
+                           </div>
+                           <div className="flex justify-between text-xs font-medium text-text-secondary">
+                              <span>Regular</span>
+                              <span className="font-bold">Bold</span>
+                              <span className="font-black">Black</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Iconography */}
+                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
+                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
+                           <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
+                        </h4>
+                        <div className="grid grid-cols-3 gap-4">
+                           {[
+                              { icon: Layout, color: "text-[#0D63CC]" },
+                              { icon: GraduationCap, color: "text-[#00DA99]" },
+                              { icon: CheckSquare, color: "text-rose-500" },
+                              { icon: Bell, color: "text-[#0D63CC]" },
+                              { icon: Calendar, color: "text-[#F59E0B]" },
+                              { icon: Smartphone, color: "text-[#00DA99]" },
+                              { icon: BarChart3, color: "text-[#282360]" },
+                              { icon: MessageCircle, color: "text-rose-500" },
+                              { icon: Shield, color: "text-[#0D63CC]" }
+                           ].map((Item, i) => (
+                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                                 <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 12. UX DECISIONS */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EC4899]/10 border border-[#EC4899]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#EC4899] uppercase tracking-widest">
+                           Key Choices
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#8B5CF6]">Decisions</span></h2>
+                     <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
+                        Strategic design decisions made to balance enterprise complexity with intuitive, consumer-grade usability.
+                     </p>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                     {[
+                        { title: "Progressive Disclosure", desc: "Revealing complex compliance data only when necessary to reduce cognitive load on dashboard overviews.", icon: Layout },
+                        { title: "Contextual Guidance", desc: "Providing in-line help and intelligent recommendations within forms to prevent validation errors.", icon: Info },
+                        { title: "Keyboard Navigation", desc: "Optimizing all data-entry tables and workflows for power users who rely heavily on keyboard shortcuts.", icon: Command }
+                     ].map((item, idx) => (
+                        <div key={idx} className="p-8 md:p-10 bg-white/60 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl text-center group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1">
+                           <div className="w-20 h-20 mx-auto bg-white/60 backdrop-blur-md border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform text-slate-600 group-hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)]">
+                              <item.icon size={32} strokeWidth={1.5} />
+                           </div>
+                           <h4 className="text-[22px] font-bold text-text-primary mb-4 tracking-tight">{item.title}</h4>
+                           <p className="text-[15px] font-medium text-slate-500/90 leading-relaxed max-w-[260px] mx-auto">{item.desc}</p>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 13. THE SOLUTION */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Final Product
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Solution</span></h2>
+                     <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
+                        A unified platform that simplifies compliance, empowers facility staff, and provides executives with crystal-clear operational visibility.
+                     </p>
+                  </div>
+                  <div className="relative aspect-video w-full rounded-[32px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
+                     <PremiumPlaceholder aspect="aspect-video w-full h-full" label="Main Platform Dashboard" icon={LayoutDashboard} glowColor="#00DA99" />
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 14. CORE PRODUCT FEATURES */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#8B5CF6] uppercase tracking-widest">
+                           Capabilities
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Features</span></h2>
+                  </div>
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                     <div className="space-y-8">
+                        {[
+                           { title: "Real-time Compliance Engine", desc: "Automated tracking of regulatory requirements with proactive alerts before deadlines are missed." },
+                           { title: "Unified Staff Directory", desc: "Centralized credentialing, shift scheduling, and certification tracking." },
+                           { title: "Automated Corrective Actions", desc: "Smart workflows that automatically generate remediation steps when deficiencies are found." }
+                        ].map((feature, i) => (
+                           <div key={i} className="flex gap-4">
+                              <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 text-[#0D63CC] flex-shrink-0 flex items-center justify-center">
+                                 <CheckCircle2 size={24} />
+                              </div>
+                              <div>
+                                 <h4 className="text-xl font-bold text-text-primary mb-2">{feature.title}</h4>
+                                 <p className="text-text-secondary font-medium leading-relaxed">{feature.desc}</p>
+                              </div>
+                           </div>
+                        ))}
+                     </div>
+                     <div className="relative aspect-square w-full rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
+                        <PremiumPlaceholder aspect="aspect-square w-full h-full" label="Feature Interface Detail" icon={Layers} glowColor="#8B5CF6" />
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 15. ENTERPRISE SAAS SCREENS GALLERY */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">
+                           Gallery
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Enterprise SaaS <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Screens Gallery</span></h2>
+                  </div>
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                     {[1, 2, 3, 4, 5, 6].map((i) => (
+                        <div key={i} className="relative aspect-video rounded-xl overflow-hidden glass-card shadow-md border border-slate-200 group">
+                           <PremiumPlaceholder aspect="aspect-video w-full h-full" label={`Interface View ${i}`} icon={Monitor} glowColor="#00DA99" />
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 16. ANALYTICS & REPORTING */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">
                            Insights
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Reports & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analytics</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Analytics & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Reporting</span></h2>
                      <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         Advanced reporting capabilities enabled leadership teams to monitor organizational health and identify operational risks proactively without endless manual data gathering.
                      </p>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                      {[
                         { title: "Compliance Insights", items: ["Audit Readiness", "Deficiency Trends", "Corrective Actions"], color: "#0D63CC", icon: ShieldCheck },
@@ -696,70 +1003,6 @@ export default function CarenovaSystemsCaseStudy() {
                            </ul>
                         </div>
                      ))}
-                  </div>
-               </section>
-
-               <div className="mb-12 md:mb-16 lg:mb-20">
-                  <GlowDivider />
-               </div>
-
-               {/* DESIGN SYSTEM */}
-               <section className="mb-12 md:mb-16 lg:mb-20">
-                  <div className="mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-4">
-                        <span className="text-[10px] font-bold text-text-secondary uppercase tracking-widest">
-                           Visual Identity
-                        </span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A unified design system was created to ensure complex operational data feels approachable, trustworthy, and extremely accessible.
-                     </p>
-                  </div>
-
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
-                     {/* Principles - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-slate-100 shadow-xl relative overflow-hidden">
-                        <h4 className="font-bold text-xl text-text-primary mb-8">Core Principles</h4>
-                        <div className="space-y-6">
-                           {[
-                              { t: "Clarity", d: "Prioritize information hierarchy." },
-                              { t: "Consistency", d: "Predictable interaction patterns." },
-                              { t: "Accessibility", d: "Support diverse enterprise user needs." },
-                              { t: "Scalability", d: "Enable rapid module expansion." }
-                           ].map((p, i) => (
-                              <div key={i}>
-                                 <h5 className="font-bold text-sm text-[#0D63CC] mb-1">{p.t}</h5>
-                                 <p className="text-xs font-medium text-text-secondary">{p.d}</p>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     {/* Colors - Spans 8 cols */}
-                     <div className="lg:col-span-8 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 shadow-xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
-                        <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
-                           <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
-                        </h4>
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                           {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: 'Trust Blue' },
-                              { bg: 'bg-[#00DA99]', label: 'Success', hex: 'Growth Teal' },
-                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: 'Alert Orange' },
-                              { bg: 'bg-[#8B5CF6]', label: 'Info', hex: 'Metric Purple' },
-                              { bg: 'bg-slate-50', label: 'Surface', hex: 'Neutral Scale', border: 'border border-slate-200' }
-                           ].map((color, i) => (
-                              <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} ${color.border || ''} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
-                                 <div>
-                                    <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider mt-2">{color.label}</span>
-                                    <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-60">{color.hex}</span>
-                                 </div>
-                              </div>
-                           ))}
-                        </div>
-                     </div>
                   </div>
                </section>
 
@@ -830,7 +1073,7 @@ export default function CarenovaSystemsCaseStudy() {
                               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 relative z-10 ${stat.bg} ${stat.color} group-hover:scale-110 transition-transform duration-500`}>
                                  <stat.icon size={24} />
                               </div>
-                              <span className={`text-5xl md:text-6xl font-black ${stat.color} block mb-2 relative z-10 tracking-tighter`}>{stat.val}</span>
+                              <span className={`text-3xl md:text-4xl font-black ${stat.color} block mb-2 relative z-10 tracking-tighter`}>{stat.val}</span>
                               <span className="text-[13px] font-bold text-text-secondary relative z-10">{stat.label}</span>
                            </div>
                         ))}
@@ -838,8 +1081,8 @@ export default function CarenovaSystemsCaseStudy() {
 
                      <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[32px] border border-white/80 shadow-[0_20px_50px_-10px_rgba(0,218,153,0.1)] p-10 md:p-12 relative overflow-hidden flex flex-col justify-center border-t-4 border-t-[#00DA99] group">
                         <div className="absolute -top-32 -right-32 w-64 h-64 blur-[80px] bg-[#00DA99]/20 rounded-full group-hover:bg-[#00DA99]/30 transition-colors duration-1000 pointer-events-none" />
-                        <h3 className="text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-8 relative z-10">Qualitative <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
-                        <div className="space-y-6 relative z-10">
+                        <h3 className="text-xl md:text-3xl font-bold text-text-primary leading-tight mb-8 relative z-10">Qualitative <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
+                        <div className="space-y-4 relative z-10">
                            {[
                               "Improved operational visibility across all facilities.",
                               "Increased compliance confidence during state reviews.",
@@ -862,12 +1105,85 @@ export default function CarenovaSystemsCaseStudy() {
                   <GlowDivider />
                </div>
 
-               {/* FINAL CTA */}
-               <section className="py-12 md:py-20 text-center relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" />
+               {/* 19. LESSONS LEARNED */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-widest">
+                           Retrospective
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Lessons <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#EC4899]">Learned</span></h2>
+                     <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
+                        Key takeaways from designing an enterprise-grade healthcare compliance platform.
+                     </p>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                     {[
+                        { title: "Balance Complexity with Clarity", desc: "Enterprise users need dense information, but it must be structured perfectly. We learned that progressive disclosure is non-negotiable for compliance data." },
+                        { title: "Performance is UX", desc: "When users are managing hundreds of facilities, load times matter. We optimized the dashboard to render key metrics instantly, caching heavier audit logs." }
+                     ].map((item, idx) => (
+                        <div key={idx} className="p-8 glass-card rounded-[24px] border-l-4 border-l-[#F59E0B] shadow-sm hover:shadow-lg transition-all">
+                           <h4 className="text-xl font-bold text-text-primary mb-3">{item.title}</h4>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed">{item.desc}</p>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 20. FINAL PRODUCT SHOWCASE */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Showcase
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Final Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
+                  </div>
+                  <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
+                     <PremiumPlaceholder aspect="w-full h-full" label="Full Platform Hero Showcase" icon={MonitorPlay} glowColor="#00DA99" />
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+                  {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+                              <section className="mb-10 md:mb-16">
+                                 <div className="mb-16 text-center">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                                       <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                                          Interface
+                                       </span>
+                                    </div>
+                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                                 </div>
+               
+                                 <div className="grid gap-6">
+                                    <div className="lg:col-span-12">
+                                       <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                                          <Image
+                                             src="/images/spendora/Visual-UI.png"
+                                             alt="Visual UI"
+                                             fill
+                                             className="object-cover relative z-10 duration-1000"
+                                          />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </section>
+
+               {/* 21. FINAL CTA */}
+               <section className="py-8 md:py-8 text-center relative">
+                  {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
                   
-                  <div className="relative max-w-4xl mx-auto px-4">
-                     <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" />
+                  <div className="relative max-w-9xl mx-auto">
+                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
                      
                      <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
@@ -877,8 +1193,8 @@ export default function CarenovaSystemsCaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-5xl font-black tracking-tight text-text-primary mb-4 drop-shadow-sm">
-                              Explore the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Full Design</span>
+                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
@@ -901,6 +1217,20 @@ export default function CarenovaSystemsCaseStudy() {
                      </motion.div>
                   </div>
                </section>
+
+               {/* NEXT CASE STUDY NAVIGATION */}
+               <section className="mt-6 md:mt-6 border-t border-slate-200/50 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
+                  <Link href="/case-studies/spendora" className="group flex flex-col items-center">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                        Spendora
+                     </h3>
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">
+                        <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
+                     </div>
+                  </Link>
+               </section>
+
             </div>
          </main>
          <Footer />

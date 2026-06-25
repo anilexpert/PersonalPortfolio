@@ -681,7 +681,7 @@ export default function TicketStackCaseStudy() {
                      <div className="lg:col-span-12">
                         <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
-                              src="/images/spendora/Visual-UI.png"
+                              src="/images/ticketstack/TicketStackVisual.png"
                               alt="Visual UI"
                               fill
                               className="object-cover relative z-10 duration-1000"

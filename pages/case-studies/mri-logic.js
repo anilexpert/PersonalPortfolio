@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
-   ArrowLeft, Brain, TrendingUp, Target, Shield, Zap,
+   ArrowLeft, ArrowRight, Brain, TrendingUp, Target, Shield, Zap,
    Search, Users, Settings, Layout, CheckCircle2, FileText,
    Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase,
    MessageCircle, User, Award, ClipboardList, AlertTriangle,
    Database, BarChart2, Bell, Globe, Lock, Cpu, Smartphone,
    MapPin, Star, Scan, FolderOpen, Eye, Info,
-   UserCheck, BookOpen
+   UserCheck, BookOpen, Sparkles
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -1074,14 +1075,75 @@ export default function MRILogicCaseStudy() {
                   </motion.div>
                </section>
 
+               {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+               <section className="mb-10 md:mb-16">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
+                           Interface
+                        </span>
+                     </div>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                  </div>
+
+                  <div className="grid gap-6">
+                     <div className="lg:col-span-12">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                           <Image
+                              src="/images/spendora/Visual-UI.png"
+                              alt="Visual UI"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               {/* 21. FINAL CTA */}
+               <section className="py-8 md:py-8 text-center relative">
+                  <div className="relative max-w-9xl mx-auto">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                        <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
+
+                        <div className="relative z-10">
+                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
+                              <Sparkles size={28} className="animate-pulse" />
+                           </div>
+                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                           </h2>
+                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                           </p>
+
+                           <div className="flex flex-wrap justify-center gap-2 mb-10">
+                              {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
+                                 <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
+                                    <span className="text-[#0D63CC] mr-1">✓</span> {tag}
+                                 </span>
+                              ))}
+                           </div>
+
+                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                              <span className="relative z-10 text-white">Open in Figma</span>
+                              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                           </Link>
+                        </div>
+                     </motion.div>
+                  </div>
+               </section>
+
                {/* NEXT CASE STUDY NAVIGATION */}
-               <section className="border-t border-slate-200/50 flex flex-col items-center justify-center text-center">
+               <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/oasispad" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-primary transition-colors duration-300 mb-6">
+                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         OasisPad
                      </h3>
-                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                     <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">
                         <ArrowLeft className="rotate-180 text-text-secondary group-hover:text-white transition-colors" size={20} />
                      </div>
                   </Link>

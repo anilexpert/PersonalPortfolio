@@ -136,13 +136,18 @@ export default function CarenovaSystemsCaseStudy() {
                </section>
 
                {/* MAIN HERO IMAGE */}
-               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                      <div
-                        className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
-                        style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
+                        className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-20 pointer-events-none z-0"
+                        style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="Carenova Platform Interface" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layout} />
+                     <Image
+                        src="/images/carenova/CarenovaPlatformInterface.png"
+                        alt="Carenova Platform Interface"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                     />
                   </div>
                </motion.section>
 
@@ -323,7 +328,7 @@ export default function CarenovaSystemsCaseStudy() {
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
                               <h4 className="text-2xl font-bold text-text-primary mb-4">{insight.title}</h4>
                               <p className="text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
-                              
+
                               {insight.flow.length > 0 && (
                                  <div className="flex flex-wrap items-center gap-2">
                                     {insight.flow.map((step, stepIdx) => (
@@ -576,7 +581,13 @@ export default function CarenovaSystemsCaseStudy() {
 
                   <div className="max-w-8xl mx-auto">
                      <div className="mb-12 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
-                        <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#00DA99" textCls="text-[#00DA99]" icon={Layers} />
+                     <Image
+                        src="/images/carenova/InformationArchitecture.png"
+                        alt="Carenova Platform Interface"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                     />
+                        {/* <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#00DA99" textCls="text-[#00DA99]" icon={Layers} /> */}
                      </div>
                   </div>
                </section>
@@ -648,6 +659,12 @@ export default function CarenovaSystemsCaseStudy() {
                      <div className="lg:col-span-7">
                         <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-2xl p-2 border border-[#0D63CC]/10">
                            <PremiumPlaceholder aspect="aspect-full h-full" label="Dashboard Analytics Interface" icon={BarChart3} glowColor="#0D63CC" />
+                           <Image
+                              src="/images/carenova/ExecutiveDashboard2.png"
+                              alt="Carenova Platform Interface"
+                              fill
+                              className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                           />
                         </div>
                      </div>
                   </div>
@@ -892,8 +909,14 @@ export default function CarenovaSystemsCaseStudy() {
                         A unified platform that simplifies compliance, empowers facility staff, and provides executives with crystal-clear operational visibility.
                      </p>
                   </div>
-                  <div className="relative aspect-video w-full rounded-[32px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
-                     <PremiumPlaceholder aspect="aspect-video w-full h-full" label="Main Platform Dashboard" icon={LayoutDashboard} glowColor="#00DA99" />
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                     {/* <PremiumPlaceholder aspect="aspect-video w-full h-full" label="Main Platform Dashboard" icon={LayoutDashboard} glowColor="#00DA99" /> */}
+                     <Image
+                        src="/images/carenova/TheSolution.png"
+                        alt="Carenova Platform Interface"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                     />
                   </div>
                </section>
 
@@ -911,8 +934,8 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Core Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Features</span></h2>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                     <div className="space-y-8">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                     <div className="lg:col-span-5 space-y-8">
                         {[
                            { title: "Real-time Compliance Engine", desc: "Automated tracking of regulatory requirements with proactive alerts before deadlines are missed." },
                            { title: "Unified Staff Directory", desc: "Centralized credentialing, shift scheduling, and certification tracking." },
@@ -929,8 +952,16 @@ export default function CarenovaSystemsCaseStudy() {
                            </div>
                         ))}
                      </div>
-                     <div className="relative aspect-square w-full rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
-                        <PremiumPlaceholder aspect="aspect-square w-full h-full" label="Feature Interface Detail" icon={Layers} glowColor="#8B5CF6" />
+                     <div className="lg:col-span-7">
+                        <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
+                           {/* <PremiumPlaceholder aspect="aspect-square w-full h-full" label="Feature Interface Detail" icon={Layers} glowColor="#8B5CF6" /> */}
+                           <Image
+                              src="/images/carenova/FeatureInterfaceDetail.png"
+                              alt="Feature Interface Detail"
+                              fill
+                              className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                           />
+                        </div>
                      </div>
                   </div>
                </section>
@@ -949,13 +980,30 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Enterprise SaaS <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Screens Gallery</span></h2>
                   </div>
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                     {[1, 2, 3, 4, 5, 6].map((i) => (
-                        <div key={i} className="relative aspect-video rounded-xl overflow-hidden glass-card shadow-md border border-slate-200 group">
-                           <PremiumPlaceholder aspect="aspect-video w-full h-full" label={`Interface View ${i}`} icon={Monitor} glowColor="#00DA99" />
-                        </div>
-                     ))}
-                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                      {[
+                         { src: "/images/carenova/FeatureInterfaceDetail.png", alt: "Platform Dashboard" },
+                         { src: "/images/carenova/Reporting-Analytics.png", alt: "Reporting & Analytics" },
+                         { src: "/images/carenova/IncidentManagement.png", alt: "Incident Management" },
+                         { src: "/images/carenova/ExecutiveDashboard2.png", alt: "Executive Dashboard" },
+                         { src: "/images/carenova/ComplianceManagement.png", alt: "Compliance Workspace" },
+                         { src: "/images/carenova/Workforce-Management.png", alt: "Workforce Management" }
+                      ].map((img, i) => (
+                         <div key={i} className="relative aspect-[4/3] md:aspect-video rounded-2xl overflow-hidden glass-card shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200/60 group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
+                            <Image 
+                               src={img.src} 
+                               alt={img.alt} 
+                               fill 
+                               className="object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                               <p className="text-white font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                  {img.alt}
+                               </p>
+                            </div>
+                         </div>
+                      ))}
+                   </div>
                </section>
 
                <div className="mb-12 md:mb-16 lg:mb-20">
@@ -1146,49 +1194,27 @@ export default function CarenovaSystemsCaseStudy() {
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Final Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
                   </div>
                   <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
-                     <PremiumPlaceholder aspect="w-full h-full" label="Full Platform Hero Showcase" icon={MonitorPlay} glowColor="#00DA99" />
+                     {/* <PremiumPlaceholder aspect="w-full h-full" label="Full Platform Hero Showcase" icon={MonitorPlay} glowColor="#00DA99" /> */}
+                   <Image
+                              src="/images/carenova/CareNova.jpg"
+                              alt="Visual UI"
+                              fill
+                              className="object-cover relative z-10 duration-1000"
+                           />
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
-                  <GlowDivider />
-               </div>
-                  {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
-                              <section className="mb-10 md:mb-16">
-                                 <div className="mb-16 text-center">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                                       <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
-                                          Interface
-                                       </span>
-                                    </div>
-                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
-                                 </div>
-               
-                                 <div className="grid gap-6">
-                                    <div className="lg:col-span-12">
-                                       <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
-                                          <Image
-                                             src="/images/spendora/Visual-UI.png"
-                                             alt="Visual UI"
-                                             fill
-                                             className="object-cover relative z-10 duration-1000"
-                                          />
-                                       </div>
-                                    </div>
-                                 </div>
-                              </section>
-
-               {/* 21. FINAL CTA */}
+               {/* 20. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
-                  
+
                   <div className="relative max-w-9xl mx-auto">
                      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
-                     
+
                      <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
-                        
+
                         <div className="relative z-10">
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
@@ -1199,7 +1225,7 @@ export default function CarenovaSystemsCaseStudy() {
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
                            </p>
-                           
+
                            <div className="flex flex-wrap justify-center gap-2 mb-10">
                               {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
                                  <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
@@ -1208,7 +1234,7 @@ export default function CarenovaSystemsCaseStudy() {
                               ))}
                            </div>
 
-                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 bg-[#0D63CC] text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative">
+                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                               <span className="relative z-10">Open in Figma</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />

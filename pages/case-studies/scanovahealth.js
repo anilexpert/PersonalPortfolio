@@ -77,7 +77,7 @@ export default function ScanovaHealthCaseStudy() {
                      className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
-                     <span className="bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9] bg-clip-text text-transparent ml-2">Studies</span>
+                     <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent ml-2">Studies</span>
                   </motion.h1>
 
                   <div className="absolute top-2 right-[6%] hidden lg:block">
@@ -109,7 +109,7 @@ export default function ScanovaHealthCaseStudy() {
                         ScanovaHealth™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        AI-Assisted <span className="bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9] bg-clip-text text-transparent">Medical Device Validation &amp; MRI Readiness Platform</span>
+                        AI-Assisted <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Medical Device Validation &amp; MRI Readiness Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                         Transforming how patients, caregivers, and healthcare professionals access, validate, and manage implant device information for MRI preparation.
@@ -153,7 +153,7 @@ export default function ScanovaHealthCaseStudy() {
                </motion.section>
 
                {/* ── OVERVIEW / PROBLEM / SOLUTION ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
+               <section className="mb-10 md:mb-16 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
                         <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
@@ -229,49 +229,13 @@ export default function ScanovaHealthCaseStudy() {
                   </div>
                </section>
 
-               {/* ── PROJECT SUMMARY TABLE ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
-                        <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Project At a Glance</span>
-                     </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Summary</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key metadata and team structure powering the ScanovaHealth™ mobile platform.</p>
-                  </div>
-
-                  <div className="glass-card rounded-[32px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg">
-                     <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200/60">
-                        {[
-                           { label: "Product Name", value: "ScanovaHealth" },
-                           { label: "Industry", value: "Healthcare Technology" },
-                           { label: "Product Type", value: "Mobile Application" },
-                           { label: "Platform", value: "iOS & Android" },
-                           { label: "Duration", value: "6 Months" },
-                           { label: "Team Size", value: "8 Members" },
-                           { label: "Methodology", value: "Agile Product Development" },
-                           { label: "Primary Users", value: "Patients with Implantable Devices" },
-                           { label: "Secondary Users", value: "Caregivers, MRI Coordinators" },
-                           { label: "Business Model", value: "Subscription + Healthcare Partnerships" },
-                        ].map((row, i) => (
-                           <div key={i} className="flex items-start gap-4 p-6 md:p-8 group hover:bg-[#06B6D4]/5 transition-colors duration-300">
-                              <div className="w-2 h-2 rounded-full bg-[#06B6D4] mt-2 flex-shrink-0" />
-                              <div>
-                                 <p className="text-[11px] font-bold uppercase tracking-widest text-[#06B6D4] opacity-60 mb-1">{row.label}</p>
-                                 <p className="font-semibold text-sm text-text-primary leading-relaxed">{row.value}</p>
-                              </div>
-                           </div>
-                        ))}
-                     </div>
-                  </div>
-               </section>
-
                {/* ── BUSINESS OPPORTUNITY ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Market Context</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Opportunity</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Opportunity</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">The increasing number of implanted medical devices worldwide has created a growing need for a centralized digital solution.</p>
                   </div>
 
@@ -298,12 +262,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── DISCOVERY RESEARCH ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Findings</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Insights from 120+ patients, 35 caregivers, and 20 MRI technicians shaped our product direction.</p>
                   </div>
 
@@ -348,12 +312,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── USER PERSONAS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">User Research</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Three key user groups identified through stakeholder interviews, guiding design decisions and feature prioritization.</p>
                   </div>
                   <div className="grid lg:grid-cols-3 gap-8">
@@ -430,12 +394,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── EMPATHY MAP ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Research Insight</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Mapping</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing patient attitudes and behaviors to align our team on a deep understanding of end users.</p>
                   </div>
 
@@ -491,7 +455,7 @@ export default function ScanovaHealthCaseStudy() {
                         {/* CENTER PROFILE */}
                         <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
                            <div className="absolute inset-0 bg-[#06B6D4]/20 blur-[60px] rounded-full animate-pulse z-0" />
-                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#06B6D4] to-[#0EA5E9] p-2 shadow-[0_0_50px_rgba(6,182,212,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
+                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-2 shadow-[0_0_50px_rgba(6,182,212,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
                               <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(6,182,212,0.2)]">
                                  <User className="w-16 h-16 text-[#06B6D4] opacity-90" strokeWidth={1.5} />
                               </div>
@@ -538,12 +502,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── USER JOURNEY MAP ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Journey Mapping</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Journey Map</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Map</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">From device implantation through MRI appointment — the complete patient journey.</p>
                   </div>
 
@@ -574,12 +538,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── CORE FEATURES ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Core Value</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Features & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Smart Solutions</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Core Features & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Smart Solutions</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key functionalities designed to simplify implant device management and MRI readiness.</p>
                   </div>
 
@@ -618,12 +582,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── DESIGN PROCESS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-20 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Process</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Process</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Process</span></h2>
                      <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">A systematic approach to solving complex healthcare information challenges through user-centric design.</p>
                   </div>
 
@@ -690,12 +654,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── UX CHALLENGES & SOLUTIONS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">UX Strategy</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Challenges & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Solutions</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Challenges & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Solutions</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">How we solved critical UX challenges in medical information design.</p>
                   </div>
 
@@ -730,12 +694,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── DESIGN PRINCIPLES ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Philosophy</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Principles</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Principles</span></h2>
                   </div>
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -761,12 +725,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── DESIGN SYSTEM & VISUALS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Visual Identity</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Visuals</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A mobile-first, WCAG-compliant design system built for healthcare clarity and premium user experience.</p>
                   </div>
 
@@ -843,12 +807,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── INFORMATION ARCHITECTURE ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Architecture</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Architecture</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Architecture</span></h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -886,12 +850,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── SWOT ANALYSIS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Strategic Analysis</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Analysis</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -923,12 +887,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── VISUAL OVERVIEW ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Interface</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Experience</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Seamless mobile experience across all modules — from device scanning to MRI center discovery.</p>
                   </div>
 
@@ -943,12 +907,12 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── METRICS & RESULTS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Impact</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Results</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Results</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Measurable outcomes that transformed implant device management and MRI preparation.</p>
                   </div>
 
@@ -978,7 +942,7 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── COMPLIANCE DISCLAIMER ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="p-6 md:p-10 glass-card rounded-[24px] border-2 border-amber-200/60 bg-amber-50/20 relative overflow-hidden">
                      <div className="absolute -top-20 -right-20 w-60 h-60 bg-amber-400/10 blur-[80px] rounded-full pointer-events-none" />
                      <div className="relative z-10">
@@ -996,7 +960,7 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── OUTCOMES & CONCLUSION ───────────────────── */}
-               <section className="relative mb-20 overflow-hidden">
+               <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div {...fadeIn}
                      className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#06B6D4]/20 hover:border-[#06B6D4]/40"
                   >
@@ -1008,8 +972,8 @@ export default function ScanovaHealthCaseStudy() {
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                               <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Epilogue</span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">
-                              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9]">Future</span> of MRI Readiness.
+                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
+                              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Future</span> of MRI Readiness.
                            </h2>
                         </div>
 

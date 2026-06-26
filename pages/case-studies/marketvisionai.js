@@ -71,7 +71,7 @@ export default function MarketVisionAICaseStudy() {
                      className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
-                     <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Studies</span>
+                     <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent ml-2">Studies</span>
                   </motion.h1>
 
                   <div className="absolute top-2 right-[6%] hidden lg:block">
@@ -103,7 +103,7 @@ export default function MarketVisionAICaseStudy() {
                         MarketVisionAI™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        Designing an AI-Powered <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Marketing Intelligence Platform</span>
+                        Designing an AI-Powered <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Marketing Intelligence Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                         An AI-powered marketing intelligence and automated reporting platform designed to help agencies, marketers, and business teams centralize marketing data, uncover actionable insights, and optimize campaign performance through artificial intelligence.
@@ -158,7 +158,7 @@ export default function MarketVisionAICaseStudy() {
                </motion.section>
 
                {/* OVERVIEW / PROBLEM */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
+               <section className="mb-10 md:mb-16 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
                         <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
@@ -217,12 +217,12 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* GOALS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Target Outcomes</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Goals</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Goals</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
@@ -269,12 +269,12 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* RESEARCH FINDINGS */}
-               <section className="mb-16 md:mb-24 lg:mb-32 bg-slate-50 rounded-[40px] p-8 md:p-12 lg:p-16 border border-slate-200">
+               <section className="mb-10 md:mb-16 bg-slate-50 rounded-[40px] p-8 md:p-12 lg:p-16 border border-slate-200">
                   <div className="mb-12">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Key Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Findings</span></h2>
+                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Key Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl">We conducted extensive discovery activities with over 50 participants across agency owners, marketing managers, specialists, and clients.</p>
                   </div>
 
@@ -298,7 +298,7 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* PRODUCT VISION & STRATEGY */}
-               <section className="mb-16 md:mb-24 lg:mb-32 text-center max-w-5xl mx-auto px-4">
+               <section className="mb-10 md:mb-16 text-center max-w-5xl mx-auto px-4">
                   <div className="mb-12">
                      <h2 className="text-3xl md:text-5xl font-black text-text-primary leading-tight tracking-tight mb-4">
                         Empower every agency with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] via-[#0D63CC] to-[#8B5CF6]">enterprise-grade</span> AI marketing intelligence.
@@ -337,12 +337,12 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* SOLUTION & IA */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">The Solution</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">A Centralized AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">A Centralized AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Ecosystem</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         MarketVision combines multiple data sources into a single, intelligent platform, streamlining the entire marketing workflow.
                      </p>
@@ -405,14 +405,14 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* USER PERSONAS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         We identified key user groups to understand their goals, pain points, and motivations. These personas guided our design decisions and feature prioritization.
                      </p>
@@ -443,7 +443,7 @@ export default function MarketVisionAICaseStudy() {
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
                            {/* Dynamic Background Glow */}
                            <div
@@ -451,41 +451,41 @@ export default function MarketVisionAICaseStudy() {
                               style={{ backgroundColor: persona.color }}
                            />
 
-                           <div className="flex items-center gap-8 mb-12 relative z-10">
-                              <div className="w-24 h-24 rounded-[16px] overflow-hidden glass-card flex-shrink-0 relative border-2 border-[#0D63CC]/20 shadow-xl flex items-center justify-center bg-white/50 backdrop-blur-xl">
-                                 <persona.icon size={40} className="text-slate-800" />
+                           <div className="flex items-center gap-6 mb-8 relative z-10">
+                              <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
+                                 <persona.icon size={28} style={{ color: persona.color }} strokeWidth={1.5} />
                               </div>
                               <div>
-                                 <h4 className="font-bold text-3xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-medium text-secondary mt-2 opacity-80 uppercase tracking-wider">{persona.role} • Age {persona.age}</p>
+                                 <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                 <p className="text-xs font-medium text-text-secondary mt-1 opacity-80">{persona.role} • Age {persona.age}</p>
                               </div>
                            </div>
 
-                           <p className="text-base text-gray-800 leading-relaxed mb-12 relative z-10 font-medium">
+                           <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
                               "{persona.bio}"
                            </p>
 
-                           <div className="space-y-6 relative z-10">
-                              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/20">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
-                                    <CheckCircle2 size={14} strokeWidth={3} /> Core Goals
+                           <div className="space-y-4 relative z-10">
+                              <div className="p-5 rounded-2xl" style={{ backgroundColor: `${persona.color}08`, borderColor: `${persona.color}20`, borderWidth: '1px' }}>
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] mb-3 flex items-center gap-2" style={{ color: persona.color }}>
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
-                                 <div className="flex flex-wrap gap-3">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.goals.map((n, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/80 rounded-lg border border-primary/20 text-xs font-medium text-text-primary">
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border text-xs font-medium text-text-primary" style={{ borderColor: `${persona.color}20` }}>
                                           {n}
                                        </span>
                                     ))}
                                  </div>
                               </div>
 
-                              <div className="p-6 rounded-3xl bg-rose-50/50 border border-rose-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
-                                    <Activity size={14} strokeWidth={3} /> Critical Pain Points
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Critical Pain Points
                                  </h5>
-                                 <div className="flex flex-wrap gap-3">
+                                 <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
-                                       <span key={i} className="px-4 py-2 bg-white/80 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
                                           {p}
                                        </span>
                                     ))}
@@ -498,14 +498,14 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* EMPATHY MAP */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Understanding our users' mental models to align on strategic intelligence needs.</p>
                   </div>
 
@@ -588,7 +588,7 @@ export default function MarketVisionAICaseStudy() {
                         {/* Middle Row Center: PROFILE CIRCLE */}
                         <div className="hidden md:flex md:col-start-2 md:row-start-2 justify-center items-center relative z-10 w-full h-full min-h-[240px]">
                            <div className="absolute inset-0 bg-[#00DA99]/20 blur-[60px] rounded-full animate-pulse z-0" />
-                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#0D63CC] to-[#00DA99] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
+                           <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-2 shadow-[0_0_50px_rgba(13,99,204,0.3)] relative z-10 hover:scale-105 transition-transform duration-700">
                               <div className="w-full h-full bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-[inset_0_0_20px_rgba(13,99,204,0.2)]">
                                  <User className="w-16 h-16 text-[#0D63CC] opacity-90" strokeWidth={1.5} />
                               </div>
@@ -660,14 +660,14 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* CORE FEATURES GRID */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Capabilities
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">High-fidelity functionalities designed to empower users with intelligent automation.</p>
                   </div>
 
@@ -708,14 +708,14 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* DESIGN SYSTEM & VISUALS */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, modern, and consistent design system created to ensure accessibility, clarity, and a premium enterprise user experience.
                      </p>
@@ -831,7 +831,7 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* CHALLENGES */}
-               <section className="mb-16 md:mb-24 lg:mb-32 max-w-5xl mx-auto">
+               <section className="mb-10 md:mb-16 max-w-5xl mx-auto">
                   <div className="text-center mb-12">
                      <h2 className="text-3xl font-bold text-text-primary mb-4">Design Challenges</h2>
                   </div>
@@ -855,14 +855,14 @@ export default function MarketVisionAICaseStudy() {
                      </section>
 
                      {/* SUCCESS METRICS */}
-                     <section className="mb-16 md:mb-24 lg:mb-32">
+                     <section className="mb-10 md:mb-16">
                         <div className="mb-12 text-center">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                               <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                                  Performance
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Metrics</span></h2>
+                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Metrics</span></h2>
                            <p className="text-text-secondary font-medium max-w-2xl mx-auto">Measuring the impact and efficiency improvements after deploying MarketVisionAI.</p>
                         </div>
                         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -881,14 +881,14 @@ export default function MarketVisionAICaseStudy() {
                      </section>
 
                      {/* SWOT ANALYSIS */}
-                     <section className="mb-16 md:mb-24 lg:mb-32">
+                     <section className="mb-10 md:mb-16">
                         <div className="mb-12 text-center">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                               <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                                  Strategic Analysis
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
+                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Analysis</span></h2>
                            <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating MarketVisionAI's competitive stance to ensure viability and identify risks.</p>
                         </div>
 
@@ -965,7 +965,7 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* OUTCOMES & CONCLUSION */}
-               <section className="relative mb-20 overflow-hidden">
+               <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
                      className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
@@ -981,8 +981,8 @@ export default function MarketVisionAICaseStudy() {
                                  Epilogue
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">
-                              Results & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Impact</span>
+                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
+                              Results & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span>
                            </h2>
                         </div>
 
@@ -1081,8 +1081,8 @@ export default function MarketVisionAICaseStudy() {
                      <div className="lg:col-span-12">
                         <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
-                              src="/images/spendora/Visual-UI.png"
-                              alt="Visual UI"
+                              src="/images/marketvisionai/MarketVision.png"
+                              alt="MarketVision UI"
                               fill
                               className="object-cover relative z-10 duration-1000"
                            />
@@ -1099,11 +1099,11 @@ export default function MarketVisionAICaseStudy() {
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 
                         <div className="relative z-10">
-                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
+                           <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#00DA99] to-[#0D63CC] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
-                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.

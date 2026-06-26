@@ -138,11 +138,17 @@ export default function TicketStackCaseStudy() {
 
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
-                     <div
+                      <Image
+                           src="/images/ticketstack/EnterpriseRetailTicketing.png"
+                           alt="Carenova Platform Interface"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     {/* <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
-                     <PremiumPlaceholder aspect="aspect-[21/9]" label="TicketStack Command Center Interface" glowColor="#00DA99" textCls="text-[#0D63CC]" icon={Layout} />
+                     <PremiumPlaceholder aspect="aspect-[21/9]" label="TicketStack Command Center Interface" glowColor="#00DA99" textCls="text-[#0D63CC]" icon={Layout} /> */}
                   </div>
                </motion.section>
 
@@ -534,14 +540,30 @@ export default function TicketStackCaseStudy() {
                            </ul>
                         </motion.div>
                         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="lg:col-span-7">
-                           <PremiumPlaceholder icon={Layout} label="Dashboard Interface Mockup" glowColor="#0D63CC" textCls="text-[#0D63CC]" aspect="aspect-video" />
+                            <div className="relative aspect-[14/7] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                              <Image
+                                 src="/images/ticketstack/DashboardInterface.png"
+                                 alt="Carenova Platform Interface"
+                                 fill
+                                 className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                              />
+                           </div>
+                           {/* <PremiumPlaceholder icon={Layout} label="Dashboard Interface Mockup" glowColor="#0D63CC" textCls="text-[#0D63CC]" aspect="aspect-video" /> */}
                         </motion.div>
                      </div>
 
                      {/* Scene 02 */}
                      <div className="grid lg:grid-cols-12 gap-12 items-center">
                         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="order-2 lg:order-1 lg:col-span-7">
-                           <PremiumPlaceholder icon={Layers} label="Ticket Creation Wizard Mockup" glowColor="#8B5CF6" textCls="text-[#8B5CF6]" aspect="aspect-[16/10]" />
+                           {/* <PremiumPlaceholder icon={Layers} label="Ticket Creation Wizard Mockup" glowColor="#8B5CF6" textCls="text-[#8B5CF6]" aspect="aspect-[16/10]" /> */}
+                        <div className="relative aspect-[16/10] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                              <Image
+                                 src="/images/ticketstack/TicketCreationWizard.png"
+                                 alt="Ticket Creation Wizard"
+                                 fill
+                                 className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                              />
+                           </div>
                         </motion.div>
                         <motion.div {...fadeIn} className="order-1 lg:order-2 lg:col-span-5">
                            <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center mb-6">
@@ -566,7 +588,15 @@ export default function TicketStackCaseStudy() {
                            </div>
                            <h3 className="text-2xl font-black text-text-primary mb-3">Campaign Management</h3>
                            <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Centralized promotions, discount rules, seasonal campaigns, and scheduling. Reduced setup effort significantly.</p>
-                           <PremiumPlaceholder icon={Target} label="Campaigns UI" aspect="aspect-[4/3]" glowColor="#00DA99" textCls="text-[#00DA99]" />
+                           {/* <PremiumPlaceholder icon={Target} label="Campaigns UI" aspect="aspect-[4/3]" glowColor="#00DA99" textCls="text-[#00DA99]" /> */}
+                           <div className="relative aspect-[4/3] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                              <Image
+                                 src="/images/ticketstack/CampaignsUI.png"
+                                 alt="Campaigns UI"
+                                 fill
+                                 className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                              />
+                           </div>
                         </motion.div>
 
                         <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-10 rounded-[32px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
@@ -575,7 +605,15 @@ export default function TicketStackCaseStudy() {
                            </div>
                            <h3 className="text-2xl font-black text-text-primary mb-3">Inventory Management</h3>
                            <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Introduced real-time visibility, bulk updates, smart alerts, and capacity controls. Drastically reduced inventory discrepancies.</p>
-                           <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" />
+                           {/* <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" /> */}
+                           <div className="relative aspect-[4/3] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                              <Image
+                                 src="/images/ticketstack/InventoryUI.png"
+                                 alt="Inventory UI"
+                                 fill
+                                 className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                              />
+                           </div>
                         </motion.div>
                      </div>
                   </div>

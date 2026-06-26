@@ -104,7 +104,7 @@ const CoreCapabilities = () => {
         {/* ── View All Domains Button ── */}
         <div className="flex justify-center mt-12">
           <Link href="/services" passHref>
-            <button className="px-6 md:px-8 py-3 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[13px] md:text-base font-medium flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300">
+            <button className="px-6 md:px-8 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[13px] md:text-base font-medium flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300">
               View All Domains <ArrowUpRight size={18} className="stroke-[2]" />
             </button>
           </Link>

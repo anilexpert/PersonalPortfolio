@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, CheckCircle2, Heart, TrendingUp, ShieldCheck, Cpu, Database, ArrowRight, Cloud, LayoutDashboard, Layers, Building, Smartphone } from 'lucide-react';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const expertiseData = [
   {
@@ -17,6 +18,7 @@ const expertiseData = [
       "Conversion Optimization"
     ],
     ctaText: "Explore SaaS Work",
+    href: "/services/saas-platform-design",
     icon: Cloud,
     color: "#00DA99",
     bgStyle: "linear-gradient(135deg, #0D63CC 0%, #0A4A99 100%)"
@@ -35,6 +37,7 @@ const expertiseData = [
       "Contextual Automation"
     ],
     ctaText: "View AI Projects",
+    href: "/services/ai-experience-design",
     icon: Cpu,
     color: "#0D63CC",
     bgStyle: "linear-gradient(135deg, #322E60 0%, #282360 100%)"
@@ -53,6 +56,7 @@ const expertiseData = [
       "Action-Oriented Reporting"
     ],
     ctaText: "Explore Data UX",
+    href: "/services/data-intelligence",
     icon: LayoutDashboard,
     color: "#8B5CF6",
     bgStyle: "linear-gradient(135deg, #00A876 0%, #008B60 100%)"
@@ -71,6 +75,7 @@ const expertiseData = [
       "Developer Handoff Workflows"
     ],
     ctaText: "View Design Systems",
+    href: "/services/design-systems",
     icon: Layers,
     color: "#F43F5E",
     bgStyle: "linear-gradient(135deg, #1A1740 0%, #110E2A 100%)"
@@ -89,6 +94,7 @@ const expertiseData = [
       "Efficiency-Driven Design"
     ],
     ctaText: "Explore Enterprise UX",
+    href: "/services/enterprise-workflow",
     icon: Building,
     color: "#F59E0B",
     bgStyle: "linear-gradient(135deg, #00C6B5 0%, #009E91 100%)"
@@ -107,6 +113,7 @@ const expertiseData = [
       "On-the-go Productivity Tools"
     ],
     ctaText: "View Mobile Apps",
+    href: "/services",
     icon: Smartphone,
     color: "#0EA5E9",
     bgStyle: "linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)"
@@ -116,6 +123,7 @@ const expertiseData = [
 const DesignExpertise = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = expertiseData[activeIndex];
+  const router = useRouter();
 
   return (
     <section className="py-10 md:py-18 relative overflow-hidden" id="expertise">
@@ -265,6 +273,7 @@ const DesignExpertise = () => {
                   </div>
 
                   <button
+                    onClick={() => router.push(activeItem.href || '#')}
                     className="w-full py-4 mt-auto rounded-full font-semibold flex items-center justify-center gap-2 text-white hover:scale-[1.02] transition-all duration-300"
                     style={{
                       backgroundColor: activeItem.color,

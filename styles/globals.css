@@ -110,6 +110,7 @@
   .btn-premium {
     background: linear-gradient(135deg, #00DA99 0%, #0D63CC 100%);
     color: white;
+    cursor: pointer;
     border-radius: 999px;
     box-shadow: 0 8px 24px rgba(0, 218, 153, 0.25);
     padding: 14px 32px;

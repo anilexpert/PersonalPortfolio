@@ -41,7 +41,7 @@ export default function Home() {
         <GlowDivider />
         <ProjectsSlider />
         <GlowDivider />
-        <HowIDesign />
+        {/* <HowIDesign /> */}
         <GlowDivider />
         <FeaturedCaseStudy />
         <GlowDivider />

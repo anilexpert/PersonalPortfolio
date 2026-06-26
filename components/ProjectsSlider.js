@@ -147,8 +147,8 @@ export default function ProjectsSlider() {
           className="flex flex-col md:flex-row w-full"
           style={{
             height: 'auto',
-            minHeight: 480,
-            gap: 14,
+            minHeight: 420,
+            gap: 20,
             borderRadius: 24,
           }}
         >
@@ -159,7 +159,7 @@ export default function ProjectsSlider() {
               <div
                 key={proj.title}
                 onClick={() => setActive(idx)}
-                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[28px] ${isActive ? 'h-[520px] md:h-[540px]' : 'h-[140px] md:h-[540px]'
+                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[28px] ${isActive ? 'h-[420px] md:h-[420px]' : 'h-[140px] md:h-[420px]'
                   }`}
 
                 style={{
@@ -240,8 +240,8 @@ export default function ProjectsSlider() {
                         </p>
                         <div className="mt-6">
                           <Link href={`/case-studies/${proj.slug}`}>
-                            <button className="px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full text-[13px] font-medium transition-all backdrop-blur-md flex items-center gap-2">
-                              Read Case Study <ArrowUpRight size={16} />
+                            <button className="btn-premium py-2 md:py-2.5 px-4 md:px-5 text-[12px] md:text-[13px]">
+                              <span className="uppercase">Read Case Study</span> <ArrowUpRight size={16} />
                             </button>
                           </Link>
                         </div>

@@ -33,7 +33,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 lg:top-6 left-0 right-0 z-50 px-0 lg:px-6 pointer-events-none">
+    <nav className="fixed top-0 lg:top-6 left-0 right-0 z-[999] px-0 lg:px-6 pointer-events-none">
       <div
         className={`w-full lg:max-w-7xl mx-auto flex items-center justify-between pointer-events-auto transition-all duration-500 glass-card px-4 py-3 lg:px-8 lg:py-3 lg:rounded-[24px] rounded-xl ${scrolled ? 'scale-[0.98] border-opacity-60' : ''
           }`}
@@ -84,7 +84,7 @@ export default function Navbar() {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  <div className="absolute top-full left-0 pt-4 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                  <div className="absolute top-full left-0 pt-4 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[999]">
                     <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-xl rounded-2xl overflow-hidden py-2 flex flex-col">
                       {dropdownItems.map((item, idx) => (
                         <Link

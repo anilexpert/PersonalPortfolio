@@ -9,7 +9,7 @@ import {
    PieChart, Handshake, MessageCircle, User, Award, BarChart3, Eye,
    Layers, Cpu, Workflow, Lock, Rocket, Clock, ArrowRight, Compass,
    Sparkles, Globe, ChevronDown, DollarSign, Wallet, CreditCard,
-   Banknote, TrendingDown, AlertTriangle, HelpCircle, LineChart, Building, MapPin, GraduationCap, Building2, BookOpen
+   Banknote, TrendingDown, AlertTriangle, HelpCircle, LineChart, Building, MapPin, GraduationCap, Building2, BookOpen, ArrowDown
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -91,31 +91,39 @@ export default function SpendoraCaseStudy() {
                         SPENDORA™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl leading-snug">
-                        Career-Aligned <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Financial Literacy Platform</span> for Student Success
+                        Designing an <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">AI-Powered Financial Literacy</span> & <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Expense Management</span> Platform
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed font-medium italic mb-6">
                         Bridging the gap between academic aspirations and real-world financial readiness.
                      </motion.p>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base md:text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        SPENDORA™ is a career-aligned financial literacy and future planning platform designed to help students, educational institutions, and financial organizations. The platform enables users to explore future careers, estimate earnings, simulate real-life expenses, understand student debt implications, and visualize long-term financial outcomes—all before entering the workforce.
+                        SPENDORA™ is an AI-powered financial platform designed to help users manage expenses, improve financial literacy, and make smarter money decisions through personalized insights and intuitive analytics.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Role</p>
+                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
+                     </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Industry</p>
                         <p className="font-bold text-sm text-text-primary">EdTech + FinTech</p>
                      </div>
                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Web + Mobile</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
                         <p className="font-bold text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Responsive Web SaaS Platform</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Team</p>
+                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Responsibilities</p>
+                        <p className="font-bold text-sm text-text-primary">Research, UX Strategy, UI Design, Prototyping, Design System</p>
                      </div>
                   </motion.div>
                </section>
@@ -138,7 +146,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 2. PROJECT SNAPSHOT ───────────────────────────────────────────────────── */}
                <section className="mb-12 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
-                  
+
                   <div className="text-center mb-10 md:mb-12 relative z-10">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Overview</span>
@@ -211,29 +219,58 @@ export default function SpendoraCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
-                           Financial literacy remains one of the most critical yet underserved areas in education.
-                        </p>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-6">
+                           The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Problem</span>
+                        </h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Many students graduate without understanding:
+                           Many individuals struggle to manage personal finances effectively due to fragmented financial tools, limited financial literacy, and a lack of personalized guidance. Existing solutions often focus on tracking expenses rather than helping users understand and improve their financial behavior.
                         </p>
-                        <div className="grid sm:grid-cols-2 gap-4">
-                           {[
-                              "How much they are likely to earn.",
-                              "How location impacts cost of living.",
-                              "The long-term impact of student loans.",
-                              "Whether desired lifestyle aligns with career.",
-                              "How to create and manage a realistic budget."
-                           ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] transition-all duration-300">
-                                 <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)] flex-shrink-0" />
-                                 <span className="text-sm font-bold text-text-primary">{item}</span>
+
+                        {/* Visual Storytelling */}
+                        <div className="flex flex-col md:flex-row items-center gap-4 justify-between bg-white/60 p-6 rounded-2xl border border-slate-100 shadow-sm mt-8">
+                           <div className="flex flex-col items-center text-center max-w-[140px]">
+                              <div className="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center mb-3 shadow-sm">
+                                 <Layers className="text-rose-500" size={24} />
                               </div>
-                           ))}
+                              <span className="text-sm font-bold text-slate-700 leading-tight">Scattered Financial Data</span>
+                           </div>
+                           <ArrowRight className="hidden md:block text-slate-300 flex-shrink-0" size={20} />
+                           <ArrowDown className="md:hidden text-slate-300 flex-shrink-0" size={20} />
+
+                           <div className="flex flex-col items-center text-center max-w-[140px]">
+                              <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mb-3 shadow-sm">
+                                 <HelpCircle className="text-orange-500" size={24} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700 leading-tight">Poor Financial Awareness</span>
+                           </div>
+                           <ArrowRight className="hidden md:block text-slate-300 flex-shrink-0" size={20} />
+                           <ArrowDown className="md:hidden text-slate-300 flex-shrink-0" size={20} />
+
+                           <div className="flex flex-col items-center text-center max-w-[140px]">
+                              <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mb-3 shadow-sm">
+                                 <AlertTriangle className="text-yellow-500" size={24} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700 leading-tight">Inconsistent Budgeting</span>
+                           </div>
+                           <ArrowRight className="hidden md:block text-slate-300 flex-shrink-0" size={20} />
+                           <ArrowDown className="md:hidden text-slate-300 flex-shrink-0" size={20} />
+
+                           <div className="flex flex-col items-center text-center max-w-[140px]">
+                              <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-3 shadow-sm">
+                                 <TrendingDown className="text-red-500" size={24} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700 leading-tight">Overspending</span>
+                           </div>
+                           <ArrowRight className="hidden md:block text-slate-300 flex-shrink-0" size={20} />
+                           <ArrowDown className="md:hidden text-slate-300 flex-shrink-0" size={20} />
+
+                           <div className="flex flex-col items-center text-center max-w-[140px]">
+                              <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3 shadow-sm">
+                                 <Wallet className="text-slate-500" size={24} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700 leading-tight">Low Savings Confidence</span>
+                           </div>
                         </div>
-                        <p className="text-base text-text-secondary leading-relaxed font-medium mt-8 italic bg-white/60 p-5 rounded-2xl border border-slate-100 shadow-sm">
-                           Traditional financial literacy programs often rely on static worksheets, generic calculators, or classroom lectures that fail to create meaningful engagement. As a result, students frequently enter adulthood financially unprepared.
-                        </p>
                      </div>
                   </div>
                </section>
@@ -297,34 +334,35 @@ export default function SpendoraCaseStudy() {
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0D63CC]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="relative z-10 mb-10 text-center md:text-left">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                            <Search size={14} className="text-primary" />
                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Discovery</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-3">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Discovery</span></h2>
-                        <p className="text-text-secondary font-medium max-w-2xl text-base">To better understand user behavior and institutional needs, we conducted a mixed-methods approach:</p>
+                        <p className="text-text-secondary font-medium max-w-3xl text-base">To better understand users' financial behaviors, motivations, and pain points, research was conducted across students, professionals, and financially independent users.</p>
                      </div>
 
                      <div className="relative z-10 mb-10 flex flex-wrap gap-3 justify-center md:justify-start">
-                        {[
-                           { name: "Stakeholder Interviews", icon: Users, color: "#0D63CC" },
-                           { name: "Competitive Analysis", icon: Target, color: "#00DA99" },
-                           { name: "User Interviews", icon: MessageCircle, color: "#8B5CF6" },
-                           { name: "Journey Mapping", icon: MapPin, color: "#EC4899" },
-                           { name: "Product Benchmarking", icon: BarChart3, color: "#F59E0B" }
-                        ].map((activity, i) => (
-                           <div 
-                              key={i}
-                              className="px-4 py-2.5 bg-white/80 rounded-xl border border-white/80 shadow-sm text-[13px] font-semibold text-slate-700 flex items-center gap-2.5"
-                           >
-                              <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${activity.color}15`, color: activity.color }}>
-                                 <activity.icon size={14} strokeWidth={2.5} />
+                        {
+                           [
+                              { name: "User Interviews", icon: MessageCircle, color: "#0D63CC" },
+                              { name: "Competitive Analysis", icon: Target, color: "#00DA99" },
+                              { name: "Affinity Mapping", icon: Layers, color: "#8B5CF6" },
+                              { name: "User Journey Map", icon: MapPin, color: "#EC4899" },
+                              { name: "Empathy Map", icon: Heart, color: "#F59E0B" }
+                           ].map((activity, i) => (
+                              <div
+                                 key={i}
+                                 className="px-4 py-2.5 bg-white/80 rounded-xl border border-white/80 shadow-sm text-[13px] font-semibold text-slate-700 flex items-center gap-2.5"
+                              >
+                                 <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${activity.color}15`, color: activity.color }}>
+                                    <activity.icon size={14} strokeWidth={2.5} />
+                                 </div>
+                                 {activity.name}
                               </div>
-                              {activity.name}
-                           </div>
-                        ))}
+                           ))}
                      </div>
 
                      <h3 className="text-lg font-bold text-text-primary mb-6 relative z-10">Key Research Findings</h3>
@@ -335,7 +373,7 @@ export default function SpendoraCaseStudy() {
                            { num: "03", title: "Financial education feels abstract", desc: "Most students viewed budgeting as a school exercise rather than a life-planning tool." },
                            { num: "04", title: "Guidance over spreadsheets", desc: "Students wanted guidance—not spreadsheets. Users consistently expressed a desire for personalized recommendations, real-world benchmarks, and future forecasting." }
                         ].map((insight, i) => (
-                           <motion.div 
+                           <motion.div
                               key={i}
                               whileHover={{ y: -4 }}
                               className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden"
@@ -363,7 +401,7 @@ export default function SpendoraCaseStudy() {
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                         <div className="lg:col-span-4">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
@@ -371,14 +409,14 @@ export default function SpendoraCaseStudy() {
                               <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Opportunity</span>
                            </div>
                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
-                              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Challenge</span>
+                              Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Opportunity</span>
                            </h2>
                         </div>
                         <div className="lg:col-span-8">
                            <div className="p-6 md:p-8 bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] relative">
                               <div className="absolute -top-4 -left-4 text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99] font-serif leading-none">"</div>
                               <h3 className="text-xl md:text-2xl font-bold text-text-primary leading-relaxed relative z-10">
-                                 How might we help students visualize the financial consequences of future life decisions before they graduate?
+                                 The opportunity was to create a unified financial platform that combines expense tracking, financial education, AI-driven recommendations, and personalized insights to help users build healthier financial habits.
                               </h3>
                            </div>
                         </div>
@@ -420,7 +458,7 @@ export default function SpendoraCaseStudy() {
                   <div className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="text-center mb-10 relative z-10">
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Core Solution <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Pillars</span></h3>
                      </div>
@@ -432,9 +470,9 @@ export default function SpendoraCaseStudy() {
                            { title: "Financial Wellness Education", desc: "Complex financial concepts are simplified through guided experiences.", icon: BookOpen, color: "#F59E0B" },
                            { title: "Predictive Insights", desc: "Users understand both current and future financial implications.", icon: TrendingUp, color: "#EC4899" }
                         ].map((pillar, idx) => (
-                           <motion.div 
-                              key={idx} 
-                              {...fadeIn} transition={{ delay: idx * 0.1 }} 
+                           <motion.div
+                              key={idx}
+                              {...fadeIn} transition={{ delay: idx * 0.1 }}
                               className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-all duration-300 p-5 group hover:-translate-y-2 relative overflow-hidden text-center flex flex-col justify-start"
                            >
                               <div className="absolute -top-8 -right-8 w-24 h-24 blur-[30px] rounded-full opacity-10 group-hover:opacity-20 pointer-events-none transition-all" style={{ backgroundColor: pillar.color }} />
@@ -463,7 +501,7 @@ export default function SpendoraCaseStudy() {
                      {[
                         {
                            name: "Emily Johnson",
-                           role: "First-Year College Student",
+                           role: "Primary Persona • First-Year College Student",
                            age: "18",
                            image: "/images/spendora/sneha.png",
                            goals: ["Understand future living costs", "Estimate student loan impact", "Create realistic expectations"],
@@ -538,7 +576,7 @@ export default function SpendoraCaseStudy() {
 
                               <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
-                                    <Activity size={13} strokeWidth={3} /> Pain Points
+                                    <Activity size={13} strokeWidth={3} /> Frustrations
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
                                     {persona.pains.map((p, i) => (
@@ -567,11 +605,12 @@ export default function SpendoraCaseStudy() {
                      <div className="absolute top-16 left-12 right-12 h-[2px] bg-gradient-to-r from-[#0D63CC] via-[#00DA99] to-[#8B5CF6] opacity-20 z-0" />
                      <div className="grid grid-cols-5 gap-4">
                         {[
-                           { num: "01", title: "Create a Scenario", desc: "Define future living scenario: ZIP, Region, Household.", icon: MapPin, color: "#0D63CC" },
-                           { num: "02", title: "Career & Income", desc: "Select Career Cluster, Occupation, Salary Level.", icon: Briefcase, color: "#0D63CC" },
-                           { num: "03", title: "Expense Simulation", desc: "Estimate housing, transportation, and personal spending.", icon: Wallet, color: "#00DA99" },
-                           { num: "04", title: "Loan Estimation", desc: "Estimate debt obligations and aid assistance.", icon: GraduationCap, color: "#8B5CF6" },
-                           { num: "05", title: "Financial Results", desc: "Generate a comprehensive financial analysis.", icon: Target, color: "#EC4899" }
+                           { num: "01", title: "Financial Awareness", desc: "User realizes the need for better financial management.", icon: Eye, color: "#0D63CC" },
+                           { num: "02", title: "Track Expenses", desc: "Connects accounts and starts categorizing spending.", icon: Wallet, color: "#0D63CC" },
+                           { num: "03", title: "Analyze Spending", desc: "Reviews patterns and identifies areas for improvement.", icon: PieChart, color: "#00DA99" },
+                           { num: "04", title: "Receive Recommendations", desc: "Gets AI-driven insights tailored to their habits.", icon: Sparkles, color: "#8B5CF6" },
+                           { num: "05", title: "Set Goals", desc: "Establishes savings goals based on personalized insights.", icon: Target, color: "#F59E0B" },
+                           { num: "06", title: "Improve Health", desc: "Builds long-term financial stability.", icon: TrendingUp, color: "#EC4899" }
                         ].map((step, i) => (
                            <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.08 }} className="flex flex-col items-center text-center relative z-10">
                               <div className="w-14 h-14 rounded-2xl mb-4 flex items-center justify-center transition-transform duration-500 hover:scale-110 shadow-lg bg-white" style={{ border: `2px solid ${step.color}` }}>
@@ -587,14 +626,15 @@ export default function SpendoraCaseStudy() {
 
                   <div className="lg:hidden space-y-8 max-w-md mx-auto">
                      {[
-                           { num: "01", title: "Create a Scenario", desc: "Define future living scenario: ZIP, Region, Household.", icon: MapPin, color: "#0D63CC" },
-                           { num: "02", title: "Career & Income", desc: "Select Career Cluster, Occupation, Salary Level.", icon: Briefcase, color: "#0D63CC" },
-                           { num: "03", title: "Expense Simulation", desc: "Estimate housing, transportation, and personal spending.", icon: Wallet, color: "#00DA99" },
-                           { num: "04", title: "Loan Estimation", desc: "Estimate debt obligations and aid assistance.", icon: GraduationCap, color: "#8B5CF6" },
-                           { num: "05", title: "Financial Results", desc: "Generate a comprehensive financial analysis.", icon: Target, color: "#EC4899" }
+                        { num: "01", title: "Financial Awareness", desc: "User realizes the need for better financial management.", icon: Eye, color: "#0D63CC" },
+                        { num: "02", title: "Track Expenses", desc: "Connects accounts and starts categorizing spending.", icon: Wallet, color: "#0D63CC" },
+                        { num: "03", title: "Analyze Spending", desc: "Reviews patterns and identifies areas for improvement.", icon: PieChart, color: "#00DA99" },
+                        { num: "04", title: "Receive Recommendations", desc: "Gets AI-driven insights tailored to their habits.", icon: Sparkles, color: "#8B5CF6" },
+                        { num: "05", title: "Set Goals", desc: "Establishes savings goals based on personalized insights.", icon: Target, color: "#F59E0B" },
+                        { num: "06", title: "Improve Health", desc: "Builds long-term financial stability.", icon: TrendingUp, color: "#EC4899" }
                      ].map((step, i) => (
                         <div key={i} className="flex items-start gap-5 relative">
-                           {i < 4 && <div className="absolute top-14 left-7 w-[2px] h-8 bg-slate-200" />}
+                           {i < 5 && <div className="absolute top-14 left-7 w-[2px] h-8 bg-slate-200" />}
                            <div className="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-md bg-white" style={{ border: `2px solid ${step.color}` }}>
                               <step.icon size={22} strokeWidth={1.5} style={{ color: step.color }} />
                            </div>
@@ -616,12 +656,12 @@ export default function SpendoraCaseStudy() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Architecture</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-black text-text-primary">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Architecture</span></h2>
+                        <h2 className="text-2xl md:text-3xl font-black text-text-primary">Structuring the Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="bg-white/80 p-5 md:p-6 rounded-2xl font-mono text-sm leading-loose border border-white/80 shadow-sm text-slate-700">
                            <pre className="overflow-x-auto">
-{`Dashboard
+                              {`Dashboard
 ├── Scenario Setup
 ├── Career Planning
 ├── Income Sources
@@ -633,8 +673,28 @@ export default function SpendoraCaseStudy() {
 └── Saved Scenarios`}
                            </pre>
                         </div>
+                        <div className="mt-6 flex flex-wrap gap-4">
+                           <div className="flex items-center gap-3 bg-white/80 px-4 py-3 rounded-xl border border-slate-100 shadow-sm">
+                              <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
+                                 <Layers className="text-[#0D63CC]" size={20} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700">Sitemap</span>
+                           </div>
+                           <div className="flex items-center gap-3 bg-white/80 px-4 py-3 rounded-xl border border-slate-100 shadow-sm">
+                              <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center">
+                                 <Compass className="text-[#00DA99]" size={20} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700">Navigation Hierarchy</span>
+                           </div>
+                           <div className="flex items-center gap-3 bg-white/80 px-4 py-3 rounded-xl border border-slate-100 shadow-sm">
+                              <div className="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center">
+                                 <Workflow className="text-[#8B5CF6]" size={20} />
+                              </div>
+                              <span className="text-sm font-bold text-slate-700">User Flow</span>
+                           </div>
+                        </div>
                         <p className="text-[13px] text-text-secondary font-medium leading-relaxed mt-5 italic bg-white/60 p-4 rounded-xl border border-slate-100 shadow-sm">
-                           The architecture intentionally follows the student's mental model: Career → Income → Expenses → Outcomes instead of traditional financial software patterns.
+                           The information architecture was designed to simplify financial management while balancing analytics, educational content, and personalized recommendations.
                         </p>
                      </div>
                   </div>
@@ -645,27 +705,24 @@ export default function SpendoraCaseStudy() {
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="relative z-10 mb-10 text-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                            <Target size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Strategy</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Strategy</span></h2>
-                        <p className="text-text-secondary font-medium max-w-3xl mx-auto text-base leading-relaxed">
-                           The primary design challenge involved simplifying highly complex financial calculations for students with limited financial knowledge.
-                        </p>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Principles</span></h2>
                      </div>
 
                      <div className="relative z-10 grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
                         {[
-                           { num: "01", title: "Progressive Learning", desc: "Financial concepts are introduced gradually, preventing cognitive overload and building confidence step-by-step.", icon: Layers, color: "#00DA99" },
-                           { num: "02", title: "Guidance Over Complexity", desc: "The interface provides contextual help rather than assuming prior knowledge, making financial terms accessible.", icon: Compass, color: "#0D63CC" },
-                           { num: "03", title: "Scenario-Based Exploration", desc: "Learning occurs through interactive future simulations, allowing users to 'play' with their future.", icon: MapPin, color: "#8B5CF6" },
-                           { num: "04", title: "Confidence Through Benchmarking", desc: "Peer comparisons validate assumptions and reduce uncertainty, providing a realistic frame of reference.", icon: BarChart3, color: "#EC4899" }
+                           { num: "01", title: "Simplicity First", desc: "Reduce cognitive load and simplify financial decision-making.", icon: Layers, color: "#00DA99" },
+                           { num: "02", title: "Actionable Insights", desc: "Present data in a way that drives meaningful action.", icon: Compass, color: "#0D63CC" },
+                           { num: "03", title: "Personalization", desc: "Adapt recommendations based on user goals and spending behavior.", icon: MapPin, color: "#8B5CF6" },
+                           { num: "04", title: "Trust & Transparency", desc: "Build confidence through clear communication and intuitive interactions.", icon: Shield, color: "#EC4899" }
                         ].map((principle, idx) => (
-                           <motion.div 
-                              key={idx} 
+                           <motion.div
+                              key={idx}
                               whileHover={{ y: -4 }}
                               className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-all duration-300 p-5 flex flex-col sm:flex-row items-start gap-5 group"
                            >
@@ -688,7 +745,7 @@ export default function SpendoraCaseStudy() {
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="mb-12 text-center relative z-10">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-4 bg-white/60 backdrop-blur-sm border-white shadow-sm">
                            <Workflow size={14} className="text-slate-500" />
@@ -700,7 +757,7 @@ export default function SpendoraCaseStudy() {
                      <div className="relative max-w-6xl mx-auto z-10">
                         {/* Connecting Line */}
                         <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-[#0D63CC]/20 to-transparent z-0" />
-                        
+
                         <div className="grid lg:grid-cols-5 gap-6 lg:gap-4 relative z-10">
                            {[
                               { step: "Discover", items: ["Stakeholder Interviews", "User Research", "Competitive Analysis"], icon: Search, color: "#0D63CC" },
@@ -709,8 +766,8 @@ export default function SpendoraCaseStudy() {
                               { step: "Design", items: ["Design System", "High-Fidelity UI", "Interactive Prototypes"], icon: PenTool, color: "#8B5CF6" },
                               { step: "Validate", items: ["Prototype Testing", "Feedback Sessions", "Iterations"], icon: CheckCircle2, color: "#EC4899" }
                            ].map((phase, idx) => (
-                              <motion.div 
-                                 key={idx} 
+                              <motion.div
+                                 key={idx}
                                  {...fadeIn} transition={{ delay: idx * 0.1 }}
                                  className="flex flex-col items-center text-center group"
                               >
@@ -722,7 +779,7 @@ export default function SpendoraCaseStudy() {
                                        0{idx + 1}
                                     </div>
                                  </div>
-                                 
+
                                  {/* Content Card */}
                                  <div className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] p-5 w-full flex-1 group-hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-all duration-300 relative overflow-hidden">
                                     <div className="absolute top-0 left-0 w-full h-1" style={{ backgroundColor: phase.color }} />
@@ -754,12 +811,10 @@ export default function SpendoraCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                      {[
-                        { num: "01", title: "Career Cluster Explorer", desc: "Students explore broad career categories aligned with their interests to encourage future-oriented thinking.", outcome: "Students understand career possibilities and earning potential.", color: "#00DA99", image: "/images/spendora/CareerClusterExplorerThumnail.png" },
-                        { num: "02", title: "Occupation & Salary Explorer", desc: "Students search occupations and explore starting/median salary, education requirements, and benchmarks.", outcome: "Improves awareness of career affordability.", color: "#0D63CC", image: "/images/spendora/OccupationSalaryExplorerThumnail.png" },
-                        { num: "03", title: "Expense Simulator", desc: "Estimate expenses across housing, transportation, insurance, utilities, and debt with market benchmarks.", outcome: "Improves understanding of real-world living costs.", color: "#8B5CF6", image: "/images/spendora/ExpenseSimulatorThumbnail.png" },
-                        { num: "04", title: "Student Loan Payment Estimator", desc: "Users estimate monthly student loan obligations based on educational choices and status.", outcome: "Students better understand long-term debt implications.", color: "#F59E0B", image: "/images/spendora/StudentLoanPaymentEstimatorThumnail.png" },
-                        { num: "05", title: "Peer Benchmark Engine", desc: "Compare projected expenses against peers in similar demographic and geographic groups.", outcome: "Builds confidence and encourages reflection.", color: "#10B981", image: "/images/spendora/PeerBenchmarkEngineThumbnail.png" },
-                        { num: "06", title: "Predictive Savings Projection", desc: "Students visualize long-term savings growth over time, transforming outcomes into tangible goals.", outcome: "Transforms future financial outcomes into tangible goals.", color: "#3B82F6", image: "/images/spendora/PredictiveSavingsProjectionThumbnail.png" }
+                        { num: "01", title: "Smart Expense Tracking", desc: "Automatically organize and visualize spending patterns for better financial awareness.", outcome: "Students understand career possibilities and earning potential.", color: "#00DA99", image: "/images/spendora/CareerClusterExplorerThumnail.png" },
+                        { num: "02", title: "Goal-Based Planning", desc: "Help users set, monitor, and achieve financial goals through personalized recommendations.", outcome: "Improves awareness of career affordability.", color: "#0D63CC", image: "/images/spendora/OccupationSalaryExplorerThumnail.png" },
+                        { num: "03", title: "Predictive Intelligence", desc: "Leverage AI-driven insights to anticipate financial trends and improve decision-making.", outcome: "Improves understanding of real-world living costs.", color: "#8B5CF6", image: "/images/spendora/ExpenseSimulatorThumbnail.png" },
+                        { num: "04", title: "Interactive Analytics", desc: "Transform complex financial data into intuitive, actionable visualizations.", outcome: "Students better understand long-term debt implications.", color: "#F59E0B", image: "/images/spendora/PredictiveSavingsProjectionThumbnail.png" }
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -797,7 +852,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 14. DESIGN SYSTEM ───────────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Design System<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Building a Scalable FinTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
                         A scalable design system was created to support multiple audiences and maintain consistency across the platform.
                      </p>
@@ -848,29 +903,68 @@ export default function SpendoraCaseStudy() {
                            <p className="text-xs font-medium text-text-secondary">✅ Clear visual hierarchy and large interaction targets.</p>
                         </div>
                      </div>
+
+                     {/* Component Gallery & Grid System */}
+                     <div className="lg:col-span-12 glass-card rounded-[24px] md:rounded-[32px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-6 lg:p-8 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+
+                        <div className="grid md:grid-cols-2 gap-8 relative z-10">
+                           <div>
+                              <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
+                                 <div className="w-2 h-2 bg-[#8B5CF6] rounded-full" /> Grid System & Layout
+                              </h4>
+                              <p className="text-[13px] text-text-secondary font-medium leading-relaxed mb-6">
+                                 A responsive 12-column grid ensures consistency across viewports, utilizing an 8pt spacing system to maintain vertical rhythm and visual harmony throughout the complex analytical interfaces.
+                              </p>
+                              <div className="flex gap-2">
+                                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((col) => (
+                                    <div key={col} className="flex-1 h-20 bg-indigo-50 rounded border border-indigo-100 flex justify-center pt-2">
+                                       <div className="w-full h-full border-x border-dashed border-indigo-200/50" />
+                                    </div>
+                                 ))}
+                              </div>
+                           </div>
+
+                           <div>
+                              <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
+                                 <div className="w-2 h-2 bg-[#EC4899] rounded-full" /> Component Gallery
+                              </h4>
+                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                 {["Buttons", "Inputs", "Cards", "Charts", "Navigation", "Modals"].map((item, i) => (
+                                    <div key={i} className="bg-white rounded-xl border border-slate-100 shadow-sm p-4 flex flex-col items-center justify-center gap-2 hover:shadow-md hover:border-slate-200 transition-all">
+                                       <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center">
+                                          <Layers className="text-slate-400" size={16} />
+                                       </div>
+                                       <span className="text-[11px] font-bold text-slate-700">{item}</span>
+                                    </div>
+                                 ))}
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </section>
 
                {/* ── 15. LANDING EXPERIENCE ──────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                           <Layout size={14} className="text-secondary" />
-                           <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Acquisition</span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Landing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                        <Layout size={14} className="text-secondary" />
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Acquisition</span>
+                     </div>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Landing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-3xl mx-auto text-lg leading-relaxed">Two distinct acquisition experiences were designed sharing a unified platform while adapting messaging to specific audience needs.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                      <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
                         <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#0D63CC]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
-                        
+
                         <div className="w-14 h-14 rounded-2xl bg-[#0D63CC] flex items-center justify-center mb-8 shadow-lg shadow-[#0D63CC]/30 group-hover:scale-110 transition-transform duration-500">
                            <Building2 size={24} className="text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-text-primary mb-8 tracking-tight">Higher Education <span className="text-[#0D63CC]">Experience</span></h3>
-                        
+
                         <div className="space-y-4 relative z-10">
                            {["Student Success Focus", "Financial Literacy Metrics", "Career Readiness Alignment", "FERPA Compliance & Security"].map((item, idx) => (
                               <div key={idx} className="flex items-center gap-4 bg-white/60 p-4 rounded-2xl shadow-sm border border-slate-100 backdrop-blur-sm">
@@ -885,12 +979,12 @@ export default function SpendoraCaseStudy() {
 
                      <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[24px] md:rounded-[32px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
                         <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
-                        
+
                         <div className="w-14 h-14 rounded-2xl bg-[#00DA99] flex items-center justify-center mb-8 shadow-lg shadow-[#00DA99]/30 group-hover:scale-110 transition-transform duration-500">
                            <Users size={24} className="text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-text-primary mb-8 tracking-tight">Credit Union <span className="text-[#00DA99]"> Experience</span></h3>
-                        
+
                         <div className="space-y-4 relative z-10">
                            {["Member Engagement", "Financial Wellness", "Retention", "Community Impact"].map((item, idx) => (
                               <div key={idx} className="flex items-center gap-4 bg-white/60 p-4 rounded-2xl shadow-sm border border-slate-100 backdrop-blur-sm">
@@ -905,31 +999,75 @@ export default function SpendoraCaseStudy() {
                   </div>
                </section>
 
-             
+
+
+
+               {/* ── WIREFRAMES (New) ──────────────────────────────────────────────────────── */}
+               <section className="mb-10 md:mb-16">
+                  <div className="mb-10 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Evolution</span>
+                     </div>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">
+                        From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Final Experience</span>
+                     </h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
+                        Iterative process from initial low-fidelity concepts to the final polished UI.
+                     </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                     <div className="bg-white/80 rounded-2xl border border-white/80 shadow-sm p-6 text-center">
+                        <div className="w-16 h-16 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-4">
+                           <PenTool className="text-slate-500" size={24} />
+                        </div>
+                        <h4 className="font-bold text-lg text-text-primary mb-2">Low Fidelity</h4>
+                        <p className="text-sm text-text-secondary">Initial sketches & user flows</p>
+                     </div>
+                     <div className="bg-white/80 rounded-2xl border border-white/80 shadow-sm p-6 text-center relative">
+                        <div className="hidden md:block absolute top-1/2 -left-3 w-6 h-[2px] bg-slate-300" />
+                        <div className="w-16 h-16 mx-auto rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                           <Layers className="text-[#0D63CC]" size={24} />
+                        </div>
+                        <h4 className="font-bold text-lg text-text-primary mb-2">Mid Fidelity</h4>
+                        <p className="text-sm text-text-secondary">Wireframes & layout structure</p>
+                     </div>
+                     <div className="bg-white/80 rounded-2xl border border-white/80 shadow-sm p-6 text-center relative">
+                        <div className="hidden md:block absolute top-1/2 -left-3 w-6 h-[2px] bg-slate-300" />
+                        <div className="w-16 h-16 mx-auto rounded-full bg-green-50 flex items-center justify-center mb-4">
+                           <CheckCircle2 className="text-[#00DA99]" size={24} />
+                        </div>
+                        <h4 className="font-bold text-lg text-text-primary mb-2">Final UI</h4>
+                        <p className="text-sm text-text-secondary">Polished visual design</p>
+                     </div>
+                  </div>
+               </section>
 
                {/* ── 16. USABILITY TESTING ─────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#8B5CF6]/6 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00DA99]/6 blur-[100px] rounded-full pointer-events-none" />
-                     
+
                      <div className="relative z-10 mb-10 text-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                            <Settings size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Validation</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Testing</span></h2>
+                        <p className="text-text-secondary font-medium max-w-3xl mx-auto mt-4 text-base leading-relaxed">
+                           Usability testing sessions were conducted to validate assumptions, identify friction points, and refine interactions before final delivery.
+                        </p>
                      </div>
 
-                     <div className="grid md:grid-cols-2 gap-5 relative z-10 max-w-6xl mx-auto">
+                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10 max-w-6xl mx-auto">
                         {[
-                           { num: "01", title: "Guided experiences preferred", desc: "Students preferred guided, step-by-step experiences over open-ended forms, reducing cognitive load.", icon: Layers, color: "#8B5CF6" },
-                           { num: "02", title: "Peer comparisons drove engagement", desc: "Seeing how peers managed finances significantly increased platform engagement and reflection.", icon: Users, color: "#00DA99" },
-                           { num: "03", title: "Career-first budgeting won", desc: "Starting the conversation with career aspirations felt more relatable than traditional budgeting entry points.", icon: Briefcase, color: "#0D63CC" },
-                           { num: "04", title: "Visual scores built confidence", desc: "Transforming raw numbers into visual health scores increased understanding and actionable confidence.", icon: PieChart, color: "#F59E0B" }
+                           { num: "01", title: "Key Finding", desc: "Users wanted faster expense categorization.", icon: Zap, color: "#8B5CF6" },
+                           { num: "02", title: "Key Finding", desc: "Users preferred simplified analytics terminology.", icon: FileText, color: "#00DA99" },
+                           { num: "03", title: "Key Finding", desc: "Users expected personalized savings recommendations.", icon: Sparkles, color: "#0D63CC" }
                         ].map((finding, i) => (
-                           <motion.div 
-                              key={i} 
+                           <motion.div
+                              key={i}
                               whileHover={{ y: -4 }}
                               className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] transition-all duration-300 p-5 flex flex-col sm:flex-row gap-5 group"
                            >
@@ -946,7 +1084,7 @@ export default function SpendoraCaseStudy() {
                      </div>
                   </motion.div>
                </section>
-              
+
 
                {/* ── 17. IMPACT & RESULTS ───────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
@@ -955,7 +1093,7 @@ export default function SpendoraCaseStudy() {
                         <TrendingUp size={14} className="text-primary" />
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Results</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Impact & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-5 max-w-6xl mx-auto">
@@ -965,14 +1103,14 @@ export default function SpendoraCaseStudy() {
                            <div className="w-14 h-14 bg-gradient-to-br from-[#0D63CC] to-blue-600 rounded-2xl flex items-center justify-center shadow-md shadow-[#0D63CC]/20">
                               <User className="text-white" size={28} />
                            </div>
-                           <h3 className="text-2xl font-black text-text-primary leading-tight">Student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> Outcomes</span></h3>
+                           <h3 className="text-2xl font-black text-text-primary leading-tight">Expected <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> Outcomes</span></h3>
                         </div>
                         <div className="grid sm:grid-cols-2 gap-3 relative z-10">
                            {[
-                              "Increased financial awareness",
-                              "Improved confidence in decision-making",
-                              "Better understanding of debt implications",
-                              "More informed career choices"
+                              "Improved visibility into personal finances",
+                              "Simplified expense management workflows",
+                              "Increased user engagement through personalized insights",
+                              "Encouraged healthier financial behaviors"
                            ].map((g, i) => (
                               <div key={i} className="bg-blue-50/60 border border-blue-100/60 p-4 rounded-xl">
                                  <CheckCircle2 size={20} className="text-[#0D63CC] mb-2" />
@@ -1015,6 +1153,9 @@ export default function SpendoraCaseStudy() {
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Takeaways</span>
                      </div>
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span></h2>
+                     <p className="text-text-secondary font-medium max-w-3xl mx-auto mt-4 text-base leading-relaxed">
+                        Designing financial products requires balancing analytical depth with simplicity. The biggest challenge was presenting complex financial information in a way that remains understandable, actionable, and trustworthy.
+                     </p>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5 max-w-6xl mx-auto">
@@ -1024,13 +1165,13 @@ export default function SpendoraCaseStudy() {
                         { title: "Power of visualization", desc: "Future visualization dramatically improves financial decision-making by making long-term consequences tangible today.", color: "#8B5CF6", icon: Brain },
                         { title: "Simplifying complexity", desc: "Simplifying financial complexity is both a critical UX challenge and an educational imperative for this demographic.", color: "#EC4899", icon: Sparkles }
                      ].map((learning, idx) => (
-                        <motion.div 
-                           key={idx} 
-                           {...fadeIn} transition={{ delay: idx * 0.1 }} 
+                        <motion.div
+                           key={idx}
+                           {...fadeIn} transition={{ delay: idx * 0.1 }}
                            className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.07)] hover:border-white transition-all duration-300 p-5 md:p-6 group relative overflow-hidden"
                         >
                            <div className="absolute top-0 right-0 w-24 h-24 rounded-bl-[80px] opacity-8 group-hover:opacity-15 transition-all duration-500 origin-top-right" style={{ backgroundColor: learning.color }} />
-                           
+
                            <div className="flex flex-col sm:flex-row items-start gap-5 relative z-10">
                               <div className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center bg-white border border-slate-100 shadow-sm">
                                  <learning.icon size={22} strokeWidth={2} style={{ color: learning.color }} />
@@ -1054,9 +1195,9 @@ export default function SpendoraCaseStudy() {
                   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
                      {[
                         { phase: "Phase 01", items: ["Open Banking Integrations", "Automated Account Connections"], color: "#0D63CC", icon: Globe },
-                        { phase: "Phase 02", items: ["AI Financial Coach", "Personalized Recommendations"], color: "#00DA99", icon: Brain },
-                        { phase: "Phase 03", items: ["Parent & Family Collaboration", "Scholarship Discovery"], color: "#8B5CF6", icon: Users },
-                        { phase: "Phase 04", items: ["Advanced Scenario Simulation", "Retirement Planning"], color: "#EC4899", icon: Rocket }
+                        { phase: "Phase 02", items: ["Investment Recommendations", "Wealth Management"], color: "#00DA99", icon: TrendingUp },
+                        { phase: "Phase 03", items: ["Family Financial Planning", "Collaborative Budgets"], color: "#8B5CF6", icon: Users },
+                        { phase: "Phase 04", items: ["AI Financial Coach", "Predictive Alerts"], color: "#EC4899", icon: Sparkles }
                      ].map((phase, idx) => (
                         <motion.div key={idx} {...fadeIn} transition={{ delay: idx * 0.1 }} className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.07)] hover:border-white transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
                            <div className="p-5 md:p-6 relative flex flex-col min-h-[200px]">
@@ -1094,7 +1235,7 @@ export default function SpendoraCaseStudy() {
                         <div className="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-md border border-slate-100">
                            <Award size={28} className="text-[#00DA99]" />
                         </div>
-                        
+
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-8">
                            Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Reflection</span>
                         </h2>
@@ -1103,13 +1244,13 @@ export default function SpendoraCaseStudy() {
                            <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
                            <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 font-serif leading-none select-none rotate-180 z-0">"</div>
                            <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed relative z-10 px-6 py-4">
-                              SPENDORA™ demonstrates how thoughtful product design can transform financial literacy from passive instruction into active life planning. By connecting careers, education, geography, and financial outcomes, the platform empowers students to confidently answer one of life's most important questions: <span className="text-[#00DA99] font-bold">"What will my future actually look like?"</span>
+                              SPENDORA demonstrated how thoughtful product design can transform financial complexity into empowering user experiences. By combining education, analytics, and AI-driven insights, the platform aims to help users build stronger financial habits and make more informed decisions.
                            </p>
                         </div>
                      </div>
                   </motion.div>
                </section>
-                  {/* ── 21. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+               {/* ── 21. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
@@ -1129,7 +1270,7 @@ export default function SpendoraCaseStudy() {
                               fill
                               className="object-cover relative z-10 duration-1000"
                            />
-                           
+
                            {/* Overlay with Glassy Effect */}
                            {/* <div className="absolute inset-x-0 bottom-0 pt-32 pb-8 md:pb-12 bg-gradient-to-t from-white/90 via-white/40 to-transparent backdrop-blur-sm z-20 flex flex-col items-center justify-end border-t border-white/20">
                               <h3 className="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6 drop-shadow-sm">36 Visual Screens UI</h3>
@@ -1161,10 +1302,10 @@ export default function SpendoraCaseStudy() {
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
-                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                              Building the Next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">FinTech Product?</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              I'm available to help startups and businesses design intuitive, scalable, and data-driven digital products.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">
@@ -1177,14 +1318,14 @@ export default function SpendoraCaseStudy() {
 
                            <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10 text-white">Open in Figma</span>
+                              <span className="relative z-10 text-white">Let's Discuss Your Product</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>
                      </motion.div>
                   </div>
                </section>
-               
+
                {/* NEXT CASE STUDY NAVIGATION */}
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>

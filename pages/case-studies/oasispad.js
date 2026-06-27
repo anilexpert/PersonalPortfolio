@@ -459,7 +459,7 @@ export default function OasisPadCaseStudy() {
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                               style={{ backgroundColor: persona.color }}
                            />
-                           
+
                            <div className="flex flex-col items-start gap-4 mb-8 relative z-10">
                               <div className="w-14 h-14 rounded-2xl flex items-center justify-center border-2 border-white shadow-md bg-white" style={{ backgroundColor: `${persona.color}15`, color: persona.color }}>
                                  <persona.icon size={28} strokeWidth={1.5} />
@@ -469,7 +469,7 @@ export default function OasisPadCaseStudy() {
                                  <p className="text-[10px] font-bold text-text-secondary uppercase tracking-widest opacity-80">{persona.title}</p>
                               </div>
                            </div>
-                           
+
                            <div className="space-y-4 relative z-10 mt-auto flex-1 flex flex-col justify-end">
                               <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/10 group-hover:border-[#0D63CC]/20 transition-colors shadow-sm">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
@@ -616,38 +616,49 @@ export default function OasisPadCaseStudy() {
                         { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
                         { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
                      ].map((uf, i) => (
-                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-lg relative overflow-hidden bg-white/60">
-                           <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-12 text-center md:text-left">{uf.title}</h4>
-                           
-                           <div className="relative py-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-4">
-                              {/* Decorative multi-color curved wave connecting line */}
-                              <svg className="hidden md:block absolute top-1/2 left-[5%] right-[5%] w-[90%] h-24 -translate-y-1/2 z-0 opacity-70" preserveAspectRatio="none" viewBox="0 0 100 100">
-                                 <defs>
-                                    <linearGradient id={`flowGrad-${i}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                                       <stop offset="0%" stopColor="#0D63CC" />
-                                       <stop offset="50%" stopColor="#00DA99" />
-                                       <stop offset="100%" stopColor="#8B5CF6" />
-                                    </linearGradient>
-                                 </defs>
-                                 <path d="M0,50 Q12.5,20 25,50 T50,50 T75,50 T100,50" fill="none" stroke={`url(#flowGrad-${i})`} strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]">
+                           <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-16 text-center md:text-left">{uf.title}</h4>
+
+                           <div className="relative py-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-2 md:px-8">
+                              {/* Wavy dashed connecting line (Desktop only) */}
+                              <svg className="hidden md:block absolute top-1/2 left-[5%] right-[5%] w-[90%] h-24 -translate-y-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                 <path d="M0,50 Q12.5,25 25,50 T50,50 T75,50 T100,50" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 6" strokeLinecap="round" />
                               </svg>
-                              
-                              <svg className="md:hidden absolute top-[5%] bottom-[5%] left-1/2 w-24 h-[90%] -translate-x-1/2 z-0 opacity-70" preserveAspectRatio="none" viewBox="0 0 100 100">
-                                 <defs>
-                                    <linearGradient id={`flowGradMob-${i}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                                       <stop offset="0%" stopColor="#0D63CC" />
-                                       <stop offset="50%" stopColor="#00DA99" />
-                                       <stop offset="100%" stopColor="#8B5CF6" />
-                                    </linearGradient>
-                                 </defs>
-                                 <path d="M50,0 Q20,12.5 50,25 T50,50 T50,75 T50,100" fill="none" stroke={`url(#flowGradMob-${i})`} strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+
+                              {/* Wavy dashed connecting line (Mobile only) */}
+                              <svg className="md:hidden absolute top-[5%] bottom-[5%] left-1/2 w-24 h-[90%] -translate-x-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                 <path d="M50,0 Q25,12.5 50,25 T50,50 T50,75 T50,100" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 6" strokeLinecap="round" />
                               </svg>
-                              
-                              {uf.flow.map((step, idx) => (
-                                 <div key={idx} className={`relative z-10 w-36 h-36 md:w-44 md:h-44 rounded-full glass-card border-4 border-white shadow-[0_15px_30px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${idx % 2 === 0 ? 'md:-translate-y-6' : 'md:translate-y-6'}`}>
-                                    <span className="font-bold text-slate-800 text-sm md:text-base text-center px-4">{step}</span>
-                                 </div>
-                              ))}
+
+                              {uf.flow.map((step, idx) => {
+                                 const total = uf.flow.length;
+                                 const isLast = idx === total - 1;
+                                 let nodeStyle = "";
+                                 let iconColor = "";
+                                 
+                                 if (isLast) {
+                                    nodeStyle = "bg-[#2B275A] border-[#2B275A] text-white shadow-xl shadow-[#2B275A]/20";
+                                    iconColor = "text-white";
+                                 } else if (idx < 2) {
+                                    nodeStyle = "bg-white border-[#cbd5e1] border-dashed border-[3px] text-[#2B275A] shadow-md shadow-slate-200/50";
+                                    iconColor = "text-[#2B275A]";
+                                 } else {
+                                    nodeStyle = "bg-[#EEF2FF] border-[#3b82f6] border-solid border-[3px] text-[#1e3a8a] shadow-lg shadow-blue-500/10";
+                                    iconColor = "text-[#3b82f6]";
+                                 }
+
+                                 const icons = [Search, Target, Layers, PenTool, CheckCircle2];
+                                 const IconComponent = icons[Math.min(idx, 4)];
+
+                                 return (
+                                    <div key={idx} className="relative z-10 flex flex-col items-center">
+                                       <div className={`w-32 h-32 md:w-[130px] md:h-[130px] lg:w-40 lg:h-40 rounded-full flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 ${nodeStyle}`}>
+                                          <IconComponent strokeWidth={1.5} size={28} className={`mb-3 ${iconColor}`} />
+                                          <span className="font-extrabold text-[10px] lg:text-xs text-center px-4 uppercase tracking-[0.1em] leading-tight">{step}</span>
+                                       </div>
+                                    </div>
+                                 );
+                              })}
                            </div>
                         </div>
                      ))}

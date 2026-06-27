@@ -107,28 +107,40 @@ export default function OasisPadCaseStudy() {
                         OasisPad™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        Transforming Behavioral Health Operations Through an <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Integrated EHR Platform</span>
+                        Transforming <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Behavioral Healthcare Workflows</span>Through an Integrated SaaS Platform
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        A comprehensive Behavioral Health Practice Management and EHR platform built to modernize how residential care facilities, mental health clinics, therapists, billing teams, and administrators manage patient care, documentation, compliance, insurance claims, and financial operations.
+                        OasisPad™ is a behavioral healthcare platform designed to streamline clinical documentation, care coordination, scheduling, compliance, and operational workflows across residential and behavioral health organizations.
                      </motion.p>
                   </div>
-                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
-                        <p className="font-bold text-sm text-text-primary">Healthcare / B2B SaaS</p>
-                     </div>
-                     <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Role</p>
                         <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
-                        <p className="font-bold text-sm text-text-primary">12 Weeks</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Industry</p>
+                        <p className="font-bold text-sm text-text-primary">Healthcare SaaS</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Year</p>
-                        <p className="font-bold text-sm text-text-primary">2026</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Web Application</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Domain</p>
+                        <p className="font-bold text-sm text-text-primary">Behavioral Health</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
+                        <p className="font-bold text-sm text-text-primary">8 Months</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Team</p>
+                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Responsibilities</p>
+                        <p className="font-bold text-sm text-text-primary">Research, UX Strategy, UI Design, Prototyping, Design System</p>
                      </div>
                   </motion.div>
                </section>
@@ -149,6 +161,36 @@ export default function OasisPadCaseStudy() {
                      />
                   </div>
                </motion.section>
+
+
+               {/* EXECUTIVE SUMMARY */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-3">
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
+                     </div>
+                     <div className="lg:col-span-9">
+                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                           Behavioral health organizations often rely on disconnected systems, manual documentation, and fragmented communication processes. OasisPad™ was designed to centralize clinical operations, simplify compliance management, and improve care coordination through a unified digital platform.
+                        </p>
+                     </div>
+                  </div>
+               </section>
+
+
+               {/* BUSINESS CONTEXT */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-3">
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Why This Product Matters</h3>
+                     </div>
+                     <div className="lg:col-span-9">
+                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                           Behavioral healthcare providers manage complex workflows involving clinical documentation, treatment plans, medication administration, staff coordination, compliance, and reporting. Existing systems often create administrative burden and reduce time available for patient care.
+                        </p>
+                     </div>
+                  </div>
+               </section>
 
                {/* OVERVIEW & THE INDUSTRY PROBLEM */}
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
@@ -205,24 +247,50 @@ export default function OasisPadCaseStudy() {
 
                {/* THE BUSINESS CHALLENGE (Symmetric Grid) */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
-                        <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
-                           Core Issues
-                        </span>
+                  <div className="text-center mb-16 glass-card p-10 md:p-16 rounded-[40px] border border-rose-500/10 relative overflow-hidden">
+                     <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-rose-500/10 blur-[80px] rounded-full pointer-events-none" />
+
+                     <div className="relative z-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
+                           <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
+                              Core Issues
+                           </span>
+                        </div>
+                        <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+
+                        <p className="text-text-secondary font-medium max-w-2xl mx-auto mb-8">
+                           A unified healthcare design system was created to ensure complex medical data feels approachable, trustworthy, and accessible.
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+                           <span className="px-4 py-2 glass-card rounded-full text-xs font-bold text-text-secondary border border-slate-200">Accessibility considerations</span>
+                           <span className="px-4 py-2 glass-card rounded-full text-xs font-bold text-text-secondary border border-slate-200">Color rationale</span>
+                           <span className="px-4 py-2 glass-card rounded-full text-xs font-bold text-text-secondary border border-slate-200">Component scalability</span>
+                           <span className="px-4 py-2 glass-card rounded-full text-xs font-bold text-text-secondary border border-slate-200">Healthcare usability standards</span>
+                        </div>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported six recurring operational issues that severely impacted both care quality and financial sustainability.</p>
+                  </div>
+
+
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
+                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Manual Documentation</div>
+                     <ArrowRight className="hidden md:block text-slate-300" />
+                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Disconnected Systems</div>
+                     <ArrowRight className="hidden md:block text-slate-300" />
+                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Compliance Risks</div>
+                     <ArrowRight className="hidden md:block text-slate-300" />
+                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Administrative Overload</div>
+                     <ArrowRight className="hidden md:block text-slate-300" />
+                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Reduced Care Efficiency</div>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Documentation Burden", desc: "Therapists spent excessive time creating Progress Notes, Treatment Plans, Objectives, Interventions, and Behavioral Assessments. Documentation often duplicated data already stored elsewhere.", icon: FileText, color: "#0D63CC" },
-                        { num: "02", title: "Insurance Claim Delays", desc: "Billing teams manually gathered information from multiple systems before submitting claims, resulting in delayed reimbursements, missing data, and high rejection rates.", icon: Clock, color: "#F59E0B" },
-                        { num: "03", title: "Revenue Visibility", desc: "Leadership lacked real-time visibility into submitted claims, pending claims, rejected claims, outstanding balances, and payer performance.", icon: LineChart, color: "#00DA99" },
-                        { num: "04", title: "Compliance Risks", desc: "HIPAA and payer audits required extensive manual record retrieval across disparate systems and physical cabinets.", icon: Shield, color: "#EF4444" },
-                        { num: "05", title: "Fragmented Experience", desc: "Users frequently switched between patient records, notes, claims, reports, and employee systems, causing severe workflow disruption.", icon: Shuffle, color: "#8B5CF6" },
-                        { num: "06", title: "Data Silos", desc: "Critical patient and facility data resided in disconnected systems, requiring redundant manual entry and leading to costly administrative bottlenecks.", icon: Database, color: "#10B981" }
+                        { num: "01", title: "Documentation Burden", desc: "Clinical staff spent significant time on manual documentation and repetitive administrative tasks.", icon: FileText, color: "#0D63CC" },
+                        { num: "02", title: "Fragmented Systems", desc: "Critical information was distributed across multiple systems and paper-based processes.", icon: Shuffle, color: "#F59E0B" },
+                        { num: "03", title: "Care Coordination Gaps", desc: "Communication between care teams lacked consistency and visibility.", icon: Users, color: "#00DA99" },
+                        { num: "04", title: "Compliance Complexity", desc: "Regulatory requirements increased operational overhead and audit risk.", icon: Shield, color: "#EF4444" },
+                        { num: "05", title: "Limited Operational Visibility", desc: "Leadership lacked real-time insights into facility performance.", icon: LineChart, color: "#8B5CF6" },
+                        { num: "06", title: "Billing Inefficiencies", desc: "Complex billing rules and fragmented data led to delayed claims, denials, and lost revenue.", icon: Banknote, color: "#EC4899" }
                      ].map((challenge, i) => (
                         <motion.div
                            key={i}
@@ -262,7 +330,7 @@ export default function OasisPadCaseStudy() {
                            </div>
                            <h3 className="text-3xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h3>
                            <p className="text-text-secondary leading-relaxed font-medium mb-8">
-                              To understand the ecosystem, research was conducted with multiple user groups across the organization, revealing several distinct patterns.
+                              Research was conducted to understand the workflows, responsibilities, and pain points experienced by behavioral healthcare staff and administrators.
                            </p>
 
                            <div className="space-y-4">
@@ -284,6 +352,9 @@ export default function OasisPadCaseStudy() {
                                  </div>
                               ))}
                            </div>
+
+
+
                         </div>
                      </div>
                      <div className="lg:col-span-7 space-y-6">
@@ -311,7 +382,7 @@ export default function OasisPadCaseStudy() {
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
                               <h4 className="text-xl font-bold text-text-primary mb-4">{insight.title}</h4>
                               <p className="text-sm text-text-secondary font-medium leading-relaxed mb-6 text-justify">{insight.desc}</p>
-                              
+
                               {insight.flow.length > 0 && (
                                  <div className="flex flex-wrap items-center gap-2">
                                     {insight.flow.map((step, stepIdx) => (
@@ -332,6 +403,104 @@ export default function OasisPadCaseStudy() {
                   </div>
                </section>
 
+               {/* STRATEGIC ARTIFACTS SECTION */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="glass-card p-10 md:p-16 rounded-[40px] border border-[#0D63CC]/10 relative overflow-hidden">
+                     <div className="absolute top-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
+                     <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
+
+                     <div className="relative z-10">
+                        <div className="text-center mb-12">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                              <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                                 Deliverables
+                              </span>
+                           </div>
+                           <h3 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Artifacts</span></h3>
+                           <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                              Comprehensive research documentation mapped the end-to-end user experience, helping align stakeholders on core user needs and business requirements before moving to design.
+                           </p>
+                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                           {[
+                              { title: "Affinity Mapping", icon: Layers, desc: "Theme categorization" },
+                              { title: "Stakeholder Mapping", icon: Users, desc: "Influence analysis" },
+                              { title: "Empathy Map", icon: Heart, desc: "User mindset modeling" },
+                              { title: "User Journey Map", icon: Shuffle, desc: "End-to-end workflows" }
+                           ].map((artifact, idx) => (
+                              <div key={idx} className="aspect-square md:aspect-[4/3] bg-white/60 backdrop-blur-md rounded-2xl border border-slate-200/50 flex flex-col items-center justify-center p-6 text-center group hover:border-[#0D63CC]/30 hover:shadow-lg transition-all shadow-sm relative overflow-hidden">
+                                 <div className="absolute inset-0 bg-gradient-to-br from-[#0D63CC]/0 to-[#00DA99]/0 group-hover:from-[#0D63CC]/5 group-hover:to-[#00DA99]/5 transition-colors duration-500" />
+                                 <artifact.icon className="text-[#0D63CC] mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 relative z-10" size={32} />
+                                 <span className="text-sm font-bold text-text-primary group-hover:text-[#0D63CC] transition-colors relative z-10 mb-1">{artifact.title}</span>
+                                 <span className="text-[10px] font-semibold text-text-secondary uppercase tracking-wider relative z-10">{artifact.desc}</span>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               {/* USER PERSONAS */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Target Audience</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+                     {[
+                        { role: "Clinical Staff", title: "Therapists & Nurses", goals: ["Document care efficiently", "Manage daily tasks"], painPoints: ["Repetitive documentation", "Time constraints"], icon: Heart, color: "#0D63CC" },
+                        { role: "Facility Administrator", title: "Operations Director", goals: ["Monitor compliance", "Manage operations"], painPoints: ["Limited visibility", "Manual reporting"], icon: Building2, color: "#00DA99" },
+                        { role: "Executive Leadership", title: "C-Suite", goals: ["Monitor performance"], painPoints: ["Fragmented operational data"], icon: LineChart, color: "#F59E0B" }
+                     ].map((persona, i) => (
+                        <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="glass-card p-6 md:p-8 rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 group hover:shadow-xl transition-all duration-500 flex flex-col relative overflow-hidden">
+                           <div
+                              className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
+                              style={{ backgroundColor: persona.color }}
+                           />
+                           
+                           <div className="flex flex-col items-start gap-4 mb-8 relative z-10">
+                              <div className="w-14 h-14 rounded-2xl flex items-center justify-center border-2 border-white shadow-md bg-white" style={{ backgroundColor: `${persona.color}15`, color: persona.color }}>
+                                 <persona.icon size={28} strokeWidth={1.5} />
+                              </div>
+                              <div>
+                                 <h4 className="text-2xl font-bold text-text-primary tracking-tight mb-1">{persona.role}</h4>
+                                 <p className="text-[10px] font-bold text-text-secondary uppercase tracking-widest opacity-80">{persona.title}</p>
+                              </div>
+                           </div>
+                           
+                           <div className="space-y-4 relative z-10 mt-auto flex-1 flex flex-col justify-end">
+                              <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/10 group-hover:border-[#0D63CC]/20 transition-colors shadow-sm">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
+                                 </h5>
+                                 <div className="flex flex-wrap gap-2">
+                                    {persona.goals.map((g, idx) => (
+                                       <span key={idx} className="px-2.5 py-1 bg-white/80 rounded-md border border-[#0D63CC]/20 text-[11px] font-semibold text-text-primary shadow-sm hover:border-[#0D63CC]/40 transition-colors">
+                                          {g}
+                                       </span>
+                                    ))}
+                                 </div>
+                              </div>
+                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100/50 group-hover:border-rose-200 transition-colors shadow-sm">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                    <Activity size={13} strokeWidth={3} /> Pain Points
+                                 </h5>
+                                 <div className="flex flex-wrap gap-2">
+                                    {persona.painPoints.map((p, idx) => (
+                                       <span key={idx} className="px-2.5 py-1 bg-white/80 rounded-md border border-rose-100 text-[11px] font-semibold text-text-primary shadow-sm hover:border-rose-300 transition-colors">
+                                          {p}
+                                       </span>
+                                    ))}
+                                 </div>
+                              </div>
+                           </div>
+                        </motion.div>
+                     ))}
+                  </div>
+               </section>
+
                {/* PRODUCT VISION & EXPERIENCE FRAMEWORK */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
@@ -340,9 +509,9 @@ export default function OasisPadCaseStudy() {
                            Architecture
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product Vision & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Dual-Layer Framework</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product Vision & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Strategy</span></h2>
                      <p className="text-xl text-text-secondary font-medium max-w-3xl mx-auto italic mb-8">
-                        "Every action in the platform should contribute either to Patient Care or Revenue Recovery."
+                        The product strategy focused on balancing clinical efficiency with operational oversight by delivering tailored experiences for frontline staff and organizational leadership.
                      </p>
                   </div>
 
@@ -354,7 +523,7 @@ export default function OasisPadCaseStudy() {
                         </div>
                         <h4 className="text-2xl font-bold text-text-primary mb-2 relative z-10">Clinical Operations Layer</h4>
                         <p className="text-sm font-semibold text-[#00DA99] uppercase tracking-widest mb-8 relative z-10">Supports Care Delivery</p>
-                        
+
                         <ul className="space-y-4 relative z-10">
                            {["Notes Library", "Goals & Objectives", "Interventions", "Activity Scheduling", "Residents Management"].map((item, i) => (
                               <li key={i} className="flex items-center gap-3">
@@ -372,7 +541,7 @@ export default function OasisPadCaseStudy() {
                         </div>
                         <h4 className="text-2xl font-bold text-text-primary mb-2 relative z-10">Revenue Operations Layer</h4>
                         <p className="text-sm font-semibold text-[#0D63CC] uppercase tracking-widest mb-8 relative z-10">Supports Reimbursement</p>
-                        
+
                         <ul className="space-y-4 relative z-10">
                            {["Billing & Claims Generation", "ERA Processing", "Payments Management", "Financial Reporting", "Analytics & Dashboards"].map((item, i) => (
                               <li key={i} className="flex items-center gap-3">
@@ -393,22 +562,74 @@ export default function OasisPadCaseStudy() {
                            Structure
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Architecture</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Structuring Complex Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A structured hierarchy designed to connect clinical care with revenue operations seamlessly.
+                        The information architecture was designed to support multiple user roles, clinical processes, and operational workflows while maintaining simplicity and reducing cognitive load.
                      </p>
                   </div>
 
+
+                  <div className="max-w-6xl mx-auto mb-12">
+                     <div className="flex flex-col md:flex-row items-center justify-center gap-2">
+                        <div className="px-6 py-3 glass-card rounded-2xl font-bold text-text-primary border-b-4 border-[#0D63CC]">Organization Admin</div>
+                        <ArrowRight className="hidden md:block text-slate-300" />
+                        <ArrowRight className="md:hidden rotate-90 text-slate-300 my-2" />
+                        <div className="px-6 py-3 glass-card rounded-2xl font-bold text-text-primary border-b-4 border-[#00DA99]">Facility Admin</div>
+                        <ArrowRight className="hidden md:block text-slate-300" />
+                        <ArrowRight className="md:hidden rotate-90 text-slate-300 my-2" />
+                        <div className="px-6 py-3 glass-card rounded-2xl font-bold text-text-primary border-b-4 border-[#F59E0B]">Clinical Staff</div>
+                        <ArrowRight className="hidden md:block text-slate-300" />
+                        <ArrowRight className="md:hidden rotate-90 text-slate-300 my-2" />
+                        <div className="px-6 py-3 glass-card rounded-2xl font-bold text-text-primary border-b-4 border-rose-500">Caregivers</div>
+                        <ArrowRight className="hidden md:block text-slate-300" />
+                        <ArrowRight className="md:hidden rotate-90 text-slate-300 my-2" />
+                        <div className="px-6 py-3 glass-card rounded-2xl font-bold text-text-primary border-b-4 border-purple-500">Support Staff</div>
+                     </div>
+                  </div>
+
                   <div className="max-w-8xl mx-auto">
-          <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
-                           <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layers} />
-                           <Image
-                                                src="/images/oasispad/IA-Thumnail.png"
-                                                alt="Information Architecture Overview"
-                                                fill
-                                                className="object-cover rounded-2xl overflow-hidden relative z-10"
-                                             />
+                     <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                        <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layers} />
+                        <Image
+                           src="/images/oasispad/IA-Thumnail.png"
+                           alt="Information Architecture Overview"
+                           fill
+                           className="object-cover rounded-2xl overflow-hidden relative z-10"
+                        />
+                     </div>
+                  </div>
+               </section>
+
+
+               {/* KEY USER FLOWS */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Process Maps</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
+                  </div>
+                  <div className="max-w-6xl mx-auto space-y-6">
+                     {[
+                        { title: "Resident Admission Flow", flow: ["Referral", "Assessment", "Admission", "Documentation", "Care Plan"] },
+                        { title: "Clinical Documentation Flow", flow: ["Patient Visit", "Notes", "Review", "Approval", "Storage"] },
+                        { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
+                        { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
+                     ].map((uf, i) => (
+                        <div key={i} className="glass-card p-6 rounded-2xl border border-slate-200/50">
+                           <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">{uf.title}</h4>
+                           <div className="flex flex-wrap items-center gap-2 md:gap-4">
+                              {uf.flow.map((step, idx) => (
+                                 <div key={idx} className="flex items-center gap-2 md:gap-4">
+                                    <div className="px-4 py-2 bg-white rounded-xl text-sm font-medium text-text-secondary border border-slate-100 shadow-sm">
+                                       {step}
+                                    </div>
+                                    {idx < uf.flow.length - 1 && <ArrowRight size={16} className="text-slate-300" />}
+                                 </div>
+                              ))}
+                           </div>
                         </div>
+                     ))}
                   </div>
                </section>
 
@@ -420,9 +641,9 @@ export default function OasisPadCaseStudy() {
                            UX Transformation
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Billing Ecosystem</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing Efficient <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Clinical Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        The Billing module became one of the most critical areas because revenue directly affects facility sustainability. The design goal was to transform claim creation into a guided experience.
+                        Clinical workflows were designed to reduce administrative burden while improving task completion, visibility, and operational efficiency.
                      </p>
                   </div>
 
@@ -431,11 +652,11 @@ export default function OasisPadCaseStudy() {
                         <div className="order-2 lg:order-1 relative aspect-[4/3] w-full rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
                            <PremiumPlaceholder aspect="aspect-[4/3]" label="Progressive Claim Creation UI" icon={Layers} />
                            <Image
-                                 src="/images/oasispad/Progressive-Claim Creation-UI.png"
-                                 alt="Progressive Claim Creation UI"
-                                 fill
-                                 className="object-cover rounded-2xl overflow-hidden relative z-10"
-                              />
+                              src="/images/oasispad/Progressive-Claim Creation-UI.png"
+                              alt="Progressive Claim Creation UI"
+                              fill
+                              className="object-cover rounded-2xl overflow-hidden relative z-10"
+                           />
                         </div>
                         <div className="order-1 lg:order-2 space-y-6">
                            <h3 className="text-2xl font-bold text-text-primary">Claim Creation Journey</h3>
@@ -473,14 +694,14 @@ export default function OasisPadCaseStudy() {
 
                {/* DASHBOARDS & REPORTING */}
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-24">
-                  
+
                   {/* Billing Dashboard */}
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                      <div className="lg:col-span-5 space-y-8">
                         <div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-4">Billing <span className="text-[#0D63CC]">Dashboard Design</span></h3>
+                           <h3 className="text-3xl font-bold text-text-primary mb-4">Executive <span className="text-[#0D63CC]">Dashboard Experience</span></h3>
                            <p className="text-lg text-text-secondary font-medium leading-relaxed">
-                              The dashboard was designed around three primary questions to give immediate operational clarity to billing teams and leadership.
+                              Role-based dashboards provide healthcare leaders with real-time operational insights, compliance visibility, and actionable performance metrics.
                            </p>
                         </div>
                         <div className="space-y-4">
@@ -512,17 +733,17 @@ export default function OasisPadCaseStudy() {
                   {/* Reporting & Analytics */}
                   <div className="flex flex-col gap-12">
                      <div className="text-center max-w-3xl mx-auto">
-                        <h3 className="text-3xl font-bold text-text-primary mb-4">Reports & <span className="text-[#00DA99]">Analytics</span></h3>
+                        <h3 className="text-3xl font-bold text-text-primary mb-4">Analytics & <span className="text-[#00DA99]">Operational Reporting</span></h3>
                         <p className="text-lg text-text-secondary font-medium leading-relaxed">
-                           Research showed leadership needed answers quickly, not more reports. The reporting experience was redesigned around actionable insights rather than data dumps.
+                           Role-based dashboards provide healthcare leaders with real-time operational insights, compliance visibility, and actionable performance metrics.
                         </p>
                      </div>
                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                           { title: "Financial Insights", icon: Wallet, items: ["Billed vs Collected", "Revenue Trends", "Outstanding Claims"], color: "#0D63CC", bg: "bg-[#0D63CC]/5", border: "border-[#0D63CC]/20" },
-                           { title: "Payer Insights", icon: Building2, items: ["Payer Mix", "Insurance Performance", "Reimbursement Rates"], color: "#00DA99", bg: "bg-[#00DA99]/5", border: "border-[#00DA99]/20" },
-                           { title: "Denial Insights", icon: FileSearch, items: ["Top Denial Reasons", "Prior Auth Issues", "Coding Errors"], color: "#EF4444", bg: "bg-rose-500/5", border: "border-rose-500/20" },
-                           { title: "Productivity Insights", icon: TrendingUp, items: ["Provider Performance", "Claim Throughput", "Submission Trends"], color: "#F59E0B", bg: "bg-[#F59E0B]/5", border: "border-[#F59E0B]/20" }
+                           { title: "Clinical Activity", icon: Activity, items: ["Notes Completion", "Treatment Adherence", "Session Tracking"], color: "#0D63CC", bg: "bg-[#0D63CC]/5", border: "border-[#0D63CC]/20" },
+                           { title: "Compliance Status", icon: Shield, items: ["Audit Readiness", "Missing Documentation", "HIPAA Logs"], color: "#00DA99", bg: "bg-[#00DA99]/5", border: "border-[#00DA99]/20" },
+                           { title: "Workforce Utilization", icon: Users, items: ["Staff Productivity", "Caseload Distribution", "Overtime Alerts"], color: "#F59E0B", bg: "bg-[#F59E0B]/5", border: "border-[#F59E0B]/20" },
+                           { title: "Facility Performance", icon: Building2, items: ["Occupancy Rates", "Incident Trends", "Financial Health"], color: "#EF4444", bg: "bg-rose-500/5", border: "border-rose-500/20" }
                         ].map((report, i) => (
                            <div key={i} className={`p-6 glass-card rounded-3xl border shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group ${report.bg} ${report.border}`}>
                               <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[40px] opacity-20 pointer-events-none group-hover:scale-150 transition-transform duration-700" style={{ backgroundColor: report.color }} />
@@ -541,6 +762,17 @@ export default function OasisPadCaseStudy() {
                            </div>
                         ))}
                      </div>
+                     <div className="grid md:grid-cols-3 gap-6 w-full">
+                        <div className="aspect-[4/3] md:aspect-video glass-card rounded-2xl flex items-center justify-center p-4 border border-[#0D63CC]/10 group hover:border-[#0D63CC]/30 hover:shadow-md transition-all">
+                           <span className="text-sm font-bold text-text-secondary group-hover:text-[#0D63CC]">Interactive Chart Dashboard</span>
+                        </div>
+                        <div className="aspect-[4/3] md:aspect-video glass-card rounded-2xl flex items-center justify-center p-4 border border-[#00DA99]/10 group hover:border-[#00DA99]/30 hover:shadow-md transition-all">
+                           <span className="text-sm font-bold text-text-secondary group-hover:text-[#00DA99]">KPI Visualization</span>
+                        </div>
+                        <div className="aspect-[4/3] md:aspect-video glass-card rounded-2xl flex items-center justify-center p-4 border border-rose-500/10 group hover:border-rose-500/30 hover:shadow-md transition-all">
+                           <span className="text-sm font-bold text-text-secondary group-hover:text-rose-500">Drill-down Reporting Screen</span>
+                        </div>
+                     </div>
                   </div>
                </section>
 
@@ -552,7 +784,7 @@ export default function OasisPadCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A unified healthcare design system was created to ensure complex medical data feels approachable, trustworthy, and accessible.
                      </p>
@@ -631,6 +863,42 @@ export default function OasisPadCaseStudy() {
                            ))}
                         </div>
                      </div>
+
+                     <div className="lg:col-span-12 mt-4 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+                        {["Component Library", "Form Controls", "Tables", "Clinical Status Indicators"].map((item, idx) => (
+                           <div key={idx} className="aspect-[4/3] md:h-24 md:aspect-auto glass-card rounded-2xl flex items-center justify-center p-4 border border-[#0D63CC]/10 group hover:border-[#0D63CC]/30 hover:shadow-md transition-all">
+                              <span className="text-sm font-bold text-text-secondary text-center group-hover:text-[#0D63CC]">{item}</span>
+                           </div>
+                        ))}
+                     </div>
+
+                  </div>
+               </section>
+
+
+               {/* USABILITY TESTING */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Validation</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Validation</span></h2>
+                  </div>
+                  <div className="max-w-4xl mx-auto">
+                     <div className="grid md:grid-cols-3 gap-6">
+                        {[
+                           { finding: "Simplified navigation improved task completion.", icon: Search },
+                           { finding: "Clinical staff preferred fewer clicks for documentation.", icon: HandCoins },
+                           { finding: "Dashboard summaries improved information accessibility.", icon: Layout }
+                        ].map((item, i) => (
+                           <div key={i} className="glass-card p-6 rounded-2xl flex flex-col items-center text-center gap-4 border border-slate-200/50 group hover:border-[#00DA99]/30 transition-colors">
+                              <div className="w-12 h-12 rounded-full bg-[#00DA99]/10 text-[#00DA99] flex items-center justify-center group-hover:scale-110 transition-transform">
+                                 <item.icon size={20} />
+                              </div>
+                              <p className="text-sm font-bold text-text-primary">{item.finding}</p>
+                           </div>
+                        ))}
+                     </div>
                   </div>
                </section>
 
@@ -641,14 +909,14 @@ export default function OasisPadCaseStudy() {
                         <div className="space-y-8">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow-sm border border-slate-100 mb-2">
                               <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
-                                 Results
+                                 Expected Outcomes
                               </span>
                            </div>
                            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter text-text-primary leading-[1.1]">
-                              OasisPad <br/>
-                              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Successfully Unified</span>
+                              Business <br />
+                              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Impact</span>
                            </h3>
-                           
+
                            <div className="grid grid-cols-2 gap-4">
                               <div className="space-y-2">
                                  <h4 className="font-bold text-sm text-text-primary">Clinical & Records</h4>
@@ -671,13 +939,13 @@ export default function OasisPadCaseStudy() {
 
                         <div className="space-y-6">
                            <h4 className="text-xl font-bold text-text-primary mb-6">Product Impact</h4>
-                           
+
                            <div className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between">
                               <div>
                                  <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
                                     <Heart size={16} className="text-[#0D63CC]" /> Clinical Teams
                                  </h5>
-                                 <p className="text-xs font-medium text-text-secondary mt-1">Reduced documentation effort, better record consistency.</p>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Reduced administrative burden & streamlined documentation workflows.</p>
                               </div>
                               <TrendingUp className="text-[#00DA99]" size={24} />
                            </div>
@@ -687,7 +955,7 @@ export default function OasisPadCaseStudy() {
                                  <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
                                     <Wallet size={16} className="text-[#0D63CC]" /> Billing Teams
                                  </h5>
-                                 <p className="text-xs font-medium text-text-secondary mt-1">Decreased submission time & rejection rates, increased visibility.</p>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Improved care coordination & centralized operational oversight.</p>
                               </div>
                               <TrendingUp className="text-[#00DA99]" size={24} />
                            </div>
@@ -697,7 +965,7 @@ export default function OasisPadCaseStudy() {
                                  <h5 className="font-bold text-sm text-text-primary flex items-center gap-2">
                                     <Users size={16} className="text-[#0D63CC]" /> Administrators
                                  </h5>
-                                 <p className="text-xs font-medium text-text-secondary mt-1">Improved operational visibility, compliance readiness & tracking.</p>
+                                 <p className="text-xs font-medium text-text-secondary mt-1">Increased compliance visibility.</p>
                               </div>
                               <TrendingUp className="text-[#00DA99]" size={24} />
                            </div>
@@ -711,15 +979,15 @@ export default function OasisPadCaseStudy() {
                   <div className="w-full glass-card rounded-[40px] p-10 md:p-16 lg:p-20 bg-gradient-to-br from-[#00DA99]/15 via-[#f0fbff]/50 to-[#0D63CC]/15 border border-[#00DA99]/20 shadow-sm relative overflow-hidden text-center flex flex-col items-center">
                      <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#00DA99]/20 blur-[80px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/20 blur-[80px] rounded-full pointer-events-none" />
-                     
+
                      <div className="relative z-10 w-full flex flex-col items-center">
                         <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center mb-6">
                            <Award className="text-[#0D63CC]" size={28} />
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-12">
-                           Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Takeaway</span>
+                           Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span>
                         </h2>
-                        
+
                         <div className="relative max-w-4xl mx-auto w-full">
                            <span className="text-7xl text-[#00DA99] font-serif absolute -top-8 -left-4 md:-left-12 opacity-80 leading-none tracking-tighter">"</span>
                            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#111827] mb-8 leading-relaxed relative z-10">
@@ -727,9 +995,9 @@ export default function OasisPadCaseStudy() {
                            </h3>
                            <span className="text-7xl text-white font-serif absolute -bottom-12 -right-4 md:-right-8 drop-shadow-md leading-none tracking-tighter">"</span>
                         </div>
-                        
+
                         <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto relative z-10">
-                           By linking clinical workflows, billing operations, compliance management, and reporting into a single ecosystem, the platform transformed fragmented healthcare processes into a streamlined experience that supports both patient care and organizational growth.
+                           Designing healthcare products requires balancing clinical efficiency, regulatory requirements, and usability. Simplifying complex workflows while maintaining compliance was critical to creating a scalable and effective experience.
                         </p>
                      </div>
                   </div>
@@ -744,6 +1012,7 @@ export default function OasisPadCaseStudy() {
                         </span>
                      </div>
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                     <p className="text-text-secondary font-medium mt-4">Final designs focused on clarity, efficiency, accessibility, and operational scalability.</p>
                   </div>
 
                   <div className="grid gap-6">
@@ -775,20 +1044,24 @@ export default function OasisPadCaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
-                           </p>
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.</p>
+                           <div className="my-8 pt-8 border-t border-slate-200/50 max-w-2xl mx-auto">
+                              <h3 className="text-2xl font-bold text-text-primary mb-2">Building Healthcare or Enterprise SaaS Products?</h3>
+                              <p className="text-base md:text-lg text-text-secondary font-medium leading-relaxed">I help organizations design scalable healthcare, SaaS, and enterprise experiences that simplify complexity and drive operational efficiency.
+                              </p>
 
-                           <div className="flex flex-wrap justify-center gap-2 mb-10">
-                              {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
-                                 <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
-                                    <span className="text-[#0D63CC] mr-1">✓</span> {tag}
-                                 </span>
-                              ))}
+                              <div className="flex flex-wrap justify-center gap-2 mb-10">
+                                 {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
+                                    <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
+                                       <span className="text-[#0D63CC] mr-1">✓</span> {tag}
+                                    </span>
+                                 ))}
+                              </div>
                            </div>
 
                            <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10 text-white">Open in Figma</span>
+                              <span className="relative z-10 text-white">Let's Discuss Your Product</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>

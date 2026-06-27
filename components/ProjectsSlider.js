@@ -131,10 +131,10 @@ export default function ProjectsSlider() {
               Selected Work
             </span>
           </div>
-          <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight">
-            Growth-Focused {' '}
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
+            Products I've  {' '}
             <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">
-              Product Initiatives
+              Helped Build
             </span>
           </h2>
           <p className="text-[14px] sm:text-base md:text-lg text-text-secondary leading-relaxed">

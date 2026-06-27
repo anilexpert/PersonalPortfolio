@@ -5,25 +5,25 @@ const reasons = [
   {
     icon: Brain,
     title: "Clear Product Thinking",
-    desc: "Not just screens—structured solutions for real problems.",
+    desc: "I align business goals, user needs, and technical constraints to create products that solve the right problems.",
     color: "#00DA99" // Mint
   },
   {
     icon: Zap,
     title: "Fast & Reliable Delivery",
-    desc: "Consistent communication and timely execution.",
+    desc: "Structured workflows, transparent communication, and consistent delivery keep projects moving efficiently.",
     color: "#0D63CC" // Blue
   },
   {
     icon: Layers,
     title: "Scalable Design Systems",
-    desc: "Designs built for growth, not rework.",
+    desc: "I design reusable systems that ensure consistency, accelerate development, and support future growth.",
     color: "#8B5CF6" // Purple
   },
   {
     icon: Target,
     title: "Business-Focused UX",
-    desc: "Decisions aligned with product goals and outcomes.",
+    desc: "Every design decision is guided by usability, conversion goals, and measurable business outcomes.",
     color: "#F43F5E" // Rose
   }
 ];
@@ -42,7 +42,7 @@ const WhyHireMe = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
             <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Why Hire Me</span>
           </div>
-          <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
             What You Get When You <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Work With Me</span>
           </h2>
           <p className="text-[15px] sm:text-base md:text-lg text-text-secondary leading-relaxed">

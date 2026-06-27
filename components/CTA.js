@@ -9,23 +9,23 @@ const CTA = () => {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/15 blur-[150px] rounded-full -ml-[250px] pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/15 blur-[150px] rounded-full -mr-[150px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-[24px] sm:text-[6vw] md:text-[6rem] lg:text-[7rem] font-black text-text-primary leading-none tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2 sm:mb-4 text-center">
-            LET'S DISCUSS YOUR
+          <h2 className="text-[24px] sm:text-[4vw] md:text-[5rem] lg:text-[6rem] font-black text-text-primary leading-none tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2 sm:mb-4 text-center">
+            Let's Build Your Next
           </h2>
-
+     
           <div className="relative flex items-center justify-center w-full px-4 lg:px-20">
             {/* Desktop View Work Button (Left) */}
             <Link href="/contact" passHref legacyBehavior>
               <motion.a
                 whileHover={{ scale: 1.05, rotate: -10, y: -5 }}
-                className="hidden xl:flex absolute left-0 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
+                className="hidden xl:flex absolute -left-30 -rotate-40 bg-gradient-to-br from-primary to-secondary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-primary/20 hover:shadow-primary/40 group z-20"
               >
                 <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
                 <span className="tracking-[0.2em] text-[12px] uppercase">Start a Conversation </span>
@@ -33,20 +33,20 @@ const CTA = () => {
             </Link>
 
             <h2
-              className="text-[34px] sm:text-[5vw] md:text-[6rem] lg:text-[7rem] font-black leading-none tracking-tighter uppercase text-center"
+              className="text-[24px] sm:text-[4vw] md:text-[5rem] lg:text-[6rem] font-black leading-none tracking-tighter uppercase text-center"
               style={{
                 color: 'transparent',
                 WebkitTextStroke: '3px var(--primary-mint)',
               }}
             >
-              Better Product
+              Product Together
             </h2>
-
+ 
             {/* Desktop Hire Now Button (Right) */}
             <motion.a
               href="mailto:anilkumar.folio@gmail.com"
               whileHover={{ scale: 1.05, rotate: 15, y: -5 }}
-              className="hidden xl:flex absolute right-0 rotate-40 bg-gradient-to-br from-secondary to-primary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-secondary/20 hover:shadow-secondary/40 group z-20"
+              className="hidden xl:flex absolute -right-20 rotate-40 bg-gradient-to-br from-secondary to-primary px-8 py-4 rounded-full items-center gap-3 text-white font-semibold transition-all shadow-sm shadow-secondary/20 hover:shadow-secondary/40 group z-20"
             >
               <span className="tracking-[0.2em] text-[12px] uppercase">Schedule a Call</span>
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
@@ -72,6 +72,11 @@ const CTA = () => {
               <span className="tracking-[0.2em] text-[12px] uppercase">Schedule a Call</span>
               <div className="w-2 h-2 bg-white rounded-full group-hover:animate-pulse" />
             </motion.a>
+          </div>
+          <div className="max-w-4xl mx-auto mt-8 md:mt-12">
+          <p className="text-base md:text-xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
+            Focused on creating measurable impact through usability, efficiency, and scalable product systems.
+          </p>
           </div>
         </motion.div>
       </div>

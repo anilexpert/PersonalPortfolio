@@ -5,22 +5,22 @@ import Link from 'next/link';
 const services = [
   {
     icon: Heart,
-    title: "Healthcare Systems (EHR / EMR)",
-    desc: "Designing structured workflows for real-world usability.",
+    title: "Healthcare Systems",
+    desc: "Designed compliance-driven healthcare and EHR platforms supporting complex operational workflows.",
     tags: ["EHR / EMR", "Healthcare", "Usability"],
     color: "#0D63CC" // Blue
   },
   {
     icon: Cpu,
     title: "AI-Driven Platforms",
-    desc: "Designing intuitive AI-assisted experiences.",
+    desc: "Crafted intelligent product experiences integrating automation, insights, and human-centered AI interactions.",
     tags: ["AI UX", "Automation", "Intuitive"],
     color: "#00DA99" // Mint
   },
   {
     icon: Building,
     title: "Enterprise SaaS",
-    desc: "Handling scale, roles, and complex user journeys.",
+    desc: "Designed scalable dashboards, workflows, and management systems for enterprise operations.",
     tags: ["Enterprise", "Scale", "Roles"],
     color: "#8B5CF6" // Purple
   }
@@ -40,8 +40,8 @@ const CoreCapabilities = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
             <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Domain Focus</span>
           </div>
-          <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
-            Experience Across <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Complex Domains</span>
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
+            Proven Experience Across <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Complex Industries</span>
           </h2>
         </motion.div>
 

@@ -8,7 +8,7 @@ const expertiseData = [
     id: "01",
     label: "Focus Area 01",
     title: "SaaS Product Design",
-    leftDesc: "Designing scalable SaaS platforms that balance usability, performance, and business goals.",
+    leftDesc: "I design intuitive SaaS platforms that simplify workflows, improve adoption, and support long-term product growth.",
     desc: "Designing scalable SaaS platforms that balance usability, performance, and business goals. I structure complex workflows into intuitive experiences that support growth, retention, and product clarity.",
     bullets: [
       "Workflow & Navigation Design",
@@ -27,7 +27,7 @@ const expertiseData = [
     id: "02",
     label: "Focus Area 02",
     title: "AI Workflow Design",
-    leftDesc: "Crafting human-centered AI experiences that simplify decision-making instead of adding complexity. ",
+    leftDesc: "I design human-centered AI experiences that streamline workflows, automate repetitive tasks, and enhance decision-making.",
     desc: "Crafting human-centered AI experiences that simplify decision-making instead of adding complexity. I design workflows where AI enhances user actions through clarity, trust, and seamless interaction.",
     bullets: [
       "Human-AI Collaboration Systems",
@@ -46,7 +46,7 @@ const expertiseData = [
     id: "03",
     label: "Focus Area 03",
     title: "Dashboard & Data UX",
-    leftDesc: "Transforming complex data into clear, actionable interfaces for faster decision-making. ",
+    leftDesc: "I create data-rich dashboards that transform complex information into clear insights, enabling faster and smarter decisions.",
     desc: "Transforming complex data into clear, actionable interfaces for faster decision-making. I design dashboards that reduce cognitive load and help users focus on what truly matters.",
     bullets: [
       "Data Visualization Design",
@@ -65,7 +65,7 @@ const expertiseData = [
     id: "04",
     label: "Focus Area 04",
     title: "Design Systems",
-    leftDesc: "Building scalable design systems that ensure consistency, speed, and long-term product evolution.",
+    leftDesc: "I build scalable design systems that ensure consistency, accelerate development, and support product evolution across teams.",
     desc: "Building scalable design systems that ensure consistency, speed, and long-term product evolution. I create reusable components and structured guidelines that align design with development.",
     bullets: [
       "Component Library Creation",
@@ -84,7 +84,7 @@ const expertiseData = [
     id: "05",
     label: "Focus Area 05",
     title: "Enterprise UX",
-    leftDesc: "Designing large-scale systems with multi-role users, complex workflows, and high usability demands.",
+    leftDesc: "I design enterprise experiences that simplify complex operations, improve efficiency, and align user needs with business goals.",
     desc: "I bring structure and clarity to enterprise products where efficiency and accuracy are critical. I design dashboards that reduce cognitive load and help users focus on what truly matters. I create reusable components and structured guidelines that align design with development. I focus on simplicity, performance, and intuitive interactions across iOS and Android platforms.",
     bullets: [
       "Complex Workflow Simplification",
@@ -103,7 +103,7 @@ const expertiseData = [
     id: "06",
     label: "Focus Area 06",
     title: "Mobile Product Design",
-    leftDesc: "Creating seamless, user-friendly mobile experiences optimized for real-world usage.",
+    leftDesc: "I craft intuitive mobile experiences that deliver seamless interactions, increase engagement, and support users on the go.",
     desc: "Creating seamless, user-friendly mobile experiences optimized for real-world usage.I bring structure and clarity to enterprise products where efficiency and accuracy are critical. I focus on simplicity, performance, and intuitive interactions across iOS and Android platforms.",
     bullets: [
       "Native iOS & Android UX",
@@ -142,9 +142,9 @@ const DesignExpertise = () => {
               </motion.div>
 
 
-              <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-3 sm:mb-4 leading-tight">
-                Product Design
-                <span className="ml-1.5 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Expertise.</span>
+              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-3 sm:mb-4 leading-tight">
+                How I Help
+                <span className="ml-1.5 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent"> Businesses Build</span> Better Products
               </h2>
               <p className="text-[14px] sm:text-base md:text-lg text-text-secondary leading-relaxed max-w-lg">
                 Sharp focus areas — built from years of shipping real products.

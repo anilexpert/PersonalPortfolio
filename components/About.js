@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 const metrics = [
   { value: '10+', label: 'Years Experience', Icon: Award, color: '#0D63CC' }, // Blue
-  { value: '250+', label: 'Projects Shipped', Icon: Rocket, color: '#00DA99' }, // Mint
-  { value: '30%+', label: 'Conversion Lift', Icon: TrendingUp, color: '#818CF8' }, // Purple
-  { value: '77+', label: 'Products Launched', Icon: Package, color: '#FB923C' }, // Orange
+  { value: '250+', label: 'Product Screens Designed', Icon: Rocket, color: '#00DA99' }, // Mint
+  { value: '30%+', label: 'Average Workflow Efficiency Improvement', Icon: TrendingUp, color: '#818CF8' }, // Purple
+  { value: '77+', label: 'Features Designed & Delivered', Icon: Package, color: '#FB923C' }, // Orange
 ];
 
 const MetricCard = ({ value, label, Icon, color, delay }) => {
@@ -70,7 +70,7 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
           <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-text-primary tracking-tight">
             {count}{suffix}
           </div>
-          <div className="text-[9px] sm:text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-text-secondary opacity-60 text-center">
+          <div className="text-[12px] sm:text-[14px] md:text-[16px] font-medium text-text-secondary opacity-60 text-center">
             {label}
           </div>
         </div>
@@ -109,6 +109,11 @@ const About = () => {
             <MetricCard key={m.label} value={m.value} label={m.label} Icon={m.Icon} color={m.color} delay={i * 0.1} />
           ))}
         </div>
+         <div className="max-w-3xl mx-auto mt-8 md:mt-12">
+          <p className="text-base md:text-2xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
+            Focused on creating measurable impact through usability, efficiency, and scalable product systems.
+          </p>
+          </div> 
 
         {/* Skills Cloud */}
         <div className="mt-12 md:mt-16 mb-8 w-full max-w-3xl mx-auto flex flex-col items-center gap-2">

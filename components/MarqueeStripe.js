@@ -1,15 +1,14 @@
 import { motion } from 'framer-motion';
-import { Globe, Shield, Zap, Layers, Cpu, Sparkles, MessageCircle } from 'lucide-react';
+import { Building, Globe, TrendingUp, Layers, Brain, MessageCircle, TimerIcon } from 'lucide-react';
 
 const marqueeItems = [
-  { text: "Fast turnaround", icon: Zap },
+  { text: "Fast turnaround", icon: TrendingUp },
   { text: "Available worldwide", icon: Globe },
   { text: "Clear communication", icon: MessageCircle },
-  { text: "Dynamic Scalability", icon: Layers },
-  { text: "AI-Powered Insights", icon: Cpu },
-  { text: "User-Centric Design", icon: Sparkles },
-  { text: "99.9% Uptime", icon: Shield },
-  { text: "Trusted by startups & product teams", icon: Globe },
+  { text: "Enterprise SaaS Specialist", icon: Layers },
+  { text: "Healthcare & AI Domain Expertise", icon: Brain },
+  { text: "Available for Freelance Projects", icon: TimerIcon },
+  { text: "Trusted by startups", icon: Building },
 ];
 
 const MarqueeStripe = () => {

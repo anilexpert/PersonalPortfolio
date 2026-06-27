@@ -13,8 +13,8 @@ const FeaturedCaseStudy = () => {
               Featured Case Study
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-text-primary leading-tight">
-            A deep look at one <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">complex problem</span>
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight">
+            Solving Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Product Challenges</span>
           </h2>
         </div>
 

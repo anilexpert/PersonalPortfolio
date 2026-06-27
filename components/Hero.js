@@ -42,18 +42,21 @@ const Hero = () => {
               <span className="text-[12px] sm:text-[14px] md:text-[18px] font-medium text-secondary mb-3 md:mb-4 flex items-center gap-2 opacity-80">
                 Hello, 👋 I'm Anil Kumar
               </span>
-              <h1 className="text-[32px] sm:text-[48px] md:text-[58px] font-bold text-slate-800 leading-[1.1] md:leading-[1.00] mb-6 md:mb-8 tracking-tighter">
-                I Design
+              <h1 className="text-[24px] sm:text-[36px] md:text-[42px] font-bold text-slate-800 leading-[1.1] md:leading-[1.2] mb-6 md:mb-8 tracking-tighter">
+                Designing High-Impact
                 <span
                   className="text-transparent mx-2"
                   style={{ WebkitTextStroke: '1.5px #00DA99' }}
                 >
-                  Scalable Product
+                  SaaS Products
                 </span>
-                Experiences for
+                That Increase
                 <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent mx-2">
-                  SaaS & AI
-                </span> Platforms
+                  Adoption
+                </span> and 
+                <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent mx-2">
+                  Business Growth
+                </span>
               </h1>
             </motion.div>
 
@@ -63,7 +66,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-[12px] sm:text-[14px] md:text-[16px] text-text-secondary mb-6 md:mb-8 max-w-[580px] leading-relaxed"
             >
-              <span className="text-primary font-semibold">Freelance Product Designer</span> helping startups and teams simplify complex workflows, improve usability, and build scalable digital products.
+              I help <span className="text-primary font-semibold">startups and businesses</span> design intuitive SaaS, AI, and enterprise products by transforming complex workflows into scalable, user-centered experiences that drive adoption, efficiency, and growth.
             </motion.p>
 
             {/* <motion.div

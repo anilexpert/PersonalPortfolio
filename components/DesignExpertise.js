@@ -46,7 +46,7 @@ const expertiseData = [
     id: "03",
     label: "Focus Area 03",
     title: "Dashboard & Data UX",
-    leftDesc: "I create data-rich dashboards that transform complex information into clear insights, enabling faster and smarter decisions.",
+    leftDesc: "Transforming complex datasets into actionable insights through intuitive dashboards and analytics experiences.",
     desc: "Transforming complex data into clear, actionable interfaces for faster decision-making. I design dashboards that reduce cognitive load and help users focus on what truly matters.",
     bullets: [
       "Data Visualization Design",
@@ -65,7 +65,7 @@ const expertiseData = [
     id: "04",
     label: "Focus Area 04",
     title: "Design Systems",
-    leftDesc: "I build scalable design systems that ensure consistency, accelerate development, and support product evolution across teams.",
+    leftDesc: "Creating reusable design foundations that ensure consistency, scalability, and faster product delivery.",
     desc: "Building scalable design systems that ensure consistency, speed, and long-term product evolution. I create reusable components and structured guidelines that align design with development.",
     bullets: [
       "Component Library Creation",
@@ -84,7 +84,7 @@ const expertiseData = [
     id: "05",
     label: "Focus Area 05",
     title: "Enterprise UX",
-    leftDesc: "I design enterprise experiences that simplify complex operations, improve efficiency, and align user needs with business goals.",
+    leftDesc: "Simplifying complex business processes through scalable, user-focused enterprise product experiences.",
     desc: "I bring structure and clarity to enterprise products where efficiency and accuracy are critical. I design dashboards that reduce cognitive load and help users focus on what truly matters. I create reusable components and structured guidelines that align design with development. I focus on simplicity, performance, and intuitive interactions across iOS and Android platforms.",
     bullets: [
       "Complex Workflow Simplification",
@@ -103,7 +103,7 @@ const expertiseData = [
     id: "06",
     label: "Focus Area 06",
     title: "Mobile Product Design",
-    leftDesc: "I craft intuitive mobile experiences that deliver seamless interactions, increase engagement, and support users on the go.",
+    leftDesc: "Designing seamless mobile experiences that balance usability, performance, and business objectives.",
     desc: "Creating seamless, user-friendly mobile experiences optimized for real-world usage.I bring structure and clarity to enterprise products where efficiency and accuracy are critical. I focus on simplicity, performance, and intuitive interactions across iOS and Android platforms.",
     bullets: [
       "Native iOS & Android UX",

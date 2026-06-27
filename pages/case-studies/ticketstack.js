@@ -138,12 +138,12 @@ export default function TicketStackCaseStudy() {
 
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
-                      <Image
-                           src="/images/ticketstack/EnterpriseRetailTicketing.png"
-                           alt="Carenova Platform Interface"
-                           fill
-                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                        />
+                     <Image
+                        src="/images/ticketstack/EnterpriseRetailTicketing.png"
+                        alt="Carenova Platform Interface"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                     />
                      {/* <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
@@ -176,7 +176,7 @@ export default function TicketStackCaseStudy() {
                   <GlowDivider />
                </div>
 
-               {/* ── SECTION 03: THE BUSINESS PROBLEM (CARENOVA STYLE) ───────────────────── */}
+               {/* ── SECTION 03: THE BUSINESS CHALLENGE ───────────────────── */}
                <section className="mb-12 md:mb-16 lg:mb-20">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
@@ -184,17 +184,18 @@ export default function TicketStackCaseStudy() {
                            Core Issues
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Problem</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">As TicketStack evolved, the platform became increasingly fragmented, making it difficult for operational teams to execute mission-critical tasks quickly and confidently.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Retail ticket operations relied on fragmented systems, manual campaign coordination, and disconnected inventory processes, making it difficult to scale efficiently.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
                      {[
-                        { num: "01", title: "Fragmented Workflows", desc: "Users navigated multiple disconnected modules to complete a single task.", icon: Layers, color: "#0D63CC" },
-                        { num: "02", title: "Complex Creation", desc: "Launching campaigns required navigating 12+ screens and manual validation.", icon: Layout, color: "#00DA99" },
-                        { num: "03", title: "Poor Visibility", desc: "Critical revenue and inventory information remained buried within reports.", icon: Search, color: "#8B5CF6" },
-                        { num: "04", title: "High Support Dependency", desc: "Users regularly contacted support for routine operational activities.", icon: Users, color: "#EC4899" },
-                        { num: "05", title: "Inconsistent Experience", desc: "Different modules followed different interaction patterns and terminology.", icon: Grid, color: "#F59E0B" }
+                        { num: "01", title: "Fragmented Retail Operations", desc: "Operational workflows were distributed across multiple disconnected tools.", icon: Layers, color: "#0D63CC" },
+                        { num: "02", title: "Limited Campaign Visibility", desc: "Stakeholders lacked centralized insights into campaign performance.", icon: Layout, color: "#00DA99" },
+                        { num: "03", title: "Inventory Complexity", desc: "Managing inventory across multiple channels created operational friction.", icon: Search, color: "#8B5CF6" },
+                        { num: "04", title: "Slow Operational Workflows", desc: "Manual processes increased delays and reduced productivity.", icon: Users, color: "#EC4899" },
+                        { num: "05", title: "Inconsistent Reporting", desc: "Teams struggled to access accurate, real-time business metrics.", icon: Grid, color: "#F59E0B" },
+                        { num: "06", title: "Scalability Bottlenecks", desc: "The legacy infrastructure struggled to support multi-region enterprise growth.", icon: Activity, color: "#38BDF8" }
                      ].map((challenge, i) => (
                         <motion.div
                            key={i}
@@ -221,6 +222,33 @@ export default function TicketStackCaseStudy() {
                      ))}
                   </div>
 
+                  {/* Visualization of emotional impact */}
+                  <div className="max-w-4xl mx-auto glass-card rounded-[32px] p-8 md:p-12 relative overflow-hidden bg-white/60">
+                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-rose-500/5 blur-[100px] rounded-full pointer-events-none" />
+                     <h3 className="text-xl font-bold text-center mb-8 text-text-primary">The Impact of Operational Friction</h3>
+                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10 flex-wrap">
+                        {[
+                           { label: "Disconnected Systems", color: "text-rose-500" },
+                           { label: "Manual Coordination", color: "text-orange-500" },
+                           { label: "Limited Visibility", color: "text-amber-500" },
+                           { label: "Operational Inefficiencies", color: "text-red-500" },
+                           { label: "Reduced Business Performance", color: "text-slate-800", bold: true }
+                        ].map((step, i) => (
+                           <div key={i} className="flex flex-col md:flex-row items-center gap-4">
+                              <div className={`text-sm md:text-base ${step.bold ? 'font-black' : 'font-semibold'} ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                                 {step.label}
+                              </div>
+                              {i < 4 && (
+                                 <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                              )}
+                              {i < 4 && (
+                                 <div className="md:hidden text-slate-300 py-1">↓</div>
+                              )}
+                           </div>
+                        ))}
+                     </div>
+                  </div>
+
                   <motion.div
                      {...fadeIn}
                      className="mt-16 p-10 md:p-14 glass-card bg-white/80 border border-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden text-center group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1"
@@ -230,12 +258,12 @@ export default function TicketStackCaseStudy() {
 
                      <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6 relative z-10 flex items-center justify-center gap-3">
                         <span className="w-8 h-[2px] bg-slate-200" />
-                        Mission Statement
+                        Product Vision
                         <span className="w-8 h-[2px] bg-slate-200" />
                      </h3>
 
                      <p className="text-2xl md:text-3xl lg:text-4xl font-black leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
-                        Transform TicketStack from a transactional utility into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">strategic retail operations platform.</span>
+                        Build a centralized enterprise platform that empowers retail organizations to manage campaigns, inventory, distribution, and performance analytics from a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">single operational hub.</span>
                      </p>
                   </motion.div>
                </section>
@@ -251,12 +279,12 @@ export default function TicketStackCaseStudy() {
                         <div className="sticky top-24">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                               <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
-                                 Discovery
+                                 Research & Discovery
                               </span>
                            </div>
                            <h3 className="text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
                            <p className="text-text-secondary leading-relaxed font-medium mb-8">
-                              To understand why operational teams struggled, we conducted extensive research across the retail network to identify friction points and revenue opportunities.
+                              Research sessions were conducted to understand operational workflows, stakeholder expectations, and inefficiencies within the existing ticket distribution process.
                            </p>
 
                            <div>
@@ -327,7 +355,7 @@ export default function TicketStackCaseStudy() {
                            ))}
                         </div>
 
-                        <motion.div {...fadeIn} className="mt-8 p-6 bg-[#00DA99]/10 rounded-[24px] border border-[#00DA99]/20 flex items-start gap-4">
+                        <motion.div {...fadeIn} className="mt-8 p-6 bg-[#00DA99]/10 rounded-[24px] border border-[#00DA99]/20 flex items-start gap-4 mb-10">
                            <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm">
                               <Lightbulb size={24} className="text-[#00DA99]" />
                            </div>
@@ -336,7 +364,31 @@ export default function TicketStackCaseStudy() {
                               <p className="text-sm text-text-secondary font-medium leading-relaxed">Users didn't need another ticket management tool. They needed a platform that protected revenue, reduced operational risk, and accelerated decision-making.</p>
                            </div>
                         </motion.div>
+
                      </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION: STRATEGIC ARTIFACTS ─────────────────────────────────────────── */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="text-center mb-16">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Deliverables</span>
+                     </div>
+                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Artifacts</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key deliverables that guided the product strategy and informed the design architecture.</p>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-9xl mx-auto">
+                     {["Affinity Map", "Stakeholder Map", "Journey Map", "Workflow Diagram"].map((doc, i) => (
+                        <div key={i} className="aspect-square glass-card rounded-[24px] flex flex-col items-center justify-center text-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60">
+                           <Settings className="w-10 h-10 text-slate-300 mb-4 group-hover:text-[#0D63CC] transition-colors" />
+                           <span className="text-sm font-bold text-slate-600 group-hover:text-text-primary transition-colors">{doc}</span>
+                        </div>
+                     ))}
                   </div>
                </section>
 
@@ -348,39 +400,39 @@ export default function TicketStackCaseStudy() {
                            User Persona
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Protagonist</span></h2>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Primary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">User Personas</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-3 gap-5">
                      {[
                         {
                            name: "Sarah Thompson",
-                           role: "Senior Operations Director",
+                           role: "Retail Operations Manager",
                            age: "38",
                            image: null,
-                           goals: ["Launch campaigns faster", "Optimize daily revenue", "Reduce error rates"],
-                           pains: ["Fragmented systems", "High support dependency", "Poor reporting"],
-                           motivation: "I need a faster way to launch promotions without relying on support.",
+                           goals: ["Monitor campaigns", "Track performance"],
+                           pains: ["Limited visibility", "Manual coordination"],
+                           motivation: "I need centralized insights to manage campaigns without relying on manual follow-ups.",
                            color: "#0D63CC"
                         },
                         {
                            name: "David Chen",
-                           role: "Regional Store Manager",
+                           role: "Distribution Manager",
                            age: "42",
                            image: null,
-                           goals: ["View real-time inventory", "Reduce staff confusion", "Increase local sales"],
-                           pains: ["Allocation inconsistencies", "Slow reporting syncs", "Complex UI"],
-                           motivation: "My team needs clear inventory numbers to avoid overselling.",
+                           goals: ["Manage inventory allocation"],
+                           pains: ["Fragmented systems"],
+                           motivation: "Managing inventory across multiple channels is currently creating operational friction.",
                            color: "#00DA99"
                         },
                         {
                            name: "Elena Rodriguez",
-                           role: "Campaign Lead",
-                           age: "31",
+                           role: "Executive Leadership",
+                           age: "51",
                            image: null,
-                           goals: ["Seamless promotion setup", "Target specific channels", "Track performance"],
-                           pains: ["Complex manual validation", "Routine support delays"],
-                           motivation: "Setting up a weekend discount shouldn't require opening three tabs.",
+                           goals: ["Monitor KPIs"],
+                           pains: ["Inconsistent reporting"],
+                           motivation: "I need accurate, real-time business metrics to make rapid strategic decisions.",
                            color: "#8B5CF6"
                         }
                      ].map((persona, idx) => (
@@ -446,62 +498,118 @@ export default function TicketStackCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow Architecture</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Campaign <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Deployment</span> Flow</h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Streamlined architecture reducing cognitive load from 12+ screens to a linear guided flow.</p>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Key Operational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Workflows</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Streamlined architecture reducing cognitive load and simplifying enterprise tasks into linear guided flows.</p>
                   </div>
 
-                  <div className="hidden lg:block relative max-w-[1400px] mx-auto py-10">
-                     <div className="absolute top-[4.5rem] left-12 right-12 h-[2px] bg-gradient-to-r from-[#0D63CC] via-[#00DA99] to-[#8B5CF6] opacity-30 z-0" />
-                     <div className="grid grid-cols-7 gap-2">
-                        {[
-                           { num: "01", title: "Create Ticket", desc: "Basic Info", icon: Ticket, color: "#0D63CC" },
-                           { num: "02", title: "Configure Pricing", desc: "Rules & Tiers", icon: Wallet, color: "#0D63CC" },
-                           { num: "03", title: "Assign Inventory", desc: "Capacity Limits", icon: Layers, color: "#00DA99" },
-                           { num: "04", title: "Attach Campaign", desc: "Promotions", icon: Target, color: "#00DA99" },
-                           { num: "05", title: "Select Channels", desc: "Distribution", icon: Globe, color: "#8B5CF6" },
-                           { num: "06", title: "Review & Validate", desc: "Pre-flight checks", icon: ShieldCheck, color: "#8B5CF6" },
-                           { num: "07", title: "Publish", desc: "Live Deployment", icon: Rocket, color: "#EC4899" }
-                        ].map((step, i) => (
-                           <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.08 }} className="flex flex-col items-center text-center relative z-10 group">
-                              <div className="w-20 h-20 rounded-2xl bg-white/90 border-2 shadow-sm flex items-center justify-center mb-6 z-10 relative group-hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm" style={{ borderColor: `${step.color}30` }}>
-                                 <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-transparent rounded-2xl pointer-events-none" />
-                                 <step.icon size={28} style={{ color: step.color }} className="relative z-10" />
-                                 <div className="absolute -bottom-3 -right-3 w-8 h-8 rounded-full bg-white border shadow-sm flex items-center justify-center text-[10px] font-extrabold" style={{ color: step.color, borderColor: `${step.color}20` }}>
-                                    {step.num}
+                  <div className="space-y-16 max-w-9xl mx-auto">
+                     {/* Campaign Deployment Flow */}
+                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
+                        <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Deployment Flow</h3>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                           {[
+                              { label: "Create Ticket", color: "text-[#0D63CC]" },
+                              { label: "Configure Pricing", color: "text-[#0D63CC]" },
+                              { label: "Assign Inventory", color: "text-[#00DA99]" },
+                              { label: "Attach Campaign", color: "text-[#00DA99]" },
+                              { label: "Select Channels", color: "text-[#8B5CF6]" },
+                              { label: "Publish", color: "text-[#EC4899]" }
+                           ].map((step, i) => (
+                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
+                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                                    {step.label}
                                  </div>
+                                 {i < 5 && (
+                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                                 )}
+                                 {i < 5 && (
+                                    <div className="md:hidden text-slate-300 py-1">↓</div>
+                                 )}
                               </div>
-                              <h4 className="font-bold text-xs text-text-primary mb-1 px-2">{step.title}</h4>
-                              <p className="text-[10px] text-text-secondary font-medium">{step.desc}</p>
-                           </motion.div>
-                        ))}
-                     </div>
-                  </div>
-
-                  <div className="lg:hidden space-y-8 max-w-sm mx-auto pt-6">
-                     {[
-                        { num: "01", title: "Create Ticket", desc: "Basic Info", icon: Ticket, color: "#0D63CC" },
-                        { num: "02", title: "Configure Pricing", desc: "Rules & Tiers", icon: Wallet, color: "#0D63CC" },
-                        { num: "03", title: "Assign Inventory", desc: "Capacity Limits", icon: Layers, color: "#00DA99" },
-                        { num: "04", title: "Attach Campaign", desc: "Promotions", icon: Target, color: "#00DA99" },
-                        { num: "05", title: "Select Channels", desc: "Distribution", icon: Globe, color: "#8B5CF6" },
-                        { num: "06", title: "Review & Validate", desc: "Pre-flight checks", icon: ShieldCheck, color: "#8B5CF6" },
-                        { num: "07", title: "Publish", desc: "Live Deployment", icon: Rocket, color: "#EC4899" }
-                     ].map((step, i) => (
-                        <div key={i} className="flex items-start gap-5 relative">
-                           {i < 6 && <div className="absolute top-16 left-8 w-[2px] h-10 bg-gradient-to-b from-slate-200 to-slate-200" />}
-                           <div className="w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm bg-white/90 border-2 relative z-10 backdrop-blur-sm" style={{ borderColor: `${step.color}30` }}>
-                              <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-transparent rounded-2xl pointer-events-none" />
-                              <step.icon size={24} style={{ color: step.color }} className="relative z-10" />
-                              <div className="absolute -bottom-2 -right-2 w-6 h-6 rounded-full bg-white border shadow-sm flex items-center justify-center text-[9px] font-extrabold" style={{ color: step.color, borderColor: `${step.color}20` }}>
-                                 {step.num}
-                              </div>
-                           </div>
-                           <div className="pt-2">
-                              <h4 className="font-bold text-sm text-text-primary mb-1">{step.title}</h4>
-                              <p className="text-xs text-text-secondary font-medium">{step.desc}</p>
-                           </div>
+                           ))}
                         </div>
-                     ))}
+                     </div>
+
+                     {/* Inventory Distribution Flow */}
+                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
+                        <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Inventory Distribution Flow</h3>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                           {[
+                              { label: "Create Inventory", color: "text-[#00DA99]" },
+                              { label: "Allocate", color: "text-[#00DA99]" },
+                              { label: "Distribute", color: "text-[#0D63CC]" },
+                              { label: "Monitor", color: "text-[#8B5CF6]" },
+                              { label: "Reconcile", color: "text-[#EC4899]" }
+                           ].map((step, i) => (
+                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
+                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                                    {step.label}
+                                 </div>
+                                 {i < 4 && (
+                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                                 )}
+                                 {i < 4 && (
+                                    <div className="md:hidden text-slate-300 py-1">↓</div>
+                                 )}
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Campaign Management Flow */}
+                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
+                        <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Management Flow</h3>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                           {[
+                              { label: "Create Campaign", color: "text-[#0D63CC]" },
+                              { label: "Configure", color: "text-[#0D63CC]" },
+                              { label: "Assign", color: "text-[#00DA99]" },
+                              { label: "Launch", color: "text-[#8B5CF6]" },
+                              { label: "Track", color: "text-[#EC4899]" }
+                           ].map((step, i) => (
+                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
+                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                                    {step.label}
+                                 </div>
+                                 {i < 4 && (
+                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                                 )}
+                                 {i < 4 && (
+                                    <div className="md:hidden text-slate-300 py-1">↓</div>
+                                 )}
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+
+                     {/* Reporting Flow */}
+                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[80px] rounded-full pointer-events-none" />
+                        <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Reporting Flow</h3>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                           {[
+                              { label: "Collect Data", color: "text-[#8B5CF6]" },
+                              { label: "Analyze", color: "text-[#8B5CF6]" },
+                              { label: "Review", color: "text-[#0D63CC]" },
+                              { label: "Export", color: "text-[#00DA99]" }
+                           ].map((step, i) => (
+                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
+                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                                    {step.label}
+                                 </div>
+                                 {i < 3 && (
+                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                                 )}
+                                 {i < 3 && (
+                                    <div className="md:hidden text-slate-300 py-1">↓</div>
+                                 )}
+                              </div>
+                           ))}
+                        </div>
+                     </div>
                   </div>
                </section>
 
@@ -516,7 +624,7 @@ export default function TicketStackCaseStudy() {
                         <Layout size={14} className="text-primary" />
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Walkthrough</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Solution <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Capabilities</span></h2>
                   </div>
 
                   <div className="space-y-20 md:space-y-32">
@@ -528,7 +636,7 @@ export default function TicketStackCaseStudy() {
                            </div>
                            <h3 className="text-3xl font-black text-text-primary mb-4">Executive Dashboard</h3>
                            <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
-                              Designed a centralized command center featuring Revenue Overview, Inventory Alerts, Campaign Performance, Channel Insights, and a Revenue-at-Risk Widget.
+                              Provides leadership teams with real-time visibility into sales performance, inventory status, and operational health.
                            </p>
                            <ul className="space-y-3 mb-6">
                               <li className="flex items-center gap-3 text-sm font-bold text-slate-700">
@@ -540,7 +648,7 @@ export default function TicketStackCaseStudy() {
                            </ul>
                         </motion.div>
                         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="lg:col-span-7">
-                            <div className="relative aspect-[14/7] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                           <div className="relative aspect-[14/7] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                               <Image
                                  src="/images/ticketstack/DashboardInterface.png"
                                  alt="Carenova Platform Interface"
@@ -556,7 +664,7 @@ export default function TicketStackCaseStudy() {
                      <div className="grid lg:grid-cols-12 gap-12 items-center">
                         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="order-2 lg:order-1 lg:col-span-7">
                            {/* <PremiumPlaceholder icon={Layers} label="Ticket Creation Wizard Mockup" glowColor="#8B5CF6" textCls="text-[#8B5CF6]" aspect="aspect-[16/10]" /> */}
-                        <div className="relative aspect-[16/10] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                           <div className="relative aspect-[16/10] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                               <Image
                                  src="/images/ticketstack/TicketCreationWizard.png"
                                  alt="Ticket Creation Wizard"
@@ -569,9 +677,9 @@ export default function TicketStackCaseStudy() {
                            <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center mb-6">
                               <PenTool size={24} />
                            </div>
-                           <h3 className="text-3xl font-black text-text-primary mb-4">Ticket Creation Wizard</h3>
+                           <h3 className="text-3xl font-black text-text-primary mb-4">Ticket Creation & Management</h3>
                            <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
-                              Redesigned 12 disconnected screens into a guided 4-step experience. Introduced inline validation, draft autosave, smart defaults, and a real-time revenue preview.
+                              Simplifies campaign creation, ticket lifecycle management, and operational coordination.
                            </p>
                            <div className="p-5 bg-purple-50 border border-purple-100 rounded-2xl flex items-center gap-4">
                               <Zap size={28} className="text-[#8B5CF6] flex-shrink-0" />
@@ -587,7 +695,7 @@ export default function TicketStackCaseStudy() {
                               <Target size={24} />
                            </div>
                            <h3 className="text-2xl font-black text-text-primary mb-3">Campaign Management</h3>
-                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Centralized promotions, discount rules, seasonal campaigns, and scheduling. Reduced setup effort significantly.</p>
+                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Enables centralized planning, monitoring, and optimization of retail campaigns.</p>
                            {/* <PremiumPlaceholder icon={Target} label="Campaigns UI" aspect="aspect-[4/3]" glowColor="#00DA99" textCls="text-[#00DA99]" /> */}
                            <div className="relative aspect-[4/3] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                               <Image
@@ -604,7 +712,7 @@ export default function TicketStackCaseStudy() {
                               <Grid size={24} />
                            </div>
                            <h3 className="text-2xl font-black text-text-primary mb-3">Inventory Management</h3>
-                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Introduced real-time visibility, bulk updates, smart alerts, and capacity controls. Drastically reduced inventory discrepancies.</p>
+                           <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Improves visibility and control over ticket inventory across channels and partners.</p>
                            {/* <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" /> */}
                            <div className="relative aspect-[4/3] glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                               <Image
@@ -615,6 +723,102 @@ export default function TicketStackCaseStudy() {
                               />
                            </div>
                         </motion.div>
+                     </div>
+                     {/* Additional Operational Views */}
+                     <div className="mt-20 md:mt-24">
+                        <div className="text-center mb-12">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-4">
+                              <span className="text-[10px] font-bold text-[#8B5CF6] uppercase tracking-widest">Features</span>
+                           </div>
+                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Additional Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
+                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                           {["Table-Heavy Operational Screens", "Bulk Actions Workflows", "Notification Center", "Audit Logs"].map((feature, i) => (
+                              <div key={i} className="aspect-[4/3] glass-card rounded-2xl flex flex-col items-center justify-center text-center p-4 border border-slate-200/50">
+                                 <Layout className="w-8 h-8 text-slate-300 mb-3" />
+                                 <span className="text-xs font-bold text-slate-600">{feature}</span>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION: INFORMATION ARCHITECTURE ────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24">
+                  <div className="text-center mb-16">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Structure</span>
+                     </div>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Structuring <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Enterprise Operations</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Information architecture was designed to support complex operational workflows while maintaining clarity and scalability.</p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-9xl mx-auto">
+                     {["Sitemap", "Navigation Hierarchy", "Role Hierarchy"].map((item, i) => (
+                        <div key={i} className="aspect-video glass-card rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-slate-200/50">
+                           <Layers className="w-10 h-10 text-[#0D63CC] mb-4 opacity-50" />
+                           <h4 className="font-bold text-slate-700">{item}</h4>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION: DESIGN PRINCIPLES ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24">
+                  <div className="text-center mb-16">
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Principles</span></h2>
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-9xl mx-auto">
+                     {[
+                        { title: "Efficiency", desc: "Minimize repetitive operational tasks.", icon: Zap, color: "#0D63CC" },
+                        { title: "Visibility", desc: "Provide real-time operational insights.", icon: Search, color: "#00DA99" },
+                        { title: "Scalability", desc: "Support organizational growth.", icon: TrendingUp, color: "#8B5CF6" },
+                        { title: "Consistency", desc: "Ensure predictable interactions across workflows.", icon: Layers, color: "#F59E0B" }
+                     ].map((principle, i) => (
+                        <div key={i} className="glass-card p-8 rounded-3xl border border-white/60 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                           <div className="w-12 h-12 rounded-xl mb-6 flex items-center justify-center text-white" style={{ backgroundColor: principle.color }}>
+                              <principle.icon size={24} />
+                           </div>
+                           <h3 className="text-xl font-bold text-text-primary mb-2">{principle.title}</h3>
+                           <p className="text-sm text-text-secondary font-medium leading-relaxed">{principle.desc}</p>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* ── SECTION: WIREFRAMES ────────────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24">
+                  <div className="text-center mb-16">
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-9xl mx-auto">
+                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-100 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
+                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
+                        <span className="font-bold text-slate-600">Low Fidelity</span>
+                     </div>
+                     <ArrowRight size={24} className="hidden md:block text-slate-300 flex-shrink-0" />
+                     <div className="md:hidden text-slate-300 py-2">↓</div>
+                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-200 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
+                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
+                        <span className="font-bold text-slate-600">Mid Fidelity</span>
+                     </div>
+                     <ArrowRight size={24} className="hidden md:block text-slate-300 flex-shrink-0" />
+                     <div className="md:hidden text-slate-300 py-2">↓</div>
+                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-300 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
+                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
+                        <span className="font-bold text-slate-600">Final UI</span>
                      </div>
                   </div>
                </section>
@@ -631,10 +835,21 @@ export default function TicketStackCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Visuals</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
+                        A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces. Includes Grid system, Accessibility standards, Component library, and Data visualization patterns.
                      </p>
+                  </div>
+                  <div className="mb-12">
+                     <h3 className="text-xl font-bold text-text-primary mb-6 text-center">Key UI Components</h3>
+                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-9xl mx-auto">
+                        {["Table Components", "Filters", "Status Indicators", "Charts", "Modals"].map((comp, i) => (
+                           <div key={i} className="aspect-square glass-card rounded-2xl flex flex-col items-center justify-center text-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 transition-all">
+                              <Layout className="w-6 h-6 text-slate-400 mb-2" />
+                              <span className="text-[10px] font-bold text-slate-700">{comp}</span>
+                           </div>
+                        ))}
+                     </div>
                   </div>
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
@@ -717,7 +932,7 @@ export default function TicketStackCaseStudy() {
                   <GlowDivider />
                </div>
 
-               {/* ── SECTION 17: VALIDATION & RESULTS (PREMIUM METRICS BOARD) ───────────── */}
+               {/* ── SECTION 17: EXPECTED BUSINESS OUTCOMES ───────────── */}
                <section className="mb-16 md:mb-24">
                   <div className="p-8 md:p-16 rounded-[40px] glass-card border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white/60 relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00DA99]/10 blur-[100px] rounded-full pointer-events-none" />
@@ -725,53 +940,31 @@ export default function TicketStackCaseStudy() {
 
                      <div className="text-center mb-12 relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-md">
-                           <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Results</span>
+                           <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Business Impact</span>
                         </div>
-                        <h2 className="text-4xl font-bold mb-4 text-text-primary">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
+                        <h2 className="text-4xl font-bold mb-4 text-text-primary">Expected Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
                         <p className="text-text-secondary font-medium max-w-2xl mx-auto text-lg">Meaningful business transformation through design.</p>
                      </div>
 
-                     <div className="grid md:grid-cols-3 gap-6 relative z-10 mb-16">
-                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
-                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#00DA99] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
-                           <h3 className="text-5xl md:text-6xl font-black text-[#00DA99] mb-4 tracking-tight">↓ 42%</h3>
-                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Faster Deployment</p>
-                        </div>
-                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
-                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#0D63CC] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
-                           <h3 className="text-5xl md:text-6xl font-black text-[#0D63CC] mb-4 tracking-tight">↓ 31%</h3>
-                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Reduced Support</p>
-                        </div>
-                        <div className="p-8 md:p-10 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group">
-                           <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#8B5CF6] blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
-                           <h3 className="text-5xl md:text-6xl font-black text-[#8B5CF6] mb-4 tracking-tight">↑ 46%</h3>
-                           <p className="text-[13px] font-bold text-text-primary uppercase tracking-[0.2em]">Task Completion</p>
-                        </div>
-                     </div>
-
-                     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12 relative z-10">
+                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 mb-12">
                         {[
-                           { metric: "Ticket Setup", before: "45 min", after: "6 min", color: "#0D63CC" },
-                           { metric: "Reporting", before: "30 min", after: "5 min", color: "#00DA99" },
-                           { metric: "Support", before: "150/mo", after: "45/mo", color: "#8B5CF6" },
-                           { metric: "Training", before: "3 Days", after: "1 Day", color: "#F59E0B" },
-                           { metric: "Adoption", before: "54%", after: "83%", color: "#EC4899" },
-                        ].map((stat, i) => (
-                           <div key={i} className="p-6 bg-white/90 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden group">
-                              <div className="absolute top-0 left-0 w-full h-1 opacity-50 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: stat.color }} />
-                              <p className="text-[10px] font-black uppercase tracking-[0.2em] mb-5" style={{ color: stat.color }}>{stat.metric}</p>
-                              <div className="flex flex-col items-center justify-center gap-1.5">
-                                 <span className="text-[11px] font-bold text-slate-400 line-through">{stat.before}</span>
-                                 <ArrowRight size={14} className="my-1 opacity-40" style={{ color: stat.color }} />
-                                 <span className="text-2xl font-black text-text-primary">{stat.after}</span>
-                              </div>
+                           { title: "Improved operational visibility", icon: Search, color: "#0D63CC" },
+                           { title: "Faster campaign management", icon: Zap, color: "#00DA99" },
+                           { title: "Centralized retail workflows", icon: Layers, color: "#8B5CF6" },
+                           { title: "Better inventory control", icon: Target, color: "#F59E0B" },
+                           { title: "Reduced operational overhead", icon: ShieldCheck, color: "#EC4899" }
+                        ].map((outcome, i) => (
+                           <div key={i} className="p-8 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
+                              <div className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" style={{ backgroundColor: outcome.color }} />
+                              <outcome.icon size={32} className="mb-4" style={{ color: outcome.color }} />
+                              <h3 className="text-lg font-bold text-text-primary tracking-tight leading-snug">{outcome.title}</h3>
                            </div>
                         ))}
                      </div>
                   </div>
                </section>
 
-               {/* ── SECTION 20: FINAL TAKEAWAY ─────────────────────────────────────────── */}
+               {/* ── SECTION 20: KEY LEARNINGS ─────────────────────────────────────────── */}
                <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
@@ -786,7 +979,7 @@ export default function TicketStackCaseStudy() {
                         </div>
 
                         <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-8">
-                           Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Takeaway</span>
+                           Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span>
                         </h2>
 
                         <div className="relative">
@@ -794,10 +987,10 @@ export default function TicketStackCaseStudy() {
                            <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 font-serif leading-none select-none rotate-180 z-0">"</div>
                            <div className="relative z-10 px-6 py-4">
                               <p className="text-xl md:text-2xl font-bold text-text-primary leading-[1.4] mb-6">
-                                 TicketStack evolved from a fragmented operational utility into a strategic retail intelligence platform because <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">we stopped designing for features and started designing for decisions.</span>
+                                 Designing enterprise retail products requires balancing operational complexity with usability.
                               </p>
                               <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
-                                 When retail managers can launch campaigns in under five minutes without consulting documentation, the interface becomes invisible—and that's where meaningful business transformation happens.
+                                 Simplifying workflows, improving visibility, and supporting scalability were critical to creating an effective experience.
                               </p>
                            </div>
                         </div>
@@ -805,7 +998,7 @@ export default function TicketStackCaseStudy() {
                   </motion.div>
                </section>
 
-                   {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
+               {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
@@ -814,6 +1007,9 @@ export default function TicketStackCaseStudy() {
                         </span>
                      </div>
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        Final interfaces focused on clarity, speed, and operational efficiency.
+                     </p>
                   </div>
 
                   <div className="grid gap-6">
@@ -864,6 +1060,24 @@ export default function TicketStackCaseStudy() {
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                               <span className="relative z-10 text-white">Open in Figma</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                           </Link>
+                        </div>
+                     </motion.div>
+
+                     {/* Additional CTA */}
+                     <motion.div {...fadeIn} className="mt-12 md:mt-16 glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
+                        <div className="absolute -top-16 -right-16 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
+                        <div className="relative z-10 flex flex-col items-center">
+                           <div className="w-16 h-16 rounded-full bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] mb-6">
+                              <Building2 size={28} />
+                           </div>
+                           <h3 className="text-2xl md:text-3xl font-black text-text-primary mb-4 text-center">Building SaaS or Enterprise Products?</h3>
+                           <p className="text-base md:text-lg text-text-secondary mb-8 text-center max-w-xl font-medium leading-relaxed">
+                              I help startups and businesses design scalable digital products that simplify complexity and improve operational performance.
+                           </p>
+                           <Link href="mailto:hello@example.com" className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-slate-800 transition-colors shadow-md group">
+                              <span>Let's Discuss Your Product</span>
+                              <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>
                      </motion.div>

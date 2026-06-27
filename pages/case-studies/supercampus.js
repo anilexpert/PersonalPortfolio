@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
-   ArrowLeft, ArrowRight, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
+   ArrowLeft, ArrowRight, ArrowDown, Brain, TrendingUp, Target, Smartphone, Shield, Zap,
    Search, Users, Grid, Settings, Layout, CheckCircle2, FileText,
    Heart, Lightbulb, PenTool, Activity, CheckSquare, Briefcase, HandCoins,
    PieChart, Handshake, MessageCircle, User, BookOpen, Calendar, BookOpenCheck,
@@ -157,14 +157,11 @@ export default function SuperCampusCaseStudy() {
                <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           SuperCampus™ is a comprehensive school management platform designed to connect administrators, teachers, students, parents, and support staff within a unified digital ecosystem.
-                        </p>
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           Unlike traditional school systems where information is fragmented across multiple tools, SuperCampus centralizes all workflows — attendance, assessments, communication, tasks, media, CRM operations, and reporting — into a single platform, enabling better visibility, operational efficiency, and stakeholder engagement.
+                           Educational institutions often rely on disconnected systems, manual administrative processes, and fragmented communication channels. SuperCampus™ was designed to centralize academic operations, student information, communication, attendance, and reporting into a single scalable platform.
                         </p>
                      </div>
                   </div>
@@ -208,12 +205,31 @@ export default function SuperCampusCaseStudy() {
                   {/* The Problem */}
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Problem</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Challenge</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Educational institutions often struggle with fragmented tools, manual administrative overhead, and low stakeholder engagement — causing inefficiencies, delays, and poor experiences across all roles.
+                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
+                           Schools faced several operational challenges:
                         </p>
+                        <ul className="list-disc pl-5 mb-8 text-lg text-text-secondary leading-relaxed font-medium space-y-2">
+                           <li>Administrative tasks were highly manual.</li>
+                           <li>Student data was distributed across multiple systems.</li>
+                           <li>Communication between schools and parents lacked transparency.</li>
+                           <li>Attendance, scheduling, and reporting processes consumed significant staff time.</li>
+                           <li>Stakeholders required role-specific experiences and permissions.</li>
+                        </ul>
+                        <div className="mb-8 p-6 glass-card rounded-2xl flex flex-col items-center justify-center gap-2">
+                           <h4 className="font-bold text-text-primary mb-4 w-full text-center">Problem Visualization</h4>
+                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Manual Administration</div>
+                           <ArrowDown className="text-text-secondary w-4 h-4" />
+                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Fragmented Communication</div>
+                           <ArrowDown className="text-text-secondary w-4 h-4" />
+                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Disconnected Systems</div>
+                           <ArrowDown className="text-text-secondary w-4 h-4" />
+                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Operational Inefficiencies</div>
+                           <ArrowDown className="text-text-secondary w-4 h-4" />
+                           <div className="px-4 py-2 bg-rose-50 rounded-lg border border-rose-200 text-rose-600 font-bold text-sm text-center w-full max-w-xs">Reduced Educational Experience</div>
+                        </div>
                         <div className="grid sm:grid-cols-2 gap-4">
                            {[
                               { title: "Administrative Complexity", desc: "Records, attendance, assessments & reports managed across disconnected systems." },
@@ -240,36 +256,32 @@ export default function SuperCampusCaseStudy() {
                   {/* Product Goals */}
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Product Goals</h3>
+                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Product Goals & Success Metrics</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <div className="grid sm:grid-cols-2 gap-8">
-                           <div>
-                              <h4 className="font-bold text-base text-text-primary mb-4 flex items-center gap-2">
-                                 <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Business Goals
-                              </h4>
-                              <ul className="space-y-3">
-                                 {["Increase operational efficiency", "Improve stakeholder engagement", "Reduce administrative overhead", "Enable scalable school operations", "Improve retention and satisfaction"].map((g, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                       <CheckCircle2 className="w-5 h-5 text-[#0D63CC] shrink-0 mt-0.5" />
-                                       <span className="text-sm font-medium text-text-secondary">{g}</span>
-                                    </li>
+                        <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                           <table className="w-full text-left">
+                              <thead className="bg-slate-50 border-b border-slate-200">
+                                 <tr>
+                                    <th className="px-6 py-4 text-sm font-bold text-text-primary">Goal</th>
+                                    <th className="px-6 py-4 text-sm font-bold text-text-primary">Expected Outcome</th>
+                                 </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-100">
+                                 {[
+                                    { goal: "Centralize operations", outcome: "Single source of truth" },
+                                    { goal: "Improve communication", outcome: "Better parent engagement" },
+                                    { goal: "Reduce manual effort", outcome: "Faster administrative workflows" },
+                                    { goal: "Increase visibility", outcome: "Real-time reporting" },
+                                    { goal: "Support scalability", outcome: "Multi-role architecture" }
+                                 ].map((row, i) => (
+                                    <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                                       <td className="px-6 py-4 text-sm font-semibold text-text-primary">{row.goal}</td>
+                                       <td className="px-6 py-4 text-sm text-text-secondary">{row.outcome}</td>
+                                    </tr>
                                  ))}
-                              </ul>
-                           </div>
-                           <div>
-                              <h4 className="font-bold text-base text-text-primary mb-4 flex items-center gap-2">
-                                 <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> User Goals
-                              </h4>
-                              <ul className="space-y-3">
-                                 {["Easy access to information", "Real-time updates", "Faster communication", "Better performance tracking", "Simplified workflows"].map((g, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                       <CheckCircle2 className="w-5 h-5 text-[#00DA99] shrink-0 mt-0.5" />
-                                       <span className="text-sm font-medium text-text-secondary">{g}</span>
-                                    </li>
-                                 ))}
-                              </ul>
-                           </div>
+                              </tbody>
+                           </table>
                         </div>
                      </div>
                   </div>
@@ -283,9 +295,20 @@ export default function SuperCampusCaseStudy() {
                            Access
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Target Users & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Roles</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The system is designed around multi-role user groups, each with tailored experiences and access levels.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus™ supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
+<div className="flex flex-col items-center justify-center mb-12 space-y-2 relative">
+                           <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">Super Admin</div>
+                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                           <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">School Admin</div>
+                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                           <div className="px-6 py-3 bg-[#00DA99]/10 border border-[#00DA99]/20 rounded-xl font-bold text-[#00DA99] w-64 text-center">Teachers</div>
+                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                           <div className="px-6 py-3 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-xl font-bold text-[#8B5CF6] w-64 text-center">Students</div>
+                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                           <div className="px-6 py-3 bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded-xl font-bold text-[#F59E0B] w-64 text-center">Parents</div>
+                        </div>
 
                   <div className="grid md:grid-cols-2 gap-8 mb-12">
                      {/* Primary Users */}
@@ -352,18 +375,18 @@ export default function SuperCampusCaseStudy() {
                            Core Modules
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Platform Features & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Modules</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Platform Capabilities</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A comprehensive suite of tools designed to digitize every aspect of school operations across all stakeholder roles.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Attendance Management", desc: "Daily and monthly attendance tracking with analytics, reports, and automated notifications to parents.", color: "#0D63CC", icon: CheckSquare,  image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
-                        { num: "02", title: "Assessment & Grading", desc: "Exams, assignments, grades, and performance reports — all in one structured assessment workflow.", color: "#00DA99", icon: ClipboardList, image: "/images/supercampus/02-Assessment-&-Grading-Feature-Thumnail.png" },
-                        { num: "03", title: "Task & Assignment Hub", desc: "Create, submit, and review tasks with real-time progress tracking across classrooms.", color: "#8B5CF6", icon: BookOpen, image: "/images/supercampus/03-Task-&-Assignment Hub-Feature-Thumnail.png" },
-                        { num: "04", title: "CRM & Admissions", desc: "Lead tracking, follow-up management, conversion analytics, and pipeline visibility for admissions.", color: "#F59E0B", icon: Handshake, image: "/images/supercampus/04-CRM-&-Admissions-Feature.png" },
-                        { num: "05", title: "Communication Center", desc: "Announcements, notifications, and direct messaging between all platform stakeholders.", color: "#10B981", icon: MessageCircle, image: "/images/supercampus/05-Communication-Center-Feature-Thumnail.png" },
-                        { num: "06", title: "Analytics & Reports", desc: "Student, teacher, and school-wide analytics with real-time insights and exportable reports.", color: "#0D63CC", icon: BarChart2, image: "/images/supercampus/06-Analytics-&-ReportsThumnail.png" },
+                        { num: "01", title: "Student Information Management", desc: "Centralizes academic, personal, and administrative student information.", color: "#0D63CC", icon: Users,  image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
+                        { num: "02", title: "Attendance Management", desc: "Automates attendance tracking and improves visibility for educators and parents.", color: "#00DA99", icon: CheckSquare, image: "/images/supercampus/02-Assessment-&-Grading-Feature-Thumnail.png" },
+                        { num: "03", title: "Communication Hub", desc: "Facilitates seamless communication between schools, teachers, students, and parents.", color: "#8B5CF6", icon: MessageCircle, image: "/images/supercampus/03-Task-&-Assignment Hub-Feature-Thumnail.png" },
+                        { num: "04", title: "Academic Performance Tracking", desc: "Provides real-time access to grades, assessments, and progress reports.", color: "#F59E0B", icon: BarChart2, image: "/images/supercampus/04-CRM-&-Admissions-Feature.png" },
+                        { num: "05", title: "Task & Assignment Hub", desc: "Create, submit, and review tasks with real-time progress tracking across classrooms.", color: "#10B981", icon: BookOpen, image: "/images/supercampus/05-Communication-Center-Feature-Thumnail.png" },
+                        { num: "06", title: "Analytics & Reports", desc: "Student, teacher, and school-wide analytics with real-time insights and exportable reports.", color: "#0D63CC", icon: Search, image: "/images/supercampus/06-Analytics-&-ReportsThumnail.png" },
                      ].map((feature, i) => (
                         <motion.div
                            key={i}
@@ -483,42 +506,50 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        Four key personas were developed to guide design decisions and ensure each stakeholder's needs were addressed throughout the platform.
+                        Four key personas were developed to guide design decisions and ensure each stakeholder&apos;s needs were addressed throughout the platform.
                      </p>
                   </div>
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                      {[
                         {
                            name: "School Administrator",
-                           role: "Persona 01 — Primary User",
+                           role: "Persona 01 — Primary Persona",
                            bio: "Manages daily school operations and needs centralized visibility across all departments. Frustrated by scattered systems and manual reporting that delay decision-making.",
                            needs: ["Monitor operations", "Improve efficiency", "Track school performance"],
                            pains: ["Manual reporting", "Scattered systems", "Delayed information"],
-                           color: "#0D63CC"
+                           motivations: ["Data-driven decisions", "Operational excellence"],
+                           color: "#0D63CC",
+                           isPrimary: true
                         },
                         {
                            name: "Classroom Teacher",
-                           role: "Persona 02 — Primary User",
+                           role: "Persona 02 — Secondary User",
                            bio: "Manages multiple classrooms and spends too much time on administrative tasks. Needs faster tools for attendance, grading, and communication to focus on education.",
                            needs: ["Manage classrooms efficiently", "Track student performance", "Reduce paperwork"],
                            pains: ["Repetitive attendance work", "Multiple communication channels", "Manual grading"],
-                           color: "#00DA99"
+                           motivations: ["Student success", "Time-saving tools"],
+                           color: "#00DA99",
+                           isPrimary: false
                         },
                         {
                            name: "Parent",
-                           role: "Persona 03 — Primary User",
+                           role: "Persona 03 — Secondary User",
                            bio: "Wants real-time visibility into their child's progress and activities. Currently receives fragmented updates and struggles to communicate effectively with teachers.",
                            needs: ["Monitor child performance", "Stay informed", "Communicate easily"],
                            pains: ["Lack of transparency", "Missed updates", "Delayed communication"],
-                           color: "#F59E0B"
+                           motivations: ["Child's well-being", "Engagement in education"],
+                           color: "#F59E0B",
+                           isPrimary: false
                         },
                         {
                            name: "Student",
-                           role: "Persona 04 — Primary User",
+                           role: "Persona 04 — Secondary User",
                            bio: "Needs a single place to manage assignments, study materials, and schedules. Currently misses deadlines and struggles to stay organized across multiple tools.",
                            needs: ["Stay organized", "Complete assignments", "Track progress"],
                            pains: ["Missed deadlines", "Lost study materials", "Poor schedule visibility"],
-                           color: "#8B5CF6"
+                           motivations: ["Academic achievement", "Seamless learning"],
+                           color: "#8B5CF6",
+                           isPrimary: false
                         }
                      ].map((persona, idx) => (
                         <motion.div
@@ -530,14 +561,21 @@ export default function SuperCampusCaseStudy() {
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                               style={{ backgroundColor: persona.color }}
                            />
-                           <div className="flex items-center gap-6 mb-8 relative z-10">
-                              <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
-                                 <User size={28} style={{ color: persona.color }} strokeWidth={1.5} />
+                           <div className="flex items-center justify-between mb-8 relative z-10">
+                              <div className="flex items-center gap-6">
+                                 <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
+                                    <User size={28} style={{ color: persona.color }} strokeWidth={1.5} />
+                                 </div>
+                                 <div>
+                                    <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
+                                    <p className="text-xs font-medium text-secondary mt-1 opacity-80">{persona.role}</p>
+                                 </div>
                               </div>
-                              <div>
-                                 <h4 className="font-bold text-2xl text-gray-800 tracking-tight">{persona.name}</h4>
-                                 <p className="text-xs font-medium text-secondary mt-1 opacity-80">{persona.role}</p>
-                              </div>
+                              {persona.isPrimary && (
+                                 <div className="px-3 py-1 bg-[#0D63CC] text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
+                                    Primary Persona
+                                 </div>
+                              )}
                            </div>
 
                            <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
@@ -547,7 +585,7 @@ export default function SuperCampusCaseStudy() {
                            <div className="space-y-4 relative z-10">
                               <div className="p-5 rounded-2xl bg-primary/5 border border-primary/20">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-3 flex items-center gap-2">
-                                    <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
+                                    <CheckCircle2 size={13} strokeWidth={3} /> Goals
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
                                     {persona.needs.map((n, i) => (
@@ -566,6 +604,19 @@ export default function SuperCampusCaseStudy() {
                                     {persona.pains.map((p, i) => (
                                        <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-rose-100 text-xs font-medium text-text-primary">
                                           {p}
+                                       </span>
+                                    ))}
+                                 </div>
+                              </div>
+
+                              <div className="p-5 rounded-2xl bg-[#00DA99]/10 border border-[#00DA99]/20">
+                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#00DA99] mb-3 flex items-center gap-2">
+                                    <Award size={13} strokeWidth={3} /> Motivations
+                                 </h5>
+                                 <div className="flex flex-wrap gap-2">
+                                    {persona.motivations?.map((m, i) => (
+                                       <span key={i} className="px-3 py-1.5 bg-white/60 rounded-lg border border-[#00DA99]/20 text-xs font-medium text-text-primary">
+                                          {m}
                                        </span>
                                     ))}
                                  </div>
@@ -672,9 +723,27 @@ export default function SuperCampusCaseStudy() {
                            Architecture
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Architecture</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The SuperSchool ecosystem spans ten core modules, each serving distinct stakeholder workflows.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Structuring a Complex Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">The information architecture was designed to support multiple user roles, academic workflows, and operational processes while maintaining simplicity and usability.</p>
                   </div>
+                  <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8 mb-12">
+                     <div className="flex flex-col items-center gap-2">
+                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                           <span className="text-sm font-bold text-text-secondary">Sitemap</span>
+                        </div>
+                     </div>
+                     <div className="flex flex-col items-center gap-2">
+                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                           <span className="text-sm font-bold text-text-secondary">User Flow Diagrams</span>
+                        </div>
+                     </div>
+                     <div className="flex flex-col items-center gap-2">
+                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                           <span className="text-sm font-bold text-text-secondary">Navigation Hierarchy</span>
+                        </div>
+                     </div>
+                  </div>
+
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
                      {[
@@ -710,6 +779,57 @@ export default function SuperCampusCaseStudy() {
                            </ul>
                         </motion.div>
                      ))}
+                  </div>
+               </section>
+
+               
+               {/* ── USER FLOWS (NEW) ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">User Journeys</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">User Flows</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Core product workflows designed for efficiency and clarity across the platform.</p>
+                  </div>
+
+                  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all duration-300">
+                        <h4 className="font-bold text-lg text-text-primary mb-4">Student Admission Flow</h4>
+                        <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
+                           <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg">Inquiry</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg">Registration</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg">Verification</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg">Enrollment</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg mt-2 sm:mt-0">Class Assignment</span>
+                        </div>
+                     </div>
+                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#00DA99]/30 transition-all duration-300">
+                        <h4 className="font-bold text-lg text-text-primary mb-4">Attendance Flow</h4>
+                        <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
+                           <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg">Teacher Attendance</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg">Validation</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg">Parent Notification</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg mt-2 sm:mt-0">Reports</span>
+                        </div>
+                     </div>
+                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#8B5CF6]/30 transition-all duration-300">
+                        <h4 className="font-bold text-lg text-text-primary mb-4">Assignment Flow</h4>
+                        <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
+                           <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg">Create Assignment</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg">Student Submission</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg">Evaluation</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg mt-2 sm:mt-0">Feedback</span>
+                        </div>
+                     </div>
+                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#F59E0B]/30 transition-all duration-300">
+                        <h4 className="font-bold text-lg text-text-primary mb-4">Parent Communication Flow</h4>
+                        <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
+                           <span className="px-3 py-1.5 bg-[#F59E0B]/10 text-[#F59E0B] rounded-lg">Teacher/Admin</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#F59E0B]/10 text-[#F59E0B] rounded-lg">Notification</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
+                           <span className="px-3 py-1.5 bg-[#F59E0B]/10 text-[#F59E0B] rounded-lg">Parent Acknowledgment</span>
+                        </div>
+                     </div>
                   </div>
                </section>
 
@@ -784,6 +904,34 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
+               
+               {/* ── CORE EXPERIENCE PRINCIPLES (NEW) ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                        <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Principles</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Principles</span></h2>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                     {[
+                        { title: "Simplicity", desc: "Reduce cognitive load across complex workflows.", color: "#0D63CC", icon: Layout },
+                        { title: "Accessibility", desc: "Ensure inclusive experiences for diverse users.", color: "#00DA99", icon: Users },
+                        { title: "Consistency", desc: "Maintain predictable interactions across modules.", color: "#8B5CF6", icon: CheckSquare },
+                        { title: "Scalability", desc: "Support institutional growth and future expansion.", color: "#F59E0B", icon: Target }
+                     ].map((p, i) => (
+                        <div key={i} className="glass-card p-8 rounded-3xl border-2 border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                           <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: `${p.color}15`, color: p.color }}>
+                              <p.icon size={24} />
+                           </div>
+                           <h4 className="font-bold text-xl text-text-primary mb-3">{p.title}</h4>
+                           <p className="text-sm text-text-secondary font-medium">{p.desc}</p>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
                {/* ── 12. DESIGN SYSTEM ────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
@@ -792,11 +940,28 @@ export default function SuperCampusCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Visuals</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable EdTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
                      </p>
                   </div>
+                  <div className="flex flex-wrap justify-center gap-2 mb-8">
+                     {["Accessibility standards", "Component reuse", "Typography rationale", "Color accessibility"].map((tag, i) => (
+                        <span key={i} className="px-4 py-2 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/20">
+                           {tag}
+                        </span>
+                     ))}
+                  </div>
+                  <div className="flex justify-center gap-6 mb-12">
+                     <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Component library</div>
+                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Forms</div>
+                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Tables</div>
+                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Navigation patterns</div>
+                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Mobile components</div>
+                     </div>
+                  </div>
+
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
@@ -897,6 +1062,37 @@ export default function SuperCampusCaseStudy() {
                                  </div>
                               </div>
                            ))}
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               
+               {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Evolution</span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                     <div className="flex flex-col items-center gap-4">
+                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
+                           <span className="text-slate-400 font-bold">Low Fidelity</span>
+                        </div>
+                        <ArrowDown className="text-slate-300 md:hidden" />
+                     </div>
+                     <div className="flex flex-col items-center gap-4">
+                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
+                           <span className="text-slate-400 font-bold">Mid Fidelity</span>
+                        </div>
+                        <ArrowDown className="text-slate-300 md:hidden" />
+                     </div>
+                     <div className="flex flex-col items-center gap-4">
+                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
+                           <span className="text-slate-400 font-bold">Final UI</span>
                         </div>
                      </div>
                   </div>
@@ -1070,8 +1266,8 @@ export default function SuperCampusCaseStudy() {
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Overview</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">A seamless experience across admin web portals and teacher, parent & student mobile apps.</p>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Cross-Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Responsive experiences were designed to ensure seamless access across desktop and mobile devices for all stakeholders.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1159,11 +1355,11 @@ export default function SuperCampusCaseStudy() {
                            </h2>
                         </div>
 
-                        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+                        <div className="grid lg:grid-cols-2 gap-8 mb-20">
                            {[
                               {
                                  title: "Business Impact",
-                                 items: ["Reduced manual work across departments", "Higher parent engagement & visibility", "Centralized communication workflows", "Role-specific UX improved adoption"],
+                                 items: ["Centralized school operations", "Reduced administrative workload", "Improved stakeholder communication", "Increased operational visibility", "Streamlined academic workflows"],
                                  color: "text-[#0D63CC]",
                                  borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent",
                                  innerGlow: "bg-[#0D63CC]/15",
@@ -1172,24 +1368,14 @@ export default function SuperCampusCaseStudy() {
                                  icon: <div className="w-5 h-5 bg-[#0D63CC] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(13,99,204,0.3)]" />
                               },
                               {
-                                 title: "Key Metrics",
-                                 items: ["Attendance completion rate ↑", "Task & assessment participation ↑", "Daily active users across all roles", "Admission conversion rate improved"],
+                                 title: "Expected Outcomes",
+                                 items: ["Single source of truth established", "Time saved per teacher daily", "Faster decision making", "Consistent multi-platform experience"],
                                  color: "text-[#00DA99]",
                                  borderGlow: "from-[#00DA99]/30 via-white/10 to-transparent",
                                  innerGlow: "bg-[#00DA99]/15",
                                  borderColor: "border-[#00DA99]/30 hover:border-[#00DA99]",
                                  gradientFill: "from-white/60 to-white/90",
                                  icon: <div className="w-5 h-5 bg-[#00DA99] rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(0,218,153,0.3)]" />
-                              },
-                              {
-                                 title: "Key Learnings",
-                                 items: ["Multi-role systems need radical UX simplification", "Mobile-first design is non-negotiable for teachers", "Transparency drives parent trust and engagement", <span key="highlight">Real-time data <strong className="text-text-primary font-bold">transforms decision-making</strong></span>],
-                                 color: "text-rose-500",
-                                 borderGlow: "from-rose-500/30 via-white/10 to-transparent",
-                                 innerGlow: "bg-rose-500/15",
-                                 borderColor: "border-rose-500/30 hover:border-rose-500",
-                                 gradientFill: "from-white/60 to-white/90",
-                                 icon: <div className="w-5 h-5 bg-rose-500 rounded flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_12px_rgba(244,63,94,0.3)]" />
                               }
                            ].map((box, i) => (
                               <div key={i} className={`relative border-1 border-[#0D63CC]/20 hover:border-[#00DA99]/40 rounded-[22px] p-[2px] bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
@@ -1230,6 +1416,39 @@ export default function SuperCampusCaseStudy() {
                   </motion.div>
                </section>
 
+               
+               {/* ── FINAL REFLECTION & ROADMAP (NEW) ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
+                     {/* Key Learnings */}
+                     <div className="glass-card rounded-[32px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
+                           Key Learnings
+                        </h4>
+                        <p className="text-text-secondary leading-relaxed font-medium">
+                           Designing educational platforms requires balancing the needs of multiple stakeholders while maintaining simplicity. Clear information architecture, role-based experiences, and scalable systems were essential to delivering an effective product ecosystem.
+                        </p>
+                     </div>
+
+                     {/* Future Roadmap */}
+                     <div className="glass-card rounded-[32px] p-8 lg:p-12 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 transition-all duration-500 group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
+                        <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
+                           Future Roadmap
+                        </h4>
+                        <ul className="space-y-3">
+                           {["AI-powered learning recommendations", "Predictive student performance analytics", "Virtual classroom integrations", "Parent engagement insights", "Automated academic alerts"].map((item, i) => (
+                              <li key={i} className="flex items-start gap-3">
+                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] flex-shrink-0" />
+                                 <span className="text-sm font-medium text-text-secondary">{item}</span>
+                              </li>
+                           ))}
+                        </ul>
+                     </div>
+                  </div>
+               </section>
+
                {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
@@ -1267,10 +1486,10 @@ export default function SuperCampusCaseStudy() {
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
-                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                              Building the Next Generation of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">EdTech Products?</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              I help startups and organizations design scalable educational platforms, SaaS products, and multi-role digital ecosystems.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">

@@ -8,7 +8,7 @@ import {
    Globe, Layers, Cpu, Compass, Settings, PieChart, PenTool, BarChart3,
    Rocket, Star, ArrowRight, User, Grid, Building2, ShieldCheck, Heart,
    MapPin, Wallet, GraduationCap, Award, Sparkles, ArrowLeft,
-   CheckSquare, Bell, Calendar, BarChart2
+   CheckSquare, Bell, Calendar, BarChart2, Shuffle
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -231,27 +231,63 @@ export default function TicketStackCaseStudy() {
                   {/* Visualization of emotional impact */}
                   <div className="max-w-9xl mx-auto glass-card rounded-[32px] p-8 md:p-12 relative overflow-hidden bg-white/60">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-rose-500/5 blur-[100px] rounded-full pointer-events-none" />
-                     <h3 className="text-xl md:text-4xl font-bold text-center mb-8 text-text-primary">The Impact of Operational Friction</h3>
-                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10 flex-wrap">
+                     <div className="flex flex-col items-center mb-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
+                           <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
+                              Impact Analysis
+                           </span>
+                        </div>
+                        <h3 className="text-xl md:text-4xl font-bold text-center text-text-primary">The Impact of <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Operational Friction</span></h3>
+                     </div>
+                     <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
+                        {/* Dashed line */}
+                        <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+
                         {[
-                           { label: "Disconnected Systems", color: "text-rose-500" },
-                           { label: "Manual Coordination", color: "text-orange-500" },
-                           { label: "Limited Visibility", color: "text-amber-500" },
-                           { label: "Operational Inefficiencies", color: "text-red-500" },
-                           { label: "Reduced Business Performance", color: "text-slate-800", bold: true }
-                        ].map((step, i) => (
-                           <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                              <div className={`text-sm  ${step.bold ? 'font-bold' : 'font-semibold'} ${step.color} bg-white/80 px-3 py-2 rounded-xl shadow-sm border border-slate-100`}>
-                                 {step.label}
+                           { title: "DISCONNECTED", desc: "Systems.", icon: Layers, color: "#F43F5E", style: "dashed" },
+                           { title: "MANUAL", desc: "Coordination.", icon: Shuffle, color: "#F97316", style: "dashed" },
+                           { title: "LIMITED", desc: "Visibility.", icon: Search, color: "#F59E0B", style: "solid" },
+                           { title: "OPERATIONAL", desc: "Inefficiencies.", icon: Activity, color: "#EF4444", style: "solid" },
+                           { title: "REDUCED", desc: "Business Performance.", icon: BarChart2, color: "#1E293B", style: "dark" }
+                        ].map((step, j, arr) => {
+                           const isDashed = step.style === "dashed";
+                           const isSolid = step.style === "solid";
+                           const isDark = step.style === "dark";
+
+                           return (
+                              <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                 {/* Arrow on line */}
+                                 {j < arr.length - 1 && (
+                                    <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                       <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
+                                    </div>
+                                 )}
+
+                                 {/* Circle Node */}
+                                 <div
+                                    className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                       isSolid ? "border-[2px] border-solid shadow-md" :
+                                          "border-none shadow-xl"
+                                       }`}
+                                    style={{
+                                       borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                       backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                       color: isDark ? 'white' : step.color
+                                    }}
+                                 >
+                                    <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                    <span className="text-[12px] font-bold uppercase tracking-wider leading-tight px-2" style={{ color: isDark ? 'white' : step.color }}>
+                                       {step.title}
+                                    </span>
+                                 </div>
+
+                                 {/* Description Text */}
+                                 <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                    {step.desc}
+                                 </p>
                               </div>
-                              {i < 4 && (
-                                 <ArrowRight size={16} className="hidden md:block text-slate-300 flex-shrink-0" />
-                              )}
-                              {i < 4 && (
-                                 <div className="md:hidden text-slate-300 py-1">↓</div>
-                              )}
-                           </div>
-                        ))}
+                           );
+                        })}
                      </div>
                   </div>
 
@@ -268,7 +304,7 @@ export default function TicketStackCaseStudy() {
                         <span className="w-8 h-[2px] bg-slate-200" />
                      </h3>
 
-                     <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
+                     <p className="text-base md:text-xl lg:text-2xl font-bold leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
                         Build a centralized enterprise platform that empowers retail organizations to manage campaigns, inventory, distribution, and performance analytics from a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">single operational hub.</span>
                      </p>
                   </motion.div>
@@ -321,13 +357,13 @@ export default function TicketStackCaseStudy() {
                         <div className="grid sm:grid-cols-2 gap-5 mb-10">
                            <motion.div {...fadeIn} className="bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-1">
                               <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-[#0D63CC] blur-[60px] rounded-full opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
-                              <h3 className="text-5xl lg:text-6xl font-black text-[#0D63CC] mb-4">48%</h3>
-                              <p className="text-[13px] font-bold text-text-primary relative z-10 leading-relaxed max-w-[220px]">Experienced inventory confusion and allocation inconsistencies.</p>
+                              <h3 className="text-3xl lg:text-4xl font-black text-[#0D63CC] mb-4">48%</h3>
+                              <p className="text-[13px] font-medium text-text-primary relative z-10 leading-relaxed opacity-80 max-w-[220px]">Experienced inventory confusion and allocation inconsistencies.</p>
                            </motion.div>
                            <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-1">
                               <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-[#00DA99] blur-[60px] rounded-full opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
-                              <h3 className="text-5xl lg:text-6xl font-black text-[#00DA99] mb-4">32%</h3>
-                              <p className="text-[13px] font-bold text-text-primary relative z-10 leading-relaxed max-w-[220px]">Reported slow reporting and lack of real-time insights.</p>
+                              <h3 className="text-3xl lg:text-4xl font-black text-[#00DA99] mb-4">32%</h3>
+                              <p className="text-[13px] font-medium text-text-primary relative z-10 leading-relaxed opacity-80 max-w-[220px]">Reported slow reporting and lack of real-time insights.</p>
                            </motion.div>
                         </div>
 
@@ -347,14 +383,14 @@ export default function TicketStackCaseStudy() {
                               >
                                  <div className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-30 group-hover:scale-150 transition-all duration-700 pointer-events-none" style={{ backgroundColor: insight.color }} />
                                  <div className="relative z-10">
-                                    <span className="text-[48px] font-black block mb-2 leading-none opacity-20" style={{ color: insight.color }}>{insight.num}</span>
-                                    <h4 className="font-bold text-lg text-text-primary mb-3 leading-snug">{insight.title}</h4>
-                                    <p className="text-[13px] text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
+                                    <span className="text-[42px] font-black block mb-2 leading-none opacity-20" style={{ color: insight.color }}>{insight.num}</span>
+                                    <h4 className="font-bold text-base text-text-primary mb-3 leading-snug">{insight.title}</h4>
+                                    <p className="text-[12px] text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
                                  </div>
                                  {insight.quote && (
                                     <div className="p-4 rounded-xl border relative z-10 mt-auto bg-white/60 backdrop-blur-md" style={{ borderColor: `${insight.color}30` }}>
                                        <MessageCircle size={16} className="mb-2 opacity-60" style={{ color: insight.color }} />
-                                       <span className="text-[13px] font-semibold leading-relaxed block italic" style={{ color: insight.color }}>"{insight.quote}"</span>
+                                       <span className="text-[12px] font-semibold leading-relaxed block italic" style={{ color: insight.color }}>"{insight.quote}"</span>
                                     </div>
                                  )}
                               </motion.div>
@@ -513,27 +549,58 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Deployment Flow</h3>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                        
+                        <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
+                           {/* Dashed line */}
+                           <div className="hidden md:block absolute top-[50px] lg:top-[55px] xl:top-[60px] left-[5%] right-[5%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+                           
                            {[
-                              { label: "Create Ticket", color: "text-[#0D63CC]" },
-                              { label: "Configure Pricing", color: "text-[#0D63CC]" },
-                              { label: "Assign Inventory", color: "text-[#00DA99]" },
-                              { label: "Attach Campaign", color: "text-[#00DA99]" },
-                              { label: "Select Channels", color: "text-[#8B5CF6]" },
-                              { label: "Publish", color: "text-[#EC4899]" }
-                           ].map((step, i) => (
-                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
-                                    {step.label}
+                              { title: "CREATE", desc: "Ticket", icon: Ticket, color: "#0D63CC", style: "dashed" },
+                              { title: "CONFIGURE", desc: "Pricing", icon: Settings, color: "#0D63CC", style: "dashed" },
+                              { title: "ASSIGN", desc: "Inventory", icon: Grid, color: "#00DA99", style: "solid" },
+                              { title: "ATTACH", desc: "Campaign", icon: Layers, color: "#00DA99", style: "solid" },
+                              { title: "SELECT", desc: "Channels", icon: Globe, color: "#8B5CF6", style: "solid" },
+                              { title: "PUBLISH", desc: "Deployment", icon: Rocket, color: "#EC4899", style: "dark" }
+                           ].map((step, j, arr) => {
+                              const isDashed = step.style === "dashed";
+                              const isSolid = step.style === "solid";
+                              const isDark = step.style === "dark";
+                              
+                              return (
+                                 <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                    {/* Arrow on line */}
+                                    {j < arr.length - 1 && (
+                                       <div className="hidden md:flex absolute top-[40px] lg:top-[45px] xl:top-[50px] -right-4 xl:-right-5 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                          <ArrowRight size={18} className="text-slate-300" strokeWidth={2.5} />
+                                       </div>
+                                    )}
+                                    
+                                    {/* Circle Node */}
+                                    <div 
+                                       className={`w-[100px] h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[120px] xl:h-[120px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
+                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                          "border-none shadow-xl"
+                                       }`}
+                                       style={{
+                                          borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                          backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                          color: isDark ? 'white' : step.color
+                                       }}
+                                    >
+                                       <step.icon size={24} className="mb-2" strokeWidth={1.5} />
+                                       <span className="text-[10px] xl:text-[11px] font-bold uppercase tracking-wider leading-tight px-1" style={{ color: isDark ? 'white' : step.color }}>
+                                          {step.title}
+                                       </span>
+                                    </div>
+                                    
+                                    {/* Description Text */}
+                                    <p className="text-center mt-4 text-[12px] font-medium text-text-secondary max-w-[120px] mx-auto">
+                                       {step.desc}
+                                    </p>
                                  </div>
-                                 {i < 5 && (
-                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
-                                 )}
-                                 {i < 5 && (
-                                    <div className="md:hidden text-slate-300 py-1">↓</div>
-                                 )}
-                              </div>
-                           ))}
+                              );
+                           })}
                         </div>
                      </div>
 
@@ -541,26 +608,57 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Inventory Distribution Flow</h3>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                        
+                        <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
+                           {/* Dashed line */}
+                           <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+                           
                            {[
-                              { label: "Create Inventory", color: "text-[#00DA99]" },
-                              { label: "Allocate", color: "text-[#00DA99]" },
-                              { label: "Distribute", color: "text-[#0D63CC]" },
-                              { label: "Monitor", color: "text-[#8B5CF6]" },
-                              { label: "Reconcile", color: "text-[#EC4899]" }
-                           ].map((step, i) => (
-                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
-                                    {step.label}
+                              { title: "CREATE", desc: "Inventory", icon: Grid, color: "#00DA99", style: "dashed" },
+                              { title: "ALLOCATE", desc: "Resources", icon: PieChart, color: "#00DA99", style: "dashed" },
+                              { title: "DISTRIBUTE", desc: "Channels", icon: Shuffle, color: "#0D63CC", style: "solid" },
+                              { title: "MONITOR", desc: "Activity", icon: Activity, color: "#8B5CF6", style: "solid" },
+                              { title: "RECONCILE", desc: "Data", icon: CheckSquare, color: "#EC4899", style: "dark" }
+                           ].map((step, j, arr) => {
+                              const isDashed = step.style === "dashed";
+                              const isSolid = step.style === "solid";
+                              const isDark = step.style === "dark";
+                              
+                              return (
+                                 <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                    {/* Arrow on line */}
+                                    {j < arr.length - 1 && (
+                                       <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                          <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
+                                       </div>
+                                    )}
+                                    
+                                    {/* Circle Node */}
+                                    <div 
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
+                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                          "border-none shadow-xl"
+                                       }`}
+                                       style={{
+                                          borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                          backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                          color: isDark ? 'white' : step.color
+                                       }}
+                                    >
+                                       <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                       <span className="text-[12px] font-bold uppercase tracking-wider leading-tight px-2" style={{ color: isDark ? 'white' : step.color }}>
+                                          {step.title}
+                                       </span>
+                                    </div>
+                                    
+                                    {/* Description Text */}
+                                    <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                       {step.desc}
+                                    </p>
                                  </div>
-                                 {i < 4 && (
-                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
-                                 )}
-                                 {i < 4 && (
-                                    <div className="md:hidden text-slate-300 py-1">↓</div>
-                                 )}
-                              </div>
-                           ))}
+                              );
+                           })}
                         </div>
                      </div>
 
@@ -568,26 +666,57 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Management Flow</h3>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                        
+                        <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
+                           {/* Dashed line */}
+                           <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+                           
                            {[
-                              { label: "Create Campaign", color: "text-[#0D63CC]" },
-                              { label: "Configure", color: "text-[#0D63CC]" },
-                              { label: "Assign", color: "text-[#00DA99]" },
-                              { label: "Launch", color: "text-[#8B5CF6]" },
-                              { label: "Track", color: "text-[#EC4899]" }
-                           ].map((step, i) => (
-                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
-                                    {step.label}
+                              { title: "CREATE", desc: "Campaign", icon: Target, color: "#0D63CC", style: "dashed" },
+                              { title: "CONFIGURE", desc: "Settings", icon: Settings, color: "#0D63CC", style: "dashed" },
+                              { title: "ASSIGN", desc: "Teams", icon: Users, color: "#00DA99", style: "solid" },
+                              { title: "LAUNCH", desc: "Execution", icon: Rocket, color: "#8B5CF6", style: "solid" },
+                              { title: "TRACK", desc: "Performance", icon: BarChart2, color: "#EC4899", style: "dark" }
+                           ].map((step, j, arr) => {
+                              const isDashed = step.style === "dashed";
+                              const isSolid = step.style === "solid";
+                              const isDark = step.style === "dark";
+                              
+                              return (
+                                 <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                    {/* Arrow on line */}
+                                    {j < arr.length - 1 && (
+                                       <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                          <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
+                                       </div>
+                                    )}
+                                    
+                                    {/* Circle Node */}
+                                    <div 
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
+                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                          "border-none shadow-xl"
+                                       }`}
+                                       style={{
+                                          borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                          backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                          color: isDark ? 'white' : step.color
+                                       }}
+                                    >
+                                       <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                       <span className="text-[12px] font-bold uppercase tracking-wider leading-tight px-2" style={{ color: isDark ? 'white' : step.color }}>
+                                          {step.title}
+                                       </span>
+                                    </div>
+                                    
+                                    {/* Description Text */}
+                                    <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                       {step.desc}
+                                    </p>
                                  </div>
-                                 {i < 4 && (
-                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
-                                 )}
-                                 {i < 4 && (
-                                    <div className="md:hidden text-slate-300 py-1">↓</div>
-                                 )}
-                              </div>
-                           ))}
+                              );
+                           })}
                         </div>
                      </div>
 
@@ -595,25 +724,56 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Reporting Flow</h3>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10">
+                        
+                        <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
+                           {/* Dashed line */}
+                           <div className="hidden md:block absolute top-[64px] left-[15%] right-[15%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+                           
                            {[
-                              { label: "Collect Data", color: "text-[#8B5CF6]" },
-                              { label: "Analyze", color: "text-[#8B5CF6]" },
-                              { label: "Review", color: "text-[#0D63CC]" },
-                              { label: "Export", color: "text-[#00DA99]" }
-                           ].map((step, i) => (
-                              <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                                 <div className={`text-sm md:text-base font-semibold ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
-                                    {step.label}
+                              { title: "COLLECT", desc: "Data", icon: Layers, color: "#8B5CF6", style: "dashed" },
+                              { title: "ANALYZE", desc: "Metrics", icon: BarChart3, color: "#8B5CF6", style: "dashed" },
+                              { title: "REVIEW", desc: "Insights", icon: Search, color: "#0D63CC", style: "solid" },
+                              { title: "EXPORT", desc: "Reports", icon: ArrowRight, color: "#00DA99", style: "dark" }
+                           ].map((step, j, arr) => {
+                              const isDashed = step.style === "dashed";
+                              const isSolid = step.style === "solid";
+                              const isDark = step.style === "dark";
+                              
+                              return (
+                                 <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                    {/* Arrow on line */}
+                                    {j < arr.length - 1 && (
+                                       <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                          <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
+                                       </div>
+                                    )}
+                                    
+                                    {/* Circle Node */}
+                                    <div 
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
+                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                          "border-none shadow-xl"
+                                       }`}
+                                       style={{
+                                          borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                          backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                          color: isDark ? 'white' : step.color
+                                       }}
+                                    >
+                                       <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                       <span className="text-[12px] font-bold uppercase tracking-wider leading-tight px-2" style={{ color: isDark ? 'white' : step.color }}>
+                                          {step.title}
+                                       </span>
+                                    </div>
+                                    
+                                    {/* Description Text */}
+                                    <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                       {step.desc}
+                                    </p>
                                  </div>
-                                 {i < 3 && (
-                                    <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
-                                 )}
-                                 {i < 3 && (
-                                    <div className="md:hidden text-slate-300 py-1">↓</div>
-                                 )}
-                              </div>
-                           ))}
+                              );
+                           })}
                         </div>
                      </div>
                   </div>

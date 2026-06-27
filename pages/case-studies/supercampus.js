@@ -226,17 +226,62 @@ export default function SuperCampusCaseStudy() {
                            <li>Attendance, scheduling, and reporting processes consumed significant staff time.</li>
                            <li>Stakeholders required role-specific experiences and permissions.</li>
                         </ul>
-                        <div className="mb-8 p-6 glass-card rounded-2xl flex flex-col items-center justify-center gap-2">
-                           <h4 className="font-bold text-text-primary mb-4 w-full text-center">Problem Visualization</h4>
-                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Manual Administration</div>
-                           <ArrowDown className="text-text-secondary w-4 h-4" />
-                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Fragmented Communication</div>
-                           <ArrowDown className="text-text-secondary w-4 h-4" />
-                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Disconnected Systems</div>
-                           <ArrowDown className="text-text-secondary w-4 h-4" />
-                           <div className="px-4 py-2 bg-white rounded-lg shadow-sm text-text-primary font-bold text-sm text-center w-full max-w-xs">Operational Inefficiencies</div>
-                           <ArrowDown className="text-text-secondary w-4 h-4" />
-                           <div className="px-4 py-2 bg-rose-50 rounded-lg border border-rose-200 text-rose-600 font-bold text-sm text-center w-full max-w-xs">Reduced Educational Experience</div>
+                        <div className="mb-12">
+                           <h4 className="font-bold text-text-primary mb-10 w-full text-center">Problem Visualization</h4>
+                           <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4">
+                              {/* Dashed line */}
+                              <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-rose-200 z-0" />
+
+                              {[
+                                 { title: "MANUAL", desc: "Administration.", icon: ClipboardList, style: "dashed" },
+                                 { title: "FRAGMENTED", desc: "Communication.", icon: Users, style: "dashed" },
+                                 { title: "DISCONNECTED", desc: "Systems.", icon: Layers, style: "solid" },
+                                 { title: "OPERATIONAL", desc: "Inefficiencies.", icon: Activity, style: "solid" },
+                                 { title: "REDUCED", desc: "Education.", icon: GraduationCap, style: "dark" }
+                              ].map((step, j, arr) => {
+                                 let circleClasses = "w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative bg-white";
+                                 let iconColor = "text-rose-950";
+                                 let textColor = "text-rose-950";
+
+                                 if (step.style === "dashed") {
+                                    circleClasses += " border-[2px] border-dashed border-rose-300 shadow-sm";
+                                    iconColor = "text-rose-600";
+                                    textColor = "text-rose-900";
+                                 } else if (step.style === "solid") {
+                                    circleClasses += " bg-rose-50 border-[2px] border-solid border-rose-500 shadow-md";
+                                    iconColor = "text-rose-600";
+                                    textColor = "text-rose-600";
+                                 } else if (step.style === "dark") {
+                                    circleClasses += " !bg-rose-900 border-none shadow-xl";
+                                    iconColor = "text-white";
+                                    textColor = "text-white";
+                                 }
+
+                                 return (
+                                    <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                       {/* Arrow on line */}
+                                       {j < arr.length - 1 && (
+                                          <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                             <ArrowRight size={20} className="text-rose-300" strokeWidth={2.5} />
+                                          </div>
+                                       )}
+
+                                       {/* Circle Node */}
+                                       <div className={circleClasses}>
+                                          <step.icon size={28} className={`mb-3 ${iconColor}`} strokeWidth={1.5} />
+                                          <span className={`text-[12px] font-bold uppercase tracking-wider leading-tight ${textColor} px-2`}>
+                                             {step.title}
+                                          </span>
+                                       </div>
+
+                                       {/* Description Text */}
+                                       <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                          {step.desc}
+                                       </p>
+                                    </div>
+                                 );
+                              })}
+                           </div>
                         </div>
                         <div className="grid sm:grid-cols-2 gap-4">
                            {[
@@ -271,8 +316,8 @@ export default function SuperCampusCaseStudy() {
                            <table className="w-full text-left">
                               <thead className="bg-slate-50 border-b border-slate-200">
                                  <tr>
-                                    <th className="px-6 py-4 text-sm font-bold text-text-primary">Goal</th>
-                                    <th className="px-6 py-4 text-sm font-bold text-text-primary">Expected Outcome</th>
+                                    <th className="px-6 py-3 text-sm font-bold text-text-primary">Goal</th>
+                                    <th className="px-6 py-3 text-sm font-bold text-text-primary">Expected Outcome</th>
                                  </tr>
                               </thead>
                               <tbody className="divide-y divide-slate-100">
@@ -284,8 +329,8 @@ export default function SuperCampusCaseStudy() {
                                     { goal: "Support scalability", outcome: "Multi-role architecture" }
                                  ].map((row, i) => (
                                     <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                                       <td className="px-6 py-4 text-sm font-semibold text-text-primary">{row.goal}</td>
-                                       <td className="px-6 py-4 text-sm text-text-secondary">{row.outcome}</td>
+                                       <td className="px-6 py-3 text-sm font-semibold text-text-primary">{row.goal}</td>
+                                       <td className="px-6 py-3 text-sm text-text-secondary">{row.outcome}</td>
                                     </tr>
                                  ))}
                               </tbody>
@@ -306,16 +351,55 @@ export default function SuperCampusCaseStudy() {
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus™ supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
-                  <div className="flex flex-col items-center justify-center mb-12 space-y-2 relative">
-                     <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">Super Admin</div>
-                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                     <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">School Admin</div>
-                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                     <div className="px-6 py-3 bg-[#00DA99]/10 border border-[#00DA99]/20 rounded-xl font-bold text-[#00DA99] w-64 text-center">Teachers</div>
-                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                     <div className="px-6 py-3 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-xl font-bold text-[#8B5CF6] w-64 text-center">Students</div>
-                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                     <div className="px-6 py-3 bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded-xl font-bold text-[#F59E0B] w-64 text-center">Parents</div>
+                  <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mb-16">
+                     {/* Dashed line */}
+                     <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
+
+                     {[
+                        { title: "SUPER ADMIN", desc: "System control.", icon: Monitor, color: "#0D63CC", style: "solid" },
+                        { title: "SCHOOL ADMIN", desc: "Operations.", icon: Settings, color: "#FF3285", style: "solid" },
+                        { title: "TEACHERS", desc: "Academics.", icon: BookOpenCheck, color: "#00DA99", style: "solid" },
+                        { title: "STUDENTS", desc: "Learning.", icon: GraduationCap, color: "#8B5CF6", style: "solid" },
+                        { title: "PARENTS", desc: "Engagement.", icon: Users, color: "#F59E0B", style: "dark" }
+                     ].map((step, j, arr) => {
+                        const isDashed = step.style === "dashed";
+                        const isSolid = step.style === "solid";
+                        const isDark = step.style === "dark";
+
+                        return (
+                           <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                              {/* Arrow on line */}
+                              {j < arr.length - 1 && (
+                                 <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                    <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
+                                 </div>
+                              )}
+
+                              {/* Circle Node */}
+                              <div
+                                 className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                    isSolid ? "border-[2px] border-solid shadow-md" :
+                                       "border-none shadow-xl"
+                                    }`}
+                                 style={{
+                                    borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
+                                    backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
+                                    color: isDark ? 'white' : step.color,
+                                 }}
+                              >
+                                 <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                 <span className="text-[11px] font-bold uppercase tracking-wider leading-tight px-2">
+                                    {step.title}
+                                 </span>
+                              </div>
+
+                              {/* Description Text */}
+                              <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                 {step.desc}
+                              </p>
+                           </div>
+                        );
+                     })}
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -801,7 +885,7 @@ export default function SuperCampusCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Core product workflows designed for efficiency and clarity across the platform.</p>
                   </div>
 
-                  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                      <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all duration-300">
                         <h4 className="font-bold text-lg text-text-primary mb-4">Student Admission Flow</h4>
                         <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
@@ -953,20 +1037,39 @@ export default function SuperCampusCaseStudy() {
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
                      </p>
                   </div>
-                  <div className="flex flex-wrap justify-center gap-2 mb-8">
-                     {["Accessibility standards", "Component reuse", "Typography rationale", "Color accessibility"].map((tag, i) => (
-                        <span key={i} className="px-4 py-2 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/20">
-                           {tag}
-                        </span>
+                  <div className="flex flex-wrap justify-center gap-3 mb-12">
+                     {[
+                        { label: "Accessibility standards", icon: UserCheck },
+                        { label: "Component reuse", icon: Shuffle },
+                        { label: "Typography rationale", icon: PenTool },
+                        { label: "Color accessibility", icon: Sparkles }
+                     ].map((tag, i) => (
+                        <div key={i} className="flex items-center gap-2 px-5 py-2.5 bg-white/60 backdrop-blur-md rounded-full text-[13px] font-bold text-text-primary border border-slate-200 shadow-sm hover:border-[#0D63CC]/30 hover:shadow-md transition-all duration-300 cursor-default group">
+                           <tag.icon size={16} className="text-[#0D63CC] group-hover:scale-110 group-hover:text-[#00DA99] transition-all duration-300" strokeWidth={2.5} />
+                           {tag.label}
+                        </div>
                      ))}
                   </div>
-                  <div className="flex justify-center gap-6 mb-12">
-                     <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
-                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Component library</div>
-                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Forms</div>
-                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Tables</div>
-                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Navigation patterns</div>
-                        <div className="w-full aspect-square rounded-2xl bg-secondary/5 border border-secondary/10 flex items-center justify-center p-2 text-center text-xs font-bold text-text-secondary">Mobile components</div>
+
+                  <div className="flex justify-center w-full mb-16">
+                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 w-full max-w-5xl px-4">
+                        {[
+                           { title: "Component library", icon: Grid, color: "#0D63CC" },
+                           { title: "Forms", icon: CheckSquare, color: "#00DA99" },
+                           { title: "Tables", icon: Server, color: "#8B5CF6" },
+                           { title: "Navigation patterns", icon: Layers, color: "#F59E0B" },
+                           { title: "Mobile components", icon: Smartphone, color: "#F43F5E" }
+                        ].map((item, i) => (
+                           <div key={i} className="aspect-square sm:aspect-[4/5] md:aspect-square glass-card rounded-[24px] p-4 flex flex-col items-center justify-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border-2 border-slate-100 hover:border-transparent">
+                              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500" style={{ background: `linear-gradient(135deg, ${item.color}, transparent)` }} />
+                              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-sm bg-white border border-slate-100" style={{ color: item.color }}>
+                                 <item.icon size={28} strokeWidth={1.5} />
+                              </div>
+                              <span className="font-bold text-[13px] leading-tight text-text-primary group-hover:text-transparent group-hover:bg-clip-text transition-colors duration-300" style={{ backgroundImage: `linear-gradient(to right, ${item.color}, ${item.color})` }}>
+                                 {item.title}
+                              </span>
+                           </div>
+                        ))}
                      </div>
                   </div>
 
@@ -980,8 +1083,8 @@ export default function SuperCampusCaseStudy() {
                         </h4>
                         <div className="grid grid-cols-3 gap-4">
                            {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
-                              { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
+                              { bg: 'bg-[#F60F37]', label: 'Primary', hex: '#F60F37' },
+                              { bg: 'bg-[#FEC305]', label: 'Secondary', hex: '#FEC305' },
                               { bg: 'bg-[#282360]', label: 'Depth', hex: '#282360' },
                               { bg: 'bg-[#10B981]', label: 'Success', hex: '#10B981' },
                               { bg: 'bg-[#F59E0B]', label: 'Warning', hex: '#F59E0B' },

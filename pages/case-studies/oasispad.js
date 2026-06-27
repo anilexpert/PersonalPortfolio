@@ -271,16 +271,59 @@ export default function OasisPadCaseStudy() {
                   </div>
 
 
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Manual Documentation</div>
-                     <ArrowRight className="hidden md:block text-slate-300" />
-                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Disconnected Systems</div>
-                     <ArrowRight className="hidden md:block text-slate-300" />
-                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Compliance Risks</div>
-                     <ArrowRight className="hidden md:block text-slate-300" />
-                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Administrative Overload</div>
-                     <ArrowRight className="hidden md:block text-slate-300" />
-                     <div className="px-4 py-2 glass-card rounded-xl text-sm font-bold text-rose-500">Reduced Care Efficiency</div>
+                  <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-16">
+                     {/* Dashed line */}
+                     <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-rose-200 z-0" />
+
+                     {[
+                        { title: "MANUAL", desc: "Documentation.", icon: ClipboardList, style: "dashed" },
+                        { title: "DISCONNECTED", desc: "Systems.", icon: Layers, style: "dashed" },
+                        { title: "COMPLIANCE", desc: "Risks.", icon: Shield, style: "solid" },
+                        { title: "OVERLOAD", desc: "Administrative.", icon: Clock, style: "solid" },
+                        { title: "REDUCED", desc: "Care Efficiency.", icon: Heart, style: "dark" }
+                     ].map((step, j, arr) => {
+                        let circleClasses = "w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative bg-white";
+                        let iconColor = "text-rose-950";
+                        let textColor = "text-rose-950";
+
+                        if (step.style === "dashed") {
+                           circleClasses += " border-[2px] border-dashed border-rose-300 shadow-sm";
+                           iconColor = "text-rose-600";
+                           textColor = "text-rose-900";
+                        } else if (step.style === "solid") {
+                           circleClasses += " bg-rose-50 border-[2px] border-solid border-rose-500 shadow-md";
+                           iconColor = "text-rose-600";
+                           textColor = "text-rose-600";
+                        } else if (step.style === "dark") {
+                           circleClasses += " !bg-rose-900 border-none shadow-xl";
+                           iconColor = "text-white";
+                           textColor = "text-white";
+                        }
+
+                        return (
+                           <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                              {/* Arrow on line */}
+                              {j < arr.length - 1 && (
+                                 <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                    <ArrowRight size={20} className="text-rose-300" strokeWidth={2.5} />
+                                 </div>
+                              )}
+
+                              {/* Circle Node */}
+                              <div className={circleClasses}>
+                                 <step.icon size={28} className={`mb-3 ${iconColor}`} strokeWidth={1.5} />
+                                 <span className={`text-[12px] font-bold uppercase tracking-wider leading-tight ${textColor} px-2`}>
+                                    {step.title}
+                                 </span>
+                              </div>
+
+                              {/* Description Text */}
+                              <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                 {step.desc}
+                              </p>
+                           </div>
+                        );
+                     })}
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -380,8 +423,8 @@ export default function OasisPadCaseStudy() {
                         ].map((insight, i) => (
                            <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
-                              <h4 className="text-xl font-bold text-text-primary mb-4">{insight.title}</h4>
-                              <p className="text-sm text-text-secondary font-medium leading-relaxed mb-6 text-justify">{insight.desc}</p>
+                              <h4 className="text-base font-bold text-text-primary mb-2">{insight.title}</h4>
+                              <p className="text-sm text-text-secondary font-medium leading-relaxed mb-3">{insight.desc}</p>
 
                               {insight.flow.length > 0 && (
                                  <div className="flex flex-wrap items-center gap-2">
@@ -635,7 +678,7 @@ export default function OasisPadCaseStudy() {
                                  const isLast = idx === total - 1;
                                  let nodeStyle = "";
                                  let iconColor = "";
-                                 
+
                                  if (isLast) {
                                     nodeStyle = "bg-[#2B275A] border-[#2B275A] text-white shadow-xl shadow-[#2B275A]/20";
                                     iconColor = "text-white";

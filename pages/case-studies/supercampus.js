@@ -105,10 +105,10 @@ export default function SuperCampusCaseStudy() {
                         SuperCampus™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        End-to-End <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Management Ecosystem</span>
+                        Designing a Modern <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Operations & Learning Management Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base text-text-secondary max-w-3xl leading-relaxed font-normal mb-4">
-                        A comprehensive school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem — digitizing academic operations, attendance, assessments, communication, and CRM workflows.
+                        SuperCampus™ is a comprehensive education management platform designed to streamline academic operations, improve communication, and connect administrators, teachers, students, and parents through a unified digital ecosystem.
                      </motion.p>
                      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="flex flex-wrap gap-2">
                         {["Product Strategy", "UX Research", "Information Architecture", "Multi-Role Design", "Mobile & Web"].map((tag, i) => (
@@ -116,22 +116,30 @@ export default function SuperCampusCaseStudy() {
                         ))}
                      </motion.div>
                   </div>
-                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Category</p>
-                        <p className="font-bold text-sm text-text-primary">EdTech / SaaS</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Role</p>
+                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Product Designer</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Industry</p>
+                        <p className="font-bold text-sm text-text-primary">EdTech SaaS</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Platform Scope</p>
-                        <p className="font-bold text-sm text-text-primary">Web & Mobile App</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Web + Mobile</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Industry</p>
-                        <p className="font-bold text-sm text-text-primary">Education Technology</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
+                        <p className="font-bold text-sm text-text-primary">8 Months</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Team</p>
+                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Responsibilities</p>
+                        <p className="font-bold text-sm text-text-primary">UX Research, Information Architecture, UX/UI Design, Design System, Prototyping</p>
                      </div>
                   </motion.div>
                </section>
@@ -144,7 +152,7 @@ export default function SuperCampusCaseStudy() {
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
                      />
                      {/* <PremiumPlaceholder aspect="aspect-[21/9]" label="SuperSchool Platform Dashboard" glowCls="bg-[#0D63CC]" textCls="text-white" icon={GraduationCap} /> */}
-                      <Image
+                     <Image
                         src="/images/supercampus/SuperSchool-Platform-Dashboard.png"
                         alt="SuperSchool Platform Dashboard"
                         fill
@@ -298,17 +306,17 @@ export default function SuperCampusCaseStudy() {
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus™ supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
-<div className="flex flex-col items-center justify-center mb-12 space-y-2 relative">
-                           <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">Super Admin</div>
-                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                           <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">School Admin</div>
-                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                           <div className="px-6 py-3 bg-[#00DA99]/10 border border-[#00DA99]/20 rounded-xl font-bold text-[#00DA99] w-64 text-center">Teachers</div>
-                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                           <div className="px-6 py-3 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-xl font-bold text-[#8B5CF6] w-64 text-center">Students</div>
-                           <ArrowDown className="text-text-secondary/50 w-5 h-5" />
-                           <div className="px-6 py-3 bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded-xl font-bold text-[#F59E0B] w-64 text-center">Parents</div>
-                        </div>
+                  <div className="flex flex-col items-center justify-center mb-12 space-y-2 relative">
+                     <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">Super Admin</div>
+                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                     <div className="px-6 py-3 bg-[#0D63CC]/10 border border-[#0D63CC]/20 rounded-xl font-bold text-[#0D63CC] w-64 text-center">School Admin</div>
+                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                     <div className="px-6 py-3 bg-[#00DA99]/10 border border-[#00DA99]/20 rounded-xl font-bold text-[#00DA99] w-64 text-center">Teachers</div>
+                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                     <div className="px-6 py-3 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-xl font-bold text-[#8B5CF6] w-64 text-center">Students</div>
+                     <ArrowDown className="text-text-secondary/50 w-5 h-5" />
+                     <div className="px-6 py-3 bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded-xl font-bold text-[#F59E0B] w-64 text-center">Parents</div>
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-8 mb-12">
                      {/* Primary Users */}
@@ -381,7 +389,7 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Student Information Management", desc: "Centralizes academic, personal, and administrative student information.", color: "#0D63CC", icon: Users,  image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
+                        { num: "01", title: "Student Information Management", desc: "Centralizes academic, personal, and administrative student information.", color: "#0D63CC", icon: Users, image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
                         { num: "02", title: "Attendance Management", desc: "Automates attendance tracking and improves visibility for educators and parents.", color: "#00DA99", icon: CheckSquare, image: "/images/supercampus/02-Assessment-&-Grading-Feature-Thumnail.png" },
                         { num: "03", title: "Communication Hub", desc: "Facilitates seamless communication between schools, teachers, students, and parents.", color: "#8B5CF6", icon: MessageCircle, image: "/images/supercampus/03-Task-&-Assignment Hub-Feature-Thumnail.png" },
                         { num: "04", title: "Academic Performance Tracking", desc: "Provides real-time access to grades, assessments, and progress reports.", color: "#F59E0B", icon: BarChart2, image: "/images/supercampus/04-CRM-&-Admissions-Feature.png" },
@@ -409,14 +417,14 @@ export default function SuperCampusCaseStudy() {
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10 mb-8">{feature.desc}</p>
-                              <div className="relative z-10 w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
-                                 <Image 
-                                    src={feature.image} 
-                                    alt={feature.title} 
-                                    fill 
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                                 />
-                              </div>
+                           <div className="relative z-10 w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                              <Image
+                                 src={feature.image}
+                                 alt={feature.title}
+                                 fill
+                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                           </div>
                         </motion.div>
                      ))}
                   </div>
@@ -782,7 +790,7 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
-               
+
                {/* ── USER FLOWS (NEW) ─────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
@@ -904,7 +912,7 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
-               
+
                {/* ── CORE EXPERIENCE PRINCIPLES (NEW) ─────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
@@ -1067,7 +1075,7 @@ export default function SuperCampusCaseStudy() {
                   </div>
                </section>
 
-               
+
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
@@ -1292,18 +1300,18 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Teacher App" glowCls="bg-[#00DA99]" icon={BookOpenCheck} /> */}
                      <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
-                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} /> */}
-                     <Image
+                        {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} /> */}
+                        <Image
                            src="/images/supercampus/ParentApp-Thumnail.png"
                            alt="Parent App"
                            fill
                            className="object-cover relative z-10 duration-1000"
                         />
                      </div>
-                    
+
                      <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
-                    {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
-                     <Image
+                        {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
+                        <Image
                            src="/images/supercampus/StudentApp-Thumnail.png"
                            alt="Student App"
                            fill
@@ -1312,8 +1320,8 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="CRM Portal" glowCls="bg-[#0D63CC]" icon={Handshake} /> */}
                      <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
-                    {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
-                     <Image
+                        {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
+                        <Image
                            src="/images/supercampus/CRMPortalApp-Thumnail.png"
                            alt="CRM Portal"
                            fill
@@ -1416,7 +1424,7 @@ export default function SuperCampusCaseStudy() {
                   </motion.div>
                </section>
 
-               
+
                {/* ── FINAL REFLECTION & ROADMAP (NEW) ─────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">

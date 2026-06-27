@@ -9,7 +9,7 @@ import {
    PieChart, Handshake, MessageCircle, User, Award, BookOpen, Calendar, BookOpenCheck,
    GraduationCap, Bell, Server, Shuffle, Wind, Feather, ClipboardList,
    Smile, History, Keyboard, Stethoscope, FileSearch, Building2, Wallet, Lock, Layers,
-   Database, Clock, FileBadge, BarChart3, LineChart, Banknote, Receipt, Folder, MapPin, Sparkles, Rocket, Compass, ShieldCheck, Eye, AlertTriangle, UserCheck, ArrowRight,
+   Database, Clock, FileBadge, BarChart3, LineChart, Banknote, Receipt, Folder, MapPin, Sparkles, Rocket, Compass, ShieldCheck, Eye, AlertTriangle, UserCheck, ArrowRight, ArrowDown,
    MonitorPlay, Info, Command, LayoutDashboard, Monitor
 } from 'lucide-react'
 import Navbar from '../../components/Navbar'
@@ -109,10 +109,10 @@ export default function CarenovaSystemsCaseStudy() {
                         Carenova Systems™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
-                        Intelligent Facility & Compliance Management for <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Multi-Facility Healthcare Organizations</span>
+                        Designing a Scalable  <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Healthcare Operations & Compliance Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        An enterprise-grade healthcare operations platform designed to centralize facility management, compliance workflows, audits, workforce coordination, communication, and reporting across multi-facility healthcare organizations.
+                        Carenova™ is a healthcare operations platform designed for residential care organizations to streamline compliance, workforce management, facility operations, and regulatory reporting across multiple facilities.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
@@ -121,17 +121,22 @@ export default function CarenovaSystemsCaseStudy() {
                         <p className="font-bold text-sm text-text-primary">Healthcare SaaS</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Product Type</p>
-                        <p className="font-bold text-sm text-text-primary">Enterprise B2B SaaS</p>
+                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Web Application</p>
                      </div>
                      <div>
-                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Responsive Web App</p>
+                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Team</p>
+                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers, Stakeholders</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
                         <p className="font-bold text-sm text-text-primary">8 Months</p>
                      </div>
+                     <div>
+                        <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Responsibilities</p>
+                        <p className="font-bold text-sm text-text-primary">UX Strategy, IA, UX/UI, Design System, Prototyping</p>
+                     </div>
+
                   </motion.div>
                </section>
 
@@ -164,7 +169,7 @@ export default function CarenovaSystemsCaseStudy() {
                      <div className="lg:col-span-9">
                         <h2 className="text-4xl font-bold text-text-primary mb-4">Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Summary</span></h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
-                           Healthcare organizations operating multiple facilities often rely on disconnected systems, spreadsheets, emails, and manual processes to manage critical compliance and operational activities. The objective was to transform this burden into a strategic advantage.
+                           Residential care organizations were struggling with fragmented workflows, manual compliance tracking, disconnected communication, and inefficient facility operations. Carenova was designed to centralize these operations into a unified healthcare platform, enabling organizations to improve efficiency, maintain compliance, and deliver better care outcomes.
                         </p>
                         <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[24px]">
                            <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
@@ -185,81 +190,73 @@ export default function CarenovaSystemsCaseStudy() {
                      <div className="lg:col-span-3">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
                            <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
-                              Industry Problem
+                              The Challenge
                            </span>
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Problem</span></h2>
+                        <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
-                           Teams struggled to maintain compliance standards while simultaneously managing staff, incidents, documentation, and regulatory audits across various geographically dispersed locations.
+                           Healthcare administrators faced several operational challenges:
                         </p>
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                           {[
-                              { label: "Fragmented", desc: "Disconnected Systems" },
-                              { label: "Manual", desc: "Compliance Tracking" },
-                              { label: "Blindspots", desc: "Limited Visibility" },
-                              { label: "Delays", desc: "Audit Inefficiencies" },
-                              { label: "Friction", desc: "Complex Role Mgmt" }
-                           ].map((item, idx) => (
-                              <div key={idx} className="p-6 glass-card rounded-2xl flex flex-col items-center justify-center text-center border border-rose-500/10">
-                                 <span className="text-xs font-bold uppercase tracking-widest text-rose-500 mb-2">{item.label}</span>
-                                 <span className="text-sm font-semibold text-text-primary">{item.desc}</span>
-                              </div>
-                           ))}
-                        </div>
-                        <div className="mt-8 p-4 bg-rose-50 rounded-xl border border-rose-100 flex items-center gap-4">
-                           <Zap className="text-rose-500" size={24} />
-                           <p className="text-sm font-bold text-text-primary">This fragmentation created significant compliance risks and administrative overhead.</p>
+                        <ul className="list-disc pl-5 text-text-secondary font-medium leading-relaxed mb-8 space-y-2">
+                           <li>Compliance activities were managed manually.</li>
+                           <li>Critical documentation was spread across multiple systems.</li>
+                           <li>Facility teams lacked real-time operational visibility.</li>
+                           <li>Regulatory reporting consumed significant administrative effort.</li>
+                           <li>Communication between caregivers, administrators, and guardians was fragmented.</li>
+                        </ul>
+                        <div className="grid grid-cols-1 gap-4 mb-8">
+                           <div className="p-6 glass-card rounded-2xl flex flex-col items-center justify-center text-center border border-rose-500/10">
+                              <span className="text-sm font-bold text-text-primary">Fragmented Systems</span>
+                              <ArrowDown className="my-2 text-rose-500" size={20} />
+                              <span className="text-sm font-bold text-text-primary">Manual Processes</span>
+                              <ArrowDown className="my-2 text-rose-500" size={20} />
+                              <span className="text-sm font-bold text-text-primary">Compliance Risks</span>
+                              <ArrowDown className="my-2 text-rose-500" size={20} />
+                              <span className="text-sm font-bold text-text-primary">Administrative Burden</span>
+                              <ArrowDown className="my-2 text-rose-500" size={20} />
+                              <span className="text-sm font-bold text-rose-500">Reduced Care Quality</span>
+                           </div>
                         </div>
                      </div>
                   </div>
                </section>
 
-               {/* THE BUSINESS CHALLENGE (Symmetric Grid) */}
+               {/* PRODUCT GOALS & SUCCESS METRICS */}
                <section className="mb-12 md:mb-16 lg:mb-20">
-                  <div className="text-center mb-16">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
-                        <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
-                           Core Issues
-                        </span>
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                     <div className="lg:col-span-3">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
+                           <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
+                              Objectives
+                           </span>
+                        </div>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Goals</span></h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">Facility administrators reported several recurring operational issues that impacted both care quality and facility sustainability.</p>
-                  </div>
+                     <div className="lg:col-span-9">
+                        <h2 className="text-4xl font-bold text-text-primary mb-8">Product Goals & <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Success Metrics</span></h2>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                     {[
-                        { num: "01", title: "Centralize Workflows", desc: "Create a single source of truth across facilities to eliminate data silos and manual handoffs.", icon: Layout, color: "#0D63CC" },
-                        { num: "02", title: "Improve Audit Readiness", desc: "Reduce preparation time and improve documentation quality for regulatory audits.", icon: Target, color: "#00DA99" },
-                        { num: "03", title: "Reduce Admin Burden", desc: "Automate repetitive compliance tasks to allow teams to focus on care delivery.", icon: Clock, color: "#8B5CF6" },
-                        { num: "04", title: "Increase Transparency", desc: "Provide real-time visibility and reporting across all facilities.", icon: Eye, color: "#EC4899" },
-                        { num: "05", title: "Mitigate Risks", desc: "Enable proactive monitoring and automated corrective action workflows.", icon: Shield, color: "#F59E0B" },
-                        { num: "06", title: "Scalable Growth", desc: "Design a platform capable of supporting rapid multi-facility expansion.", icon: TrendingUp, color: "#10B981" }
-                     ].map((challenge, i) => (
-                        <motion.div
-                           key={i}
-                           {...fadeIn}
-                           transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group relative overflow-hidden"
-                        >
-                           <div
-                              className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
-                              style={{ backgroundColor: challenge.color }}
-                           />
-                           <div className="flex items-center justify-between mb-6 relative z-10">
-                              <div
-                                 className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs"
-                                 style={{ backgroundColor: `${challenge.color}20`, color: challenge.color, border: `1px solid ${challenge.color}30` }}
-                              >
-                                 {challenge.num}
-                              </div>
-                              <challenge.icon size={24} className="opacity-30" style={{ color: challenge.color }} />
+                        <div className="w-full glass-card rounded-[24px] overflow-hidden">
+                           <div className="grid grid-cols-2 bg-[#0D63CC]/10 p-6 border-b border-[#0D63CC]/20">
+                              <div className="font-bold text-text-primary uppercase tracking-wider text-sm">Goal</div>
+                              <div className="font-bold text-text-primary uppercase tracking-wider text-sm">Success Metric</div>
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{challenge.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{challenge.desc}</p>
-                        </motion.div>
-                     ))}
+                           <div className="flex flex-col">
+                              {[
+                                 { goal: "Reduce manual compliance effort", metric: "-40%" },
+                                 { goal: "Improve operational visibility", metric: "Centralized dashboards" },
+                                 { goal: "Streamline documentation", metric: "Digital workflows" },
+                                 { goal: "Improve communication", metric: "Unified notifications" },
+                                 { goal: "Support scalability", metric: "Multi-facility architecture" }
+                              ].map((item, i) => (
+                                 <div key={i} className="grid grid-cols-2 p-6 border-b border-slate-200/50 hover:bg-slate-50/50 transition-colors">
+                                    <div className="text-text-secondary font-medium">{item.goal}</div>
+                                    <div className="text-text-primary font-bold">{item.metric}</div>
+                                 </div>
+                              ))}
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </section>
 
@@ -573,21 +570,83 @@ export default function CarenovaSystemsCaseStudy() {
                            Structure
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Information <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Architecture</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Healthcare Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A structured hierarchy designed to connect clinical care with revenue operations seamlessly.
+                        The platform architecture was designed to support multiple user roles, facility hierarchies, and compliance workflows while maintaining clarity and usability.
                      </p>
                   </div>
 
                   <div className="max-w-8xl mx-auto">
                      <div className="mb-12 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
-                     <Image
-                        src="/images/carenova/InformationArchitecture.png"
-                        alt="Carenova Platform Interface"
-                        fill
-                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                     />
-                        {/* <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#00DA99" textCls="text-[#00DA99]" icon={Layers} /> */}
+                        <Image
+                           src="/images/carenova/InformationArchitecture.png"
+                           alt="Carenova Platform Interface"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     <div className="grid md:grid-cols-2 gap-6 mt-8">
+                        <div className="p-6 glass-card rounded-2xl border border-[#0D63CC]/10 text-center flex flex-col items-center">
+                           <Layers className="text-[#0D63CC] mb-4" size={32} />
+                           <h4 className="text-lg font-bold text-text-primary mb-2">User Role Hierarchy Diagram</h4>
+                           <p className="text-sm text-text-secondary font-medium">Maps permissions across Caregivers, Administrators, and Compliance Reviewers.</p>
+                        </div>
+                        <div className="p-6 glass-card rounded-2xl border border-[#0D63CC]/10 text-center flex flex-col items-center">
+                           <Building2 className="text-[#0D63CC] mb-4" size={32} />
+                           <h4 className="text-lg font-bold text-text-primary mb-2">Facility Relationship Diagram</h4>
+                           <p className="text-sm text-text-secondary font-medium">Illustrates the connection between corporate headquarters and local facilities.</p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* USER FLOWS */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           User Flows
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
+                  </div>
+                  <div className="max-w-6xl mx-auto space-y-8">
+                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#0D63CC]">
+                        <h4 className="text-xl font-bold text-text-primary mb-6">Incident Reporting Flow</h4>
+                        <div className="flex flex-wrap items-center gap-3">
+                           {["Caregiver", "Supervisor Review", "Compliance Review", "CMH Notification", "Guardian Notification"].map((step, i, arr) => (
+                              <div key={i} className="flex items-center gap-3">
+                                 <span className="px-4 py-2 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg text-sm font-bold">{step}</span>
+                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#00DA99]">
+                        <h4 className="text-xl font-bold text-text-primary mb-6">New Resident Admission Flow</h4>
+                        <div className="flex flex-wrap items-center gap-3">
+                           {["Inquiry", "Assessment", "Approval", "Documentation", "Room Assignment", "Care Plan"].map((step, i, arr) => (
+                              <div key={i} className="flex items-center gap-3">
+                                 <span className="px-4 py-2 bg-[#00DA99]/10 text-[#00DA99] rounded-lg text-sm font-bold">{step}</span>
+                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#8B5CF6]">
+                        <h4 className="text-xl font-bold text-text-primary mb-6">Staff Scheduling Flow</h4>
+                        <div className="flex flex-wrap items-center gap-3">
+                           {["Schedule Creation", "Shift Assignment", "Approval", "Notification", "Attendance"].map((step, i, arr) => (
+                              <div key={i} className="flex items-center gap-3">
+                                 <span className="px-4 py-2 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg text-sm font-bold">{step}</span>
+                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
+                              </div>
+                           ))}
+                        </div>
                      </div>
                   </div>
                </section>
@@ -638,9 +697,9 @@ export default function CarenovaSystemsCaseStudy() {
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                      <div className="lg:col-span-5 space-y-8">
                         <div>
-                           <h3 className="text-3xl font-bold text-text-primary mb-4">Executive <span className="text-[#0D63CC]">Dashboard</span></h3>
+                           <h3 className="text-3xl font-bold text-text-primary mb-4">Executive Dashboard <span className="text-[#0D63CC]">Experience</span></h3>
                            <p className="text-lg text-text-secondary font-medium leading-relaxed">
-                              The dashboard was designed around primary operational questions to give immediate clarity to administrators and leadership.
+                              Designed role-based dashboards that provide healthcare leaders with real-time operational visibility across facilities, compliance activities, workforce status, and critical alerts.
                            </p>
                         </div>
                         <div className="space-y-4">
@@ -682,9 +741,9 @@ export default function CarenovaSystemsCaseStudy() {
                            Methodology
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">My Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
                      <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
-                        A systematic, user-centric approach to solving complex enterprise challenges through iterative refinement.
+                        A systematic, user-centric approach to solving complex enterprise challenges through iterative refinement. Clients want to understand how you work, so here is a breakdown of the core design process.
                      </p>
                   </div>
 
@@ -698,11 +757,11 @@ export default function CarenovaSystemsCaseStudy() {
                      {/* DESKTOP VIEW */}
                      <div className="hidden lg:flex items-start justify-between relative z-10">
                         {[
-                           { num: "01", title: "Empathize", desc: "Stakeholder interviews, workflow observation, system audits.", icon: Heart, type: "dashed" },
-                           { num: "02", title: "Define", desc: "User personas, problem definition & feature prioritization.", icon: Target, type: "dashed" },
-                           { num: "03", title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
-                           { num: "04", title: "Design", desc: "Wireframes, visual design system, multi-role UI.", icon: PenTool, type: "solid-light" },
-                           { num: "05", title: "Test", desc: "Usability testing, feedback loops, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                           { num: "01", title: "Discover", desc: "Stakeholder interviews.", icon: Search, type: "dashed" },
+                           { num: "02", title: "Define", desc: "Requirements & workflows.", icon: Target, type: "dashed" },
+                           { num: "03", title: "Architect", desc: "Information architecture.", icon: Layers, type: "solid-light" },
+                           { num: "04", title: "Design", desc: "Wireframes & UI.", icon: PenTool, type: "solid-light" },
+                           { num: "05", title: "Validate", desc: "Feedback iterations.", icon: CheckCircle2, type: "solid-dark" }
                         ].map((step, i) => (
                            <div key={i} className={`flex flex-col items-center w-48 relative ${i % 2 !== 0 ? 'translate-y-8' : ''} transition-transform duration-1000`}>
                               <motion.div
@@ -737,11 +796,11 @@ export default function CarenovaSystemsCaseStudy() {
                      {/* MOBILE VIEW */}
                      <div className="lg:hidden space-y-16">
                         {[
-                           { title: "Empathize", desc: "Stakeholder interviews, workflow observation.", icon: Heart, type: "dashed" },
-                           { title: "Define", desc: "User personas, problem definition & prioritization.", icon: Target, type: "dashed" },
-                           { title: "Ideate", desc: "Brainstorming, user flows, information architecture.", icon: Lightbulb, type: "solid-light" },
-                           { title: "Design", desc: "Wireframes, visual design, multi-role UI.", icon: PenTool, type: "solid-light" },
-                           { title: "Test", desc: "Usability testing, feedback, iterative improvements.", icon: CheckCircle2, type: "solid-dark" }
+                           { title: "Discover", desc: "Stakeholder interviews.", icon: Search, type: "dashed" },
+                           { title: "Define", desc: "Requirements & workflows.", icon: Target, type: "dashed" },
+                           { title: "Architect", desc: "Information architecture.", icon: Layers, type: "solid-light" },
+                           { title: "Design", desc: "Wireframes & UI.", icon: PenTool, type: "solid-light" },
+                           { title: "Validate", desc: "Feedback iterations.", icon: CheckCircle2, type: "solid-dark" }
                         ].map((step, i) => (
                            <div key={i} className="flex flex-col items-center relative">
                               <div className={`w-32 h-32 rounded-full mb-6 flex flex-col items-center justify-center
@@ -774,9 +833,9 @@ export default function CarenovaSystemsCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">System</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
-                        A unified design system was created to ensure complex operational data feels approachable, trustworthy, and extremely accessible.
+                        A unified design system was created to ensure complex operational data feels approachable, trustworthy, and extremely accessible. We focused heavily on Data Visualization components (charts, gauges), Status Indicators (warning vs. critical alerts), and Enterprise Data Tables (bulk actions, complex filtering).
                      </p>
                   </div>
 
@@ -862,6 +921,46 @@ export default function CarenovaSystemsCaseStudy() {
                   <GlowDivider />
                </div>
 
+               {/* WIREFRAMES */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Evolution
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">
+                        Moving from low-fidelity structural planning to high-fidelity visual execution.
+                     </p>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                     <div className="p-4 glass-card rounded-2xl text-center border border-slate-200">
+                        <h4 className="text-sm font-bold text-text-primary mb-4">1. Low-Fidelity Architecture</h4>
+                        <div className="w-full aspect-video bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center">
+                           <Layout size={32} className="text-slate-300" />
+                        </div>
+                     </div>
+                     <div className="p-4 glass-card rounded-2xl text-center border border-slate-200">
+                        <h4 className="text-sm font-bold text-text-primary mb-4">2. Mid-Fidelity Components</h4>
+                        <div className="w-full aspect-video bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center">
+                           <Layers size={32} className="text-slate-400" />
+                        </div>
+                     </div>
+                     <div className="p-4 glass-card rounded-2xl text-center border border-[#0D63CC]/20 shadow-lg relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-[#0D63CC]/10 blur-[30px] rounded-full pointer-events-none" />
+                        <h4 className="text-sm font-bold text-text-primary mb-4">3. High-Fidelity UI</h4>
+                        <div className="w-full aspect-video bg-[#0D63CC]/5 rounded-lg border border-[#0D63CC]/20 flex items-center justify-center">
+                           <Monitor size={32} className="text-[#0D63CC]" />
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
                {/* 12. UX DECISIONS */}
                <section className="mb-12 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
@@ -924,7 +1023,7 @@ export default function CarenovaSystemsCaseStudy() {
                   <GlowDivider />
                </div>
 
-               {/* 14. CORE PRODUCT FEATURES */}
+               {/* 14. CORE PLATFORM CAPABILITIES */}
                <section className="mb-12 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-4">
@@ -932,14 +1031,15 @@ export default function CarenovaSystemsCaseStudy() {
                            Capabilities
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Features</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
                   </div>
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                      <div className="lg:col-span-5 space-y-8">
                         {[
-                           { title: "Real-time Compliance Engine", desc: "Automated tracking of regulatory requirements with proactive alerts before deadlines are missed." },
-                           { title: "Unified Staff Directory", desc: "Centralized credentialing, shift scheduling, and certification tracking." },
-                           { title: "Automated Corrective Actions", desc: "Smart workflows that automatically generate remediation steps when deficiencies are found." }
+                           { title: "Compliance Management", desc: "Automates regulatory workflows, documentation tracking, and audit readiness across facilities." },
+                           { title: "Workforce Management", desc: "Simplifies scheduling, staff oversight, training compliance, and workforce coordination." },
+                           { title: "Guardian Communication", desc: "Enables secure and transparent communication between facilities, caregivers, and families." },
+                           { title: "Incident Management", desc: "Standardizes incident reporting, review workflows, and regulatory notifications." }
                         ].map((feature, i) => (
                            <div key={i} className="flex gap-4">
                               <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 text-[#0D63CC] flex-shrink-0 flex items-center justify-center">
@@ -954,7 +1054,6 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
                      <div className="lg:col-span-7">
                         <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
-                           {/* <PremiumPlaceholder aspect="aspect-square w-full h-full" label="Feature Interface Detail" icon={Layers} glowColor="#8B5CF6" /> */}
                            <Image
                               src="/images/carenova/FeatureInterfaceDetail.png"
                               alt="Feature Interface Detail"
@@ -963,6 +1062,38 @@ export default function CarenovaSystemsCaseStudy() {
                            />
                         </div>
                      </div>
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
+               {/* 14.5 ENTERPRISE SECURITY & COMPLIANCE */}
+               <section className="mb-12 md:mb-16 lg:mb-20">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
+                           Security
+                        </span>
+                     </div>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Enterprise Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Compliance</span></h2>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                     {[
+                        { title: "Role-Based Access Control", icon: UserCheck },
+                        { title: "Multi-Factor Authentication", icon: Lock },
+                        { title: "Audit Logs", icon: FileBadge },
+                        { title: "Secure Document Management", icon: Folder },
+                        { title: "HIPAA-Aligned Security Practices", icon: ShieldCheck }
+                     ].map((item, idx) => (
+                        <div key={idx} className="p-6 glass-card rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200 shadow-sm">
+                           <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 text-[#0D63CC] flex items-center justify-center mb-4">
+                              <item.icon size={24} />
+                           </div>
+                           <h4 className="text-sm font-bold text-text-primary">{item.title}</h4>
+                        </div>
+                     ))}
                   </div>
                </section>
 
@@ -981,29 +1112,29 @@ export default function CarenovaSystemsCaseStudy() {
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Enterprise SaaS <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Screens Gallery</span></h2>
                   </div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                      {[
-                         { src: "/images/carenova/FeatureInterfaceDetail.png", alt: "Platform Dashboard" },
-                         { src: "/images/carenova/Reporting-Analytics.png", alt: "Reporting & Analytics" },
-                         { src: "/images/carenova/IncidentManagement.png", alt: "Incident Management" },
-                         { src: "/images/carenova/ExecutiveDashboard2.png", alt: "Executive Dashboard" },
-                         { src: "/images/carenova/ComplianceManagement.png", alt: "Compliance Workspace" },
-                         { src: "/images/carenova/Workforce-Management.png", alt: "Workforce Management" }
-                      ].map((img, i) => (
-                         <div key={i} className="relative aspect-[4/3] md:aspect-video rounded-2xl overflow-hidden glass-card shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200/60 group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
-                            <Image 
-                               src={img.src} 
-                               alt={img.alt} 
-                               fill 
-                               className="object-cover object-top group-hover:scale-105 transition-transform duration-700" 
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                               <p className="text-white font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                  {img.alt}
-                               </p>
-                            </div>
-                         </div>
-                      ))}
-                   </div>
+                     {[
+                        { src: "/images/carenova/FeatureInterfaceDetail.png", alt: "Platform Dashboard" },
+                        { src: "/images/carenova/Reporting-Analytics.png", alt: "Reporting & Analytics" },
+                        { src: "/images/carenova/IncidentManagement.png", alt: "Incident Management" },
+                        { src: "/images/carenova/ExecutiveDashboard2.png", alt: "Executive Dashboard" },
+                        { src: "/images/carenova/ComplianceManagement.png", alt: "Compliance Workspace" },
+                        { src: "/images/carenova/Workforce-Management.png", alt: "Workforce Management" }
+                     ].map((img, i) => (
+                        <div key={i} className="relative aspect-[4/3] md:aspect-video rounded-2xl overflow-hidden glass-card shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200/60 group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500">
+                           <Image
+                              src={img.src}
+                              alt={img.alt}
+                              fill
+                              className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                              <p className="text-white font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                 {img.alt}
+                              </p>
+                           </div>
+                        </div>
+                     ))}
+                  </div>
                </section>
 
                <div className="mb-12 md:mb-16 lg:mb-20">
@@ -1105,7 +1236,10 @@ export default function CarenovaSystemsCaseStudy() {
                         <TrendingUp size={14} className="text-[#00DA99]" />
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Results</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Outcomes & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-4">
+                        By focusing on operational efficiency and user adoption, the redesigned platform achieved significant measurable results for beta facilities.
+                     </p>
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
@@ -1161,13 +1295,15 @@ export default function CarenovaSystemsCaseStudy() {
                            Retrospective
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Lessons <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#EC4899]">Learned</span></h2>
+                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#EC4899]">Learnings</span></h2>
                      <p className="text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         Key takeaways from designing an enterprise-grade healthcare compliance platform.
                      </p>
                   </div>
                   <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                      {[
+                        { title: "Design for the Extremes", desc: "Enterprise tools must work for both the power user (who wants dense data and keyboard shortcuts) and the casual user (who needs guided, simplified workflows)." },
+                        { title: "Terminology Matters", desc: "In healthcare, specific terminology is legally binding. I learned to collaborate closely with domain experts to ensure UI copy matched regulatory standards." },
                         { title: "Balance Complexity with Clarity", desc: "Enterprise users need dense information, but it must be structured perfectly. We learned that progressive disclosure is non-negotiable for compliance data." },
                         { title: "Performance is UX", desc: "When users are managing hundreds of facilities, load times matter. We optimized the dashboard to render key metrics instantly, caching heavier audit logs." }
                      ].map((item, idx) => (
@@ -1195,12 +1331,12 @@ export default function CarenovaSystemsCaseStudy() {
                   </div>
                   <div className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
                      {/* <PremiumPlaceholder aspect="w-full h-full" label="Full Platform Hero Showcase" icon={MonitorPlay} glowColor="#00DA99" /> */}
-                   <Image
-                              src="/images/carenova/CareNova.jpg"
-                              alt="Visual UI"
-                              fill
-                              className="object-cover relative z-10 duration-1000"
-                           />
+                     <Image
+                        src="/images/carenova/CareNova.jpg"
+                        alt="Visual UI"
+                        fill
+                        className="object-cover relative z-10 duration-1000"
+                     />
                   </div>
                </section>
 
@@ -1220,23 +1356,23 @@ export default function CarenovaSystemsCaseStudy() {
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
-                              Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
+                              Let's Build the Next <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Great Product Together</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              Looking for a Product Designer who understands both business strategy and pixel-perfect execution?
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">
-                              {["50+ High-Fidelity Screens", "Complete Design System", "Enterprise Components", "Workflow Prototypes"].map((tag, i) => (
+                              {["Systems Thinking", "Enterprise SaaS", "User-Centric Design", "Business Strategy"].map((tag, i) => (
                                  <span key={i} className="px-4 py-2 bg-white/60 backdrop-blur-md rounded-full text-xs font-bold text-slate-700 shadow-sm border border-slate-200/50 hover:bg-white transition-colors">
                                     <span className="text-[#0D63CC] mr-1">✓</span> {tag}
                                  </span>
                               ))}
                            </div>
 
-                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative">
+                           <Link href="mailto:hello@example.com" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative bg-[#0D63CC]">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10">Open in Figma</span>
+                              <span className="relative z-10">Get in Touch</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>

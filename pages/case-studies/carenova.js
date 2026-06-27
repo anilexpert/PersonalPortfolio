@@ -206,18 +206,59 @@ export default function CarenovaSystemsCaseStudy() {
                            <li>Regulatory reporting consumed significant administrative effort.</li>
                            <li>Communication between caregivers, administrators, and guardians was fragmented.</li>
                         </ul>
-                        <div className="grid grid-cols-1 gap-4 mb-8">
-                           <div className="p-6 glass-card rounded-2xl flex flex-col items-center justify-center text-center border border-rose-500/10">
-                              <span className="text-sm font-bold text-text-primary">Fragmented Systems</span>
-                              <ArrowDown className="my-2 text-rose-500" size={20} />
-                              <span className="text-sm font-bold text-text-primary">Manual Processes</span>
-                              <ArrowDown className="my-2 text-rose-500" size={20} />
-                              <span className="text-sm font-bold text-text-primary">Compliance Risks</span>
-                              <ArrowDown className="my-2 text-rose-500" size={20} />
-                              <span className="text-sm font-bold text-text-primary">Administrative Burden</span>
-                              <ArrowDown className="my-2 text-rose-500" size={20} />
-                              <span className="text-sm font-bold text-rose-500">Reduced Care Quality</span>
-                           </div>
+                        <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8">
+                           {/* Dashed line */}
+                           <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-rose-200 z-0" />
+
+                           {[
+                              { title: "FRAGMENTED", desc: "Systems.", icon: Layers, style: "dashed" },
+                              { title: "MANUAL", desc: "Processes.", icon: ClipboardList, style: "dashed" },
+                              { title: "RISKS", desc: "Compliance.", icon: AlertTriangle, style: "solid" },
+                              { title: "BURDEN", desc: "Administrative.", icon: Clock, style: "solid" },
+                              { title: "QUALITY", desc: "Reduced Care.", icon: Heart, style: "dark" }
+                           ].map((step, j, arr) => {
+                              let circleClasses = "w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative bg-white";
+                              let iconColor = "text-rose-950";
+                              let textColor = "text-rose-950";
+
+                              if (step.style === "dashed") {
+                                 circleClasses += " border-[2px] border-dashed border-rose-300 shadow-sm";
+                                 iconColor = "text-rose-600";
+                                 textColor = "text-rose-900";
+                              } else if (step.style === "solid") {
+                                 circleClasses += " bg-rose-50 border-[2px] border-solid border-rose-500 shadow-md";
+                                 iconColor = "text-rose-600";
+                                 textColor = "text-rose-600";
+                              } else if (step.style === "dark") {
+                                 circleClasses += " !bg-rose-900 border-none shadow-xl";
+                                 iconColor = "text-white";
+                                 textColor = "text-white";
+                              }
+
+                              return (
+                                 <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                    {/* Arrow on line */}
+                                    {j < arr.length - 1 && (
+                                       <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                          <ArrowRight size={20} className="text-rose-300" strokeWidth={2.5} />
+                                       </div>
+                                    )}
+
+                                    {/* Circle Node */}
+                                    <div className={circleClasses}>
+                                       <step.icon size={28} className={`mb-3 ${iconColor}`} strokeWidth={1.5} />
+                                       <span className={`text-[12px] font-bold uppercase tracking-wider leading-tight ${textColor} px-2`}>
+                                          {step.title}
+                                       </span>
+                                    </div>
+
+                                    {/* Description Text */}
+                                    <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                       {step.desc}
+                                    </p>
+                                 </div>
+                              );
+                           })}
                         </div>
                      </div>
                   </div>
@@ -236,8 +277,8 @@ export default function CarenovaSystemsCaseStudy() {
                      <div className="lg:col-span-9">
                         <h2 className="text-4xl font-bold text-text-primary mb-8">Product Goals & <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Success Metrics</span></h2>
 
-                        <div className="w-full glass-card rounded-[24px] overflow-hidden">
-                           <div className="grid grid-cols-2 bg-[#0D63CC]/10 p-6 border-b border-[#0D63CC]/20">
+                        <div className="w-full glass-card rounded-[16px] overflow-hidden">
+                           <div className="grid grid-cols-2 bg-[#0D63CC]/10 px-6 py-3 border-b border-[#0D63CC]/20">
                               <div className="font-bold text-text-primary uppercase tracking-wider text-sm">Goal</div>
                               <div className="font-bold text-text-primary uppercase tracking-wider text-sm">Success Metric</div>
                            </div>
@@ -249,9 +290,9 @@ export default function CarenovaSystemsCaseStudy() {
                                  { goal: "Improve communication", metric: "Unified notifications" },
                                  { goal: "Support scalability", metric: "Multi-facility architecture" }
                               ].map((item, i) => (
-                                 <div key={i} className="grid grid-cols-2 p-6 border-b border-slate-200/50 hover:bg-slate-50/50 transition-colors">
-                                    <div className="text-text-secondary font-medium">{item.goal}</div>
-                                    <div className="text-text-primary font-bold">{item.metric}</div>
+                                 <div key={i} className="grid grid-cols-2 px-6 py-3 border-b border-slate-200/50 hover:bg-slate-50/50 transition-colors">
+                                    <div className="text-text-secondary text-sm font-medium">{item.goal}</div>
+                                    <div className="text-text-primary text-sm font-bold">{item.metric}</div>
                                  </div>
                               ))}
                            </div>
@@ -279,8 +320,8 @@ export default function CarenovaSystemsCaseStudy() {
                               To understand operational challenges and user expectations, research was conducted with multiple user groups across the organization.
                            </p>
 
-                           <div className="space-y-4">
-                              <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">Stakeholders Interviewed</h4>
+                           <div className="space-y-3">
+                              <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-3">Stakeholders Interviewed</h4>
                               {[
                                  { group: "Leadership", roles: "Operators, CMH Agencies", icon: Building2 },
                                  { group: "Administration", roles: "Facility Administrators", icon: Users },
@@ -323,8 +364,8 @@ export default function CarenovaSystemsCaseStudy() {
                         ].map((insight, i) => (
                            <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
-                              <h4 className="text-2xl font-bold text-text-primary mb-4">{insight.title}</h4>
-                              <p className="text-text-secondary font-medium leading-relaxed mb-6">{insight.desc}</p>
+                              <h4 className="text-lg font-bold text-text-primary mb-2">{insight.title}</h4>
+                              <p className="text-text-secondary text-sm font-medium leading-relaxed mb-4">{insight.desc}</p>
 
                               {insight.flow.length > 0 && (
                                  <div className="flex flex-wrap items-center gap-2">
@@ -614,40 +655,95 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
                   </div>
-                  <div className="max-w-6xl mx-auto space-y-8">
-                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#0D63CC]">
-                        <h4 className="text-xl font-bold text-text-primary mb-6">Incident Reporting Flow</h4>
-                        <div className="flex flex-wrap items-center gap-3">
-                           {["Caregiver", "Supervisor Review", "Compliance Review", "CMH Notification", "Guardian Notification"].map((step, i, arr) => (
-                              <div key={i} className="flex items-center gap-3">
-                                 <span className="px-4 py-2 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg text-sm font-bold">{step}</span>
-                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
-                              </div>
-                           ))}
+                  <div className="max-w-6xl mx-auto space-y-10">
+                     {[
+                        {
+                           title: "Incident Reporting Flow",
+                           color: "#0D63CC",
+                           steps: [
+                              { title: "CAREGIVER", desc: "Initial report.", icon: User, style: "dashed" },
+                              { title: "SUPERVISOR", desc: "Review & escalate.", icon: Eye, style: "dashed" },
+                              { title: "COMPLIANCE", desc: "Regulatory check.", icon: ShieldCheck, style: "solid" },
+                              { title: "CMH", desc: "Notify CMH.", icon: Building2, style: "solid" },
+                              { title: "GUARDIAN", desc: "Notify guardian.", icon: Heart, style: "dark" }
+                           ]
+                        },
+                        {
+                           title: "New Resident Admission Flow",
+                           color: "#00DA99",
+                           steps: [
+                              { title: "INQUIRY", desc: "Initial contact.", icon: MessageCircle, style: "dashed" },
+                              { title: "ASSESS", desc: "Health evaluation.", icon: Stethoscope, style: "dashed" },
+                              { title: "APPROVAL", desc: "Sign-off.", icon: CheckCircle2, style: "solid" },
+                              { title: "DOCUMENT", desc: "Required forms.", icon: FileText, style: "solid" },
+                              { title: "ROOM", desc: "Facility assignment.", icon: MapPin, style: "solid" },
+                              { title: "PLAN", desc: "Care plan creation.", icon: Heart, style: "dark" }
+                           ]
+                        },
+                        {
+                           title: "Staff Scheduling Flow",
+                           color: "#8B5CF6",
+                           steps: [
+                              { title: "CREATE", desc: "Draft schedule.", icon: Calendar, style: "dashed" },
+                              { title: "ASSIGN", desc: "Allocate shifts.", icon: Users, style: "dashed" },
+                              { title: "APPROVE", desc: "Manager approval.", icon: CheckCircle2, style: "solid" },
+                              { title: "NOTIFY", desc: "Send alerts.", icon: Bell, style: "solid" },
+                              { title: "ATTEND", desc: "Track attendance.", icon: Clock, style: "dark" }
+                           ]
+                        }
+                     ].map((flow, idx) => (
+                        <div key={idx} className="p-8 md:p-12 glass-card rounded-[32px] border-l-4 shadow-sm" style={{ borderColor: flow.color }}>
+                           <h4 className="text-xl md:text-2xl font-bold mb-12 text-center" style={{ color: flow.color }}>{flow.title}</h4>
+
+                           <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4">
+                              {/* Dashed connector line */}
+                              {/* <div
+                                 className="hidden md:block absolute top-[64px] left-[8%] right-[8%] h-[2px] border-t-[2px] border-dashed z-0 opacity-40"
+                                 style={{ borderColor: flow.color }}
+                              /> */}
+
+                              {flow.steps.map((step, j, arr) => {
+                                 const isDashed = step.style === "dashed";
+                                 const isSolid = step.style === "solid";
+                                 const isDark = step.style === "dark";
+
+                                 return (
+                                    <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                                       {/* Arrow on connector line */}
+                                       {j < arr.length - 1 && (
+                                          <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                             <ArrowRight size={20} style={{ color: flow.color }} className="opacity-50" strokeWidth={2.5} />
+                                          </div>
+                                       )}
+
+                                       {/* Circle Node */}
+                                       <div
+                                          className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                             isSolid ? "border-[2px] border-solid shadow-md" :
+                                                "border-none shadow-xl"
+                                             }`}
+                                          style={{
+                                             borderColor: isDashed || isSolid ? flow.color : 'transparent',
+                                             backgroundColor: isSolid ? `${flow.color}10` : isDark ? flow.color : 'white',
+                                             color: isDark ? 'white' : flow.color,
+                                          }}
+                                       >
+                                          <step.icon size={28} className="mb-3" strokeWidth={1.5} />
+                                          <span className="text-[12px] font-bold uppercase tracking-wider leading-tight px-2">
+                                             {step.title}
+                                          </span>
+                                       </div>
+
+                                       {/* Description Text */}
+                                       <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[130px] mx-auto">
+                                          {step.desc}
+                                       </p>
+                                    </div>
+                                 );
+                              })}
+                           </div>
                         </div>
-                     </div>
-                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#00DA99]">
-                        <h4 className="text-xl font-bold text-text-primary mb-6">New Resident Admission Flow</h4>
-                        <div className="flex flex-wrap items-center gap-3">
-                           {["Inquiry", "Assessment", "Approval", "Documentation", "Room Assignment", "Care Plan"].map((step, i, arr) => (
-                              <div key={i} className="flex items-center gap-3">
-                                 <span className="px-4 py-2 bg-[#00DA99]/10 text-[#00DA99] rounded-lg text-sm font-bold">{step}</span>
-                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-                     <div className="p-8 glass-card rounded-2xl border-l-4 border-[#8B5CF6]">
-                        <h4 className="text-xl font-bold text-text-primary mb-6">Staff Scheduling Flow</h4>
-                        <div className="flex flex-wrap items-center gap-3">
-                           {["Schedule Creation", "Shift Assignment", "Approval", "Notification", "Attendance"].map((step, i, arr) => (
-                              <div key={i} className="flex items-center gap-3">
-                                 <span className="px-4 py-2 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg text-sm font-bold">{step}</span>
-                                 {i < arr.length - 1 && <ArrowRight size={16} className="text-slate-400" />}
-                              </div>
-                           ))}
-                        </div>
-                     </div>
+                     ))}
                   </div>
                </section>
 
@@ -848,7 +944,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </h4>
                         <div className="grid grid-cols-3 gap-4">
                            {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
+                              { bg: 'bg-[#951A1F]', label: 'Primary', hex: '#951A1F' },
                               { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
                               { bg: 'bg-[#282360]', label: 'Depth', hex: '#282360' },
                               { bg: 'bg-[#10B981]', label: 'Success', hex: '#10B981' },

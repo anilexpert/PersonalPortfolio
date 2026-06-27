@@ -87,7 +87,7 @@ export default function SpendoraCaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 leading-tight text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-text-primary">
                         SPENDORA™
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl leading-snug">
@@ -143,72 +143,6 @@ export default function SpendoraCaseStudy() {
                   </div>
                </motion.section>
 
-               {/* ── 2. PROJECT SNAPSHOT ───────────────────────────────────────────────────── */}
-               <section className="mb-12 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
-
-                  <div className="text-center mb-10 md:mb-12 relative z-10">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Overview</span>
-                     </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Snapshot</span></h2>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
-                     <motion.div {...fadeIn} className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:border-white transition-all duration-300 p-5 md:p-6 group relative overflow-hidden">
-                        <div className="absolute -top-16 -right-16 w-32 h-32 blur-[40px] rounded-full opacity-10 bg-[#0D63CC] group-hover:opacity-20 transition-all duration-500" />
-                        <div className="flex items-center gap-3 mb-4 relative z-10">
-                           <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#0D63CC]/10 text-[#0D63CC]">
-                              <Users size={18} />
-                           </div>
-                           <h4 className="font-bold text-lg text-text-primary">Team</h4>
-                        </div>
-                        <ul className="space-y-2 relative z-10">
-                           {["Product Manager", "Lead Product Designer (My Role)", "2 Frontend Engineers", "Backend Engineer", "QA Engineer", "Business Stakeholders"].map((member, i) => (
-                              <li key={i} className="flex items-center gap-3 text-[13px] font-medium text-text-secondary">
-                                 <div className="w-1.5 h-1.5 rounded-full bg-[#0D63CC]/50" />
-                                 {member}
-                              </li>
-                           ))}
-                        </ul>
-                     </motion.div>
-
-                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:border-white transition-all duration-300 p-5 md:p-6 group relative overflow-hidden">
-                        <div className="absolute -top-16 -right-16 w-32 h-32 blur-[40px] rounded-full opacity-10 bg-[#00DA99] group-hover:opacity-20 transition-all duration-500" />
-                        <div className="flex items-center gap-3 mb-4 relative z-10">
-                           <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#00DA99]/10 text-[#00DA99]">
-                              <CheckCircle2 size={18} />
-                           </div>
-                           <h4 className="font-bold text-lg text-text-primary">Responsibilities</h4>
-                        </div>
-                        <div className="flex flex-wrap gap-2 relative z-10">
-                           {["Product Strategy", "UX Research", "Stakeholder Workshops", "Information Architecture", "Journey Mapping", "Wireframing", "UX/UI Design", "Design System", "Interactive Prototyping", "Usability Testing"].map((item, i) => (
-                              <span key={i} className="px-2.5 py-1 bg-white rounded-md border border-slate-100 text-[11px] font-medium text-slate-600 shadow-sm">
-                                 {item}
-                              </span>
-                           ))}
-                        </div>
-                     </motion.div>
-
-                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:border-white transition-all duration-300 p-5 md:p-6 group relative overflow-hidden">
-                        <div className="absolute -top-16 -right-16 w-32 h-32 blur-[40px] rounded-full opacity-10 bg-[#8B5CF6] group-hover:opacity-20 transition-all duration-500" />
-                        <div className="flex items-center gap-3 mb-4 relative z-10">
-                           <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#8B5CF6]/10 text-[#8B5CF6]">
-                              <PenTool size={18} />
-                           </div>
-                           <h4 className="font-bold text-lg text-text-primary">Tools</h4>
-                        </div>
-                        <div className="flex flex-wrap gap-2 relative z-10">
-                           {["Figma", "FigJam", "Photoshop"].map((tool, i) => (
-                              <div key={i} className="px-4 py-2 bg-white rounded-xl border border-slate-100 shadow-sm text-[13px] font-bold text-slate-600 text-center flex-1 min-w-[80px]">
-                                 {tool}
-                              </div>
-                           ))}
-                        </div>
-                     </motion.div>
-                  </div>
-               </section>
-
                {/* ── 3. THE PROBLEM ───────────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
@@ -219,7 +153,7 @@ export default function SpendoraCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-6">
                            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Problem</span>
                         </h2>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
@@ -329,6 +263,67 @@ export default function SpendoraCaseStudy() {
                   </div>
                </section>
 
+               {/* ── 4.5 DESIGN PROCESS FLOW ─────────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 pt-8">
+                  <div className="text-center mb-16">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                        <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Process</span>
+                     </div>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Process</span></h2>
+                  </div>
+                  <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 max-w-5xl mx-auto">
+                     {/* Dashed line */}
+                     <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-[#CBD5E1] z-0" />
+
+                     {[
+                        { title: "DISCOVER", desc: "Stakeholder interviews.", icon: Search, style: "dashed" },
+                        { title: "DEFINE", desc: "Requirements & workflows.", icon: Target, style: "dashed" },
+                        { title: "ARCHITECT", desc: "Information architecture.", icon: Layers, style: "solid" },
+                        { title: "DESIGN", desc: "Wireframes & UI.", icon: PenTool, style: "solid" },
+                        { title: "VALIDATE", desc: "Feedback iterations.", icon: CheckCircle2, style: "dark" }
+                     ].map((step, j, arr) => {
+                        let circleClasses = "w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative bg-white";
+                        let iconColor = "text-[#1E1B4B]";
+                        let textColor = "text-[#1E1B4B]";
+
+                        if (step.style === "dashed") {
+                           circleClasses += " border-[2px] border-dashed border-[#CBD5E1] shadow-sm";
+                        } else if (step.style === "solid") {
+                           circleClasses += " bg-[#F4F9FF] border-[2px] border-solid border-[#0D63CC] shadow-md";
+                           iconColor = "text-[#0D63CC]";
+                        } else if (step.style === "dark") {
+                           circleClasses += " !bg-[#1E1B4B] border-none shadow-xl";
+                           iconColor = "text-white";
+                           textColor = "text-white";
+                        }
+
+                        return (
+                           <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
+                              {/* Arrow on line */}
+                              {j < arr.length - 1 && (
+                                 <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-4 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                    <ArrowRight size={20} className="text-[#94A3B8]" strokeWidth={2.5} />
+                                 </div>
+                              )}
+
+                              {/* Circle Node */}
+                              <div className={circleClasses}>
+                                 <step.icon size={28} className={`mb-3 ${iconColor}`} strokeWidth={1.5} />
+                                 <span className={`text-[12px] font-bold uppercase tracking-wider leading-tight ${textColor} px-2`}>
+                                    {step.title}
+                                 </span>
+                              </div>
+
+                              {/* Description Text */}
+                              <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
+                                 {step.desc}
+                              </p>
+                           </div>
+                        )
+                     })}
+                  </div>
+               </section>
+
                {/* ── 5. RESEARCH & DISCOVERY ─────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
@@ -340,32 +335,60 @@ export default function SpendoraCaseStudy() {
                            <Search size={14} className="text-primary" />
                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Discovery</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-3">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Discovery</span></h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-3">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Discovery</span></h2>
                         <p className="text-text-secondary font-medium max-w-3xl text-base">To better understand users' financial behaviors, motivations, and pain points, research was conducted across students, professionals, and financially independent users.</p>
                      </div>
 
-                     <div className="relative z-10 mb-10 flex flex-wrap gap-3 justify-center md:justify-start">
-                        {
-                           [
-                              { name: "User Interviews", icon: MessageCircle, color: "#0D63CC" },
-                              { name: "Competitive Analysis", icon: Target, color: "#00DA99" },
-                              { name: "Affinity Mapping", icon: Layers, color: "#8B5CF6" },
-                              { name: "User Journey Map", icon: MapPin, color: "#EC4899" },
-                              { name: "Empathy Map", icon: Heart, color: "#F59E0B" }
-                           ].map((activity, i) => (
-                              <div
-                                 key={i}
-                                 className="px-4 py-2.5 bg-white/80 rounded-xl border border-white/80 shadow-sm text-[13px] font-semibold text-slate-700 flex items-center gap-2.5"
-                              >
-                                 <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${activity.color}15`, color: activity.color }}>
-                                    <activity.icon size={14} strokeWidth={2.5} />
-                                 </div>
-                                 {activity.name}
+                     <div className="relative z-10 mb-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                        {[
+                           {
+                              name: "User Interviews",
+                              icon: MessageCircle,
+                              color: "#0D63CC",
+                              desc: "Conducted 1:1 interviews with college students and recent grads to uncover financial anxieties and goals."
+                           },
+                           {
+                              name: "Competitive Analysis",
+                              icon: Target,
+                              color: "#00DA99",
+                              desc: "Evaluated existing financial apps, identifying a lack of future-focused planning for young adults."
+                           },
+                           {
+                              name: "Affinity Mapping",
+                              icon: Layers,
+                              color: "#8B5CF6",
+                              desc: "Synthesized qualitative insights into key themes: personalized guidance, real-world benchmarks, and clear forecasting."
+                           },
+                           {
+                              name: "User Journey Map",
+                              icon: MapPin,
+                              color: "#EC4899",
+                              desc: "Mapped the emotional trajectory from academic planning to real-world financial independence."
+                           },
+                           {
+                              name: "Empathy Map",
+                              icon: Heart,
+                              color: "#F59E0B",
+                              desc: "Documented what users say, think, do, and feel regarding their personal finances and career paths."
+                           },
+                           {
+                              name: "Surveys & Analysis",
+                              icon: FileText,
+                              color: "#14B8A6",
+                              desc: "Distributed surveys to a broader demographic to validate qualitative findings and prioritize features."
+                           }
+                        ].map((activity, i) => (
+                           <div key={i} className="bg-white/80 rounded-2xl p-6 border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 group">
+                              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110" style={{ backgroundColor: `${activity.color}15`, color: activity.color }}>
+                                 <activity.icon size={22} strokeWidth={2} />
                               </div>
-                           ))}
+                              <h4 className="font-bold text-[15px] text-text-primary mb-2">{activity.name}</h4>
+                              <p className="text-[13px] text-text-secondary leading-relaxed font-medium">{activity.desc}</p>
+                           </div>
+                        ))}
                      </div>
 
-                     <h3 className="text-lg font-bold text-text-primary mb-6 relative z-10">Key Research Findings</h3>
+                     <h3 className="text-lg lg:text-xl font-bold text-text-primary mb-6 relative z-10">Key Research Findings</h3>
                      <div className="grid md:grid-cols-2 gap-5 relative z-10">
                         {[
                            { num: "01", title: "Connecting aspirations with reality", desc: "Students struggle to connect career aspirations with future financial realities.", quote: "I know what career I want, but I have no idea if I can actually afford the lifestyle I want." },
@@ -380,8 +403,8 @@ export default function SpendoraCaseStudy() {
                            >
                               <div className="absolute -top-8 -right-8 w-24 h-24 bg-[#0D63CC]/5 rounded-full blur-[20px]" />
                               <div className="relative z-10">
-                                 <span className="text-[48px] font-black text-slate-100 block mb-2 leading-none">{insight.num}</span>
-                                 <h4 className="font-bold text-lg text-text-primary mb-3 leading-snug">{insight.title}</h4>
+                                 <span className="text-[48px] font-bold text-slate-100 block mb-2 leading-none">{insight.num}</span>
+                                 <h4 className="font-bold text-lg text-text-primary mb-3 leading-snug"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">{insight.title}</span></h4>
                                  <p className="text-[13px] text-text-secondary font-medium leading-relaxed mb-4">{insight.desc}</p>
                               </div>
                               {insight.quote && (
@@ -408,14 +431,14 @@ export default function SpendoraCaseStudy() {
                               <Target size={14} className="text-primary" />
                               <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Opportunity</span>
                            </div>
-                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
+                           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">
                               Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Opportunity</span>
                            </h2>
                         </div>
                         <div className="lg:col-span-8">
                            <div className="p-6 md:p-8 bg-white/80 rounded-2xl border border-white/80 shadow-[0_4px_20px_rgb(0,0,0,0.02)] relative">
                               <div className="absolute -top-4 -left-4 text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99] font-serif leading-none">"</div>
-                              <h3 className="text-xl md:text-2xl font-bold text-text-primary leading-relaxed relative z-10">
+                              <h3 className="text-lg md:text-xl font-bold text-text-primary leading-relaxed relative z-10">
                                  The opportunity was to create a unified financial platform that combines expense tracking, financial education, AI-driven recommendations, and personalized insights to help users build healthier financial habits.
                               </h3>
                            </div>
@@ -423,10 +446,10 @@ export default function SpendoraCaseStudy() {
                      </div>
 
                      <div className="mt-12 md:mt-16 text-center max-w-5xl mx-auto relative z-10">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
+                        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-text-primary mb-4">
                            Create a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] via-[#0D63CC] to-[#8B5CF6]">future-focused financial literacy ecosystem</span>
                         </h2>
-                        <p className="text-lg md:text-xl text-text-secondary font-medium max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-base text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
                            Empowering students to confidently navigate adulthood through personalized financial planning and real-world scenario simulation.
                         </p>
                      </div>
@@ -441,7 +464,7 @@ export default function SpendoraCaseStudy() {
                            <Lightbulb size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Solution</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">
                            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Approach</span>
                         </h2>
                      </div>
@@ -460,7 +483,7 @@ export default function SpendoraCaseStudy() {
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
 
                      <div className="text-center mb-10 relative z-10">
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Core Solution <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Pillars</span></h3>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Core Solution <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Pillars</span></h3>
                      </div>
                      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 relative z-10">
                         {[
@@ -495,7 +518,7 @@ export default function SpendoraCaseStudy() {
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                   </div>
                   <div className="grid lg:grid-cols-3 gap-5">
                      {[
@@ -562,7 +585,7 @@ export default function SpendoraCaseStudy() {
 
                            <div className="space-y-4 relative z-10">
                               <div className="p-5 rounded-2xl bg-[#0D63CC]/5 border border-[#0D63CC]/20">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
+                                 <h5 className="font-bold text-[10px] uppercase tracking-[0.2em] text-[#0D63CC] mb-3 flex items-center gap-2">
                                     <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
@@ -575,7 +598,7 @@ export default function SpendoraCaseStudy() {
                               </div>
 
                               <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
-                                 <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
+                                 <h5 className="font-bold text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
                                     <Activity size={13} strokeWidth={3} /> Frustrations
                                  </h5>
                                  <div className="flex flex-wrap gap-2">
@@ -598,12 +621,12 @@ export default function SpendoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
                   </div>
 
                   <div className="hidden lg:block relative max-w-6xl mx-auto">
                      <div className="absolute top-16 left-12 right-12 h-[2px] bg-gradient-to-r from-[#0D63CC] via-[#00DA99] to-[#8B5CF6] opacity-20 z-0" />
-                     <div className="grid grid-cols-5 gap-4">
+                     <div className="grid grid-cols-6 gap-4">
                         {[
                            { num: "01", title: "Financial Awareness", desc: "User realizes the need for better financial management.", icon: Eye, color: "#0D63CC" },
                            { num: "02", title: "Track Expenses", desc: "Connects accounts and starts categorizing spending.", icon: Wallet, color: "#0D63CC" },
@@ -656,7 +679,7 @@ export default function SpendoraCaseStudy() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Architecture</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-black text-text-primary">Structuring the Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-text-primary">Structuring the Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="bg-white/80 p-5 md:p-6 rounded-2xl font-mono text-sm leading-loose border border-white/80 shadow-sm text-slate-700">
@@ -711,7 +734,7 @@ export default function SpendoraCaseStudy() {
                            <Target size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Strategy</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Principles</span></h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Principles</span></h2>
                      </div>
 
                      <div className="relative z-10 grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
@@ -731,7 +754,7 @@ export default function SpendoraCaseStudy() {
                               </div>
                               <div>
                                  <div className="flex items-center gap-2.5 mb-2">
-                                    <span className="text-lg font-black opacity-70" style={{ color: principle.color }}>{principle.num}</span>
+                                    <span className="text-lg font-bold opacity-70" style={{ color: principle.color }}>{principle.num}</span>
                                     <h4 className="font-bold text-lg text-text-primary">{principle.title}</h4>
                                  </div>
                                  <p className="text-[13px] text-text-secondary leading-relaxed font-medium">{principle.desc}</p>
@@ -806,10 +829,10 @@ export default function SpendoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Core Value</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                      {[
                         { num: "01", title: "Smart Expense Tracking", desc: "Automatically organize and visualize spending patterns for better financial awareness.", outcome: "Students understand career possibilities and earning potential.", color: "#00DA99", image: "/images/spendora/CareerClusterExplorerThumnail.png" },
                         { num: "02", title: "Goal-Based Planning", desc: "Help users set, monitor, and achieve financial goals through personalized recommendations.", outcome: "Improves awareness of career affordability.", color: "#0D63CC", image: "/images/spendora/OccupationSalaryExplorerThumnail.png" },
@@ -852,7 +875,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 14. DESIGN SYSTEM ───────────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Building a Scalable FinTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Design System</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Building a Scalable FinTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
                         A scalable design system was created to support multiple audiences and maintain consistency across the platform.
                      </p>
@@ -952,7 +975,7 @@ export default function SpendoraCaseStudy() {
                         <Layout size={14} className="text-secondary" />
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Acquisition</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Landing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">Landing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-3xl mx-auto text-lg leading-relaxed">Two distinct acquisition experiences were designed sharing a unified platform while adapting messaging to specific audience needs.</p>
                   </div>
 
@@ -1008,7 +1031,7 @@ export default function SpendoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Evolution</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">
                         From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Final Experience</span>
                      </h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mt-3 text-[15px]">
@@ -1054,7 +1077,7 @@ export default function SpendoraCaseStudy() {
                            <Settings size={14} className="text-secondary" />
                            <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Validation</span>
                         </div>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Testing</span></h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Testing</span></h2>
                         <p className="text-text-secondary font-medium max-w-3xl mx-auto mt-4 text-base leading-relaxed">
                            Usability testing sessions were conducted to validate assumptions, identify friction points, and refine interactions before final delivery.
                         </p>
@@ -1093,7 +1116,7 @@ export default function SpendoraCaseStudy() {
                         <TrendingUp size={14} className="text-primary" />
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Results</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Impact</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-5 max-w-6xl mx-auto">
@@ -1103,7 +1126,7 @@ export default function SpendoraCaseStudy() {
                            <div className="w-14 h-14 bg-gradient-to-br from-[#0D63CC] to-blue-600 rounded-2xl flex items-center justify-center shadow-md shadow-[#0D63CC]/20">
                               <User className="text-white" size={28} />
                            </div>
-                           <h3 className="text-2xl font-black text-text-primary leading-tight">Expected <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> Outcomes</span></h3>
+                           <h3 className="text-2xl font-bold text-text-primary leading-tight">Expected <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> Outcomes</span></h3>
                         </div>
                         <div className="grid sm:grid-cols-2 gap-3 relative z-10">
                            {[
@@ -1126,7 +1149,7 @@ export default function SpendoraCaseStudy() {
                            <div className="w-14 h-14 bg-gradient-to-br from-[#00DA99] to-emerald-500 rounded-2xl flex items-center justify-center shadow-md shadow-[#00DA99]/20">
                               <Rocket className="text-white" size={28} />
                            </div>
-                           <h3 className="text-2xl font-black text-text-primary leading-tight">Institutional <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
+                           <h3 className="text-2xl font-bold text-text-primary leading-tight">Institutional <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
                         </div>
                         <div className="grid sm:grid-cols-2 gap-3 relative z-10">
                            {[
@@ -1152,7 +1175,7 @@ export default function SpendoraCaseStudy() {
                         <Lightbulb size={14} className="text-secondary" />
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Takeaways</span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span></h2>
                      <p className="text-text-secondary font-medium max-w-3xl mx-auto mt-4 text-base leading-relaxed">
                         Designing financial products requires balancing analytical depth with simplicity. The biggest challenge was presenting complex financial information in a way that remains understandable, actionable, and trustworthy.
                      </p>
@@ -1177,7 +1200,7 @@ export default function SpendoraCaseStudy() {
                                  <learning.icon size={22} strokeWidth={2} style={{ color: learning.color }} />
                               </div>
                               <div>
-                                 <h4 className="font-black text-xl text-text-primary mb-2 leading-tight">{learning.title}</h4>
+                                 <h4 className="font-bold text-xl text-text-primary mb-2 leading-tight">{learning.title}</h4>
                                  <p className="text-[13px] text-text-secondary font-medium leading-relaxed">{learning.desc}</p>
                               </div>
                            </div>
@@ -1189,10 +1212,10 @@ export default function SpendoraCaseStudy() {
                {/* ── 19. FUTURE ROADMAP ─────────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-10 text-center">
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary">Future <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Roadmap</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">Future <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Roadmap</span></h2>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-8xl mx-auto">
                      {[
                         { phase: "Phase 01", items: ["Open Banking Integrations", "Automated Account Connections"], color: "#0D63CC", icon: Globe },
                         { phase: "Phase 02", items: ["Investment Recommendations", "Wealth Management"], color: "#00DA99", icon: TrendingUp },
@@ -1236,7 +1259,7 @@ export default function SpendoraCaseStudy() {
                            <Award size={28} className="text-[#00DA99]" />
                         </div>
 
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-8">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-8">
                            Final <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Reflection</span>
                         </h2>
 
@@ -1258,7 +1281,7 @@ export default function SpendoraCaseStudy() {
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">UI Screens</span></h2>
                   </div>
 
                   <div className="grid gap-6">
@@ -1330,7 +1353,7 @@ export default function SpendoraCaseStudy() {
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/supercampus" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                     <h3 className="text-4xl md:text-5xl font-bold text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         SuperCampus
                      </h3>
                      <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">

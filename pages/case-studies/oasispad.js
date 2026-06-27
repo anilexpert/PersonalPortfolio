@@ -609,22 +609,43 @@ export default function OasisPadCaseStudy() {
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
                   </div>
-                  <div className="max-w-6xl mx-auto space-y-6">
+                  <div className="max-w-8xl mx-auto space-y-12">
                      {[
                         { title: "Resident Admission Flow", flow: ["Referral", "Assessment", "Admission", "Documentation", "Care Plan"] },
                         { title: "Clinical Documentation Flow", flow: ["Patient Visit", "Notes", "Review", "Approval", "Storage"] },
                         { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
                         { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
                      ].map((uf, i) => (
-                        <div key={i} className="glass-card p-6 rounded-2xl border border-slate-200/50">
-                           <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">{uf.title}</h4>
-                           <div className="flex flex-wrap items-center gap-2 md:gap-4">
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-lg relative overflow-hidden bg-white/60">
+                           <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-12 text-center md:text-left">{uf.title}</h4>
+                           
+                           <div className="relative py-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-4">
+                              {/* Decorative multi-color curved wave connecting line */}
+                              <svg className="hidden md:block absolute top-1/2 left-[5%] right-[5%] w-[90%] h-24 -translate-y-1/2 z-0 opacity-70" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                 <defs>
+                                    <linearGradient id={`flowGrad-${i}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                                       <stop offset="0%" stopColor="#0D63CC" />
+                                       <stop offset="50%" stopColor="#00DA99" />
+                                       <stop offset="100%" stopColor="#8B5CF6" />
+                                    </linearGradient>
+                                 </defs>
+                                 <path d="M0,50 Q12.5,20 25,50 T50,50 T75,50 T100,50" fill="none" stroke={`url(#flowGrad-${i})`} strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+                              </svg>
+                              
+                              <svg className="md:hidden absolute top-[5%] bottom-[5%] left-1/2 w-24 h-[90%] -translate-x-1/2 z-0 opacity-70" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                 <defs>
+                                    <linearGradient id={`flowGradMob-${i}`} x1="0%" y1="0%" x2="0%" y2="100%">
+                                       <stop offset="0%" stopColor="#0D63CC" />
+                                       <stop offset="50%" stopColor="#00DA99" />
+                                       <stop offset="100%" stopColor="#8B5CF6" />
+                                    </linearGradient>
+                                 </defs>
+                                 <path d="M50,0 Q20,12.5 50,25 T50,50 T50,75 T50,100" fill="none" stroke={`url(#flowGradMob-${i})`} strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+                              </svg>
+                              
                               {uf.flow.map((step, idx) => (
-                                 <div key={idx} className="flex items-center gap-2 md:gap-4">
-                                    <div className="px-4 py-2 bg-white rounded-xl text-sm font-medium text-text-secondary border border-slate-100 shadow-sm">
-                                       {step}
-                                    </div>
-                                    {idx < uf.flow.length - 1 && <ArrowRight size={16} className="text-slate-300" />}
+                                 <div key={idx} className={`relative z-10 w-36 h-36 md:w-44 md:h-44 rounded-full glass-card border-4 border-white shadow-[0_15px_30px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${idx % 2 === 0 ? 'md:-translate-y-6' : 'md:translate-y-6'}`}>
+                                    <span className="font-bold text-slate-800 text-sm md:text-base text-center px-4">{step}</span>
                                  </div>
                               ))}
                            </div>

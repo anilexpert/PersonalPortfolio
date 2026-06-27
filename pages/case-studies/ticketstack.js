@@ -107,31 +107,37 @@ export default function TicketStackCaseStudy() {
                         Enterprise Retail <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        TicketStack™ is a modern retail ticketing platform that enables businesses to create, distribute, manage, sell, and track tickets across multiple sales channels.
+                        TicketStack™ is a retail ticketing and distribution platform designed to centralize inventory management, campaign operations, sales visibility, and retail partner coordination through a unified enterprise experience
                      </motion.p>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal mt-4">
                         The legacy platform had strong operational capabilities but suffered from usability issues, fragmented workflows, outdated interfaces, and poor visibility into ticket performance.
                      </motion.p>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        The redesign initiative focused on transforming TicketStack™ into a scalable SaaS product capable of supporting enterprise-level ticketing operations while improving efficiency, adoption, and revenue generation.
-                     </motion.p>
+
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Category</p>
-                        <p className="font-bold text-sm text-text-primary">Enterprise B2B SaaS</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Role</p>
+                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Product Strategy, UX Research, IA, UX/UI Design</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Industry</p>
+                        <p className="font-bold text-sm text-text-primary">Retail SaaS</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
+                        <p className="font-bold text-sm text-text-primary">Web Application</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
                         <p className="font-bold text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Responsive Web SaaS Platform</p>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Team</p>
+                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers</p>
+                     </div>
+                     <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Responsibilities</p>
+                        <p className="font-bold text-sm text-text-primary">Research, UX Strategy, UI Design, Prototyping, Design System</p>
                      </div>
                   </motion.div>
                </section>
@@ -223,9 +229,9 @@ export default function TicketStackCaseStudy() {
                   </div>
 
                   {/* Visualization of emotional impact */}
-                  <div className="max-w-4xl mx-auto glass-card rounded-[32px] p-8 md:p-12 relative overflow-hidden bg-white/60">
+                  <div className="max-w-9xl mx-auto glass-card rounded-[32px] p-8 md:p-12 relative overflow-hidden bg-white/60">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-rose-500/5 blur-[100px] rounded-full pointer-events-none" />
-                     <h3 className="text-xl font-bold text-center mb-8 text-text-primary">The Impact of Operational Friction</h3>
+                     <h3 className="text-xl md:text-4xl font-bold text-center mb-8 text-text-primary">The Impact of Operational Friction</h3>
                      <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center relative z-10 flex-wrap">
                         {[
                            { label: "Disconnected Systems", color: "text-rose-500" },
@@ -235,11 +241,11 @@ export default function TicketStackCaseStudy() {
                            { label: "Reduced Business Performance", color: "text-slate-800", bold: true }
                         ].map((step, i) => (
                            <div key={i} className="flex flex-col md:flex-row items-center gap-4">
-                              <div className={`text-sm md:text-base ${step.bold ? 'font-black' : 'font-semibold'} ${step.color} bg-white/80 px-4 py-3 rounded-xl shadow-sm border border-slate-100`}>
+                              <div className={`text-sm  ${step.bold ? 'font-bold' : 'font-semibold'} ${step.color} bg-white/80 px-3 py-2 rounded-xl shadow-sm border border-slate-100`}>
                                  {step.label}
                               </div>
                               {i < 4 && (
-                                 <ArrowRight size={20} className="hidden md:block text-slate-300 flex-shrink-0" />
+                                 <ArrowRight size={16} className="hidden md:block text-slate-300 flex-shrink-0" />
                               )}
                               {i < 4 && (
                                  <div className="md:hidden text-slate-300 py-1">↓</div>
@@ -262,7 +268,7 @@ export default function TicketStackCaseStudy() {
                         <span className="w-8 h-[2px] bg-slate-200" />
                      </h3>
 
-                     <p className="text-2xl md:text-3xl lg:text-4xl font-black leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
+                     <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-snug md:leading-tight relative z-10 max-w-4xl mx-auto text-text-primary">
                         Build a centralized enterprise platform that empowers retail organizations to manage campaigns, inventory, distribution, and performance analytics from a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">single operational hub.</span>
                      </p>
                   </motion.div>
@@ -803,23 +809,23 @@ export default function TicketStackCaseStudy() {
                   <div className="text-center mb-16">
                      <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-9xl mx-auto">
-                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-100 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
-                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
-                        <span className="font-bold text-slate-600">Low Fidelity</span>
-                     </div>
-                     <ArrowRight size={24} className="hidden md:block text-slate-300 flex-shrink-0" />
-                     <div className="md:hidden text-slate-300 py-2">↓</div>
-                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-200 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
-                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
-                        <span className="font-bold text-slate-600">Mid Fidelity</span>
-                     </div>
-                     <ArrowRight size={24} className="hidden md:block text-slate-300 flex-shrink-0" />
-                     <div className="md:hidden text-slate-300 py-2">↓</div>
-                     <div className={`aspect-[4/3] w-full md:w-1/3 rounded-2xl bg-slate-300 border border-slate-200 flex flex-col items-center justify-center p-6 shadow-sm`}>
-                        <PenTool className="w-8 h-8 text-slate-400 mb-3" />
-                        <span className="font-bold text-slate-600">Final UI</span>
-                     </div>
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                     {/* Decorative dashed connecting line */}
+                     <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
+                     <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
+
+                     {[
+                        { label: "Low Fidelity", icon: PenTool, color: "text-slate-500", bg: "bg-slate-100", offset: "md:-translate-y-8" },
+                        { label: "Mid Fidelity", icon: Layout, color: "text-[#0D63CC]", bg: "bg-blue-50", offset: "md:translate-y-8" },
+                        { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
+                     ].map((step, i) => (
+                        <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
+                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                              <step.icon className={`w-8 h-8 ${step.color}`} />
+                           </div>
+                           <span className="font-bold text-slate-800 text-lg">{step.label}</span>
+                        </div>
+                     ))}
                   </div>
                </section>
 
@@ -952,12 +958,13 @@ export default function TicketStackCaseStudy() {
                            { title: "Faster campaign management", icon: Zap, color: "#00DA99" },
                            { title: "Centralized retail workflows", icon: Layers, color: "#8B5CF6" },
                            { title: "Better inventory control", icon: Target, color: "#F59E0B" },
-                           { title: "Reduced operational overhead", icon: ShieldCheck, color: "#EC4899" }
+                           { title: "Reduced operational overhead", icon: ShieldCheck, color: "#EC4899" },
+                           { title: "Data-driven decision making", icon: BarChart2, color: "#38BDF8" }
                         ].map((outcome, i) => (
-                           <div key={i} className="p-8 bg-white/80 backdrop-blur-xl rounded-[24px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
+                           <div key={i} className="p-8 glass-card bg-white/60 rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
                               <div className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" style={{ backgroundColor: outcome.color }} />
-                              <outcome.icon size={32} className="mb-4" style={{ color: outcome.color }} />
-                              <h3 className="text-lg font-bold text-text-primary tracking-tight leading-snug">{outcome.title}</h3>
+                              <outcome.icon size={32} className="mb-4 transition-transform duration-500 group-hover:scale-110" style={{ color: outcome.color }} />
+                              <h3 className="text-lg font-bold text-text-primary tracking-tight leading-snug relative z-10">{outcome.title}</h3>
                            </div>
                         ))}
                      </div>
@@ -1075,9 +1082,10 @@ export default function TicketStackCaseStudy() {
                            <p className="text-base md:text-lg text-text-secondary mb-8 text-center max-w-xl font-medium leading-relaxed">
                               I help startups and businesses design scalable digital products that simplify complexity and improve operational performance.
                            </p>
-                           <Link href="mailto:hello@example.com" className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-slate-800 transition-colors shadow-md group">
-                              <span>Let's Discuss Your Product</span>
-                              <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                           <Link href="mailto:hello@example.com" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                              <span className="relative z-10 text-white">Let's Discuss Your Product</span>
+                              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>
                      </motion.div>

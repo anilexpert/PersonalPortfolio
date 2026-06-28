@@ -6,7 +6,7 @@ import {
   ArrowLeft, Workflow, Settings, Users, CheckSquare, Zap, 
   Network, LayoutDashboard, GitPullRequest, Repeat, Layers, 
   Briefcase, Kanban, Activity, ArrowRight, User, Quote,
-  CheckCircle2, Box, Cpu
+  CheckCircle2, Box, Cpu, Target
 } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -35,7 +35,7 @@ const staggerContainer = {
 const GlassCard = ({ children, className = "", delay = 0, color }) => (
   <motion.div
     {...fadeInUp(delay)}
-    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative ${className}`}
+    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative h-full ${className}`}
   >
     {color && (
       <>
@@ -174,12 +174,12 @@ export default function EnterpriseWorkflowService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
-                { title: "End-to-end workflow analysis", desc: "Identify bottlenecks and optimize operational journeys.", color: "#00DA99", icon: GitPullRequest },
-                { title: "Multi-role system design", desc: "For complex user environments and varied permission levels.", color: "#0D63CC", icon: Users },
-                { title: "Task flow simplification", desc: "And process restructuring to reduce friction and errors.", color: "#8B5CF6", icon: Repeat },
-                { title: "Automation-driven UX", desc: "Smart interfaces designed for maximum operational efficiency.", color: "#F43F5E", icon: Zap },
-                { title: "Cross-system integration", desc: "Experience design that unifies disparate tools seamlessly.", color: "#F59E0B", icon: Network },
-                { title: "Scalable enterprise workflows", desc: "Process design that supports massive organizational growth.", color: "#0EA5E9", icon: Layers }
+                { title: "End-to-End Workflow Analysis", desc: "Analyze operational processes to identify inefficiencies, bottlenecks, and optimization opportunities.", color: "#00DA99", icon: GitPullRequest },
+                { title: "Multi-Role System Design", desc: "Design experiences tailored to administrators, managers, operators, and cross-functional teams.", color: "#0D63CC", icon: Users },
+                { title: "Task Flow Simplification", desc: "Simplify complex workflows by reducing unnecessary steps, cognitive load, and user friction.", color: "#8B5CF6", icon: Repeat },
+                { title: "Automation-Driven UX", desc: "Create intelligent workflows that automate repetitive tasks and improve operational efficiency.", color: "#F43F5E", icon: Zap },
+                { title: "Cross-System Integration", desc: "Design seamless experiences across interconnected systems, tools, and platforms.", color: "#F59E0B", icon: Network },
+                { title: "Scalable Enterprise Workflows", desc: "Build workflow frameworks that remain efficient as organizations grow and evolve.", color: "#0EA5E9", icon: Layers }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
                   <div
@@ -208,18 +208,15 @@ export default function EnterpriseWorkflowService() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
                 </div>
-                <p className="text-lg md:text-xl text-text-primary leading-relaxed font-bold mb-8">
-                  Enterprise systems don’t struggle because of lack of features—they struggle because of complex, fragmented workflows.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
+                  Complex Operations Require Better Workflow Design
+                </h3>
                 <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
                   <p>
-                    This service focuses on simplifying and optimizing how work actually gets done inside your product. We analyze existing processes, identify bottlenecks, and redesign workflows to be faster, clearer, and more efficient.
-                  </p>
-                  <p>
-                    From internal tools and admin panels to large-scale SaaS platforms, we design systems that support multiple users, roles, and dependencies without overwhelming the experience.
+                    Enterprise systems often become difficult to use as products grow. Multiple roles, disconnected processes, and increasing operational complexity create inefficiencies that impact productivity.
                   </p>
                   <p className="text-text-primary font-bold">
-                    The goal is to transform complex operations into structured, intuitive workflows that teams can rely on daily.
+                    My approach focuses on simplifying operational workflows, reducing friction, and creating structured experiences that teams can use confidently every day.
                   </p>
                 </div>
               </motion.div>
@@ -315,21 +312,21 @@ export default function EnterpriseWorkflowService() {
               className="mb-16 md:mb-24"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
-                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Experience</span>
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Core Capabilities</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                Workflow Design — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">What We Deliver</span>
+                Core Workflow <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Optimization Capabilities</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
-                { num: "01", title: "Workflow Mapping & Optimization", desc: "Identify inefficiencies and redesign task flows.", highlight: false, badge: false },
-                { num: "02", title: "Multi-Role Experience Design", desc: "Structured flows for admins, managers, and users.", highlight: false, badge: true },
-                { num: "03", title: "Process Simplification", desc: "Reduce unnecessary steps and cognitive load.", highlight: true, badge: false },
-                { num: "04", title: "Automation-Driven UX", desc: "Streamline repetitive tasks with smart automation.", highlight: false, badge: false },
-                { num: "05", title: "System Integration UX", desc: "Seamless interactions across tools and platforms.", highlight: false, badge: false },
-                { num: "06", title: "Operational Dashboard Design", desc: "Track workflows, tasks, and system performance.", highlight: false, badge: false }
+                { num: "01", title: "Workflow Mapping & Optimization", desc: "Analyze existing workflows and redesign them to improve efficiency, usability, and productivity.", highlight: false, badge: false },
+                { num: "02", title: "Multi-Role Experience Design", desc: "Create role-specific experiences that support administrators, managers, and operational teams.", highlight: false, badge: true },
+                { num: "03", title: "Process Simplification", desc: "Eliminate unnecessary complexity and streamline operational journeys.", highlight: true, badge: false },
+                { num: "04", title: "Automation-Driven UX", desc: "Design workflows that intelligently automate repetitive tasks and reduce manual effort.", highlight: false, badge: false },
+                { num: "05", title: "System Integration UX", desc: "Create seamless interactions across multiple products, tools, and business systems.", highlight: false, badge: false },
+                { num: "06", title: "Operational Dashboard Design", desc: "Surface operational insights, tasks, and performance indicators that support daily decision-making.", highlight: false, badge: false }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -387,10 +384,10 @@ export default function EnterpriseWorkflowService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Efficiency First", desc: "Focused on improving real operational workflows.", icon: Activity, color: "#00DA99" },
-                { title: "Built for Complexity", desc: "Handles enterprise-scale systems and dependencies.", icon: Network, color: "#0D63CC" },
-                { title: "User-Centered Operations", desc: "Designed around how teams actually work.", icon: Users, color: "#8B5CF6" },
-                { title: "Scalable Process Design", desc: "Grows with your organization and product.", icon: LayoutDashboard, color: "#F43F5E" }
+                { title: "Efficiency First", desc: "Optimize workflows to improve speed, accuracy, and operational productivity.", icon: Activity, color: "#00DA99" },
+                { title: "Built for Complexity", desc: "Design experiences capable of handling multi-role systems and interconnected processes.", icon: Network, color: "#0D63CC" },
+                { title: "User-Centered Operations", desc: "Create workflows based on how teams actually work in real-world environments.", icon: Users, color: "#8B5CF6" },
+                { title: "Scalable Process Design", desc: "Build operational experiences that support long-term organizational growth.", icon: LayoutDashboard, color: "#F43F5E" }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
                   <div
@@ -409,6 +406,157 @@ export default function EnterpriseWorkflowService() {
 
         <GlowDivider />
 
+        {/* ── NEW SECTION — PROCESS ───────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                My Workflow Optimization <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Process</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discover", desc: "Research users, teams, processes, and operational challenges." },
+                { step: "02", title: "Analyze", desc: "Identify bottlenecks, redundancies, dependencies, and inefficiencies." },
+                { step: "03", title: "Map", desc: "Create workflow diagrams, journey maps, and system relationships." },
+                { step: "04", title: "Optimize", desc: "Redesign workflows to reduce friction and improve efficiency." },
+                { step: "05", title: "Validate", desc: "Test workflows with stakeholders and refine based on feedback." }
+              ].map((phase, i) => (
+                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                  {i < 4 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                  )}
+                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
+                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
+                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — COMMON CHALLENGES ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Challenges</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Common Workflow Challenges <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Solve</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Teams struggle with inefficient processes", icon: Users },
+                { title: "Operational tasks require too many steps", icon: Layers },
+                { title: "Users switch between multiple systems", icon: Repeat },
+                { title: "Workflows are inconsistent across teams", icon: Network },
+                { title: "Manual processes slow productivity", icon: Activity },
+                { title: "Enterprise systems feel overwhelming", icon: Target }
+              ].map((item, i) => (
+                <GlassCard key={i} delay={i * 0.1} color="#0D63CC" className="p-6 text-left flex items-center gap-4">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `#0D63CC15` }}
+                  >
+                    <item.icon size={20} style={{ color: "#0D63CC" }} />
+                  </div>
+                  <h4 className="text-lg font-bold text-text-primary relative z-10">{item.title}</h4>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — DELIVERABLES ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Outputs</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Deliverables <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">You'll Receive</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "Workflow Maps",
+                "User Journey Maps",
+                "Task Flow Diagrams",
+                "Process Optimization Recommendations",
+                "Information Architecture",
+                "Wireframes",
+                "Operational Dashboards",
+                "UX Documentation"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group h-full"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — ENTERPRISE DOMAINS I SUPPORT ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative">
+          <div className="max-w-5xl mx-auto text-center">
+             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Enterprise Domains I Support</p>
+                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                  <span>Healthcare Operations</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Enterprise SaaS</span>
+                  <span className="text-primary/40">•</span>
+                  <span>HR & Workforce Systems</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Compliance Platforms</span>
+                  <span className="text-primary/40">•</span>
+                  <span>FinTech Operations</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Internal Business Tools</span>
+                </div>
+             </motion.div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
         {/* ── SECTION 7 — CLIENT IMPACT (TESTIMONIAL) ─────────────────────── */}
         <section className="py-8 md:py-12 px-6 bg-slate-900/[0.02]">
           <div className="max-w-5xl mx-auto">
@@ -422,15 +570,15 @@ export default function EnterpriseWorkflowService() {
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
                 <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
-                  "Our internal workflows were slow and confusing. After redesigning the system, teams completed tasks faster, errors reduced, and overall productivity improved significantly."
+                  "Anil redesigned our operational workflows and significantly reduced process complexity. Teams completed tasks faster and collaboration improved across departments."
                 </p>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-white shadow-xl">
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Operations Lead</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Enterprise Platform</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Operations Director</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Enterprise SaaS Company</p>
                   </div>
                 </div>
               </div>
@@ -448,20 +596,21 @@ export default function EnterpriseWorkflowService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
-                Why It <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Matters</span>
+                Business Impact of <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Workflow Optimization</span>
               </h2>
               <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
-                In enterprise systems, better workflows = better business outcomes.
+                Efficient workflows improve productivity, reduce operational costs, and enable organizations to scale without increasing complexity.
               </motion.p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
               {[
-                "Teams complete tasks faster and with fewer errors",
-                "Complex processes become simple and structured",
-                "Productivity improves across departments",
+                "Teams complete tasks faster",
+                "Errors and rework decrease",
                 "Operational costs are reduced",
-                "Systems scale without adding friction"
+                "Cross-functional collaboration improves",
+                "Enterprise systems become easier to adopt",
+                "Organizations scale more efficiently"
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -473,6 +622,92 @@ export default function EnterpriseWorkflowService() {
                   </div>
                   <span className="text-[16px] md:text-[18px] font-bold text-text-primary opacity-80 group-hover:opacity-100 transition-opacity">{text}</span>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — WORKFLOW TYPES ─────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Expertise</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Workflow Types <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "Operational Workflows",
+                "Approval Workflows",
+                "Compliance Workflows",
+                "Healthcare Workflows",
+                "HR & Workforce Workflows",
+                "Incident Management Flows",
+                "Automation Workflows",
+                "Multi-Step Enterprise Journeys"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group h-full"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary text-left">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — RELATED CASE STUDIES ─────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Portfolio</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { name: "Carenova", link: "/case-studies/carenova" },
+                { name: "OasisPad", link: "/case-studies/oasispad" },
+                { name: "TicketStack", link: "/case-studies/ticketstack" },
+                { name: "SuperCampus", link: "/case-studies/supercampus" }
+              ].map((study, i) => (
+                <Link key={i} href={study.link} className="block h-full">
+                  <motion.div
+                    {...fadeInUp(i * 0.1)}
+                    className="bg-white/40 border border-white/60 p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-lg group h-full cursor-pointer"
+                  >
+                    <Briefcase size={28} className="text-primary opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    <span className="font-bold text-[16px] text-text-primary group-hover:text-primary transition-colors">{study.name}</span>
+                    <span className="text-[11px] font-bold text-text-secondary uppercase tracking-wider flex items-center gap-1 group-hover:text-secondary transition-colors">
+                      View Study <ArrowLeft className="rotate-180 w-3 h-3" />
+                    </span>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -499,18 +734,24 @@ export default function EnterpriseWorkflowService() {
                 }}
               />
 
-              <div className="max-w-2xl relative z-10 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.1] mb-6">
-                  Let’s turn complex operations into <br className="hidden lg:block" />
-                  <span className="text-primary">seamless</span> and <span className="text-secondary">efficient</span> workflows.
+                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
+                  Need to simplify complex operations, improve team productivity, or redesign inefficient workflows?
                 </h3>
-                <p className="text-text-secondary text-sm font-medium">Ready to streamline your enterprise system and empower your team?</p>
+                <p className="text-text-secondary text-sm md:text-base font-medium">
+                  Let's create enterprise experiences that teams can use with confidence.
+                </p>
               </div>
 
-              <Link href="#contact" className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center gap-3 border-0 cursor-pointer">
-                Let’s Work Together
-                <ArrowLeft className="rotate-180" size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8 md:mt-0 shrink-0">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 border-0 cursor-pointer">
+                  Book a Discovery Call
+                </Link>
+                <Link href="/contact" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 transition-all duration-300 shadow-md whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 cursor-pointer">
+                  Start a Project
+                  <ArrowLeft className="rotate-180" size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

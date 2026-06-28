@@ -35,7 +35,7 @@ const staggerContainer = {
 const GlassCard = ({ children, className = "", delay = 0, color }) => (
   <motion.div
     {...fadeInUp(delay)}
-    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative ${className}`}
+    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative h-full ${className}`}
   >
     {color && (
       <>
@@ -245,12 +245,12 @@ export default function ProductStrategyService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
-                { title: "End-to-end product strategy", desc: "Aligned with business outcomes and market realities.", color: "#00DA99", icon: Target },
-                { title: "UX architecture", desc: "Structured frameworks for complex, multi-feature platforms.", color: "#0D63CC", icon: Network },
-                { title: "User journey mapping", desc: "And flow optimization to ensure seamless navigation.", color: "#8B5CF6", icon: Map },
-                { title: "Feature prioritization", desc: "Based on impact, usability, and technical feasibility.", color: "#F43F5E", icon: ListChecks },
-                { title: "Information architecture", desc: "For clarity and scalability as your platform grows.", color: "#F59E0B", icon: GitMerge },
-                { title: "Cross-functional alignment", desc: "Between product, design, and engineering teams.", color: "#0EA5E9", icon: Users }
+                { title: "End-to-End Product Strategy", desc: "Define product vision, business goals, and strategic roadmaps that support sustainable growth.", color: "#00DA99", icon: Target },
+                { title: "UX Architecture", desc: "Structure complex digital ecosystems through scalable workflows, navigation systems, and interaction models.", color: "#0D63CC", icon: Network },
+                { title: "User Journey Mapping", desc: "Visualize complete user experiences to identify friction points and uncover optimization opportunities.", color: "#8B5CF6", icon: Map },
+                { title: "Feature Prioritization", desc: "Prioritize features based on user value, business impact, and technical feasibility.", color: "#F43F5E", icon: ListChecks },
+                { title: "Information Architecture", desc: "Organize content, features, and workflows into intuitive structures that improve usability and scalability.", color: "#F59E0B", icon: GitMerge },
+                { title: "Cross-Functional Alignment", desc: "Align business, product, design, and engineering teams around a shared product vision.", color: "#0EA5E9", icon: Users }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
                   <div
@@ -279,18 +279,15 @@ export default function ProductStrategyService() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
                 </div>
-                <p className="text-lg md:text-xl text-text-primary leading-relaxed font-bold mb-8">
-                  Most products don’t fail due to lack of effort—they fail due to lack of clarity, structure, and strategic direction.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
+                  Why Products Lose Momentum
+                </h3>
                 <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
                   <p>
-                    This service focuses on defining how your product should work before it is designed. We bring structure to complexity by aligning user needs, business goals, and technical feasibility into a clear product direction.
-                  </p>
-                  <p>
-                    From defining core workflows to organizing information architecture and user journeys, we create a foundation that ensures every feature, interaction, and decision is intentional.
+                    Many products struggle not because of poor ideas, but because their underlying structure lacks clarity. As products evolve, workflows become fragmented, navigation grows complex, and teams lose alignment.
                   </p>
                   <p className="text-text-primary font-bold">
-                    Instead of designing isolated screens, we design connected systems and experiences that scale with your product.
+                    My approach focuses on building strategic product foundations through systems thinking, information architecture, and experience design—ensuring products remain scalable, intuitive, and aligned with business objectives.
                   </p>
                 </div>
               </motion.div>
@@ -361,18 +358,18 @@ export default function ProductStrategyService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Experience</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                Product Strategy — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">What We Deliver</span>
+                Core Product Strategy <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Capabilities</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
-                { num: "01", title: "Product Discovery & Strategy", desc: "Define product vision, goals, and success metrics.", highlight: false, badge: false },
-                { num: "02", title: "UX Architecture & System Design", desc: "Structure features, flows, and relationships across the product.", highlight: false, badge: true },
-                { num: "03", title: "User Journey Mapping", desc: "Visualizing end-to-end experiences across touchpoints.", highlight: false, badge: false },
-                { num: "04", title: "Information Architecture", desc: "Organizing content and features for clarity and usability.", highlight: true, badge: false },
-                { num: "05", title: "Feature Prioritization Framework", desc: "Focus on high-impact, user-driven features.", highlight: false, badge: false },
-                { num: "06", title: "Workflow & Interaction Mapping", desc: "Designing logical, efficient user paths.", highlight: false, badge: false }
+                { num: "01", title: "Product Discovery & Strategy", desc: "Identify opportunities, define product direction, and establish measurable success criteria.", highlight: false, badge: false },
+                { num: "02", title: "UX Architecture & System Design", desc: "Structure workflows, relationships, and navigation patterns across complex ecosystems.", highlight: false, badge: true },
+                { num: "03", title: "User Journey Mapping", desc: "Map end-to-end experiences to reveal pain points and improve customer outcomes.", highlight: false, badge: false },
+                { num: "04", title: "Information Architecture", desc: "Create intuitive content structures that simplify navigation and support growth.", highlight: true, badge: false },
+                { num: "05", title: "Feature Prioritization Framework", desc: "Focus product investments on high-impact opportunities that maximize business value.", highlight: false, badge: false },
+                { num: "06", title: "Workflow & Interaction Mapping", desc: "Design efficient user paths that reduce friction and improve task completion.", highlight: false, badge: false }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -430,10 +427,10 @@ export default function ProductStrategyService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Clarity Before Execution", desc: "Strong foundation before design and development.", icon: Lightbulb, color: "#00DA99" },
-                { title: "System-Level Thinking", desc: "Focus on how everything connects—not just screens.", icon: Network, color: "#0D63CC" },
-                { title: "Business + User Alignment", desc: "Strategy driven by outcomes, not assumptions.", icon: Target, color: "#8B5CF6" },
-                { title: "Scalable Product Structure", desc: "Built for growth, iteration, and complexity.", icon: Layers, color: "#F43F5E" }
+                { title: "Clarity Before Execution", desc: "Establish clear product direction before investing in design and development.", icon: Lightbulb, color: "#00DA99" },
+                { title: "System-Level Thinking", desc: "Design scalable product foundations that support long-term growth.", icon: Network, color: "#0D63CC" },
+                { title: "Business + User Alignment", desc: "Balance business objectives with genuine user needs.", icon: Target, color: "#8B5CF6" },
+                { title: "Scalable Product Structure", desc: "Build flexible architectures capable of evolving as products expand.", icon: Layers, color: "#F43F5E" }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
                   <div
@@ -445,6 +442,173 @@ export default function ProductStrategyService() {
                   <h4 className="text-lg font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
                   <p className="text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
                 </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — PROCESS ───────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                My Product Strategy <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Process</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discover", desc: "Research users, stakeholders, business goals, and market opportunities." },
+                { step: "02", title: "Define", desc: "Clarify problems, align priorities, and establish product direction." },
+                { step: "03", title: "Architect", desc: "Structure information, workflows, and interaction models." },
+                { step: "04", title: "Validate", desc: "Test assumptions, refine concepts, and gather feedback." },
+                { step: "05", title: "Scale", desc: "Create scalable foundations that support long-term product evolution." }
+              ].map((phase, i) => (
+                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                  {i < 4 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                  )}
+                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
+                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
+                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — STRATEGIC DELIVERABLES ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Outcomes</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Strategic Deliverables <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">You'll Receive</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "Product Vision Framework",
+                "Information Architecture",
+                "User Journey Maps",
+                "Feature Prioritization Matrix",
+                "Workflow Diagrams",
+                "UX Strategy Recommendations",
+                "Product Roadmap Recommendations",
+                "Wireframes & Flows"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — CHALLENGES SOLVED ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Solutions</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Common Product Challenges <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Solve</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Product complexity is increasing.", icon: Crosshair },
+                { title: "Users struggle to complete tasks.", icon: Target },
+                { title: "Teams lack alignment.", icon: Users },
+                { title: "Feature requests are overwhelming priorities.", icon: LineChart },
+                { title: "Product navigation feels confusing.", icon: Map },
+                { title: "Growth is creating UX inconsistencies.", icon: TrendingUp }
+              ].map((item, i) => (
+                <GlassCard key={i} delay={i * 0.1} color="#0D63CC" className="p-6 text-left flex items-start gap-4">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `#0D63CC15` }}
+                  >
+                    <item.icon size={20} style={{ color: "#0D63CC" }} />
+                  </div>
+                  <h4 className="text-lg font-bold text-text-primary mt-2 relative z-10">{item.title}</h4>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — WHO THIS IS FOR ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Target Audience</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Who This Service <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Is For</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+              {[
+                "SaaS Startups",
+                "Enterprise Platforms",
+                "Healthcare Products",
+                "AI Products",
+                "Product Teams Scaling Rapidly",
+                "Founders Building MVPs"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group justify-center text-center"
+                >
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -465,7 +629,7 @@ export default function ProductStrategyService() {
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
                 <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
-                  "We had ideas, features, and a roadmap—but no clear structure. After defining the product architecture, everything became aligned, and execution became faster and more focused."
+                  "Anil helped us bring structure to a highly complex product ecosystem. His strategic approach improved alignment across teams and accelerated delivery."
                 </p>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-white shadow-xl">
@@ -491,20 +655,21 @@ export default function ProductStrategyService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
-                Why It <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Matters</span>
+                Business Impact of <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Product Strategy</span>
               </h2>
               <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
-                A well-structured product is the difference between confusion and clarity.
+                Strong product strategy creates alignment, reduces uncertainty, and enables products to scale with confidence.
               </motion.p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
               {[
-                "Teams build faster with clear direction",
-                "Users navigate effortlessly across the product",
-                "Features connect into meaningful workflows",
+                "Teams move faster with shared direction",
+                "Features connect into meaningful experiences",
+                "Users navigate more intuitively",
                 "Product decisions become data-driven",
-                "The product scales without breaking structure"
+                "Complexity remains manageable as products grow",
+                "Products scale without sacrificing usability"
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -516,6 +681,73 @@ export default function ProductStrategyService() {
                   </div>
                   <span className="text-[16px] md:text-[18px] font-bold text-text-primary opacity-80 group-hover:opacity-100 transition-opacity">{text}</span>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative">
+          <div className="max-w-5xl mx-auto text-center">
+             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                  <span>Healthcare</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Enterprise SaaS</span>
+                  <span className="text-primary/40">•</span>
+                  <span>FinTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>EdTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>AI Platforms</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Analytics Products</span>
+                </div>
+             </motion.div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — RELATED CASE STUDIES ─────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Portfolio</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { name: "Carenova", link: "/case-studies/carenova" },
+                { name: "OasisPad", link: "/case-studies/oasispad" },
+                { name: "MarketVisionAI", link: "/case-studies/marketvisionai" },
+                { name: "TicketStack", link: "/case-studies/ticketstack" }
+              ].map((study, i) => (
+                <Link key={i} href={study.link} className="block">
+                  <motion.div
+                    {...fadeInUp(i * 0.1)}
+                    className="bg-white/40 border border-white/60 p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-lg group h-full cursor-pointer"
+                  >
+                    <Box size={28} className="text-primary opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    <span className="font-bold text-[16px] text-text-primary group-hover:text-primary transition-colors">{study.name}</span>
+                    <span className="text-[11px] font-bold text-text-secondary uppercase tracking-wider flex items-center gap-1 group-hover:text-secondary transition-colors">
+                      View Study <ArrowLeft className="rotate-180 w-3 h-3" />
+                    </span>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -542,18 +774,24 @@ export default function ProductStrategyService() {
                 }}
               />
 
-              <div className="max-w-2xl relative z-10 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.1] mb-6">
-                  Let’s define a product structure <br className="hidden lg:block" />
-                  built for <span className="text-primary">clarity</span> and <span className="text-secondary">scale.</span>
+                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
+                  Building a new product or scaling an existing platform?
                 </h3>
-                <p className="text-text-secondary text-sm font-medium">Ready to align your business goals with a proven experience architecture?</p>
+                <p className="text-text-secondary text-sm md:text-base font-medium">
+                  Let's create strategic foundations that align business goals with user needs.
+                </p>
               </div>
 
-              <Link href="#contact" className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center gap-3 border-0 cursor-pointer">
-                Let’s Work Together
-                <ArrowLeft className="rotate-180" size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8 md:mt-0 shrink-0">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 border-0 cursor-pointer">
+                  Book a Discovery Call
+                </Link>
+                <Link href="/contact" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 transition-all duration-300 shadow-md whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 cursor-pointer">
+                  Start a Project
+                  <ArrowLeft className="rotate-180" size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

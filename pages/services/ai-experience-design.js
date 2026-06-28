@@ -36,7 +36,7 @@ const staggerContainer = {
 const GlassCard = ({ children, className = "", delay = 0, color }) => (
   <motion.div
     {...fadeInUp(delay)}
-    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative ${className}`}
+    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative h-full ${className}`}
   >
     {color && (
       <>
@@ -174,12 +174,12 @@ export default function AIDesignService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
-                { title: "AI-powered UX", desc: "Tailored to real product workflows and the specific behaviors of actual users.", color: "#00DA99", icon: Sparkles },
-                { title: "Smart automation flows", desc: "Reduce manual effort through intelligently designed automation that streamlines repetitive tasks.", color: "#0D63CC", icon: Workflow },
-                { title: "Predictive & recommendation interfaces", desc: "Designs that surface the right information at the right moment—anticipating what users need next.", color: "#8B5CF6", icon: Target },
-                { title: "Explainable AI patterns", desc: "Interaction patterns built for transparency and trust, so users always understand what the system is doing.", color: "#F43F5E", icon: Eye },
-                { title: "Data-informed UX decisions", desc: "Behavioral insights and product data shape every design decision for measurable impact.", color: "#F59E0B", icon: Database },
-                { title: "Scalable AI design systems", desc: "Modular, future-ready design systems built to grow with your AI product over the long term.", color: "#0EA5E9", icon: Layers }
+                { title: "AI-Powered UX", desc: "Design intuitive AI experiences that guide users through intelligent, context-aware interactions.", color: "#00DA99", icon: Sparkles },
+                { title: "Smart Automation Flows", desc: "Streamline repetitive workflows through intelligent automation that improves efficiency and reduces manual effort.", color: "#0D63CC", icon: Workflow },
+                { title: "Predictive & Recommendation Interfaces", desc: "Design recommendation systems that surface timely, relevant insights to support better decision-making.", color: "#8B5CF6", icon: Target },
+                { title: "Explainable AI Patterns", desc: "Build transparent AI experiences that clearly communicate system behavior, recommendations, and confidence.", color: "#F43F5E", icon: Eye },
+                { title: "Data-Informed UX Decisions", desc: "Leverage analytics, research, and behavioral insights to design experiences grounded in real user needs.", color: "#F59E0B", icon: Database },
+                { title: "Scalable AI Design Systems", desc: "Create reusable AI interaction patterns and design foundations that scale across products and teams.", color: "#0EA5E9", icon: Layers }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
                   <div
@@ -208,18 +208,18 @@ export default function AIDesignService() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
                 </div>
-                <p className="text-lg md:text-xl text-text-primary leading-relaxed font-bold mb-8">
-                  Most AI products fail not because of weak technology—but because users don't understand or trust what the system is doing.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
+                  Why AI Products Fail — And How Design Solves It
+                </h3>
                 <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
                   <p>
-                    This service focuses on turning complex AI capabilities into clear, usable, and meaningful product experiences. Instead of exposing raw intelligence, we design structured interactions where AI feels like a natural extension of the user's workflow.
+                    Many AI products fail not because the technology is weak, but because users struggle to understand, trust, or effectively interact with intelligent systems.
                   </p>
                   <p>
-                    From recommendation engines to intelligent dashboards and automated decision flows, every interaction is crafted to reduce friction, increase clarity, and guide users toward better outcomes.
+                    Successful AI experiences require more than sophisticated models. They require thoughtful interaction design, transparency, clear feedback, and workflows that align with human behavior.
                   </p>
                   <p className="text-text-primary font-bold">
-                    The result is not just a smarter product—but a product that users can actually use, trust, and rely on.
+                    My approach focuses on designing AI experiences that users understand, trust, and confidently adopt.
                   </p>
                 </div>
               </motion.div>
@@ -264,21 +264,21 @@ export default function AIDesignService() {
               className="mb-16 md:mb-24"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
-                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Experience</span>
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Core Capabilities</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                AI Experience — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">What You Get</span>
+                Core AI Product <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Capabilities</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
-                { num: "01", title: "AI UX Strategy", desc: "Aligning intelligence with real user problems and product goals.", highlight: false, badge: false },
-                { num: "02", title: "Human–AI Interaction Design", desc: "Designing feedback loops, states, and interactions that feel natural.", highlight: false, badge: false },
-                { num: "03", title: "Predictive Experience Design", desc: "Interfaces that anticipate needs instead of reacting late.", highlight: false, badge: false },
-                { num: "04", title: "Explainable AI UX", desc: "Making AI outputs transparent, interpretable, and trustworthy.", highlight: true, badge: false },
-                { num: "05", title: "Recommendation Systems UX", desc: "Designing smart suggestions that feel relevant—not intrusive.", highlight: false, badge: true },
-                { num: "06", title: "Automation & Workflow Design", desc: "Streamlining complex multi-step processes into efficient flows.", highlight: false, badge: false }
+                { num: "01", title: "AI UX Strategy", desc: "Define product opportunities, AI capabilities, and user-centered interaction models.", highlight: false, badge: false },
+                { num: "02", title: "Human-AI Interaction Design", desc: "Design intuitive interactions that balance automation with human control.", highlight: false, badge: false },
+                { num: "03", title: "Predictive Experience Design", desc: "Create experiences that proactively surface insights and recommendations.", highlight: false, badge: false },
+                { num: "04", title: "Explainable AI", desc: "Improve transparency through understandable recommendations, confidence indicators, and feedback loops.", highlight: true, badge: false },
+                { num: "05", title: "Recommendation Systems UX", desc: "Design recommendation experiences that drive engagement while maintaining trust.", highlight: false, badge: true },
+                { num: "06", title: "Automation & Workflow Design", desc: "Transform complex operational processes into efficient AI-assisted workflows.", highlight: false, badge: false }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -336,10 +336,10 @@ export default function AIDesignService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Clarity over Complexity", desc: "AI is simplified into usable, structured experiences that don't overwhelm.", icon: Zap, color: "#00DA99" },
-                { title: "Trust by Design", desc: "Users understand why AI makes decisions, building lasting confidence.", icon: Shield, color: "#0D63CC" },
-                { title: "Built for Real Systems", desc: "Designed for SaaS, enterprise, and data-heavy platforms at scale.", icon: Layers, color: "#8B5CF6" },
-                { title: "Impact-Focused", desc: "Improves adoption, efficiency, and decision quality across teams.", icon: Target, color: "#F43F5E" }
+                { title: "Clarity Over Complexity", desc: "Transform sophisticated AI capabilities into intuitive user experiences.", icon: Zap, color: "#00DA99" },
+                { title: "Trust by Design", desc: "Increase user confidence through transparency, explainability, and clear system feedback.", icon: Shield, color: "#0D63CC" },
+                { title: "Built for Real Workflows", desc: "Design AI experiences that integrate naturally into existing operational processes.", icon: Layers, color: "#8B5CF6" },
+                { title: "Business Outcome Focused", desc: "Ensure AI initiatives deliver measurable value for both users and organizations.", icon: Target, color: "#F43F5E" }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
                   <div
@@ -371,15 +371,15 @@ export default function AIDesignService() {
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
                 <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
-                  "We had powerful AI features, but low adoption. After redesigning the experience, users actually started relying on it daily. The difference was clarity and trust."
+                  "Anil helped us simplify our AI workflows and transform complex capabilities into an experience our users immediately understood."
                 </p>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-white shadow-xl">
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Product Manager</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">AI SaaS Platform</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Representative Client Feedback</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Enterprise AI Platform</p>
                   </div>
                 </div>
               </div>
@@ -394,23 +394,24 @@ export default function AIDesignService() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
-                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Business Impact</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
-                Why It <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Matters</span>
+                Business Impact of Effective <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">AI Experience Design</span>
               </h2>
               <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
-                AI doesn’t create value on its own—experience does. A powerful algorithm is useless if it causes confusion or cognitive overload.
+                Effective AI design ensures intelligent capabilities translate into meaningful user outcomes and measurable business value.
               </motion.p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
               {[
-                "Turn data into actionable decisions",
+                "Transform data into actionable insights",
+                "Increase product adoption and engagement",
+                "Improve user trust and confidence",
                 "Reduce cognitive overload",
-                "Increase adoption & user confidence",
-                "Enable faster workflows",
-                "Create competitive advantage"
+                "Accelerate operational efficiency",
+                "Create competitive differentiation"
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -442,22 +443,25 @@ export default function AIDesignService() {
               className="text-center mb-10"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
-                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Focus Areas</span>
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Experience Areas</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                Example AI <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Experience Areas</span>
+                AI Experiences <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
-                { title: "Intelligent Dashboards", icon: LayoutDashboard, color: "#00DA99" },
-                { title: "Prediction & Forecasting", icon: TrendingUp, color: "#0D63CC" },
-                { title: "Smart Recommendations", icon: Target, color: "#8B5CF6" },
-                { title: "Automated Workflows", icon: Workflow, color: "#F43F5E" },
-                { title: "Explainable Insights", icon: Eye, color: "#F59E0B" }
+                { title: "AI Copilots", icon: Brain, color: "#00DA99" },
+                { title: "Intelligent Dashboards", icon: LayoutDashboard, color: "#0D63CC" },
+                { title: "Recommendation Engines", icon: Target, color: "#8B5CF6" },
+                { title: "Predictive Analytics", icon: TrendingUp, color: "#F43F5E" },
+                { title: "Workflow Automation", icon: Workflow, color: "#F59E0B" },
+                { title: "Explainable AI", icon: Eye, color: "#0EA5E9" },
+                { title: "Conversational AI", icon: MessageCircle, color: "#10B981" },
+                { title: "Decision Support Systems", icon: Lightbulb, color: "#6366F1" }
               ].map((area, i) => (
-                <GlassCard key={i} delay={i * 0.1} color={area.color} className="p-6 text-center group">
+                <GlassCard key={i} delay={i * 0.05} color={area.color} className="p-6 text-center group">
                   <div className="aspect-square w-full rounded-2xl bg-slate-50 mb-6 flex items-center justify-center relative overflow-hidden border border-slate-100 transition-all duration-500">
                     <area.icon size={48} strokeWidth={1.5} style={{ color: area.color }} className="relative z-10 group-hover:scale-110 transition-transform duration-500" />
                   </div>
@@ -470,7 +474,116 @@ export default function AIDesignService() {
 
         <GlowDivider />
 
-        {/* ── SECTION 10 — CTA ────────────────────────────────────────────── */}
+        {/* ── SECTION 9 — AI PRODUCT DESIGN PROCESS ───────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                AI Product Design <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Process</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discover", desc: "Identify business goals, users, and AI opportunities." },
+                { step: "02", title: "Define", desc: "Map user journeys, workflows, and AI interactions." },
+                { step: "03", title: "Design", desc: "Create transparent, human-centered experiences." },
+                { step: "04", title: "Validate", desc: "Test assumptions, usability, and trust patterns." },
+                { step: "05", title: "Scale", desc: "Build reusable AI interaction systems." }
+              ].map((phase, i) => (
+                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                  {i < 4 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                  )}
+                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
+                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
+                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── SECTION 10 — TYPES OF AI PRODUCTS ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Product Types</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Types of AI Products <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Help Design</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "AI SaaS Platforms",
+                "Enterprise AI Applications",
+                "AI Copilots",
+                "Predictive Analytics Platforms",
+                "Recommendation Systems",
+                "Workflow Automation Platforms",
+                "AI Dashboards",
+                "Healthcare AI Systems"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── SECTION 11 — SOCIAL PROOF ───────────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative">
+          <div className="max-w-5xl mx-auto text-center">
+             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Trusted Across Complex Domains</p>
+                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                  <span>Healthcare</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Enterprise SaaS</span>
+                  <span className="text-primary/40">•</span>
+                  <span>FinTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>EdTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Analytics</span>
+                  <span className="text-primary/40">•</span>
+                  <span>AI</span>
+                </div>
+             </motion.div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── SECTION 12 — CTA ────────────────────────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -489,18 +602,24 @@ export default function AIDesignService() {
                 }}
               />
 
-              <div className="max-w-2xl relative z-10 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.1] mb-6">
-                  Let’s design AI experiences <br className="hidden lg:block" />
-                  users <span className="text-primary">trust</span> and businesses <span className="text-secondary">rely on.</span>
+                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
+                  Building an AI product, intelligent workflow, or recommendation platform?
                 </h3>
-                <p className="text-text-secondary text-sm font-medium">Ready to transform your AI vision into a clear, usable product ecosystem?</p>
+                <p className="text-text-secondary text-sm md:text-base font-medium">
+                  Let's create experiences that users trust, understand, and rely on.
+                </p>
               </div>
 
-              <Link href="#contact" className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center gap-3 border-0 cursor-pointer">
-                Let’s Work Together
-                <ArrowLeft className="rotate-180" size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8 md:mt-0 shrink-0">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 border-0 cursor-pointer">
+                  Book a Discovery Call
+                </Link>
+                <Link href="/contact" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 transition-all duration-300 shadow-md whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 cursor-pointer">
+                  Start a Project
+                  <ArrowLeft className="rotate-180" size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

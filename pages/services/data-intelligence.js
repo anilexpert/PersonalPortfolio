@@ -34,7 +34,7 @@ const staggerContainer = {
 const GlassCard = ({ children, className = "", delay = 0, color }) => (
   <motion.div
     {...fadeInUp(delay)}
-    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative ${className}`}
+    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative h-full ${className}`}
   >
     {color && (
       <>
@@ -192,12 +192,12 @@ export default function DataIntelligenceService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
-                { title: "Data-rich dashboard UX", desc: "Tailored to complex business workflows and reporting needs.", color: "#00DA99", icon: LayoutDashboard },
-                { title: "Information hierarchy", desc: "Structurally organizing complex datasets for rapid comprehension.", color: "#0D63CC", icon: ListFilter },
-                { title: "Real-time analytics", desc: "And interactive visualization design that updates as business moves.", color: "#8B5CF6", icon: Activity },
-                { title: "KPI-focused layouts", desc: "Designed strictly for quick, confident decision-making.", color: "#F43F5E", icon: Target },
-                { title: "Predictive UI patterns", desc: "Insight-driven components that alert users to anomalies and trends.", color: "#F59E0B", icon: LineChart },
-                { title: "Scalable data systems", desc: "Design systems built for evolving products and growing data sources.", color: "#0EA5E9", icon: Database }
+                { title: "Data-Rich Dashboard UX", desc: "Design intuitive dashboards that simplify complex business data and improve decision-making.", color: "#00DA99", icon: LayoutDashboard },
+                { title: "Information Hierarchy", desc: "Organize information strategically so users can quickly identify what matters most.", color: "#0D63CC", icon: ListFilter },
+                { title: "Real-Time Analytics", desc: "Create dynamic interfaces that surface live metrics and operational insights as conditions change.", color: "#8B5CF6", icon: Activity },
+                { title: "KPI-Focused Layouts", desc: "Design clear dashboard structures centered around critical business metrics and outcomes.", color: "#F43F5E", icon: Target },
+                { title: "Predictive UI Patterns", desc: "Surface trends, forecasts, anomalies, and recommendations that support proactive decisions.", color: "#F59E0B", icon: LineChart },
+                { title: "Scalable Data Systems", desc: "Build dashboard frameworks capable of growing alongside products, users, and datasets.", color: "#0EA5E9", icon: Database }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
                   <div
@@ -226,18 +226,18 @@ export default function DataIntelligenceService() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
                 </div>
-                <p className="text-lg md:text-xl text-text-primary leading-relaxed font-bold mb-8">
-                  Most dashboards fail not because of lack of data—but because of poor structure, cluttered visuals, and unclear priorities.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
+                  Great Dashboards Deliver Clarity, Not Complexity
+                </h3>
                 <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
                   <p>
-                    Data is only valuable when it’s understood and actionable. This service focuses on designing dashboards and data experiences that simplify complexity and highlight what truly matters.
+                    Many dashboards fail not because of insufficient data, but because users cannot quickly interpret what the information means.
                   </p>
                   <p>
-                    We transform raw data into clear visual narratives, helping users quickly identify patterns, trends, and actions. From analytics platforms to SaaS dashboards and reporting tools, every interface is designed to reduce cognitive load and support confident decision-making.
+                    Poor hierarchy, excessive visual noise, and fragmented reporting often create confusion instead of insight.
                   </p>
                   <p className="text-text-primary font-bold">
-                    The goal is simple: turn data into clarity, and clarity into action.
+                    My approach focuses on transforming complex datasets into intuitive experiences that help teams understand performance, identify opportunities, and make faster decisions.
                   </p>
                 </div>
               </motion.div>
@@ -341,18 +341,18 @@ export default function DataIntelligenceService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Experience</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                Data Experience — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">What We Deliver</span>
+                Core Dashboard <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">UX Capabilities</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
-                { num: "01", title: "Dashboard UX Design", desc: "Clean, structured layouts for data-heavy platforms.", highlight: false, badge: false },
-                { num: "02", title: "Data Visualization Systems", desc: "Charts, graphs, and visual patterns for clarity.", highlight: false, badge: true },
-                { num: "03", title: "KPI & Metrics Design", desc: "Highlighting the most important business indicators.", highlight: false, badge: false },
-                { num: "04", title: "Information Hierarchy", desc: "Organizing data for quick scanning and understanding.", highlight: true, badge: false },
-                { num: "05", title: "Predictive & Insight UI", desc: "Surfacing trends, anomalies, and recommendations.", highlight: false, badge: false },
-                { num: "06", title: "Real-Time Data Interfaces", desc: "Designing dynamic, live-updating dashboards.", highlight: false, badge: false }
+                { num: "01", title: "Dashboard UX Design", desc: "Create intuitive dashboard experiences tailored to operational, analytical, and executive workflows.", highlight: false, badge: false },
+                { num: "02", title: "Data Visualization Systems", desc: "Design charts, visual patterns, and reporting structures that communicate information clearly.", highlight: false, badge: true },
+                { num: "03", title: "KPI & Metrics Design", desc: "Highlight business-critical indicators that enable faster, more confident decision-making.", highlight: false, badge: false },
+                { num: "04", title: "Information Hierarchy", desc: "Structure content strategically to improve scanning, comprehension, and usability.", highlight: true, badge: false },
+                { num: "05", title: "Predictive & Insight Interfaces", desc: "Surface trends, anomalies, and recommendations that support proactive business actions.", highlight: false, badge: false },
+                { num: "06", title: "Real-Time Data Experiences", desc: "Design interfaces that continuously update and communicate live operational performance.", highlight: false, badge: false }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -410,10 +410,10 @@ export default function DataIntelligenceService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Clarity Over Overload", desc: "Focus on what matters—not everything.", icon: Filter, color: "#00DA99" },
-                { title: "Decision-Driven UX", desc: "Designed to support real business actions.", icon: Target, color: "#0D63CC" },
-                { title: "Scalable Data Systems", desc: "Works seamlessly as your data and product grow.", icon: Layers, color: "#8B5CF6" },
-                { title: "Enterprise-Ready", desc: "Handles complex, high-volume datasets smoothly.", icon: Building2, color: "#F43F5E" }
+                { title: "Clarity Over Overload", desc: "Simplify complex datasets into meaningful, easy-to-understand experiences.", icon: Filter, color: "#00DA99" },
+                { title: "Decision-Driven UX", desc: "Design dashboards that support action rather than simply displaying data.", icon: Target, color: "#0D63CC" },
+                { title: "Scalable Data Systems", desc: "Create flexible dashboard architectures that evolve with growing business needs.", icon: Layers, color: "#8B5CF6" },
+                { title: "Enterprise-Ready Design", desc: "Design solutions capable of handling large datasets and multi-role experiences.", icon: Building2, color: "#F43F5E" }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
                   <div
@@ -424,6 +424,133 @@ export default function DataIntelligenceService() {
                   </div>
                   <h4 className="text-lg font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
                   <p className="text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — PROCESS ───────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                My Dashboard Design <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Process</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discover", desc: "Understand users, business goals, KPIs, and decision-making workflows." },
+                { step: "02", title: "Define", desc: "Prioritize metrics, reporting needs, and dashboard objectives." },
+                { step: "03", title: "Structure", desc: "Establish information hierarchy, layouts, and navigation systems." },
+                { step: "04", title: "Visualize", desc: "Design data visualizations optimized for comprehension and action." },
+                { step: "05", title: "Validate", desc: "Test usability, comprehension, and decision efficiency." }
+              ].map((phase, i) => (
+                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                  {i < 4 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                  )}
+                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
+                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
+                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — DASHBOARD TYPES ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Expertise</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Dashboard Types <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "Executive Dashboards",
+                "Operational Dashboards",
+                "Analytics Platforms",
+                "BI Dashboards",
+                "Financial Dashboards",
+                "Healthcare Dashboards",
+                "Marketing Analytics",
+                "AI Insights Dashboards"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — CHALLENGES SOLVED ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Solutions</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Common Dashboard Problems <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Solve</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Too much data, not enough clarity", icon: ListFilter },
+                { title: "Users cannot identify important metrics", icon: Target },
+                { title: "Reporting workflows are fragmented", icon: LayoutDashboard },
+                { title: "Dashboards feel overwhelming", icon: Eye },
+                { title: "Users struggle to make decisions", icon: Zap },
+                { title: "Analytics adoption is low", icon: TrendingUp }
+              ].map((item, i) => (
+                <GlassCard key={i} delay={i * 0.1} color="#0D63CC" className="p-6 text-left flex items-start gap-4">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `#0D63CC15` }}
+                  >
+                    <item.icon size={20} style={{ color: "#0D63CC" }} />
+                  </div>
+                  <h4 className="text-lg font-bold text-text-primary mt-2 relative z-10">{item.title}</h4>
                 </GlassCard>
               ))}
             </div>
@@ -445,7 +572,7 @@ export default function DataIntelligenceService() {
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
                 <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
-                  "We had all the data—but no clarity. After redesigning the dashboard, our team could instantly understand performance and make faster decisions."
+                  "Anil redesigned our analytics experience and transformed complex reporting into a dashboard our entire team could understand and act upon."
                 </p>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-white shadow-xl">
@@ -453,7 +580,7 @@ export default function DataIntelligenceService() {
                   </div>
                   <div>
                     <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Head of Analytics</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Platform</p>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Company</p>
                   </div>
                 </div>
               </div>
@@ -471,20 +598,21 @@ export default function DataIntelligenceService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
-                Why It <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Matters</span>
+                Business Impact of <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Great Dashboard UX</span>
               </h2>
               <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
-                A well-designed data experience turns information into competitive advantage.
+                Effective dashboard design transforms raw information into actionable intelligence that improves decision quality across the organization.
               </motion.p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
               {[
-                "Users understand data instantly",
-                "Decision-making becomes faster and more accurate",
-                "Complex datasets feel simple and intuitive",
-                "Teams align around clear metrics",
-                "Products deliver real business intelligence"
+                "Users understand performance instantly",
+                "Teams make faster, data-driven decisions",
+                "Complex datasets become intuitive",
+                "Cross-functional teams align around shared metrics",
+                "Reporting becomes more efficient",
+                "Organizations uncover growth opportunities faster"
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -496,6 +624,73 @@ export default function DataIntelligenceService() {
                   </div>
                   <span className="text-[16px] md:text-[18px] font-bold text-text-primary opacity-80 group-hover:opacity-100 transition-opacity">{text}</span>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative">
+          <div className="max-w-5xl mx-auto text-center">
+             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                  <span>Healthcare Analytics</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Enterprise SaaS</span>
+                  <span className="text-primary/40">•</span>
+                  <span>FinTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Marketing Analytics</span>
+                  <span className="text-primary/40">•</span>
+                  <span>AI Platforms</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Operations Management</span>
+                </div>
+             </motion.div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — RELATED CASE STUDIES ─────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Portfolio</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { name: "MarketVisionAI", link: "/case-studies/marketvisionai" },
+                { name: "Spendora", link: "/case-studies/spendora" },
+                { name: "Carenova", link: "/case-studies/carenova" },
+                { name: "TicketStack", link: "/case-studies/ticketstack" }
+              ].map((study, i) => (
+                <Link key={i} href={study.link} className="block">
+                  <motion.div
+                    {...fadeInUp(i * 0.1)}
+                    className="bg-white/40 border border-white/60 p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-lg group h-full cursor-pointer"
+                  >
+                    <BarChart3 size={28} className="text-primary opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    <span className="font-bold text-[16px] text-text-primary group-hover:text-primary transition-colors">{study.name}</span>
+                    <span className="text-[11px] font-bold text-text-secondary uppercase tracking-wider flex items-center gap-1 group-hover:text-secondary transition-colors">
+                      View Study <ArrowLeft className="rotate-180 w-3 h-3" />
+                    </span>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -522,18 +717,24 @@ export default function DataIntelligenceService() {
                 }}
               />
 
-              <div className="max-w-2xl relative z-10 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.1] mb-6">
-                  Let’s turn your complex data into <br className="hidden lg:block" />
-                  <span className="text-primary">clear insights</span> and <span className="text-secondary">fast action.</span>
+                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
+                  Need a dashboard that transforms complex information into actionable insights?
                 </h3>
-                <p className="text-text-secondary text-sm font-medium">Ready to design a dashboard that users actually understand and rely on?</p>
+                <p className="text-text-secondary text-sm md:text-base font-medium">
+                  Let's design data experiences your teams can understand, trust, and act on.
+                </p>
               </div>
 
-              <Link href="#contact" className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center gap-3 border-0 cursor-pointer">
-                Let’s Work Together
-                <ArrowLeft className="rotate-180" size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8 md:mt-0 shrink-0">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 border-0 cursor-pointer">
+                  Book a Discovery Call
+                </Link>
+                <Link href="/contact" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 transition-all duration-300 shadow-md whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 cursor-pointer">
+                  Start a Project
+                  <ArrowLeft className="rotate-180" size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

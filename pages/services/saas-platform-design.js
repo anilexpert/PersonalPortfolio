@@ -35,7 +35,7 @@ const staggerContainer = {
 const GlassCard = ({ children, className = "", delay = 0, color }) => (
   <motion.div
     {...fadeInUp(delay)}
-    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative ${className}`}
+    className={`glass-card bg-white/10 backdrop-blur-xl rounded-2xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group relative h-full ${className}`}
   >
     {color && (
       <>
@@ -173,12 +173,12 @@ export default function SaaSPlatformDesignService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
-                { title: "End-to-end SaaS UX", desc: "Tailored to complex product ecosystems for maximum efficiency and clarity.", color: "#00DA99", icon: Monitor },
-                { title: "Scalable architecture", desc: "For multi-user, multi-role platforms requiring robust system design.", color: "#0D63CC", icon: Layers },
-                { title: "Modular UI systems", desc: "For faster product evolution and streamlined development processes.", color: "#8B5CF6", icon: Settings },
-                { title: "Performance-optimized", desc: "Responsive design patterns built for fast loading and seamless interaction.", color: "#F43F5E", icon: Zap },
-                { title: "Data-driven UX", desc: "Decisions made for continuous improvement based on user behavior and analytics.", color: "#F59E0B", icon: Database },
-                { title: "Seamless onboarding", desc: "And user journey optimization to improve activation and reduce early churn.", color: "#0EA5E9", icon: Rocket }
+                { title: "End-to-End SaaS UX", desc: "Design intuitive product experiences that simplify workflows and improve usability across the entire customer journey.", color: "#00DA99", icon: Monitor },
+                { title: "Scalable Architecture", desc: "Structure products using scalable information architecture and modular UX patterns that support long-term growth.", color: "#0D63CC", icon: Layers },
+                { title: "Modular UI Systems", desc: "Build reusable interface systems that ensure consistency and accelerate product development.", color: "#8B5CF6", icon: Settings },
+                { title: "Performance-Optimized UX", desc: "Design frictionless experiences that improve efficiency, satisfaction, and task completion.", color: "#F43F5E", icon: Zap },
+                { title: "Data-Driven UX", desc: "Leverage analytics, research, and user behavior insights to continuously improve product experiences.", color: "#F59E0B", icon: Database },
+                { title: "Seamless Onboarding", desc: "Create onboarding journeys that increase activation, reduce churn, and improve retention.", color: "#0EA5E9", icon: Rocket }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
                   <div
@@ -207,18 +207,15 @@ export default function SaaSPlatformDesignService() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
                 </div>
-                <p className="text-lg md:text-xl text-text-primary leading-relaxed font-bold mb-8">
-                  SaaS products don’t fail because of features—they fail because of complexity, poor structure, and lack of scalability.
-                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
+                  Why SaaS Products Struggle to Scale
+                </h3>
                 <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
                   <p>
-                    This service focuses on designing SaaS platforms that are not only visually clean but also structurally sound and built to scale. From early-stage MVPs to enterprise systems, we create experiences that remain consistent, efficient, and easy to navigate—even as the product grows.
-                  </p>
-                  <p>
-                    We design multi-role systems, dashboards, workflows, and modular UI frameworks that support long-term product expansion without breaking usability.
+                    As SaaS products evolve, complexity often increases faster than usability. Disconnected workflows, inconsistent interfaces, and fragmented experiences can reduce adoption and slow growth.
                   </p>
                   <p className="text-text-primary font-bold">
-                    By combining UX strategy with system thinking, we ensure your SaaS product delivers both performance and clarity at scale.
+                    I design scalable SaaS experiences that remain intuitive, efficient, and maintainable as products expand.
                   </p>
                 </div>
               </motion.div>
@@ -295,18 +292,18 @@ export default function SaaSPlatformDesignService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Experience</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
-                SaaS Design — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">What We Deliver</span>
+                Core SaaS Product <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Design Capabilities</span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {[
-                { num: "01", title: "Platform UX Architecture", desc: "Structuring complex SaaS products into clear, scalable systems.", highlight: false, badge: false },
-                { num: "02", title: "Multi-Role Experience Design", desc: "Designing flows for admins, users, managers, and stakeholders.", highlight: false, badge: false },
-                { num: "03", title: "Dashboard & Data UX", desc: "Clean, actionable dashboards for data-heavy platforms.", highlight: false, badge: true },
-                { num: "04", title: "Onboarding & Activation Flows", desc: "Reducing friction and improving first-time user experience.", highlight: true, badge: false },
-                { num: "05", title: "Design Systems for SaaS", desc: "Modular, reusable components for faster scaling.", highlight: false, badge: false },
-                { num: "06", title: "Workflow Optimization", desc: "Simplifying complex tasks into efficient user journeys.", highlight: false, badge: false }
+                { num: "01", title: "Platform UX Architecture", desc: "Design scalable product structures that support growth while maintaining usability.", highlight: false, badge: false },
+                { num: "02", title: "Multi-Role Experience Design", desc: "Create tailored experiences for administrators, managers, operators, and end users.", highlight: false, badge: false },
+                { num: "03", title: "Dashboard & Data UX", desc: "Transform complex datasets into actionable dashboards that drive faster decision-making.", highlight: false, badge: true },
+                { num: "04", title: "Onboarding & Activation Flows", desc: "Reduce friction and guide users toward value quickly through optimized onboarding experiences.", highlight: true, badge: false },
+                { num: "05", title: "Design Systems for SaaS", desc: "Build reusable component systems that ensure consistency and accelerate product delivery.", highlight: false, badge: false },
+                { num: "06", title: "Workflow Optimization", desc: "Simplify complex business processes to improve productivity and operational efficiency.", highlight: false, badge: false }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -364,10 +361,136 @@ export default function SaaSPlatformDesignService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Built for Scale", desc: "Designed to grow without breaking usability.", icon: TrendingUp, color: "#00DA99" },
-                { title: "System-First Approach", desc: "Focus on structure, not just screens.", icon: Server, color: "#0D63CC" },
-                { title: "Enterprise-Ready Thinking", desc: "Handles complex workflows and large datasets.", icon: Building2, color: "#8B5CF6" },
-                { title: "Performance-Focused UX", desc: "Faster, smoother, and more efficient user experiences.", icon: Zap, color: "#F43F5E" }
+                { title: "Built for Scale", desc: "Create experiences designed to grow with your product and business.", icon: TrendingUp, color: "#00DA99" },
+                { title: "System-First Approach", desc: "Focus on scalable foundations that support long-term product evolution.", icon: Server, color: "#0D63CC" },
+                { title: "Enterprise-Ready Thinking", desc: "Design solutions capable of handling complex workflows and diverse user roles.", icon: Building2, color: "#8B5CF6" },
+                { title: "Performance-Focused UX", desc: "Improve usability, adoption, and efficiency through thoughtful product design.", icon: Zap, color: "#F43F5E" }
+              ].map((item, i) => (
+                <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
+                  <div
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
+                    style={{ backgroundColor: `${item.color}15` }}
+                  >
+                    <item.icon size={24} style={{ color: item.color }} />
+                  </div>
+                  <h4 className="text-lg font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
+                  <p className="text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — PROCESS ───────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                My SaaS Product <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Design Process</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[
+                { step: "01", title: "Discover", desc: "Research users, business goals, and operational challenges." },
+                { step: "02", title: "Define", desc: "Structure information architecture and prioritize opportunities." },
+                { step: "03", title: "Design", desc: "Create scalable workflows, wireframes, and interface systems." },
+                { step: "04", title: "Validate", desc: "Test assumptions and refine experiences through feedback." },
+                { step: "05", title: "Scale", desc: "Build reusable design systems and support implementation." }
+              ].map((phase, i) => (
+                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                  {i < 4 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                  )}
+                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
+                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
+                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — TYPES OF SAAS PRODUCTS ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Product Types</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Types of SaaS Products <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                "Enterprise SaaS Platforms",
+                "Healthcare SaaS",
+                "FinTech Platforms",
+                "AI SaaS Products",
+                "Analytics Dashboards",
+                "CRM & ERP Systems",
+                "Internal Tools",
+                "Multi-Tenant Platforms"
+              ].map((type, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeInUp(i * 0.05)}
+                  className="bg-white/40 border border-white/60 p-4 md:p-6 rounded-2xl flex items-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-md group"
+                >
+                  <CheckCircle2 size={18} className="text-primary opacity-50 group-hover:opacity-100 shrink-0" />
+                  <span className="font-semibold text-sm md:text-[15px] text-text-primary">{type}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — WHY CLIENTS WORK WITH ME ───────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Why Me</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Why Clients <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Work With Me</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "Product Thinking Beyond UI", desc: "Solve business problems, not just design screens.", icon: Lightbulb, color: "#F59E0B" },
+                { title: "Complex Workflow Expertise", desc: "Experienced in enterprise and multi-role ecosystems.", icon: Layers, color: "#8B5CF6" },
+                { title: "Scalable Design Systems", desc: "Build future-ready products that evolve efficiently.", icon: Settings, color: "#0EA5E9" },
+                { title: "Developer-Friendly Handoff", desc: "Ensure smooth collaboration and implementation.", icon: Handshake, color: "#10B981" }
               ].map((item, i) => (
                 <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
                   <div
@@ -399,7 +522,7 @@ export default function SaaSPlatformDesignService() {
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
                 <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
-                  "Our platform was growing fast, but the UX couldn’t keep up. After restructuring the experience, everything became more intuitive, scalable, and easier to manage across teams."
+                  "Anil transformed our fragmented SaaS experience into a scalable, intuitive platform that significantly improved usability and team efficiency."
                 </p>
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center border-4 border-white shadow-xl">
@@ -407,7 +530,7 @@ export default function SaaSPlatformDesignService() {
                   </div>
                   <div>
                     <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Founder</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Platform</p>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Company</p>
                   </div>
                 </div>
               </div>
@@ -425,20 +548,21 @@ export default function SaaSPlatformDesignService() {
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
               </div>
               <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
-                Why It <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Matters</span>
+                Business Impact of <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Scalable SaaS Design</span>
               </h2>
               <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
-                A scalable SaaS platform is not just about adding features—it’s about maintaining clarity and performance as complexity increases.
+                Scalable SaaS design ensures your product continues to deliver value as users, features, and complexity grow.
               </motion.p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
               {[
-                "Scale without compromising usability",
                 "Improve user retention and engagement",
                 "Reduce onboarding friction",
-                "Support multiple user roles efficiently",
-                "Enable faster product iterations"
+                "Support multi-role experiences",
+                "Accelerate feature adoption",
+                "Enable faster product iteration",
+                "Maintain long-term usability"
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -450,6 +574,73 @@ export default function SaaSPlatformDesignService() {
                   </div>
                   <span className="text-[16px] md:text-[18px] font-bold text-text-primary opacity-80 group-hover:opacity-100 transition-opacity">{text}</span>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative">
+          <div className="max-w-5xl mx-auto text-center">
+             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                  <span>Healthcare</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Enterprise SaaS</span>
+                  <span className="text-primary/40">•</span>
+                  <span>FinTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>EdTech</span>
+                  <span className="text-primary/40">•</span>
+                  <span>AI Products</span>
+                  <span className="text-primary/40">•</span>
+                  <span>Analytics Platforms</span>
+                </div>
+             </motion.div>
+          </div>
+        </section>
+
+        <GlowDivider />
+
+        {/* ── NEW SECTION — RELATED CASE STUDIES ─────────────────────────────── */}
+        <section className="py-8 md:py-12 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
+                <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Portfolio</span>
+              </div>
+              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+                Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { name: "Carenova", link: "/case-studies/carenova" },
+                { name: "OasisPad", link: "/case-studies/oasispad" },
+                { name: "Spendora", link: "/case-studies/spendora" },
+                { name: "TicketStack", link: "/case-studies/ticketstack" }
+              ].map((study, i) => (
+                <Link key={i} href={study.link} className="block">
+                  <motion.div
+                    {...fadeInUp(i * 0.1)}
+                    className="bg-white/40 border border-white/60 p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:bg-white/80 hover:border-primary/30 transition-all hover:shadow-lg group h-full cursor-pointer"
+                  >
+                    <Briefcase size={28} className="text-primary opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    <span className="font-bold text-[16px] text-text-primary group-hover:text-primary transition-colors">{study.name}</span>
+                    <span className="text-[11px] font-bold text-text-secondary uppercase tracking-wider flex items-center gap-1 group-hover:text-secondary transition-colors">
+                      View Study <ArrowLeft className="rotate-180 w-3 h-3" />
+                    </span>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -476,18 +667,24 @@ export default function SaaSPlatformDesignService() {
                 }}
               />
 
-              <div className="max-w-2xl relative z-10 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.1] mb-6">
-                  Let’s build a SaaS platform <br className="hidden lg:block" />
-                  that <span className="text-primary">scales</span> and <span className="text-secondary">performs.</span>
+                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
+                  Building a new SaaS platform or scaling an existing product?
                 </h3>
-                <p className="text-text-secondary text-sm font-medium">Ready to structure your product for long-term growth and clarity?</p>
+                <p className="text-text-secondary text-sm md:text-base font-medium">
+                  Let's create experiences that users love and businesses can grow with.
+                </p>
               </div>
 
-              <Link href="#contact" className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center gap-3 border-0 cursor-pointer">
-                Let’s Work Together
-                <ArrowLeft className="rotate-180" size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8 md:mt-0 shrink-0">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(13,99,204,0.3)] transition-all duration-300 shadow-xl whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 border-0 cursor-pointer">
+                  Book a Discovery Call
+                </Link>
+                <Link href="/contact" className="px-8 py-4 bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 rounded-full font-bold text-[14px] sm:text-[15px] hover:scale-105 transition-all duration-300 shadow-md whitespace-nowrap uppercase tracking-widest flex items-center justify-center gap-3 cursor-pointer">
+                  Start a Project
+                  <ArrowLeft className="rotate-180" size={18} />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

@@ -223,7 +223,7 @@ export default function AboutPage() {
                 </h2>
 
                 {/* Giant 10+ display & Years of Experience */}
-                <div className="flex items-center gap-4 md:gap-6 lg:gap-8 select-none">
+                <div className="flex items-center gap-4 md:gap-6 lg:gap-8 select-none mb-4 lg:mb-8">
                   <span
                     className="text-[100px] sm:text-[130px] md:text-[180px] font-black leading-none tracking-tighter"
                     style={{
@@ -279,18 +279,42 @@ export default function AboutPage() {
 
               {/* ── RIGHT COL ── */}
               <div className="max-w-full mx-auto relative z-10">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className=" mb-4"
-                >
-                  <h2 className="text-[24px] sm:text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-6">
-                    Hello, 👋 I'm Anil Kumar —
-                    <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">AI-Driven Product Designer </span> for SaaS & Enterprise Products
-                  </h2>
-                </motion.div>
-                <motion.div {...fadeUp(0.12)} className="flex flex-col gap-8 pt-2">
+                <div className="flex flex-col sm:flex-row gap-6 md:gap-8 items-start mb-6 md:mb-8">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="relative shrink-0 group"
+                  >
+                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl md:rounded-[2rem] overflow-hidden border border-primary/20 p-2 relative z-10 bg-surface/50 backdrop-blur-sm shadow-xl transition-transform duration-500 group-hover:scale-105">
+                      <div className="w-full h-full rounded-[14px] md:rounded-[28px] overflow-hidden relative">
+                        <Image
+                          src="/Anil-Avatar.png"
+                          alt="Anil Kumar Profile"
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                    </div>
+                    {/* decorative background glow */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 blur-2xl rounded-full z-0 -m-4 transition-opacity duration-500 opacity-50 group-hover:opacity-100" />
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex-1 pt-2 sm:pt-4 md:pt-6"
+                  >
+                    <h2 className="text-[24px] sm:text-xl md:text-2xl font-bold text-text-primary mb-2">
+                      Hello, 👋 I'm Anil Kumar —
+                      <span className="block mt-2 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">AI-Driven Product Designer </span>
+                      <span className="text-lg md:text-xl font-medium mt-1 block text-text-secondary">for SaaS & Enterprise Products</span>
+                    </h2>
+                  </motion.div>
+                </div>
+
+                <motion.div {...fadeUp(0.12)} className="flex flex-col gap-6">
 
                   {/* Description */}
                   <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">

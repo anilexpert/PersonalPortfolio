@@ -456,18 +456,32 @@ export default function DataIntelligenceService() {
                 { step: "03", title: "Structure", desc: "Establish information hierarchy, layouts, and navigation systems." },
                 { step: "04", title: "Visualize", desc: "Design data visualizations optimized for comprehension and action." },
                 { step: "05", title: "Validate", desc: "Test usability, comprehension, and decision efficiency." }
-              ].map((phase, i) => (
+              ].map((phase, i) => {
+                const colors = ['#00DA99', '#0D63CC', '#8B5CF6', '#F43F5E', '#F59E0B'];
+                const cardColor = colors[i % colors.length];
+                return (
                 <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
                   {i < 4 && (
                     <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
                   )}
-                  <div className="bg-white/40 border border-white/60 p-6 rounded-2xl relative z-10 backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full">
-                    <span className="text-3xl font-black text-primary/20 mb-4 block">{phase.step}</span>
-                    <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
-                    <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
+                    {/* Top Right Glow Effect */}
+                    <div 
+                      className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
+                      style={{ backgroundColor: cardColor }}
+                    />
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+                    
+                    <div className="relative z-10">
+                      <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                      <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                      <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                    </div>
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

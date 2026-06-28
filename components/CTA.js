@@ -75,7 +75,7 @@ const CTA = () => {
           </div>
           <div className="max-w-4xl mx-auto mt-8 md:mt-12">
           <p className="text-base md:text-xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
-            Focused on creating measurable impact through usability, efficiency, and scalable product systems.
+            Looking for a Product Designer who can simplify complexity, align business goals with user needs, and build scalable digital products? Let's discuss your next product.
           </p>
           </div>
         </motion.div>

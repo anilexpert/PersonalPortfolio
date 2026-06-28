@@ -1188,24 +1188,23 @@ export default function SuperCampusCaseStudy() {
                      <h2 className="text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                     <div className="flex flex-col items-center gap-4">
-                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
-                           <span className="text-slate-400 font-bold">Low Fidelity</span>
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                     {/* Decorative dashed connecting line */}
+                     <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
+                     <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
+
+                     {[
+                        { label: "Low Fidelity", icon: PenTool, color: "text-slate-500", bg: "bg-slate-100", offset: "md:-translate-y-8" },
+                        { label: "Mid Fidelity", icon: Layout, color: "text-[#0D63CC]", bg: "bg-blue-50", offset: "md:translate-y-8" },
+                        { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
+                     ].map((step, i) => (
+                        <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
+                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                              <step.icon className={`w-8 h-8 ${step.color}`} />
+                           </div>
+                           <span className="font-bold text-slate-800 text-lg">{step.label}</span>
                         </div>
-                        <ArrowDown className="text-slate-300 md:hidden" />
-                     </div>
-                     <div className="flex flex-col items-center gap-4">
-                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
-                           <span className="text-slate-400 font-bold">Mid Fidelity</span>
-                        </div>
-                        <ArrowDown className="text-slate-300 md:hidden" />
-                     </div>
-                     <div className="flex flex-col items-center gap-4">
-                        <div className="w-full aspect-[3/4] bg-slate-100 rounded-3xl border-2 border-slate-200 flex items-center justify-center shadow-inner">
-                           <span className="text-slate-400 font-bold">Final UI</span>
-                        </div>
-                     </div>
+                     ))}
                   </div>
                </section>
 

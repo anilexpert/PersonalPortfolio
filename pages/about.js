@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lightbulb, Pencil, Search, ChevronLeft, ChevronRight, Star, Target, Box, FlaskConical, Flag } from 'lucide-react';
+import { ArrowRight, Lightbulb, Pencil, Search, ChevronLeft, ChevronRight, Star, Target, Box, FlaskConical, Flag, Briefcase, Brain, Layers, MessageSquare, Code } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -12,47 +12,80 @@ import RotatingBadge from '../components/RotatingBadge';
 // ─── Data ───────────────────────────────────────────────────────────────────
 
 const stats = [
-  { label: 'Project Completed', value: '1.7K', accent: 'primary' },
-  { label: 'Happy Customer', value: '24K+', accent: 'primary', pill: true },
-  { label: 'Experience Members', value: '99+', accent: 'secondary' },
+  { label: 'SaaS & Enterprise Products Designed', value: '15+', accent: 'primary' },
+  { label: 'Product Screens Designed', value: '200+', accent: 'primary', pill: true },
+  { label: 'Complex Workflows Simplified', value: '20+', accent: 'secondary' },
 ];
 
 const workflow = [
   {
     icon: Target,
-    title: 'Research and Analysis',
+    title: 'Discover',
     color: '#FBBF24', // Yellow
     labelPos: 'top',
-    desc: 'Deep dive into user needs, market trends, and business goals to build a solid foundation.'
+    desc: 'Understand users, business goals, and product challenges.'
   },
   {
     icon: Lightbulb,
-    title: 'Ideation',
+    title: 'Define',
     color: '#818CF8', // Purple/Indigo
     labelPos: 'bottom',
-    desc: 'Brainstorming creative solutions and exploring multiple design directions.'
+    desc: 'Translate research into clear opportunities and product direction.'
   },
   {
     icon: Box,
-    title: 'Concept Development',
+    title: 'Ideate',
     color: '#F472B6', // Pink
     labelPos: 'top',
-    desc: 'Refining selected ideas into concrete design concepts and architectural structures.'
+    desc: 'Explore concepts and validate potential solutions.'
   },
   {
     icon: FlaskConical,
-    title: 'Prototyping and Testing',
+    title: 'Prototype & Test',
     color: '#2DD4BF', // Teal
     labelPos: 'bottom',
-    desc: 'Creating interactive prototypes and validating designs with real users.'
+    desc: 'Validate assumptions and refine experiences through feedback.'
   },
   {
     icon: Flag,
-    title: 'Final Design and Production',
+    title: 'Deliver & Scale',
     color: '#FB923C', // Orange
     labelPos: 'top',
-    desc: 'Polishing every pixel and preparing assets for a seamless development handoff.'
+    desc: 'Create scalable systems and collaborate through implementation.'
   },
+];
+
+const reasonsToChoose = [
+  {
+    title: 'Product Thinking Beyond UI',
+    desc: 'I solve business problems, not just design screens.',
+    icon: Lightbulb
+  },
+  {
+    title: 'Enterprise Experience',
+    desc: 'Experienced in designing complex, multi-role platforms.',
+    icon: Briefcase
+  },
+  {
+    title: 'AI-First Mindset',
+    desc: 'Designing intelligent experiences that balance automation and usability.',
+    icon: Brain
+  },
+  {
+    title: 'Scalable Systems Thinking',
+    desc: 'Building reusable, future-ready design foundations.',
+    icon: Layers
+  },
+  {
+    title: 'Clear Communication',
+    desc: 'Transparent collaboration throughout the product lifecycle.',
+    icon: MessageSquare
+  },
+  {
+    title: 'Developer-Friendly Handoff',
+    desc: 'Delivering production-ready design assets and documentation.',
+    icon: Code
+  }
 ];
 
 const team = [
@@ -164,7 +197,7 @@ export default function AboutPage() {
 
                 {/* Headline */}
                 <h2 className="text-[28px] sm:text-3xl md:text-4xl xl:text-[34px] font-black text-text-primary leading-[1.15] tracking-tight uppercase mb-8 md:mb-10">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Driven by</span>{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Designing Products</span>{' '}That
                   <span
                     className="relative inline-block"
                     style={{
@@ -173,11 +206,11 @@ export default function AboutPage() {
                       textStroke: '2px var(--primary-mint)',
                     }}
                   >
-                    Creativity
+                    Simplify Complexity
                   </span>{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Powered</span><br />
+                  and<br />
                   <div className="flex items-center gap-4 mt-2 flex-wrap">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">by Purpose</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Drive Business Growth</span>
 
                     {/* Agency tag — dot + line + label */}
                     <div className="flex items-center gap-3 flex-1 min-w-[200px]">
@@ -206,18 +239,6 @@ export default function AboutPage() {
                     Years of<br />Experience
                   </div>
                 </div>
-              </motion.div>
-
-              {/* ── RIGHT COL ── */}
-              <motion.div {...fadeUp(0.12)} className="flex flex-col gap-8 pt-2">
-
-                {/* Description */}
-                <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
-                  We blend imagination with intention to craft designs that not only look stunning but
-                  deliver results. Every idea we shape is rooted in strategy, ensuring your brand
-                  connects, communicates, and grows meaningfully.
-                </p>
-
                 {/* Horizontal stat rows */}
                 <div className="flex flex-col mt-2">
                   {stats.map((s, i) => {
@@ -255,6 +276,41 @@ export default function AboutPage() {
                   })}
                 </div>
               </motion.div>
+
+              {/* ── RIGHT COL ── */}
+              <div className="max-w-full mx-auto relative z-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className=" mb-4"
+                >
+                  <h2 className="text-[24px] sm:text-xl md:text-2xl font-bold text-text-primary mb-4 md:mb-6">
+                    Hello, 👋 I'm Anil Kumar —
+                    <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">AI-Driven Product Designer </span> for SaaS & Enterprise Products
+                  </h2>
+                </motion.div>
+                <motion.div {...fadeUp(0.12)} className="flex flex-col gap-8 pt-2">
+
+                  {/* Description */}
+                  <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
+                    Hi, I'm Anil Kumar — an AI-Driven Product Designer with 10+ years of experience designing SaaS, healthcare, and enterprise products.
+                  </p>
+                  <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
+                    I specialize in transforming complex workflows into intuitive, scalable digital experiences that align user needs with business goals.
+                  </p>
+                  <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
+                    Over the years, I've partnered with startups, SMEs, and product teams to simplify operations, improve usability, and create products that drive measurable impact.
+                  </p>
+                  <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
+                    My work goes beyond creating interfaces. I focus on understanding business challenges, user behaviors, and operational workflows to design products that are both intuitive and scalable.
+                  </p>
+                  <p className="text-[15px] md:text-base text-text-secondary leading-relaxed">
+                    From AI-powered platforms and enterprise dashboards to healthcare ecosystems and data-driven SaaS applications, I enjoy solving complex problems through systems thinking, product strategy, and user-centered design.
+                  </p>
+
+                </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -280,9 +336,9 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-4"
             >
-              <h2 className="text-[32px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6">
-                Process of Product
-                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Design</span>
+              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
+                How I Approach
+                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Product Design</span>
               </h2>
             </motion.div>
 
@@ -448,6 +504,100 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* GlowDivider */}
+        <div className="w-full py-0 flex items-center justify-center my-4 px-6">
+          <div className="w-full max-w-7xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        </div>
+
+        {/* ── 4. WHY CLIENTS CHOOSE ME ──────────────────────────────────── */}
+        <section className="relative py-12 md:py-16 px-4 md:px-6 overflow-hidden">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10 md:mb-16"
+            >
+              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
+                Why Clients
+                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Choose Me</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {reasonsToChoose.map((reason, i) => (
+                <motion.div
+                  key={reason.title}
+                  {...fadeUp(i * 0.1)}
+                  className="glass-card p-6 md:p-8 rounded-[24px] border border-white/20 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 group relative overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative z-10">
+                    <reason.icon size={24} className="text-primary" />
+                  </div>
+
+                  <div className="relative z-10">
+                    <h3 className="text-[18px] md:text-[20px] font-bold text-text-primary mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-colors duration-300">
+                      {reason.title}
+                    </h3>
+                    <p className="text-[14px] md:text-[15px] text-text-secondary leading-relaxed">
+                      {reason.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4.5. CURRENTLY AVAILABLE FOR ──────────────────────────────── */}
+        <section className="relative py-8 px-4 md:px-6 overflow-hidden">
+          <div className="max-w-4xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-8 md:p-10 rounded-[32px] border border-primary/20 shadow-sm text-center relative overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-50 pointer-events-none" />
+
+              <h2 className="text-[20px] md:text-[24px] font-bold text-text-primary mb-8 inline-flex items-center justify-center gap-3 w-full">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                </span>
+                Currently Available For
+              </h2>
+
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 relative z-10">
+                {[
+                  "SaaS Product Design",
+                  "AI Product Design",
+                  "Enterprise UX Consulting",
+                  "Dashboard Design",
+                  "Long-Term Product Partnerships"
+                ].map((item, i) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                    className="flex items-center gap-2.5 bg-white/40 dark:bg-slate-800/40 backdrop-blur-md border border-white/40 dark:border-white/10 px-4 md:px-5 py-2.5 rounded-full shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default"
+                  >
+                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-[13px] md:text-[15px] font-semibold text-text-secondary">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* ── 5. CLIENT FEEDBACK MARQUEE ─────────────────────────────────── */}
         <div className="relative w-full bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 backdrop-blur-xl py-3 md:py-5 border-y border-primary/20 overflow-hidden flex items-center my-6 md:my-8">

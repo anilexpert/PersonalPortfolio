@@ -886,6 +886,39 @@ export default function ScanovaHealthCaseStudy() {
                   </div>
                </section>
 
+               {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
+               <section className="mb-16 md:mb-24 lg:mb-32">
+                  <div className="mb-16 text-center">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
+                        <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Evolution</span>
+                     </div>
+                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                  </div>
+
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                     {/* Decorative dashed connecting line */}
+                     <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
+                     <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
+
+                     {[
+                        { label: "Low Fidelity", icon: PenTool, color: "text-slate-500", bg: "bg-slate-100", offset: "md:-translate-y-8" },
+                        { label: "Mid Fidelity", icon: Layout, color: "text-[#0D63CC]", bg: "bg-blue-50", offset: "md:translate-y-8" },
+                        { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
+                     ].map((step, i) => (
+                        <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
+                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                              <step.icon className={`w-8 h-8 ${step.color}`} />
+                           </div>
+                           <span className="font-bold text-slate-800 text-lg">{step.label}</span>
+                        </div>
+                     ))}
+                  </div>
+               </section>
+
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
+
                {/* ── VISUAL OVERVIEW ───────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">
@@ -941,23 +974,6 @@ export default function ScanovaHealthCaseStudy() {
                   </div>
                </section>
 
-               {/* ── COMPLIANCE DISCLAIMER ───────────────────── */}
-               <section className="mb-10 md:mb-16">
-                  <div className="p-6 md:p-10 glass-card rounded-[24px] border-2 border-amber-200/60 bg-amber-50/20 relative overflow-hidden">
-                     <div className="absolute -top-20 -right-20 w-60 h-60 bg-amber-400/10 blur-[80px] rounded-full pointer-events-none" />
-                     <div className="relative z-10">
-                        <div className="flex items-center gap-3 mb-4">
-                           <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center border border-amber-200">
-                              <Shield size={20} className="text-amber-700" strokeWidth={2} />
-                           </div>
-                           <h4 className="font-bold text-xl text-amber-900">Compliance & Safety Disclaimer</h4>
-                        </div>
-                        <p className="text-sm text-amber-800 font-medium leading-relaxed">
-                           ScanovaHealth is intended for informational and record-keeping purposes only. Information displayed within the platform is derived from available datasets and references. ScanovaHealth does not provide medical advice, diagnosis, treatment recommendations, or determine MRI safety or compatibility. Users should always consult healthcare professionals, imaging facilities, and device manufacturers before making healthcare decisions or undergoing MRI procedures.
-                        </p>
-                     </div>
-                  </div>
-               </section>
 
                {/* ── OUTCOMES & CONCLUSION ───────────────────── */}
                <section className="relative mb-10 md:mb-16 overflow-hidden">

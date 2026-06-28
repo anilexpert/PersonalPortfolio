@@ -1030,26 +1030,23 @@ export default function CarenovaSystemsCaseStudy() {
                         Moving from low-fidelity structural planning to high-fidelity visual execution.
                      </p>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                     <div className="p-4 glass-card rounded-2xl text-center border border-slate-200">
-                        <h4 className="text-sm font-bold text-text-primary mb-4">1. Low-Fidelity Architecture</h4>
-                        <div className="w-full aspect-video bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center">
-                           <Layout size={32} className="text-slate-300" />
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                     {/* Decorative dashed connecting line */}
+                     <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
+                     <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
+
+                     {[
+                        { label: "Low Fidelity", icon: PenTool, color: "text-slate-500", bg: "bg-slate-100", offset: "md:-translate-y-8" },
+                        { label: "Mid Fidelity", icon: Layout, color: "text-[#0D63CC]", bg: "bg-blue-50", offset: "md:translate-y-8" },
+                        { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
+                     ].map((step, i) => (
+                        <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
+                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                              <step.icon className={`w-8 h-8 ${step.color}`} />
+                           </div>
+                           <span className="font-bold text-slate-800 text-lg">{step.label}</span>
                         </div>
-                     </div>
-                     <div className="p-4 glass-card rounded-2xl text-center border border-slate-200">
-                        <h4 className="text-sm font-bold text-text-primary mb-4">2. Mid-Fidelity Components</h4>
-                        <div className="w-full aspect-video bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center">
-                           <Layers size={32} className="text-slate-400" />
-                        </div>
-                     </div>
-                     <div className="p-4 glass-card rounded-2xl text-center border border-[#0D63CC]/20 shadow-lg relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-[#0D63CC]/10 blur-[30px] rounded-full pointer-events-none" />
-                        <h4 className="text-sm font-bold text-text-primary mb-4">3. High-Fidelity UI</h4>
-                        <div className="w-full aspect-video bg-[#0D63CC]/5 rounded-lg border border-[#0D63CC]/20 flex items-center justify-center">
-                           <Monitor size={32} className="text-[#0D63CC]" />
-                        </div>
-                     </div>
+                     ))}
                   </div>
                </section>
 

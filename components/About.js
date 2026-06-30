@@ -115,54 +115,64 @@ const About = () => {
           </p>
           </div> 
 
-        {/* Skills Cloud */}
-        <div className="mt-12 md:mt-16 mb-8 w-full max-w-3xl mx-auto flex flex-col items-center gap-2">
-          {/* Top Row - scattered with rotations */}
-          <div className="flex flex-wrap justify-center items-center gap-2 scale-90 md:scale-100">
-            {[
-              { name: "Wordpress", icon: "🔵", rotate: 0, y: 0 },
-              { name: "vitejs", icon: "⚡", rotate: -12, y: -6 },
-              { name: "React.js", icon: "⚛️", rotate: 8, y: 4 },
-              { name: "Figma", icon: "🎨", rotate: -10, y: -8 },
-              { name: "nuxt.js", icon: "💚", rotate: 6, y: -10 },
-              { name: "nextjs", icon: "▲", rotate: -5, y: 8 },
-              { name: "WebFlow", icon: "🌐", rotate: 10, y: -6 },
-            ].map((skill, i) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.04, duration: 0.4 }}
-                style={{ rotate: `${skill.rotate}deg`, translateY: `${skill.y}px` }}
-                className="flex items-center gap-1.5 whitespace-nowrap bg-white/60 backdrop-blur-sm border border-white/80 shadow-sm rounded-full px-3 py-1.5 hover:bg-white/90 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
-              >
-                <span className="text-sm leading-none">{skill.icon}</span>
-                <span className="text-[12px] font-semibold text-text-primary tracking-tight">{skill.name}</span>
-              </motion.div>
-            ))}
-          </div>
+        {/* Premium Skills Cloud */}
+        <div className="mt-14 md:mt-20 mb-10 w-full max-w-4xl mx-auto flex justify-center relative">
+          
+          {/* Subtle background glow for the skills section */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
-          {/* Bottom Row - flat, aligned */}
-          <div className="flex flex-wrap justify-center items-center gap-3">
+          <div className="flex flex-wrap justify-center items-center gap-3 md:gap-5 px-2 relative z-10">
             {[
-              { name: "Sketch", icon: "💎" },
-              { name: "JavaScript (ES6+)", icon: "🟨" },
-              { name: "tailwindcss & CSS3", icon: "🌀" },
-              { name: "ReactJS", icon: "⚛️" },
-              { name: "FIGMA", icon: "🎨" },
-              { name: "VueJS", icon: "⚡" }
+              { name: 'Figma', icon: '🎨', color: '#F24E1E' },
+              { name: 'React', icon: '⚛️', color: '#61DAFB' },
+              { name: 'Next.js', icon: '▲', color: '#000000' },
+              { name: 'Tailwind CSS', icon: '🌀', color: '#06B6D4' },
+              { name: 'JavaScript', icon: '🟨', color: '#F7DF1E' },
+              { name: 'Webflow', icon: '🌐', color: '#4353FF' },
+              { name: 'Vue.js', icon: '💚', color: '#4FC08D' },
+              { name: 'TypeScript', icon: '📘', color: '#3178C6' },
+              { name: 'Sketch', icon: '💎', color: '#F7B500' },
+              { name: 'Nuxt.js', icon: '🏔️', color: '#00DC82' },
+              { name: 'WordPress', icon: '🔵', color: '#21759B' },
+              { name: 'Vite', icon: '⚡', color: '#646CFF' },
             ].map((skill, i) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4 + i * 0.04, duration: 0.4 }}
-                className="flex items-center gap-1.5 whitespace-nowrap bg-white/60 backdrop-blur-sm border border-white/80 shadow-sm rounded-full px-3 py-1.5 hover:bg-white/90 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                transition={{
+                  delay: i * 0.04,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 10
+                }}
               >
-                <span className="text-sm leading-none">{skill.icon}</span>
-                <span className="text-[12px] font-bold text-text-primary tracking-tight">{skill.name}</span>
+                <motion.div
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    delay: i * 0.15,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <div className="group relative flex items-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3.5 bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:border-white transition-all duration-300 cursor-default overflow-hidden">
+                    <div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
+                      style={{ background: `linear-gradient(135deg, transparent, ${skill.color})` }}
+                    />
+                    <div 
+                      className="absolute -inset-2 opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-300 z-0 pointer-events-none"
+                      style={{ background: skill.color }}
+                    />
+                    
+                    <span className="text-lg md:text-2xl drop-shadow-sm relative z-10">{skill.icon}</span>
+                    <span className="text-[13px] md:text-[15px] font-bold text-text-primary tracking-tight transition-colors duration-300 relative z-10 group-hover:text-primary">
+                      {skill.name}
+                    </span>
+                  </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>

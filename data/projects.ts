@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "carenova",
     title: "FACILITY & COMPLIANCE MANAGEMENT PLATFORM",
-    category: "Carenova™",
+    category: "Carenova",
     image: "/images/Carenova-Card-Folio.png",
     description: "Comprehensive enterprise platform for facility operations and compliance tracking.",
     results: "100% Compliance Rate",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     slug: "marketvisionai",
     title: "AI-POWERED MARKET INTELLIGENCE PLATFORM",
-    category: "MarketVisionAI™",
+    category: "MarketVisionAI",
     image: "/images/MarketVision-Card-Folio.png",
     description: "Real-time market insights and predictive analytics for strategic decision making.",
     results: "Validated Market Trends",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     slug: "spendora",
     title: "AI-POWERED SMART EXPENSE ECOSYSTEM",
-    category: "Spendora™",
+    category: "Spendora",
     image: "/images/Spendora-Card-Folio.png",
     description: "Intelligent expense tracking and financial management powered by AI.",
     results: "+35% Savings Accuracy",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
   {
     slug: "oasispad",
     title: "SMART KNOWLEDGE & PRODUCTIVITY WORKSPACE",
-    category: "OasisPad™",
+    category: "OasisPad",
     image: "/images/OasisPad-Card-Folio.png",
     description: "Next-gen workspace for knowledge management and team collaboration.",
     results: "40% Productivity Boost",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     slug: "ticketstack",
     title: "RETAIL TICKETING EXPERIENCE REDESIGN",
-    category: "TicketStack™",
+    category: "TicketStack",
     image: "/images/TicketStack-Card-Folio.png",
     description: "Modernizing the retail ticketing process with an intuitive digital ecosystem.",
     results: "50% Faster Transactions",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     slug: "supercampus",
     title: "DIGITAL LEARNING & ADMINISTRATION ECOSYSTEM",
-    category: "SuperCampus™",
+    category: "SuperCampus",
     image: "/images/SuperCampus-Card-Folio.png",
     description: "All-in-one platform for educational administration and digital learning workflows.",
     results: "Empowering 10k+ Students",
@@ -92,9 +92,9 @@ export const projects: Project[] = [
     impactMetrics: ["10k+ Student capacity", "Admin dashboards", "Digital learning flows"]
   },
   {
-    slug: "mrilogic",
+    slug: "scanovahealth",
     title: "SMART MEDICAL IMAGING PLATFORM",
-    category: "MRI Logic™",
+    category: "ScanovaHealth",
     image: "/images/ScanovaHealth-Card-Folio.png",
     description: "Advanced interface for analyzing and managing MRI data workflows.",
     results: "99.9% Accuracy",
@@ -105,9 +105,9 @@ export const projects: Project[] = [
     impactMetrics: ["High accuracy analysis", "Mobile accessibility", "Secure data handling"]
   },
   {
-    slug: "carevation",
+    slug: "kinora",
     title: "SMART CAREGIVING & COORDINATION PLATFORM",
-    category: "Carevation™",
+    category: "Kinora",
     image: "/images/Kinora-Card-Folio.png",
     description: "Streamlining care coordination and patient monitoring for healthcare teams.",
     results: "+60% Care Efficiency",

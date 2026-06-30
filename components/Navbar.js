@@ -67,9 +67,9 @@ export default function Navbar() {
               const dropdownItems = isServices
                 ? servicesList
                 : projects.map((p) => ({
-                    name: p.category,
-                    href: `/case-studies/${p.slug}`,
-                  }));
+                  name: p.category,
+                  href: `/case-studies/${p.slug}`,
+                }));
 
               return (
                 <div key={link.name} className="relative group h-full flex items-center">
@@ -84,13 +84,13 @@ export default function Navbar() {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  <div className="absolute top-full left-0 pt-4 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[999]">
-                    <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-xl rounded-2xl overflow-hidden py-2 flex flex-col">
+                  <div className="absolute top-full left-0 pt-4 w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[9999]">
+                    <div className="bg-white backdrop-blur-xl border border-gray-300 shadow-xl rounded-2xl overflow-hidden py-2 flex flex-col">
                       {dropdownItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
-                          className="px-5 py-3 text-[14px] font-medium text-text-secondary hover:text-primary hover:bg-gray-50/80 transition-colors"
+                          className="px-5 py-2 text-[14px] border border-gray-100/60 font-medium text-text-secondary hover:text-primary hover:bg-gray-50/80 transition-colors"
                         >
                           {item.name}
                         </Link>

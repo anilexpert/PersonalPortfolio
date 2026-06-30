@@ -511,11 +511,11 @@ export default function ScanovaHealthCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">From device implantation through MRI appointment — the complete patient journey.</p>
                   </div>
 
-                  <div className="glass-card rounded-[32px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg overflow-x-auto">
+                  <div className="glass-card rounded-[24px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg overflow-x-auto">
                      <div className="min-w-[640px]">
                         <div className="grid grid-cols-3 bg-gradient-to-r from-[#06B6D4]/10 to-[#0EA5E9]/10 border-b border-slate-200/60">
                            {["Stage", "Activity", "Pain Point"].map((h, i) => (
-                              <div key={i} className="p-5 border-r border-slate-200/60 last:border-r-0">
+                              <div key={i} className="px-5 py-3 border-r border-slate-200/60 last:border-r-0">
                                  <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#06B6D4]">{h}</span>
                               </div>
                            ))}
@@ -528,9 +528,9 @@ export default function ScanovaHealthCaseStudy() {
                            { stage: "5 · Appointment", activity: "Requires accurate records", pain: "Administrative delays" },
                         ].map((row, i) => (
                            <div key={i} className={`grid grid-cols-3 border-b border-slate-200/60 last:border-b-0 hover:bg-[#06B6D4]/5 transition-colors duration-300 ${i % 2 === 0 ? 'bg-white/40' : 'bg-white/20'}`}>
-                              <div className="p-5 border-r border-slate-200/60"><span className="font-bold text-sm text-[#06B6D4]">{row.stage}</span></div>
-                              <div className="p-5 border-r border-slate-200/60"><span className="text-sm text-text-secondary font-medium">{row.activity}</span></div>
-                              <div className="p-5"><span className="text-sm text-rose-500 font-semibold">{row.pain}</span></div>
+                              <div className="px-5 py-3 border-r border-slate-200/60"><span className="font-bold text-sm text-[#06B6D4]">{row.stage}</span></div>
+                              <div className="px-5 py-3 border-r border-slate-200/60"><span className="text-sm text-text-secondary font-medium">{row.activity}</span></div>
+                              <div className="px-5 py-3"><span className="text-sm text-rose-500 font-semibold">{row.pain}</span></div>
                            </div>
                         ))}
                      </div>
@@ -1070,7 +1070,7 @@ export default function ScanovaHealthCaseStudy() {
                      <div className="lg:col-span-12">
                         <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
-                              src="/images/spendora/Visual-UI.png"
+                              src="/images/scanova/ScanNovaAppScreens.png"
                               alt="Visual UI"
                               fill
                               className="object-cover relative z-10 duration-1000"

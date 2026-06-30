@@ -142,7 +142,7 @@ export default function KinoraCaseStudy() {
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
                      />
-                     
+
                      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                         <HeartPulse className="w-16 h-16 text-[#00DA99] opacity-20" strokeWidth={1} />
                         <span className="font-bold tracking-[0.25em] text-[11px] uppercase text-text-secondary opacity-40 text-center px-8">
@@ -150,13 +150,13 @@ export default function KinoraCaseStudy() {
                         </span>
                      </div>
                      <div className="absolute inset-0 bg-gradient-to-br from-[#00DA99]/5 via-transparent to-[#0D63CC]/5 pointer-events-none" />
-                        <Image
-                           src="/images/kinora/Family-Coordination-Hero.png"
-                           alt="Task Tracking · Med Reminders · Family Coordination · Vault · Timeline"
-                           fill
-                           className="object-cover relative z-10 duration-1000"
-                        />
-                     </div>
+                     <Image
+                        src="/images/kinora/Family-Coordination-Hero.png"
+                        alt="Task Tracking · Med Reminders · Family Coordination · Vault · Timeline"
+                        fill
+                        className="object-cover relative z-10 duration-1000"
+                     />
+                  </div>
                </motion.section>
 
                {/* ── OVERVIEW / PROBLEM / SOLUTION ───────────────────── */}
@@ -380,7 +380,7 @@ export default function KinoraCaseStudy() {
                                     {persona.needs.map((n, i) => (
                                        <span key={i} className="px-3 py-1.5 bg-white/80 rounded-lg border border-black/5 text-xs font-medium text-text-primary">
                                           {n}
-                                আকাশে
+                                          আকাশে
                                        </span>
                                     ))}
                                  </div>
@@ -516,11 +516,11 @@ export default function KinoraCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A day in the life of a family caregiver coordinating a medical appointment.</p>
                   </div>
 
-                  <div className="glass-card rounded-[32px] overflow-hidden border-2 border-[#00DA99]/10 hover:border-[#00DA99]/30 transition-all duration-500 shadow-lg overflow-x-auto">
+                  <div className="glass-card rounded-[24px] overflow-hidden border-2 border-[#00DA99]/10 hover:border-[#00DA99]/30 transition-all duration-500 shadow-lg overflow-x-auto">
                      <div className="min-w-[640px]">
                         <div className="grid grid-cols-3 bg-gradient-to-r from-[#00DA99]/10 to-[#0D63CC]/10 border-b border-slate-200/60">
                            {["Stage", "Activity", "Pain Point"].map((h, i) => (
-                              <div key={i} className="p-5 border-r border-slate-200/60 last:border-r-0">
+                              <div key={i} className="px-5 py-3 border-r border-slate-200/60 last:border-r-0">
                                  <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#00DA99]">{h}</span>
                               </div>
                            ))}
@@ -533,9 +533,9 @@ export default function KinoraCaseStudy() {
                            { stage: "5 · Routine", activity: "Adjusting med schedule based on new orders", pain: "High risk of miscommunication" },
                         ].map((row, i) => (
                            <div key={i} className={`grid grid-cols-3 border-b border-slate-200/60 last:border-b-0 hover:bg-[#00DA99]/5 transition-colors duration-300 ${i % 2 === 0 ? 'bg-white/40' : 'bg-white/20'}`}>
-                              <div className="p-5 border-r border-slate-200/60"><span className="font-bold text-sm text-[#00DA99]">{row.stage}</span></div>
-                              <div className="p-5 border-r border-slate-200/60"><span className="text-sm text-text-secondary font-medium">{row.activity}</span></div>
-                              <div className="p-5"><span className="text-sm text-rose-500 font-semibold">{row.pain}</span></div>
+                              <div className="px-5 py-3 border-r border-slate-200/60"><span className="font-bold text-sm text-[#00DA99]">{row.stage}</span></div>
+                              <div className="px-5 py-3 border-r border-slate-200/60"><span className="text-sm text-text-secondary font-medium">{row.activity}</span></div>
+                              <div className="px-5 py-3"><span className="text-sm text-rose-500 font-semibold">{row.pain}</span></div>
                            </div>
                         ))}
                      </div>
@@ -556,8 +556,8 @@ export default function KinoraCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users,  image: "/images/kinora/Care-Circle-Thumbnail.png"},
-                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare,  image: "/images/kinora/Smart-Task-Management-Thumbnail.png" },
+                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users, image: "/images/kinora/Care-Circle-Thumbnail.png" },
+                        { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare, image: "/images/kinora/Smart-Task-Management-Thumbnail.png" },
                         { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity, image: "/images/kinora/Medication-Reminders-Thumbnail.png" },
                         { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar, image: "/images/kinora/Appointment-Management-Thumbnail.png" },
                         { num: "05", title: "Care Timeline", desc: "Visibility with historical records.", color: "#10B981", icon: Zap, image: "/images/kinora/Care-Timeline-Thumbnail.png" },
@@ -587,11 +587,11 @@ export default function KinoraCaseStudy() {
                            <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
                               {/* <feature.icon size={48} strokeWidth={0.8} style={{ color: `${feature.color}30` }} />
                               <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" /> */}
-                             <Image 
-                                 src={feature.image} 
-                                 alt={feature.title} 
-                                 fill 
-                                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                              <Image
+                                 src={feature.image}
+                                 alt={feature.title}
+                                 fill
+                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                               />
                            </div>
                         </motion.div>
@@ -719,7 +719,7 @@ export default function KinoraCaseStudy() {
                            className="object-cover relative z-10 duration-1000"
                         />
                      </div>
-                      <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/kinora/Medication-Tracker-Thumbnail.png"
                            alt="Medication Tracker"
@@ -727,7 +727,7 @@ export default function KinoraCaseStudy() {
                            className="object-cover relative z-10 duration-1000"
                         />
                      </div>
-                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/kinora/Appointment-Management-Thumbnail.png"
                            alt="Appointment Management"
@@ -735,7 +735,7 @@ export default function KinoraCaseStudy() {
                            className="object-cover relative z-10 duration-1000"
                         />
                      </div>
-                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/kinora/Health-Vault-Thumbnail.png"
                            alt="Health Vault"
@@ -743,7 +743,7 @@ export default function KinoraCaseStudy() {
                            className="object-cover relative z-10 duration-1000"
                         />
                      </div>
-                       <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/kinora/Task-Assignments-Thumbnail.png"
                            alt="Task Assignments"
@@ -846,7 +846,7 @@ export default function KinoraCaseStudy() {
                      <div className="lg:col-span-12">
                         <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
-                              src="/images/spendora/Visual-UI.png"
+                              src="/images/kinora/KinoraAppScreens.png"
                               alt="Visual UI"
                               fill
                               className="object-cover relative z-10 duration-1000"

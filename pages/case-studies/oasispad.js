@@ -49,7 +49,7 @@ export default function OasisPadCaseStudy() {
    return (
       <>
          <Head>
-            <title>OasisPad™ | Case Study - Behavioral Health Operations</title>
+            <title>OasisPad | Case Study - Behavioral Health Operations</title>
          </Head>
 
          <Navbar />
@@ -104,13 +104,13 @@ export default function OasisPadCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        OasisPad™
+                        OasisPad
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Transforming <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Behavioral Healthcare Workflows</span>Through an Integrated SaaS Platform
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        OasisPad™ is a behavioral healthcare platform designed to streamline clinical documentation, care coordination, scheduling, compliance, and operational workflows across residential and behavioral health organizations.
+                        OasisPad is a behavioral healthcare platform designed to streamline clinical documentation, care coordination, scheduling, compliance, and operational workflows across residential and behavioral health organizations.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
@@ -171,7 +171,7 @@ export default function OasisPadCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
-                           Behavioral health organizations often rely on disconnected systems, manual documentation, and fragmented communication processes. OasisPad™ was designed to centralize clinical operations, simplify compliance management, and improve care coordination through a unified digital platform.
+                           Behavioral health organizations often rely on disconnected systems, manual documentation, and fragmented communication processes. OasisPad was designed to centralize clinical operations, simplify compliance management, and improve care coordination through a unified digital platform.
                         </p>
                      </div>
                   </div>
@@ -1152,7 +1152,7 @@ export default function OasisPadCaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.</p>
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.</p>
                            <div className="my-8 pt-8 border-t border-slate-200/50 max-w-2xl mx-auto">
                               <h3 className="text-2xl font-bold text-text-primary mb-2">Building Healthcare or Enterprise SaaS Products?</h3>
                               <p className="text-base md:text-lg text-text-secondary font-medium leading-relaxed">I help organizations design scalable healthcare, SaaS, and enterprise experiences that simplify complexity and drive operational efficiency.

@@ -8,7 +8,7 @@ const projects = [
   {
     slug: "spendora",
     id: "01",
-    name: "Spendora™",
+    name: "Spendora",
     category: "AI-POWERED SMART EXPENSE ECOSYSTEM",
     color: "#00DA99",
     dotColor: "#00DA99",
@@ -21,7 +21,7 @@ const projects = [
   {
     id: "02",
     slug: "carenova",
-    name: "carenova Systems™",
+    name: "carenova Systems",
     category: "FACILITY & COMPLIANCE PLATFORM",
     color: "#0D63CC",
     dotColor: "#0D63CC",
@@ -34,7 +34,7 @@ const projects = [
   {
     id: "03",
     slug: "oasispad",
-    name: "OasisPad™",
+    name: "OasisPad",
     category: "SMART KNOWLEDGE & PRODUCTIVITY",
     color: "#6B67CC",
     dotColor: "#6B67CC",
@@ -47,7 +47,7 @@ const projects = [
   {
     id: "04",
     slug: "ticketstack",
-    name: "TicketStack™",
+    name: "TicketStack",
     category: "RETAIL TICKETING REDESIGN",
     color: "#F43F5E",
     dotColor: "#F43F5E",
@@ -60,7 +60,7 @@ const projects = [
   {
     id: "05",
     slug: "marketvisionai",
-    name: "MarketVisionAI™",
+    name: "MarketVisionAI",
     category: "AI-POWERED MARKET INTELLIGENCE",
     color: "#F59E0B",
     dotColor: "#F59E0B",
@@ -73,7 +73,7 @@ const projects = [
   {
     id: "06",
     slug: "carenova",
-    name: "PulseGrid™",
+    name: "PulseGrid",
     category: "SAAS ANALYTICS & BI PLATFORM",
     color: "#8B5CF6",
     dotColor: "#8B5CF6",
@@ -86,7 +86,7 @@ const projects = [
   {
     id: "07",
     slug: "scanovahealth",
-    name: "ScanovaHealth™",
+    name: "ScanovaHealth",
     category: "AI-ASSISTED DEVICE VALIDATION",
     color: "#06B6D4",
     dotColor: "#06B6D4",
@@ -99,7 +99,7 @@ const projects = [
   {
     id: "08",
     slug: "kinora",
-    name: "Kinora™",
+    name: "Kinora",
     category: "SMART CAREGIVING PLATFORM",
     color: "#00DA99",
     dotColor: "#00DA99",
@@ -259,7 +259,7 @@ const SelectedWorks = () => {
                   </div>
 
                   <Link href={`/case-studies/${currentProject.slug}`} passHref>
-                    <motion.div 
+                    <motion.div
                       whileHover={{ scale: 1.02 }}
                       className="flex items-center gap-4 group cursor-pointer mb-2"
                     >
@@ -300,15 +300,15 @@ const SelectedWorks = () => {
         <div className="mt-10 flex items-center justify-between relative px-6">
           <div className="flex items-center gap-3">
             {projects.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setCurrentIndex(i)} 
-                className={`h-1.5 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-12 bg-secondary shadow-[0_0_15px_rgba(13,99,204,0.3)]' : 'w-1.5 bg-text-secondary/20 hover:bg-text-secondary/40'}`} 
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-12 bg-secondary shadow-[0_0_15px_rgba(13,99,204,0.3)]' : 'w-1.5 bg-text-secondary/20 hover:bg-text-secondary/40'}`}
               />
             ))}
           </div>
           <div className="flex items-center gap-4 font-semibold text-[16px] text-text-secondary/40">
-            <span className="text-text-primary text-[24px] font-black">0{currentIndex + 1}</span> 
+            <span className="text-text-primary text-[24px] font-black">0{currentIndex + 1}</span>
             <div className="w-8 h-[1px] bg-text-secondary/40" />
             <span>0{projects.length}</span>
           </div>

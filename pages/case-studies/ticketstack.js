@@ -47,7 +47,7 @@ export default function TicketStackCaseStudy() {
    return (
       <>
          <Head>
-            <title>TicketStack™ | Enterprise Retail Ticketing Platform</title>
+            <title>TicketStack | Enterprise Retail Ticketing Platform</title>
             <meta name="description" content="End-to-End Product Case Study: How we transformed a fragmented retail ticketing ecosystem into a centralized operational command center." />
          </Head>
 
@@ -101,13 +101,13 @@ export default function TicketStackCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        TicketStack™
+                        TicketStack
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Enterprise Retail <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        TicketStack™ is a retail ticketing and distribution platform designed to centralize inventory management, campaign operations, sales visibility, and retail partner coordination through a unified enterprise experience
+                        TicketStack is a retail ticketing and distribution platform designed to centralize inventory management, campaign operations, sales visibility, and retail partner coordination through a unified enterprise experience
                      </motion.p>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal mt-4">
                         The legacy platform had strong operational capabilities but suffered from usability issues, fragmented workflows, outdated interfaces, and poor visibility into ticket performance.
@@ -549,11 +549,11 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Deployment Flow</h3>
-                        
+
                         <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
                            {/* Dashed line */}
                            <div className="hidden md:block absolute top-[50px] lg:top-[55px] xl:top-[60px] left-[5%] right-[5%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
-                           
+
                            {[
                               { title: "CREATE", desc: "Ticket", icon: Ticket, color: "#0D63CC", style: "dashed" },
                               { title: "CONFIGURE", desc: "Pricing", icon: Settings, color: "#0D63CC", style: "dashed" },
@@ -565,7 +565,7 @@ export default function TicketStackCaseStudy() {
                               const isDashed = step.style === "dashed";
                               const isSolid = step.style === "solid";
                               const isDark = step.style === "dark";
-                              
+
                               return (
                                  <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
                                     {/* Arrow on line */}
@@ -574,14 +574,13 @@ export default function TicketStackCaseStudy() {
                                           <ArrowRight size={18} className="text-slate-300" strokeWidth={2.5} />
                                        </div>
                                     )}
-                                    
+
                                     {/* Circle Node */}
-                                    <div 
-                                       className={`w-[100px] h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[120px] xl:h-[120px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
-                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                          isSolid ? "border-[2px] border-solid shadow-md" :
-                                          "border-none shadow-xl"
-                                       }`}
+                                    <div
+                                       className={`w-[100px] h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[120px] xl:h-[120px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                             isSolid ? "border-[2px] border-solid shadow-md" :
+                                                "border-none shadow-xl"
+                                          }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
                                           backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
@@ -593,7 +592,7 @@ export default function TicketStackCaseStudy() {
                                           {step.title}
                                        </span>
                                     </div>
-                                    
+
                                     {/* Description Text */}
                                     <p className="text-center mt-4 text-[12px] font-medium text-text-secondary max-w-[120px] mx-auto">
                                        {step.desc}
@@ -608,11 +607,11 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Inventory Distribution Flow</h3>
-                        
+
                         <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
                            {/* Dashed line */}
                            <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
-                           
+
                            {[
                               { title: "CREATE", desc: "Inventory", icon: Grid, color: "#00DA99", style: "dashed" },
                               { title: "ALLOCATE", desc: "Resources", icon: PieChart, color: "#00DA99", style: "dashed" },
@@ -623,7 +622,7 @@ export default function TicketStackCaseStudy() {
                               const isDashed = step.style === "dashed";
                               const isSolid = step.style === "solid";
                               const isDark = step.style === "dark";
-                              
+
                               return (
                                  <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
                                     {/* Arrow on line */}
@@ -632,14 +631,13 @@ export default function TicketStackCaseStudy() {
                                           <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
                                        </div>
                                     )}
-                                    
+
                                     {/* Circle Node */}
-                                    <div 
-                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
-                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                          isSolid ? "border-[2px] border-solid shadow-md" :
-                                          "border-none shadow-xl"
-                                       }`}
+                                    <div
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                             isSolid ? "border-[2px] border-solid shadow-md" :
+                                                "border-none shadow-xl"
+                                          }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
                                           backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
@@ -651,7 +649,7 @@ export default function TicketStackCaseStudy() {
                                           {step.title}
                                        </span>
                                     </div>
-                                    
+
                                     {/* Description Text */}
                                     <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
                                        {step.desc}
@@ -666,11 +664,11 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Management Flow</h3>
-                        
+
                         <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
                            {/* Dashed line */}
                            <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
-                           
+
                            {[
                               { title: "CREATE", desc: "Campaign", icon: Target, color: "#0D63CC", style: "dashed" },
                               { title: "CONFIGURE", desc: "Settings", icon: Settings, color: "#0D63CC", style: "dashed" },
@@ -681,7 +679,7 @@ export default function TicketStackCaseStudy() {
                               const isDashed = step.style === "dashed";
                               const isSolid = step.style === "solid";
                               const isDark = step.style === "dark";
-                              
+
                               return (
                                  <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
                                     {/* Arrow on line */}
@@ -690,14 +688,13 @@ export default function TicketStackCaseStudy() {
                                           <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
                                        </div>
                                     )}
-                                    
+
                                     {/* Circle Node */}
-                                    <div 
-                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
-                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                          isSolid ? "border-[2px] border-solid shadow-md" :
-                                          "border-none shadow-xl"
-                                       }`}
+                                    <div
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                             isSolid ? "border-[2px] border-solid shadow-md" :
+                                                "border-none shadow-xl"
+                                          }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
                                           backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
@@ -709,7 +706,7 @@ export default function TicketStackCaseStudy() {
                                           {step.title}
                                        </span>
                                     </div>
-                                    
+
                                     {/* Description Text */}
                                     <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
                                        {step.desc}
@@ -724,11 +721,11 @@ export default function TicketStackCaseStudy() {
                      <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Reporting Flow</h3>
-                        
+
                         <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mt-12 mb-8 z-10">
                            {/* Dashed line */}
                            <div className="hidden md:block absolute top-[64px] left-[15%] right-[15%] h-[2px] border-t-[2px] border-dashed border-slate-200 z-0" />
-                           
+
                            {[
                               { title: "COLLECT", desc: "Data", icon: Layers, color: "#8B5CF6", style: "dashed" },
                               { title: "ANALYZE", desc: "Metrics", icon: BarChart3, color: "#8B5CF6", style: "dashed" },
@@ -738,7 +735,7 @@ export default function TicketStackCaseStudy() {
                               const isDashed = step.style === "dashed";
                               const isSolid = step.style === "solid";
                               const isDark = step.style === "dark";
-                              
+
                               return (
                                  <div key={j} className="flex flex-col items-center relative group w-full md:flex-1">
                                     {/* Arrow on line */}
@@ -747,14 +744,13 @@ export default function TicketStackCaseStudy() {
                                           <ArrowRight size={20} className="text-slate-300" strokeWidth={2.5} />
                                        </div>
                                     )}
-                                    
+
                                     {/* Circle Node */}
-                                    <div 
-                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${
-                                          isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                          isSolid ? "border-[2px] border-solid shadow-md" :
-                                          "border-none shadow-xl"
-                                       }`}
+                                    <div
+                                       className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
+                                             isSolid ? "border-[2px] border-solid shadow-md" :
+                                                "border-none shadow-xl"
+                                          }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
                                           backgroundColor: isSolid ? `${step.color}15` : isDark ? step.color : 'white',
@@ -766,7 +762,7 @@ export default function TicketStackCaseStudy() {
                                           {step.title}
                                        </span>
                                     </div>
-                                    
+
                                     {/* Description Text */}
                                     <p className="text-center mt-5 text-[13px] font-medium text-text-secondary max-w-[140px] mx-auto">
                                        {step.desc}
@@ -1212,7 +1208,7 @@ export default function TicketStackCaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">

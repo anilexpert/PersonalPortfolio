@@ -34,8 +34,8 @@ export default function SpendoraCaseStudy() {
    return (
       <>
          <Head>
-            <title>SPENDORA™ | Career-Aligned Financial Literacy Platform</title>
-            <meta name="description" content="SPENDORA™ is a career-aligned financial literacy and future planning platform designed to help students, educational institutions, and financial organizations bridge the gap between academic aspirations and real-world financial readiness." />
+            <title>SPENDORA | Career-Aligned Financial Literacy Platform</title>
+            <meta name="description" content="SPENDORA is a career-aligned financial literacy and future planning platform designed to help students, educational institutions, and financial organizations bridge the gap between academic aspirations and real-world financial readiness." />
          </Head>
 
          <Navbar />
@@ -88,7 +88,7 @@ export default function SpendoraCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-text-primary">
-                        SPENDORA™
+                        SPENDORA
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl leading-snug">
                         Designing an <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">AI-Powered Financial Literacy</span> & <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Expense Management</span> Platform
@@ -97,7 +97,7 @@ export default function SpendoraCaseStudy() {
                         Bridging the gap between academic aspirations and real-world financial readiness.
                      </motion.p>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base md:text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        SPENDORA™ is an AI-powered financial platform designed to help users manage expenses, improve financial literacy, and make smarter money decisions through personalized insights and intuitive analytics.
+                        SPENDORA is an AI-powered financial platform designed to help users manage expenses, improve financial literacy, and make smarter money decisions through personalized insights and intuitive analytics.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
@@ -470,10 +470,10 @@ export default function SpendoraCaseStudy() {
                      </div>
                      <div className="lg:col-span-8">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-5">
-                           <span className="text-text-primary font-bold">SPENDORA™</span> enables students to build realistic future financial scenarios by combining career pathways, income projections, geographic cost benchmarks, expense simulations, student debt forecasting, and peer comparisons.
+                           <span className="text-text-primary font-bold">SPENDORA</span> enables students to build realistic future financial scenarios by combining career pathways, income projections, geographic cost benchmarks, expense simulations, student debt forecasting, and peer comparisons.
                         </p>
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           The platform then transforms this information into actionable insights that help students understand their future financial landscape. Instead of teaching budgeting theoretically, SPENDORA™ allows students to experience future financial realities interactively.
+                           The platform then transforms this information into actionable insights that help students understand their future financial landscape. Instead of teaching budgeting theoretically, SPENDORA allows students to experience future financial realities interactively.
                         </p>
                      </div>
                   </div>

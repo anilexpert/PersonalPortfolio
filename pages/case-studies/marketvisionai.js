@@ -48,7 +48,7 @@ export default function MarketVisionAICaseStudy() {
    return (
       <>
          <Head>
-            <title>MarketVisionAI™ | Case Study - AI-Powered Marketing Intelligence</title>
+            <title>MarketVisionAI | Case Study - AI-Powered Marketing Intelligence</title>
          </Head>
 
          <Navbar />
@@ -101,7 +101,7 @@ export default function MarketVisionAICaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        MarketVisionAI™
+                        MarketVisionAI
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Designing an AI-Powered <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Marketing Intelligence Platform</span>
@@ -166,7 +166,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium">
-                           Marketing teams often operate across multiple advertising, analytics, and customer engagement platforms. This fragmented ecosystem makes it difficult to gain a unified view of campaign performance. MarketVisionAI™ was designed to centralize marketing intelligence, automate analysis, and provide AI-powered recommendations that help teams optimize performance more effectively.
+                           Marketing teams often operate across multiple advertising, analytics, and customer engagement platforms. This fragmented ecosystem makes it difficult to gain a unified view of campaign performance. MarketVisionAI was designed to centralize marketing intelligence, automate analysis, and provide AI-powered recommendations that help teams optimize performance more effectively.
                         </p>
                      </div>
                   </div>
@@ -1363,7 +1363,7 @@ export default function MarketVisionAICaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Explore the complete design system, interactive AI workflows, complex data visualizations, and high-fidelity dashboard prototypes behind MarketVisionAI™.
+                              Explore the complete design system, interactive AI workflows, complex data visualizations, and high-fidelity dashboard prototypes behind MarketVisionAI.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">

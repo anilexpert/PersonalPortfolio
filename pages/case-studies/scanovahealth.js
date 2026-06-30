@@ -49,8 +49,8 @@ export default function ScanovaHealthCaseStudy() {
    return (
       <>
          <Head>
-            <title>ScanovaHealth™ | Case Study — AI-Assisted Medical Device Validation &amp; MRI Readiness Platform</title>
-            <meta name="description" content="ScanovaHealth™ is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices for MRI preparation." />
+            <title>ScanovaHealth | Case Study — AI-Assisted Medical Device Validation &amp; MRI Readiness Platform</title>
+            <meta name="description" content="ScanovaHealth is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices for MRI preparation." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
          </Head>
 
@@ -69,7 +69,7 @@ export default function ScanovaHealthCaseStudy() {
                      <span>/</span>
                      <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
                      <span>/</span>
-                     <span className="text-[#06B6D4]">ScanovaHealth™</span>
+                     <span className="text-[#06B6D4]">ScanovaHealth</span>
                   </motion.div>
 
                   <motion.h1
@@ -106,7 +106,7 @@ export default function ScanovaHealthCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        ScanovaHealth™
+                        ScanovaHealth
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         AI-Assisted <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Medical Device Validation &amp; MRI Readiness Platform</span>
@@ -138,17 +138,24 @@ export default function ScanovaHealthCaseStudy() {
                {/* ── MAIN HERO IMAGE / PLACEHOLDER ───────────────────── */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
-                     <div
+                     <Image
+                        src="/images/scanova/screenbanner.png"
+                        alt="ScanovaHealth Platform Interface"
+                        fill
+                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                     />
+
+                     {/* <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)' }}
-                     />
-                     <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
+                     /> */}
+                     {/* <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                         <Smartphone className="w-16 h-16 text-[#06B6D4] opacity-20" strokeWidth={1} />
                         <span className="font-bold tracking-[0.25em] text-[11px] uppercase text-text-secondary opacity-40 text-center px-8">
                            ScanovaHealth Mobile App — Device Scan · Device Library · MRI Compatibility · AI Validation · PDF Reports · MRI Center Discovery
                         </span>
-                     </div>
-                     <div className="absolute inset-0 bg-gradient-to-br from-[#06B6D4]/5 via-transparent to-[#0EA5E9]/5 pointer-events-none" />
+                     </div> */}
+                     {/* <div className="absolute inset-0 bg-gradient-to-br from-[#06B6D4]/5 via-transparent to-[#0EA5E9]/5 pointer-events-none" /> */}
                   </div>
                </motion.section>
 
@@ -1046,7 +1053,7 @@ export default function ScanovaHealthCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 ScanovaHealth™ transforms how patients manage implant device information — replacing fragmented paper-based workflows with a unified, AI-assisted mobile platform. By combining device scanning, intelligent validation, and MRI center discovery, the platform empowers patients and caregivers to prepare confidently for MRI-related healthcare journeys while maintaining complete transparency about the boundaries of informational support.
+                                 ScanovaHealth transforms how patients manage implant device information — replacing fragmented paper-based workflows with a unified, AI-assisted mobile platform. By combining device scanning, intelligent validation, and MRI center discovery, the platform empowers patients and caregivers to prepare confidently for MRI-related healthcare journeys while maintaining complete transparency about the boundaries of informational support.
                               </p>
                            </div>
                         </div>
@@ -1095,7 +1102,7 @@ export default function ScanovaHealthCaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">

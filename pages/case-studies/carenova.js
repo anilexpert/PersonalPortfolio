@@ -50,8 +50,8 @@ export default function CarenovaSystemsCaseStudy() {
    return (
       <>
          <Head>
-            <title>Carenova™ | Intelligent Facility & Compliance Management</title>
-            <meta name="description" content="Carenova Systems™ Intelligent Facility & Compliance Management for Multi-Facility Healthcare Organizations." />
+            <title>Carenova | Intelligent Facility & Compliance Management</title>
+            <meta name="description" content="Carenova Systems Intelligent Facility & Compliance Management for Multi-Facility Healthcare Organizations." />
          </Head>
 
          <Navbar />
@@ -106,13 +106,13 @@ export default function CarenovaSystemsCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        Carenova Systems™
+                        Carenova Systems
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Designing a Scalable  <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Healthcare Operations & Compliance Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
-                        Carenova™ is a healthcare operations platform designed for residential care organizations to streamline compliance, workforce management, facility operations, and regulatory reporting across multiple facilities.
+                        Carenova is a healthcare operations platform designed for residential care organizations to streamline compliance, workforce management, facility operations, and regulatory reporting across multiple facilities.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">

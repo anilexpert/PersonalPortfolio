@@ -47,8 +47,8 @@ export default function SuperCampusCaseStudy() {
    return (
       <>
          <Head>
-            <title>SuperCampus™ | Case Study — End-to-End School Management Ecosystem</title>
-            <meta name="description" content="SuperCampus™ is a comprehensive multi-role school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem." />
+            <title>SuperCampus | Case Study — End-to-End School Management Ecosystem</title>
+            <meta name="description" content="SuperCampus is a comprehensive multi-role school management platform connecting administrators, teachers, students, and parents in a unified digital ecosystem." />
          </Head>
 
          <Navbar />
@@ -102,13 +102,13 @@ export default function SuperCampusCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        SuperCampus™
+                        SuperCampus
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Designing a Modern <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Operations & Learning Management Platform</span>
                      </motion.h2>
                      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base text-text-secondary max-w-3xl leading-relaxed font-normal mb-4">
-                        SuperCampus™ is a comprehensive education management platform designed to streamline academic operations, improve communication, and connect administrators, teachers, students, and parents through a unified digital ecosystem.
+                        SuperCampus is a comprehensive education management platform designed to streamline academic operations, improve communication, and connect administrators, teachers, students, and parents through a unified digital ecosystem.
                      </motion.p>
                      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="flex flex-wrap gap-2">
                         {["Product Strategy", "UX Research", "Information Architecture", "Multi-Role Design", "Mobile & Web"].map((tag, i) => (
@@ -169,7 +169,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
                      <div className="lg:col-span-9">
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
-                           Educational institutions often rely on disconnected systems, manual administrative processes, and fragmented communication channels. SuperCampus™ was designed to centralize academic operations, student information, communication, attendance, and reporting into a single scalable platform.
+                           Educational institutions often rely on disconnected systems, manual administrative processes, and fragmented communication channels. SuperCampus was designed to centralize academic operations, student information, communication, attendance, and reporting into a single scalable platform.
                         </p>
                      </div>
                   </div>
@@ -349,7 +349,7 @@ export default function SuperCampusCaseStudy() {
                         </span>
                      </div>
                      <h2 className="text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
-                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus™ supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
+                     <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
                   <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mb-16">
                      {/* Dashed line */}
@@ -1517,7 +1517,7 @@ export default function SuperCampusCaseStudy() {
                                  Conclusion
                               </h4>
                               <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
-                                 SuperCampus™ successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
+                                 SuperCampus successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
                               </p>
                            </div>
                         </div>

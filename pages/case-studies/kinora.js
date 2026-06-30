@@ -49,7 +49,7 @@ export default function KinoraCaseStudy() {
    return (
       <>
          <Head>
-            <title>Kinora™ | Case Study — Smart Caregiving & Coordination Platform</title>
+            <title>Kinora | Case Study — Smart Caregiving & Coordination Platform</title>
             <meta name="description" content="Kinora is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, and manage health information." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
          </Head>
@@ -69,7 +69,7 @@ export default function KinoraCaseStudy() {
                      <span>/</span>
                      <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
                      <span>/</span>
-                     <span className="text-[#00DA99]">Kinora™</span>
+                     <span className="text-[#00DA99]">Kinora</span>
                   </motion.div>
 
                   <motion.h1
@@ -106,7 +106,7 @@ export default function KinoraCaseStudy() {
                         </span>
                      </motion.div>
                      <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
-                        Kinora™
+                        Kinora
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Caregiving Simplified — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">The Smarter Way to Manage the Weight of Care</span>
@@ -556,7 +556,7 @@ export default function KinoraCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Care Circle™", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users, image: "/images/kinora/Care-Circle-Thumbnail.png" },
+                        { num: "01", title: "Care Circle", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users, image: "/images/kinora/Care-Circle-Thumbnail.png" },
                         { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare, image: "/images/kinora/Smart-Task-Management-Thumbnail.png" },
                         { num: "03", title: "Medication Reminders", desc: "Improve adherence with schedules.", color: "#8B5CF6", icon: Activity, image: "/images/kinora/Medication-Reminders-Thumbnail.png" },
                         { num: "04", title: "Appointment Management", desc: "Calendars, notes, and follow-ups.", color: "#F59E0B", icon: Calendar, image: "/images/kinora/Appointment-Management-Thumbnail.png" },
@@ -871,7 +871,7 @@ export default function KinoraCaseStudy() {
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
-                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems™.
+                              Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.
                            </p>
 
                            <div className="flex flex-wrap justify-center gap-2 mb-10">

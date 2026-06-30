@@ -10,7 +10,7 @@ import Link from 'next/link';
 // Project data
 const allProjects = [
   {
-    title: 'Spendora™',
+    title: 'Spendora',
     slug: 'spendora',
     subtitle: 'AI‑Powered Smart Expense',
     img: '/images/Spendora-Card-Folio.png',
@@ -18,7 +18,7 @@ const allProjects = [
       'A full‑stack SaaS platform that streamlines expense reporting with AI‑driven categorisation and real‑time analytics.',
   },
   {
-    title: 'Carenova™',
+    title: 'Carenova',
     slug: 'carenova',
     subtitle: 'Facility & Compliance',
     img: '/images/Carenova-Card-Folio.png',
@@ -26,7 +26,7 @@ const allProjects = [
       'Enterprise‑grade solution for facility operations, allowing automated compliance checks and resource scheduling.',
   },
   {
-    title: 'OasisPad™',
+    title: 'OasisPad',
     slug: 'oasispad',
     subtitle: 'Smart Knowledge Workspace',
     img: '/images/OasisPad-Card-Folio.png',
@@ -34,7 +34,7 @@ const allProjects = [
       'A collaborative note‑taking environment with AI‑suggested tagging and contextual linking.',
   },
   {
-    title: 'TicketStack™',
+    title: 'TicketStack',
     slug: 'ticketstack',
     subtitle: 'Retail Ticketing Redesign',
     img: '/images/TicketStack-Card-Folio.png',
@@ -42,7 +42,7 @@ const allProjects = [
       'Revamped ticketing UI for retail stores, delivering frictionless checkout and analytics.',
   },
   {
-    title: 'MarketVisionAI™',
+    title: 'MarketVisionAI',
     slug: 'marketvisionai',
     subtitle: 'AI Market Intelligence',
     img: '/images/MarketVision-Card-Folio.png',
@@ -50,7 +50,7 @@ const allProjects = [
       'AI-powered market intelligence platform that continuously analyzes global market signals and proactively recommends strategic business opportunities.',
   },
   {
-    title: 'ScanovaHealth™',
+    title: 'ScanovaHealth',
     slug: 'scanovahealth',
     subtitle: 'Medical Device Validation',
     img: '/images/ScanovaHealth-Card-Folio.png',
@@ -58,7 +58,7 @@ const allProjects = [
       'AI-assisted medical device validation platform accelerating MRI compliance, risk analysis, and clinical validation workflows.',
   },
   {
-    title: 'Kinora™',
+    title: 'Kinora',
     slug: 'kinora',
     subtitle: 'Smart Caregiving Platform',
     img: '/images/Kinora-Card-Folio.png',
@@ -147,7 +147,7 @@ export default function ProjectsSlider() {
           className="flex flex-col md:flex-row w-full"
           style={{
             height: 'auto',
-            minHeight: 420,
+            minHeight: 540,
             gap: 20,
             borderRadius: 24,
           }}
@@ -159,7 +159,7 @@ export default function ProjectsSlider() {
               <div
                 key={proj.title}
                 onClick={() => setActive(idx)}
-                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[28px] ${isActive ? 'h-[420px] md:h-[420px]' : 'h-[140px] md:h-[420px]'
+                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[24px] ${isActive ? 'h-[320px] md:h-[420px]' : 'h-[140px] md:h-[420px]'
                   }`}
 
                 style={{
@@ -218,7 +218,7 @@ export default function ProjectsSlider() {
                     >
                       {/* Blurry glass panel containing Title, Subtitle, and Description */}
                       <div
-                        className="w-full flex flex-col items-center p-6 md:p-10"
+                        className="w-full flex flex-col items-center p-4 md:p-10"
                         style={{
                           background: 'linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
                           backdropFilter: 'blur(40px)',
@@ -238,9 +238,9 @@ export default function ProjectsSlider() {
                         <p className="text-white/95 text-[12px] md:text-[14px] leading-relaxed text-center font-normal max-w-[90%]">
                           {proj.description}
                         </p>
-                        <div className="mt-6">
+                        <div className="mt-4 lg:mt-6">
                           <Link href={`/case-studies/${proj.slug}`}>
-                            <button className="btn-premium py-2 md:py-2.5 px-4 md:px-5 text-[12px] md:text-[13px]">
+                            <button className="btn-premium py-2 md:py-2.5 px-3 md:px-4 text-[12px] md:text-[13px]">
                               <span className="uppercase">Read Case Study</span> <ArrowUpRight size={16} />
                             </button>
                           </Link>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MessageCircle, ChevronDown } from 'lucide-react';
+import { MessageCircle, ChevronDown, Menu, X } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 const servicesList = [
@@ -15,6 +15,7 @@ const servicesList = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +76,7 @@ export default function Navbar() {
                 <div key={link.name} className="relative group h-full flex items-center">
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative py-2"
+                    className="flex items-center gap-1 text-[16px] font-medium text-text-secondary hover:text-text-primary uppercase transition-all relative py-2 "
                   >
                     {link.name}
                     <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
@@ -117,13 +118,49 @@ export default function Navbar() {
         </div>
 
         {/* Right: CTA */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-2 sm:gap-4">
           <Link href="/contact" passHref>
-            <button className="btn-premium py-1 md:py-2 md:px-4 text-[12px] md:text-[14px] ">
-              <span className="uppercase">Let's Talk</span>
-              <MessageCircle size={18} />
+            <button className="btn-premium py-1.5 md:py-2 md:px-4 px-3 text-[12px] md:text-[14px] ">
+              <span className="uppercase hidden sm:inline">Let's Talk</span>
+              <span className="uppercase sm:hidden">Talk</span>
+              <MessageCircle size={16} />
             </button>
           </Link>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden p-2 text-text-primary rounded-xl bg-gray-50/50 border border-gray-100 hover:bg-gray-100 transition-colors pointer-events-auto cursor-pointer"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      <div
+        className={`absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl overflow-hidden transition-all duration-300 origin-top md:hidden pointer-events-auto ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
+          }`}
+      >
+        <div className="flex flex-col p-2">
+          {navLinks.map((link) => {
+            const isServices = link.name === 'Services';
+            const isCaseStudies = link.name === 'Case Studies';
+
+            return (
+              <div key={link.name} className="flex flex-col">
+                <Link
+                  href={link.href}
+                  className="px-4 py-3 text-[15px] font-medium text-text-secondary hover:text-primary hover:bg-primary/5 rounded-xl transition-all flex items-center justify-between"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                  {(isServices || isCaseStudies) && <ChevronDown size={16} className="-rotate-90 opacity-40" />}
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </nav>

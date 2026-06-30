@@ -23,7 +23,7 @@ const FeaturedCaseStudy = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="group relative overflow-hidden glass-card bg-white/40 border border-white/40 rounded-[24px] lg:rounded-[32px] transition-all duration-500 hover:shadow-2xl hover:bg-white/50"
+          className="group relative overflow-hidden glass-card bg-white/40 border border-white/40 rounded-[16px] lg:rounded-[24px] transition-all duration-500 hover:shadow-2xl hover:bg-white/50"
         >
           {/* Top Right Glow Effect */}
           <div
@@ -33,7 +33,7 @@ const FeaturedCaseStudy = () => {
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0">
             {/* Left: Graphic */}
-            <div className="p-6 md:p-8 lg:p-4">
+            <div className="p-3 md:p-4 lg:p-6">
               <div className="w-full h-full min-h-[300px] md:min-h-[400px] rounded-2xl bg-gradient-to-br from-[#00DA99] to-[#0D63CC] p-2 flex items-center justify-center relative overflow-hidden shadow-inner">
                 {/* Project Image */}
                 <img

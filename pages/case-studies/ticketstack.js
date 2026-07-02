@@ -578,8 +578,8 @@ export default function TicketStackCaseStudy() {
                                     {/* Circle Node */}
                                     <div
                                        className={`w-[100px] h-[100px] lg:w-[110px] lg:h-[110px] xl:w-[120px] xl:h-[120px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                             isSolid ? "border-[2px] border-solid shadow-md" :
-                                                "border-none shadow-xl"
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                             "border-none shadow-xl"
                                           }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
@@ -635,8 +635,8 @@ export default function TicketStackCaseStudy() {
                                     {/* Circle Node */}
                                     <div
                                        className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                             isSolid ? "border-[2px] border-solid shadow-md" :
-                                                "border-none shadow-xl"
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                             "border-none shadow-xl"
                                           }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
@@ -692,8 +692,8 @@ export default function TicketStackCaseStudy() {
                                     {/* Circle Node */}
                                     <div
                                        className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                             isSolid ? "border-[2px] border-solid shadow-md" :
-                                                "border-none shadow-xl"
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                             "border-none shadow-xl"
                                           }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
@@ -748,8 +748,8 @@ export default function TicketStackCaseStudy() {
                                     {/* Circle Node */}
                                     <div
                                        className={`w-[120px] h-[120px] lg:w-[130px] lg:h-[130px] rounded-full flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-2 z-10 mx-auto relative ${isDashed ? "bg-white border-[2px] border-dashed shadow-sm" :
-                                             isSolid ? "border-[2px] border-solid shadow-md" :
-                                                "border-none shadow-xl"
+                                          isSolid ? "border-[2px] border-solid shadow-md" :
+                                             "border-none shadow-xl"
                                           }`}
                                        style={{
                                           borderColor: isDashed ? `${step.color}80` : isSolid ? step.color : 'transparent',
@@ -1147,7 +1147,7 @@ export default function TicketStackCaseStudy() {
 
                         <div className="relative">
                            <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
-                           <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 font-serif leading-none select-none rotate-180 z-0">"</div>
+                           <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none rotate-180 z-0">"</div>
                            <div className="relative z-10 px-6 py-4">
                               <p className="text-xl md:text-2xl font-bold text-text-primary leading-[1.4] mb-6">
                                  Designing enterprise retail products requires balancing operational complexity with usability.

@@ -622,10 +622,10 @@ export default function KinoraCaseStudy() {
                         </h4>
                         <div className="grid grid-cols-2 gap-4">
                            {[
-                              { bg: 'bg-[#00DA99]', label: 'Primary', hex: '#00DA99' },
-                              { bg: 'bg-[#0D63CC]', label: 'Secondary', hex: '#0D63CC' },
-                              { bg: 'bg-[#282360]', label: 'Accent', hex: '#282360' },
-                              { bg: 'bg-[#F7F9FC]', label: 'Neutral', hex: '#F7F9FC' }
+                              { bg: 'bg-[#055E64]', label: 'Primary', hex: '#055E64' },
+                              { bg: 'bg-[#3A147B]', label: 'Secondary', hex: '#3A147B' },
+                              { bg: 'bg-[#FF9900]', label: 'Accent', hex: '#FF9900' },
+                              { bg: 'bg-[#8EDBD5]', label: 'Neutral', hex: '#8EDBD5' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
                                  <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-black/5 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />

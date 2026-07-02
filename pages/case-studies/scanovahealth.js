@@ -556,12 +556,12 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                      {[
-                        { num: "01", title: "Device Card Scanning", desc: "Capture implant information quickly — reduced manual entry, faster onboarding, improved accuracy.", color: "#06B6D4", icon: Scan },
-                        { num: "02", title: "Manual Device Entry", desc: "Alternative workflow capturing manufacturer, model, serial number, implant date, category, and notes.", color: "#0EA5E9", icon: PenTool },
-                        { num: "03", title: "Device Library", desc: "Centralized repository with search, filters, categories, and device timeline management.", color: "#8B5CF6", icon: FolderOpen },
-                        { num: "04", title: "MRI Compatibility Reference", desc: "Device reference details, reported MRI compatibility status, manufacturer info, and supporting notes.", color: "#F59E0B", icon: Eye },
-                        { num: "05", title: "PDF Report Generation", desc: "Professional reports containing device information, references, metadata, and user notes.", color: "#F43F5E", icon: FileText },
-                        { num: "06", title: "MRI Center Finder", desc: "Map view with distance calculations, contact information, and directions to nearby MRI facilities.", color: "#06B6D4", icon: MapPin },
+                        { num: "01", title: "Device Card Scanning", desc: "Capture implant information quickly — reduced manual entry, faster onboarding, improved accuracy.", color: "#06B6D4", icon: Scan, img: "/images/scanova/DeviceCardScanning.png" },
+                        { num: "02", title: "Manual Device Entry", desc: "Alternative workflow capturing manufacturer, model, serial number, implant date, category, and notes.", color: "#0EA5E9", icon: PenTool, img: "/images/scanova/ManualDeviceEntry.png" },
+                        { num: "03", title: "Device Library", desc: "Centralized repository with search, filters, categories, and device timeline management.", color: "#8B5CF6", icon: FolderOpen, img: "/images/scanova/DeviceLibrary.png" },
+                        { num: "04", title: "MRI Compatibility Reference", desc: "Device reference details, reported MRI compatibility status, manufacturer info, and supporting notes.", color: "#F59E0B", icon: Eye, img: "/images/scanova/MRICompatibilityReference.png" },
+                        { num: "05", title: "PDF Report Generation", desc: "Professional reports containing device information, references, metadata, and user notes.", color: "#F43F5E", icon: FileText, img: "/images/scanova/PDFReportGeneration.png" },
+                        { num: "06", title: "MRI Center Finder", desc: "Map view with distance calculations, contact information, and directions to nearby MRI facilities.", color: "#06B6D4", icon: MapPin, img: "/images/scanova/MRICenterFinder.png" },
                      ].map((feature, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
                            className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
@@ -574,6 +574,12 @@ export default function ScanovaHealthCaseStudy() {
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
                            <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
+                              <Image
+                                 src={feature.img}
+                                 alt={feature.title}
+                                 fill
+                                 className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                              />
                               <feature.icon size={48} strokeWidth={0.8} style={{ color: `${feature.color}30` }} />
                               <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
                            </div>
@@ -748,10 +754,10 @@ export default function ScanovaHealthCaseStudy() {
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-[#06B6D4] rounded-full" /> Color Palette</h4>
                         <div className="grid grid-cols-3 gap-4">
                            {[
-                              { bg: 'bg-[#06B6D4]', label: 'Cyan', hex: '#06B6D4' },
-                              { bg: 'bg-[#0EA5E9]', label: 'Sky', hex: '#0EA5E9' },
-                              { bg: 'bg-[#0C4A6E]', label: 'Deep', hex: '#0C4A6E' },
-                              { bg: 'bg-[#BAE6FD]', label: 'Light', hex: '#BAE6FD' },
+                              { bg: 'bg-[#8ED973]', label: 'Green', hex: '#8ED973' },
+                              { bg: 'bg-[#FFC107]', label: 'Yellow', hex: '#FFC107' },
+                              { bg: 'bg-[#042433]', label: 'Deep Blue', hex: '#042433' },
+                              { bg: 'bg-[#E0F2FE]', label: 'Light Blue', hex: '#E0F2FE' },
                               { bg: 'bg-emerald-500', label: 'Success', hex: '#10B981' },
                               { bg: 'bg-slate-800', label: 'Dark', hex: '#1E293B' }
                            ].map((color, i) => (
@@ -963,6 +969,7 @@ export default function ScanovaHealthCaseStudy() {
                         { value: "60%", label: "Improvement in Appointment Preparedness", color: "#10B981", icon: CheckCircle2 },
                         { value: "90%", label: "User Task Completion Rate", color: "#8B5CF6", icon: Target },
                         { value: "4.8/5", label: "User Satisfaction Score", color: "#F59E0B", icon: Star },
+                        { value: "95%", label: "Reduction in Compliance Errors", color: "#F43F5E", icon: Shield },
                      ].map((metric, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8 }}
                            className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"

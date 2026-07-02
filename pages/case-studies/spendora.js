@@ -1258,7 +1258,7 @@ export default function SpendoraCaseStudy() {
 
                         <div className="relative">
                            <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
-                           <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 font-serif leading-none select-none rotate-180 z-0">"</div>
+                           <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none rotate-180 z-0">"</div>
                            <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed relative z-10 px-6 py-4">
                               SPENDORA demonstrated how thoughtful product design can transform financial complexity into empowering user experiences. By combining education, analytics, and AI-driven insights, the platform aims to help users build stronger financial habits and make more informed decisions.
                            </p>

@@ -471,7 +471,7 @@ export default function OasisPadCaseStudy() {
                               { title: "Empathy Map", icon: Heart, desc: "User mindset modeling" },
                               { title: "User Journey Map", icon: Shuffle, desc: "End-to-end workflows" }
                            ].map((artifact, idx) => (
-                              <div key={idx} className="aspect-square md:aspect-[4/3] bg-white/60 backdrop-blur-md rounded-2xl border border-slate-200/50 flex flex-col items-center justify-center p-6 text-center group hover:border-[#0D63CC]/30 hover:shadow-lg transition-all shadow-sm relative overflow-hidden">
+                              <div key={idx} className="glass-card aspect-square md:aspect-[4/3] rounded-[24px] flex flex-col items-center justify-center p-6 text-center group hover:-translate-y-1 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden border border-white/60">
                                  <div className="absolute inset-0 bg-gradient-to-br from-[#0D63CC]/0 to-[#00DA99]/0 group-hover:from-[#0D63CC]/5 group-hover:to-[#00DA99]/5 transition-colors duration-500" />
                                  <artifact.icon className="text-[#0D63CC] mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 relative z-10" size={32} />
                                  <span className="text-sm font-bold text-text-primary group-hover:text-[#0D63CC] transition-colors relative z-10 mb-1">{artifact.title}</span>
@@ -659,19 +659,19 @@ export default function OasisPadCaseStudy() {
                         { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
                         { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
                      ].map((uf, i) => (
-                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]">
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]" >
                            <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-16 text-center md:text-left">{uf.title}</h4>
 
                            <div className="relative py-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-2 md:px-8">
                               {/* Wavy dashed connecting line (Desktop only) */}
-                              <svg className="hidden md:block absolute top-1/2 left-[5%] right-[5%] w-[90%] h-24 -translate-y-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
+                              {/* <svg className="hidden md:block absolute top-1/2 left-[5%] right-[5%] w-[90%] h-24 -translate-y-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
                                  <path d="M0,50 Q12.5,25 25,50 T50,50 T75,50 T100,50" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 6" strokeLinecap="round" />
-                              </svg>
+                              </svg> */}
 
                               {/* Wavy dashed connecting line (Mobile only) */}
-                              <svg className="md:hidden absolute top-[5%] bottom-[5%] left-1/2 w-24 h-[90%] -translate-x-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
+                              {/* <svg className="md:hidden absolute top-[5%] bottom-[5%] left-1/2 w-24 h-[90%] -translate-x-1/2 z-0 opacity-60" preserveAspectRatio="none" viewBox="0 0 100 100">
                                  <path d="M50,0 Q25,12.5 50,25 T50,50 T50,75 T50,100" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 6" strokeLinecap="round" />
-                              </svg>
+                              </svg> */}
 
                               {uf.flow.map((step, idx) => {
                                  const total = uf.flow.length;
@@ -695,6 +695,12 @@ export default function OasisPadCaseStudy() {
 
                                  return (
                                     <div key={idx} className="relative z-10 flex flex-col items-center">
+                                       {/* Arrow on connector line */}
+                                       {idx < total - 1 && (
+                                          <div className="hidden md:flex absolute top-[55px] lg:top-[60px] -right-12 w-8 h-8 items-center justify-center z-0 bg-transparent">
+                                             <ArrowRight size={20} className="opacity-50" strokeWidth={2.5} />
+                                          </div>
+                                       )}
                                        <div className={`w-32 h-32 md:w-[130px] md:h-[130px] lg:w-40 lg:h-40 rounded-full flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 ${nodeStyle}`}>
                                           <IconComponent strokeWidth={1.5} size={28} className={`mb-3 ${iconColor}`} />
                                           <span className="font-extrabold text-[10px] lg:text-xs text-center px-4 uppercase tracking-[0.1em] leading-tight">{step}</span>
@@ -949,7 +955,9 @@ export default function OasisPadCaseStudy() {
 
                   </div>
                </section>
-
+               <div className="mb-12 md:mb-16 lg:mb-20">
+                  <GlowDivider />
+               </div>
 
                {/* USABILITY TESTING */}
                <section className="mb-16 md:mb-24 lg:mb-32">
@@ -1049,34 +1057,7 @@ export default function OasisPadCaseStudy() {
                   </div>
                </section>
 
-               {/* KEY TAKEAWAY */}
-               <section className="mb-20 md:mb-32 w-full">
-                  <div className="w-full glass-card rounded-[40px] p-10 md:p-16 lg:p-20 bg-gradient-to-br from-[#00DA99]/15 via-[#f0fbff]/50 to-[#0D63CC]/15 border border-[#00DA99]/20 shadow-sm relative overflow-hidden text-center flex flex-col items-center">
-                     <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#00DA99]/20 blur-[80px] rounded-full pointer-events-none" />
-                     <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/20 blur-[80px] rounded-full pointer-events-none" />
 
-                     <div className="relative z-10 w-full flex flex-col items-center">
-                        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center mb-6">
-                           <Award className="text-[#0D63CC]" size={28} />
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-12">
-                           Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span>
-                        </h2>
-
-                        <div className="relative max-w-4xl mx-auto w-full">
-                           <span className="text-7xl text-[#00DA99] font-serif absolute -top-8 -left-4 md:-left-12 opacity-80 leading-none tracking-tighter">"</span>
-                           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#111827] mb-8 leading-relaxed relative z-10">
-                              OasisPad was not designed as an EHR. It was designed as a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">connected behavioral health operating system.</span>
-                           </h3>
-                           <span className="text-7xl text-white font-serif absolute -bottom-12 -right-4 md:-right-8 drop-shadow-md leading-none tracking-tighter">"</span>
-                        </div>
-
-                        <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto relative z-10">
-                           Designing healthcare products requires balancing clinical efficiency, regulatory requirements, and usability. Simplifying complex workflows while maintaining compliance was critical to creating a scalable and effective experience.
-                        </p>
-                     </div>
-                  </div>
-               </section>
 
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
@@ -1107,10 +1088,35 @@ export default function OasisPadCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
-                  <GlowDivider />
-               </div>
 
+               {/* KEY TAKEAWAY */}
+               <section className="mb-20 md:mb-32 w-full">
+                  <div className="w-full glass-card rounded-[40px] p-10 md:p-16 lg:p-20 bg-gradient-to-br from-[#00DA99]/15 via-[#f0fbff]/50 to-[#0D63CC]/15 border border-[#00DA99]/20 shadow-sm relative overflow-hidden text-center flex flex-col items-center">
+                     <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#00DA99]/20 blur-[80px] rounded-full pointer-events-none" />
+                     <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/20 blur-[80px] rounded-full pointer-events-none" />
+
+                     <div className="relative z-10 w-full flex flex-col items-center">
+                        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center mb-6">
+                           <Award className="text-[#0D63CC]" size={28} />
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-12">
+                           Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span>
+                        </h2>
+
+                        <div className="relative max-w-4xl mx-auto w-full">
+                           <span className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]  font-serif absolute -top-8 -left-4 md:-left-12 opacity-80 leading-none tracking-tighter">"</span>
+                           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#111827] mb-8 leading-relaxed relative z-10">
+                              OasisPad was not designed as an EHR. It was designed as a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">connected behavioral health operating system.</span>
+                           </h3>
+                           <span className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]  font-serif absolute -bottom-12 -right-4 md:-right-8 drop-shadow-md leading-none tracking-tighter">"</span>
+                        </div>
+
+                        <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto relative z-10">
+                           Designing healthcare products requires balancing clinical efficiency, regulatory requirements, and usability. Simplifying complex workflows while maintaining compliance was critical to creating a scalable and effective experience.
+                        </p>
+                     </div>
+                  </div>
+               </section>
                {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
                   <div className="mb-16 text-center">

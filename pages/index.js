@@ -9,6 +9,7 @@ import DesignExpertise from '../components/DesignExpertise';
 import About from '../components/About';
 import ProjectsSlider from '../components/ProjectsSlider';
 import HowIDesign from '../components/HowIDesign';
+import HowIWork from '../components/HowIWork';
 import Testimonials from '../components/Testimonials';
 import FeaturedCaseStudy from '../components/FeaturedCaseStudy';
 import CTA from '../components/CTA';
@@ -41,7 +42,7 @@ export default function Home() {
         <GlowDivider />
         <ProjectsSlider />
         <GlowDivider />
-        {/* <HowIDesign /> */}
+        <HowIWork />
         <GlowDivider />
         <FeaturedCaseStudy />
         <GlowDivider />

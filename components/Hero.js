@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Smartphone, Mail, Award, Layout, Layers } from 'lucide-react';
+import { ArrowUpRight, Smartphone, Mail, Award, Brain, Layout, Layers } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -124,9 +124,9 @@ const Hero = () => {
                     { img: "/images/Spendora-Card-Folio.png", name: "Spendora", href: "/case-studies/spendora" },
                     { img: "/images/OasisPad-Card-Folio.png", name: "OasisPad", href: "/case-studies/oasispad" },
                     // { img: "/images/TicketStack-Card-Folio.png", name: "TicketStack", href: "/case-studies/ticketstack" },
-                    // { img: "/images/MarketVision-Card-Folio.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
+                    { img: "/images/MarketVision-Card-Folio.png", name: "MarketVision", href: "/case-studies/marketvisionai" },
                     // { img: "/images/ScanovaHealth-Card-Folio.png", name: "ScanovaHealth", href: "/case-studies/scanovahealth" },
-                    { img: "/images/Kinora-Card-Folio.png", name: "Kinora", href: "/case-studies/kinora" },
+                    // { img: "/images/Kinora-Card-Folio.png", name: "Kinora", href: "/case-studies/kinora" },
                   ].map((project, i) => (
                     <Link
                       key={i}
@@ -141,7 +141,7 @@ const Hero = () => {
                           src={project.img}
                           alt={project.name}
                           fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="object-contain group-hover:scale-101 transition-transform duration-500"
                         />
                         {/* Hover overlay with arrow */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-1.5">
@@ -262,7 +262,7 @@ const Hero = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-[20%] -left-10 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
             >
-              <Layout size={16} className="text-secondary" />
+              <Brain size={16} className="text-secondary" />
               <span className="text-[12px] font-bold text-secondary whitespace-nowrap">AI Workflows</span>
             </motion.div>
 
@@ -271,7 +271,7 @@ const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute bottom-[40%] left-0 z-30 hidden xl:flex items-center gap-3 px-3 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-xl shadow-black/5"
             >
-              <Layers size={16} className="text-secondary" />
+              <Layout size={16} className="text-secondary" />
               <span className="text-[12px] font-bold text-secondary whitespace-nowrap">SaaS Scalability</span>
             </motion.div>
             <motion.div

@@ -111,17 +111,17 @@ const team = [
 
 const testimonials = [
   {
-    quote: 'The team delivered beyond expectations. From branding to web design, every detail reflected creativity and strategy. They truly understood our vision and made it a reality. Highly recommended for any business looking to grow.',
-    name: 'Leslie Alexander',
-    role: 'Web Designer',
-    avatar: '/images/testimonial-1.png',
+    quote: 'I had a great experience working with Anil. He managed to solve our problems and fix the bugs on the website, while communicating clearly.',
+    name: 'Henk-Jan Kamstra',
+    role: 'Netherlands, Amsterdam',
+    avatar: '/images/default-avatar-photo-placeholder-profile-picture-vector.webp',
     rating: 5,
   },
   {
-    quote: 'Working with Anil was a transformative experience. His attention to detail and deep understanding of user needs resulted in a product that exceeded all expectations.',
-    name: 'Marcus Chen',
-    role: 'Startup Founder',
-    avatar: '/images/testimonial-2.png',
+    quote: 'He provided me clear specification document. So I do not have any problem or miscommunication with him.It is a valuable experience to work for him.',
+    name: 'Jimmy Rongmei',
+    role: 'United States Alpharetta',
+    avatar: '/images/default-avatar-photo-placeholder-profile-picture-vector.webp',
     rating: 5,
   },
 ];
@@ -691,9 +691,9 @@ function TestimonialSlider({ testimonials }) {
                 src={current.avatar}
                 alt={current.name}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                onError={(e) => {
-                  e.target.src = "https://ui-avatars.com/api/?name=" + current.name;
-                }}
+              // onError={(e) => {
+              //   e.target.src = "https://ui-avatars.com/api/?name=" + current.name;
+              // }}
               />
             </div>
           </div>

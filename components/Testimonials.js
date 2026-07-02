@@ -5,21 +5,33 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "Anil helped us simplify a complex product and brought clarity to our workflows. Reliable and easy to work with.",
-    author: "Sarah Chen",
-    role: "Product Lead, HealthTech Startup",
+    quote: "I had a great experience working with Anil. He managed to solve our problems and fix the bugs on the website, while communicating clearly.",
+    author: "Henk-Jan Kamstra",
+    location: "Netherlands, Amsterdam",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120"
   },
   {
-    quote: "Strategic thinker. Delivered a design system that our team still uses two years later. Highly recommended",
+    quote: "He provided me clear specification document. So I don't have any problem or miscommunication with him. It is a valuable experience to work for him.",
+    author: "Jimmy Rongmei",
+    location: "United States Alpharetta",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120"
+  },
+  {
+    quote: "Very cooperated Freelancer doing his work well and on Time.. thanks for you help",
     author: "Marcus Rivera",
-    role: "CTO, AI SaaS Platform",
+    location: "Germany Hannover",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120"
   },
   {
-    quote: "He understood our domain quickly and shipped beautiful, usable interfaces. A true product partner.",
-    author: "Priya Nair",
-    role: "Founder, Enterprise SaaS",
+    quote: "Amazing Developer , Work Perfectly , follow all instructions Perfectly , he Help and give idea to the Project... Men u do a perfect Job, and i hope we can do the next Job soon",
+    author: "Marcus Rivera",
+    location: "Germany Hannover",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120"
+  },
+  {
+    quote: "Anil is a must hire for anyone looking for a dedicated UI developer.",
+    author: "Rahul Sharma",
+    location: "India, Bengaluru",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120&h=120"
   }
 ];
@@ -175,7 +187,7 @@ const Testimonials = () => {
                       {/* Bottom: Author & Quote Icon */}
                       <div className="flex items-center justify-between mt-auto">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full overflow-hidden border border-white/50 shadow-sm">
+                          {/* <div className="w-12 h-12 rounded-full overflow-hidden border border-white/50 shadow-sm">
                             <Image
                               src={testimonial.avatar}
                               alt={testimonial.author}
@@ -183,10 +195,10 @@ const Testimonials = () => {
                               height={48}
                               className="object-cover rounded-full w-full h-full"
                             />
-                          </div>
+                          </div> */}
                           <div>
-                            <div className="font-bold text-text-primary text-base sm:text-lg tracking-tight mb-0.5">{testimonial.author}</div>
-                            <div className="text-text-secondary text-[13px] sm:text-sm font-medium">{testimonial.role}</div>
+                            <div className="font-bold text-text-primary text-base sm:text-lg tracking-tight mb-0.5">- {testimonial.author}</div>
+                            <div className="text-text-secondary text-[13px] sm:text-sm font-medium">{testimonial.location}</div>
                           </div>
                         </div>
 

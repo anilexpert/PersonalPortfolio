@@ -19,7 +19,7 @@ const CTA = () => {
           <h2 className="text-[24px] sm:text-[4vw] md:text-[5rem] lg:text-[6rem] font-black text-text-primary leading-none tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2 sm:mb-4 text-center">
             Let's Build Your Next
           </h2>
-     
+
           <div className="relative flex items-center justify-center w-full px-4 lg:px-20">
             {/* Desktop View Work Button (Left) */}
             <Link href="/contact" passHref legacyBehavior>
@@ -33,7 +33,7 @@ const CTA = () => {
             </Link>
 
             <h2
-              className="text-[24px] sm:text-[4vw] md:text-[5rem] lg:text-[6rem] font-black leading-none tracking-tighter uppercase text-center"
+              className="text-[24px] sm:text-[3vw] md:text-[5rem] lg:text-[6rem] font-black leading-none tracking-tighter uppercase text-center"
               style={{
                 color: 'transparent',
                 WebkitTextStroke: '3px var(--primary-mint)',
@@ -41,7 +41,7 @@ const CTA = () => {
             >
               Product Together
             </h2>
- 
+
             {/* Desktop Hire Now Button (Right) */}
             <motion.a
               href="mailto:anilkumar.folio@gmail.com"
@@ -74,9 +74,9 @@ const CTA = () => {
             </motion.a>
           </div>
           <div className="max-w-4xl mx-auto mt-8 md:mt-12">
-          <p className="text-base md:text-xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
-            Looking for a Product Designer who can simplify complexity, align business goals with user needs, and build scalable digital products? Let's discuss your next product.
-          </p>
+            <p className="text-base md:text-xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
+              Looking for a Product Designer who can simplify complexity, align business goals with user needs, and build scalable digital products? Let's discuss your next product.
+            </p>
           </div>
         </motion.div>
       </div>

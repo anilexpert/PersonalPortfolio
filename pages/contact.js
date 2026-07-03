@@ -45,7 +45,7 @@ export default function ContactPage() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -55,7 +55,7 @@ export default function ContactPage() {
         },
         body: JSON.stringify({
           // TODO: Replace with your actual Web3Forms access key
-          access_key: "YOUR_ACCESS_KEY_HERE",
+          access_key: "81922b9d-d3dc-41ee-b9a9-079dbd00aa37",
           name: form.name,
           email: form.email,
           message: form.message,

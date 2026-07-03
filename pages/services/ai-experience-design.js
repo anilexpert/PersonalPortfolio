@@ -134,15 +134,15 @@ export default function AIDesignService() {
                 <div className="relative w-full h-full">
                   {/* MarketVisionAI (Back) */}
                   <div className="absolute top-[5%] right-[5%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-0">
-                    <Image src="/images/marketvisionai.png" alt="MarketVisionAI" fill className="object-cover" />
+                    <Image src="/images/services/AIRecommendations.png" alt="MarketVisionAI" fill className="object-cover" />
                   </div>
                   {/* ScanovaHealth (Middle) */}
                   <div className="absolute top-[20%] left-[5%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-10">
-                    <Image src="/images/MarketVision-Card-Folio.png" alt="ScanovaHealth" fill className="object-cover" />
+                    <Image src="/images/services/ExplainableAI.png" alt="ScanovaHealth" fill className="object-cover" />
                   </div>
                   {/* Spendora (Front) */}
                   <div className="absolute bottom-[5%] right-[10%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl rotate-1 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110 z-20">
-                    <Image src="/images/Spendora-Card-Folio.png" alt="Spendora" fill className="object-cover" />
+                    <Image src="/images/services/PredictiveInsights.png" alt="Spendora" fill className="object-cover" />
                   </div>
 
                   {/* Floating Tags */}
@@ -378,8 +378,8 @@ export default function AIDesignService() {
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Representative Client Feedback</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Enterprise AI Platform</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Jimy - Carenova</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">CEO, Enterprise AI Platform</p>
                   </div>
                 </div>
               </div>

@@ -20,13 +20,13 @@ export default function HowIWork() {
   };
 
   return (
-    <section className="py-20 md:py-32 px-6 relative w-full overflow-hidden" id="how-i-work">
+    <section className="py-12 md:py-20 px-6 relative w-full overflow-hidden" id="how-i-work">
       {/* Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="flex flex-col items-center text-center mb-16 md:mb-24">
+        <div className="flex flex-col items-center text-center mb-6 md:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

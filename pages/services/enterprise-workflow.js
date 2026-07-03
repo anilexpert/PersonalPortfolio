@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft, Workflow, Settings, Users, CheckSquare, Zap, 
-  Network, LayoutDashboard, GitPullRequest, Repeat, Layers, 
+  ArrowLeft, Workflow, Settings, Users, CheckSquare, Zap,
+  Network, LayoutDashboard, GitPullRequest, Repeat, Layers,
   Briefcase, Kanban, Activity, ArrowRight, User, Quote,
   CheckCircle2, Box, Cpu, Target
 } from 'lucide-react';
@@ -137,7 +137,7 @@ export default function EnterpriseWorkflowService() {
                   </div>
                   {/* Data Tool (Middle) */}
                   <div className="absolute top-[20%] left-[5%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-10 bg-slate-100 flex items-center justify-center">
-                     <Image src="/images/MarketVision-Card-Folio.png" alt="Data Tool" fill className="object-cover opacity-90" />
+                    <Image src="/images/MarketVision-Card-Folio.png" alt="Data Tool" fill className="object-cover opacity-90" />
                   </div>
                   {/* SaaS CRM (Front) */}
                   <div className="absolute bottom-[5%] right-[10%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl rotate-1 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110 z-20">
@@ -223,10 +223,10 @@ export default function EnterpriseWorkflowService() {
 
               <motion.div {...fadeInUp(0.2)} className="relative group">
                 <div className="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
-                
+
                 {/* Visual Showcase: Workflow / Process UI */}
                 <div className="relative aspect-[4/3] glass-card rounded-2xl overflow-hidden border-[1.5px] border-white/40 shadow-xl bg-white/10 backdrop-blur-xl p-6 flex flex-col gap-6">
-                    
+
                   {/* Step-by-Step Flow Indicator */}
                   <div className="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm border border-slate-100 relative z-10">
                     <div className="flex flex-col items-center gap-2 flex-1">
@@ -234,7 +234,7 @@ export default function EnterpriseWorkflowService() {
                       <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Input</span>
                     </div>
                     <div className="flex-1 h-px bg-slate-300 relative flex items-center justify-center">
-                      <div className="text-slate-300 absolute"><ArrowRight size={14}/></div>
+                      <div className="text-slate-300 absolute"><ArrowRight size={14} /></div>
                     </div>
                     <div className="flex flex-col items-center gap-2 flex-1">
                       <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs border border-primary/20 shadow-sm relative">
@@ -244,7 +244,7 @@ export default function EnterpriseWorkflowService() {
                       <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Process</span>
                     </div>
                     <div className="flex-1 h-px bg-slate-300 relative flex items-center justify-center">
-                      <div className="text-slate-300 absolute"><ArrowRight size={14}/></div>
+                      <div className="text-slate-300 absolute"><ArrowRight size={14} /></div>
                     </div>
                     <div className="flex flex-col items-center gap-2 flex-1">
                       <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-xs border border-secondary/20 shadow-sm">3</div>
@@ -267,7 +267,7 @@ export default function EnterpriseWorkflowService() {
                         <div className="h-2 w-1/2 bg-slate-200 rounded"></div>
                       </div>
                     </div>
-                    
+
                     <div className="flex-1 bg-primary/5 p-3 rounded-xl border border-primary/10 shadow-sm flex flex-col gap-3 scale-105 shadow-[0_8px_24px_rgba(0,218,153,0.12)]">
                       <div className="text-[10px] font-bold text-primary flex justify-between uppercase tracking-wider">In Progress <span className="text-primary/60">1</span></div>
                       <div className="bg-white p-2.5 rounded-lg border border-primary/20 shadow-sm flex flex-col gap-2">
@@ -278,7 +278,7 @@ export default function EnterpriseWorkflowService() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="flex-1 bg-white p-3 rounded-xl border border-slate-100 shadow-sm flex flex-col gap-3 opacity-60">
                       <div className="text-[10px] font-bold text-slate-400 flex justify-between uppercase tracking-wider">Done <span className="text-slate-300">5</span></div>
                       <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
@@ -287,11 +287,11 @@ export default function EnterpriseWorkflowService() {
                     </div>
                   </div>
                   <Image
-                        src="/images/services/EnterpriseWorkflow.png"
-                        alt="Enterprise Workflow"
-                        fill
-                        className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                    />
+                    src="/images/services/EnterpriseWorkflow.png"
+                    alt="Enterprise Workflow"
+                    fill
+                    className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                  />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-secondary/5 to-transparent pointer-events-none z-30" />
                 </div>
@@ -434,26 +434,26 @@ export default function EnterpriseWorkflowService() {
                 const colors = ['#00DA99', '#0D63CC', '#8B5CF6', '#F43F5E', '#F59E0B'];
                 const cardColor = colors[i % colors.length];
                 return (
-                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
-                  {i < 4 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
-                  )}
-                  <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
-                    {/* Top Right Glow Effect */}
-                    <div 
-                      className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
-                      style={{ backgroundColor: cardColor }}
-                    />
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
-                    
-                    <div className="relative z-10">
-                      <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
-                      <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
-                      <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                    {i < 4 && (
+                      <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                    )}
+                    <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
+                      {/* Top Right Glow Effect */}
+                      <div
+                        className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
+                        style={{ backgroundColor: cardColor }}
+                      />
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+
+                      <div className="relative z-10">
+                        <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                        <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                        <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -550,22 +550,22 @@ export default function EnterpriseWorkflowService() {
         {/* ── NEW SECTION — ENTERPRISE DOMAINS I SUPPORT ───────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative">
           <div className="max-w-5xl mx-auto text-center">
-             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
-                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Enterprise Domains I Support</p>
-                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
-                  <span>Healthcare Operations</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Enterprise SaaS</span>
-                  <span className="text-primary/40">•</span>
-                  <span>HR & Workforce Systems</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Compliance Platforms</span>
-                  <span className="text-primary/40">•</span>
-                  <span>FinTech Operations</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Internal Business Tools</span>
-                </div>
-             </motion.div>
+            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Enterprise Domains I Support</p>
+              <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                <span>Healthcare Operations</span>
+                <span className="text-primary/40">•</span>
+                <span>Enterprise SaaS</span>
+                <span className="text-primary/40">•</span>
+                <span>HR & Workforce Systems</span>
+                <span className="text-primary/40">•</span>
+                <span>Compliance Platforms</span>
+                <span className="text-primary/40">•</span>
+                <span>FinTech Operations</span>
+                <span className="text-primary/40">•</span>
+                <span>Internal Business Tools</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -591,8 +591,8 @@ export default function EnterpriseWorkflowService() {
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Operations Director</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Enterprise SaaS Company</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Operations Director - SPENDORA</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Kenneth</p>
                   </div>
                 </div>
               </div>
@@ -659,7 +659,7 @@ export default function EnterpriseWorkflowService() {
                 Workflow Types <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
               </h2>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {[
                 "Operational Workflows",
@@ -702,7 +702,7 @@ export default function EnterpriseWorkflowService() {
                 Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
               </h2>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {[
                 { name: "Carenova", link: "/case-studies/carenova" },
@@ -748,7 +748,7 @@ export default function EnterpriseWorkflowService() {
                 }}
               />
 
-                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+              <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
                   Need to simplify complex operations, improve team productivity, or redesign inefficient workflows?
                 </h3>

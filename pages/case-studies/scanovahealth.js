@@ -943,12 +943,60 @@ export default function ScanovaHealthCaseStudy() {
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Overview" glowCls="bg-[#06B6D4]" textCls="text-[#06B6D4]" icon={Layout} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="Device Detail Screen" glowCls="bg-[#0EA5E9]" textCls="text-[#0EA5E9]" icon={FolderOpen} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Reference Viewer" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Eye} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Validation Center" glowCls="bg-[#10B981]" textCls="text-[#10B981]" icon={Brain} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="PDF Report Module" glowCls="bg-[#F59E0B]" textCls="text-[#F59E0B]" icon={FileText} />
-                     <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Center Finder" glowCls="bg-[#F43F5E]" textCls="text-[#F43F5E]" icon={MapPin} />
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Overview" glowCls="bg-[#06B6D4]" textCls="text-[#06B6D4]" icon={Layout} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/DashboardOverview.png"
+                           alt="Dashboard Overview"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Device Detail Screen" glowCls="bg-[#0EA5E9]" textCls="text-[#0EA5E9]" icon={FolderOpen} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/DeviceDetailScreen.png"
+                           alt="Device Detail Screen"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Reference Viewer" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Eye} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/MRIReferenceViewer.png"
+                           alt="MRI Reference Viewer"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Validation Center" glowCls="bg-[#10B981]" textCls="text-[#10B981]" icon={Brain} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/AIValidationCenter.png"
+                           alt="AI Validation Center"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="PDF Report Module" glowCls="bg-[#F59E0B]" textCls="text-[#F59E0B]" icon={FileText} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/PDFReportModule.png"
+                           alt="PDF Report Module"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
+                     {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Center Finder" glowCls="bg-[#F43F5E]" textCls="text-[#F43F5E]" icon={MapPin} /> */}
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                        <Image
+                           src="/images/scanova/MRIFinder.png"
+                           alt="MRI Center Finder"
+                           fill
+                           className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                        />
+                     </div>
                   </div>
                </section>
 

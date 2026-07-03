@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft, LayoutDashboard, Database, CheckCircle2, 
+  ArrowLeft, LayoutDashboard, Database, CheckCircle2,
   Activity, Layers, Building2, Eye, TrendingUp, Quote, User,
   BarChart3, LineChart, PieChart, Filter, ArrowUpRight, Zap, ListFilter, Target
 } from 'lucide-react';
@@ -244,78 +244,78 @@ export default function DataIntelligenceService() {
 
               <motion.div {...fadeInUp(0.2)} className="relative group">
                 <div className="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
-                
+
                 {/* Abstract Grid-Based Dashboard UI */}
                 <div className="relative aspect-[4/3] glass-card rounded-2xl overflow-hidden border-[1.5px] border-white/40 shadow-xl bg-white/10 backdrop-blur-xl flex flex-col bg-slate-50 p-4 gap-4">
                   <Image
-                      src="/images/services/DataIntelligence.png"
-                      alt="Data Intelligence"
-                      fill
-                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                    src="/images/services/DataIntelligence.png"
+                    alt="Data Intelligence"
+                    fill
+                    className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
                   />
                   {/* Dashboard Header */}
                   <div className="flex justify-between items-center bg-white p-3 rounded-xl shadow-sm border border-slate-100">
-                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                           <LayoutDashboard size={14} className="text-primary" />
-                        </div>
-                        <div className="h-4 w-24 bg-slate-200 rounded"></div>
-                     </div>
-                     <div className="flex gap-2">
-                        <div className="h-8 w-20 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400"><Filter size={12}/></div>
-                        <div className="w-8 h-8 rounded-full bg-slate-200"></div>
-                     </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <LayoutDashboard size={14} className="text-primary" />
+                      </div>
+                      <div className="h-4 w-24 bg-slate-200 rounded"></div>
+                    </div>
+                    <div className="flex gap-2">
+                      <div className="h-8 w-20 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400"><Filter size={12} /></div>
+                      <div className="w-8 h-8 rounded-full bg-slate-200"></div>
+                    </div>
                   </div>
 
                   {/* KPI Cards Row */}
                   <div className="flex gap-4">
-                     {[
-                        { title: "Total Revenue", val: "$45,231", trend: "+12.5%", color: "text-green-500", bg: "bg-green-500/10" },
-                        { title: "Active Users", val: "12,403", trend: "+5.2%", color: "text-green-500", bg: "bg-green-500/10" },
-                        { title: "Churn Rate", val: "2.4%", trend: "-0.8%", color: "text-primary", bg: "bg-primary/10" }
-                     ].map((kpi, i) => (
-                        <div key={i} className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-2">
-                           <div className="text-[10px] font-bold text-slate-400 uppercase">{kpi.title}</div>
-                           <div className="flex justify-between items-end">
-                              <div className="text-lg font-black text-slate-800">{kpi.val}</div>
-                              <div className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${kpi.color} ${kpi.bg}`}>
-                                 {kpi.trend}
-                              </div>
-                           </div>
+                    {[
+                      { title: "Total Revenue", val: "$45,231", trend: "+12.5%", color: "text-green-500", bg: "bg-green-500/10" },
+                      { title: "Active Users", val: "12,403", trend: "+5.2%", color: "text-green-500", bg: "bg-green-500/10" },
+                      { title: "Churn Rate", val: "2.4%", trend: "-0.8%", color: "text-primary", bg: "bg-primary/10" }
+                    ].map((kpi, i) => (
+                      <div key={i} className="flex-1 bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-2">
+                        <div className="text-[10px] font-bold text-slate-400 uppercase">{kpi.title}</div>
+                        <div className="flex justify-between items-end">
+                          <div className="text-lg font-black text-slate-800">{kpi.val}</div>
+                          <div className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${kpi.color} ${kpi.bg}`}>
+                            {kpi.trend}
+                          </div>
                         </div>
-                     ))}
+                      </div>
+                    ))}
                   </div>
 
                   {/* Main Data Area (Chart & Table) */}
                   <div className="flex gap-4 flex-1">
-                     {/* Chart Area */}
-                     <div className="flex-[2] bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex flex-col relative overflow-hidden">
-                        <div className="flex justify-between items-center mb-4">
-                           <div className="h-3 w-32 bg-slate-200 rounded"></div>
-                           <div className="h-2 w-16 bg-slate-100 rounded"></div>
-                        </div>
-                        {/* Abstract Bar Chart */}
-                        <div className="flex-1 flex items-end justify-between gap-2 px-2 mt-4 relative z-10">
-                           {[40, 70, 45, 90, 60, 80, 50].map((h, i) => (
-                              <div key={i} className="w-full bg-primary/20 rounded-t-sm transition-all duration-500 hover:bg-primary" style={{ height: `${h}%` }}></div>
-                           ))}
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
-                     </div>
-
-                     {/* Right Panel / Data Table */}
-                     <div className="flex-1 bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex flex-col gap-3">
-                        <div className="h-3 w-20 bg-slate-200 rounded mb-2"></div>
-                        {[1, 2, 3].map(i => (
-                           <div key={i} className="flex justify-between items-center p-2 rounded-lg bg-slate-50 border border-slate-100">
-                              <div className="flex items-center gap-2">
-                                 <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                                 <div className="h-2 w-12 bg-slate-300 rounded"></div>
-                              </div>
-                              <div className="h-2 w-8 bg-slate-200 rounded"></div>
-                           </div>
+                    {/* Chart Area */}
+                    <div className="flex-[2] bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex flex-col relative overflow-hidden">
+                      <div className="flex justify-between items-center mb-4">
+                        <div className="h-3 w-32 bg-slate-200 rounded"></div>
+                        <div className="h-2 w-16 bg-slate-100 rounded"></div>
+                      </div>
+                      {/* Abstract Bar Chart */}
+                      <div className="flex-1 flex items-end justify-between gap-2 px-2 mt-4 relative z-10">
+                        {[40, 70, 45, 90, 60, 80, 50].map((h, i) => (
+                          <div key={i} className="w-full bg-primary/20 rounded-t-sm transition-all duration-500 hover:bg-primary" style={{ height: `${h}%` }}></div>
                         ))}
-                     </div>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+                    </div>
+
+                    {/* Right Panel / Data Table */}
+                    <div className="flex-1 bg-white rounded-xl shadow-sm border border-slate-100 p-4 flex flex-col gap-3">
+                      <div className="h-3 w-20 bg-slate-200 rounded mb-2"></div>
+                      {[1, 2, 3].map(i => (
+                        <div key={i} className="flex justify-between items-center p-2 rounded-lg bg-slate-50 border border-slate-100">
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                            <div className="h-2 w-12 bg-slate-300 rounded"></div>
+                          </div>
+                          <div className="h-2 w-8 bg-slate-200 rounded"></div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Gradient Overlay */}
@@ -460,26 +460,26 @@ export default function DataIntelligenceService() {
                 const colors = ['#00DA99', '#0D63CC', '#8B5CF6', '#F43F5E', '#F59E0B'];
                 const cardColor = colors[i % colors.length];
                 return (
-                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
-                  {i < 4 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
-                  )}
-                  <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
-                    {/* Top Right Glow Effect */}
-                    <div 
-                      className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
-                      style={{ backgroundColor: cardColor }}
-                    />
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
-                    
-                    <div className="relative z-10">
-                      <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
-                      <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
-                      <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                    {i < 4 && (
+                      <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                    )}
+                    <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
+                      {/* Top Right Glow Effect */}
+                      <div
+                        className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
+                        style={{ backgroundColor: cardColor }}
+                      />
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+
+                      <div className="relative z-10">
+                        <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                        <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                        <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -593,8 +593,8 @@ export default function DataIntelligenceService() {
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Head of Analytics</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Company</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Head of MarketVision AI</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Matthew</p>
                   </div>
                 </div>
               </div>
@@ -648,22 +648,22 @@ export default function DataIntelligenceService() {
         {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative">
           <div className="max-w-5xl mx-auto text-center">
-             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
-                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
-                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
-                  <span>Healthcare Analytics</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Enterprise SaaS</span>
-                  <span className="text-primary/40">•</span>
-                  <span>FinTech</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Marketing Analytics</span>
-                  <span className="text-primary/40">•</span>
-                  <span>AI Platforms</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Operations Management</span>
-                </div>
-             </motion.div>
+            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+              <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                <span>Healthcare Analytics</span>
+                <span className="text-primary/40">•</span>
+                <span>Enterprise SaaS</span>
+                <span className="text-primary/40">•</span>
+                <span>FinTech</span>
+                <span className="text-primary/40">•</span>
+                <span>Marketing Analytics</span>
+                <span className="text-primary/40">•</span>
+                <span>AI Platforms</span>
+                <span className="text-primary/40">•</span>
+                <span>Operations Management</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -685,7 +685,7 @@ export default function DataIntelligenceService() {
                 Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
               </h2>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {[
                 { name: "MarketVisionAI", link: "/case-studies/marketvisionai" },
@@ -731,7 +731,7 @@ export default function DataIntelligenceService() {
                 }}
               />
 
-                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+              <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
                   Need a dashboard that transforms complex information into actionable insights?
                 </h3>

@@ -223,11 +223,11 @@ export default function SaaSPlatformDesignService() {
               <motion.div {...fadeInUp(0.2)} className="relative group">
                 <div className="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <div className="relative aspect-[4/3] glass-card rounded-2xl overflow-hidden border-[1.5px] border-white/40 shadow-xl bg-white/10 backdrop-blur-xl">
-                 <Image
-                      src="/images/services/ScalableSaaSPlatform.png"
-                      alt="Scalable SaaS Platform"
-                      fill
-                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                  <Image
+                    src="/images/services/ScalableSaaSPlatform.png"
+                    alt="Scalable SaaS Platform"
+                    fill
+                    className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
                   />
                   {/* Grid-based Preview Visual */}
                   <div className="absolute inset-0 bg-slate-50 p-6 flex flex-col gap-4">
@@ -411,26 +411,26 @@ export default function SaaSPlatformDesignService() {
                 const colors = ['#00DA99', '#0D63CC', '#8B5CF6', '#F43F5E', '#F59E0B'];
                 const cardColor = colors[i % colors.length];
                 return (
-                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
-                  {i < 4 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
-                  )}
-                  <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
-                    {/* Top Right Glow Effect */}
-                    <div 
-                      className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
-                      style={{ backgroundColor: cardColor }}
-                    />
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
-                    
-                    <div className="relative z-10">
-                      <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
-                      <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
-                      <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                    {i < 4 && (
+                      <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                    )}
+                    <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
+                      {/* Top Right Glow Effect */}
+                      <div
+                        className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
+                        style={{ backgroundColor: cardColor }}
+                      />
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+
+                      <div className="relative z-10">
+                        <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                        <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                        <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -543,8 +543,8 @@ export default function SaaSPlatformDesignService() {
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Founder</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Company</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Founder - SuperCampus</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">Teena Agerwal</p>
                   </div>
                 </div>
               </div>
@@ -598,22 +598,22 @@ export default function SaaSPlatformDesignService() {
         {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative">
           <div className="max-w-5xl mx-auto text-center">
-             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
-                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
-                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
-                  <span>Healthcare</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Enterprise SaaS</span>
-                  <span className="text-primary/40">•</span>
-                  <span>FinTech</span>
-                  <span className="text-primary/40">•</span>
-                  <span>EdTech</span>
-                  <span className="text-primary/40">•</span>
-                  <span>AI Products</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Analytics Platforms</span>
-                </div>
-             </motion.div>
+            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+              <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                <span>Healthcare</span>
+                <span className="text-primary/40">•</span>
+                <span>Enterprise SaaS</span>
+                <span className="text-primary/40">•</span>
+                <span>FinTech</span>
+                <span className="text-primary/40">•</span>
+                <span>EdTech</span>
+                <span className="text-primary/40">•</span>
+                <span>AI Products</span>
+                <span className="text-primary/40">•</span>
+                <span>Analytics Platforms</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -635,7 +635,7 @@ export default function SaaSPlatformDesignService() {
                 Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
               </h2>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {[
                 { name: "Carenova", link: "/case-studies/carenova" },
@@ -681,7 +681,7 @@ export default function SaaSPlatformDesignService() {
                 }}
               />
 
-                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+              <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
                   Building a new SaaS platform or scaling an existing product?
                 </h3>

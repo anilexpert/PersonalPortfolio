@@ -147,7 +147,7 @@ export default function ProjectsSlider() {
           className="flex flex-col md:flex-row w-full"
           style={{
             height: 'auto',
-            minHeight: 540,
+            minHeight: 440,
             gap: 20,
             borderRadius: 24,
           }}
@@ -288,7 +288,7 @@ export default function ProjectsSlider() {
         </div>
 
         {/* ── Dot indicators ── */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-4">
           {projects.map((_, i) => (
             <button
               key={i}
@@ -309,7 +309,7 @@ export default function ProjectsSlider() {
         </div>
 
         {/* ── View All Works Button ── */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-10">
           <Link href="/case-studies" passHref>
             <button className="px-6 md:px-8 py-3 rounded-full bg-gradient-to-r from-[#0D63CC] to-[#00DA99] text-white text-[13px] md:text-base font-medium flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(13,99,204,0.15)] hover:scale-[1.02] transition-all duration-300">
               View All Works <ArrowUpRight size={18} className="stroke-[2]" />

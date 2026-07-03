@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft, Workflow, Map, Network, LayoutTemplate, CheckCircle2, 
-  Target, LineChart, Compass, Crosshair, Box, GitMerge, Layers, 
+  ArrowLeft, Workflow, Map, Network, LayoutTemplate, CheckCircle2,
+  Target, LineChart, Compass, Crosshair, Box, GitMerge, Layers,
   Search, Building2, TrendingUp, Quote, User, ListChecks,
   ChevronRight, BrainCircuit, Rocket, Lightbulb, Users
 } from 'lucide-react';
@@ -107,22 +107,22 @@ const SitemapStructure = () => (
 
 const WorkflowMap = () => (
   <div className="w-full h-full bg-slate-50 p-6 flex flex-col items-center justify-center">
-     <div className="w-full max-w-xs flex flex-col gap-3">
-        <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
-           <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-[10px] font-bold">1</div>
-           <div className="flex-1 h-2 bg-slate-100 rounded"></div>
-        </div>
-        <div className="w-px h-3 bg-slate-300 ml-6"></div>
-        <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
-           <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-[10px] font-bold">2</div>
-           <div className="flex-1 h-2 bg-slate-100 rounded"></div>
-        </div>
-        <div className="w-px h-3 bg-slate-300 ml-6"></div>
-        <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-primary/30 shadow-[0_8px_24px_rgba(0,218,153,0.15)] scale-[1.02]">
-           <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-white text-[10px] font-bold">3</div>
-           <div className="flex-1 h-2 bg-slate-200 rounded"></div>
-        </div>
-     </div>
+    <div className="w-full max-w-xs flex flex-col gap-3">
+      <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+        <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-[10px] font-bold">1</div>
+        <div className="flex-1 h-2 bg-slate-100 rounded"></div>
+      </div>
+      <div className="w-px h-3 bg-slate-300 ml-6"></div>
+      <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+        <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-[10px] font-bold">2</div>
+        <div className="flex-1 h-2 bg-slate-100 rounded"></div>
+      </div>
+      <div className="w-px h-3 bg-slate-300 ml-6"></div>
+      <div className="flex items-center gap-4 bg-white p-3 rounded-xl border border-primary/30 shadow-[0_8px_24px_rgba(0,218,153,0.15)] scale-[1.02]">
+        <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-white text-[10px] font-bold">3</div>
+        <div className="flex-1 h-2 bg-slate-200 rounded"></div>
+      </div>
+    </div>
   </div>
 );
 
@@ -188,32 +188,32 @@ export default function ProductStrategyService() {
                   {/* Sitemap (Back) */}
                   <div className="absolute top-[5%] right-[5%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-0 bg-white">
                     {/* <SitemapStructure /> */}
-                      <Image
-                          src="/images/services/UXArchitecture.png"
-                          alt="UX Architecture"
-                          fill
-                          className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                      />
+                    <Image
+                      src="/images/services/UXArchitecture.png"
+                      alt="UX Architecture"
+                      fill
+                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                    />
                   </div>
                   {/* Flow Diagram (Middle) */}
                   <div className="absolute top-[20%] left-[5%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl -rotate-2 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-105 z-10 bg-slate-50">
                     {/* <FlowDiagram /> */}
                     <Image
-                          src="/images/services/InformationArchitecture.png"
-                          alt="Information Architecture"
-                          fill
-                          className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                      />
+                      src="/images/services/InformationArchitecture.png"
+                      alt="Information Architecture"
+                      fill
+                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                    />
                   </div>
                   {/* Workflow (Front) */}
                   <div className="absolute bottom-[5%] right-[10%] w-[75%] aspect-[16/10] rounded-2xl overflow-hidden border border-white/60 shadow-2xl rotate-1 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110 z-20 bg-white">
                     {/* <WorkflowMap /> */}
                     <Image
-                          src="/images/services/UserFlows.png"
-                          alt="User Flow"
-                          fill
-                          className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
-                      />
+                      src="/images/services/UserFlows.png"
+                      alt="User Flow"
+                      fill
+                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                    />
                   </div>
 
                   {/* Floating Tags */}
@@ -295,44 +295,44 @@ export default function ProductStrategyService() {
               <motion.div {...fadeInUp(0.2)} className="relative group">
                 <div className="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <div className="relative aspect-[4/3] glass-card rounded-2xl overflow-hidden border-[1.5px] border-white/40 shadow-xl bg-white/10 backdrop-blur-xl flex items-center justify-center bg-slate-50">
-                   <Image
-                      src="/images/services/ExperienceArchitecture.png"
-                      alt="Experience Architecture"
-                      fill
-                      className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
+                  <Image
+                    src="/images/services/ExperienceArchitecture.png"
+                    alt="Experience Architecture"
+                    fill
+                    className="object-cover relative z-10 transition-transform duration-1000 group-hover:scale-[1.01]"
                   />
                   {/* Abstract Flow Diagram Visual */}
                   <div className="w-full max-w-sm p-8">
                     <div className="flex flex-col gap-6 items-center">
-                       <div className="w-full p-4 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                             <Search size={20} />
+                      <div className="w-full p-4 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                          <Search size={20} />
+                        </div>
+                        <div>
+                          <div className="h-3 w-20 bg-slate-200 rounded mb-2"></div>
+                          <div className="h-2 w-32 bg-slate-100 rounded"></div>
+                        </div>
+                      </div>
+
+                      <div className="h-8 w-px bg-slate-300 relative">
+                        <div className="absolute top-1/2 -translate-y-1/2 -left-1.5 w-3 h-3 rounded-full bg-slate-200 border-2 border-white"></div>
+                      </div>
+
+                      <div className="flex gap-6 w-full">
+                        <div className="flex-1 p-4 bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col items-center text-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+                            <LayoutTemplate size={16} />
                           </div>
-                          <div>
-                             <div className="h-3 w-20 bg-slate-200 rounded mb-2"></div>
-                             <div className="h-2 w-32 bg-slate-100 rounded"></div>
+                          <div className="h-2 w-16 bg-slate-200 rounded"></div>
+                        </div>
+                        <div className="flex-1 p-4 bg-white rounded-xl shadow-sm border border-primary/20 shadow-[0_4px_20px_rgba(0,218,153,0.1)] flex flex-col items-center text-center gap-3 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary relative z-10">
+                            <CheckCircle2 size={16} />
                           </div>
-                       </div>
-                       
-                       <div className="h-8 w-px bg-slate-300 relative">
-                          <div className="absolute top-1/2 -translate-y-1/2 -left-1.5 w-3 h-3 rounded-full bg-slate-200 border-2 border-white"></div>
-                       </div>
-                       
-                       <div className="flex gap-6 w-full">
-                          <div className="flex-1 p-4 bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col items-center text-center gap-3">
-                             <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
-                                <LayoutTemplate size={16} />
-                             </div>
-                             <div className="h-2 w-16 bg-slate-200 rounded"></div>
-                          </div>
-                          <div className="flex-1 p-4 bg-white rounded-xl shadow-sm border border-primary/20 shadow-[0_4px_20px_rgba(0,218,153,0.1)] flex flex-col items-center text-center gap-3 relative overflow-hidden">
-                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-                             <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary relative z-10">
-                                <CheckCircle2 size={16} />
-                             </div>
-                             <div className="h-2 w-16 bg-primary/30 rounded relative z-10"></div>
-                          </div>
-                       </div>
+                          <div className="h-2 w-16 bg-primary/30 rounded relative z-10"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   {/* Gradient Overlay */}
@@ -477,26 +477,26 @@ export default function ProductStrategyService() {
                 const colors = ['#00DA99', '#0D63CC', '#8B5CF6', '#F43F5E', '#F59E0B'];
                 const cardColor = colors[i % colors.length];
                 return (
-                <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
-                  {i < 4 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
-                  )}
-                  <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
-                    {/* Top Right Glow Effect */}
-                    <div 
-                      className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
-                      style={{ backgroundColor: cardColor }}
-                    />
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
-                    
-                    <div className="relative z-10">
-                      <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
-                      <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
-                      <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                  <motion.div key={i} {...fadeInUp(i * 0.1)} className="relative h-full">
+                    {i < 4 && (
+                      <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-slate-200 to-transparent z-0" />
+                    )}
+                    <div className="glass-card bg-white/10 backdrop-blur-xl border-[1.5px] border-white/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-500 overflow-hidden group p-6 rounded-2xl relative z-10 h-full">
+                      {/* Top Right Glow Effect */}
+                      <div
+                        className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-60 opacity-20 pointer-events-none z-0"
+                        style={{ backgroundColor: cardColor }}
+                      />
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+
+                      <div className="relative z-10">
+                        <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                        <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
+                        <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -650,8 +650,8 @@ export default function ProductStrategyService() {
                     <User size={36} className="text-slate-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Product Owner</h4>
-                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1">SaaS Platform</p>
+                    <h4 className="font-bold text-text-primary text-[16px] uppercase tracking-widest">Product Owner - OasisPad</h4>
+                    <p className="text-[11px] font-bold text-text-secondary opacity-60 uppercase tracking-[0.2em] mt-1"> William</p>
                   </div>
                 </div>
               </div>
@@ -705,22 +705,22 @@ export default function ProductStrategyService() {
         {/* ── NEW SECTION — INDUSTRIES ───────────────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative">
           <div className="max-w-5xl mx-auto text-center">
-             <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
-                <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
-                <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
-                  <span>Healthcare</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Enterprise SaaS</span>
-                  <span className="text-primary/40">•</span>
-                  <span>FinTech</span>
-                  <span className="text-primary/40">•</span>
-                  <span>EdTech</span>
-                  <span className="text-primary/40">•</span>
-                  <span>AI Platforms</span>
-                  <span className="text-primary/40">•</span>
-                  <span>Analytics Products</span>
-                </div>
-             </motion.div>
+            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
+              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Industries I Specialize In</p>
+              <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
+                <span>Healthcare</span>
+                <span className="text-primary/40">•</span>
+                <span>Enterprise SaaS</span>
+                <span className="text-primary/40">•</span>
+                <span>FinTech</span>
+                <span className="text-primary/40">•</span>
+                <span>EdTech</span>
+                <span className="text-primary/40">•</span>
+                <span>AI Platforms</span>
+                <span className="text-primary/40">•</span>
+                <span>Analytics Products</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -742,7 +742,7 @@ export default function ProductStrategyService() {
                 Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
               </h2>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {[
                 { name: "Carenova", link: "/case-studies/carenova" },
@@ -788,7 +788,7 @@ export default function ProductStrategyService() {
                 }}
               />
 
-                            <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
+              <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left pr-0 md:pr-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight leading-[1.2] mb-4">
                   Building a new product or scaling an existing platform?
                 </h3>

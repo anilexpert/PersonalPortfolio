@@ -882,9 +882,9 @@ export default function KinoraCaseStudy() {
                               ))}
                            </div>
 
-                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
+                           <Link href="mailto:hello@example.com" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold hover:scale-105 transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] hover:shadow-[0_30px_60px_-15px_rgba(13,99,204,0.35)] group text-base overflow-hidden relative bg-[#0D63CC]">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10 text-white">Open in Figma</span>
+                              <span className="relative z-10">Get in Touch</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>

@@ -1238,9 +1238,9 @@ export default function TicketStackCaseStudy() {
                            <p className="text-base md:text-lg text-text-secondary mb-8 text-center max-w-xl font-medium leading-relaxed">
                               I help startups and businesses design scalable digital products that simplify complexity and improve operational performance.
                            </p>
-                           <Link href="mailto:hello@example.com" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
+                           <Link href="https://www.figma.com/design/JMh46MC2K4sRdLwAqNRBSj/Oasisnotes?node-id=3-62112&t=yPqYRdGSG9FnJSZX-1" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10 text-white">Let's Discuss Your Product</span>
+                              <span className="relative z-10 text-white">Open in Figma</span>
                               <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                            </Link>
                         </div>

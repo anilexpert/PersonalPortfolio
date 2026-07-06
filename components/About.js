@@ -109,15 +109,15 @@ const About = () => {
             <MetricCard key={m.label} value={m.value} label={m.label} Icon={m.Icon} color={m.color} delay={i * 0.1} />
           ))}
         </div>
-         <div className="max-w-3xl mx-auto mt-8 md:mt-12">
+        <div className="max-w-3xl mx-auto mt-8 md:mt-12">
           <p className="text-base md:text-2xl font-medium text-text-secondary text-center leading-[1.4] md:leading-[1.3] tracking-tight">
             Focused on creating measurable impact through usability, efficiency, and scalable product systems.
           </p>
-          </div> 
+        </div>
 
         {/* Premium Skills Cloud */}
         <div className="mt-14 md:mt-20 mb-10 w-full max-w-4xl mx-auto flex justify-center relative">
-          
+
           {/* Subtle background glow for the skills section */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
@@ -158,15 +158,15 @@ const About = () => {
                   }}
                 >
                   <div className="group relative flex items-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3.5 bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:border-white transition-all duration-300 cursor-default overflow-hidden">
-                    <div 
+                    <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
                       style={{ background: `linear-gradient(135deg, transparent, ${skill.color})` }}
                     />
-                    <div 
+                    <div
                       className="absolute -inset-2 opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-300 z-0 pointer-events-none"
                       style={{ background: skill.color }}
                     />
-                    
+
                     <span className="text-lg md:text-2xl drop-shadow-sm relative z-10">{skill.icon}</span>
                     <span className="text-[13px] md:text-[15px] font-bold text-text-primary tracking-tight transition-colors duration-300 relative z-10 group-hover:text-primary">
                       {skill.name}
@@ -213,15 +213,15 @@ const About = () => {
                 {contactItems.map((item, i) => (
                   <div key={`${arrayIndex}-${i}`} className="flex items-center gap-4 md:gap-8 px-4">
                     <span
-                      className="text-[28px] sm:text-3xl md:text-[38px] font-black tracking-tighter text-transparent whitespace-nowrap"
-                      style={{ WebkitTextStroke: '2px #0D63CC' }}
+                      className="text-[24px] sm:text-2xl md:text-[28px] font-semibold tracking-tighter text-transparent whitespace-nowrap"
+                      style={{ WebkitTextStroke: '1px #0D63CC' }}
                     >
                       {item.label}
                     </span>
-                    <span className="text-primary text-xl md:text-3xl opacity-60">
+                    <span className="text-primary text-xl md:text-2xl opacity-60">
                       ◆
                     </span>
-                    <span className="text-xl sm:text-2xl md:text-[38px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] via-[#00B8D4] to-[#00DA99] whitespace-nowrap">
+                    <span className="text-xl sm:text-2xl md:text-[28px] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] via-[#00B8D4] to-[#00DA99] whitespace-nowrap">
                       {item.value}
                     </span>
                     <span className="text-primary text-xl md:text-2xl opacity-60">

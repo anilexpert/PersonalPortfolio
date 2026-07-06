@@ -187,7 +187,7 @@ export default function ContactPage() {
 
                 {/* LinkedIn Icon */}
                 <motion.a
-                  href="www.linkedin.com/in/anil-kumar-folio"
+                  href="https://www.linkedin.com/in/anilkumar-ai-product-designer"
                   whileHover={{ scale: 1.08, y: -2 }}
                   className="w-11 h-11 rounded-xl bg-white border border-secondary/15 hover:border-secondary text-secondary flex items-center justify-center transition-all shadow-[0_8px_20px_rgba(13,99,204,0.03)] hover:shadow-[0_12px_24px_rgba(13,99,204,0.12)]"
                 >

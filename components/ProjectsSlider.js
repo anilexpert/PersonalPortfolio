@@ -147,7 +147,7 @@ export default function ProjectsSlider() {
           className="flex flex-col md:flex-row w-full"
           style={{
             height: 'auto',
-            minHeight: 440,
+            minHeight: 520,
             gap: 20,
             borderRadius: 24,
           }}
@@ -159,7 +159,7 @@ export default function ProjectsSlider() {
               <div
                 key={proj.title}
                 onClick={() => setActive(idx)}
-                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[24px] ${isActive ? 'h-[320px] md:h-[420px]' : 'h-[140px] md:h-[420px]'
+                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[24px] ${isActive ? 'h-[320px] md:h-[480px]' : 'h-[140px] md:h-[480px]'
                   }`}
 
                 style={{
@@ -234,13 +234,13 @@ export default function ProjectsSlider() {
                         <p className="text-white/90 text-[12px] md:text-[14px] font-normal mt-2 mb-4 text-center">
                           {proj.subtitle}
                         </p>
-                        <div className="w-16 h-[1px] bg-white/30 mb-5 rounded-full" />
+                        <div className="w-16 h-[1px] bg-white/30 mb-4 lg:mb-5 rounded-full" />
                         <p className="text-white/95 text-[12px] md:text-[14px] leading-relaxed text-center font-normal max-w-[90%]">
                           {proj.description}
                         </p>
-                        <div className="mt-4 lg:mt-6">
+                        <div className="mt-2 lg:mt-4">
                           <Link href={`/case-studies/${proj.slug}`}>
-                            <button className="btn-premium py-2 md:py-2.5 px-3 md:px-4 text-[12px] md:text-[13px]">
+                            <button className="btn-premium py-1 md:py-2.5 px-1.6 md:px-4 text-[10px] md:text-[13px]">
                               <span className="uppercase">Read Case Study</span> <ArrowUpRight size={16} />
                             </button>
                           </Link>

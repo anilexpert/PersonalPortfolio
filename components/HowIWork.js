@@ -90,9 +90,9 @@ export default function HowIWork() {
                 >
                   {/* Background image as Thumbnail */}
                   <img
-                    src="/fusion-bg.png"
+                    src="images/How-I-Work.png"
                     alt="Video Thumbnail"
-                    className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 transition-transform duration-1000 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-10 transition-transform duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-80" />
 

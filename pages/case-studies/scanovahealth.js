@@ -410,7 +410,7 @@ export default function ScanovaHealthCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing patient attitudes and behaviors to align our team on a deep understanding of end users.</p>
                   </div>
 
-                  <div className="max-w-6xl mx-auto relative glass-card rounded-[40px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(6,182,212,0.2)] border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
+                  <div className="max-w-6xl mx-auto relative glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(6,182,212,0.2)] border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
                      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#06B6D4]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#06B6D4]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
                      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#0EA5E9]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0EA5E9]/20 transition-all duration-1000 translate-x-1/4 translate-y-1/4" />
 

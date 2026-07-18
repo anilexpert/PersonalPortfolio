@@ -89,7 +89,7 @@ export default function TicketStackCaseStudy() {
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
                {/* ── SECTION 01: HERO / ABOVE THE FOLD ────────────────────────────────────────── */}
-               <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
+               <section className="mb-8 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -142,7 +142,7 @@ export default function TicketStackCaseStudy() {
                   </motion.div>
                </section>
 
-               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
+               <motion.section {...fadeIn} className="mb-8 md:mb-12 lg:mb-16 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <Image
                         src="/images/ticketstack/EnterpriseRetailTicketing.png"
@@ -171,30 +171,30 @@ export default function TicketStackCaseStudy() {
                            <div className={`w-16 h-16 rounded-full ${stat.bg} ${stat.color} flex items-center justify-center mb-4`}>
                               <TrendingUp size={24} />
                            </div>
-                           <h3 className={`text-4xl md:text-5xl font-black mb-2 ${stat.color}`}>{stat.val}</h3>
+                           <h3 className={`text-3xl md:text-5xl font-black mb-2 ${stat.color}`}>{stat.val}</h3>
                            <p className="text-sm font-bold text-text-secondary">{stat.label}</p>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION 03: THE BUSINESS CHALLENGE ───────────────────── */}
-               <section className="mb-12 md:mb-16 lg:mb-20">
-                  <div className="text-center mb-16">
+               <section className="mb-8 md:mb-16 lg:mb-20">
+                  <div className="text-center mb-8 lg:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
                         <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest">
                            Core Issues
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Retail ticket operations relied on fragmented systems, manual campaign coordination, and disconnected inventory processes, making it difficult to scale efficiently.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 md:mb-16 mb-8">
                      {[
                         { num: "01", title: "Fragmented Retail Operations", desc: "Operational workflows were distributed across multiple disconnected tools.", icon: Layers, color: "#0D63CC" },
                         { num: "02", title: "Limited Campaign Visibility", desc: "Stakeholders lacked centralized insights into campaign performance.", icon: Layout, color: "#00DA99" },
@@ -222,7 +222,7 @@ export default function TicketStackCaseStudy() {
                               </div>
                               <challenge.icon size={24} className="opacity-30" style={{ color: challenge.color }} />
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{challenge.title}</h4>
+                           <h4 className="font-bold text:lg md:text-xl text-text-primary mb-3 relative z-10">{challenge.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{challenge.desc}</p>
                         </motion.div>
                      ))}
@@ -310,12 +310,12 @@ export default function TicketStackCaseStudy() {
                   </motion.div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION 04 & 05: DISCOVERY & RESEARCH (CARENOVA STYLE) ─────────────── */}
-               <section className="mb-12 md:mb-16 lg:mb-20">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                      <div className="lg:col-span-4">
                         <div className="sticky top-24">
@@ -324,7 +324,7 @@ export default function TicketStackCaseStudy() {
                                  Research & Discovery
                               </span>
                            </div>
-                           <h3 className="text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
+                           <h3 className="text-2xl md:text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
                            <p className="text-text-secondary leading-relaxed font-medium mb-8">
                               Research sessions were conducted to understand operational workflows, stakeholder expectations, and inefficiencies within the existing ticket distribution process.
                            </p>
@@ -411,20 +411,20 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION: STRATEGIC ARTIFACTS ─────────────────────────────────────────── */}
-               <section className="mb-12 md:mb-16 lg:mb-20">
-                  <div className="text-center mb-16">
+               <section className="mb-8 md:mb-16 lg:mb-20">
+                  <div className="text-center mb-8 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Deliverables</span>
                      </div>
-                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Artifacts</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Artifacts</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key deliverables that guided the product strategy and informed the design architecture.</p>
                   </div>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-9xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-9xl mx-auto">
                      {[
                         { name: "Affinity Map", image: "AffinityMap.png" },
                         { name: "Stakeholder Map", image: "StakeholderMap.png" },
@@ -449,13 +449,13 @@ export default function TicketStackCaseStudy() {
 
                {/* ── SECTION 07 & 08: USER PERSONAS (SPENDORA STYLE) ────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <div className="mb-16 text-center">
+                  <div className="mb-8 md:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            User Persona
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Primary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">User Personas</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Primary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">User Personas</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-3 gap-5">
@@ -548,16 +548,16 @@ export default function TicketStackCaseStudy() {
                </section>
 
                {/* ── SECTION 11 & 12: USER JOURNEY / FLOW (SPENDORA STYLE) ──────────────── */}
-               <section className="mb-16 md:mb-24">
-                  <div className="mb-12 text-center">
+               <section className="mb-8 md:mb-24 lg:mb-24">
+                  <div className="mb-8 md:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow Architecture</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Key Operational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Workflows</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Key Operational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Streamlined architecture reducing cognitive load and simplifying enterprise tasks into linear guided flows.</p>
                   </div>
 
-                  <div className="space-y-16 max-w-9xl mx-auto">
+                  <div className="space-y-8 md:space-y-12 lg:space-y-16 max-w-9xl mx-auto">
                      {/* Campaign Deployment Flow */}
                      <div className="glass-card p-8 md:p-12 rounded-[16px] lg:rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
@@ -788,28 +788,28 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION 14: SOLUTION WALKTHROUGH (CARENOVA STYLE UI SHOWCASE) ──────── */}
-               <section className="mb-16 md:mb-24">
+               <section className="mb-8 md:mb-24 lg:mb-24">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <Layout size={14} className="text-primary" />
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Walkthrough</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Capabilities</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Capabilities</span></h2>
                   </div>
 
-                  <div className="space-y-20 md:space-y-32">
+                  <div className="space-y-12 md:space-y-20 lg:space-y-32">
                      {/* Scene 01 */}
-                     <div className="grid lg:grid-cols-12 gap-12 items-center">
+                     <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-center">
                         <motion.div {...fadeIn} className="lg:col-span-5">
                            <div className="w-12 h-12 rounded-2xl bg-[#0D63CC]/10 text-[#0D63CC] flex items-center justify-center mb-6">
                               <Layout size={24} />
                            </div>
-                           <h3 className="text-3xl font-black text-text-primary mb-4">Executive Dashboard</h3>
+                           <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">Executive Dashboard</h3>
                            <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
                               Provides leadership teams with real-time visibility into sales performance, inventory status, and operational health.
                            </p>
@@ -836,7 +836,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Scene 02 */}
-                     <div className="grid lg:grid-cols-12 gap-12 items-center">
+                     <div className="grid lg:grid-cols-12 gap:6 lg:gap-12 items-center">
                         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="order-2 lg:order-1 lg:col-span-7">
                            {/* <PremiumPlaceholder icon={Layers} label="Ticket Creation Wizard Mockup" glowColor="#8B5CF6" textCls="text-[#8B5CF6]" aspect="aspect-[16/10]" /> */}
                            <div className="relative aspect-[16/10] glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
@@ -852,7 +852,7 @@ export default function TicketStackCaseStudy() {
                            <div className="w-12 h-12 rounded-2xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center mb-6">
                               <PenTool size={24} />
                            </div>
-                           <h3 className="text-3xl font-black text-text-primary mb-4">Ticket Creation & Management</h3>
+                           <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">Ticket Creation & Management</h3>
                            <p className="text-base font-medium text-text-secondary mb-6 leading-relaxed">
                               Simplifies campaign creation, ticket lifecycle management, and operational coordination.
                            </p>
@@ -865,11 +865,11 @@ export default function TicketStackCaseStudy() {
 
                      {/* Split Scenes */}
                      <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-                        <motion.div {...fadeIn} className="glass-card p-10 rounded-[16px] lg:rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                        <motion.div {...fadeIn} className="glass-card p-6 lg:p-10 rounded-[16px] lg:rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
                            <div className="w-12 h-12 rounded-2xl bg-[#00DA99]/10 text-[#00DA99] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                               <Target size={24} />
                            </div>
-                           <h3 className="text-2xl font-black text-text-primary mb-3">Campaign Management</h3>
+                           <h3 className="text-2xl font-bold text-text-primary mb-3">Campaign Management</h3>
                            <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Enables centralized planning, monitoring, and optimization of retail campaigns.</p>
                            {/* <PremiumPlaceholder icon={Target} label="Campaigns UI" aspect="aspect-[4/3]" glowColor="#00DA99" textCls="text-[#00DA99]" /> */}
                            <div className="relative aspect-[4/3] glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
@@ -882,11 +882,11 @@ export default function TicketStackCaseStudy() {
                            </div>
                         </motion.div>
 
-                        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-10 rounded-[16px] lg:rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-6 lg:p-10 rounded-[16px] lg:rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
                            <div className="w-12 h-12 rounded-2xl bg-[#F59E0B]/10 text-[#F59E0B] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                               <Grid size={24} />
                            </div>
-                           <h3 className="text-2xl font-black text-text-primary mb-3">Inventory Management</h3>
+                           <h3 className="text-2xl font-bold text-text-primary mb-3">Inventory Management</h3>
                            <p className="text-sm font-medium text-text-secondary mb-8 flex-grow">Improves visibility and control over ticket inventory across channels and partners.</p>
                            {/* <PremiumPlaceholder icon={Grid} label="Inventory UI" aspect="aspect-[4/3]" glowColor="#F59E0B" textCls="text-[#F59E0B]" /> */}
                            <div className="relative aspect-[4/3] glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
@@ -900,14 +900,14 @@ export default function TicketStackCaseStudy() {
                         </motion.div>
                      </div>
                      {/* Additional Operational Views */}
-                     <div className="mt-20 md:mt-24">
-                        <div className="text-center mb-12">
+                     <div className="mt-10 md:mt-20">
+                        <div className="text-center mb-8 md:mb-12">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 mb-4">
                               <span className="text-[10px] font-bold text-[#8B5CF6] uppercase tracking-widest">Features</span>
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Additional Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
+                           <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Additional Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                            {[
                               { name: "Table-Heavy Operational Screens", image: "OperationalScreens.png" },
                               { name: "Bulk Actions Workflows", image: "BulkActions.png" },
@@ -952,17 +952,17 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION: INFORMATION ARCHITECTURE ────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24">
+               <section className="mb-8 md:mb-24 lg:mb-24">
                   <div className="text-center mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Structure</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Structuring <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Enterprise Operations</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Structuring <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Enterprise Operations</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Information architecture was designed to support complex operational workflows while maintaining clarity and scalability.</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-9xl mx-auto">
@@ -988,14 +988,14 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION: DESIGN PRINCIPLES ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24">
-                  <div className="text-center mb-16">
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Principles</span></h2>
+               <section className="mb-8 md:mb-24 lg:mb-24">
+                  <div className="text-center mb-8 lg:mb-16">
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Principles</span></h2>
                   </div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-9xl mx-auto">
                      {[
@@ -1015,14 +1015,14 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION: WIREFRAMES ────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24">
-                  <div className="text-center mb-16">
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+               <section className="mb-8 md:mb-24 lg:mb-24">
+                  <div className="text-center mb-4 md:mb-16">
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
                   <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
                      {/* Decorative dashed connecting line */}
@@ -1044,26 +1044,26 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── DESIGN SYSTEM & VISUALS ───────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-24 lg:mb-24 lg:mb-32">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Building a Scalable Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces. Includes Grid system, Accessibility standards, Component library, and Data visualization patterns.
                      </p>
                   </div>
                   <div className="mb-12">
                      <h3 className="text-xl font-bold text-text-primary mb-6 text-center">Key UI Components</h3>
-                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-9xl mx-auto">
+                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-9xl mx-auto">
                         {[
                            { name: "Table Components", image: "TablesComponents.png" },
                            { name: "Filters", image: "FiltersComponents.png" },
@@ -1166,25 +1166,25 @@ export default function TicketStackCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
                {/* ── SECTION 17: EXPECTED BUSINESS OUTCOMES ───────────── */}
-               <section className="mb-16 md:mb-24">
-                  <div className="p-8 md:p-16 rounded-[40px] glass-card border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white/60 relative overflow-hidden">
+               <section className="mb-8 md:mb-16 lg:mb-20">
+                  <div className="p-4 md:p-8 md:p-16 rounded-[16px] lg:rounded-[24px] glass-card border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white/60 relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00DA99]/10 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0D63CC]/10 blur-[100px] rounded-full pointer-events-none" />
 
-                     <div className="text-center mb-12 relative z-10">
+                     <div className="text-center mb-6 md:mb-12 relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-md">
                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Business Impact</span>
                         </div>
-                        <h2 className="text-4xl font-bold mb-4 text-text-primary">Expected Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
+                        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-text-primary">Expected Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>
                         <p className="text-text-secondary font-medium max-w-2xl mx-auto text-lg">Meaningful business transformation through design.</p>
                      </div>
 
-                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 mb-12">
+                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 mb-4 lg:mb-12">
                         {[
                            { title: "Improved operational visibility", icon: Search, color: "#0D63CC" },
                            { title: "Faster campaign management", icon: Zap, color: "#00DA99" },
@@ -1193,7 +1193,7 @@ export default function TicketStackCaseStudy() {
                            { title: "Reduced operational overhead", icon: ShieldCheck, color: "#EC4899" },
                            { title: "Data-driven decision making", icon: BarChart2, color: "#38BDF8" }
                         ].map((outcome, i) => (
-                           <div key={i} className="p-8 glass-card bg-white/60 rounded-[16px] lg:rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
+                           <div key={i} className="p-6 lg:p-8 glass-card bg-white/60 rounded-[16px] lg:rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden group flex flex-col items-center justify-center min-h-[160px]">
                               <div className="absolute -top-12 -right-12 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700 pointer-events-none" style={{ backgroundColor: outcome.color }} />
                               <outcome.icon size={32} className="mb-4 transition-transform duration-500 group-hover:scale-110" style={{ color: outcome.color }} />
                               <h3 className="text-lg font-bold text-text-primary tracking-tight leading-snug relative z-10">{outcome.title}</h3>
@@ -1204,7 +1204,7 @@ export default function TicketStackCaseStudy() {
                </section>
 
                {/* ── SECTION 20: KEY LEARNINGS ─────────────────────────────────────────── */}
-               <section className="relative mb-10 md:mb-16 overflow-hidden">
+               <section className="relative mb-8 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
                      className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
@@ -1217,7 +1217,7 @@ export default function TicketStackCaseStudy() {
                            <Award size={28} className="text-[#0D63CC]" />
                         </div>
 
-                        <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-8">
+                        <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-8">
                            Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Learnings</span>
                         </h2>
 
@@ -1225,10 +1225,10 @@ export default function TicketStackCaseStudy() {
                            <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
                            <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none rotate-180 z-0">"</div>
                            <div className="relative z-10 px-6 py-4">
-                              <p className="text-lg md:text-xl font-bold text-text-primary leading-[1.4] mb-6">
+                              <p className="text-base md:text-xl font-bold text-text-primary leading-[1.4] mb-6">
                                  Designing enterprise retail products requires balancing operational complexity with usability.
                               </p>
-                              <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                              <p className="text-base md:text-xl text-text-secondary font-medium leading-relaxed">
                                  Simplifying workflows, improving visibility, and supporting scalability were critical to creating an effective experience.
                               </p>
                            </div>
@@ -1272,7 +1272,7 @@ export default function TicketStackCaseStudy() {
                   <div className="relative max-w-9xl mx-auto">
                      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[16px] lg:rounded-[24px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
 
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 
@@ -1280,7 +1280,7 @@ export default function TicketStackCaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                           <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
                            <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -1304,13 +1304,13 @@ export default function TicketStackCaseStudy() {
                      </motion.div>
 
                      {/* Additional CTA */}
-                     <motion.div {...fadeIn} className="mt-12 md:mt-16 glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
+                     <motion.div {...fadeIn} className="mt-8 md:mt-16 glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
                         <div className="absolute -top-16 -right-16 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="relative z-10 flex flex-col items-center">
                            <div className="w-16 h-16 rounded-full bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] mb-6">
                               <Building2 size={28} />
                            </div>
-                           <h3 className="text-2xl md:text-3xl font-black text-text-primary mb-4 text-center">Building SaaS or Enterprise Products?</h3>
+                           <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 text-center">Building SaaS or Enterprise Products?</h3>
                            <p className="text-base md:text-lg text-text-secondary mb-8 text-center max-w-xl font-medium leading-relaxed">
                               I help startups and businesses design scalable digital products that simplify complexity and improve operational performance.
                            </p>
@@ -1327,7 +1327,7 @@ export default function TicketStackCaseStudy() {
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/supercampus" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                     <h3 className="text-4xl md:text-5xl font-bold text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         SuperCampus
                      </h3>
                      <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">

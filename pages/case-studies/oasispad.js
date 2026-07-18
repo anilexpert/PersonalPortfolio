@@ -247,7 +247,7 @@ export default function OasisPadCaseStudy() {
 
                {/* THE BUSINESS CHALLENGE (Symmetric Grid) */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16 glass-card p-10 md:p-16 rounded-[40px] border border-rose-500/10 relative overflow-hidden">
+                  <div className="text-center mb-16 glass-card p-10 md:p-16 rounded-[16px] lg:rounded-[24px] border border-rose-500/10 relative overflow-hidden">
                      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-rose-500/10 blur-[80px] rounded-full pointer-events-none" />
 
                      <div className="relative z-10">
@@ -448,7 +448,7 @@ export default function OasisPadCaseStudy() {
 
                {/* STRATEGIC ARTIFACTS SECTION */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="glass-card p-10 md:p-16 rounded-[40px] border border-[#0D63CC]/10 relative overflow-hidden">
+                  <div className="glass-card p-10 md:p-16 rounded-[16px] lg:rounded-[24px] border border-[#0D63CC]/10 relative overflow-hidden">
                      <div className="absolute top-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
 
@@ -987,7 +987,7 @@ export default function OasisPadCaseStudy() {
 
                {/* OUTCOME & IMPACT */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="p-8 md:p-12 glass-card rounded-[40px] bg-gradient-to-br from-[#0D63CC]/5 to-[#00DA99]/5 border border-slate-200/50">
+                  <div className="p-8 md:p-12 glass-card rounded-[16px] lg:rounded-[24px] bg-gradient-to-br from-[#0D63CC]/5 to-[#00DA99]/5 border border-slate-200/50">
                      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div className="space-y-8">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow-sm border border-slate-100 mb-2">
@@ -1091,7 +1091,7 @@ export default function OasisPadCaseStudy() {
 
                {/* KEY TAKEAWAY */}
                <section className="mb-20 md:mb-32 w-full">
-                  <div className="w-full glass-card rounded-[40px] p-10 md:p-16 lg:p-20 bg-gradient-to-br from-[#00DA99]/15 via-[#f0fbff]/50 to-[#0D63CC]/15 border border-[#00DA99]/20 shadow-sm relative overflow-hidden text-center flex flex-col items-center">
+                  <div className="w-full glass-card rounded-[16px] lg:rounded-[24px] p-10 md:p-16 lg:p-20 bg-gradient-to-br from-[#00DA99]/15 via-[#f0fbff]/50 to-[#0D63CC]/15 border border-[#00DA99]/20 shadow-sm relative overflow-hidden text-center flex flex-col items-center">
                      <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#00DA99]/20 blur-[80px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/20 blur-[80px] rounded-full pointer-events-none" />
 

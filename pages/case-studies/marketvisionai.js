@@ -132,7 +132,7 @@ export default function MarketVisionAICaseStudy() {
 
                {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700 bg-slate-900 border-2 border-slate-800 flex items-center justify-center">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700 bg-slate-900 border-2 border-slate-800 flex items-center justify-center">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
@@ -510,7 +510,7 @@ export default function MarketVisionAICaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
                      {/* Diagram Flow */}
-                     <div className="lg:col-span-12 glass-card rounded-[32px] p-6 lg:p-10 border border-[#0D63CC]/10 mb-2 bg-[#F1F5F9]/50">
+                     <div className="lg:col-span-12 glass-card rounded-[24px] p-6 lg:p-10 border border-[#0D63CC]/10 mb-2 bg-[#F1F5F9]/50">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-center w-full">
                            {["Data Sources", "Data Processing", "AI Intelligence Layer", "Insights Engine", "Recommendations", "Decision Dashboard"].map((step, idx) => (
                               <React.Fragment key={idx}>
@@ -524,7 +524,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Feature List */}
-                     <div className="lg:col-span-5 glass-card rounded-[32px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group flex flex-col">
+                     <div className="lg:col-span-5 glass-card rounded-[24px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                         <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
                            <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center border border-[#0D63CC]/20 shadow-sm">
@@ -557,7 +557,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* IA Tree */}
-                     <div className="lg:col-span-7 glass-card rounded-[32px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group">
+                     <div className="lg:col-span-7 glass-card rounded-[24px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group">
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                         <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
                            <div className="w-12 h-12 rounded-xl bg-[#00DA99]/10 flex items-center justify-center border border-[#00DA99]/20 shadow-sm">
@@ -917,7 +917,7 @@ export default function MarketVisionAICaseStudy() {
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
 
                      {/* Colors - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Palette
@@ -943,7 +943,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Typography - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -969,7 +969,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Iconography - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
@@ -1068,7 +1068,7 @@ export default function MarketVisionAICaseStudy() {
                            ]
                         }
                      ].map((flow, i) => (
-                        <div key={i} className="glass-card rounded-[32px] p-8 md:p-12 border border-slate-200 overflow-hidden">
+                        <div key={i} className="glass-card rounded-[24px] p-8 md:p-12 border border-slate-200 overflow-hidden">
                            <h4 className="font-black text-xl text-text-primary mb-12 text-center md:text-left">{flow.name}</h4>
                            <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-8 md:gap-0">
 
@@ -1351,7 +1351,7 @@ export default function MarketVisionAICaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

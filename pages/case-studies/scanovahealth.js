@@ -137,7 +137,7 @@ export default function ScanovaHealthCaseStudy() {
 
                {/* ── MAIN HERO IMAGE / PLACEHOLDER ───────────────────── */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <Image
                         src="/images/scanova/screenbanner.png"
                         alt="ScanovaHealth Platform Interface"
@@ -749,7 +749,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#06B6D4]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-[#06B6D4] rounded-full" /> Color Palette</h4>
                         <div className="grid grid-cols-3 gap-4">
@@ -773,7 +773,7 @@ export default function ScanovaHealthCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0EA5E9]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0EA5E9]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#0EA5E9]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-[#0EA5E9] rounded-full" /> Typography</h4>
                         <div className="flex-1 flex flex-col justify-center mb-8">
@@ -795,7 +795,7 @@ export default function ScanovaHealthCaseStudy() {
                      </div>
 
                      {/* Components */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-emerald-500/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-emerald-500/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-emerald-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Components</h4>
                         <div className="grid grid-cols-3 gap-4">
@@ -944,7 +944,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Overview" glowCls="bg-[#06B6D4]" textCls="text-[#06B6D4]" icon={Layout} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/DashboardOverview.png"
                            alt="Dashboard Overview"
@@ -953,7 +953,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Device Detail Screen" glowCls="bg-[#0EA5E9]" textCls="text-[#0EA5E9]" icon={FolderOpen} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/DeviceDetailScreen.png"
                            alt="Device Detail Screen"
@@ -962,7 +962,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Reference Viewer" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Eye} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/MRIReferenceViewer.png"
                            alt="MRI Reference Viewer"
@@ -971,7 +971,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Validation Center" glowCls="bg-[#10B981]" textCls="text-[#10B981]" icon={Brain} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/AIValidationCenter.png"
                            alt="AI Validation Center"
@@ -980,7 +980,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="PDF Report Module" glowCls="bg-[#F59E0B]" textCls="text-[#F59E0B]" icon={FileText} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/PDFReportModule.png"
                            alt="PDF Report Module"
@@ -989,7 +989,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Center Finder" glowCls="bg-[#F43F5E]" textCls="text-[#F43F5E]" icon={MapPin} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/MRIFinder.png"
                            alt="MRI Center Finder"
@@ -1145,7 +1145,7 @@ export default function ScanovaHealthCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

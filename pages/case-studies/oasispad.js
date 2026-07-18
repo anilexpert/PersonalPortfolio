@@ -147,7 +147,7 @@ export default function OasisPadCaseStudy() {
 
                {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
@@ -559,7 +559,7 @@ export default function OasisPadCaseStudy() {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                     <motion.div {...fadeIn} className="glass-card rounded-[32px] p-8 md:p-10 border-2 border-[#00DA99]/20 relative overflow-hidden group">
+                     <motion.div {...fadeIn} className="glass-card rounded-[24px] p-8 md:p-10 border-2 border-[#00DA99]/20 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-[#00DA99]/10 flex items-center justify-center mb-8 relative z-10">
                            <Stethoscope size={32} className="text-[#00DA99]" />
@@ -577,7 +577,7 @@ export default function OasisPadCaseStudy() {
                         </ul>
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="glass-card rounded-[32px] p-8 md:p-10 border-2 border-[#0D63CC]/20 relative overflow-hidden group">
+                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="glass-card rounded-[24px] p-8 md:p-10 border-2 border-[#0D63CC]/20 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-[#0D63CC]/10 flex items-center justify-center mb-8 relative z-10">
                            <Wallet size={32} className="text-[#0D63CC]" />
@@ -631,7 +631,7 @@ export default function OasisPadCaseStudy() {
                   </div>
 
                   <div className="max-w-8xl mx-auto">
-                     <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                     <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
                         <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layers} />
                         <Image
                            src="/images/oasispad/IA-Thumnail.png"
@@ -659,7 +659,7 @@ export default function OasisPadCaseStudy() {
                         { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
                         { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
                      ].map((uf, i) => (
-                        <div key={i} className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]" >
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]" >
                            <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-16 text-center md:text-left">{uf.title}</h4>
 
                            <div className="relative py-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-2 md:px-8">
@@ -873,7 +873,7 @@ export default function OasisPadCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
@@ -897,7 +897,7 @@ export default function OasisPadCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -921,7 +921,7 @@ export default function OasisPadCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
@@ -1146,7 +1146,7 @@ export default function OasisPadCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

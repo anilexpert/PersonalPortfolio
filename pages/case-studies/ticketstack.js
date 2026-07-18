@@ -143,7 +143,7 @@ export default function TicketStackCaseStudy() {
                </section>
 
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <Image
                         src="/images/ticketstack/EnterpriseRetailTicketing.png"
                         alt="Carenova Platform Interface"
@@ -229,7 +229,7 @@ export default function TicketStackCaseStudy() {
                   </div>
 
                   {/* Visualization of emotional impact */}
-                  <div className="max-w-9xl mx-auto glass-card rounded-[32px] p-8 md:p-12 relative overflow-hidden bg-white/60">
+                  <div className="max-w-9xl mx-auto glass-card rounded-[24px] p-8 md:p-12 relative overflow-hidden bg-white/60">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-rose-500/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="flex flex-col items-center mb-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
@@ -293,7 +293,7 @@ export default function TicketStackCaseStudy() {
 
                   <motion.div
                      {...fadeIn}
-                     className="mt-16 p-10 md:p-14 glass-card bg-white/80 border border-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden text-center group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1"
+                     className="mt-16 p-10 md:p-14 glass-card bg-white/80 border border-white rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden text-center group hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1"
                   >
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#0D63CC]/10 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/20 transition-all duration-700 pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#00DA99]/10 blur-[80px] rounded-full group-hover:bg-[#00DA99]/20 transition-all duration-700 pointer-events-none" />
@@ -559,7 +559,7 @@ export default function TicketStackCaseStudy() {
 
                   <div className="space-y-16 max-w-9xl mx-auto">
                      {/* Campaign Deployment Flow */}
-                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                     <div className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Deployment Flow</h3>
 
@@ -617,7 +617,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Inventory Distribution Flow */}
-                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                     <div className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#00DA99]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Inventory Distribution Flow</h3>
 
@@ -674,7 +674,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Campaign Management Flow */}
-                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                     <div className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Campaign Management Flow</h3>
 
@@ -731,7 +731,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Reporting Flow */}
-                     <div className="glass-card p-8 md:p-12 rounded-[32px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
+                     <div className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group bg-white/60">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[80px] rounded-full pointer-events-none" />
                         <h3 className="text-xl font-bold mb-8 text-center text-text-primary relative z-10">Reporting Flow</h3>
 
@@ -865,7 +865,7 @@ export default function TicketStackCaseStudy() {
 
                      {/* Split Scenes */}
                      <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-                        <motion.div {...fadeIn} className="glass-card p-10 rounded-[32px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                        <motion.div {...fadeIn} className="glass-card p-10 rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
                            <div className="w-12 h-12 rounded-2xl bg-[#00DA99]/10 text-[#00DA99] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                               <Target size={24} />
                            </div>
@@ -882,7 +882,7 @@ export default function TicketStackCaseStudy() {
                            </div>
                         </motion.div>
 
-                        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-10 rounded-[32px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
+                        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card p-10 rounded-[24px] border border-white shadow-lg bg-white/50 flex flex-col h-full group">
                            <div className="w-12 h-12 rounded-2xl bg-[#F59E0B]/10 text-[#F59E0B] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                               <Grid size={24} />
                            </div>
@@ -1092,7 +1092,7 @@ export default function TicketStackCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
@@ -1116,7 +1116,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -1140,7 +1140,7 @@ export default function TicketStackCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
@@ -1207,7 +1207,7 @@ export default function TicketStackCaseStudy() {
                <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[24px] md:rounded-[32px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
+                     className="glass-card rounded-[24px] md:rounded-[24px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
                   >
                      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0D63CC]/8 blur-[120px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
@@ -1270,9 +1270,9 @@ export default function TicketStackCaseStudy() {
                   {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
 
                   <div className="relative max-w-9xl mx-auto">
-                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
+                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[24px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
 
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 
@@ -1304,7 +1304,7 @@ export default function TicketStackCaseStudy() {
                      </motion.div>
 
                      {/* Additional CTA */}
-                     <motion.div {...fadeIn} className="mt-12 md:mt-16 glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
+                     <motion.div {...fadeIn} className="mt-12 md:mt-16 glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
                         <div className="absolute -top-16 -right-16 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="relative z-10 flex flex-col items-center">
                            <div className="w-16 h-16 rounded-full bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] mb-6">

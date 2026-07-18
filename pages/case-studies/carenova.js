@@ -618,7 +618,7 @@ export default function CarenovaSystemsCaseStudy() {
                   </div>
 
                   <div className="max-w-8xl mx-auto">
-                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[32px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
+                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[24px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
                         <Image
                            src="/images/carenova/InformationArchitecture.png"
                            alt="Carenova Platform Interface"
@@ -692,7 +692,7 @@ export default function CarenovaSystemsCaseStudy() {
                            ]
                         }
                      ].map((flow, idx) => (
-                        <div key={idx} className="p-8 md:p-12 glass-card rounded-[32px] border-l-4 shadow-sm" style={{ borderColor: flow.color }}>
+                        <div key={idx} className="p-8 md:p-12 glass-card rounded-[24px] border-l-4 shadow-sm" style={{ borderColor: flow.color }}>
                            <h4 className="text-xl md:text-2xl font-bold mb-12 text-center" style={{ color: flow.color }}>{flow.title}</h4>
 
                            <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4">
@@ -937,7 +937,7 @@ export default function CarenovaSystemsCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
@@ -963,7 +963,7 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -987,7 +987,7 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
@@ -1354,7 +1354,7 @@ export default function CarenovaSystemsCaseStudy() {
                         ))}
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[32px] border border-white/80 shadow-[0_20px_50px_-10px_rgba(0,218,153,0.1)] p-10 md:p-12 relative overflow-hidden flex flex-col justify-center border-t-4 border-t-[#00DA99] group">
+                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[24px] border border-white/80 shadow-[0_20px_50px_-10px_rgba(0,218,153,0.1)] p-10 md:p-12 relative overflow-hidden flex flex-col justify-center border-t-4 border-t-[#00DA99] group">
                         <div className="absolute -top-32 -right-32 w-64 h-64 blur-[80px] bg-[#00DA99]/20 rounded-full group-hover:bg-[#00DA99]/30 transition-colors duration-1000 pointer-events-none" />
                         <h3 className="text-xl md:text-3xl font-bold text-text-primary leading-tight mb-8 relative z-10">Qualitative <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
                         <div className="space-y-4 relative z-10">
@@ -1438,9 +1438,9 @@ export default function CarenovaSystemsCaseStudy() {
                   {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
 
                   <div className="relative max-w-9xl mx-auto">
-                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[32px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
+                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[24px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
 
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

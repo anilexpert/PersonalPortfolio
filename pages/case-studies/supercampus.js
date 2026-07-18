@@ -146,7 +146,7 @@ export default function SuperCampusCaseStudy() {
 
                {/* ── 3. MAIN HERO IMAGE ────────────────────────────────────────────────────── */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[32px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
@@ -404,7 +404,7 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid md:grid-cols-2 gap-8 mb-12">
                      {/* Primary Users */}
-                     <div className="glass-card rounded-[32px] p-8 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/30 transition-all duration-500 relative overflow-hidden group">
+                     <div className="glass-card rounded-[24px] p-8 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/30 transition-all duration-500 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/8 blur-[60px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
                            <div className="w-8 h-8 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center">
@@ -432,7 +432,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Secondary Users */}
-                     <div className="glass-card rounded-[32px] p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/30 transition-all duration-500 relative overflow-hidden group">
+                     <div className="glass-card rounded-[24px] p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/30 transition-all duration-500 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#00DA99]/8 blur-[60px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-6 flex items-center gap-3">
                            <div className="w-8 h-8 rounded-xl bg-[#00DA99]/10 flex items-center justify-center">
@@ -1076,7 +1076,7 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
@@ -1102,7 +1102,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -1126,7 +1126,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[32px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
@@ -1531,7 +1531,7 @@ export default function SuperCampusCaseStudy() {
                <section className="mb-16 md:mb-24 lg:mb-32">
                   <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
                      {/* Key Learnings */}
-                     <div className="glass-card rounded-[32px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 transition-all duration-500 group relative overflow-hidden">
+                     <div className="glass-card rounded-[24px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
                            Key Learnings
@@ -1542,7 +1542,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Future Roadmap */}
-                     <div className="glass-card rounded-[32px] p-8 lg:p-12 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 transition-all duration-500 group relative overflow-hidden">
+                     <div className="glass-card rounded-[24px] p-8 lg:p-12 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
                            Future Roadmap
@@ -1587,7 +1587,7 @@ export default function SuperCampusCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[32px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

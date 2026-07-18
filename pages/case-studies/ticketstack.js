@@ -100,16 +100,16 @@ export default function TicketStackCaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         TicketStack
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Enterprise Retail <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Ticketing & Distribution Platform</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-md md:text-md text-text-secondary max-w-3xl leading-relaxed font-normal">
                         TicketStack is a retail ticketing and distribution platform designed to centralize inventory management, campaign operations, sales visibility, and retail partner coordination through a unified enterprise experience
                      </motion.p>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal mt-4">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-md md:text-md text-text-secondary max-w-3xl leading-relaxed font-normal mt-4">
                         The legacy platform had strong operational capabilities but suffered from usability issues, fragmented workflows, outdated interfaces, and poor visibility into ticket performance.
                      </motion.p>
 
@@ -117,27 +117,27 @@ export default function TicketStackCaseStudy() {
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:pl-10 lg:border-l border-slate-200/60 pt-4">
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Role</p>
-                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Industry</p>
-                        <p className="font-bold text-sm text-text-primary">Retail SaaS</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">Retail SaaS</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Platform</p>
-                        <p className="font-bold text-sm text-text-primary">Web Application</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">Web Application</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Duration</p>
-                        <p className="font-bold text-sm text-text-primary">8 Months</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Team</p>
-                        <p className="font-bold text-sm text-text-primary">Product Manager, Developers</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">Product Manager, Developers</p>
                      </div>
                      <div>
                         <p className="text-[11px] font-semibold uppercase tracking-widest text-secondary mb-1 opacity-60">Responsibilities</p>
-                        <p className="font-bold text-sm text-text-primary">Research, UX Strategy, UI Design, Prototyping, Design System</p>
+                        <p className="font-bold text-xs md:text-sm text-text-primary">Research, UX Strategy, UI Design, Prototyping, Design System</p>
                      </div>
                   </motion.div>
                </section>
@@ -425,10 +425,23 @@ export default function TicketStackCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key deliverables that guided the product strategy and informed the design architecture.</p>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-9xl mx-auto">
-                     {["Affinity Map", "Stakeholder Map", "Journey Map", "Workflow Diagram"].map((doc, i) => (
-                        <div key={i} className="aspect-square glass-card rounded-[24px] flex flex-col items-center justify-center text-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60">
-                           <Settings className="w-10 h-10 text-slate-300 mb-4 group-hover:text-[#0D63CC] transition-colors" />
-                           <span className="text-sm font-bold text-slate-600 group-hover:text-text-primary transition-colors">{doc}</span>
+                     {[
+                        { name: "Affinity Map", image: "AffinityMap.png" },
+                        { name: "Stakeholder Map", image: "StakeholderMap.png" },
+                        { name: "Journey Map", image: "JourneyMap.png" },
+                        { name: "Workflow Diagram", image: "WorkflowDiagram.png" }
+                     ].map((doc, i) => (
+                        <div key={i} className="aspect-square glass-card rounded-[24px] flex flex-col items-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60 relative overflow-hidden">
+                           <div className="absolute inset-0 z-0">
+                              <Image
+                                 src={`/images/ticketstack/${doc.image}`}
+                                 alt={doc.name}
+                                 fill
+                                 className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                              />
+                           </div>
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10" />
+                           <span className="relative z-20 mt-auto pt-4 text-sm font-bold text-white transition-colors">{doc.name}</span>
                         </div>
                      ))}
                   </div>
@@ -895,12 +908,45 @@ export default function TicketStackCaseStudy() {
                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Additional Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                           {["Table-Heavy Operational Screens", "Bulk Actions Workflows", "Notification Center", "Audit Logs"].map((feature, i) => (
-                              <div key={i} className="aspect-[4/3] glass-card rounded-2xl flex flex-col items-center justify-center text-center p-4 border border-slate-200/50">
-                                 <Layout className="w-8 h-8 text-slate-300 mb-3" />
-                                 <span className="text-xs font-bold text-slate-600">{feature}</span>
+                           {[
+                              { name: "Table-Heavy Operational Screens", image: "OperationalScreens.png" },
+                              { name: "Bulk Actions Workflows", image: "BulkActions.png" },
+                              { name: "Notification Center", image: "NotificationCenter.png" },
+                              { name: "Audit Logs", image: "AuditLogs.png" }
+                           ].map((feature, i) => (
+                              <div key={i} className="aspect-[4/3] glass-card rounded-[24px] flex flex-col items-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60 relative overflow-hidden">
+                                 <div className="absolute inset-0 z-0">
+                                    <Image
+                                       src={`/images/ticketstack/${feature.image}`}
+                                       alt={feature.name}
+                                       fill
+                                       className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                                    />
+                                 </div>
+                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10" />
+                                 <span className="relative z-20 mt-auto pt-4 text-sm font-bold text-white transition-colors">{feature.name}</span>
                               </div>
                            ))}
+
+                           {/* {[
+                        { name: "Affinity Map", image: "AffinityMap.png" },
+                        { name: "Stakeholder Map", image: "StakeholderMap.png" },
+                        { name: "Journey Map", image: "JourneyMap.png" },
+                        { name: "Workflow Diagram", image: "WorkflowDiagram.png" }
+                     ].map((doc, i) => (
+                        <div key={i} className="aspect-square glass-card rounded-[24px] flex flex-col items-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60 relative overflow-hidden">
+                           <div className="absolute inset-0 z-0">
+                              <Image
+                                 src={`/images/ticketstack/${doc.image}`}
+                                 alt={doc.name}
+                                 fill
+                                 className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                              />
+                           </div>
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10" />
+                           <span className="relative z-20 mt-auto pt-4 text-sm font-bold text-white transition-colors">{doc.name}</span>
+                        </div>
+                     ))} */}
                         </div>
                      </div>
                   </div>
@@ -920,12 +966,25 @@ export default function TicketStackCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Information architecture was designed to support complex operational workflows while maintaining clarity and scalability.</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-9xl mx-auto">
-                     {["Sitemap", "Navigation Hierarchy", "Role Hierarchy"].map((item, i) => (
-                        <div key={i} className="aspect-video glass-card rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-slate-200/50">
-                           <Layers className="w-10 h-10 text-[#0D63CC] mb-4 opacity-50" />
-                           <h4 className="font-bold text-slate-700">{item}</h4>
+                     {[
+                        { name: "Sitemap", image: "Sitemap.png" },
+                        { name: "Navigation Hierarchy", image: "NavigationHierarchy.png" },
+                        { name: "Role Hierarchy", image: "RoleHierarchy.png" }
+                     ].map((item, i) => (
+                        <div key={i} className="aspect-video glass-card rounded-[24px] flex flex-col items-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 group bg-white/60 relative overflow-hidden">
+                           <div className="absolute inset-0 z-0">
+                              <Image
+                                 src={`/images/ticketstack/${item.image}`}
+                                 alt={item.name}
+                                 fill
+                                 className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                              />
+                           </div>
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10" />
+                           <span className="relative z-20 mt-auto pt-4 text-sm font-bold text-white transition-colors">{item.name}</span>
                         </div>
                      ))}
+
                   </div>
                </section>
 
@@ -1004,11 +1063,28 @@ export default function TicketStackCaseStudy() {
                   </div>
                   <div className="mb-12">
                      <h3 className="text-xl font-bold text-text-primary mb-6 text-center">Key UI Components</h3>
-                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-9xl mx-auto">
-                        {["Table Components", "Filters", "Status Indicators", "Charts", "Modals"].map((comp, i) => (
-                           <div key={i} className="aspect-square glass-card rounded-2xl flex flex-col items-center justify-center text-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 transition-all">
-                              <Layout className="w-6 h-6 text-slate-400 mb-2" />
-                              <span className="text-[10px] font-bold text-slate-700">{comp}</span>
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-9xl mx-auto">
+                        {[
+                           { name: "Table Components", image: "TablesComponents.png" },
+                           { name: "Filters", image: "FiltersComponents.png" },
+                           { name: "Status Indicators", image: "StatusIndicatorsComponents.png" },
+                           { name: "Charts", image: "ChartsComponents.png" },
+                           { name: "Modals", image: "ModalsComponents.png" },
+                           { name: "Progress", image: "ProgressBars-Components.png" },
+                           { name: "Alerts", image: "Real-timeAlerts.png" },
+                           { name: "Buttons", image: "ButtonsComponents.png" }
+                        ].map((comp, i) => (
+                           <div key={i} className="aspect-square glass-card rounded-[20px] flex flex-col items-center p-4 border border-slate-200/50 hover:border-[#0D63CC]/30 shadow-sm hover:shadow-md transition-all duration-300 group bg-white/60 relative overflow-hidden">
+                              <div className="absolute inset-0 z-0 bg-slate-50">
+                                 <Image
+                                    src={`/images/ticketstack/${comp.image}`}
+                                    alt={comp.name}
+                                    fill
+                                    className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                                 />
+                              </div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10" />
+                              <span className="relative z-20 mt-auto pt-2 text-xs md:text-sm font-bold text-white transition-colors">{comp.name}</span>
                            </div>
                         ))}
                      </div>
@@ -1149,7 +1225,7 @@ export default function TicketStackCaseStudy() {
                            <div className="absolute -top-6 -left-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none z-0">"</div>
                            <div className="absolute -bottom-6 -right-6 text-[80px] text-slate-100 text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC] font-serif leading-none select-none rotate-180 z-0">"</div>
                            <div className="relative z-10 px-6 py-4">
-                              <p className="text-xl md:text-2xl font-bold text-text-primary leading-[1.4] mb-6">
+                              <p className="text-lg md:text-xl font-bold text-text-primary leading-[1.4] mb-6">
                                  Designing enterprise retail products requires balancing operational complexity with usability.
                               </p>
                               <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">

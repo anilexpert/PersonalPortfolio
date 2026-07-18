@@ -137,7 +137,7 @@ export default function ScanovaHealthCaseStudy() {
 
                {/* ── MAIN HERO IMAGE / PLACEHOLDER ───────────────────── */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <Image
                         src="/images/scanova/screenbanner.png"
                         alt="ScanovaHealth Platform Interface"
@@ -302,7 +302,7 @@ export default function ScanovaHealthCaseStudy() {
                         { num: "05", title: "Digital Demand", desc: "Many users want a single digital record.", impact: "Opportunity for centralized management.", color: "#10B981" },
                      ].map((f, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: f.color }} />
                            <div className="flex items-center gap-3 mb-6 relative z-10">
@@ -424,7 +424,7 @@ export default function ScanovaHealthCaseStudy() {
                      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
 
                         {/* THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#06B6D4]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#06B6D4]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#06B6D4]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
@@ -442,8 +442,8 @@ export default function ScanovaHealthCaseStudy() {
                         </div>
 
                         {/* SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
@@ -470,8 +470,8 @@ export default function ScanovaHealthCaseStudy() {
                         </div>
 
                         {/* FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
@@ -488,7 +488,7 @@ export default function ScanovaHealthCaseStudy() {
                         </div>
 
                         {/* DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#06B6D4]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#06B6D4]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#06B6D4]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
@@ -518,7 +518,7 @@ export default function ScanovaHealthCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">From device implantation through MRI appointment — the complete patient journey.</p>
                   </div>
 
-                  <div className="glass-card rounded-[24px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg overflow-x-auto">
+                  <div className="glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-500 shadow-lg overflow-x-auto">
                      <div className="min-w-[640px]">
                         <div className="grid grid-cols-3 bg-gradient-to-r from-[#06B6D4]/10 to-[#0EA5E9]/10 border-b border-slate-200/60">
                            {["Stage", "Activity", "Pain Point"].map((h, i) => (
@@ -564,7 +564,7 @@ export default function ScanovaHealthCaseStudy() {
                         { num: "06", title: "MRI Center Finder", desc: "Map view with distance calculations, contact information, and directions to nearby MRI facilities.", color: "#06B6D4", icon: MapPin, img: "/images/scanova/MRICenterFinder.png" },
                      ].map((feature, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
+                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: feature.color }} />
                            <div className="flex items-center justify-between mb-8 relative z-10">
@@ -684,7 +684,7 @@ export default function ScanovaHealthCaseStudy() {
                         { challenge: "Medical records require trust and transparency.", solution: "Transparent data handling and clear source attribution throughout.", color: "#10B981" },
                      ].map((item, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: item.color }} />
                            <div className="mb-5 relative z-10">
@@ -749,7 +749,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#06B6D4]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-[#06B6D4] rounded-full" /> Color Palette</h4>
                         <div className="grid grid-cols-3 gap-4">
@@ -773,7 +773,7 @@ export default function ScanovaHealthCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0EA5E9]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0EA5E9]/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#0EA5E9]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-[#0EA5E9] rounded-full" /> Typography</h4>
                         <div className="flex-1 flex flex-col justify-center mb-8">
@@ -795,7 +795,7 @@ export default function ScanovaHealthCaseStudy() {
                      </div>
 
                      {/* Components */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-emerald-500/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-emerald-500/10 hover:border-[#06B6D4]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-emerald-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3"><div className="w-2 h-2 bg-emerald-500 rounded-full" /> Components</h4>
                         <div className="grid grid-cols-3 gap-4">
@@ -878,7 +878,7 @@ export default function ScanovaHealthCaseStudy() {
                         { title: "Opportunities", items: ["Healthcare digitization trend", "Device ecosystem expansion", "AI-powered automation growth"], color: "text-[#0EA5E9]", borderGlow: "from-[#0EA5E9]/30 via-white/10 to-transparent", innerGlow: "bg-[#0EA5E9]/15", borderColor: "border-[#0EA5E9]/30", gradientFill: "from-white/60 to-white/90", icon: <Search size={24} strokeWidth={2} className="text-[#0EA5E9] group-hover:scale-110 transition-transform duration-500" /> },
                         { title: "Threats", items: ["Regulatory changes", "Emerging competitors", "Data privacy concerns"], color: "text-rose-500", borderGlow: "from-rose-500/30 via-white/10 to-transparent", innerGlow: "bg-rose-500/15", borderColor: "border-rose-500/30", gradientFill: "from-white/60 to-white/90", icon: <AlertTriangle size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" /> }
                      ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+                        <div key={i} className={`relative rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
                            <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
                               <div className="flex flex-col gap-4 mb-6 relative z-20">
@@ -944,7 +944,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Dashboard Overview" glowCls="bg-[#06B6D4]" textCls="text-[#06B6D4]" icon={Layout} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/DashboardOverview.png"
                            alt="Dashboard Overview"
@@ -953,7 +953,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Device Detail Screen" glowCls="bg-[#0EA5E9]" textCls="text-[#0EA5E9]" icon={FolderOpen} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/DeviceDetailScreen.png"
                            alt="Device Detail Screen"
@@ -962,7 +962,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Reference Viewer" glowCls="bg-[#8B5CF6]" textCls="text-[#8B5CF6]" icon={Eye} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/MRIReferenceViewer.png"
                            alt="MRI Reference Viewer"
@@ -971,7 +971,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="AI Validation Center" glowCls="bg-[#10B981]" textCls="text-[#10B981]" icon={Brain} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/AIValidationCenter.png"
                            alt="AI Validation Center"
@@ -980,7 +980,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="PDF Report Module" glowCls="bg-[#F59E0B]" textCls="text-[#F59E0B]" icon={FileText} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/PDFReportModule.png"
                            alt="PDF Report Module"
@@ -989,7 +989,7 @@ export default function ScanovaHealthCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="MRI Center Finder" glowCls="bg-[#F43F5E]" textCls="text-[#F43F5E]" icon={MapPin} /> */}
-                     <div className="relative aspect-[3/4] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                     <div className="relative aspect-[3/4] w-full glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                         <Image
                            src="/images/scanova/MRIFinder.png"
                            alt="MRI Center Finder"
@@ -1020,7 +1020,7 @@ export default function ScanovaHealthCaseStudy() {
                         { value: "95%", label: "Reduction in Compliance Errors", color: "#F43F5E", icon: Shield },
                      ].map((metric, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: metric.color }} />
                            <div className="flex items-center justify-between mb-6 relative z-10">
@@ -1040,7 +1040,7 @@ export default function ScanovaHealthCaseStudy() {
                {/* ── OUTCOMES & CONCLUSION ───────────────────── */}
                <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div {...fadeIn}
-                     className="glass-card rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#06B6D4]/20 hover:border-[#06B6D4]/40"
+                     className="glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#06B6D4]/20 hover:border-[#06B6D4]/40"
                   >
                      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#06B6D4]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
                      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0EA5E9]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
@@ -1101,7 +1101,7 @@ export default function ScanovaHealthCaseStudy() {
 
                         {/* Final Conclusion */}
                         <div className="mb-6">
-                           <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[24px] border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
+                           <div className="p-6 md:p-8 lg:p-10 glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-2xl transition-all duration-500 relative overflow-hidden group">
                               <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#06B6D4]/10 blur-[80px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
                               <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-4 relative z-10">
                                  <div className="w-8 h-8 bg-[#06B6D4] rounded flex-shrink-0" />
@@ -1145,7 +1145,7 @@ export default function ScanovaHealthCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

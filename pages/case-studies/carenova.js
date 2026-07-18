@@ -142,7 +142,7 @@ export default function CarenovaSystemsCaseStudy() {
 
                {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-20 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
@@ -171,7 +171,7 @@ export default function CarenovaSystemsCaseStudy() {
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            Residential care organizations were struggling with fragmented workflows, manual compliance tracking, disconnected communication, and inefficient facility operations. Carenova was designed to centralize these operations into a unified healthcare platform, enabling organizations to improve efficiency, maintain compliance, and deliver better care outcomes.
                         </p>
-                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[24px]">
+                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[16px] lg:rounded-[24px]">
                            <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
                               <Target className="text-[#0D63CC]" size={24} /> Unified Ecosystem
                            </h4>
@@ -362,7 +362,7 @@ export default function CarenovaSystemsCaseStudy() {
                               flow: []
                            }
                         ].map((insight, i) => (
-                           <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
+                           <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 border-[#00DA99]">
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
                               <h4 className="text-lg font-bold text-text-primary mb-2">{insight.title}</h4>
                               <p className="text-text-secondary text-sm font-medium leading-relaxed mb-4">{insight.desc}</p>
@@ -507,7 +507,7 @@ export default function CarenovaSystemsCaseStudy() {
 
                      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
                         {/* THINKS */}
-                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
@@ -528,8 +528,8 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
 
                         {/* SAYS */}
-                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                        <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
@@ -559,8 +559,8 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
 
                         {/* FEELS */}
-                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                        <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
                                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
@@ -580,7 +580,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
 
                         {/* DOES */}
-                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
+                        <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
@@ -618,7 +618,7 @@ export default function CarenovaSystemsCaseStudy() {
                   </div>
 
                   <div className="max-w-8xl mx-auto">
-                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[24px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
+                     <div className="mb-12 relative aspect-[21/9] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-lg border border-[#0D63CC]/10">
                         <Image
                            src="/images/carenova/InformationArchitecture.png"
                            alt="Carenova Platform Interface"
@@ -692,7 +692,7 @@ export default function CarenovaSystemsCaseStudy() {
                            ]
                         }
                      ].map((flow, idx) => (
-                        <div key={idx} className="p-8 md:p-12 glass-card rounded-[24px] border-l-4 shadow-sm" style={{ borderColor: flow.color }}>
+                        <div key={idx} className="p-8 md:p-12 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 shadow-sm" style={{ borderColor: flow.color }}>
                            <h4 className="text-xl md:text-2xl font-bold mb-12 text-center" style={{ color: flow.color }}>{flow.title}</h4>
 
                            <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4">
@@ -812,7 +812,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-7">
-                        <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-2xl p-2 border border-[#0D63CC]/10">
+                        <div className="relative aspect-[16/12] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-2xl p-2 border border-[#0D63CC]/10">
                            <PremiumPlaceholder aspect="aspect-full h-full" label="Dashboard Analytics Interface" icon={BarChart3} glowColor="#0D63CC" />
                            <Image
                               src="/images/carenova/ExecutiveDashboard2.png"
@@ -937,7 +937,7 @@ export default function CarenovaSystemsCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Color Strategy
@@ -963,7 +963,7 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -987,7 +987,7 @@ export default function CarenovaSystemsCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-rose-500/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-rose-500/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-rose-500 rounded-full" /> Iconography
@@ -1074,7 +1074,7 @@ export default function CarenovaSystemsCaseStudy() {
                         { title: "Keyboard Navigation", desc: "Optimizing all data-entry tables and workflows for power users who rely heavily on keyboard shortcuts.", icon: Command }
                      ].map((item, idx) => (
                         <div key={idx} className="p-8 md:p-10 bg-white/60 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl text-center group hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1">
-                           <div className="w-20 h-20 mx-auto bg-white/60 backdrop-blur-md border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform text-slate-600 group-hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)]">
+                           <div className="w-20 h-20 mx-auto bg-white/60 backdrop-blur-md border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[16px] lg:rounded-[24px] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform text-slate-600 group-hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)]">
                               <item.icon size={32} strokeWidth={1.5} />
                            </div>
                            <h4 className="text-[22px] font-bold text-text-primary mb-4 tracking-tight">{item.title}</h4>
@@ -1101,7 +1101,7 @@ export default function CarenovaSystemsCaseStudy() {
                         A unified platform that simplifies compliance, empowers facility staff, and provides executives with crystal-clear operational visibility.
                      </p>
                   </div>
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                      {/* <PremiumPlaceholder aspect="aspect-video w-full h-full" label="Main Platform Dashboard" icon={LayoutDashboard} glowColor="#00DA99" /> */}
                      <Image
                         src="/images/carenova/TheSolution.png"
@@ -1146,7 +1146,7 @@ export default function CarenovaSystemsCaseStudy() {
                         ))}
                      </div>
                      <div className="lg:col-span-7">
-                        <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
+                        <div className="relative aspect-[16/12] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-xl p-2 border border-slate-200">
                            <Image
                               src="/images/carenova/FeatureInterfaceDetail.png"
                               alt="Feature Interface Detail"
@@ -1254,7 +1254,7 @@ export default function CarenovaSystemsCaseStudy() {
                         { title: "Risk Insights", items: ["Incident Trends", "Top Risk Factors", "Safety Scores"], color: "#EF4444", icon: AlertTriangle },
                         { title: "Productivity Insights", items: ["Task Completion", "Workflow Delays", "Response Times"], color: "#F59E0B", icon: TrendingUp }
                      ].map((report, i) => (
-                        <div key={i} className="p-6 md:p-8 glass-card rounded-[24px] relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-sm hover:shadow-xl border border-slate-200 flex flex-col" style={{ borderTopWidth: '4px', borderTopColor: report.color }}>
+                        <div key={i} className="p-6 md:p-8 glass-card rounded-[16px] lg:rounded-[24px] relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-sm hover:shadow-xl border border-slate-200 flex flex-col" style={{ borderTopWidth: '4px', borderTopColor: report.color }}>
                            <div className="absolute -right-8 -bottom-8 w-32 h-32 blur-[40px] rounded-full opacity-10 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none" style={{ backgroundColor: report.color }} />
                            <div className="flex justify-between items-start mb-6 relative z-10">
                               <div className="w-12 h-12 rounded-xl flex items-center justify-center border shadow-sm group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: `${report.color}10`, borderColor: `${report.color}30`, color: report.color }}>
@@ -1301,7 +1301,7 @@ export default function CarenovaSystemsCaseStudy() {
                         { title: "Opportunities", items: ["AI-driven predictive analytics", "Third-party integrations", "Multi-facility expansion"], color: "text-[#0D63CC]", borderGlow: "from-[#0D63CC]/30 via-white/10 to-transparent", innerGlow: "bg-[#0D63CC]/15", borderColor: "border-[#0D63CC]/30", gradientFill: "from-white/60 to-white/90", icon: <Search size={24} strokeWidth={2} className="text-[#0D63CC] group-hover:scale-110 transition-transform duration-500" /> },
                         { title: "Threats", items: ["Evolving regulatory changes", "Competitive healthcare SaaS", "Data security compliance"], color: "text-rose-500", borderGlow: "from-rose-500/30 via-white/10 to-transparent", innerGlow: "bg-rose-500/15", borderColor: "border-rose-500/30", gradientFill: "from-white/60 to-white/90", icon: <FileText size={24} strokeWidth={2} className="text-rose-500 group-hover:scale-110 transition-transform duration-500" /> }
                      ].map((box, i) => (
-                        <div key={i} className={`relative rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
+                        <div key={i} className={`relative rounded-[16px] lg:rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
                            <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
                               <div className="flex flex-col gap-4 mb-6 relative z-20">
@@ -1343,7 +1343,7 @@ export default function CarenovaSystemsCaseStudy() {
                            { val: "35%", label: "Faster Audit Preparation", color: "text-[#8B5CF6]", border: "border-[#8B5CF6]/20", glow: "from-[#8B5CF6]/20", bg: "bg-[#8B5CF6]/10", icon: ShieldCheck },
                            { val: "50%", label: "Fewer Documentation Errors", color: "text-[#F59E0B]", border: "border-[#F59E0B]/20", glow: "from-[#F59E0B]/20", bg: "bg-[#F59E0B]/10", icon: CheckCircle2 }
                         ].map((stat, i) => (
-                           <div key={i} className={`relative bg-white/80 backdrop-blur-xl rounded-[24px] border shadow-sm p-8 text-center flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group overflow-hidden ${stat.border}`}>
+                           <div key={i} className={`relative bg-white/80 backdrop-blur-xl rounded-[16px] lg:rounded-[24px] border shadow-sm p-8 text-center flex flex-col items-center justify-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group overflow-hidden ${stat.border}`}>
                               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px] pointer-events-none`} />
                               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 relative z-10 ${stat.bg} ${stat.color} group-hover:scale-110 transition-transform duration-500`}>
                                  <stat.icon size={24} />
@@ -1354,7 +1354,7 @@ export default function CarenovaSystemsCaseStudy() {
                         ))}
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[24px] border border-white/80 shadow-[0_20px_50px_-10px_rgba(0,218,153,0.1)] p-10 md:p-12 relative overflow-hidden flex flex-col justify-center border-t-4 border-t-[#00DA99] group">
+                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[16px] lg:rounded-[24px] border border-white/80 shadow-[0_20px_50px_-10px_rgba(0,218,153,0.1)] p-10 md:p-12 relative overflow-hidden flex flex-col justify-center border-t-4 border-t-[#00DA99] group">
                         <div className="absolute -top-32 -right-32 w-64 h-64 blur-[80px] bg-[#00DA99]/20 rounded-full group-hover:bg-[#00DA99]/30 transition-colors duration-1000 pointer-events-none" />
                         <h3 className="text-xl md:text-3xl font-bold text-text-primary leading-tight mb-8 relative z-10">Qualitative <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h3>
                         <div className="space-y-4 relative z-10">
@@ -1400,7 +1400,7 @@ export default function CarenovaSystemsCaseStudy() {
                         { title: "Balance Complexity with Clarity", desc: "Enterprise users need dense information, but it must be structured perfectly. We learned that progressive disclosure is non-negotiable for compliance data." },
                         { title: "Performance is UX", desc: "When users are managing hundreds of facilities, load times matter. We optimized the dashboard to render key metrics instantly, caching heavier audit logs." }
                      ].map((item, idx) => (
-                        <div key={idx} className="p-8 glass-card rounded-[24px] border-l-4 border-l-[#F59E0B] shadow-sm hover:shadow-lg transition-all">
+                        <div key={idx} className="p-8 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 border-l-[#F59E0B] shadow-sm hover:shadow-lg transition-all">
                            <h4 className="text-xl font-bold text-text-primary mb-3">{item.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed">{item.desc}</p>
                         </div>
@@ -1438,9 +1438,9 @@ export default function CarenovaSystemsCaseStudy() {
                   {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D63CC]/5 to-transparent pointer-events-none" /> */}
 
                   <div className="relative max-w-9xl mx-auto">
-                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[24px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
+                     {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] rounded-[16px] lg:rounded-[24px] blur-[60px] opacity-20 animate-pulse pointer-events-none" /> */}
 
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

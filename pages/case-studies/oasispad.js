@@ -147,7 +147,7 @@ export default function OasisPadCaseStudy() {
 
                {/* MAIN HERO IMAGE */}
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #0D63CC 0%, #00DA99 100%)' }}
@@ -202,7 +202,7 @@ export default function OasisPadCaseStudy() {
                         <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            The project originated from a critical challenge faced by behavioral health organizations: Clinical teams were spending more time managing paperwork, insurance claims, and compliance requirements than delivering care. The objective was not simply to digitize records.
                         </p>
-                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[24px]">
+                        <div className="p-8 glass-card border-l-4 border-[#0D63CC] bg-[#0D63CC]/5 rounded-[16px] lg:rounded-[24px]">
                            <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
                               <Target className="text-[#0D63CC]" size={24} /> Unified Ecosystem
                            </h4>
@@ -339,7 +339,7 @@ export default function OasisPadCaseStudy() {
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[24px] group relative overflow-hidden"
+                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] group relative overflow-hidden"
                         >
                            <div
                               className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -421,7 +421,7 @@ export default function OasisPadCaseStudy() {
                               flow: []
                            }
                         ].map((insight, i) => (
-                           <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[24px] border-l-4 border-[#00DA99]">
+                           <motion.div key={i} {...fadeIn} className="p-8 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 border-[#00DA99]">
                               <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest mb-2 block">{insight.id}</span>
                               <h4 className="text-base font-bold text-text-primary mb-2">{insight.title}</h4>
                               <p className="text-sm text-text-secondary font-medium leading-relaxed mb-3">{insight.desc}</p>
@@ -471,7 +471,7 @@ export default function OasisPadCaseStudy() {
                               { title: "Empathy Map", icon: Heart, desc: "User mindset modeling" },
                               { title: "User Journey Map", icon: Shuffle, desc: "End-to-end workflows" }
                            ].map((artifact, idx) => (
-                              <div key={idx} className="glass-card aspect-square md:aspect-[4/3] rounded-[24px] flex flex-col items-center justify-center p-6 text-center group hover:-translate-y-1 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden border border-white/60">
+                              <div key={idx} className="glass-card aspect-square md:aspect-[4/3] rounded-[16px] lg:rounded-[24px] flex flex-col items-center justify-center p-6 text-center group hover:-translate-y-1 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden border border-white/60">
                                  <div className="absolute inset-0 bg-gradient-to-br from-[#0D63CC]/0 to-[#00DA99]/0 group-hover:from-[#0D63CC]/5 group-hover:to-[#00DA99]/5 transition-colors duration-500" />
                                  <artifact.icon className="text-[#0D63CC] mb-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 relative z-10" size={32} />
                                  <span className="text-sm font-bold text-text-primary group-hover:text-[#0D63CC] transition-colors relative z-10 mb-1">{artifact.title}</span>
@@ -497,7 +497,7 @@ export default function OasisPadCaseStudy() {
                         { role: "Facility Administrator", title: "Operations Director", goals: ["Monitor compliance", "Manage operations"], painPoints: ["Limited visibility", "Manual reporting"], icon: Building2, color: "#00DA99" },
                         { role: "Executive Leadership", title: "C-Suite", goals: ["Monitor performance"], painPoints: ["Fragmented operational data"], icon: LineChart, color: "#F59E0B" }
                      ].map((persona, i) => (
-                        <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="glass-card p-6 md:p-8 rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 group hover:shadow-xl transition-all duration-500 flex flex-col relative overflow-hidden">
+                        <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }} className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 group hover:shadow-xl transition-all duration-500 flex flex-col relative overflow-hidden">
                            <div
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
                               style={{ backgroundColor: persona.color }}
@@ -559,7 +559,7 @@ export default function OasisPadCaseStudy() {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                     <motion.div {...fadeIn} className="glass-card rounded-[24px] p-8 md:p-10 border-2 border-[#00DA99]/20 relative overflow-hidden group">
+                     <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border-2 border-[#00DA99]/20 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-[#00DA99]/10 flex items-center justify-center mb-8 relative z-10">
                            <Stethoscope size={32} className="text-[#00DA99]" />
@@ -577,7 +577,7 @@ export default function OasisPadCaseStudy() {
                         </ul>
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="glass-card rounded-[24px] p-8 md:p-10 border-2 border-[#0D63CC]/20 relative overflow-hidden group">
+                     <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border-2 border-[#0D63CC]/20 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
                         <div className="w-16 h-16 rounded-2xl bg-[#0D63CC]/10 flex items-center justify-center mb-8 relative z-10">
                            <Wallet size={32} className="text-[#0D63CC]" />
@@ -631,7 +631,7 @@ export default function OasisPadCaseStudy() {
                   </div>
 
                   <div className="max-w-8xl mx-auto">
-                     <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                     <div className="mb-12 relative z-10 relative aspect-[21/9] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
                         <PremiumPlaceholder aspect="aspect-[21/9]" label="Information Architecture Overview" glowColor="#0D63CC" textCls="text-[#0D63CC]" icon={Layers} />
                         <Image
                            src="/images/oasispad/IA-Thumnail.png"
@@ -659,7 +659,7 @@ export default function OasisPadCaseStudy() {
                         { title: "Medication Administration Flow", flow: ["Medication Assignment", "Administration", "Verification", "Audit Log"] },
                         { title: "Incident Reporting Flow", flow: ["Incident Submission", "Supervisor Review", "Compliance Review", "Resolution"] }
                      ].map((uf, i) => (
-                        <div key={i} className="glass-card p-8 md:p-12 rounded-[24px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]" >
+                        <div key={i} className="glass-card p-8 md:p-12 rounded-[16px] lg:rounded-[24px] border border-white/60 shadow-[0_20px_40px_rgb(0,0,0,0.05)] relative overflow-hidden bg-gradient-to-br from-[#e8f9f5] via-[#f0f4ff] to-[#eef2ff]" >
                            <h4 className="text-sm font-bold text-[#0D63CC] uppercase tracking-widest mb-16 text-center md:text-left">{uf.title}</h4>
 
                            <div className="relative py-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 px-2 md:px-8">
@@ -730,7 +730,7 @@ export default function OasisPadCaseStudy() {
 
                   <div className="max-w-6xl mx-auto">
                      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                        <div className="order-2 lg:order-1 relative aspect-[4/3] w-full rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
+                        <div className="order-2 lg:order-1 relative aspect-[4/3] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-lg p-2 border border-[#0D63CC]/10">
                            <PremiumPlaceholder aspect="aspect-[4/3]" label="Progressive Claim Creation UI" icon={Layers} />
                            <Image
                               src="/images/oasispad/Progressive-Claim Creation-UI.png"
@@ -799,7 +799,7 @@ export default function OasisPadCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-7">
-                        <div className="relative aspect-[16/12] w-full rounded-[24px] overflow-hidden glass-card shadow-2xl">
+                        <div className="relative aspect-[16/12] w-full rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-2xl">
                            {/* <PremiumPlaceholder aspect="aspect-[16/10]" label="Billing Dashboard Analytics" glowColor="#00DA99" icon={BarChart3} /> */}
                            <Image
                               src="/images/oasispad/Billing-Dashboard-Analytics.png"
@@ -873,7 +873,7 @@ export default function OasisPadCaseStudy() {
 
                   <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
                      {/* Colors */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Semantic Color Scale
@@ -897,7 +897,7 @@ export default function OasisPadCaseStudy() {
                      </div>
 
                      {/* Typography */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -921,7 +921,7 @@ export default function OasisPadCaseStudy() {
                      </div>
 
                      {/* Iconography */}
-                     <div className="lg:col-span-4 glass-card rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
@@ -1146,7 +1146,7 @@ export default function OasisPadCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

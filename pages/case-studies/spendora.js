@@ -129,7 +129,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-16 relative group">
-                  <div className="relative aspect-[21/9] w-full glass-card rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
+                  <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-lg transition-all duration-700 border border-white/60 shadow-sm">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-20 pointer-events-none z-0"
                         style={{ background: 'linear-gradient(135deg, #00DA99 0%, #0D63CC 100%)' }}
@@ -144,7 +144,7 @@ export default function SpendoraCaseStudy() {
                </motion.section>
 
                {/* ── 3. THE PROBLEM ───────────────────────────────────────────────────────── */}
-               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -210,7 +210,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 4. BUSINESS CHALLENGE ─────────────────────────────────────────────────── */}
-               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -326,7 +326,7 @@ export default function SpendoraCaseStudy() {
 
                {/* ── 5. RESEARCH & DISCOVERY ─────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+                  <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0D63CC]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
 
@@ -421,7 +421,7 @@ export default function SpendoraCaseStudy() {
 
                {/* ── 6. OPPORTUNITY & VISION ───────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden group">
+                  <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
 
@@ -478,7 +478,7 @@ export default function SpendoraCaseStudy() {
                      </div>
                   </div>
 
-                  <div className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+                  <div className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
 
@@ -672,7 +672,7 @@ export default function SpendoraCaseStudy() {
                </section>
 
                {/* ── 10. INFORMATION ARCHITECTURE ─────────────────────────────────────── */}
-               <section className="mb-10 md:mb-16 glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+               <section className="mb-10 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-96 h-96 bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                      <div className="lg:col-span-3">
@@ -725,7 +725,7 @@ export default function SpendoraCaseStudy() {
 
                {/* ── 11. DESIGN STRATEGY ─────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+                  <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#00DA99]/8 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
 
@@ -765,7 +765,7 @@ export default function SpendoraCaseStudy() {
                   </motion.div>
                </section>               {/* ── 12. DESIGN PROCESS ────────────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+                  <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/5 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
 
@@ -905,7 +905,7 @@ export default function SpendoraCaseStudy() {
                         </div>
                      </div>
 
-                     <div className="lg:col-span-6 glass-card rounded-[24px] md:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-6 lg:p-8 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-6 glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-6 lg:p-8 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3 relative z-10">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography & Accessibility
@@ -928,7 +928,7 @@ export default function SpendoraCaseStudy() {
                      </div>
 
                      {/* Component Gallery & Grid System */}
-                     <div className="lg:col-span-12 glass-card rounded-[24px] md:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-6 lg:p-8 group relative overflow-hidden">
+                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-6 lg:p-8 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-700" />
 
                         <div className="grid md:grid-cols-2 gap-8 relative z-10">
@@ -980,7 +980,7 @@ export default function SpendoraCaseStudy() {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                     <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
+                     <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
                         <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#0D63CC]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
 
                         <div className="w-14 h-14 rounded-2xl bg-[#0D63CC] flex items-center justify-center mb-8 shadow-lg shadow-[#0D63CC]/30 group-hover:scale-110 transition-transform duration-500">
@@ -1000,7 +1000,7 @@ export default function SpendoraCaseStudy() {
                         </div>
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[24px] md:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
+                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] border border-slate-200/60 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:border-slate-300 transition-all duration-300 p-8 md:p-12 relative overflow-hidden group">
                         <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none group-hover:scale-150 transition-transform duration-1000" />
 
                         <div className="w-14 h-14 rounded-2xl bg-[#00DA99] flex items-center justify-center mb-8 shadow-lg shadow-[#00DA99]/30 group-hover:scale-110 transition-transform duration-500">
@@ -1061,7 +1061,7 @@ export default function SpendoraCaseStudy() {
 
                {/* ── 16. USABILITY TESTING ─────────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <motion.div {...fadeIn} className="glass-card rounded-[24px] md:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
+                  <motion.div {...fadeIn} className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#8B5CF6]/6 blur-[100px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00DA99]/6 blur-[100px] rounded-full pointer-events-none" />
 
@@ -1242,7 +1242,7 @@ export default function SpendoraCaseStudy() {
                <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[24px] md:rounded-[24px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
+                     className="glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[16px] lg:rounded-[24px] p-8 md:p-12 relative overflow-hidden group border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm transition-all duration-300"
                   >
                      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#00DA99]/8 blur-[120px] rounded-full pointer-events-none" />
                      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0D63CC]/8 blur-[100px] rounded-full pointer-events-none" />
@@ -1309,7 +1309,7 @@ export default function SpendoraCaseStudy() {
                {/* 21. FINAL CTA */}
                <section className="py-8 md:py-8 text-center relative">
                   <div className="relative max-w-9xl mx-auto">
-                     <motion.div {...fadeIn} className="relative glass-card rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
+                     <motion.div {...fadeIn} className="relative glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-white/60 shadow-lg overflow-hidden group">
                         <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/15 blur-[80px] rounded-full group-hover:bg-[#0D63CC]/25 transition-colors duration-1000 pointer-events-none" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-[#00DA99]/15 blur-[80px] rounded-full group-hover:bg-[#00DA99]/25 transition-colors duration-1000 pointer-events-none" />
 

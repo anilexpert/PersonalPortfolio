@@ -140,7 +140,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl overflow-hidden transition-all duration-300 origin-top md:hidden pointer-events-auto ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
+        className={`absolute top-full left-0 lg:left-4 right-0 lg:right-4 mt-0 lg:mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-0 lg:rounded-2xl overflow-hidden transition-all duration-300 origin-top md:hidden pointer-events-auto ${isMobileMenuOpen ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-95 invisible'
           }`}
       >
         <div className="flex flex-col p-2">

@@ -159,7 +159,7 @@ export default function PrivacyPage() {
               <div className="sticky top-32">
                 <motion.div
                   {...fadeUp(0.2)}
-                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)]"
+                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)]"
                 >
                   <h3 className="text-base font-bold text-text-primary mb-4 border-b border-text-primary/5 pb-3 flex items-center gap-2">
                     <Shield size={24} className="text-primary" />

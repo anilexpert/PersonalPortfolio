@@ -48,7 +48,7 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
       transition={{ delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="w-full min-w-0"
     >
-      <div className="relative group p-[1px] rounded-[24px] overflow-hidden">
+      <div className="relative group p-[1px] rounded-[16px] lg:rounded-[24px] overflow-hidden">
         {/* Masking Border Effect */}
         <div
           className="absolute inset-0 opacity-20 group-hover:opacity-100 transition-opacity duration-500"
@@ -57,7 +57,7 @@ const MetricCard = ({ value, label, Icon, color, delay }) => {
           }}
         />
 
-        <div className="relative glass-card rounded-[23px] px-4 py-5 sm:px-6 sm:py-8 flex flex-col items-center gap-2 sm:gap-4 hover:-translate-y-1 transition-all duration-500 bg-white/60 backdrop-blur-md">
+        <div className="relative glass-card rounded-[12px] lg:rounded-[23px] px-4 py-5 sm:px-6 sm:py-8 flex flex-col items-center gap-2 sm:gap-4 hover:-translate-y-1 transition-all duration-500 bg-white/60 backdrop-blur-md">
           <div
             className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-sm"
             style={{

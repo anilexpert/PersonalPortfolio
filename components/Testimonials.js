@@ -77,7 +77,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:max-w-[42%] flex flex-col gap-8"
+            className="lg:max-w-[42%] flex flex-col gap-4"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
               <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">Testimonials</span>

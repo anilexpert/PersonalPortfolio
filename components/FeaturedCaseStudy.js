@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const FeaturedCaseStudy = () => {
   return (
-    <section className="py-16 px-6 relative z-10" id="case-study">
+    <section className="py-8 lg:py-16 px-6 relative z-10" id="case-study">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-10">
@@ -45,8 +45,8 @@ const FeaturedCaseStudy = () => {
             </div>
 
             {/* Right: Content */}
-            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <div className="space-y-8">
+            <div className="p-4 lg:p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+              <div className="space-y-4">
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#00DA99] mb-2 block">
                     PROJECT

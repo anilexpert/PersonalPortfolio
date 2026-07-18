@@ -53,7 +53,7 @@ export default function MarketVisionAICaseStudy() {
 
          <Navbar />
 
-         <main className="min-h-screen pt-20 md:pt-24 pb-20 md:pb-32 relative z-10">
+         <main className="min-h-screen pt-10 md:pt-24 pb-10 md:pb-32 relative z-10">
 
             {/* ── 1. PAGE HERO (Inner Banner) ───────────────────────────────────────────────── */}
             <section className="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden">
@@ -100,38 +100,38 @@ export default function MarketVisionAICaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         MarketVisionAI
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
                         Designing an AI-Powered <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Marketing Intelligence Platform</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-md lg:text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                         An AI-powered marketing intelligence and automated reporting platform designed to help agencies, marketers, and business teams centralize marketing data, uncover actionable insights, and optimize campaign performance through artificial intelligence.
                      </motion.p>
                   </div>
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="lg:col-span-4 grid grid-cols-2 gap-6 lg:flex lg:flex-col lg:pl-12 lg:border-l border-slate-200 pt-4">
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Industry</p>
-                        <p className="font-bold text-sm text-text-primary">MarTech / AI / SaaS / BI</p>
+                        <p className="font-bold text-xs lg:text-sm text-text-primary">MarTech / AI / SaaS / BI</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">My Role</p>
-                        <p className="font-bold text-sm text-text-primary">Lead Product Designer</p>
+                        <p className="font-bold text-xs lg:text-sm text-text-primary">Lead Product Designer</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Duration</p>
-                        <p className="font-bold text-sm text-text-primary">8 Months</p>
+                        <p className="font-bold text-xs lg:text-sm text-text-primary">8 Months</p>
                      </div>
                      <div>
                         <p className="text-[12px] font-medium uppercase tracking-widest text-secondary mb-1 opacity-50">Team Focus</p>
-                        <p className="font-bold text-sm text-text-primary">Product Strategy, UX, High-Fidelity UI</p>
+                        <p className="font-bold text-xs lg:text-sm text-text-primary">Product Strategy, UX, High-Fidelity UI</p>
                      </div>
                   </motion.div>
                </section>
 
                {/* MAIN HERO IMAGE */}
-               <motion.section {...fadeIn} className="mb-10 md:mb-12 lg:mb-20 relative group">
+               <motion.section {...fadeIn} className="mb-6 md:mb-12 lg:mb-20 relative group">
                   <div className="relative aspect-[21/9] w-full glass-card rounded-[16px] lg:rounded-[24px] overflow-hidden group-hover:shadow-2xl transition-all duration-700 bg-slate-900 border-2 border-slate-800 flex items-center justify-center">
                      <div
                         className="absolute -top-32 -right-32 w-96 h-96 blur-[100px] rounded-full transition-all duration-700 group-hover:scale-125 group-hover:opacity-30 opacity-30 pointer-events-none z-0"
@@ -159,13 +159,13 @@ export default function MarketVisionAICaseStudy() {
                </motion.section>
 
                {/* EXECUTIVE SUMMARY */}
-               <section className="mb-10 md:mb-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+               <section className="mb-8 md:mb-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                        <p className="text-sm md:text-lg text-text-secondary leading-relaxed font-medium">
                            Marketing teams often operate across multiple advertising, analytics, and customer engagement platforms. This fragmented ecosystem makes it difficult to gain a unified view of campaign performance. MarketVisionAI was designed to centralize marketing intelligence, automate analysis, and provide AI-powered recommendations that help teams optimize performance more effectively.
                         </p>
                      </div>
@@ -175,21 +175,21 @@ export default function MarketVisionAICaseStudy() {
                <GlowDivider />
 
                {/* OVERVIEW / PROBLEM */}
-               <section className="mb-10 mt-10 md:mb-16 space-y-10 md:space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+               <section className="mb-8 mt-8 md:mb-16 space-y-6 md:space-y-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Business Challenge</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">The Business Challenge</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                        <p className="text-sm md:text-lg text-text-secondary leading-relaxed font-medium">
                            Marketing organizations faced significant challenges managing campaign performance across multiple channels, resulting in slow decision-making and limited strategic visibility.
                         </p>
                      </div>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Problem</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">The Problem</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="grid sm:grid-cols-2 gap-4">
@@ -226,19 +226,19 @@ export default function MarketVisionAICaseStudy() {
                      </div>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-center">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Challenge Statement</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Challenge Statement</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <div className="p-8 md:p-10 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 border-[#0D63CC] bg-blue-50/30">
-                           <h2 className="text-lg md:text-xl font-bold text-text-primary leading-relaxed">
+                        <div className="p-6 md:p-10 glass-card rounded-[16px] lg:rounded-[24px] border-l-4 border-[#0D63CC] bg-blue-50/30">
+                           <h2 className="text-sm md:text-xl font-bold text-text-primary leading-relaxed">
                               "How might we help digital agencies centralize marketing intelligence, automate reporting workflows, and provide AI-powered optimization recommendations that improve campaign performance at scale?"
                            </h2>
                         </div>
                      </div>
                   </div>
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-8 lg:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Target Outcomes</span>
                      </div>
@@ -246,13 +246,13 @@ export default function MarketVisionAICaseStudy() {
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                     <motion.div {...fadeIn} className="p-8 glass-card rounded-[16px] lg:rounded-[24px] border-t-4 border-[#0D63CC]">
+                     <motion.div {...fadeIn} className="p-4 lg:p-8 glass-card rounded-[16px] lg:rounded-[24px] border-t-4 border-[#0D63CC]">
                         <div className="w-12 h-12 bg-[#0D63CC]/10 rounded-2xl flex items-center justify-center mb-6">
                            <Target className="text-[#0D63CC]" size={24} />
                         </div>
                         <p className="text-sm font-medium text-text-secondary mb-6 leading-relaxed">The goal was to create a centralized intelligence platform capable of transforming complex marketing data into actionable business insights through AI-driven recommendations and intuitive analytics experiences.</p>
-                        <h3 className="text-xl font-bold text-text-primary mb-6">Expected Outcomes</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-lg lg:text-xl font-bold text-text-primary mb-4 lg:mb-6">Expected Outcomes</h3>
+                        <ul className="space-y-2 lg:space-y-4">
                            {[
                               "Unified visibility",
                               "Faster insights",
@@ -267,12 +267,12 @@ export default function MarketVisionAICaseStudy() {
                         </ul>
                      </motion.div>
 
-                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="p-8 glass-card rounded-[16px] lg:rounded-[24px] border-t-4 border-[#00DA99]">
+                     <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="p-4 lg:p-8 glass-card rounded-[16px] lg:rounded-[24px] border-t-4 border-[#00DA99]">
                         <div className="w-12 h-12 bg-[#00DA99]/10 rounded-2xl flex items-center justify-center mb-6">
                            <User className="text-[#00DA99]" size={24} />
                         </div>
-                        <h3 className="text-xl font-bold text-text-primary mb-6">Success Criteria</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-lg lg:text-xl font-bold text-text-primary mb-4 lg:mb-6">Success Criteria</h3>
+                        <ul className="space-y-2 lg:space-y-4">
                            {[
                               "Centralize marketing data",
                               "Improve decision-making",
@@ -290,36 +290,36 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* RESEARCH FINDINGS */}
-               <section className="mb-10 md:mb-16 bg-slate-50 rounded-[16px] lg:rounded-[24px] p-8 md:p-12 lg:p-16 border border-slate-200">
-                  <div className="mb-12">
+               <section className="mb-8 md:mb-16 bg-slate-50 rounded-[16px] lg:rounded-[24px] p-4 md:p-12 lg:p-16 border border-slate-200">
+                  <div className="mb-4 lg:mb-12">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Research & Discovery <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Research & Discovery <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl">We conducted extensive discovery activities with over 50 participants across agency owners, marketing managers, specialists, and clients.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 gap-4 lg:gap-8">
                      {[
                         { num: "01", title: "Marketers Need Context, Not Raw Data", stat: "Context First", desc: "Users preferred insights and recommendations over isolated metrics." },
                         { num: "02", title: "Teams Struggled with Cross-Channel Visibility", stat: "Fragmented", desc: "Understanding performance across channels required excessive manual effort." },
                         { num: "03", title: "Executives Prioritized High-Level KPIs", stat: "High-Level", desc: "Leadership needed concise summaries rather than operational details." },
                         { num: "04", title: "Users Wanted Predictive Intelligence", stat: "Predictive", desc: "Teams expected AI to proactively identify risks and opportunities." }
                      ].map((insight, i) => (
-                        <div key={i} className="p-8 bg-white rounded-[16px] lg:rounded-[24px] border border-slate-200 hover:shadow-xl transition-all group">
+                        <div key={i} className="p-4 lg:p-8 bg-white rounded-[16px] lg:rounded-[24px] border border-slate-200 hover:shadow-xl transition-all group">
                            <span className="text-[48px] font-black text-slate-100 block mb-2 leading-none group-hover:text-primary/10 transition-colors">{insight.num}</span>
-                           <h4 className="font-bold text-xl text-text-primary mb-4">{insight.title}</h4>
+                           <h4 className="font-bold text-lg lg:text-xl text-text-primary mb-4">{insight.title}</h4>
                            <div className="flex flex-col mb-4">
-                              <span className="text-2xl font-black text-[#0D63CC]"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> {insight.stat}</span></span>
+                              <span className="text-xl md:text-2xl font-black text-[#0D63CC]"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]"> {insight.stat}</span></span>
                            </div>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed">{insight.desc}</p>
+                           <p className="text-sm md:text-base font-medium text-text-secondary leading-relaxed">{insight.desc}</p>
                         </div>
                      ))}
                   </div>
 
                   {/* Additional Artifacts List */}
-                  <div className="mt-16 text-center">
-                     <p className="text-sm font-bold text-text-secondary uppercase tracking-widest mb-10">Research Artifacts Produced</p>
+                  <div className="mt-8 lg:mt-16 text-center">
+                     <p className="text-sm font-bold text-text-secondary uppercase tracking-widest mb-6 lg:mb-10">Research Artifacts Produced</p>
                      <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-8 md:gap-4 max-w-5xl mx-auto">
                         {/* Background Dashed Line (Desktop only) */}
                         <div className="hidden md:block absolute top-[64px] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
@@ -375,7 +375,7 @@ export default function MarketVisionAICaseStudy() {
 
                {/* SWOT ANALYSIS */}
                <section className="mb-10 md:mb-16">
-                  <div className="mb-12 text-center">
+                  <div className="mb-6 lg:mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Strategic Analysis
@@ -429,7 +429,7 @@ export default function MarketVisionAICaseStudy() {
                         }
                      ].map((box, i) => (
                         <div key={i} className={`relative rounded-[16px] lg:rounded-[24px] p-[2px] border border-slate-200 bg-gradient-to-br ${box.borderGlow} shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group`}>
-                           <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
+                           <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-4 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
                               <motion.div
                                  animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
@@ -439,7 +439,7 @@ export default function MarketVisionAICaseStudy() {
                                  <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>
                                     {box.icon}
                                  </div>
-                                 <h5 className={`font-semibold text-[20px] ${box.color}`}>
+                                 <h5 className={`font-semibold text-[16px] lg:text-[20px] ${box.color}`}>
                                     {box.title}
                                  </h5>
                               </div>
@@ -447,7 +447,7 @@ export default function MarketVisionAICaseStudy() {
                                  {box.items.map((item, j) => (
                                     <li key={j} className="flex items-start gap-3 group/li">
                                        <span className={`mt-2 w-1.5 h-1.5 rounded-full bg-current ${box.color} opacity-60 transition-transform duration-300 group-hover/li:scale-[2]`} />
-                                       <span className="text-[13px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
+                                       <span className="text-[12px] lg:text-[16px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
                                  ))}
                               </ul>
@@ -458,9 +458,9 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* PRODUCT VISION & STRATEGY */}
-               <section className="mb-10 md:mb-16 text-center max-w-5xl mx-auto px-4">
-                  <div className="mb-12">
-                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight mb-4">
+               <section className="mb-8 md:mb-16 text-center max-w-5xl mx-auto px-4">
+                  <div className="mb-6 lg:mb-12">
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight mb-4">
                         Empower every agency with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] via-[#0D63CC] to-[#8B5CF6]">enterprise-grade</span> AI marketing intelligence.
                      </h2>
                   </div>
@@ -497,8 +497,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* SOLUTION & IA */}
-               <section className="mb-10 md:mb-16">
-                  <div className="mb-16 text-center">
+               <section className="mb-8 md:mb-16">
+                  <div className="mb-6 lg:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">The Solution</span>
                      </div>
@@ -508,9 +508,9 @@ export default function MarketVisionAICaseStudy() {
                      </p>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+                  <div className="grid lg:grid-cols-12 gap-4 max-w-7xl mx-auto">
                      {/* Diagram Flow */}
-                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 border border-[#0D63CC]/10 mb-2 bg-[#F1F5F9]/50">
+                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-10 border border-[#0D63CC]/10 mb-2 bg-[#F1F5F9]/50">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-center w-full">
                            {["Data Sources", "Data Processing", "AI Intelligence Layer", "Insights Engine", "Recommendations", "Decision Dashboard"].map((step, idx) => (
                               <React.Fragment key={idx}>
@@ -524,9 +524,9 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Feature List */}
-                     <div className="lg:col-span-5 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group flex flex-col">
+                     <div className="lg:col-span-5 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group flex flex-col">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
-                        <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
+                        <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4 relative z-10">
                            <div className="w-12 h-12 rounded-xl bg-[#0D63CC]/10 flex items-center justify-center border border-[#0D63CC]/20 shadow-sm">
                               <CheckCircle2 size={24} className="text-[#0D63CC]" />
                            </div>
@@ -535,7 +535,7 @@ export default function MarketVisionAICaseStudy() {
                               <span className="block font-bold text-text-primary tracking-tight text-xl">Core Product Capabilities</span>
                            </div>
                         </div>
-                        <ul className="space-y-4 relative z-10 flex-1">
+                        <ul className="space-y-3 relative z-10 flex-1">
                            {[
                               { title: "AI Recommendation Engine", desc: "Provides intelligent suggestions to improve campaign performance and marketing efficiency." },
                               { title: "Unified Analytics Dashboard", desc: "Centralizes performance metrics across channels into a single actionable view." },
@@ -557,7 +557,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* IA Tree */}
-                     <div className="lg:col-span-7 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group">
+                     <div className="lg:col-span-7 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-10 border-2 border-[#00DA99]/10 hover:border-[#0D63CC]/40 shadow-xl transition-all duration-500 relative overflow-hidden group">
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00DA99]/10 blur-[60px] rounded-full pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                         <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-6 relative z-10">
                            <div className="w-12 h-12 rounded-xl bg-[#00DA99]/10 flex items-center justify-center border border-[#00DA99]/20 shadow-sm">
@@ -581,8 +581,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* USER PERSONAS */}
-               <section className="mb-10 md:mb-16">
-                  <div className="mb-16 text-center">
+               <section className="mb-8 md:mb-16">
+                  <div className="mb-6 lg:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            User Research
@@ -621,7 +621,7 @@ export default function MarketVisionAICaseStudy() {
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
+                           className="glass-card rounded-[20px] p-4 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
                            {/* Dynamic Background Glow */}
                            <div
@@ -629,7 +629,7 @@ export default function MarketVisionAICaseStudy() {
                               style={{ backgroundColor: persona.color }}
                            />
 
-                           <div className="flex items-center gap-6 mb-8 relative z-10">
+                           <div className="flex items-center gap-4 mb-8 relative z-10">
                               <div className="w-16 h-16 rounded-[16px] overflow-hidden flex-shrink-0 relative border-2 border-white shadow-2xl flex items-center justify-center" style={{ backgroundColor: `${persona.color}15` }}>
                                  <persona.icon size={28} style={{ color: persona.color }} strokeWidth={1.5} />
                               </div>
@@ -639,12 +639,12 @@ export default function MarketVisionAICaseStudy() {
                               </div>
                            </div>
 
-                           <p className="text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
+                           <p className="text-md lg:text-base text-gray-800 leading-relaxed mb-8 relative z-10 font-medium">
                               "{persona.bio}"
                            </p>
 
-                           <div className="space-y-4 relative z-10">
-                              <div className="p-5 rounded-2xl" style={{ backgroundColor: `${persona.color}08`, borderColor: `${persona.color}20`, borderWidth: '1px' }}>
+                           <div className="space-y-3 relative z-10">
+                              <div className="p-4 rounded-2xl" style={{ backgroundColor: `${persona.color}08`, borderColor: `${persona.color}20`, borderWidth: '1px' }}>
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] mb-3 flex items-center gap-2" style={{ color: persona.color }}>
                                     <CheckCircle2 size={13} strokeWidth={3} /> Core Goals
                                  </h5>
@@ -657,7 +657,7 @@ export default function MarketVisionAICaseStudy() {
                                  </div>
                               </div>
 
-                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                              <div className="p-4 rounded-2xl bg-rose-50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
                                     <Activity size={13} strokeWidth={3} /> Critical Pain Points
                                  </h5>
@@ -670,7 +670,7 @@ export default function MarketVisionAICaseStudy() {
                                  </div>
                               </div>
                               {persona.motivations && (
-                                 <div className="p-5 rounded-2xl bg-blue-50 border border-blue-100 mt-4">
+                                 <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100 mt-4">
                                     <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-blue-500 mb-3 flex items-center gap-2">
                                        <Lightbulb size={13} strokeWidth={3} /> Motivations
                                     </h5>
@@ -690,8 +690,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* EMPATHY MAP */}
-               <section className="mb-10 md:mb-16">
-                  <div className="mb-12 text-center">
+               <section className="mb-8 md:mb-16">
+                  <div className="mb-6 lg:mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Research Insight
@@ -702,7 +702,7 @@ export default function MarketVisionAICaseStudy() {
                      <p className="text-sm text-text-secondary font-medium max-w-2xl mx-auto mt-4">Empathy mapping helped identify emotional and behavioral drivers influencing how marketing teams interact with data and decision-making workflows.</p>
                   </div>
 
-                  <div className="max-w-6xl mx-auto relative glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[60px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
+                  <div className="max-w-6xl mx-auto relative glass-card rounded-[16px] lg:rounded-[24px] md:rounded-[60px] p-4 md:p-12 lg:p-16 overflow-hidden shadow-[0_20px_60px_-15px_rgba(13,99,204,0.2)] border border-[#0D63CC]/20 hover:border-[#00DA99]/50 transition-all duration-700 bg-white/30 backdrop-blur-3xl group shadow-[inset_0_0_100px_rgba(255,255,255,0.6)]">
 
                      {/* Ambient inner neon glows */}
                      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/15 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#0D63CC]/20 transition-all duration-1000 -translate-x-1/4 -translate-y-1/4" />
@@ -716,11 +716,11 @@ export default function MarketVisionAICaseStudy() {
                         </svg>
                      </div>
 
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
+                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-12 items-center">
 
                         {/* Top Row: THINKS */}
                         <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-4 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div
                                  animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -750,7 +750,7 @@ export default function MarketVisionAICaseStudy() {
 
                         {/* Middle Row Left: SAYS */}
                         <div className="md:col-start-1 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#F59E0B]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-4 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div
                                  animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
@@ -790,7 +790,7 @@ export default function MarketVisionAICaseStudy() {
 
                         {/* Middle Row Right: FEELS */}
                         <div className="md:col-start-3 md:row-start-2 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-rose-500/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-x-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-4 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div
                                  animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -820,7 +820,7 @@ export default function MarketVisionAICaseStudy() {
 
                         {/* Bottom Row: DOES */}
                         <div className="md:col-start-2 md:row-start-3 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:translate-y-2 overflow-hidden group/card">
-                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+                           <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-4 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div
                                  animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }}
                                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
@@ -853,8 +853,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* CORE FEATURES GRID */}
-               <section className="mb-10 md:mb-16">
-                  <div className="text-center mb-16">
+               <section className="mb-8 md:mb-16">
+                  <div className="text-center mb-6 lg:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Capabilities
@@ -877,7 +877,7 @@ export default function MarketVisionAICaseStudy() {
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border-2 border-transparent hover:border-slate-200"
+                           className="glass-card p-4 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border-2 border-transparent hover:border-slate-200"
                         >
                            <div
                               className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -893,16 +893,16 @@ export default function MarketVisionAICaseStudy() {
                               </div>
                               <feature.icon size={24} className="text-text-secondary opacity-20 group-hover:opacity-100 transition-opacity" style={{ color: feature.color }} />
                            </div>
-                           <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
-                           <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10">{feature.desc}</p>
+                           <h4 className="font-bold text-base lg:text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
+                           <p className="text-xs lg:text-sm text-text-secondary font-medium leading-relaxed relative z-10">{feature.desc}</p>
                         </motion.div>
                      ))}
                   </div>
                </section>
 
                {/* DESIGN SYSTEM & VISUALS */}
-               <section className="mb-10 md:mb-16">
-                  <div className="mb-16 text-center">
+               <section className="mb-8 md:mb-16">
+                  <div className="mb-6 lg:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Visual Identity
@@ -914,7 +914,7 @@ export default function MarketVisionAICaseStudy() {
                      </p>
                   </div>
 
-                  <div className="grid lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4">
+                  <div className="grid lg:grid-cols-12 gap-4 max-w-7xl mx-auto lg:px-4">
 
                      {/* Colors - Spans 4 cols */}
                      <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
@@ -943,7 +943,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Typography - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Typography
@@ -955,7 +955,7 @@ export default function MarketVisionAICaseStudy() {
                            </div>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                            <div className="flex justify-between items-end border-b border-slate-200 pb-2">
                               <span className="text-3xl font-black text-text-primary tracking-tight">Inter</span>
                               <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary">Primary Font</span>
@@ -969,7 +969,7 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Iconography - Spans 4 cols */}
-                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
+                     <div className="lg:col-span-4 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-1/2 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none -translate-y-1/2" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3">
                            <div className="w-2 h-2 bg-[#0D63CC] rounded-full" /> Iconography
@@ -995,14 +995,14 @@ export default function MarketVisionAICaseStudy() {
                      </div>
 
                      {/* Guiding Principles - Spans 12 cols */}
-                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden mt-8">
+                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden mt-8">
                         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
 
                         <h4 className="font-bold text-xl text-text-primary mb-8 flex items-center gap-3 relative z-10 justify-center">
                            <div className="w-2 h-2 bg-[#00DA99] rounded-full" /> Guiding Principles
                         </h4>
 
-                        <div className="grid md:grid-cols-5 gap-6 relative z-10">
+                        <div className="grid md:grid-cols-5 gap-4 relative z-10">
                            {[
                               { name: "Simplicity", desc: "Complex data must feel simple and digestible.", icon: Zap },
                               { name: "Scalability", desc: "Support agencies managing dozens of clients.", icon: Layers },
@@ -1010,7 +1010,7 @@ export default function MarketVisionAICaseStudy() {
                               { name: "Flexibility", desc: "Allow complete dashboard customization.", icon: Layout },
                               { name: "Trust", desc: "Ensure users understand AI recommendations.", icon: Shield }
                            ].map((principle, i) => (
-                              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-200 hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl group/principle text-center flex flex-col items-center">
+                              <div key={i} className="bg-white rounded-2xl p-4 border border-slate-200 hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl group/principle text-center flex flex-col items-center">
                                  <div className="w-12 h-12 rounded-full bg-[#0D63CC]/10 flex items-center justify-center mb-4 group-hover/principle:scale-110 transition-transform">
                                     <principle.icon size={20} className="text-[#0D63CC]" />
                                  </div>
@@ -1024,19 +1024,19 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* INFORMATION ARCHITECTURE */}
-               <section className="mb-10 md:mb-16 bg-slate-50 rounded-[16px] lg:rounded-[24px] p-8 md:p-12 lg:p-16 border border-slate-200">
-                  <div className="mb-12 text-center">
-                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Marketing Intelligence Workflows</span></h2>
+               <section className="mb-8 md:mb-16 bg-slate-50 rounded-[16px] lg:rounded-[24px] p-4 md:p-12 lg:p-16 border border-slate-200">
+                  <div className="mb-6 md:mb-12 text-center">
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Marketing Intelligence Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">We focused on building an Information Architecture that includes a comprehensive Sitemap, Navigation hierarchy, and User flow diagrams to simplify the navigation of deeply complex analytical workflows.</p>
                   </div>
                </section>
 
                {/* USER FLOWS */}
-               <section className="mb-10 md:mb-16 max-w-6xl mx-auto">
-                  <div className="mb-12 text-center">
+               <section className="mb-8 md:mb-16 max-w-6xl mx-auto">
+                  <div className="mb-6 md:mb-12 text-center">
                      <h2 className="text-2xl md:text-3xl font-black text-text-primary mb-4">Core User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Flows</span></h2>
                   </div>
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                      {[
                         {
                            name: "Campaign Optimization Flow",
@@ -1069,7 +1069,7 @@ export default function MarketVisionAICaseStudy() {
                         }
                      ].map((flow, i) => (
                         <div key={i} className="glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 border border-slate-200 overflow-hidden">
-                           <h4 className="font-black text-xl text-text-primary mb-12 text-center md:text-left">{flow.name}</h4>
+                           <h4 className="font-bold text-xl text-text-primary mb-12 text-center md:text-left">{flow.name}</h4>
                            <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-8 md:gap-0">
 
                               {/* Background Dashed Line (Desktop only) */}
@@ -1123,8 +1123,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* DESIGN SYSTEM */}
-               <section className="mb-10 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 lg:p-16 border border-slate-200">
-                  <div className="text-center mb-12">
+               <section className="mb-8 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 lg:p-16 border border-slate-200">
+                  <div className="text-center mb-6 lg:mb-12">
                      <h2 className="text-2xl md:text-3xl font-black text-text-primary mb-4">Building a Scalable AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Product Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto mb-8">Our system incorporates accessibility considerations, data visualization guidelines, component standards, and dashboard patterns.</p>
 
@@ -1139,17 +1139,17 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* CHALLENGES */}
-               <section className="mb-10 md:mb-16 max-w-5xl mx-auto">
-                  <div className="text-center mb-12">
-                     <h2 className="text-3xl font-bold text-text-primary mb-4">Design Challenges</h2>
+               <section className="mb-8 md:mb-16 max-w-5xl mx-auto">
+                  <div className="text-center mb-6 lg:mb-12">
+                     <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">Design Challenges</h2>
                   </div>
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                      {[
                         { num: "01", chal: "Making complex marketing data easy to understand.", sol: "Implemented progressive disclosure and modular cards." },
                         { num: "02", chal: "Building trust in AI-generated insights.", sol: "Provided transparent recommendations with supporting metrics." },
                         { num: "03", chal: "Supporting multiple client workflows.", sol: "Designed a flexible dashboard builder with robust widget library." }
                      ].map((item, i) => (
-                        <div key={i} className="flex flex-col md:flex-row gap-4 p-6 glass-card rounded-2xl items-center text-center md:text-left">
+                        <div key={i} className="flex flex-col md:flex-row gap-4 p-4 glass-card rounded-2xl items-center text-center md:text-left">
                            <div className="w-12 h-12 flex-shrink-0 bg-rose-50 rounded-full flex items-center justify-center text-rose-500 font-black text-lg border border-rose-100">
                               {item.num}
                            </div>
@@ -1163,8 +1163,8 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* SUCCESS METRICS */}
-               <section className="mb-10 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] p-8 md:p-12 lg:p-16 border border-slate-200">
-                  <div className="mb-12 text-center">
+               <section className="mb-8 md:mb-16 glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-12 lg:p-16 border border-slate-200">
+                  <div className="mb-6 lg:mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Performance
@@ -1173,14 +1173,14 @@ export default function MarketVisionAICaseStudy() {
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Metrics</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Measuring the impact and efficiency improvements after deploying MarketVisionAI.</p>
                   </div>
-                  <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
                      {[
                         { val: "-80%", label: "Reporting Time", color: "text-[#00DA99]" },
                         { val: "70%", label: "Faster Setup", color: "text-[#0D63CC]" },
                         { val: "+65%", label: "Productivity", color: "text-[#00DA99]" },
                         { val: "+35%", label: "Client Retention", color: "text-[#0D63CC]" }
                      ].map((kpi, i) => (
-                        <div key={i} className="text-center p-6 rounded-[16px] lg:rounded-[24px] glass-card border border-slate-200 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all duration-300">
+                        <div key={i} className="text-center p-4 rounded-[16px] lg:rounded-[24px] glass-card border border-slate-200 hover:border-[#0D63CC]/30 hover:shadow-xl transition-all duration-300">
                            <span className={`block text-3xl md:text-4xl font-black ${kpi.color} mb-2`}>{kpi.val}</span>
                            <span className="block text-xs font-bold text-text-secondary uppercase tracking-wider">{kpi.label}</span>
                         </div>
@@ -1189,17 +1189,17 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* OUTCOMES & CONCLUSION */}
-               <section className="relative mb-10 md:mb-16 overflow-hidden">
+               <section className="relative mb-8 md:mb-16 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[16px] lg:rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
+                     className="glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
                   >
                      {/* High-Fidelity Ambient Patterns */}
                      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
                      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
 
                      <div className="relative z-10">
-                        <div className="mb-12 text-center max-w-4xl mx-auto">
+                        <div className="mb-6 lg:mb-12 text-center max-w-4xl mx-auto">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                               <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                                  Epilogue
@@ -1210,7 +1210,7 @@ export default function MarketVisionAICaseStudy() {
                            </h2>
                         </div>
 
-                        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+                        <div className="grid lg:grid-cols-3 gap-6 mb-10 lg:mb-20">
                            {[
                               {
                                  title: "Business Strategy Achieved",
@@ -1250,7 +1250,7 @@ export default function MarketVisionAICaseStudy() {
                                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
                                        className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`}
                                     />
-                                    <div className="flex items-center gap-4 mb-6 relative z-20">
+                                    <div className="flex items-center gap-4 mb-4 relative z-20">
                                        <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center border-2 ${box.borderColor} transition-colors duration-500 flex-shrink-0`}>
                                           {box.icon}
                                        </div>
@@ -1291,12 +1291,12 @@ export default function MarketVisionAICaseStudy() {
                </section>
 
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="mb-16 text-center">
+               <section className="mb-8 md:mb-24 lg:mb-32">
+                  <div className="lg:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Evolution</span>
                      </div>
-                     <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
                   <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
@@ -1324,8 +1324,8 @@ export default function MarketVisionAICaseStudy() {
                </div>
 
                {/* ── 20. VISUAL SHOWCASE ──────────────────────────────────────────────────── */}
-               <section className="mb-10 md:mb-16">
-                  <div className="mb-16 text-center">
+               <section className="mb-8 md:mb-16">
+                  <div className="mb-6 lg:mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Interface
@@ -1359,10 +1359,10 @@ export default function MarketVisionAICaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#00DA99] to-[#0D63CC] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                           <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">on Figma</span>
                            </h2>
-                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                           <p className="text-md md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Explore the complete design system, interactive AI workflows, complex data visualizations, and high-fidelity dashboard prototypes behind MarketVisionAI.
                            </p>
 

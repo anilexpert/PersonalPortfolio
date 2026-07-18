@@ -120,7 +120,7 @@ export default function ServicesPage() {
                     animate: { opacity: 1, y: 0, borderColor: 'rgba(255, 255, 255, 0.5)', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)', transition: { duration: 0.6, delay: 0.1 + i * 0.1 } },
                     hover: { y: -8, borderColor: `${service.color}60`, boxShadow: `0 24px 48px ${service.color}15`, transition: { duration: 0.3 } }
                   }}
-                  className="glass-card bg-white/40 backdrop-blur-xl rounded-[24px] p-6 lg:p-10 flex flex-col group relative overflow-hidden transition-all duration-300 border border-white/50"
+                  className="glass-card bg-white/40 backdrop-blur-xl rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 flex flex-col group relative overflow-hidden transition-all duration-300 border border-white/50"
                 >
                   {/* Multicolor Dynamic Glows - Glass Effects */}
                   <div
@@ -189,7 +189,7 @@ export default function ServicesPage() {
 
                   {/* Gradient Border Overlay (Border Masking effect) */}
                   <div
-                    className="absolute inset-0 rounded-[24px] pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100 z-20"
+                    className="absolute inset-0 rounded-[16px] lg:rounded-[24px] pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100 z-20"
                     style={{
                       background: `linear-gradient(135deg, ${service.color}40, transparent, transparent)`,
                       WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',

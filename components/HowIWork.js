@@ -20,7 +20,7 @@ export default function HowIWork() {
   };
 
   return (
-    <section className="py-12 md:py-20 px-6 relative w-full overflow-hidden" id="how-i-work">
+    <section className="py-8 lg:py-12 md:py-20 px-6 relative w-full overflow-hidden" id="how-i-work">
       {/* Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />

@@ -150,7 +150,7 @@ export default function ContactPage() {
 
                 {/* Connect pill box */}
                 <div
-                  className="flex items-center gap-4 p-4 rounded-[24px] bg-white/70 backdrop-blur-md border border-secondary/15 shadow-[0_8px_30px_rgba(13,99,204,0.04)] hover:border-primary/50 transition-all duration-300"
+                  className="flex items-center gap-4 p-4 rounded-[16px] lg:rounded-[24px] bg-white/70 backdrop-blur-md border border-secondary/15 shadow-[0_8px_30px_rgba(13,99,204,0.04)] hover:border-primary/50 transition-all duration-300"
                 >
                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 border border-secondary/20">
                     <Phone className="w-5 h-5 text-secondary" />
@@ -165,7 +165,7 @@ export default function ContactPage() {
 
                 {/* Email pill box */}
                 <div
-                  className="flex items-center gap-4 p-4 rounded-[24px] bg-white/70 backdrop-blur-md border border-primary/15 shadow-[0_8px_30px_rgba(0,218,153,0.04)] hover:border-secondary/50 transition-all duration-300"
+                  className="flex items-center gap-4 p-4 rounded-[16px] lg:rounded-[24px] bg-white/70 backdrop-blur-md border border-primary/15 shadow-[0_8px_30px_rgba(0,218,153,0.04)] hover:border-secondary/50 transition-all duration-300"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 border border-primary/20">
                     <Mail className="w-5 h-5 text-primary" />

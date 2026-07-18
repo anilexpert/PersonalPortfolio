@@ -553,7 +553,7 @@ export default function AboutPage() {
                 <motion.div
                   key={reason.title}
                   {...fadeUp(i * 0.1)}
-                  className="glass-card p-6 md:p-8 rounded-[24px] border border-white/20 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 group relative overflow-hidden"
+                  className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] border border-white/20 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

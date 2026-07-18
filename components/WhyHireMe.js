@@ -59,7 +59,7 @@ const WhyHireMe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-[24px] p-6 flex flex-col group hover:-translate-y-2 hover:glow-border relative overflow-hidden"
+              className="glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-6 flex flex-col group hover:-translate-y-2 hover:glow-border relative overflow-hidden"
             >
               {/* Top Right Glow Effect */}
               <div

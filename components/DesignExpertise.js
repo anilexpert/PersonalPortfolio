@@ -157,7 +157,7 @@ const DesignExpertise = () => {
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(i)}
-                  className={`group cursor-pointer glass-card bg-white/40 py-3 sm:py-3 px-4 sm:px-4 lg:px-4 lg:py-3 rounded-lg lg:rounded-xl transition-all duration-500 flex items-center gap-3 sm:gap-4 relative overflow-hidden ${activeIndex === i
+                  className={`group cursor-pointer glass-card bg-white/40 py-3 sm:py-3 px-4 sm:px-4 lg:px-4 lg:py-3 rounded-xl lg:rounded-2xl transition-all duration-500 flex items-center gap-3 sm:gap-4 relative overflow-hidden ${activeIndex === i
                     ? 'glass-card scale-[1.02]'
                     : 'hover:bg-white/40 hover:translate-x-2'
                     }`}
@@ -229,7 +229,7 @@ const DesignExpertise = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full p-6 md:p-14 flex flex-col relative overflow-hidden rounded-lg lg:rounded-[24px] text-white"
+                className="w-full h-full p-6 md:p-14 flex flex-col relative overflow-hidden rounded-2xl lg:rounded-[24px] text-white"
                 style={{ background: 'var(--deep-indigo)' }}
               >
                 {/* Background Noise Layer for Detail Card */}

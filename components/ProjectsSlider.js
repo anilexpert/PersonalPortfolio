@@ -159,7 +159,7 @@ export default function ProjectsSlider() {
               <div
                 key={proj.title}
                 onClick={() => setActive(idx)}
-                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[24px] ${isActive ? 'h-[320px] md:h-[480px]' : 'h-[140px] md:h-[480px]'
+                className={`relative overflow-hidden group cursor-pointer w-full transition-all duration-700 ease-[cubic-bezier(.77,0,.175,1)] min-w-0 rounded-[16px] lg:rounded-[16px] lg: ${isActive ? 'h-[320px] md:h-[480px]' : 'h-[140px] md:h-[480px]'
                   }`}
 
                 style={{
@@ -218,13 +218,12 @@ export default function ProjectsSlider() {
                     >
                       {/* Blurry glass panel containing Title, Subtitle, and Description */}
                       <div
-                        className="w-full flex flex-col items-center p-4 md:p-10"
+                        className="w-full flex flex-col items-center rounded-[16px] lg:rounded-[24px] p-4 md:p-10"
                         style={{
                           background: 'linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
                           backdropFilter: 'blur(40px)',
                           WebkitBackdropFilter: 'blur(40px)',
                           border: '1px solid rgba(255, 255, 255, 0.25)',
-                          borderRadius: 32,
                           boxShadow: '0 24px 60px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.1)'
                         }}
                       >

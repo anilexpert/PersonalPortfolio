@@ -157,7 +157,7 @@ export default function TermsPage() {
               <div className="sticky top-32">
                 <motion.div
                   {...fadeUp(0.2)}
-                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)]"
+                  className="w-full bg-white/75 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-5 border border-secondary/15 shadow-[0_20px_50px_rgba(13,99,204,0.04)]"
                 >
                   <h3 className="text-base font-bold text-text-primary mb-4 border-b border-text-primary/5 pb-3 flex items-center gap-2">
                     <Shield size={24} className="text-primary" />
@@ -173,8 +173,8 @@ export default function TermsPage() {
                           <button
                             onClick={() => handleScrollTo(sec.id)}
                             className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-[13px] font-semibold transition-all duration-300 group cursor-pointer relative overflow-hidden ${isActive
-                                ? 'text-primary bg-primary/5 border border-primary/15'
-                                : 'text-text-secondary hover:text-text-primary hover:bg-slate-50 border border-transparent'
+                              ? 'text-primary bg-primary/5 border border-primary/15'
+                              : 'text-text-secondary hover:text-text-primary hover:bg-slate-50 border border-transparent'
                               }`}
                           >
                             {/* Left Glow Bar when active */}
@@ -208,7 +208,7 @@ export default function TermsPage() {
               <section id="section-0" data-section="0" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500 relative overflow-hidden"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500 relative overflow-hidden"
                 >
                   {/* Subtle inner grid overlay */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.01)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -232,7 +232,7 @@ export default function TermsPage() {
               <section id="section-1" data-section="1" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
@@ -270,7 +270,7 @@ export default function TermsPage() {
               <section id="section-2" data-section="2" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -324,7 +324,7 @@ export default function TermsPage() {
               <section id="section-3" data-section="3" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
@@ -358,7 +358,7 @@ export default function TermsPage() {
               <section id="section-4" data-section="4" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -409,7 +409,7 @@ export default function TermsPage() {
               <section id="section-5" data-section="5" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
@@ -446,7 +446,7 @@ export default function TermsPage() {
               <section id="section-6" data-section="6" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -480,7 +480,7 @@ export default function TermsPage() {
               <section id="section-7" data-section="7" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
@@ -501,7 +501,7 @@ export default function TermsPage() {
               <section id="section-8" data-section="8" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="bg-white/70 backdrop-blur-[24px] rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
+                  className="bg-white/70 backdrop-blur-[24px] rounded-[16px] lg:rounded-[24px] p-8 md:p-10 border border-secondary/15 shadow-[0_16px_40px_rgba(13,99,204,0.03)] hover:border-primary/40 transition-all duration-500"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -527,7 +527,7 @@ export default function TermsPage() {
               <section id="section-9" data-section="9" className="scroll-mt-36">
                 <motion.div
                   {...fadeUp(0.15)}
-                  className="relative p-[1px] rounded-[24px] bg-gradient-to-tr from-primary via-secondary to-primary shadow-[0_24px_50px_rgba(0,218,153,0.12)] overflow-hidden group transition-all duration-500 hover:shadow-[0_32px_60px_rgba(0,218,153,0.22)]"
+                  className="relative p-[1px] rounded-[16px] lg:rounded-[24px] bg-gradient-to-tr from-primary via-secondary to-primary shadow-[0_24px_50px_rgba(0,218,153,0.12)] overflow-hidden group transition-all duration-500 hover:shadow-[0_32px_60px_rgba(0,218,153,0.22)]"
                 >
                   {/* Neon light source/breathing glows in background */}
                   <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/25 blur-[90px] rounded-full pointer-events-none z-0 group-hover:scale-110 transition-transform duration-700" />

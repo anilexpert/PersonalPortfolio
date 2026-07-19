@@ -33,7 +33,7 @@ export default function KinoraCaseStudy() {
 
    // Premium Glass Placeholder Component adapted for Kinora colors
    const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#00DA99]", textCls = "text-[#00DA99]", aspect = "aspect-[16/9]" }) => (
-      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-black/5 hover:border-black/10 shadow-lg`}>
+      <div className={`w-full ${aspect} glass-card rounded-[16px] lg:rounded-[24px] flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-black/5 hover:border-black/10 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
             style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
@@ -74,7 +74,7 @@ export default function KinoraCaseStudy() {
 
                   <motion.h1
                      initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                     className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
+                     className="text-[24px] sm:text-2xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
                      <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent ml-2">Studies</span>
@@ -94,7 +94,7 @@ export default function KinoraCaseStudy() {
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
                {/* ── HERO SECTION ───────────────────── */}
-               <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
+               <section className="mb-8 md:mb-16 grid lg:grid-cols-12 gap-4 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -105,13 +105,13 @@ export default function KinoraCaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         Kinora
                      </motion.h1>
-                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
+                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-base md:text-2xl font-semibold mb-4 max-w-3xl">
                         Caregiving Simplified — <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">The Smarter Way to Manage the Weight of Care</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-sm lg:text-sm lg:text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                         Kinora is a mobile-first caregiving platform designed to help family caregivers organize responsibilities, coordinate care, manage health information, and stay connected with loved ones.
                      </motion.p>
                   </div>
@@ -160,13 +160,13 @@ export default function KinoraCaseStudy() {
                </motion.section>
 
                {/* ── OVERVIEW / PROBLEM / SOLUTION ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+               <section className="mb-8 md:mb-16 lg:mb-20 space-y-8 md:space-y-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Problem Statement</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Problem Statement</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-8">
                            Millions of family caregivers struggle with fragmented caregiving responsibilities spread across phone calls, text messages, paper documents, and calendar reminders.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-4">
@@ -178,7 +178,7 @@ export default function KinoraCaseStudy() {
                               "Lost or disorganized medical documents",
                               "Lack of remote visibility for family members"
                            ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
+                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-[16px] lg:rounded-[24px]">
                                  <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)] flex-shrink-0" />
                                  <span className="text-sm font-bold text-text-primary">{item}</span>
                               </div>
@@ -189,12 +189,12 @@ export default function KinoraCaseStudy() {
 
                   <GlowDivider />
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Business Goal</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Business Goal</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            Create a trusted caregiving ecosystem that alleviates the daily logistical burdens faced by millions of unpaid family caregivers globally.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-3">
@@ -217,12 +217,12 @@ export default function KinoraCaseStudy() {
 
                   <GlowDivider />
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Design Challenge</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Design Challenge</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium">
                            How might we create a caregiving platform that helps families stay organized, share responsibilities, track health-related tasks, and reduce emotional burden—while remaining exceptionally simple enough for non-technical users and older adults to navigate?
                         </p>
                      </div>
@@ -231,12 +231,12 @@ export default function KinoraCaseStudy() {
 
 
                {/* ── BUSINESS OPPORTUNITY ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Market Context</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Opportunity</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Opportunity</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">The aging population and decentralization of healthcare have created an immense need for consumer caregiving tools.</p>
                   </div>
 
@@ -263,12 +263,12 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── DISCOVERY RESEARCH ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Insights from primary family caregivers and remote siblings shaped our platform.</p>
                   </div>
 
@@ -294,7 +294,7 @@ export default function KinoraCaseStudy() {
                         { num: "05", title: "Paper Trails", desc: "Legal docs and notes are on paper.", impact: "Unavailable during emergencies.", color: "#10B981" },
                      ].map((f, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#00DA99]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#00DA99]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: f.color }} />
                            <div className="flex items-center gap-3 mb-6 relative z-10">
@@ -311,19 +311,19 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── USER PERSONAS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Understanding the distinct needs of primary caregivers and remote family members to build an inclusive experience.
                      </p>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                  <div className="grid lg:grid-cols-2 gap-4 lg:gap-4 lg:gap-12">
                      {[
                         {
                            name: "Sarah Thompson",
@@ -349,7 +349,7 @@ export default function KinoraCaseStudy() {
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
+                           className="glass-card rounded-[20px] p-4 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md"
                         >
                            <div
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -372,7 +372,7 @@ export default function KinoraCaseStudy() {
                            </p>
 
                            <div className="space-y-6 relative z-10">
-                              <div className="p-6 rounded-3xl bg-[#00DA99]/5 border border-[#00DA99]/20">
+                              <div className="p-4 md:p-6 rounded-[16px] lg:rounded-[24px] bg-[#00DA99]/5 border border-[#00DA99]/20">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] mb-4 flex items-center gap-2" style={{ color: persona.color }}>
                                     <CheckCircle2 size={14} strokeWidth={3} /> Needs
                                  </h5>
@@ -386,7 +386,7 @@ export default function KinoraCaseStudy() {
                                  </div>
                               </div>
 
-                              <div className="p-6 rounded-3xl bg-rose-50 border border-rose-100">
+                              <div className="p-4 md:p-6 rounded-[16px] lg:rounded-[24px] bg-rose-50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-4 flex items-center gap-2">
                                     <Activity size={14} strokeWidth={3} /> Frustrations
                                  </h5>
@@ -405,12 +405,12 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── EMPATHY MAP ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Research Insight</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing family caregiver attitudes to align our product decisions.</p>
                   </div>
 
@@ -425,12 +425,12 @@ export default function KinoraCaseStudy() {
                         </svg>
                      </div>
 
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
+                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-12 items-center">
                         <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#00DA99]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
                                     <Brain className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">think</span>?</h3>
@@ -447,7 +447,7 @@ export default function KinoraCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
                                     <MessageCircle className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">say</span>?</h3>
@@ -473,7 +473,7 @@ export default function KinoraCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
                                     <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
@@ -490,7 +490,7 @@ export default function KinoraCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#8B5CF6]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#8B5CF6]/30 group-hover/card:border-[#8B5CF6] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#8B5CF6]/30 group-hover/card:border-[#8B5CF6] transition-colors duration-500">
                                     <Activity className="w-6 h-6 text-[#8B5CF6]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#8B5CF6]">do</span>?</h3>
@@ -507,12 +507,12 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── USER JOURNEY MAP ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Journey Mapping</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Map</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Map</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A day in the life of a family caregiver coordinating a medical appointment.</p>
                   </div>
 
@@ -543,18 +543,18 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── CORE FEATURES ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">
                            Core Capabilities
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Providing a unified solution for modern family caregiving.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 lg:gap-8">
                      {[
                         { num: "01", title: "Care Circle", desc: "Family caregiving collaboration with roles.", color: "#00DA99", icon: Users, image: "/images/kinora/Care-Circle-Thumbnail.png" },
                         { num: "02", title: "Smart Task Management", desc: "Track responsibilities and assign tasks.", color: "#0D63CC", icon: CheckSquare, image: "/images/kinora/Smart-Task-Management-Thumbnail.png" },
@@ -567,7 +567,7 @@ export default function KinoraCaseStudy() {
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-black/5 shadow-sm"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-black/5 shadow-sm"
                         >
                            <div
                               className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -584,7 +584,7 @@ export default function KinoraCaseStudy() {
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
-                           <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
+                           <div className="relative z-10 w-full aspect-[4/3] rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
                               {/* <feature.icon size={48} strokeWidth={0.8} style={{ color: `${feature.color}30` }} />
                               <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" /> */}
                               <Image
@@ -600,14 +600,14 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── DESIGN SYSTEM & VISUALS ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Soft healthcare aesthetics, high readability, and accessibility-first design.
                      </p>
@@ -628,7 +628,7 @@ export default function KinoraCaseStudy() {
                               { bg: 'bg-[#8EDBD5]', label: 'Neutral', hex: '#8EDBD5' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-black/5 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div className={`w-full aspect-square rounded-[16px] lg:rounded-[24px] ${color.bg} shadow-lg border border-black/5 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
                                  <div>
                                     <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
                                     <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
@@ -683,7 +683,7 @@ export default function KinoraCaseStudy() {
                               { icon: Smartphone, color: "text-[#0D63CC]" },
                               { icon: Layout, color: "text-rose-500" }
                            ].map((Item, i) => (
-                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                              <div key={i} className="aspect-square rounded-[16px] lg:rounded-[24px] bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
                                  <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
                               </div>
                            ))}
@@ -693,12 +693,12 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── VISUAL OVERVIEW (Grid format like scanovahealth) ───────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Interface</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Seamless mobile experience across all caregiving modules.</p>
                   </div>
 
@@ -764,7 +764,7 @@ export default function KinoraCaseStudy() {
                <section className="relative mb-20 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[16px] lg:rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#00DA99]/20 hover:border-[#0D63CC]/40"
+                     className="glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#00DA99]/20 hover:border-[#0D63CC]/40"
                   >
                      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#00DA99]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
                      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0D63CC]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
@@ -776,7 +776,7 @@ export default function KinoraCaseStudy() {
                                  Final Outcome
                               </span>
                            </div>
-                           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
+                           <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">
                               The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Future</span> of Coordinated Care.
                            </h2>
                         </div>
@@ -788,7 +788,7 @@ export default function KinoraCaseStudy() {
                                  <div className="w-8 h-8 bg-[#00DA99] rounded flex-shrink-0" />
                                  Conclusion
                               </h4>
-                              <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
+                              <p className="text-sm md:text-sm lg:text-sm lg:text-base text-text-secondary font-medium leading-relaxed relative z-10">
                                  Kinora is a mobile-first caregiving ecosystem that empowers families to coordinate care, manage health information, collaborate effectively, and reduce caregiver stress through an intuitive and human-centered digital experience.
                               </p>
                            </div>
@@ -799,7 +799,7 @@ export default function KinoraCaseStudy() {
                </section>
 
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Evolution</span>
@@ -807,7 +807,7 @@ export default function KinoraCaseStudy() {
                      <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
-                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-8 md:gap-16 max-w-5xl mx-auto">
                      {/* Decorative dashed connecting line */}
                      <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
                      <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
@@ -818,7 +818,7 @@ export default function KinoraCaseStudy() {
                         { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
                      ].map((step, i) => (
                         <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
-                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                           <div className={`w-16 h-16 rounded-[16px] lg:rounded-[24px] ${step.bg} flex items-center justify-center mb-4`}>
                               <step.icon className={`w-8 h-8 ${step.color}`} />
                            </div>
                            <span className="font-bold text-slate-800 text-lg">{step.label}</span>
@@ -827,7 +827,7 @@ export default function KinoraCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
@@ -844,7 +844,7 @@ export default function KinoraCaseStudy() {
 
                   <div className="grid gap-6">
                      <div className="lg:col-span-12">
-                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
                               src="/images/kinora/KinoraAppScreens.png"
                               alt="Visual UI"
@@ -867,10 +867,10 @@ export default function KinoraCaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                           <h2 className="text-xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
-                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                           <p className="text-base md:text-sm lg:text-sm lg:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.
                            </p>
 
@@ -896,7 +896,7 @@ export default function KinoraCaseStudy() {
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/marketvisionai" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                     <h3 className="text-2xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         MarketVision AI
                      </h3>
                      <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">

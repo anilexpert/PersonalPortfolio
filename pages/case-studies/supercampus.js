@@ -31,7 +31,7 @@ export default function SuperCampusCaseStudy() {
    }
 
    const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#0D63CC]", textCls = "text-[#0D63CC]", aspect = "aspect-[16/9]" }) => (
-      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
+      <div className={`w-full ${aspect} glass-card rounded-[16px] lg:rounded-[24px] flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
             style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
@@ -69,7 +69,7 @@ export default function SuperCampusCaseStudy() {
 
                   <motion.h1
                      initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                     className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
+                     className="text-[24px] sm:text-2xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
                      <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Studies</span>
@@ -90,7 +90,7 @@ export default function SuperCampusCaseStudy() {
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
                {/* ── 2. HERO SECTION ───────────────────────────────────────────────────────── */}
-               <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
+               <section className="mb-8 md:mb-16 grid lg:grid-cols-12 gap-4 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -101,13 +101,13 @@ export default function SuperCampusCaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         SuperCampus
                      </motion.h1>
-                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
+                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-base md:text-2xl font-semibold mb-4 max-w-3xl">
                         Designing a Modern <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">School Operations & Learning Management Platform</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-base text-text-secondary max-w-3xl leading-relaxed font-normal mb-4">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-sm lg:text-sm lg:text-base text-text-secondary max-w-3xl leading-relaxed font-normal mb-4">
                         SuperCampus is a comprehensive education management platform designed to streamline academic operations, improve communication, and connect administrators, teachers, students, and parents through a unified digital ecosystem.
                      </motion.p>
                      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="flex flex-wrap gap-2">
@@ -162,13 +162,13 @@ export default function SuperCampusCaseStudy() {
                </motion.section>
 
                {/* ── 4. OVERVIEW / PROBLEM / SOLUTION ─────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32 space-y-10 md:space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+               <section className="mb-8 md:mb-16 lg:mb-20 space-y-8 md:space-y-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Project Overview</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-4">
                            Educational institutions often rely on disconnected systems, manual administrative processes, and fragmented communication channels. SuperCampus was designed to centralize academic operations, student information, communication, attendance, and reporting into a single scalable platform.
                         </p>
                      </div>
@@ -177,9 +177,9 @@ export default function SuperCampusCaseStudy() {
                   <GlowDivider />
 
                   {/* Platform Scope */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Platform Scope</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Platform Scope</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -189,8 +189,8 @@ export default function SuperCampusCaseStudy() {
                               { icon: Smartphone, label: "Teacher Mobile App", desc: "Attendance, tasks & assessments", color: "#F59E0B" },
                               { icon: Users, label: "Parent & Student App", desc: "Progress, communication & updates", color: "#8B5CF6" },
                            ].map((item, i) => (
-                              <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-br overflow-hidden transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${item.color}25, transparent)` }}>
-                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 h-full flex flex-col gap-3 border border-slate-100 group-hover:bg-white/95 transition-all duration-500">
+                              <div key={i} className="group relative rounded-[16px] lg:rounded-[24px] p-[1px] bg-gradient-to-br overflow-hidden transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${item.color}25, transparent)` }}>
+                                 <div className="bg-white/80 backdrop-blur-sm rounded-[16px] lg:rounded-[24px] p-5 h-full flex flex-col gap-3 border border-slate-100 group-hover:bg-white/95 transition-all duration-500">
                                     <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${item.color}15`, color: item.color }}>
                                        <item.icon size={20} strokeWidth={1.8} />
                                     </div>
@@ -202,7 +202,7 @@ export default function SuperCampusCaseStudy() {
                               </div>
                            ))}
                         </div>
-                        <p className="mt-6 text-base text-text-secondary font-medium leading-relaxed">
+                        <p className="mt-6 text-sm lg:text-sm lg:text-base text-text-secondary font-medium leading-relaxed">
                            <span className="font-bold text-text-primary">Project Vision:</span> To create a connected educational ecosystem where every stakeholder can access the right information at the right time while reducing administrative burden and improving educational outcomes.
                         </p>
                      </div>
@@ -211,15 +211,15 @@ export default function SuperCampusCaseStudy() {
                   <GlowDivider />
 
                   {/* The Problem */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">The Challenge</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">The Challenge</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-4">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-4">
                            Schools faced several operational challenges:
                         </p>
-                        <ul className="list-disc pl-5 mb-8 text-lg text-text-secondary leading-relaxed font-medium space-y-2">
+                        <ul className="list-disc pl-5 mb-8 text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium space-y-2">
                            <li>Administrative tasks were highly manual.</li>
                            <li>Student data was distributed across multiple systems.</li>
                            <li>Communication between schools and parents lacked transparency.</li>
@@ -292,7 +292,7 @@ export default function SuperCampusCaseStudy() {
                               { title: "Communication Gaps", desc: "Information exchange between school, teachers, students & parents is fragmented." },
                               { title: "Manual Reporting", desc: "Reports are generated manually, causing delays and inaccuracies." },
                            ].map((item, idx) => (
-                              <div key={idx} className="flex items-start gap-3 p-4 glass-card rounded-2xl group hover:border-rose-200 transition-all duration-300 border border-transparent">
+                              <div key={idx} className="flex items-start gap-3 p-4 glass-card rounded-[16px] lg:rounded-[24px] group hover:border-rose-200 transition-all duration-300 border border-transparent">
                                  <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)] mt-2 flex-shrink-0" />
                                  <div>
                                     <p className="text-sm font-bold text-text-primary mb-0.5">{item.title}</p>
@@ -307,12 +307,12 @@ export default function SuperCampusCaseStudy() {
                   <GlowDivider />
 
                   {/* Product Goals */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Product Goals & Success Metrics</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Product Goals & Success Metrics</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                        <div className="bg-white rounded-[16px] lg:rounded-[24px] border border-slate-200 overflow-hidden">
                            <table className="w-full text-left">
                               <thead className="bg-slate-50 border-b border-slate-200">
                                  <tr>
@@ -341,14 +341,14 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 5. TARGET USERS / ROLES ───────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Access
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
                   <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mb-16">
@@ -402,7 +402,7 @@ export default function SuperCampusCaseStudy() {
                      })}
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8 mb-12">
+                  <div className="grid md:grid-cols-2 gap-4 lg:gap-8 mb-12">
                      {/* Primary Users */}
                      <div className="glass-card rounded-[16px] lg:rounded-[24px] p-8 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/30 transition-all duration-500 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#0D63CC]/8 blur-[60px] rounded-full pointer-events-none" />
@@ -460,18 +460,18 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 6. KEY FEATURES / PLATFORM MODULES ───────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Core Modules
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Core Platform Capabilities</h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Core Platform Capabilities</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A comprehensive suite of tools designed to digitize every aspect of school operations across all stakeholder roles.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 lg:gap-8">
                      {[
                         { num: "01", title: "Student Information Management", desc: "Centralizes academic, personal, and administrative student information.", color: "#0D63CC", icon: Users, image: "/images/supercampus/01-Attendance-Management-Feature-Thumnail.png" },
                         { num: "02", title: "Attendance Management", desc: "Automates attendance tracking and improves visibility for educators and parents.", color: "#00DA99", icon: CheckSquare, image: "/images/supercampus/02-Assessment-&-Grading-Feature-Thumnail.png" },
@@ -484,7 +484,7 @@ export default function SuperCampusCaseStudy() {
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden transition-all duration-500"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden transition-all duration-500"
                         >
                            <div
                               className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -501,7 +501,7 @@ export default function SuperCampusCaseStudy() {
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed relative z-10 mb-8">{feature.desc}</p>
-                           <div className="relative z-10 w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                           <div className="relative z-10 w-full aspect-[3/2] rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                               <Image
                                  src={feature.image}
                                  alt={feature.title}
@@ -515,21 +515,21 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 7. UX RESEARCH ────────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Research
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Research</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Research</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Conducted deep-dive research through stakeholder interviews, workflow analysis, and existing system audits.</p>
                   </div>
 
                   {/* Research Methods */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start mb-16">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Research Methods</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Research Methods</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="grid sm:grid-cols-3 gap-5">
@@ -538,8 +538,8 @@ export default function SuperCampusCaseStudy() {
                               { icon: Activity, title: "Workflow Analysis", desc: "Observed attendance, assessment, communication & activity tracking processes.", color: "#00DA99" },
                               { icon: Search, title: "System Audit", desc: "Reviewed existing school management platforms to identify usability gaps.", color: "#F59E0B" },
                            ].map((m, i) => (
-                              <div key={i} className="group relative rounded-2xl p-[1px] bg-gradient-to-br transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${m.color}20, transparent)` }}>
-                                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 h-full border border-slate-100 group-hover:bg-white/95 transition-all">
+                              <div key={i} className="group relative rounded-[16px] lg:rounded-[24px] p-[1px] bg-gradient-to-br transition-all duration-500 hover:-translate-y-1" style={{ background: `linear-gradient(135deg, ${m.color}20, transparent)` }}>
+                                 <div className="bg-white/80 backdrop-blur-sm rounded-[16px] lg:rounded-[24px] p-6 h-full border border-slate-100 group-hover:bg-white/95 transition-all">
                                     <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${m.color}15`, color: m.color }}>
                                        <m.icon size={20} strokeWidth={1.8} />
                                     </div>
@@ -553,9 +553,9 @@ export default function SuperCampusCaseStudy() {
                   </div>
 
                   {/* Key Findings */}
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Key Findings</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Key Findings</h3>
                      </div>
                      <div className="lg:col-span-9">
                         <div className="grid sm:grid-cols-2 gap-5">
@@ -565,7 +565,7 @@ export default function SuperCampusCaseStudy() {
                               { role: "Parents Need", items: ["Child progress visibility", "Attendance monitoring", "Instant notifications", "Direct communication"], color: "#F59E0B", icon: Users },
                               { role: "Students Need", items: ["Easy access to learning content", "Assignment management", "Assessment tracking", "School activity updates"], color: "#8B5CF6", icon: GraduationCap },
                            ].map((f, i) => (
-                              <div key={i} className="glass-card p-6 rounded-2xl border-2 border-slate-100 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group">
+                              <div key={i} className="glass-card p-4 md:p-6 rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group">
                                  <div className="absolute -top-10 -right-10 w-28 h-28 rounded-full blur-[40px] pointer-events-none opacity-15 transition-opacity duration-500 group-hover:opacity-30" style={{ backgroundColor: f.color }} />
                                  <div className="flex items-center gap-3 mb-4">
                                     <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${f.color}15`, color: f.color }}>
@@ -589,19 +589,19 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 8. USER PERSONAS ──────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Four key personas were developed to guide design decisions and ensure each stakeholder&apos;s needs were addressed throughout the platform.
                      </p>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                  <div className="grid lg:grid-cols-2 gap-4 lg:gap-4 lg:gap-12">
                      {[
                         {
                            name: "School Administrator",
@@ -647,7 +647,7 @@ export default function SuperCampusCaseStudy() {
                         <motion.div
                            key={idx}
                            {...fadeIn}
-                           className="glass-card rounded-[20px] p-6 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
+                           className="glass-card rounded-[20px] p-4 md:p-10 lg:p-12 group relative overflow-hidden flex flex-col border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-md transition-all duration-500"
                         >
                            <div
                               className="absolute -top-24 -right-24 w-80 h-80 blur-[100px] rounded-full transition-all duration-1000 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0"
@@ -675,7 +675,7 @@ export default function SuperCampusCaseStudy() {
                            </p>
 
                            <div className="space-y-4 relative z-10">
-                              <div className="p-5 rounded-2xl bg-primary/5 border border-primary/20">
+                              <div className="p-5 rounded-[16px] lg:rounded-[24px] bg-primary/5 border border-primary/20">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-3 flex items-center gap-2">
                                     <CheckCircle2 size={13} strokeWidth={3} /> Goals
                                  </h5>
@@ -688,7 +688,7 @@ export default function SuperCampusCaseStudy() {
                                  </div>
                               </div>
 
-                              <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100">
+                              <div className="p-5 rounded-[16px] lg:rounded-[24px] bg-rose-50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
                                     <Activity size={13} strokeWidth={3} /> Pain Points
                                  </h5>
@@ -701,7 +701,7 @@ export default function SuperCampusCaseStudy() {
                                  </div>
                               </div>
 
-                              <div className="p-5 rounded-2xl bg-[#00DA99]/10 border border-[#00DA99]/20">
+                              <div className="p-5 rounded-[16px] lg:rounded-[24px] bg-[#00DA99]/10 border border-[#00DA99]/20">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-[#00DA99] mb-3 flex items-center gap-2">
                                     <Award size={13} strokeWidth={3} /> Motivations
                                  </h5>
@@ -720,15 +720,15 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 9. DESIGN APPROACH & PROCESS ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-20 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Process
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
-                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <p className="text-sm lg:text-sm lg:text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
                         A systematic, user-centric approach to solving complex educational administration challenges through iterative refinement.
                      </p>
                   </div>
@@ -808,29 +808,29 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 10. INFORMATION ARCHITECTURE ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Architecture
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring a Complex Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Structuring a Complex Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">The information architecture was designed to support multiple user roles, academic workflows, and operational processes while maintaining simplicity and usability.</p>
                   </div>
                   <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8 mb-12">
                      <div className="flex flex-col items-center gap-2">
-                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                        <div className="w-48 h-32 rounded-[16px] lg:rounded-[24px] bg-secondary/5 flex items-center justify-center border border-secondary/10">
                            <span className="text-sm font-bold text-text-secondary">Sitemap</span>
                         </div>
                      </div>
                      <div className="flex flex-col items-center gap-2">
-                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                        <div className="w-48 h-32 rounded-[16px] lg:rounded-[24px] bg-secondary/5 flex items-center justify-center border border-secondary/10">
                            <span className="text-sm font-bold text-text-secondary">User Flow Diagrams</span>
                         </div>
                      </div>
                      <div className="flex flex-col items-center gap-2">
-                        <div className="w-48 h-32 rounded-2xl bg-secondary/5 flex items-center justify-center border border-secondary/10">
+                        <div className="w-48 h-32 rounded-[16px] lg:rounded-[24px] bg-secondary/5 flex items-center justify-center border border-secondary/10">
                            <span className="text-sm font-bold text-text-secondary">Navigation Hierarchy</span>
                         </div>
                      </div>
@@ -854,7 +854,7 @@ export default function SuperCampusCaseStudy() {
                            key={i}
                            {...fadeIn}
                            transition={{ delay: i * 0.05 }}
-                           className="glass-card p-5 rounded-2xl border-2 border-slate-100 hover:-translate-y-1 transition-all duration-400 group relative overflow-hidden"
+                           className="glass-card p-5 rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:-translate-y-1 transition-all duration-400 group relative overflow-hidden"
                         >
                            <div className="absolute -top-6 -right-6 w-16 h-16 rounded-full blur-[20px] opacity-20 pointer-events-none" style={{ backgroundColor: mod.color }} />
                            <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ backgroundColor: `${mod.color}15`, color: mod.color }}>
@@ -876,17 +876,17 @@ export default function SuperCampusCaseStudy() {
 
 
                {/* ── USER FLOWS (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">User Journeys</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">User Flows</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">User Flows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Core product workflows designed for efficiency and clarity across the platform.</p>
                   </div>
 
                   <div className="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all duration-300">
+                     <div className="p-4 lg:p-4 md:p-6 glass-card rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:border-[#0D63CC]/30 transition-all duration-300">
                         <h4 className="font-bold text-lg text-text-primary mb-4">Student Admission Flow</h4>
                         <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
                            <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg">Inquiry</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
@@ -896,7 +896,7 @@ export default function SuperCampusCaseStudy() {
                            <span className="px-3 py-1.5 bg-[#0D63CC]/10 text-[#0D63CC] rounded-lg mt-2 sm:mt-0">Class Assignment</span>
                         </div>
                      </div>
-                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#00DA99]/30 transition-all duration-300">
+                     <div className="p-4 lg:p-4 md:p-6 glass-card rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:border-[#00DA99]/30 transition-all duration-300">
                         <h4 className="font-bold text-lg text-text-primary mb-4">Attendance Flow</h4>
                         <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
                            <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg">Teacher Attendance</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
@@ -905,7 +905,7 @@ export default function SuperCampusCaseStudy() {
                            <span className="px-3 py-1.5 bg-[#00DA99]/10 text-[#00DA99] rounded-lg mt-2 sm:mt-0">Reports</span>
                         </div>
                      </div>
-                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#8B5CF6]/30 transition-all duration-300">
+                     <div className="p-4 lg:p-4 md:p-6 glass-card rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:border-[#8B5CF6]/30 transition-all duration-300">
                         <h4 className="font-bold text-lg text-text-primary mb-4">Assignment Flow</h4>
                         <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
                            <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg">Create Assignment</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
@@ -914,7 +914,7 @@ export default function SuperCampusCaseStudy() {
                            <span className="px-3 py-1.5 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-lg mt-2 sm:mt-0">Feedback</span>
                         </div>
                      </div>
-                     <div className="p-6 glass-card rounded-2xl border-2 border-slate-100 hover:border-[#F59E0B]/30 transition-all duration-300">
+                     <div className="p-4 lg:p-4 md:p-6 glass-card rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 hover:border-[#F59E0B]/30 transition-all duration-300">
                         <h4 className="font-bold text-lg text-text-primary mb-4">Parent Communication Flow</h4>
                         <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-text-secondary">
                            <span className="px-3 py-1.5 bg-[#F59E0B]/10 text-[#F59E0B] rounded-lg">Teacher/Admin</span> <ArrowRight className="w-4 h-4 opacity-50 flex-shrink-0" />
@@ -926,14 +926,14 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 11. ROLE-BASED EXPERIENCE DESIGN ─────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Experience Design
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Role-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience Design</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Role-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience Design</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Each role gets a tailored experience optimized for their specific workflow, context, and daily tasks.</p>
                   </div>
 
@@ -976,7 +976,7 @@ export default function SuperCampusCaseStudy() {
                            <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full blur-[60px] opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" style={{ backgroundColor: exp.color }} />
                            <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
                               <div className="flex items-center gap-4 flex-shrink-0">
-                                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${exp.color}15`, color: exp.color }}>
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] flex items-center justify-center" style={{ backgroundColor: `${exp.color}15`, color: exp.color }}>
                                     <exp.icon size={22} strokeWidth={1.8} />
                                  </div>
                                  <div>
@@ -998,12 +998,12 @@ export default function SuperCampusCaseStudy() {
 
 
                {/* ── CORE EXPERIENCE PRINCIPLES (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Principles</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Principles</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Principles</span></h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1013,7 +1013,7 @@ export default function SuperCampusCaseStudy() {
                         { title: "Consistency", desc: "Maintain predictable interactions across modules.", color: "#8B5CF6", icon: CheckSquare },
                         { title: "Scalability", desc: "Support institutional growth and future expansion.", color: "#F59E0B", icon: Target }
                      ].map((p, i) => (
-                        <div key={i} className="glass-card p-8 rounded-3xl border-2 border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                        <div key={i} className="glass-card p-4 md:p-8 rounded-[16px] lg:rounded-[24px] border-2 border-slate-100 group hover:-translate-y-2 transition-all duration-300">
                            <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: `${p.color}15`, color: p.color }}>
                               <p.icon size={24} />
                            </div>
@@ -1025,14 +1025,14 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 12. DESIGN SYSTEM ────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Building a Scalable EdTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Building a Scalable EdTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
                      </p>
@@ -1062,7 +1062,7 @@ export default function SuperCampusCaseStudy() {
                         ].map((item, i) => (
                            <div key={i} className="aspect-square sm:aspect-[4/5] md:aspect-square glass-card rounded-[16px] lg:rounded-[24px] p-4 flex flex-col items-center justify-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border-2 border-slate-100 hover:border-transparent">
                               <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500" style={{ background: `linear-gradient(135deg, ${item.color}, transparent)` }} />
-                              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-sm bg-white border border-slate-100" style={{ color: item.color }}>
+                              <div className="w-14 h-14 rounded-[16px] lg:rounded-[24px] flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-sm bg-white border border-slate-100" style={{ color: item.color }}>
                                  <item.icon size={28} strokeWidth={1.5} />
                               </div>
                               <span className="font-bold text-[13px] leading-tight text-text-primary group-hover:text-transparent group-hover:bg-clip-text transition-colors duration-300" style={{ backgroundImage: `linear-gradient(to right, ${item.color}, ${item.color})` }}>
@@ -1091,7 +1091,7 @@ export default function SuperCampusCaseStudy() {
                               { bg: 'bg-rose-500', label: 'Error', hex: '#F43F5E' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div className={`w-full aspect-square rounded-[16px] lg:rounded-[24px] ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
                                  <div>
                                     <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
                                     <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
@@ -1143,7 +1143,7 @@ export default function SuperCampusCaseStudy() {
                               { icon: MessageCircle, color: "text-rose-500" },
                               { icon: Shield, color: "text-[#0D63CC]" }
                            ].map((Item, i) => (
-                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                              <div key={i} className="aspect-square rounded-[16px] lg:rounded-[24px] bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
                                  <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
                               </div>
                            ))}
@@ -1151,7 +1151,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Wireframing Strategy */}
-                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-6 lg:p-10 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden">
+                     <div className="lg:col-span-12 glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#00DA99]/40 shadow-xl transition-all duration-500 relative overflow-hidden">
                         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTMsOTksMjA0LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
                         <h4 className="font-bold text-xl text-text-primary mb-8 relative z-10">Wireframing Strategy</h4>
                         <div className="grid sm:grid-cols-3 gap-6 relative z-10">
@@ -1160,7 +1160,7 @@ export default function SuperCampusCaseStudy() {
                               { stage: "Mid-Fidelity", desc: "Information hierarchy and component placement", color: "#00DA99", progress: 66 },
                               { stage: "High-Fidelity", desc: "Final UI with full visual design system", color: "#8B5CF6", progress: 100 },
                            ].map((w, i) => (
-                              <div key={i} className="bg-white/70 rounded-2xl p-6 border border-slate-200 hover:-translate-y-1 transition-transform duration-500">
+                              <div key={i} className="bg-white/70 rounded-[16px] lg:rounded-[24px] p-6 border border-slate-200 hover:-translate-y-1 transition-transform duration-500">
                                  <div className="flex items-center gap-3 mb-4">
                                     <div className="w-8 h-8 rounded-xl flex items-center justify-center text-white text-xs font-black" style={{ backgroundColor: w.color }}>
                                        {i + 1}
@@ -1180,15 +1180,15 @@ export default function SuperCampusCaseStudy() {
 
 
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Evolution</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
-                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-8 md:gap-16 max-w-5xl mx-auto">
                      {/* Decorative dashed connecting line */}
                      <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
                      <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
@@ -1199,7 +1199,7 @@ export default function SuperCampusCaseStudy() {
                         { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
                      ].map((step, i) => (
                         <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
-                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                           <div className={`w-16 h-16 rounded-[16px] lg:rounded-[24px] ${step.bg} flex items-center justify-center mb-4`}>
                               <step.icon className={`w-8 h-8 ${step.color}`} />
                            </div>
                            <span className="font-bold text-slate-800 text-lg">{step.label}</span>
@@ -1209,14 +1209,14 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 13. EMPATHY MAP ───────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing school stakeholder attitudes and behaviors to align design decisions with real user experiences.</p>
                   </div>
 
@@ -1230,20 +1230,20 @@ export default function SuperCampusCaseStudy() {
                         </svg>
                      </div>
 
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
+                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-12 items-center">
                         {/* THINKS */}
                         <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#0D63CC]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#0D63CC]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#0D63CC]/30 group-hover/card:border-[#0D63CC] transition-colors duration-500">
                                     <Brain className="w-6 h-6 text-[#0D63CC]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#0D63CC]">think</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[`"Why do I need three apps to do one teacher's job?"`, `"I hope my child's attendance is being tracked properly."`, `"There must be a better way to manage all this paperwork."`, `"Are my students actually understanding the material?"`].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-[16px] lg:rounded-[24px] transition-colors">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0D63CC] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -1257,14 +1257,14 @@ export default function SuperCampusCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
                                     <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {[`"Nobody tells me when my child misses class."`, `"Marking attendance on paper every day is exhausting."`, `"I don't know what assignments my child is missing."`, `"We need one system for everything."`].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-[16px] lg:rounded-[24px] transition-colors">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#F59E0B] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -1288,14 +1288,14 @@ export default function SuperCampusCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
                                     <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {["Overwhelmed by administrative tasks and manual processes", "Anxious about missing important updates and notifications", "Frustrated by disconnected tools and fragmented workflows", "Motivated to improve but unsure where to start"].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-[16px] lg:rounded-[24px] transition-colors">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-rose-500 opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -1309,14 +1309,14 @@ export default function SuperCampusCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#00DA99]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#00DA99]/30 group-hover/card:border-[#00DA99] transition-colors duration-500">
                                     <Activity className="w-6 h-6 text-[#00DA99]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#00DA99]">do</span>?</h3>
                               </div>
                               <ul className="text-left space-y-1 w-full max-w-sm relative z-20">
                                  {["Uses paper registers and spreadsheets for attendance", "Manually writes and distributes assignments to students", "Calls parents individually for updates and follow-ups", "Juggles multiple apps with no central source of truth"].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 group/li rounded-2xl transition-colors">
+                                    <li key={i} className="flex items-start gap-3 group/li rounded-[16px] lg:rounded-[24px] transition-colors">
                                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00DA99] opacity-50 group-hover/li:scale-[2] transition-transform duration-300 flex-shrink-0" />
                                        <span className="text-[12px] font-medium text-text-secondary group-hover/li:text-text-primary transition-colors leading-relaxed">{item}</span>
                                     </li>
@@ -1329,14 +1329,14 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 14. SWOT ANALYSIS ────────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-12 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Strategic Analysis
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating SuperSchool&apos;s competitive stance to ensure viability and identify growth opportunities.</p>
                   </div>
 
@@ -1351,7 +1351,7 @@ export default function SuperCampusCaseStudy() {
                            <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
                               <div className="flex flex-col gap-4 mb-6 relative z-20">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>{box.icon}</div>
+                                 <div className={`w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center border-2 ${box.borderColor} group-hover:border-opacity-100 transition-colors duration-500`}>{box.icon}</div>
                                  <h5 className={`font-semibold text-[20px] ${box.color}`}>{box.title}</h5>
                               </div>
                               <ul className="space-y-2 flex-1 relative z-20">
@@ -1369,21 +1369,21 @@ export default function SuperCampusCaseStudy() {
                </section>
 
                {/* ── 15. VISUAL OVERVIEW ───────────────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Cross-Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience</span></h2>
+                     <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">Cross-Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Responsive experiences were designed to ensure seamless access across desktop and mobile devices for all stakeholders.</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                      <div className="lg:col-span-2">
                         {/* <PremiumPlaceholder aspect="aspect-[4/3]" label="Super Admin Dashboard" glowCls="bg-[#0D63CC]" icon={Monitor} /> */}
-                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                            <Image
                               src="/images/supercampus/SuperAdminDashboard-Thumnail.png"
                               alt="Super Admin Dashboard"
@@ -1392,7 +1392,7 @@ export default function SuperCampusCaseStudy() {
                            />
                         </div>
                      </div>
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                         <Image
                            src="/images/supercampus/TeacherApp-Thumnail.png"
                            alt="Teacher App"
@@ -1401,7 +1401,7 @@ export default function SuperCampusCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Teacher App" glowCls="bg-[#00DA99]" icon={BookOpenCheck} /> */}
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                         {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Parent App" glowCls="bg-[#F59E0B]" icon={Users} /> */}
                         <Image
                            src="/images/supercampus/ParentApp-Thumnail.png"
@@ -1411,7 +1411,7 @@ export default function SuperCampusCaseStudy() {
                         />
                      </div>
 
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                         {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
                         <Image
                            src="/images/supercampus/StudentApp-Thumnail.png"
@@ -1421,7 +1421,7 @@ export default function SuperCampusCaseStudy() {
                         />
                      </div>
                      {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="CRM Portal" glowCls="bg-[#0D63CC]" icon={Handshake} /> */}
-                     <div className="relative aspect-[3/4] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                     <div className="relative aspect-[3/4] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                         {/* <PremiumPlaceholder aspect="aspect-[3/4]" label="Student App" glowCls="bg-[#8B5CF6]" icon={GraduationCap} /> */}
                         <Image
                            src="/images/supercampus/CRMPortalApp-Thumnail.png"
@@ -1431,7 +1431,7 @@ export default function SuperCampusCaseStudy() {
                         />
                      </div>
                      <div className="lg:col-span-2">
-                        <div className="relative aspect-[4/3] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
+                        <div className="relative aspect-[4/3] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500">
                            <Image
                               src="/images/supercampus/Analytics-&-Reports-Thumnail.png"
                               alt="Analytics & Reports"
@@ -1448,7 +1448,7 @@ export default function SuperCampusCaseStudy() {
                <section className="relative mb-20 overflow-hidden">
                   <motion.div
                      {...fadeIn}
-                     className="glass-card rounded-[16px] lg:rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
+                     className="glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#0D63CC]/20 hover:border-[#00DA99]/40"
                   >
                      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#0D63CC]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
                      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#00DA99]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
@@ -1460,12 +1460,12 @@ export default function SuperCampusCaseStudy() {
                                  Epilogue
                               </span>
                            </div>
-                           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
+                           <h2 className="text-xl md:text-4xl font-bold text-text-primary mb-4">
                               Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">School Operations</span> Digitally.
                            </h2>
                         </div>
 
-                        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+                        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 mb-20">
                            {[
                               {
                                  title: "Business Impact",
@@ -1516,7 +1516,7 @@ export default function SuperCampusCaseStudy() {
                                  <div className="w-8 h-8 bg-gradient-to-br from-[#0D63CC] to-[#00DA99] rounded flex-shrink-0" />
                                  Conclusion
                               </h4>
-                              <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
+                              <p className="text-sm md:text-sm lg:text-sm lg:text-base text-text-secondary font-medium leading-relaxed relative z-10">
                                  SuperCampus successfully transformed traditional school operations into a unified digital ecosystem by combining administration, communication, academic tracking, CRM management, and mobile engagement into a single platform. The solution provides a scalable foundation for educational institutions while improving efficiency for administrators, productivity for teachers, visibility for parents, and engagement for students.
                               </p>
                            </div>
@@ -1528,10 +1528,10 @@ export default function SuperCampusCaseStudy() {
 
 
                {/* ── FINAL REFLECTION & ROADMAP (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
+               <section className="mb-8 md:mb-16 lg:mb-20">
+                  <div className="grid md:grid-cols-2 gap-4 lg:gap-8 max-w-7xl mx-auto px-4">
                      {/* Key Learnings */}
-                     <div className="glass-card rounded-[16px] lg:rounded-[24px] p-8 lg:p-12 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 transition-all duration-500 group relative overflow-hidden">
+                     <div className="glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-8 border-2 border-[#0D63CC]/10 hover:border-[#0D63CC]/40 transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#0D63CC]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
                            Key Learnings
@@ -1542,7 +1542,7 @@ export default function SuperCampusCaseStudy() {
                      </div>
 
                      {/* Future Roadmap */}
-                     <div className="glass-card rounded-[16px] lg:rounded-[24px] p-8 lg:p-12 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 transition-all duration-500 group relative overflow-hidden">
+                     <div className="glass-card rounded-[16px] lg:rounded-[24px] p-4 lg:p-8 border-2 border-[#00DA99]/10 hover:border-[#00DA99]/40 transition-all duration-500 group relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00DA99]/10 blur-[50px] rounded-full pointer-events-none" />
                         <h4 className="font-bold text-2xl text-text-primary mb-6 flex items-center gap-3">
                            Future Roadmap
@@ -1572,7 +1572,7 @@ export default function SuperCampusCaseStudy() {
 
                   <div className="grid gap-6">
                      <div className="lg:col-span-12">
-                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
                               src="/images/supercampus/SuperCampus-Showercase.png"
                               alt="SuperCampus Showercase"
@@ -1595,10 +1595,10 @@ export default function SuperCampusCaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                           <h2 className="text-xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
                               Building the Next Generation of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">EdTech Products?</span>
                            </h2>
-                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                           <p className="text-base md:text-sm lg:text-sm lg:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               I help startups and organizations design scalable educational platforms, SaaS products, and multi-role digital ecosystems.
                            </p>
 
@@ -1624,7 +1624,7 @@ export default function SuperCampusCaseStudy() {
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/carenova" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                     <h3 className="text-2xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         Carenova
                      </h3>
                      <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">

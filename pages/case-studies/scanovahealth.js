@@ -33,7 +33,7 @@ export default function ScanovaHealthCaseStudy() {
 
    // Premium Glass Placeholder Component
    const PremiumPlaceholder = ({ icon: Icon, label, glowCls = "bg-[#06B6D4]", textCls = "text-[#06B6D4]", aspect = "aspect-[16/9]" }) => (
-      <div className={`w-full ${aspect} glass-card rounded-3xl flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-lg`}>
+      <div className={`w-full ${aspect} glass-card rounded-[16px] lg:rounded-[24px] flex flex-col items-center justify-center overflow-hidden relative group transition-all duration-500 border-2 border-[#06B6D4]/10 hover:border-[#06B6D4]/40 shadow-lg`}>
          <div
             className="absolute -top-24 -right-24 w-64 h-64 blur-[60px] rounded-full transition-all duration-700 group-hover:scale-[1.5] group-hover:opacity-20 opacity-10 pointer-events-none z-0"
             style={{ backgroundColor: glowCls.replace('bg-[', '').replace(']', '') }}
@@ -74,7 +74,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <motion.h1
                      initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                     className="text-[24px] sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
+                     className="text-[24px] sm:text-2xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6"
                   >
                      Case
                      <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent ml-2">Studies</span>
@@ -94,7 +94,7 @@ export default function ScanovaHealthCaseStudy() {
             <div className="w-full max-w-7xl mx-auto px-4 pt-10 lg:pt-14 md:px-6">
 
                {/* ── HERO SECTION ───────────────────── */}
-               <section className="mb-12 md:mb-16 grid lg:grid-cols-12 gap-8 md:gap-12 items-start">
+               <section className="mb-8 md:mb-16 grid lg:grid-cols-12 gap-4 md:gap-12 items-start">
                   <div className="lg:col-span-8">
                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -105,13 +105,13 @@ export default function ScanovaHealthCaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         ScanovaHealth
                      </motion.h1>
-                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
+                     <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-base md:text-2xl font-semibold mb-4 max-w-3xl">
                         AI-Assisted <span className="bg-gradient-to-r from-[#00DA99] to-[#0D63CC] bg-clip-text text-transparent">Medical Device Validation &amp; MRI Readiness Platform</span>
                      </motion.h2>
-                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
+                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-sm lg:text-sm lg:text-lg text-text-secondary max-w-3xl leading-relaxed font-normal">
                         Transforming how patients, caregivers, and healthcare professionals access, validate, and manage implant device information for MRI preparation.
                      </motion.p>
                   </div>
@@ -160,16 +160,16 @@ export default function ScanovaHealthCaseStudy() {
                </motion.section>
 
                {/* ── OVERVIEW / PROBLEM / SOLUTION ───────────────────── */}
-               <section className="mb-10 md:mb-16 space-y-10 md:space-y-16">
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+               <section className="mb-10 md:mb-16 space-y-8 md:space-y-16">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Overview</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            ScanovaHealth is a healthcare-focused mobile platform that helps users digitally organize, validate, and access critical information related to implanted medical devices — including pacemakers, ICDs, neurostimulators, implantable cardiac monitors, and other MRI-relevant devices.
                         </p>
-                        <p className="text-base text-text-secondary leading-relaxed font-medium mb-6">
+                        <p className="text-sm lg:text-sm lg:text-base text-text-secondary leading-relaxed font-medium mb-6">
                            Traditionally, patients depend on physical implant cards, paperwork, hospital records, and manufacturer documentation when preparing for MRI procedures. Missing or outdated information can create uncertainty, administrative delays, and unnecessary stress.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-3">
@@ -193,12 +193,12 @@ export default function ScanovaHealthCaseStudy() {
 
                   <GlowDivider />
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Problem Statement</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Problem Statement</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-8">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-8">
                            Patients with implanted medical devices frequently encounter difficulties when attempting to retrieve device information, verify MRI-related references, maintain organized records, and share documentation with providers. The existing ecosystem relies heavily on physical cards, paper records, manufacturer brochures, and manual record-keeping — creating significant friction during critical healthcare interactions.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-4">
@@ -210,7 +210,7 @@ export default function ScanovaHealthCaseStudy() {
                               "Locate MRI facilities efficiently",
                               "Prepare documentation before appointments"
                            ].map((item, idx) => (
-                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-2xl">
+                              <div key={idx} className="flex items-center gap-3 p-4 glass-card rounded-[16px] lg:rounded-[24px]">
                                  <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.5)] flex-shrink-0" />
                                  <span className="text-sm font-bold text-text-primary">{item}</span>
                               </div>
@@ -221,15 +221,15 @@ export default function ScanovaHealthCaseStudy() {
 
                   <GlowDivider />
 
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <div className="grid lg:grid-cols-12 gap-4 lg:gap-16 items-start">
                      <div className="lg:col-span-3">
-                        <h3 className="text-xl font-bold text-text-primary uppercase tracking-wider">Product Vision</h3>
+                        <h3 className="text-base lg:text-xl font-bold text-text-primary uppercase tracking-wider">Product Vision</h3>
                      </div>
                      <div className="lg:col-span-9">
-                        <p className="text-lg text-text-secondary leading-relaxed font-medium mb-6">
+                        <p className="text-sm lg:text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-6">
                            Empower every patient with instant access to organized implant device information, helping them prepare confidently for MRI-related healthcare journeys.
                         </p>
-                        <p className="text-base text-text-secondary leading-relaxed font-medium">
+                        <p className="text-sm lg:text-sm lg:text-base text-text-secondary leading-relaxed font-medium">
                            ScanovaHealth positions itself as a bridge between patients, device information, and MRI preparedness — acting as a trusted personal medical-device companion while clearly communicating that final MRI eligibility decisions remain with healthcare providers and device manufacturers.
                         </p>
                      </div>
@@ -302,7 +302,7 @@ export default function ScanovaHealthCaseStudy() {
                         { num: "05", title: "Digital Demand", desc: "Many users want a single digital record.", impact: "Opportunity for centralized management.", color: "#10B981" },
                      ].map((f, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: f.color }} />
                            <div className="flex items-center gap-3 mb-6 relative z-10">
@@ -327,7 +327,7 @@ export default function ScanovaHealthCaseStudy() {
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Three key user groups identified through stakeholder interviews, guiding design decisions and feature prioritization.</p>
                   </div>
-                  <div className="grid lg:grid-cols-3 gap-8">
+                  <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
                      {[
                         {
                            name: "Michael Thompson", role: "Retired Cardiac Patient", age: "Age 67 · Retired Engineer",
@@ -374,7 +374,7 @@ export default function ScanovaHealthCaseStudy() {
                            </div>
 
                            <div className="space-y-4 relative z-10">
-                              <div className="p-5 rounded-3xl bg-[#06B6D4]/5 border border-[#06B6D4]/20">
+                              <div className="p-5 rounded-[16px] lg:rounded-[24px] bg-[#06B6D4]/5 border border-[#06B6D4]/20">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] mb-3 flex items-center gap-2" style={{ color: persona.color }}>
                                     <CheckCircle2 size={14} strokeWidth={3} /> Goals
                                  </h5>
@@ -384,7 +384,7 @@ export default function ScanovaHealthCaseStudy() {
                                     ))}
                                  </div>
                               </div>
-                              <div className="p-5 rounded-3xl bg-rose-50 border border-rose-100">
+                              <div className="p-5 rounded-[16px] lg:rounded-[24px] bg-rose-50 border border-rose-100">
                                  <h5 className="font-black text-[10px] uppercase tracking-[0.2em] text-rose-500 mb-3 flex items-center gap-2">
                                     <Activity size={14} strokeWidth={3} /> Pain Points
                                  </h5>
@@ -421,14 +421,14 @@ export default function ScanovaHealthCaseStudy() {
                         </svg>
                      </div>
 
-                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-8 md:gap-12 items-center">
+                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-12 items-center">
 
                         {/* THINKS */}
                         <div className="md:col-start-2 md:row-start-1 relative z-10 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-[2px] bg-gradient-to-br from-[#06B6D4]/30 via-white/10 to-transparent shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden group/card">
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#06B6D4]/15" />
                               <div className="flex flex-col items-center gap-4 mb-4 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#06B6D4]/30 group-hover/card:border-[#06B6D4] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#06B6D4]/30 group-hover/card:border-[#06B6D4] transition-colors duration-500">
                                     <Brain className="w-6 h-6 text-[#06B6D4]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#06B6D4]">think</span>?</h3>
@@ -446,7 +446,7 @@ export default function ScanovaHealthCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-start text-center md:text-left relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#F59E0B]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#F59E0B]/30 group-hover/card:border-[#F59E0B] transition-colors duration-500">
                                     <MessageCircle className="w-6 h-6 text-[#F59E0B]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#F59E0B]">say</span>?</h3>
@@ -474,7 +474,7 @@ export default function ScanovaHealthCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-5 md:p-8 flex flex-col items-center md:items-end text-center md:text-right relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute top-[-20%] right-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-rose-500/15" />
                               <div className="flex flex-col items-center md:items-end gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-rose-500/30 group-hover/card:border-rose-500 transition-colors duration-500">
                                     <Heart className="w-6 h-6 text-rose-500" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-rose-500">feel</span>?</h3>
@@ -492,7 +492,7 @@ export default function ScanovaHealthCaseStudy() {
                            <div className="bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-3xl w-full h-full rounded-[22px] p-5 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none bg-[#06B6D4]/15" />
                               <div className="flex flex-col items-center gap-4 mb-6 relative z-20">
-                                 <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm border-2 border-[#06B6D4]/30 group-hover/card:border-[#06B6D4] transition-colors duration-500">
+                                 <div className="w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center shadow-sm border-2 border-[#06B6D4]/30 group-hover/card:border-[#06B6D4] transition-colors duration-500">
                                     <Activity className="w-6 h-6 text-[#06B6D4]" strokeWidth={2} />
                                  </div>
                                  <h3 className="text-[20px] font-bold text-text-primary tracking-wide">What do they <span className="text-[#06B6D4]">do</span>?</h3>
@@ -554,7 +554,7 @@ export default function ScanovaHealthCaseStudy() {
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Key functionalities designed to simplify implant device management and MRI readiness.</p>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 lg:gap-8">
                      {[
                         { num: "01", title: "Device Card Scanning", desc: "Capture implant information quickly — reduced manual entry, faster onboarding, improved accuracy.", color: "#06B6D4", icon: Scan, img: "/images/scanova/DeviceCardScanning.png" },
                         { num: "02", title: "Manual Device Entry", desc: "Alternative workflow capturing manufacturer, model, serial number, implant date, category, and notes.", color: "#0EA5E9", icon: PenTool, img: "/images/scanova/ManualDeviceEntry.png" },
@@ -564,7 +564,7 @@ export default function ScanovaHealthCaseStudy() {
                         { num: "06", title: "MRI Center Finder", desc: "Map view with distance calculations, contact information, and directions to nearby MRI facilities.", color: "#06B6D4", icon: MapPin, img: "/images/scanova/MRICenterFinder.png" },
                      ].map((feature, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: feature.color }} />
                            <div className="flex items-center justify-between mb-8 relative z-10">
@@ -573,7 +573,7 @@ export default function ScanovaHealthCaseStudy() {
                            </div>
                            <h4 className="font-bold text-xl text-text-primary mb-3 relative z-10">{feature.title}</h4>
                            <p className="text-sm text-text-secondary font-medium leading-relaxed mb-8 relative z-10">{feature.desc}</p>
-                           <div className="relative z-10 w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
+                           <div className="relative z-10 w-full aspect-[4/3] rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm group-hover:shadow-lg transition-all duration-500 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
                               <Image
                                  src={feature.img}
                                  alt={feature.title}
@@ -601,7 +601,7 @@ export default function ScanovaHealthCaseStudy() {
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Process</span>
                      </div>
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Process</span></h2>
-                     <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">A systematic approach to solving complex healthcare information challenges through user-centric design.</p>
+                     <p className="text-sm lg:text-sm lg:text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">A systematic approach to solving complex healthcare information challenges through user-centric design.</p>
                   </div>
 
                   <div className="relative max-w-6xl mx-auto px-4">
@@ -684,7 +684,7 @@ export default function ScanovaHealthCaseStudy() {
                         { challenge: "Medical records require trust and transparency.", solution: "Transparent data handling and clear source attribution throughout.", color: "#10B981" },
                      ].map((item, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1 }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: item.color }} />
                            <div className="mb-5 relative z-10">
@@ -762,7 +762,7 @@ export default function ScanovaHealthCaseStudy() {
                               { bg: 'bg-slate-800', label: 'Dark', hex: '#1E293B' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
-                                 <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
+                                 <div className={`w-full aspect-square rounded-[16px] lg:rounded-[24px] ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
                                  <div>
                                     <span className="block text-[10px] font-bold text-text-primary uppercase tracking-wider">{color.label}</span>
                                     <span className="block text-[9px] text-text-secondary font-medium uppercase opacity-50">{color.hex}</span>
@@ -810,7 +810,7 @@ export default function ScanovaHealthCaseStudy() {
                               { icon: Search, color: "text-[#0EA5E9]" },
                               { icon: Settings, color: "text-rose-500" }
                            ].map((Item, i) => (
-                              <div key={i} className="aspect-square rounded-2xl bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+                              <div key={i} className="aspect-square rounded-[16px] lg:rounded-[24px] bg-white/50 border border-slate-200 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
                                  <Item.icon size={24} strokeWidth={1.5} className={`${Item.color} opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all`} />
                               </div>
                            ))}
@@ -882,7 +882,7 @@ export default function ScanovaHealthCaseStudy() {
                            <div className={`bg-gradient-to-b ${box.gradientFill} backdrop-blur-2xl w-full h-full rounded-[22px] p-6 md:p-8 relative z-10 flex flex-col min-h-[300px] overflow-hidden`}>
                               <motion.div animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.3, 0.15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }} className={`absolute top-[-20%] left-[-20%] w-64 h-64 blur-[60px] rounded-full z-0 pointer-events-none ${box.innerGlow}`} />
                               <div className="flex flex-col gap-4 mb-6 relative z-20">
-                                 <div className={`w-12 h-12 rounded-2xl bg-white flex items-center justify-center border-2 ${box.borderColor}`}>{box.icon}</div>
+                                 <div className={`w-12 h-12 rounded-[16px] lg:rounded-[24px] bg-white flex items-center justify-center border-2 ${box.borderColor}`}>{box.icon}</div>
                                  <h5 className={`font-semibold text-[20px] ${box.color}`}>{box.title}</h5>
                               </div>
                               <ul className="space-y-2 flex-1 relative z-20">
@@ -900,7 +900,7 @@ export default function ScanovaHealthCaseStudy() {
                </section>
 
                {/* ── WIREFRAMES (NEW) ─────────────────────────────────────────── */}
-               <section className="mb-16 md:mb-24 lg:mb-32">
+               <section className="mb-8 md:mb-16 lg:mb-20">
                   <div className="mb-16 text-center">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Evolution</span>
@@ -908,7 +908,7 @@ export default function ScanovaHealthCaseStudy() {
                      <h2 className="text-4xl font-bold tracking-tight text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
-                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+                  <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-8 md:gap-16 max-w-5xl mx-auto">
                      {/* Decorative dashed connecting line */}
                      <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-slate-300 z-0" />
                      <div className="md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] border-l-2 border-dashed border-slate-300 z-0 -translate-x-1/2" />
@@ -919,7 +919,7 @@ export default function ScanovaHealthCaseStudy() {
                         { label: "Final UI", icon: Sparkles, color: "text-[#00DA99]", bg: "bg-emerald-50", offset: "md:-translate-y-8" }
                      ].map((step, i) => (
                         <div key={i} className={`relative z-10 w-48 h-48 md:w-56 md:h-56 rounded-full glass-card border-4 border-white shadow-[0_20px_50px_rgb(0,0,0,0.08)] flex flex-col items-center justify-center transition-all hover:scale-105 duration-500 bg-white/90 backdrop-blur-xl ${step.offset}`}>
-                           <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-4`}>
+                           <div className={`w-16 h-16 rounded-[16px] lg:rounded-[24px] ${step.bg} flex items-center justify-center mb-4`}>
                               <step.icon className={`w-8 h-8 ${step.color}`} />
                            </div>
                            <span className="font-bold text-slate-800 text-lg">{step.label}</span>
@@ -928,7 +928,7 @@ export default function ScanovaHealthCaseStudy() {
                   </div>
                </section>
 
-               <div className="mb-12 md:mb-16 lg:mb-20">
+               <div className="mb-8 md:mb-16 lg:mb-20">
                   <GlowDivider />
                </div>
 
@@ -1020,7 +1020,7 @@ export default function ScanovaHealthCaseStudy() {
                         { value: "95%", label: "Reduction in Compliance Errors", color: "#F43F5E", icon: Shield },
                      ].map((metric, i) => (
                         <motion.div key={i} {...fadeIn} transition={{ delay: i * 0.1, duration: 0.8 }}
-                           className="glass-card p-6 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
+                           className="glass-card p-6 md:p-4 md:p-8 rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] group hover:-translate-y-2 relative overflow-hidden border border-slate-200/60 hover:border-[#06B6D4]/40 transition-all duration-500"
                         >
                            <div className="absolute -top-16 -right-16 w-40 h-40 blur-[50px] rounded-full transition-all duration-700 group-hover:scale-150 group-hover:opacity-20 opacity-10 pointer-events-none z-0" style={{ backgroundColor: metric.color }} />
                            <div className="flex items-center justify-between mb-6 relative z-10">
@@ -1040,7 +1040,7 @@ export default function ScanovaHealthCaseStudy() {
                {/* ── OUTCOMES & CONCLUSION ───────────────────── */}
                <section className="relative mb-10 md:mb-16 overflow-hidden">
                   <motion.div {...fadeIn}
-                     className="glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-6 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#06B6D4]/20 hover:border-[#06B6D4]/40"
+                     className="glass-card rounded-[16px] lg:rounded-[16px] lg:rounded-[24px] p-4 md:p-10 lg:p-14 relative overflow-hidden group shadow-3xl border-2 border-[#06B6D4]/20 hover:border-[#06B6D4]/40"
                   >
                      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#06B6D4]/10 blur-[150px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
                      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0EA5E9]/5 blur-[120px] rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-[2000ms]" />
@@ -1055,7 +1055,7 @@ export default function ScanovaHealthCaseStudy() {
                            </h2>
                         </div>
 
-                        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+                        <div className="grid lg:grid-cols-3 gap-4 lg:gap-8 mb-20">
                            {[
                               {
                                  title: "Product Impact",
@@ -1107,7 +1107,7 @@ export default function ScanovaHealthCaseStudy() {
                                  <div className="w-8 h-8 bg-[#06B6D4] rounded flex-shrink-0" />
                                  Conclusion
                               </h4>
-                              <p className="text-sm md:text-base text-text-secondary font-medium leading-relaxed relative z-10">
+                              <p className="text-sm md:text-sm lg:text-sm lg:text-base text-text-secondary font-medium leading-relaxed relative z-10">
                                  ScanovaHealth transforms how patients manage implant device information — replacing fragmented paper-based workflows with a unified, AI-assisted mobile platform. By combining device scanning, intelligent validation, and MRI center discovery, the platform empowers patients and caregivers to prepare confidently for MRI-related healthcare journeys while maintaining complete transparency about the boundaries of informational support.
                               </p>
                            </div>
@@ -1130,7 +1130,7 @@ export default function ScanovaHealthCaseStudy() {
 
                   <div className="grid gap-6">
                      <div className="lg:col-span-12">
-                        <div className="relative aspect-[21/9] z-10 w-full rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
+                        <div className="relative aspect-[21/9] z-10 w-full rounded-[16px] lg:rounded-[24px] overflow-hidden border border-slate-200/50 shadow-sm hover:shadow-lg transition-all duration-500">
                            <Image
                               src="/images/scanova/ScanNovaAppScreens.png"
                               alt="Visual UI"
@@ -1153,10 +1153,10 @@ export default function ScanovaHealthCaseStudy() {
                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-[20px] bg-gradient-to-br from-[#0D63CC] to-[#00DA99] shadow-md text-white mb-6 group-hover:scale-110 transition-transform duration-500">
                               <Sparkles size={28} className="animate-pulse" />
                            </div>
-                           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
+                           <h2 className="text-xl md:text-4xl font-bold tracking-tight text-text-primary mb-4 drop-shadow-sm">
                               Explore the Full Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">on Figma</span>
                            </h2>
-                           <p className="text-base md:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                           <p className="text-base md:text-sm lg:text-sm lg:text-lg text-text-secondary mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                               Dive deeper into the complete design system, enterprise workflows, interaction patterns, and component library behind Carenova Systems.
                            </p>
 
@@ -1182,7 +1182,7 @@ export default function ScanovaHealthCaseStudy() {
                <section className="mt-6 md:mt-6 pt-6 md:pt-6 flex flex-col items-center justify-center text-center">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary mb-4">Next Project</span>
                   <Link href="/case-studies/oasispad" className="group flex flex-col items-center">
-                     <h3 className="text-4xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
+                     <h3 className="text-2xl md:text-5xl font-black text-text-primary group-hover:text-[#8B5CF6] transition-colors duration-300 mb-6">
                         OasisPad
                      </h3>
                      <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#8B5CF6] group-hover:border-[#8B5CF6] transition-all duration-300">

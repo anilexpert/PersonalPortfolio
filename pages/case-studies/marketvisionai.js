@@ -100,7 +100,7 @@ export default function MarketVisionAICaseStudy() {
                            Case Study
                         </span>
                      </motion.div>
-                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-3xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
+                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-6xl font-bold tracking-tighter mb-4 leading-[0.9] text-text-primary">
                         MarketVisionAI
                      </motion.h1>
                      <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl font-semibold mb-4 max-w-3xl">
@@ -295,7 +295,7 @@ export default function MarketVisionAICaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Research & Discovery <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h2>
+                     <h2 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary mb-4">Research & Discovery <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Insights</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl">We conducted extensive discovery activities with over 50 participants across agency owners, marketing managers, specialists, and clients.</p>
                   </div>
 
@@ -460,7 +460,7 @@ export default function MarketVisionAICaseStudy() {
                {/* PRODUCT VISION & STRATEGY */}
                <section className="mb-8 md:mb-16 text-center max-w-5xl mx-auto px-4">
                   <div className="mb-6 lg:mb-12">
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight mb-4">
+                     <h2 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight mb-4">
                         Empower every agency with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] via-[#0D63CC] to-[#8B5CF6]">enterprise-grade</span> AI marketing intelligence.
                      </h2>
                   </div>
@@ -1026,7 +1026,7 @@ export default function MarketVisionAICaseStudy() {
                {/* INFORMATION ARCHITECTURE */}
                <section className="mb-8 md:mb-16 bg-slate-50 rounded-[16px] lg:rounded-[24px] p-4 md:p-12 lg:p-16 border border-slate-200">
                   <div className="mb-6 md:mb-12 text-center">
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Marketing Intelligence Workflows</span></h2>
+                     <h2 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Marketing Intelligence Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">We focused on building an Information Architecture that includes a comprehensive Sitemap, Navigation hierarchy, and User flow diagrams to simplify the navigation of deeply complex analytical workflows.</p>
                   </div>
                </section>

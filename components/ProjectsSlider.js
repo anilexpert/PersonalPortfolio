@@ -124,14 +124,14 @@ export default function ProjectsSlider() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-5 md:mb-10"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
             <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">
               Selected Work
             </span>
           </div>
-          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
+          <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
             Products I've  {' '}
             <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">
               Helped Build

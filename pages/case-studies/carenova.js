@@ -167,7 +167,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Summary</span></h2>
+                        <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Summary</span></h2>
                         <p className="text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-3 lg:mb-6">
                            Residential care organizations were struggling with fragmented workflows, manual compliance tracking, disconnected communication, and inefficient facility operations. Carenova was designed to centralize these operations into a unified healthcare platform, enabling organizations to improve efficiency, maintain compliance, and deliver better care outcomes.
                         </p>
@@ -195,7 +195,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-2 lg:mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                        <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 lg:mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
                         <p className="text-sm lg:text-lg text-text-secondary leading-relaxed font-medium mb-3 lg:mb-8">
                            Healthcare administrators faced several operational challenges:
                         </p>
@@ -275,7 +275,7 @@ export default function CarenovaSystemsCaseStudy() {
                         </div>
                      </div>
                      <div className="lg:col-span-9">
-                        <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Product Goals & <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Success Metrics</span></h2>
+                        <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Product Goals & <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Success Metrics</span></h2>
 
                         <div className="w-full glass-card rounded-[8px] lg:rounded-[16px] overflow-hidden">
                            <div className="grid grid-cols-2 bg-[#0D63CC]/10 px-2 lg:px-6 py-2 lg:py-3 border-b border-[#0D63CC]/20">
@@ -399,7 +399,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Target Audience
                         </span>
                      </div>
-                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mb-3 lg:mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
+                     <h2 className="text-2xl sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary mb-3 lg:mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
                   </div>
 
                   <div className="grid lg:grid-cols-2 gap-8">
@@ -491,7 +491,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-3 lg:mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Map</span></h2>
+                     <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-3 lg:mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Map</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing stakeholder attitudes and behaviors to align design decisions with real user experiences.</p>
                   </div>
 
@@ -611,7 +611,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Structure
                         </span>
                      </div>
-                     <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Healthcare Workflows</span></h2>
+                     <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Healthcare Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         The platform architecture was designed to support multiple user roles, facility hierarchies, and compliance workflows while maintaining clarity and usability.
                      </p>
@@ -653,7 +653,7 @@ export default function CarenovaSystemsCaseStudy() {
                            User Flows
                         </span>
                      </div>
-                     <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
+                     <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
                   </div>
                   <div className="max-w-6xl mx-auto space-y-6 lg:space-y-10">
                      {[
@@ -755,7 +755,7 @@ export default function CarenovaSystemsCaseStudy() {
                            UX Transformation
                         </span>
                      </div>
-                     <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-2 md:mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
+                     <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 md:mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         The design goal was to transform compliance resolution into a guided, step-by-step experience, significantly reducing cognitive load.
                      </p>
@@ -837,7 +837,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Methodology
                         </span>
                      </div>
-                     <h2 className="text-xl lg:text-4xl font-bold text-text-primary mb-2 md:mb-4">My Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <h2 className="text-xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 md:mb-4">My Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
                      <p className="text-sm lg:text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         A systematic, user-centric approach to solving complex enterprise challenges through iterative refinement. Clients want to understand how you work, so here is a breakdown of the core design process.
                      </p>
@@ -929,7 +929,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-2xl lg:text-4xl font-bold text-text-primary mb-2 md:mb-4">Building a Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-2xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-2 md:mb-4">Building a Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-sm lg:text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         A unified design system was created to ensure complex operational data feels approachable, trustworthy, and extremely accessible. We focused heavily on Data Visualization components (charts, gauges), Status Indicators (warning vs. critical alerts), and Enterprise Data Tables (bulk actions, complex filtering).
                      </p>
@@ -1062,7 +1062,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Key Choices
                         </span>
                      </div>
-                     <h2 className="mb-4 md:mb-8 text-2xl md:text-4xl font-bold text-text-primary">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#8B5CF6]">Decisions</span></h2>
+                     <h2 className="mb-4 md:mb-8 text-2xl md:text-2xl md:text-4xl font-bold text-text-primary">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#8B5CF6]">Decisions</span></h2>
                      <p className="text-[15px] md:text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         Strategic design decisions made to balance enterprise complexity with intuitive, consumer-grade usability.
                      </p>
@@ -1096,7 +1096,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Final Product
                         </span>
                      </div>
-                     <h2 className="mb-4 md:mb-8 text-2xl md:text-4xl font-bold text-text-primary">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Solution</span></h2>
+                     <h2 className="mb-4 md:mb-8 text-2xl md:text-2xl md:text-4xl font-bold text-text-primary">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Solution</span></h2>
                      <p className="text-sm md:text-lg text-text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
                         A unified platform that simplifies compliance, empowers facility staff, and provides executives with crystal-clear operational visibility.
                      </p>
@@ -1124,7 +1124,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Capabilities
                         </span>
                      </div>
-                     <h2 className="mb-4 md:mb-8 text-2xl md:text-4xl font-bold text-text-primary">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
+                     <h2 className="mb-4 md:mb-8 text-2xl md:text-2xl md:text-4xl font-bold text-text-primary">Core Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#0D63CC]">Capabilities</span></h2>
                   </div>
                   <div className="grid lg:grid-cols-12 gap-4 md:gap-8 items-center">
                      <div className="lg:col-span-5 space-y-6 md:space-y-8">
@@ -1170,7 +1170,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Security
                         </span>
                      </div>
-                     <h2 className="mb-4 md:mb-8 text-2xl md:text-4xl font-bold text-text-primary">Enterprise Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Compliance</span></h2>
+                     <h2 className="mb-4 md:mb-8 text-2xl md:text-2xl md:text-4xl font-bold text-text-primary">Enterprise Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Compliance</span></h2>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
                      {[
@@ -1420,7 +1420,7 @@ export default function CarenovaSystemsCaseStudy() {
                            Showcase
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-2 md:mb-4">Final Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
+                     <h2 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary mb-2 md:mb-4">Final Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Showcase</span></h2>
                   </div>
                   <div className="relative w-full aspect-[21/9] rounded-[10px] md:rounded-[16px] lg:rounded-[24px] overflow-hidden glass-card shadow-2xl p-2 md:p-4 border border-[#0D63CC]/10">
                      {/* <PremiumPlaceholder aspect="w-full h-full" label="Full Platform Hero Showcase" icon={MonitorPlay} glowColor="#00DA99" /> */}

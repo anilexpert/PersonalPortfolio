@@ -360,7 +360,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-4"
             >
-              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
+              <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
                 How I Approach
                 <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Product Design</span>
               </h2>
@@ -542,13 +542,13 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-10 md:mb-16"
             >
-              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
+              <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary mb-4 md:mb-6">
                 Why Clients
                 <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent ml-2">Choose Me</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
               {reasonsToChoose.map((reason, i) => (
                 <motion.div
                   key={reason.title}
@@ -756,7 +756,7 @@ function TestimonialSlider({ testimonials }) {
 
             <div className="flex items-baseline gap-4 font-bold tracking-tighter">
               <span className="text-xl md:text-2xl text-text-primary tabular-nums">0{idx + 1}</span>
-              <span className="text-lg md:text-xl text-text-secondary opacity-20">/ 0{testimonials.length}</span>
+              <span className="text-md md:text-xl text-text-secondary opacity-20">/ 0{testimonials.length}</span>
             </div>
 
             <button

@@ -232,11 +232,11 @@ export default function KinoraCaseStudy() {
 
                {/* ── BUSINESS OPPORTUNITY ───────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Market Context</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Opportunity</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Opportunity</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">The aging population and decentralization of healthcare have created an immense need for consumer caregiving tools.</p>
                   </div>
 
@@ -264,11 +264,11 @@ export default function KinoraCaseStudy() {
 
                {/* ── DISCOVERY RESEARCH ───────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Discovery</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Research <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Findings</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Insights from primary family caregivers and remote siblings shaped our platform.</p>
                   </div>
 
@@ -318,7 +318,7 @@ export default function KinoraCaseStudy() {
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Understanding the distinct needs of primary caregivers and remote family members to build an inclusive experience.
                      </p>
@@ -410,7 +410,7 @@ export default function KinoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Research Insight</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing family caregiver attitudes to align our product decisions.</p>
                   </div>
 
@@ -512,7 +512,7 @@ export default function KinoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Journey Mapping</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Map</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey Map</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A day in the life of a family caregiver coordinating a medical appointment.</p>
                   </div>
 
@@ -544,13 +544,13 @@ export default function KinoraCaseStudy() {
 
                {/* ── CORE FEATURES ───────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">
                            Core Capabilities
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Key Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Features</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Providing a unified solution for modern family caregiving.</p>
                   </div>
 
@@ -607,7 +607,7 @@ export default function KinoraCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Design System & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Visuals</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Soft healthcare aesthetics, high readability, and accessibility-first design.
                      </p>
@@ -698,7 +698,7 @@ export default function KinoraCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00DA99]/10 border border-[#00DA99]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#00DA99] uppercase tracking-widest">Interface</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">High-Fidelity <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Seamless mobile experience across all caregiving modules.</p>
                   </div>
 
@@ -776,7 +776,7 @@ export default function KinoraCaseStudy() {
                                  Final Outcome
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">
+                           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
                               The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Future</span> of Coordinated Care.
                            </h2>
                         </div>

@@ -91,7 +91,7 @@ export default function EnterpriseWorkflowService() {
           <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="grid lg:grid-cols-2 gap-3 md:gap-20 items-center">
               <div className="text-left">
                 <motion.div {...fadeInUp(0)} className="flex items-center gap-2 text-[10px] md:text-[12px] font-semibold text-text-secondary uppercase tracking-widest mb-6 md:mb-8">
                   <Link href="/" className="hover:text-primary transition-colors">Home</Link>
@@ -103,7 +103,7 @@ export default function EnterpriseWorkflowService() {
 
                 <motion.div
                   {...fadeInUp(0.1)}
-                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6"
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6"
                 >
                   <Workflow size={14} className="text-primary" />
                   <span className="text-[10px] font-bold text-primary uppercase tracking-widest">CORE EXPERTISE · ENTERPRISE SYSTEMS</span>
@@ -111,7 +111,7 @@ export default function EnterpriseWorkflowService() {
 
                 <motion.h1
                   {...fadeInUp(0.2)}
-                  className="text-3xl md:text-6xl font-bold text-text-primary mb-6 md:mb-8 leading-[1.1] tracking-tight"
+                  className="text-2xl md:text-6xl font-bold text-text-primary mb-6 md:mb-8 leading-[1.1] tracking-tight"
                 >
                   Enterprise Workflow <br />
                   <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Optimization</span>
@@ -119,7 +119,7 @@ export default function EnterpriseWorkflowService() {
 
                 <motion.p
                   {...fadeInUp(0.3)}
-                  className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed mb-10"
+                  className="text-base md:text-xl text-text-secondary max-w-xl leading-relaxed mb-5 md:mb-10"
                 >
                   Designing efficient, scalable workflows for complex enterprise systems—streamlining operations, reducing friction, and improving productivity across multi-role environments.
                 </motion.p>
@@ -156,23 +156,23 @@ export default function EnterpriseWorkflowService() {
         </section>
 
         {/* ── SECTION 3 — WHAT’S INCLUDED ─────────────────────────────────── */}
-        <section className="py-8 md:py-12 px-6 relative">
+        <section className="py-4 md:py-12 px-6 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-10"
+              className="text-center mb-5 md:mb-10"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Core Deliverables</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 What's <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Included</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
               {[
                 { title: "End-to-End Workflow Analysis", desc: "Analyze operational processes to identify inefficiencies, bottlenecks, and optimization opportunities.", color: "#00DA99", icon: GitPullRequest },
                 { title: "Multi-Role System Design", desc: "Design experiences tailored to administrators, managers, operators, and cross-functional teams.", color: "#0D63CC", icon: Users },
@@ -181,15 +181,15 @@ export default function EnterpriseWorkflowService() {
                 { title: "Cross-System Integration", desc: "Design seamless experiences across interconnected systems, tools, and platforms.", color: "#F59E0B", icon: Network },
                 { title: "Scalable Enterprise Workflows", desc: "Build workflow frameworks that remain efficient as organizations grow and evolve.", color: "#0EA5E9", icon: Layers }
               ].map((item, i) => (
-                <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 group hover:-translate-y-2">
+                <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-4 group hover:-translate-y-2">
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 md:mb-6 transition-all duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${item.color}15` }}
                   >
                     <item.icon size={24} style={{ color: item.color }} />
                   </div>
-                  <h4 className="text-xl font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
-                  <p className="text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
+                  <h4 className="text-base md:text-xl font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
+                  <p className="text-xs md:text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
                 </GlassCard>
               ))}
             </div>
@@ -203,7 +203,7 @@ export default function EnterpriseWorkflowService() {
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/5 blur-[150px] rounded-full pointer-events-none" />
 
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 md:gap-24 items-center">
               <motion.div {...fadeInUp(0)}>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4 sm:mb-6">
                   <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Service Overview</span>
@@ -211,7 +211,7 @@ export default function EnterpriseWorkflowService() {
                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary leading-tight mb-6">
                   Complex Operations Require Better Workflow Design
                 </h3>
-                <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed font-medium">
+                <div className="space-y-3 md:space-y-6 text-text-secondary text-[14px] md:text-[16px] leading-relaxed font-medium">
                   <p>
                     Enterprise systems often become difficult to use as products grow. Multiple roles, disconnected processes, and increasing operational complexity create inefficiencies that impact productivity.
                   </p>
@@ -309,12 +309,12 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-16 md:mb-24"
+              className="mb-8 md:mb-24"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Core Capabilities</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Core Workflow <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Optimization Capabilities</span>
               </h2>
             </motion.div>
@@ -331,15 +331,15 @@ export default function EnterpriseWorkflowService() {
                 <motion.div
                   key={i}
                   {...fadeInUp(i * 0.05)}
-                  className={`flex gap-6 p-6 rounded-2xl transition-all duration-300 group border backdrop-blur-md hover:-translate-y-1 ${item.highlight
+                  className={`flex gap-4 p-4 md:p-6 rounded-2xl transition-all duration-300 group border backdrop-blur-md hover:-translate-y-1 ${item.highlight
                     ? 'bg-gradient-to-r from-primary/8 to-secondary/8 border-primary/30 shadow-[0_0_32px_rgba(13,99,204,0.08)] hover:border-primary/50 hover:shadow-[0_8px_32px_rgba(13,99,204,0.12)]'
                     : 'bg-white/40 border-white/60 hover:bg-white/60 hover:border-primary/30 hover:shadow-xl'
                     }`}
                 >
-                  <span className="text-4xl font-black text-primary/20 group-hover:text-primary/40 transition-colors shrink-0">{item.num}</span>
+                  <span className="text-2xl md:text-4xl font-black text-primary/20 group-hover:text-primary/40 transition-colors shrink-0">{item.num}</span>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 flex-wrap mb-2">
-                      <h4 className="text-xl font-bold text-text-primary">{item.title}</h4>
+                      <h4 className="text-base md:text-xl font-bold text-text-primary">{item.title}</h4>
                       {item.highlight && (
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-[10px] font-black text-primary uppercase tracking-wider">
                           <CheckSquare size={10} />
@@ -372,32 +372,32 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-10"
+              className="text-center mb-5 md:mb-10"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Value Proposition</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Why Choose <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">This Service?</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
               {[
                 { title: "Efficiency First", desc: "Optimize workflows to improve speed, accuracy, and operational productivity.", icon: Activity, color: "#00DA99" },
                 { title: "Built for Complexity", desc: "Design experiences capable of handling multi-role systems and interconnected processes.", icon: Network, color: "#0D63CC" },
                 { title: "User-Centered Operations", desc: "Create workflows based on how teams actually work in real-world environments.", icon: Users, color: "#8B5CF6" },
                 { title: "Scalable Process Design", desc: "Build operational experiences that support long-term organizational growth.", icon: LayoutDashboard, color: "#F43F5E" }
               ].map((item, i) => (
-                <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-8 text-center flex flex-col items-center">
+                <GlassCard key={i} delay={i * 0.1} color={item.color} className="p-4 md:p-8 text-left lg:text-center flex flex-col items-center">
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 md:mb-6 transition-all duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${item.color}15` }}
                   >
                     <item.icon size={24} style={{ color: item.color }} />
                   </div>
                   <h4 className="text-lg font-bold text-text-primary mb-3 relative z-10">{item.title}</h4>
-                  <p className="text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
+                  <p className="text-xs md:text-sm text-text-secondary leading-relaxed font-medium relative z-10">{item.desc}</p>
                 </GlassCard>
               ))}
             </div>
@@ -413,12 +413,12 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-4 md:mb-16"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Methodology</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 My Workflow Optimization <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Process</span>
               </h2>
             </motion.div>
@@ -448,7 +448,7 @@ export default function EnterpriseWorkflowService() {
                       <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
 
                       <div className="relative z-10">
-                        <span className="text-3xl font-black mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
+                        <span className="text-2xl md:text-3xl font-black mb-3 md:mb-4 block opacity-40 group-hover:opacity-80 transition-opacity" style={{ color: cardColor }}>{phase.step}</span>
                         <h4 className="text-lg font-bold text-text-primary mb-2">{phase.title}</h4>
                         <p className="text-sm text-text-secondary leading-relaxed">{phase.desc}</p>
                       </div>
@@ -469,12 +469,12 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-4 md:mb-12"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Challenges</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Common Workflow Challenges <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Solve</span>
               </h2>
             </motion.div>
@@ -511,17 +511,17 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-4 md:mb-12"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">Outputs</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Deliverables <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">You'll Receive</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-6">
               {[
                 "Workflow Maps",
                 "User Journey Maps",
@@ -548,10 +548,10 @@ export default function EnterpriseWorkflowService() {
         <GlowDivider />
 
         {/* ── NEW SECTION — ENTERPRISE DOMAINS I SUPPORT ───────────────────────────── */}
-        <section className="py-8 md:py-12 px-6 relative">
+        <section className="py-4 md:py-12 px-6 relative">
           <div className="max-w-5xl mx-auto text-center">
-            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-8 rounded-3xl">
-              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-4">Enterprise Domains I Support</p>
+            <motion.div {...fadeInUp(0)} className="glass-card bg-slate-900/5 backdrop-blur-md border border-slate-200/50 p-4 md:p-8 rounded-xl md:rounded-3xl">
+              <p className="text-sm font-bold text-text-secondary uppercase tracking-[0.2em] mb-2 md:mb-4">Enterprise Domains I Support</p>
               <div className="flex flex-wrap justify-center items-center gap-3 text-text-primary font-medium text-sm md:text-base">
                 <span>Healthcare Operations</span>
                 <span className="text-primary/40">•</span>
@@ -574,16 +574,16 @@ export default function EnterpriseWorkflowService() {
         {/* ── SECTION 7 — CLIENT IMPACT (TESTIMONIAL) ─────────────────────── */}
         <section className="py-8 md:py-12 px-6 bg-slate-900/[0.02]">
           <div className="max-w-5xl mx-auto">
-            <motion.div {...fadeInUp(0)} className="glass-card bg-white/10 backdrop-blur-3xl border-[1.5px] border-white/40 p-10 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl group text-center">
+            <motion.div {...fadeInUp(0)} className="glass-card bg-white/10 backdrop-blur-3xl border-[1.5px] border-white/40 p-4 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl group text-center">
               {/* Decorative radial glows */}
               <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-700" />
               <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-700" />
 
               <div className="relative z-10">
-                <div className="flex justify-center mb-10">
+                <div className="flex justify-center mb-4 md:mb-10">
                   <Quote size={60} className="text-primary/20 rotate-180" />
                 </div>
-                <p className="text-xl md:text-3xl font-medium text-text-primary italic leading-relaxed mb-12">
+                <p className="text-base md:text-3xl font-medium text-text-primary italic leading-relaxed mb-6 md:mb-12">
                   "Anil redesigned our operational workflows and significantly reduced process complexity. Teams completed tasks faster and collaboration improved across departments."
                 </p>
                 <div className="flex flex-col items-center gap-4">
@@ -605,19 +605,19 @@ export default function EnterpriseWorkflowService() {
         {/* ── SECTION 8 — WHY IT MATTERS ──────────────────────────────────── */}
         <section className="py-8 md:py-12 px-6 relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
+            <div className="mb-4 md:mb-12">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-primary uppercase tracking-wider">The Big Picture</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight mb-3 md:mb-6">
                 Business Impact of <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Workflow Optimization</span>
               </h2>
-              <motion.p {...fadeInUp(0.2)} className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
+              <motion.p {...fadeInUp(0.2)} className="text-md md:text-xl text-text-secondary leading-relaxed font-medium mb-12">
                 Efficient workflows improve productivity, reduce operational costs, and enable organizations to scale without increasing complexity.
               </motion.p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
+            <div className="grid md:grid-cols-2 :gap-x-6 md:gap-x-12 gap-y-3 md:gap-y-6">
               {[
                 "Teams complete tasks faster",
                 "Errors and rework decrease",
@@ -650,17 +650,17 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12"
+              className="mb-4 md:mb-12"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Expertise</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Workflow Types <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">I Design</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-6">
               {[
                 "Operational Workflows",
                 "Approval Workflows",
@@ -693,17 +693,17 @@ export default function EnterpriseWorkflowService() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12"
+              className="mb-4 md:mb-12"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
                 <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Portfolio</span>
               </div>
-              <h2 className="text-4xl font-bold text-text-primary leading-tight tracking-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-text-primary leading-tight tracking-tight">
                 Related <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Case Studies</span>
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-6">
               {[
                 { name: "Carenova", link: "/case-studies/carenova" },
                 { name: "OasisPad", link: "/case-studies/oasispad" },
@@ -730,11 +730,11 @@ export default function EnterpriseWorkflowService() {
         <GlowDivider />
 
         {/* ── SECTION 10 — CTA ────────────────────────────────────────────── */}
-        <section className="py-8 md:py-12 px-6 relative">
+        <section className="py-4 md:py-12 px-6 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
               {...fadeInUp(0)}
-              className="w-full py-12 px-8 md:px-16 rounded-3xl glass-card bg-white/10 backdrop-blur-3xl border-[1.5px] border-white/40 flex flex-col md:flex-row items-center justify-between gap-12 group relative overflow-hidden shadow-2xl"
+              className="w-full py-4 md:py-12 px-4 md:px-16 rounded-xl md:rounded-3xl glass-card bg-white/10 backdrop-blur-3xl border-[1.5px] border-white/40 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-12 group relative overflow-hidden shadow-2xl"
             >
               {/* Border Masking Glow effect using pseudo-element or absolute div */}
               <div

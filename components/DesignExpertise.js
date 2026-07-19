@@ -142,7 +142,7 @@ const DesignExpertise = () => {
               </motion.div>
 
 
-              <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary mb-3 sm:mb-4 leading-tight">
+              <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary mb-3 sm:mb-4 leading-tight">
                 How I Help
                 <span className="ml-1.5 bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent"> Businesses Build</span> Better Products
               </h2>

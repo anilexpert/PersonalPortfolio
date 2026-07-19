@@ -238,7 +238,7 @@ export default function ScanovaHealthCaseStudy() {
 
                {/* ── BUSINESS OPPORTUNITY ───────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Market Context</span>
                      </div>
@@ -270,7 +270,7 @@ export default function ScanovaHealthCaseStudy() {
 
                {/* ── DISCOVERY RESEARCH ───────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#06B6D4] uppercase tracking-widest">Discovery</span>
                      </div>
@@ -546,7 +546,7 @@ export default function ScanovaHealthCaseStudy() {
 
                {/* ── CORE FEATURES ───────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0EA5E9] uppercase tracking-widest">Core Value</span>
                      </div>

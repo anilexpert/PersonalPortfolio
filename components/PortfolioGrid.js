@@ -62,7 +62,7 @@ const PortfolioGrid = () => {
 
           <motion.h1
             {...fadeUp(0.1)}
-            className="text-[24px] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-6"
+            className="text-[24px] sm:text-2xl md:text-3xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-6"
           >
             Product Design Expertise
             {/* <br className="hidden md:block" /> */}

@@ -42,7 +42,7 @@ const WhyHireMe = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-3 sm:mb-4">
             <span className="text-[10px] sm:text-[12px] font-bold text-secondary uppercase tracking-wider">Why Hire Me</span>
           </div>
-          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
+          <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4">
             What You Get When You <span className="bg-gradient-to-r from-[#0D63CC] to-[#00DA99] bg-clip-text text-transparent">Work With Me</span>
           </h2>
           <p className="text-[15px] sm:text-base md:text-lg text-text-secondary leading-relaxed">

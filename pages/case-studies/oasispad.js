@@ -256,7 +256,7 @@ export default function OasisPadCaseStudy() {
                               Core Issues
                            </span>
                         </div>
-                        <h2 className="text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                        <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
 
                         <p className="text-text-secondary font-medium max-w-2xl mx-auto mb-8">
                            A unified healthcare design system was created to ensure complex medical data feels approachable, trustworthy, and accessible.
@@ -453,13 +453,13 @@ export default function OasisPadCaseStudy() {
                      <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] bg-[#0D63CC]/10 blur-[80px] rounded-full pointer-events-none" />
 
                      <div className="relative z-10">
-                        <div className="text-center mb-12">
+                        <div className="text-center mb-4 md:mb-12">
                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                               <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">
                                  Deliverables
                               </span>
                            </div>
-                           <h3 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Artifacts</span></h3>
+                           <h3 className="text-3xl md:text-2xl md:text-4xl font-bold text-text-primary mb-4">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Artifacts</span></h3>
                            <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                               Comprehensive research documentation mapped the end-to-end user experience, helping align stakeholders on core user needs and business requirements before moving to design.
                            </p>
@@ -489,7 +489,7 @@ export default function OasisPadCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Target Audience</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Personas</span></h2>
                   </div>
                   <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
                      {[
@@ -552,7 +552,7 @@ export default function OasisPadCaseStudy() {
                            Architecture
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Product Vision & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Strategy</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Product Vision & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Experience Strategy</span></h2>
                      <p className="text-xl text-text-secondary font-medium max-w-3xl mx-auto italic mb-8">
                         The product strategy focused on balancing clinical efficiency with operational oversight by delivering tailored experiences for frontline staff and organizational leadership.
                      </p>
@@ -605,7 +605,7 @@ export default function OasisPadCaseStudy() {
                            Structure
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Structuring Complex Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Workflows</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring Complex Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         The information architecture was designed to support multiple user roles, clinical processes, and operational workflows while maintaining simplicity and reducing cognitive load.
                      </p>
@@ -650,7 +650,7 @@ export default function OasisPadCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Process Maps</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Key User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Flows</span></h2>
                   </div>
                   <div className="max-w-8xl mx-auto space-y-12">
                      {[
@@ -722,7 +722,7 @@ export default function OasisPadCaseStudy() {
                            UX Transformation
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing Efficient <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Clinical Workflows</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Designing Efficient <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Clinical Workflows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Clinical workflows were designed to reduce administrative burden while improving task completion, visibility, and operational efficiency.
                      </p>
@@ -865,7 +865,7 @@ export default function OasisPadCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Building a Scalable Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A unified healthcare design system was created to ensure complex medical data feels approachable, trustworthy, and accessible.
                      </p>
@@ -965,7 +965,7 @@ export default function OasisPadCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D63CC]/10 border border-[#0D63CC]/20 mb-4">
                         <span className="text-[10px] font-bold text-[#0D63CC] uppercase tracking-widest">Validation</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Validation</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Usability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Validation</span></h2>
                   </div>
                   <div className="max-w-4xl mx-auto">
                      <div className="grid md:grid-cols-3 gap-6">

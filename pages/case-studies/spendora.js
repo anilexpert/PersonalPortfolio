@@ -331,7 +331,7 @@ export default function SpendoraCaseStudy() {
                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00DA99]/5 blur-[100px] rounded-full pointer-events-none" />
 
                      <div className="relative z-10 mb-10 text-center md:text-left">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6">
                            <Search size={14} className="text-primary" />
                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Discovery</span>
                         </div>
@@ -427,7 +427,7 @@ export default function SpendoraCaseStudy() {
 
                      <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                         <div className="lg:col-span-4">
-                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6">
                               <Target size={14} className="text-primary" />
                               <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Opportunity</span>
                            </div>
@@ -618,7 +618,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 9. USER JOURNEY ──────────────────────────────────────────────────────── */}
                <section className="mb-8 md:mb-16">
                   <div className="mb-8 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow</span>
                      </div>
                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-text-primary">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Journey</span></h2>
@@ -825,7 +825,7 @@ export default function SpendoraCaseStudy() {
 
                {/* ── 13. KEY PRODUCT FEATURES ─────────────────────────────────────────── */}
                <section className="mb-10 md:mb-16">
-                  <div className="text-center mb-10">
+                  <div className="text-center mb-5 md:mb-10">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Core Value</span>
                      </div>
@@ -1105,7 +1105,7 @@ export default function SpendoraCaseStudy() {
                {/* ── 17. IMPACT & RESULTS ───────────────────────────────────────────────── */}
                <section className="mb-8 md:mb-16">
                   <div className="mb-4 md:mb-10 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6">
                         <TrendingUp size={14} className="text-primary" />
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Results</span>
                      </div>

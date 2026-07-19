@@ -190,7 +190,7 @@ export default function TicketStackCaseStudy() {
                            Core Issues
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
+                     <h2 className="text-2xl md:text-3xl lg:text-2xl md:text-4xl font-bold text-text-primary mb-4">The Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500">Challenge</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Retail ticket operations relied on fragmented systems, manual campaign coordination, and disconnected inventory processes, making it difficult to scale efficiently.</p>
                   </div>
 
@@ -324,7 +324,7 @@ export default function TicketStackCaseStudy() {
                                  Research & Discovery
                               </span>
                            </div>
-                           <h3 className="text-2xl md:text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
+                           <h3 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary mb-6">Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Discovery</span></h3>
                            <p className="text-text-secondary leading-relaxed font-medium mb-8">
                               Research sessions were conducted to understand operational workflows, stakeholder expectations, and inefficiencies within the existing ticket distribution process.
                            </p>
@@ -550,7 +550,7 @@ export default function TicketStackCaseStudy() {
                {/* ── SECTION 11 & 12: USER JOURNEY / FLOW (SPENDORA STYLE) ──────────────── */}
                <section className="mb-8 md:mb-24 lg:mb-24">
                   <div className="mb-8 md:mb-16 text-center">
-                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Flow Architecture</span>
                      </div>
                      <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-text-primary mb-4">Key Operational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Workflows</span></h2>
@@ -1056,12 +1056,12 @@ export default function TicketStackCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Building a Scalable Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-2xl md:text-2xl md:text-4xl font-bold text-text-primary mb-2 lg:mb-4">Building a Scalable Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces. Includes Grid system, Accessibility standards, Component library, and Data visualization patterns.
                      </p>
                   </div>
-                  <div className="mb-12">
+                  <div className="mb-4 md:mb-12">
                      <h3 className="text-xl font-bold text-text-primary mb-3 lg:mb-6 text-center">Key UI Components</h3>
                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-9xl mx-auto">
                         {[
@@ -1177,7 +1177,7 @@ export default function TicketStackCaseStudy() {
                      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0D63CC]/10 blur-[100px] rounded-full pointer-events-none" />
 
                      <div className="text-center mb-4 md:mb-12 relative z-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-md">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-2 md:mb-6 backdrop-blur-md">
                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Business Impact</span>
                         </div>
                         <h2 className="text-2xl md:text-4xl font-bold mb-2 lg:mb-4 text-text-primary">Expected Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DA99] to-[#0D63CC]">Outcomes</span></h2>

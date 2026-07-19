@@ -40,7 +40,7 @@ export default function HowIWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4"
+            className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary leading-tight mb-3 sm:mb-4"
           >
             How I <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Work</span>
           </motion.h2>

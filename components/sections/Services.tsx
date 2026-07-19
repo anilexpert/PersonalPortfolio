@@ -17,7 +17,7 @@ export default function Services() {
           >
             My Expertise
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -25,7 +25,7 @@ export default function Services() {
           >
             Design that <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Drives Growth</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,7 +35,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -48,7 +48,7 @@ export default function Services() {
                 <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/10">
                   <service.icon className="w-7 h-7 text-secondary" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-[#0F172A] mb-4">{service.title}</h3>
                 <p className="text-[#64748B] text-sm leading-relaxed mb-8 flex-grow">
                   {service.description}

@@ -82,7 +82,7 @@ const Testimonials = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 w-fit">
               <span className="text-[12px] font-bold text-secondary uppercase tracking-[0.2em]">Testimonials</span>
             </div>
-            <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-text-primary leading-[1.1] tracking-tight">
+            <h2 className="text-[24px] sm:text-3xl md:text-2xl md:text-4xl font-bold text-text-primary leading-[1.1] tracking-tight">
               Trusted by
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary ml-2">Clients Say</span>
 

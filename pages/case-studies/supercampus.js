@@ -226,7 +226,7 @@ export default function SuperCampusCaseStudy() {
                            <li>Attendance, scheduling, and reporting processes consumed significant staff time.</li>
                            <li>Stakeholders required role-specific experiences and permissions.</li>
                         </ul>
-                        <div className="mb-12">
+                        <div className="mb-4 md:mb-12">
                            <h4 className="font-bold text-text-primary mb-10 w-full text-center">Problem Visualization</h4>
                            <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4">
                               {/* Dashed line */}
@@ -342,13 +342,13 @@ export default function SuperCampusCaseStudy() {
 
                {/* ── 5. TARGET USERS / ROLES ───────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Access
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Designing for a Complex Multi-Stakeholder Ecosystem</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">SuperCampus supports diverse user groups, each with unique goals, workflows, and permissions. Role-based experiences were designed to ensure clarity, efficiency, and contextual relevance.</p>
                   </div>
                   <div className="relative flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-4 mb-16">
@@ -461,13 +461,13 @@ export default function SuperCampusCaseStudy() {
 
                {/* ── 6. KEY FEATURES / PLATFORM MODULES ───────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">
                            Core Modules
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Platform Capabilities</h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Core Platform Capabilities</h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">A comprehensive suite of tools designed to digitize every aspect of school operations across all stakeholder roles.</p>
                   </div>
 
@@ -516,13 +516,13 @@ export default function SuperCampusCaseStudy() {
 
                {/* ── 7. UX RESEARCH ────────────────────────────────────────────────────────── */}
                <section className="mb-16 md:mb-24 lg:mb-32">
-                  <div className="text-center mb-16">
+                  <div className="text-center mb-4 md:mb-16">
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">
                            Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Research</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">UX <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Research</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Conducted deep-dive research through stakeholder interviews, workflow analysis, and existing system audits.</p>
                   </div>
 
@@ -596,7 +596,7 @@ export default function SuperCampusCaseStudy() {
                            User Research
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Personas</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         Four key personas were developed to guide design decisions and ensure each stakeholder&apos;s needs were addressed throughout the platform.
                      </p>
@@ -727,7 +727,7 @@ export default function SuperCampusCaseStudy() {
                            Process
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Design Approach & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Process</span></h2>
                      <p className="text-lg text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
                         A systematic, user-centric approach to solving complex educational administration challenges through iterative refinement.
                      </p>
@@ -815,7 +815,7 @@ export default function SuperCampusCaseStudy() {
                            Architecture
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Structuring a Complex Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Structuring a Complex Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Ecosystem</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">The information architecture was designed to support multiple user roles, academic workflows, and operational processes while maintaining simplicity and usability.</p>
                   </div>
                   <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8 mb-12">
@@ -881,7 +881,7 @@ export default function SuperCampusCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">User Journeys</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">User Flows</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">User Flows</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Core product workflows designed for efficiency and clarity across the platform.</p>
                   </div>
 
@@ -933,7 +933,7 @@ export default function SuperCampusCaseStudy() {
                            Experience Design
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Role-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience Design</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Role-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience Design</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Each role gets a tailored experience optimized for their specific workflow, context, and daily tasks.</p>
                   </div>
 
@@ -1003,7 +1003,7 @@ export default function SuperCampusCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Principles</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Principles</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Core Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Principles</span></h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1032,7 +1032,7 @@ export default function SuperCampusCaseStudy() {
                            Visual Identity
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Building a Scalable EdTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Building a Scalable EdTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Design System</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">
                         A clean, accessible, and consistent design language created to ensure clarity across web and mobile interfaces.
                      </p>
@@ -1185,7 +1185,7 @@ export default function SuperCampusCaseStudy() {
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
                         <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Evolution</span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">From Wireframes to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Final Experience</span></h2>
                   </div>
 
                   <div className="relative py-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
@@ -1216,7 +1216,7 @@ export default function SuperCampusCaseStudy() {
                            Research Insight
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Empathy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Mapping</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Visualizing school stakeholder attitudes and behaviors to align design decisions with real user experiences.</p>
                   </div>
 
@@ -1336,7 +1336,7 @@ export default function SuperCampusCaseStudy() {
                            Strategic Analysis
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">SWOT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Analysis</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Evaluating SuperSchool&apos;s competitive stance to ensure viability and identify growth opportunities.</p>
                   </div>
 
@@ -1376,7 +1376,7 @@ export default function SuperCampusCaseStudy() {
                            Interface
                         </span>
                      </div>
-                     <h2 className="text-4xl font-bold text-text-primary mb-4">Cross-Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience</span></h2>
+                     <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">Cross-Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">Experience</span></h2>
                      <p className="text-text-secondary font-medium max-w-2xl mx-auto">Responsive experiences were designed to ensure seamless access across desktop and mobile devices for all stakeholders.</p>
                   </div>
 
@@ -1460,7 +1460,7 @@ export default function SuperCampusCaseStudy() {
                                  Epilogue
                               </span>
                            </div>
-                           <h2 className="text-4xl font-bold text-text-primary mb-4">
+                           <h2 className="text-2xl md:text-4xl font-bold text-text-primary mb-4">
                               Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D63CC] to-[#00DA99]">School Operations</span> Digitally.
                            </h2>
                         </div>

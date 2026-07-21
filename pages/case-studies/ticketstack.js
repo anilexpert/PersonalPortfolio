@@ -1099,10 +1099,10 @@ export default function TicketStackCaseStudy() {
                         </h4>
                         <div className="grid grid-cols-2 gap-4">
                            {[
-                              { bg: 'bg-[#0D63CC]', label: 'Primary', hex: '#0D63CC' },
-                              { bg: 'bg-[#00DA99]', label: 'Secondary', hex: '#00DA99' },
-                              { bg: 'bg-[#F59E0B]', label: 'Warning', hex: '#F59E0B' },
-                              { bg: 'bg-rose-500', label: 'Error', hex: '#F43F5E' }
+                              { bg: 'bg-[#eb2b7b]', label: 'Primary', hex: '#eb2b7b' },
+                              { bg: 'bg-[#ffc709]', label: 'Secondary', hex: '#ffc709' },
+                              { bg: 'bg-[#009dbc]', label: 'Warning', hex: '#009dbc' },
+                              { bg: 'bg-[#ff5050]', label: 'Error', hex: '#ff5050' }
                            ].map((color, i) => (
                               <div key={i} className="flex flex-col gap-2 group/color">
                                  <div className={`w-full aspect-square rounded-2xl ${color.bg} shadow-lg border border-white/20 group-hover/color:scale-110 group-hover/color:shadow-2xl transition-all duration-300`} />
@@ -1295,25 +1295,6 @@ export default function TicketStackCaseStudy() {
                               ))}
                            </div>
 
-                           <Link href="#" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
-                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                              <span className="relative z-10 text-white">Open in Figma</span>
-                              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
-                           </Link>
-                        </div>
-                     </motion.div>
-
-                     {/* Additional CTA */}
-                     <motion.div {...fadeIn} className="mt-8 md:mt-16 glass-card rounded-[16px] lg:rounded-[24px] p-4 md:p-12 border border-white/60 shadow-lg relative overflow-hidden bg-gradient-to-r from-slate-50 to-white group">
-                        <div className="absolute -top-16 -right-16 w-32 h-32 bg-[#0D63CC]/10 blur-[40px] rounded-full pointer-events-none" />
-                        <div className="relative z-10 flex flex-col items-center">
-                           <div className="w-16 h-16 rounded-full bg-[#0D63CC]/10 flex items-center justify-center text-[#0D63CC] mb-6">
-                              <Building2 size={28} />
-                           </div>
-                           <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 text-center">Building SaaS or Enterprise Products?</h3>
-                           <p className="text-base md:text-lg text-text-secondary mb-8 text-center max-w-xl font-medium leading-relaxed">
-                              I help startups and businesses design scalable digital products that simplify complexity and improve operational performance.
-                           </p>
                            <Link href="https://www.figma.com/design/JMh46MC2K4sRdLwAqNRBSj/Oasisnotes?node-id=3-62112&t=yPqYRdGSG9FnJSZX-1" className="inline-flex items-center gap-3 px-8 py-4 btn-premium text-white rounded-full font-bold transition-all shadow-[0_20px_40px_-10px_rgba(13,99,204,0.25)] group text-base overflow-hidden relative">
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                               <span className="relative z-10 text-white">Open in Figma</span>
